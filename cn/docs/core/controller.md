@@ -147,7 +147,7 @@ ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Dja
 在模板页中使用`{% area 区域Id %}`时会查找这个区域下的所有模块并加入到里面。<br/>
 查找顺序是<br/>
 
-- App_Data\areas\\{区域Id}.widgets.json
+- App_Data\areas\\{区域Id}.widgets
 - 程序中注册的默认模块列表
 
 区域Id全局唯一，请注意是否会产生冲突。</br>
