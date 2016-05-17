@@ -1,0 +1,3 @@
+﻿http://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
+http://squidfunk.github.io/mkdocs-material/getting-started/
+pip install mkdocs mkdocs-material pygments --index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/

@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>首次运行 - ZKWeb框架文档</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="ZKWeb框架文档">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="ZKWeb框架文档">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-0dac3e5884.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=微软雅黑:400,700|微软雅黑">
+      <style>
+        body, input {
+          font-family: '微软雅黑', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: '微软雅黑', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        首次运行
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/zkweb-framework" title="@zkweb-framework on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          ZKWeb框架文档
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="框架介绍" href="../..">
+      框架介绍
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="首次运行" href="./">
+      首次运行
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="下载项目" href="#_1">
+                下载项目
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="创建数据库" href="#_2">
+                创建数据库
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="修改配置文件" href="#_3">
+                修改配置文件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="运行网站" href="#_4">
+                运行网站
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="登陆后台" href="#_5">
+                登陆后台
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="重新初始化数据库" href="#_6">
+                重新初始化数据库
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="部署到服务器" href="#_7">
+                部署到服务器
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件系统" href="../plugin/">
+      插件系统
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="控制器和模板系统" href="../controller/">
+      控制器和模板系统
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="数据库管理" href="../database/">
+      数据库管理
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="单元测试" href="../unittest/">
+      单元测试
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Base)" href="../../plugin/common.base/">
+      插件(Common.Base)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Captcha)" href="../../plugin/common.captcha/">
+      插件(Common.Captcha)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Admin)" href="../../plugin/common.admin/">
+      插件(Common.Admin)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.MenuPageBase)" href="../../plugin/common.menupagebase/">
+      插件(Common.MenuPageBase)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.AdminSettings)" href="../../plugin/common.adminsettings/">
+      插件(Common.AdminSettings)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.UserPanel)" href="../../plugin/common.userpanel/">
+      插件(Common.UserPanel)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.UserContact)" href="../../plugin/common.usercontact/">
+      插件(Common.UserContact)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericClass)" href="../../plugin/common.genericclass/">
+      插件(Common.GenericClass)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericTag)" href="../../plugin/common.generictag/">
+      插件(Common.GenericTag)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericRecord)" href="../../plugin/common.genericrecord/">
+      插件(Common.GenericRecord)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.LanguageSwitcher)" href="../../plugin/common.languageswitcher/">
+      插件(Common.LanguageSwitcher)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Currency)" href="../../plugin/common.currency/">
+      插件(Common.Currency)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Region)" href="../../plugin/common.region/">
+      插件(Common.Region)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+      插件(Common.SerialGenerate)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment)" href="../../plugin/common.payment/">
+      插件(Finance.Payment)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.Alipay)" href="../../plugin/common.payment.alipay/">
+      插件(Finance.Payment.Alipay)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.Tenpay)" href="../../plugin/common.payment.tenpay/">
+      插件(Finance.Payment.Tenpay)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.WeChat)" href="../../plugin/common.payment.wechat/">
+      插件(Finance.Payment.WeChat)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.CKEditor)" href="../../plugin/cms.ckeditor/">
+      插件(CMS.CKEditor)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.ImageBrowser)" href="../../plugin/cms.imagebrowser/">
+      插件(CMS.ImageBrowser)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.Article)" href="../../plugin/cms.atricle/">
+      插件(CMS.Article)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Product)" href="../../plugin/shopping.product/">
+      插件(Shopping.Product)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Logistics)" href="../../plugin/shopping.logistics/">
+      插件(Shopping.Logistics)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Order)" href="../../plugin/shopping.order/">
+      插件(Shopping.Order)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.AfterSales)" href="../../plugin/shopping.aftersales/">
+      插件(Shopping.AfterSales)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(UnitTest.WebTester)" href="../../plugin/unittest.webtester/">
+      插件(UnitTest.WebTester)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.CustomTranslate)" href="../../plugin/common.customtranslate/">
+      插件(Common.CustomTranslate)
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/zkweb-framework" target="_blank" title="@zkweb-framework on GitHub">
+                  @zkweb-framework on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>首次运行</h1>
+          
+          <p>ZKWeb运行时需要核心项目和插件。<br/>
+核心项目是ZKWeb，<br/>
+插件项目是ZKWeb.Plugins，后面会说明如何添加新的插件项目。<br/></p>
+<p>核心项目只用于运行插件，如果客户需要不同的功能应该通过编写插件支持。<br/></p>
+<h3 id="_1">下载项目</h3>
+<p>通过git下载项目</br>
+请把ZKWeb和ZKWeb.Plugins下载到同一个文件夹中</br></p>
+<div class="code"><pre><span></span>git clone https://github.com/zkweb-framework/ZKWeb.git
+git clone https://github.com/zkweb-framework/ZKWeb.Plugins.git
+</pre></div>
+
+
+<h3 id="_2">创建数据库</h3>
+<p>ZKWeb目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL，运行前创建空数据库即可。</br></p>
+<h3 id="_3">修改配置文件</h3>
+<p>打开ZKWeb\ZKWeb\App_Data\config.json，修改其中的Database和ConnectionString<br />
+使用PostgreSQL数据库时可以按以下的格式配置<br /></p>
+<div class="code"><pre><span></span>&quot;Database&quot;: &quot;postgresql&quot;,
+&quot;ConnectionString&quot;: &quot;Server=127.0.0.1;Port=5432;Database=test_db;User Id=test_user;Password=123456;&quot;,
+</pre></div>
+
+
+<p>使用SQLite数据库时可以按以下的格式配置<br /></p>
+<div class="code"><pre><span></span><span class="x">&quot;Database&quot;: &quot;sqlite&quot;,</span>
+<span class="x">&quot;ConnectionString&quot;: &quot;Data Source=</span><span class="cp">{{</span><span class="nv">App_Data</span><span class="cp">}}</span><span class="x">\\test.db;Version=3;New=True;&quot;,</span>
+</pre></div>
+
+
+<p>使用MSSQL数据库时可以按以下的格式配置<br /></p>
+<div class="code"><pre><span></span>&quot;Database&quot;: &quot;mssql&quot;,
+&quot;ConnectionString&quot;: &quot;Server=127.0.0.1;Database=test_db;User Id=test_user;Password=123456;&quot;,
+</pre></div>
+
+
+<p>使用MySQL数据库时可以按以下的格式配置<br /></p>
+<div class="code"><pre><span></span>&quot;Database&quot;: &quot;mysql&quot;,
+&quot;ConnectionString&quot;: &quot;Server=127.0.0.1;Port=3306;Database=zkweb;User Id=root;Password=123456;&quot;,
+</pre></div>
+
+
+<h3 id="_4">运行网站</h1></h3>
+<p>使用Visual Studio 2015以上的版本打开ZKWeb项目，然后运行就可以看到默认的首页。<br/>
+首次运行需要编译所有插件，可能需要几分钟，请耐心等待完毕。
+<img alt="a" src="../../img/index.jpg" /></p>
+<h3 id="_5">登陆后台</h3>
+<p>后台地址是<code>/admin</code>，首次运行网站时应该先注册一个用户并用此用户登录到后台。<br/>
+网站创建后第一个登陆到后台的用户会成为超级管理员。
+<img alt="a" src="../../img/admin_login.jpg" /></p>
+<h3 id="_6">重新初始化数据库</h3>
+<p>步骤:</p>
+<ul>
+<li>清空数据库</li>
+<li>删除App_Data\DatabaseScript.txt</li>
+<li>刷新网站</li>
+</ul>
+<h3 id="_7">部署到服务器</h3>
+<p>步骤:</p>
+<ul>
+<li>复制App_Data, bin, Global.asax, Web.config到目标目录</li>
+<li>复制所有插件到App_Data\Plugins（复制到其他目录时相应修改下面的配置）</li>
+<li>修改App_Data\config.json中的<code>PluginDirectories</code>，值<code>[ "App_Data/Plugins" ]</code></li>
+<li>如果不需要服务器上修改代码，可以删除插件下的所有src文件夹（可使用批处理或工具删除）</li>
+</ul>
+<p>最终的目录结构应该如下</p>
+<ul>
+<li>App_Data<ul>
+<li>Plugins</li>
+<li>config.json</li>
+</ul>
+</li>
+<li>bin</li>
+<li>Global.asax</li>
+<li>Web.config</li>
+</ul>
+<p>IIS配置和普通的asp.net网站一样，不需要特别的设置。</p>
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../.." title="框架介绍">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                框架介绍
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../plugin/" title="插件系统">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                插件系统
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

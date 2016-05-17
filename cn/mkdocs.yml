@@ -2,6 +2,7 @@ site_name: ZKWeb框架文档
 
 pages:
 - 框架介绍:                        index.md
+- 首次运行:                        core/gettingstart.md
 - 插件系统:                        core/plugin.md
 - 控制器和模板系统:                 core/controller.md
 - 数据库管理:                      core/database.md
@@ -46,3 +47,5 @@ extra:
     author:
         github: "zkweb-framework"
 
+markdown_extensions:
+    - codehilite(css_class=code)

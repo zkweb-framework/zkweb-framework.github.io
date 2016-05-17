@@ -154,11 +154,78 @@
           
             
   <li>
+    <a class="" title="首次运行" href="../gettingstart/">
+      首次运行
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
     <a class="current" title="插件系统" href="./">
       插件系统
     </a>
     
       
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="插件的目录结构" href="#_1">
+                插件的目录结构
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="创建插件" href="#_2">
+                创建插件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="引用插件" href="#_3">
+                引用插件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="添加插件说明" href="#_4">
+                添加插件说明
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="添加代码" href="#_5">
+                添加代码
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ioc容器" href="#ioc">
+                Ioc容器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ioc容器的使用例子" href="#ioc_1">
+                Ioc容器的使用例子
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="组件注册顺序" href="#_6">
+                组件注册顺序
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="调试插件" href="#_7">
+                调试插件
+              </a>
+            </li>
+          
+        </ul>
       
     
   </li>
@@ -460,7 +527,134 @@
           
             <h1>插件系统</h1>
           
-          
+          <p>ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。<br/>
+插件的编译由核心框架完成，不依赖VS。<br/>
+下面使用VS创建插件是因为编写插件时可以有代码提示和调试支持。<br/></p>
+<h3 id="_1">插件的目录结构</h3>
+<ul>
+<li>ZKWeb.Plugins (默认的插件根目录)<ul>
+<li>Common.Base (插件文件夹)</li>
+<li>Common.Admin (插件文件夹)</li>
+<li>...</li>
+</ul>
+</li>
+<li>ZKWeb.Example (示例的插件根目录)<ul>
+<li>ExampleForDocument (插件文件夹)<ul>
+<li>bin (储存这个插件编译出来的dll文件)</li>
+<li>src (储存代码文件，发布时可以把这个文件夹除外)</li>
+<li>static (储存静态文件)</li>
+<li>templates (储存模板文件)</li>
+</ul>
+</li>
+<li>OtherExample (插件文件夹)<ul>
+<li>同上</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>在<code>config.json</code>的<code>PluginDirectories</code>可以指定一个或多个插件根目录。</p>
+<h3 id="_2">创建插件</h3>
+<p>步骤</p>
+<ul>
+<li>打开Visual Studio，创建项目，类型选“类库”，名称填<code>ExampleForDocument</code>，不要勾选为解决方案创建文件夹。</p></li>
+<li>在项目中引用<code>ZKWeb\bin</code>下的所有dll</li>
+<li>在项目下添加文件夹<code>Example</code></li>
+</ul>
+<p>创建后的目录结构应该如下:<br/>
+ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。</p>
+<ul>
+<li>ZKWeb</li>
+<li>ZKWeb.Example<ul>
+<li>ExampleForDocument<ul>
+<li>Example</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img alt="" src="../../img/project.jpg" /></p>
+<h3 id="_3">引用插件</h3>
+<p>步骤</p>
+<ul>
+<li>打开<code>ZKWeb\App_Data\config.json</code></li>
+<li>修改<code>PluginDirectories</code>，在后面添加<code>"../../ZKWeb.Examples/ExampleForDocument"</code></li>
+<li>修改<code>Plugins</code>，在后面添加<code>"Example"</code></li>
+<li>刷新浏览器，在后台中查看"关于网站"是否显示了这个插件，点击右上角图标会显示关于网站</li>
+</ul>
+<p>引用插件时需要注意依赖顺序，在前面的插件会先加载。
+这里的顺序也会影响到IoC容器中的注册顺序和模板文件的查找顺序。</p>
+<p><img alt="" src="../../img/add_plugin.jpg" /></p>
+<h3 id="_4">添加插件说明</h3>
+<p>在<code>Example</code>文件夹下创建<code>plugin.json</code>，内容如下</p>
+<div class="code"><pre><span></span>{
+    &quot;Name&quot;: &quot;Example&quot;,
+    &quot;Description&quot;: &quot;Example plugin for document&quot;
+}
+</pre></div>
+
+
+<p>刷新关于网站即可看到新的名称和说明。</p>
+<h3 id="_5">添加代码</h3>
+<p>插件的代码都保存在<code>src</code>文件夹下，可以参考文档顶部的目录结构。<br/></p>
+<p>这里添加在插件加载时输出日志的处理:<br/>
+在src文件夹中创建Plugin.cs，内容如下（引用和命名空间省略，后面的文档也如此）<br/>
+如果提示找不到Resolve函数请手动添加<code>using DryIoc;</code>到代码顶部。<br/></p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 插件加载时输出一行日志</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Plugin</span> <span class="p">:</span> <span class="n">IPlugin</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nf">Plugin</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="s">&quot;Example plugin loaded&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>刷新浏览器，在App_Data/Logs下可以看到输出的日志。<br/>
+ExportMany和Ioc将在下一节解释。<br/></p>
+<h3 id="ioc">Ioc容器</h3>
+<p>ZKWeb使用了DryIoc，请先阅读DryIoc的文档:<br/>
+https://bitbucket.org/dadhi/dryioc/wiki/Home<br/></p>
+<p>ZKWeb全局使用的容器在<code>Application.Ioc</code>。<br/>
+（为什么不使用构造函数注入请参考<code>global.asax.cs</code>中的说明，使用全局变量仍然很好的可以支持单元测试）<br/>
+插件可以使用<code>[ExportMany]</code>注册组件（参考"添加代码"节），也可以使用<code>IPlugin</code>接口在网站启动时注册到<code>Application.Ioc</code>中。<br/>
+指定<code>[SingletonReuse]</code>属性时可以实现单例。<br/></p>
+<p>DryIoc的性能非常高，可以查看以下的对比:<br/>
+http://www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison<br/></p>
+<h3 id="ioc_1">Ioc容器的使用例子</h3>
+<p>以下是一个简单的使用例子。</p>
+<div class="code"><pre><span></span><span class="k">void</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">animals</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">&gt;()</span>
+    <span class="c1">// animals contains instances of Dog and Cow</span>
+
+    <span class="kt">var</span> <span class="n">animalManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
+    <span class="c1">// animalManager is AnimalManager</span>
+
+    <span class="kt">var</span> <span class="n">otherAnimalManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
+    <span class="c1">// animalManager only create once, otherAnimalManager == animalManager</span>
+<span class="p">}</span>
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+<span class="na">[ExportMany]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+<span class="na">[ExportMany]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">Cow</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimalManager</span> <span class="p">{</span> <span class="p">}</span>
+<span class="na">[ExportMany, SingletonUsage]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">AnimalManager</span> <span class="p">:</span> <span class="n">IAnimalManager</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_6">组件注册顺序</h3>
+<p>插件的定义顺序会影响到组件注册顺序，例如<code>Plugins: [ "A", "B" ]</code>，<br/>
+插件A有<code>class ExampleHandlerA : IExampleHandler { }</code>，<br/>
+插件B有<code>class ExampleHandlerB : IExampleHandler { }</code>，<br/>
+这时使用<code>Application.Ioc.ResolveMany&lt;IExampleHandler&gt;()</code>会获取到<code>[ExampleHandlerA, ExampleHandlerB]</code>。</p>
+<h3 id="_7">调试插件</h3>
+<p>调试插件有两种办法，<br/>
+第一种是在插件的VS中选择调试-挂载到进程并选择IIS进程挂载。<br/>
+第二种是把需要调试的文件拉到打开ZKWeb的VS中，然后在里面下断点。<br/>
+<img alt="" src="../../img/attach_process.jpg" /></p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -477,7 +671,7 @@
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../.." title="框架介绍">
+        <a href="../gettingstart/" title="首次运行">
           <span class="direction">
             Previous
           </span>
@@ -487,7 +681,7 @@
             </div>
             <div class="stretch">
               <div class="title">
-                框架介绍
+                首次运行
               </div>
             </div>
           </div>
