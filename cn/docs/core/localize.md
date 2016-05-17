@@ -1,5 +1,5 @@
-ZKWeb核心框架支持多语言和多时区，
-语言的翻译由`ITranslateProvider`实现。
+ZKWeb核心框架支持多语言和多时区，<br/>
+语言的翻译由`ITranslateProvider`实现。<br/>
 
 以下待编写
 
