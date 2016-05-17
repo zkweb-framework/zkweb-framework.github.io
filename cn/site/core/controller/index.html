@@ -178,6 +178,79 @@
     
       
       
+        <ul>
+          
+            <li class="anchor">
+              <a title="添加控制器" href="#_1">
+                添加控制器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="模板页介绍" href="#_2">
+                模板页介绍
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="使用模板页" href="#_3">
+                使用模板页
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="模板标签和过滤器" href="#_4">
+                模板标签和过滤器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="更多的返回类型" href="#_5">
+                更多的返回类型
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="获取请求参数" href="#_6">
+                获取请求参数
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="重载处理函数" href="#_7">
+                重载处理函数
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="重载模板" href="#_8">
+                重载模板
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="动态内容" href="#_9">
+                动态内容
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="添加链接到导航栏" href="#_10">
+                添加链接到导航栏
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="本地化" href="../localize/">
+      本地化
+    </a>
     
   </li>
 
@@ -469,7 +542,174 @@
           
             <h1>控制器和模板系统</h1>
           
-          
+          <p>ZKWeb使用了独自编写的控制器和模板系统，不依赖于asp.net和mvc的组件。<br/>
+在ZKWeb中控制器接口只是一个空接口，自身不拥有状态。<br/>
+获取当前http上下文可以通过<code>HttpContextUtils.CurrentContext</code>，<br/>
+为了更好的支持单元测试，请不要使用<code>HttpContext.Current</code>。<br/></p>
+<h3 id="_1">添加控制器</h3>
+<p>添加<code>Example\src\Controllers\ExampleController.cs</code>，内容如下</br>
+使用<code>Controllers</code>文件夹保存控制器代码是命名习惯，不是必须遵从的。</br></p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例使用的控制器</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleController</span> <span class="p">:</span> <span class="n">IController</span> <span class="p">{</span>
+<span class="na">    [Action(&quot;example/plain_text&quot;)]</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">PlainTextAction</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="s">&quot;hello world on zkweb&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>保存后在浏览器中打开<code>http://localhost:端口/example/plain_text</code>，即可看到返回的内容。</br>
+控制器中标记了<code>[Action]</code>属性的函数都是可以访问的函数，返回类型可以是<code>string</code>或<code>IActionResult</code>。</br>
+在Action属性中可以指定路径和请求类型(GET或POST)，路径前面如果没有<code>/</code>会自动补上。</br>
+和mvc不一样，ZKWeb的路径完全由Action属性而不是控制器决定，而且处理函数必须标记Action属性。</br></p>
+<h3 id="_2">模板页介绍</h3>
+<p>ZKWeb的模板系统使用了DotLiquid。</br>
+请先参考DotLiquid的文档:</br>
+http://dotliquidmarkup.org/</br></p>
+<p>使用它代替cshtml的原因有</br></p>
+<ul>
+<li>模板只要求参数不要求环境，可以纯粹当成是字符串模板使用</li>
+<li>模板只编译成语法树而不是IL代码，每个页面第一次打开的速度远比cshtml要快</li>
+<li>没有内存泄漏的问题（可以在网站运行时不断更新模板页）</li>
+</ul>
+<h3 id="_3">使用模板页</h3>
+<p>在上面的<code>ExampleController</code>下添加以下代码</p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/template&quot;)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TemplateAction</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_page.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">text</span> <span class="p">=</span> <span class="s">&quot;world&quot;</span> <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>在<code>Example</code>文件夹下创建<code>templates\example</code>文件夹，并添加<code>example_page.html</code>文件，内容如下</p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>hello, {{ arg }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>完成后的目录结构应该如下</br>
+<img alt="" src="../../img/add_example_page.jpg" /></p>
+<p>保存后在浏览器中打开<code>http://localhost:端口/example/template</code>，即可看到<code>hello, world</code>。</br></p>
+<h3 id="_4">模板标签和过滤器</h3>
+<p>模板支持自定义的标签和过滤器。</br>
+标签的格式是<code>{% 标签 参数 %}</code></br>
+过滤器的格式是<code>{{ 变量或常量 | 过滤器 | 过滤器: 参数,参数 | 更多过滤器... }}</code></br></p>
+<p>修改上面的模板页内容:</br></p>
+<div class="code"><pre><span></span>{% use_title &quot;Example Title&quot; %}
+{% include common.base/header.html %}
+
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>{{ &quot;HomePage&quot; | trans }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>hello, {{ text | upcase }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+{% include common.base/footer.html %}
+</pre></div>
+
+
+<p>刷新页面可以看到以下的效果:</br>
+<img alt="" src="../../img/template_tag_example.jpg" /></p>
+<h3 id="_5">更多的返回类型</h3>
+<p>上面介绍了<code>TemplateResult</code>，ZKWeb还提供了其他类型的结果。</br>
+ZKWeb核心框架中提供的返回类型有:</br></p>
+<ul>
+<li><code>FileResult(string path, DateTime? ifModifiedSince = null)</code></li>
+<li><code>ImageResult(Image image, ImageFormat format = null)</code></li>
+<li><code>JsonResult(object obj, Formatting formatting = Formatting.None)</code></li>
+<li><code>PlainResult(object obj)</code></li>
+<li><code>RedirectResult(string url, bool permanent = false)</code></li>
+<li><code>StreamResult(Stream stream, string contentType = null)</code></li>
+<li><code>TemplateResult(string path, object argument = null)</code></li>
+</ul>
+<p>如果需要返回其他类型可以自己编写继承<code>IActionResult</code>的类。</br></p>
+<h3 id="_6">获取请求参数</h3>
+<p>可以使用<code>HttpContextUtils.CurrentContext.Request</code>获取到请求对象并获取里面的参数。</br>
+目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
+获取请求参数的例子: </br></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">id</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="s">&quot;id&quot;</span><span class="p">);</span> <span class="c1">// a collection combines Form and Request</span>
+<span class="kt">var</span> <span class="n">file</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Files</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+</pre></div>
+
+
+<h3 id="_7">重载处理函数</h3>
+<p>ZKWeb支持在一个插件中替换另一个插件的处理函数。</br>
+例如插件A定义了"example/a"，插件B也定义了同样路径的函数，ZKWeb会使用插件B中定义的函数。</br>
+这个功能可以用于编写自己的插件替换掉整个首页或登陆页面的处理函数。</br>
+也因为这个功能ZKWeb不会提示Action属性的路径有冲突，请编写时多加注意。</br></p>
+<h3 id="_8">重载模板</h3>
+<p>ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Django一样。</br>
+例如有以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br></p>
+<ul>
+<li>Plugins<ul>
+<li>A<ul>
+<li>templates<ul>
+<li>a<ul>
+<li>some_page.html (不会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B<ul>
+<li>templates<ul>
+<li>a<ul>
+<li>some_page.html (会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>模板还可以通过<code>App_Data\templates</code>重载，结构和上面一样。</br>
+支持模板的重载可以让新的插件随意更换原有插件的网页内容，也可以提供一套用户编辑的系统编辑所有页面。</br></p>
+<h3 id="_9">动态内容</h3>
+<p>考虑到实现可视化编辑（动态拖拽和修改页面内容），ZKWeb提供了一套默认的动态内容系统。</br></p>
+<p>这套系统定义了以下的类型<br/></p>
+<ul>
+<li>区域 (area)</li>
+<li>模块 (widget)</li>
+</ul>
+<p>每个区域下可以有多个模块，但区域不能嵌套区域。<br/>
+可视化编辑时可以拖动模块加入区域，模块可以通过自定义的参数调整里面的内容。<br/></p>
+<p>在模板页中使用<code>{% area 区域Id %}</code>时会查找这个区域下的所有模块并加入到里面。<br/>
+查找顺序是<br/></p>
+<ul>
+<li>App_Data\areas\{区域Id}.widgets.json</li>
+<li>程序中注册的默认模块列表</li>
+</ul>
+<p>区域Id全局唯一，请注意是否会产生冲突。</br>
+全局唯一的理由是，有的区域（例如网站头部）是整个网站共享的，这时只需要编辑这个区域就可以应用到所有页面。</br></p>
+<h3 id="_10">添加链接到导航栏</h3>
+<p>在默认的插件中提供了一个导航栏区域，名称是<code>header_menubar</code>。</br>
+下面演示怎样添加链接到这个区域中。</br></p>
+<p>在<code>Plugin</code>类的<code>Plugin()</code>函数下添加以下代码:</br></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">areaManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">TemplateAreaManager</span><span class="p">&gt;();</span>
+<span class="n">areaManager</span><span class="p">.</span><span class="n">GetArea</span><span class="p">(</span><span class="s">&quot;header_menubar&quot;</span><span class="p">).</span><span class="n">DefaultWidgets</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;example.widgets/example_nav&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>创建<code>Example\templates\example.widgets\example_nav.widget</code>，并添加以下内容</p>
+<div class="code"><pre><span></span>{ &quot;Name&quot;: &quot;Example Navbar Item&quot; }
+</pre></div>
+
+
+<p>创建<code>Example\templates\example.widgets\example_nav.html</code>，并添加以下内容</p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/example/template&quot;</span><span class="p">&gt;</span>{{ &quot;Example&quot; }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>添加后文件结构应该如下:</br>
+<img alt="" src="../../img/add_navbar_project.jpg" /></p>
+<p>刷新页面可以看到以下的效果:</br>
+<img alt="" src="../../img/add_narbar.jpg" /></p>
           <aside class="copyright" role="note">
             
             Documentation built with
@@ -505,14 +745,14 @@
     </div>
     <div class="next">
       
-        <a href="../database/" title="数据库管理">
+        <a href="../localize/" title="本地化">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                数据库管理
+                本地化
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

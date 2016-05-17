@@ -5,6 +5,7 @@ pages:
 - 首次运行:                        core/gettingstart.md
 - 插件系统:                        core/plugin.md
 - 控制器和模板系统:                 core/controller.md
+- 本地化:                          core/localize.md
 - 数据库管理:                      core/database.md
 - 单元测试:                        core/unittest.md
 - 插件(Common.Base):               plugin/common.base.md

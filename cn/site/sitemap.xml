@@ -35,6 +35,14 @@
 
     
     <url>
+     <loc>None/core/localize/</loc>
+     <lastmod>2016-05-17</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>None/core/database/</loc>
      <lastmod>2016-05-17</lastmod>
      <changefreq>daily</changefreq>
