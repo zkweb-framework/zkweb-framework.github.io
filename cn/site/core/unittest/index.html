@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>单元测试 - ZKWeb框架文档</title>
+      
+      
+      
+      
+    
+    <meta property="og:url" content="None">
+    <meta property="og:title" content="ZKWeb框架文档">
+    <meta property="og:image" content="None/../../">
+    <meta name="apple-mobile-web-app-title" content="ZKWeb框架文档">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-0dac3e5884.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=微软雅黑:400,700|微软雅黑">
+      <style>
+        body, input {
+          font-family: '微软雅黑', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: '微软雅黑', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey palette-accent-blue-grey">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        单元测试
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/zkweb-framework" title="@zkweb-framework on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+      <div class="name">
+        <strong>
+          ZKWeb框架文档
+          <span class="version">
+            
+          </span>
+        </strong>
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="框架介绍" href="../..">
+      框架介绍
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件系统" href="../plugin/">
+      插件系统
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="控制器和模板系统" href="../controller/">
+      控制器和模板系统
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="数据库管理" href="../database/">
+      数据库管理
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="单元测试" href="./">
+      单元测试
+    </a>
+    
+      
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Base)" href="../../plugin/common.base/">
+      插件(Common.Base)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Captcha)" href="../../plugin/common.captcha/">
+      插件(Common.Captcha)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Admin)" href="../../plugin/common.admin/">
+      插件(Common.Admin)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.MenuPageBase)" href="../../plugin/common.menupagebase/">
+      插件(Common.MenuPageBase)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.AdminSettings)" href="../../plugin/common.adminsettings/">
+      插件(Common.AdminSettings)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.UserPanel)" href="../../plugin/common.userpanel/">
+      插件(Common.UserPanel)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.UserContact)" href="../../plugin/common.usercontact/">
+      插件(Common.UserContact)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericClass)" href="../../plugin/common.genericclass/">
+      插件(Common.GenericClass)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericTag)" href="../../plugin/common.generictag/">
+      插件(Common.GenericTag)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.GenericRecord)" href="../../plugin/common.genericrecord/">
+      插件(Common.GenericRecord)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.LanguageSwitcher)" href="../../plugin/common.languageswitcher/">
+      插件(Common.LanguageSwitcher)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Currency)" href="../../plugin/common.currency/">
+      插件(Common.Currency)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.Region)" href="../../plugin/common.region/">
+      插件(Common.Region)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+      插件(Common.SerialGenerate)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment)" href="../../plugin/common.payment/">
+      插件(Finance.Payment)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.Alipay)" href="../../plugin/common.payment.alipay/">
+      插件(Finance.Payment.Alipay)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.Tenpay)" href="../../plugin/common.payment.tenpay/">
+      插件(Finance.Payment.Tenpay)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Finance.Payment.WeChat)" href="../../plugin/common.payment.wechat/">
+      插件(Finance.Payment.WeChat)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.CKEditor)" href="../../plugin/cms.ckeditor/">
+      插件(CMS.CKEditor)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.ImageBrowser)" href="../../plugin/cms.imagebrowser/">
+      插件(CMS.ImageBrowser)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(CMS.Article)" href="../../plugin/cms.atricle/">
+      插件(CMS.Article)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Product)" href="../../plugin/shopping.product/">
+      插件(Shopping.Product)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Logistics)" href="../../plugin/shopping.logistics/">
+      插件(Shopping.Logistics)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.Order)" href="../../plugin/shopping.order/">
+      插件(Shopping.Order)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Shopping.AfterSales)" href="../../plugin/shopping.aftersales/">
+      插件(Shopping.AfterSales)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(UnitTest.WebTester)" href="../../plugin/unittest.webtester/">
+      插件(UnitTest.WebTester)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.CustomTranslate)" href="../../plugin/common.customtranslate/">
+      插件(Common.CustomTranslate)
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/zkweb-framework" target="_blank" title="@zkweb-framework on GitHub">
+                  @zkweb-framework on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>单元测试</h1>
+          
+          
+          <aside class="copyright" role="note">
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../database/" title="数据库管理">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                数据库管理
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../../plugin/common.base/" title="插件(Common.Base)">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                插件(Common.Base)
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = '';
+    </script>
+    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

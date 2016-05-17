@@ -1,0 +1,184 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "ZKWeb\u662f\u4e00\u4e2a\u7528\u4e8e\u5feb\u901f\u5f00\u53d1\u7f51\u7ad9\u7684\u6846\u67b6\u3002\n\n\u63d0\u4f9b\u4e86\u7f16\u8f91\u5373\u7f16\u8bd1\uff0c\u548c\u5168\u81ea\u52a8\u7ba1\u7406\u6570\u636e\u5e93\u7ed3\u6784\u7684\u529f\u80fd\u3002\n\n\u6a21\u677f\u7cfb\u7edf\u548c\u81ea\u52a8\u751f\u6210\u7ec4\u4ef6\u53c2\u8003\u4e86Django\u7684\u505a\u6cd5\uff0c\u5e76\u9075\u4eceDon't repeat yourself\u7406\u8bba\u3002\n\n\n\u6846\u67b6\u66f4\u6ce8\u91cd\u529f\u80fd\u7684\u5206\u79bb\u800c\u4e0d\u662f\u5c42\u6b21\u7684\u5206\u79bb\uff0c\u4e00\u822c\u7684\u6846\u67b6\u4f1a\u6309\u5c42\u6b21\u5206\u51fa\u591a\u4e2a\u7a0b\u5e8f\u96c6\uff0c\n\n\u6bcf\u4e2a\u63d2\u4ef6\u7a0b\u5e8f\u96c6\u53ef\u4ee5\u5305\u542b\u529f\u80fd\u6240\u9700\u8981\u7684\u4e1a\u52a1\u5904\u7406\uff0c\u6570\u636e\u5e93\u5904\u7406\uff0c\u63a7\u5236\u5668\u548c\u6a21\u677f\u3002\n\n\u63d2\u4ef6\u7cfb\u7edf\u53ef\u4ee5\u5b9e\u73b0\u76f8\u540c\u7684\u4e1a\u52a1\u4ee3\u7801\u63d0\u4f9b\u7ed9\u4e0d\u540c\u7684\u5ba2\u6237\u65f6\uff0c\u53ea\u9700\u8981\u5199\u4e00\u6b21\u5e76\u53ea\u7ba1\u7406\u4e00\u4efd\u4ee3\u7801\u3002\n\n\n\u6846\u67b6\u548c\u63d2\u4ef6\u7f16\u5199\u65f6\u5747\u8003\u8651\u4e86\u5b9e\u73b0\u53ef\u89c6\u5316\u7f16\u8f91\uff08\u53ef\u89c6\u5316\u7f16\u8f91\u529f\u80fd\u76ee\u524d\u8fd8\u6ca1\u6709\u5f00\u59cb\u7f16\u5199\uff09\u3002\n\n\n\u9879\u76ee\u5730\u5740\n\n\nhttps://github.com/zkweb-framework/ZKWeb\n\n\nhttps://github.com/zkweb-framework/ZKWeb.Plugins\n\n\nDEMO\n\n\n\u5730\u5740: \nhttp://www.zkwebsite.com\n\n\u7528\u6237\u540d: demo\n\n\u5bc6\u7801: 123456\n\n\n\u4e3b\u8981\u529f\u80fd\n\n\n\n\n\u652f\u6301\u52a8\u6001\u8f7d\u5165\u548c\u7f16\u8f91\u7684\u63d2\u4ef6\u7cfb\u7edf\n\n\n\u63d2\u4ef6\u4ee3\u7801\u7f16\u8f91\u4fdd\u5b58\u540e\u53ef\u76f4\u63a5\u5237\u65b0\u6d4f\u89c8\u5668\n\n\n\n\n\n\n\u4f7f\u7528Ioc\u5bb9\u5668\u5bf9\u5404\u9879\u529f\u80fd\u8fdb\u884c\u6269\u5c55\n\n\n\u529f\u80fd\u7684\u53ef\u6269\u5c55\u6027\u5f3a\n\n\n\u53ef\u652f\u6301\u5355\u5143\u6d4b\u8bd5\u65f6\u8986\u76d6\u4efb\u610f\u7ec4\u4ef6\n\n\n\n\n\n\n\u652f\u6301\u4ece\u4ee3\u7801\u81ea\u52a8\u66f4\u65b0\u6570\u636e\u5e93\n\n\n\u6dfb\u52a0\u6570\u636e\u8868\u6216\u5b57\u6bb5\u540e\u4e0d\u9700\u8981\u8fd0\u884c\u4efb\u4f55\u547d\u4ee4\uff0c\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u66f4\u65b0\u5230\u6570\u636e\u5e93\n\n\n\n\n\n\n\u652f\u6301\u6570\u636e\u5e93\u4e8b\u4ef6\n\n\n\u5141\u8bb8\u6dfb\u52a0\u56de\u8c03\uff0c\u5728\u6570\u636e\u4fee\u6539\u6216\u5220\u9664\u524d\u540e\u5728\u540c\u4e00\u4e2a\u4e8b\u52a1\u4e2d\u8fdb\u884c\u64cd\u4f5c\n\n\n\u652f\u6301\u5bf9\u6bd4\u4fee\u6539\u524d\u540e\u7684\u6570\u636e\n\n\n\n\n\n\nDjango\u98ce\u683c\u7684\u6a21\u677f\u7cfb\u7edf\n\n\n\u4e0d\u9700\u9884\u7f16\u8bd1\u6210dll\uff0c\u8f7d\u5165\u901f\u5ea6\u5feb\u4e14\u6ca1\u6709\u5185\u5b58\u6cc4\u6f0f\u95ee\u9898\n\n\n\u5141\u8bb8\u65b0\u7684\u63d2\u4ef6\u5bf9\u539f\u6709\u63d2\u4ef6\u7684\u6a21\u677f\u8fdb\u884c\u8986\u76d6\uff08\u89c4\u5219\u540cDjango\uff09\n\n\n\u652f\u6301\u533a\u57df\u548c\u9488\u5bf9\u533a\u57df\u7684\u52a8\u6001\u5185\u5bb9\uff0c\u53ef\u4ee5\u5728\u8fd9\u57fa\u7840\u4e0a\u5b9e\u73b0\u53ef\u89c6\u5316\u7f16\u8f91\n\n\n\n\n\n\n\u591a\u8bed\u8a00\u652f\u6301\n\n\n\u5728\u4e00\u4e2a\u63d2\u4ef6\u4e2d\u7ffb\u8bd1\u597d\u7684\u5185\u5bb9\u53e6\u5916\u4e00\u4e2a\u63d2\u4ef6\u4e0d\u9700\u8981\u7ffb\u8bd1\n\n\n\u7ffb\u8bd1\u63a5\u53e3\u652f\u6301\u81ea\u5b9a\u4e49\u7ffb\u8bd1\u903b\u8f91\uff08\u5141\u8bb8\u667a\u80fd\u7ffb\u8bd1\uff09\n\n\n\u53ef\u4ee5\u68c0\u6d4b\u5e76\u4f7f\u7528\u6d4f\u89c8\u5668\u8bed\u8a00\u6216Cookies\u6307\u5b9a\u7684\u8bed\u8a00\n\n\n\n\n\n\n\u591a\u65f6\u533a\u652f\u6301\n\n\n\u53ef\u4ee5\u68c0\u6d4b\u5e76\u4f7f\u7528Cookies\u6307\u5b9a\u7684\u65f6\u533a\n\n\n\n\n\n\n\u81ea\u52a8\u751f\u6210\u8868\u5355\uff08\u9700\u8981Common.Base\u63d2\u4ef6\uff09\n\n\n\u652f\u6301\u4ece\u7c7b\u578b\u7684\u6210\u5458\u81ea\u52a8\u751f\u6210\u8868\u5355\n\n\n\u652f\u6301\u5ba2\u6237\u7aef\u548c\u670d\u52a1\u7aef\u7684\u8868\u5355\u9a8c\u8bc1\n\n\n\u652f\u6301\u9632\u8de8\u7ad9\u653b\u51fb\u9a8c\u8bc1\uff0c\u9ed8\u8ba4\u5f00\u542f\n\n\n\u652f\u6301\u81ea\u5b9a\u4e49\u590d\u6742\u7684\u8868\u5355\u7c7b\u578b\n\n\n\u652f\u6301\u5728\u5176\u4ed6\u63d2\u4ef6\u4e2d\u6269\u5c55\u73b0\u6709\u7684\u8868\u5355\n\n\n\n\n\n\n\u7ba1\u7406\u5458\u540e\u53f0\uff08\u9700\u8981\u4f7f\u7528Common.Admin\u63d2\u4ef6\uff09\n\n\n\u57fa\u4e8eAdminLTE\n\n\n\u540c\u65f6\u652f\u6301\u7535\u8111\u548c\u624b\u673a\uff0c\u6240\u6709\u9875\u9762\u81ea\u9002\u5e94\n\n\n\n\n\n\n\u81ea\u52a8\u751f\u6210\u589e\u5220\u67e5\u6539\uff08\u9700\u8981\u4f7f\u7528Common.Admin\u63d2\u4ef6\uff09\n\n\n\u5141\u8bb8\u751f\u6210\u7ba1\u7406\u5458\u4f7f\u7528\u7684\u589e\u5220\u67e5\u6539\u9875\u9762\n\n\n\u652f\u6301\u6279\u91cf\u64cd\u4f5c\u548c\u9ad8\u7ea7\u641c\u7d22\n\n\n\u652f\u6301\u56de\u6536\u7ad9\n\n\n\u652f\u6301\u81ea\u52a8\u751f\u6210\u548c\u68c0\u67e5\u6743\u9650\n\n\n\u4e0d\u901a\u8fc7\u4ee3\u7801\u751f\u6210\u5668\uff0c\u51cf\u5c11\u7a0b\u5e8f\u7684\u4ee3\u7801\u91cf\u548c\u5185\u5b58\u5360\u7528\n\n\n\n\n\n\n\n\n\u9879\u76ee\u8fdb\u5ea6\n\n\n\u6838\u5fc3\u6846\u67b6\u5df2\u5f00\u53d1\u5b8c\u6bd5\uff0c\u4f46\u4ecd\u5904\u4e8ealpha\u9636\u6bb5\u3002\n\n\u6b63\u5728\u9010\u6b65\u5b8c\u5584\u4e1a\u52a1\u63d2\u4ef6\uff0c\u76ee\u6807\u662f\u53d1\u5e03\u4e00\u4e2a\u5b8c\u6574\u7684\u5546\u57ce\u7f51\u7ad9\u3002\n\n\n\u8ba8\u8bbaQQ\u7fa4\uff1a522083886\u3002", 
+            "title": "\u6846\u67b6\u4ecb\u7ecd"
+        }, 
+        {
+            "location": "/#_1", 
+            "text": "https://github.com/zkweb-framework/ZKWeb  https://github.com/zkweb-framework/ZKWeb.Plugins", 
+            "title": "\u9879\u76ee\u5730\u5740"
+        }, 
+        {
+            "location": "/#demo", 
+            "text": "\u5730\u5740:  http://www.zkwebsite.com \n\u7528\u6237\u540d: demo \n\u5bc6\u7801: 123456", 
+            "title": "DEMO"
+        }, 
+        {
+            "location": "/#_2", 
+            "text": "\u652f\u6301\u52a8\u6001\u8f7d\u5165\u548c\u7f16\u8f91\u7684\u63d2\u4ef6\u7cfb\u7edf  \u63d2\u4ef6\u4ee3\u7801\u7f16\u8f91\u4fdd\u5b58\u540e\u53ef\u76f4\u63a5\u5237\u65b0\u6d4f\u89c8\u5668    \u4f7f\u7528Ioc\u5bb9\u5668\u5bf9\u5404\u9879\u529f\u80fd\u8fdb\u884c\u6269\u5c55  \u529f\u80fd\u7684\u53ef\u6269\u5c55\u6027\u5f3a  \u53ef\u652f\u6301\u5355\u5143\u6d4b\u8bd5\u65f6\u8986\u76d6\u4efb\u610f\u7ec4\u4ef6    \u652f\u6301\u4ece\u4ee3\u7801\u81ea\u52a8\u66f4\u65b0\u6570\u636e\u5e93  \u6dfb\u52a0\u6570\u636e\u8868\u6216\u5b57\u6bb5\u540e\u4e0d\u9700\u8981\u8fd0\u884c\u4efb\u4f55\u547d\u4ee4\uff0c\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u66f4\u65b0\u5230\u6570\u636e\u5e93    \u652f\u6301\u6570\u636e\u5e93\u4e8b\u4ef6  \u5141\u8bb8\u6dfb\u52a0\u56de\u8c03\uff0c\u5728\u6570\u636e\u4fee\u6539\u6216\u5220\u9664\u524d\u540e\u5728\u540c\u4e00\u4e2a\u4e8b\u52a1\u4e2d\u8fdb\u884c\u64cd\u4f5c  \u652f\u6301\u5bf9\u6bd4\u4fee\u6539\u524d\u540e\u7684\u6570\u636e    Django\u98ce\u683c\u7684\u6a21\u677f\u7cfb\u7edf  \u4e0d\u9700\u9884\u7f16\u8bd1\u6210dll\uff0c\u8f7d\u5165\u901f\u5ea6\u5feb\u4e14\u6ca1\u6709\u5185\u5b58\u6cc4\u6f0f\u95ee\u9898  \u5141\u8bb8\u65b0\u7684\u63d2\u4ef6\u5bf9\u539f\u6709\u63d2\u4ef6\u7684\u6a21\u677f\u8fdb\u884c\u8986\u76d6\uff08\u89c4\u5219\u540cDjango\uff09  \u652f\u6301\u533a\u57df\u548c\u9488\u5bf9\u533a\u57df\u7684\u52a8\u6001\u5185\u5bb9\uff0c\u53ef\u4ee5\u5728\u8fd9\u57fa\u7840\u4e0a\u5b9e\u73b0\u53ef\u89c6\u5316\u7f16\u8f91    \u591a\u8bed\u8a00\u652f\u6301  \u5728\u4e00\u4e2a\u63d2\u4ef6\u4e2d\u7ffb\u8bd1\u597d\u7684\u5185\u5bb9\u53e6\u5916\u4e00\u4e2a\u63d2\u4ef6\u4e0d\u9700\u8981\u7ffb\u8bd1  \u7ffb\u8bd1\u63a5\u53e3\u652f\u6301\u81ea\u5b9a\u4e49\u7ffb\u8bd1\u903b\u8f91\uff08\u5141\u8bb8\u667a\u80fd\u7ffb\u8bd1\uff09  \u53ef\u4ee5\u68c0\u6d4b\u5e76\u4f7f\u7528\u6d4f\u89c8\u5668\u8bed\u8a00\u6216Cookies\u6307\u5b9a\u7684\u8bed\u8a00    \u591a\u65f6\u533a\u652f\u6301  \u53ef\u4ee5\u68c0\u6d4b\u5e76\u4f7f\u7528Cookies\u6307\u5b9a\u7684\u65f6\u533a    \u81ea\u52a8\u751f\u6210\u8868\u5355\uff08\u9700\u8981Common.Base\u63d2\u4ef6\uff09  \u652f\u6301\u4ece\u7c7b\u578b\u7684\u6210\u5458\u81ea\u52a8\u751f\u6210\u8868\u5355  \u652f\u6301\u5ba2\u6237\u7aef\u548c\u670d\u52a1\u7aef\u7684\u8868\u5355\u9a8c\u8bc1  \u652f\u6301\u9632\u8de8\u7ad9\u653b\u51fb\u9a8c\u8bc1\uff0c\u9ed8\u8ba4\u5f00\u542f  \u652f\u6301\u81ea\u5b9a\u4e49\u590d\u6742\u7684\u8868\u5355\u7c7b\u578b  \u652f\u6301\u5728\u5176\u4ed6\u63d2\u4ef6\u4e2d\u6269\u5c55\u73b0\u6709\u7684\u8868\u5355    \u7ba1\u7406\u5458\u540e\u53f0\uff08\u9700\u8981\u4f7f\u7528Common.Admin\u63d2\u4ef6\uff09  \u57fa\u4e8eAdminLTE  \u540c\u65f6\u652f\u6301\u7535\u8111\u548c\u624b\u673a\uff0c\u6240\u6709\u9875\u9762\u81ea\u9002\u5e94    \u81ea\u52a8\u751f\u6210\u589e\u5220\u67e5\u6539\uff08\u9700\u8981\u4f7f\u7528Common.Admin\u63d2\u4ef6\uff09  \u5141\u8bb8\u751f\u6210\u7ba1\u7406\u5458\u4f7f\u7528\u7684\u589e\u5220\u67e5\u6539\u9875\u9762  \u652f\u6301\u6279\u91cf\u64cd\u4f5c\u548c\u9ad8\u7ea7\u641c\u7d22  \u652f\u6301\u56de\u6536\u7ad9  \u652f\u6301\u81ea\u52a8\u751f\u6210\u548c\u68c0\u67e5\u6743\u9650  \u4e0d\u901a\u8fc7\u4ee3\u7801\u751f\u6210\u5668\uff0c\u51cf\u5c11\u7a0b\u5e8f\u7684\u4ee3\u7801\u91cf\u548c\u5185\u5b58\u5360\u7528", 
+            "title": "\u4e3b\u8981\u529f\u80fd"
+        }, 
+        {
+            "location": "/#_3", 
+            "text": "\u6838\u5fc3\u6846\u67b6\u5df2\u5f00\u53d1\u5b8c\u6bd5\uff0c\u4f46\u4ecd\u5904\u4e8ealpha\u9636\u6bb5\u3002 \n\u6b63\u5728\u9010\u6b65\u5b8c\u5584\u4e1a\u52a1\u63d2\u4ef6\uff0c\u76ee\u6807\u662f\u53d1\u5e03\u4e00\u4e2a\u5b8c\u6574\u7684\u5546\u57ce\u7f51\u7ad9\u3002  \u8ba8\u8bbaQQ\u7fa4\uff1a522083886\u3002", 
+            "title": "\u9879\u76ee\u8fdb\u5ea6"
+        }, 
+        {
+            "location": "/core/plugin/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6\u7cfb\u7edf"
+        }, 
+        {
+            "location": "/core/controller/", 
+            "text": "", 
+            "title": "\u63a7\u5236\u5668\u548c\u6a21\u677f\u7cfb\u7edf"
+        }, 
+        {
+            "location": "/core/database/", 
+            "text": "", 
+            "title": "\u6570\u636e\u5e93\u7ba1\u7406"
+        }, 
+        {
+            "location": "/core/unittest/", 
+            "text": "", 
+            "title": "\u5355\u5143\u6d4b\u8bd5"
+        }, 
+        {
+            "location": "/plugin/common.base/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.Base)"
+        }, 
+        {
+            "location": "/plugin/common.captcha/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.Captcha)"
+        }, 
+        {
+            "location": "/plugin/common.admin/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.Admin)"
+        }, 
+        {
+            "location": "/plugin/common.menupagebase/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.MenuPageBase)"
+        }, 
+        {
+            "location": "/plugin/common.adminsettings/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.AdminSettings)"
+        }, 
+        {
+            "location": "/plugin/common.userpanel/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.UserPanel)"
+        }, 
+        {
+            "location": "/plugin/common.usercontact/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.UserContact)"
+        }, 
+        {
+            "location": "/plugin/common.genericclass/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.GenericClass)"
+        }, 
+        {
+            "location": "/plugin/common.generictag/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.GenericTag)"
+        }, 
+        {
+            "location": "/plugin/common.genericrecord/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.GenericRecord)"
+        }, 
+        {
+            "location": "/plugin/common.languageswitcher/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.LanguageSwitcher)"
+        }, 
+        {
+            "location": "/plugin/common.currency/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.Currency)"
+        }, 
+        {
+            "location": "/plugin/common.region/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.Region)"
+        }, 
+        {
+            "location": "/plugin/common.serial/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.SerialGenerate)"
+        }, 
+        {
+            "location": "/plugin/common.payment/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Finance.Payment)"
+        }, 
+        {
+            "location": "/plugin/common.payment.alipay/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Finance.Payment.Alipay)"
+        }, 
+        {
+            "location": "/plugin/common.payment.tenpay/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Finance.Payment.Tenpay)"
+        }, 
+        {
+            "location": "/plugin/common.payment.wechat/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Finance.Payment.WeChat)"
+        }, 
+        {
+            "location": "/plugin/cms.ckeditor/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(CMS.CKEditor)"
+        }, 
+        {
+            "location": "/plugin/cms.imagebrowser/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(CMS.ImageBrowser)"
+        }, 
+        {
+            "location": "/plugin/cms.atricle/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(CMS.Article)"
+        }, 
+        {
+            "location": "/plugin/shopping.product/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Shopping.Product)"
+        }, 
+        {
+            "location": "/plugin/shopping.logistics/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Shopping.Logistics)"
+        }, 
+        {
+            "location": "/plugin/shopping.order/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Shopping.Order)"
+        }, 
+        {
+            "location": "/plugin/shopping.aftersales/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Shopping.AfterSales)"
+        }, 
+        {
+            "location": "/plugin/unittest.webtester/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(UnitTest.WebTester)"
+        }, 
+        {
+            "location": "/plugin/common.customtranslate/", 
+            "text": "", 
+            "title": "\u63d2\u4ef6(Common.CustomTranslate)"
+        }
+    ]
+}
