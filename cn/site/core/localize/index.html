@@ -486,6 +486,15 @@
   </li>
 
           
+            
+  <li>
+    <a class="" title="实例(创建博客网站)" href="../../example/make_blog/">
+      实例(创建博客网站)
+    </a>
+    
+  </li>
+
+          
         </ul>
         
           <hr>
@@ -512,14 +521,84 @@
           
             <h1>本地化</h1>
           
-          <p>ZKWeb核心框架支持多语言和多时区，
-语言的翻译由<code>ITranslateProvider</code>实现。</p>
-<p>以下待编写</p>
+          <p>ZKWeb核心框架支持多语言和多时区，<br/>
+语言的翻译由<code>ITranslateProvider</code>实现。<br/>
+每个线程都可以指定不同的语言和时区。<br/>
+使用插件<code>Common.Base</code>时可以自动设置当前线程语言和时区的机制，请参考该插件的文档。<br/></p>
 <h3 id="_1">添加翻译</h3>
+<p>添加<code>Example\src\Translates\zh_CN.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 中文翻译</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany, SingletonReuse]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">zh_CN</span> <span class="p">:</span> <span class="n">ITranslateProvider</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">Codes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;()</span> <span class="p">{</span> <span class="s">&quot;zh-CN&quot;</span> <span class="p">};</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">Translates</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;()</span>
+    <span class="p">{</span>
+        <span class="p">{</span> <span class="s">&quot;Example&quot;</span><span class="p">,</span> <span class="s">&quot;示例&quot;</span> <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">CanTranslate</span><span class="p">(</span><span class="kt">string</span> <span class="n">code</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Codes</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">Translate</span><span class="p">(</span><span class="kt">string</span> <span class="n">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Translates</span><span class="p">.</span><span class="n">GetOrDefault</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中。<br/>
+这里保存翻译使用了<code>Dictionary</code>，如果有需要还可以通过其他途径翻译。<br/></p>
 <h3 id="_2">使用翻译</h3>
+<p>在代码中使用翻译<br/>
+类似于gettext，但是gettext使用名称<code>_</code>，这里使用<code>T</code>（Translate的T）。<br/></p>
+<div class="code"><pre><span></span><span class="kt">string</span> <span class="n">translated</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Example&quot;</span><span class="p">);</span> <span class="c1">// 当前语言是中文时，translated等于&quot;示例&quot;</span>
+</pre></div>
+
+
+<p>在模板中使用翻译，通过过滤器翻译字符串或变量<br/></p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ &quot;Example&quot; | trans }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ stringVariable | trans }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
+
+
 <h3 id="_3">转换时区</h3>
+<p>转换到客户端的时间，<code>ToClientTime</code>是一个扩展函数。<br/>
+如果客户端指定了时区则使用该时区，否则使用服务器本地时间。<br/></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">utcTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">clientTime</span> <span class="p">=</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">ToClientTime</span><span class="p">();</span>
+</pre></div>
+
+
+<p>从客户端时间转换到utc时间，常用于客户端的时间控件提交值到服务器。</p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">clientTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">timeParam</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">utcTime</span> <span class="p">=</span> <span class="n">clientTime</span><span class="p">.</span><span class="n">FromClientTime</span><span class="p">();</span>
+</pre></div>
+
+
 <h3 id="_4">指定当前语言</h3>
+<p>直接设置指定语言<br/></p>
+<div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadLanguage</span><span class="p">(</span><span class="s">&quot;zh-CN&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>自动设置语言（Cookies =&gt; 浏览器语言 =&gt; 默认语言）<br/>
+第一个参数决定是否检测浏览器语言<br/></p>
+<div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadLanguageAutomatic</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="s">&quot;en-US&quot;</span><span class="p">);</span>
+</pre></div>
+
+
 <h3 id="_5">指定当前时区</h3>
+<p>直接设置指定时区</p>
+<div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadTimezone</span><span class="p">(</span><span class="s">&quot;China Standard Time&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>自动设置时区（Cookies =&gt; 默认时区）</p>
+<div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadTimezoneAutomatic</span><span class="p">(</span><span class="s">&quot;GMT Standard Time&quot;</span><span class="p">);</span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

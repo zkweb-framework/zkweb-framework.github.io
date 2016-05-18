@@ -35,6 +35,7 @@ pages:
 - 插件(Shopping.AfterSales):       plugin/shopping.aftersales.md
 - 插件(UnitTest.WebTester):        plugin/unittest.webtester.md
 - 插件(Common.CustomTranslate):    plugin/common.customtranslate.md
+- 实例(创建博客网站):               example/make_blog.md
 
 theme: material
 
