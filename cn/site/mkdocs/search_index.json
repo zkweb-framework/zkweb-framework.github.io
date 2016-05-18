@@ -202,68 +202,178 @@
         }, 
         {
             "location": "/core/database/", 
-            "text": "ZKWeb\u4f7f\u7528\u4e86NHibernate\u6765\u7ba1\u7406\u6570\u636e\u5e93\u548c\u67e5\u8be2\u6570\u636e\u3002\n\n\u76ee\u524d\u652f\u6301\u7684\u6570\u636e\u5e93\u670d\u52a1\u5668\u6709PostgreSQL, SQLite, MSSQL, MySQL\u3002\n\n\u4f7f\u7528NHibernate\u7684\u7406\u7531\u6709\n\n\n\n\n\u4e0d\u4fdd\u5b58\u6570\u636e\u5e93\u72b6\u6001\u548c\u66f4\u65b0\u5386\u53f2\uff0c\u4e0d\u4f1a\u50cfEF\u4e00\u6837\u5bb9\u6613\u51fa\u73b0metadata\u76f8\u5173\u7684\u9519\u8bef\n\n\n\u53ef\u4ee5\u5b9e\u73b0\u81ea\u52a8\u66f4\u65b0\u6570\u636e\u5e93\uff0c\u6dfb\u52a0\u5b57\u6bb5\u540e\u4e0d\u9700\u8981\u4efb\u4f55\u989d\u5916\u64cd\u4f5c\u5c31\u53ef\u4ee5\u5e94\u7528\u5230\u6570\u636e\u8868\n\n\n\u66f4\u597d\u7684\u652f\u6301MySQL\u7b49\u975e\u5fae\u8f6f\u7684\u6570\u636e\u5e93\uff0c\u4e0d\u4f1a\u50cfEF\u53ea\u5bf9MSSQL\u652f\u6301\u597d\u3002\n\n\n\n\nZKWeb\u540c\u65f6\u4f7f\u7528\u4e86FluentNHibernate\u6765\u5b9a\u4e49\u6570\u636e\u7ed3\u6784\uff0c\u907f\u514d\u4f7f\u7528\u7e41\u6742\u7684xml\u3002\n\n\n\u4ee5\u4e0b\u5185\u5bb9\u5f85\u7f16\u5199\n\n\n\u6dfb\u52a0\u6570\u636e\u8868\n\n\n\u5347\u7ea7\u6570\u636e\u8868\n\n\n\u589e\u5220\u67e5\u6539\n\n\n\u6dfb\u52a0\u6570\u636e\u4e8b\u4ef6", 
+            "text": "ZKWeb\u4f7f\u7528\u4e86NHibernate\u6765\u7ba1\u7406\u6570\u636e\u5e93\u548c\u67e5\u8be2\u6570\u636e\u3002\n\n\u76ee\u524d\u652f\u6301\u7684\u6570\u636e\u5e93\u670d\u52a1\u5668\u6709PostgreSQL, SQLite, MSSQL, MySQL\u3002\n\n\u4f7f\u7528NHibernate\u7684\u7406\u7531\u6709\n\n\n\n\n\u4e0d\u4fdd\u5b58\u6570\u636e\u5e93\u72b6\u6001\u548c\u66f4\u65b0\u5386\u53f2\uff0c\u4e0d\u4f1a\u50cfEF\u4e00\u6837\u5bb9\u6613\u51fa\u73b0metadata\u76f8\u5173\u7684\u9519\u8bef\n\n\n\u53ef\u4ee5\u5b9e\u73b0\u81ea\u52a8\u66f4\u65b0\u6570\u636e\u5e93\uff0c\u6dfb\u52a0\u5b57\u6bb5\u540e\u4e0d\u9700\u8981\u4efb\u4f55\u989d\u5916\u64cd\u4f5c\u5c31\u53ef\u4ee5\u5e94\u7528\u5230\u6570\u636e\u8868\n\n\n\u66f4\u597d\u7684\u652f\u6301MySQL\u7b49\u975e\u5fae\u8f6f\u7684\u6570\u636e\u5e93\uff0c\u4e0d\u4f1a\u50cfEF\u53ea\u5bf9MSSQL\u652f\u6301\u597d\u3002\n\n\n\n\nZKWeb\u540c\u65f6\u4f7f\u7528\u4e86FluentNHibernate\u6765\u5b9a\u4e49\u6570\u636e\u7ed3\u6784\uff0c\u907f\u514d\u4f7f\u7528\u7e41\u6742\u7684xml\u3002\n\n\n\u6dfb\u52a0\u6570\u636e\u8868\n\n\n\u6dfb\u52a0\nExample\\src\\Database\\ExampleTable.cs\n\uff0c\u5185\u5bb9\u5982\u4e0b\n\n\n/// \nsummary\n\n\n/// \u793a\u4f8b\u6570\u636e\n\n\n/// \n/summary\n\n\npublic\n \nclass\n \nExampleTable\n \n{\n\n    \npublic\n \nvirtual\n \nlong\n \nId\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n    \npublic\n \nvirtual\n \nstring\n \nName\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n    \npublic\n \nvirtual\n \nDateTime\n \nCreateTime\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n\n}\n\n\n\n/// \nsummary\n\n\n/// \u793a\u4f8b\u6570\u636e\u8868\u7684\u7ed3\u6784\n\n\n/// \n/summary\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nExampleTableMap\n \n:\n \nClassMap\nExampleTable\n \n{\n\n    \npublic\n \nExampleTableMap\n()\n \n{\n\n        \nId\n(\ne\n \n=\n \ne\n.\nId\n);\n\n        \nMap\n(\ne\n \n=\n \ne\n.\nName\n).\nLength\n(\n0\nxffff\n);\n \n// 0xffff `== no limit, you can confirm later\n\n        \nMap\n(\ne\n \n=\n \ne\n.\nCreateTime\n).\nNot\n.\nNullable\n();\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u6dfb\u52a0\u5b8c\u6bd5\u540e\u5237\u65b0\u6d4f\u89c8\u5668\u53ef\u4ee5\u770b\u5230\u6570\u636e\u5e93\u4e2d\u591a\u51fa\u8fd9\u4e2a\u8868\u3002\n\n\u66f4\u591a\u7528\u6cd5\u53ef\u4ee5\u53c2\u8003FluentNHibernte\u7684\u6587\u6863\u3002\n\nhttps://github.com/jagregory/fluent-nhibernate/wiki/Getting-started\n\n\u5728ZKWeb\u4e2d\u5df2\u6709\u63d2\u4ef6\u6b63\u5e38\u4f7f\u7528\u4e00\u5bf9\u591a(Reference, HasMany)\uff0c\u591a\u5bf9\u591a(ManyToMany)\u7684\u529f\u80fd\u3002\n\n\n\u5347\u7ea7\u6570\u636e\u8868\n\n\n\u5728ZKWeb\u4e2d\u5347\u7ea7\u6570\u636e\u5e93\u53ea\u9700\u8981\u4fee\u6539\u7c7b\u5e76\u4e14\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u3002\n\n\u5728ExampleTable\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u6210\u5458\n\n\npublic\n \nvirtual\n \nbool\n \nDeleted\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n\n\n\n\n\n\u5728ExampleTableMap\u7684\u6784\u9020\u51fd\u6570\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u884c\n\n\nMap\n(\ne\n \n=\n \ne\n.\nDeleted\n);\n\n\n\n\n\n\n\u4fdd\u5b58\u540e\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u770b\u5230\u6548\u679c\u3002\n\n\u6ce8\u610fZKWeb\u4e2d\u53ef\u4ee5\u81ea\u52a8\u6dfb\u52a0\u65b0\u589e\u7684\u5b57\u6bb5\uff0c\u4f46\u662f\u4e0d\u80fd\u4fee\u6539\u6216\u5220\u9664\u539f\u6709\u5b57\u6bb5\u3002\n\n\n\n\n\u589e\u5220\u67e5\u6539\n\n\n\u901a\u8fc7\nDatabaseManager.GetContext\n\u83b7\u53d6\u6570\u636e\u5e93\u4e0a\u4e0b\u6587\u53ef\u4ee5\u8fdb\u884c\u589e\u5220\u67e5\u6539\u64cd\u4f5c\n\n\u5982\u679c\u4f7f\u7528\u4e86\nCommon.Base\n\u63d2\u4ef6\u53ef\u4ee5\u4f7f\u7528\nGenericRepository\n\u548c\nUnitOfWork\n\u7c7b\u8fdb\u884c\u66f4\u7b80\u5355\u7684\u64cd\u4f5c\uff0c\n\n\u8be6\u7ec6\u8bf7\u53c2\u8003\nCommon.Base\n\u7684\u6587\u6863\u3002\n\n\n\u4ee5\u4e0b\u51fd\u6570\u53ef\u4ee5\u6dfb\u52a0\u5230\nExampleController\n\u7528\u4e8e\u6d4b\u8bd5\u662f\u5426\u6b63\u5e38\u5de5\u4f5c\u3002\n\n\n\u65b0\u589e\u6570\u636e\n\n\u4f7f\u7528\nref data\n\u7684\u539f\u56e0\u662f\u56e0\u4e3aNHibernate\u63d2\u5165\u6570\u636e\u65f6\u4f1a\u8fd4\u56de\u53e6\u5916\u4e00\u4e2a\u5bf9\u8c61\u3002\n\n\u64cd\u4f5c\u5b8c\u6bd5\u540e\u9700\u8981\u4f7f\u7528\nSaveChanges\n\u63d0\u4ea4\u4e8b\u52a1\uff0c\u4e3a\u4e86\u4fdd\u8bc1\u6570\u636e\u4e00\u81f4\u6027ZKWeb\u4e2d\u7684\u64cd\u4f5c\u90fd\u4f1a\u9ed8\u8ba4\u5f00\u542f\u4e8b\u52a1\u3002\n\n\n[Action(\nexample/add_data\n)]\n\n\npublic\n \nstring\n \nAddData\n()\n \n{\n\n    \nvar\n \ndatabaseManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nDatabaseManager\n();\n\n    \nusing\n \n(\nvar\n \ncontext\n \n=\n \ndatabaseManager\n.\nGetContext\n())\n \n{\n\n        \nvar\n \ndata\n \n=\n \nnew\n \nExampleTable\n()\n \n{\n\n            \nName\n \n=\n \ntest\n,\n\n            \nCreateTime\n \n=\n \nDateTime\n.\nUtcNow\n,\n\n            \nDeleted\n \n=\n \nfalse\n\n        \n};\n\n        \ncontext\n.\nSave\n(\nref\n \ndata\n);\n\n        \ncontext\n.\nSaveChanges\n();\n \n// don\nt forget this\n\n    \n}\n\n    \nreturn\n \nsuccess\n;\n\n\n}\n\n\n\n\n\n\n\u4fee\u6539\u6570\u636e\n\n\u8fd9\u91cc\u4f1a\u4fee\u6539\u8868\u4e2d\u7684\u6240\u6709\u6570\u636e\u3002\n\n\u548c\u65b0\u589e\u6570\u636e\u4e00\u6837\uff0c\u4fee\u6539\u6570\u636e\u4e5f\u4f1a\u4f7f\u7528\nSave\n\u51fd\u6570\uff0c\u4f46\u662f\u4fee\u6539\u64cd\u4f5c\u5e94\u8be5\u5728\u540e\u9762\u7684\u53c2\u6570\u4e2d\u5b9e\u73b0\uff0c\n\n\u8fd9\u6837\u4f7f\u7528\u6570\u636e\u5e93\u4e8b\u4ef6\u53ef\u4ee5\u6355\u6349\u5230\u4fee\u6539\u524d\u548c\u4fee\u6539\u540e\u7684\u6570\u636e\u3002\n\n\n[Action(\nexample/update_data\n)]\n\n\npublic\n \nstring\n \nUpdateData\n()\n \n{\n\n    \nvar\n \ndatabaseManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nDatabaseManager\n();\n\n    \nusing\n \n(\nvar\n \ncontext\n \n=\n \ndatabaseManager\n.\nGetContext\n())\n \n{\n\n        \nforeach\n \n(\nvar\n \ndata\n \nin\n \ncontext\n.\nQuery\nExampleTable\n())\n \n{\n\n            \nvar\n \nlocalData\n \n=\n \ndata\n;\n\n            \ncontext\n.\nSave\n(\nref\n \nlocalData\n,\n \nd\n \n=\n \nd\n.\nName\n \n=\n \nupdated\n);\n\n        \n}\n\n        \ncontext\n.\nSaveChanges\n();\n \n// don\nt forget this\n\n    \n}\n\n    \nreturn\n \nsuccess\n;\n\n\n}\n\n\n\n\n\n\n\u67e5\u8be2\u6570\u636e\n\n\u8fd9\u91cc\u8fd4\u56de\u6ca1\u6709\u66f4\u65b0\u7684\u6570\u636e\u5185\u5bb9\u3002\n\n\u67e5\u8be2\u65f6\u4e0d\u9700\u8981\u8c03\u7528\nSaveChanges\n\u51fd\u6570\u3002\n\n\n[Action(\nexample/query_data\n)]\n\n\npublic\n \nstring\n \nQueryData\n()\n \n{\n\n    \nvar\n \ndatabaseManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nDatabaseManager\n();\n\n    \nusing\n \n(\nvar\n \ncontext\n \n=\n \ndatabaseManager\n.\nGetContext\n())\n \n{\n\n        \nvar\n \nnotUpdated\n \n=\n \ncontext\n.\nQuery\nExampleTable\n()\n\n            \n.\nWhere\n(\nt\n \n=\n \nt\n.\nName\n \n!=\n \nupdated\n).\nToList\n();\n\n        \nreturn\n \nstring\n.\nFormat\n(\nthese objects are not updated:\\r\\n{0}\n,\n\n            \nJsonConvert\n.\nSerializeObject\n(\nnotUpdated\n,\n \nFormatting\n.\nIndented\n));\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u5220\u9664\u6570\u636e\n\n\n[Action(\nexample/remove_data\n)]\n\n\npublic\n \nstring\n \nRemoveData\n()\n \n{\n\n    \nvar\n \ndatabaseManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nDatabaseManager\n();\n\n    \nusing\n \n(\nvar\n \ncontext\n \n=\n \ndatabaseManager\n.\nGetContext\n())\n \n{\n\n        \nlong\n \ndeleted\n \n=\n \ncontext\n.\nDeleteWhere\nExampleTable\n(\nd\n \n=\n \nd\n.\nName\n \n==\n \nupdated\n);\n\n        \ncontext\n.\nSaveChanges\n();\n \n// don\nt forget this\n\n        \nreturn\n \nstring\n.\nFormat\n(\n{0} objects are removed\n,\n \ndeleted\n);\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u6570\u636e\u4e8b\u4ef6\n\n\nZKWeb\u652f\u6301\u5b9a\u4e49\u4e8b\u4ef6\u76d1\u542c\u6570\u636e\u7684\u589e\u5220\u67e5\u6539\n\n\u5176\u4e2d\u589e\u52a0\u548c\u4fee\u6539\u4f7f\u7528\nIDataSaveCallback\n\uff0c\u5220\u9664\u4f7f\u7528\nIDataDeleteCallback\n\u3002\n\n\u5728Before\u6216After\u51fd\u6570\u4e2d\u53ef\u4ee5\u901a\u8fc7\u4f20\u5165\u7684\ncontext\n\u53c2\u6570\u4fee\u6539\u5173\u8054\u7684\u6570\u636e\uff0c\n\n\u5728Before\u6216After\u51fd\u6570\u4e2d\u629b\u51fa\u4f8b\u5916\u53ef\u4ee5\u963b\u6b62\u4e8b\u52a1\u63d0\u4ea4\u3002\n\n\n\u4fdd\u5b58\u4e8b\u4ef6\u7684\u793a\u4f8b\n\u6dfb\u52a0\nExample\\src\\DataCallbacks\\ExampleDataSaveCallback.cs\n\uff0c\u5185\u5bb9\u5982\u4e0b\n\n\u8fd9\u4e2a\u5904\u7406\u5668\u4f1a\u5728\u6570\u636e\u63d2\u5165\u6216\u540d\u79f0\u6539\u53d8\u65f6\u8bb0\u5f55\u5230\u65e5\u5fd7\u3002\n\n\n/// \nsummary\n\n\n/// \u4fdd\u5b58\u4e8b\u4ef6\u7684\u793a\u4f8b\n\n\n/// \n/summary\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nExampleDataSaveCallback\n \n:\n \nIDataSaveCallback\nExampleTable\n \n{\n\n    \nprivate\n \nlong\n \nIdBeforeSave\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n    \nprivate\n \nstring\n \nNameBeforeSave\n \n{\n \nget\n;\n \nset\n;\n \n}\n\n\n    \npublic\n \nvoid\n \nBeforeSave\n(\nDatabaseContext\n \ncontext\n,\n \nExampleTable\n \ndata\n)\n \n{\n\n        \nIdBeforeSave\n \n=\n \ndata\n.\nId\n;\n\n        \nNameBeforeSave\n \n=\n \ndata\n.\nName\n;\n\n    \n}\n\n\n    \npublic\n \nvoid\n \nAfterSave\n(\nDatabaseContext\n \ncontext\n,\n \nExampleTable\n \ndata\n)\n \n{\n\n        \nvar\n \nlogManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nLogManager\n();\n\n        \nif\n \n(\nIdBeforeSave\n \n=\n \n0\n)\n \n{\n\n            \nlogManager\n.\nLogDebug\n(\nstring\n.\nFormat\n(\nexample data inserted, id is {0}\n,\n \ndata\n.\nId\n));\n\n        \n}\n \nelse\n \nif\n \n(\nNameBeforeSave\n \n!=\n \ndata\n.\nName\n)\n \n{\n\n            \nlogManager\n.\nLogDebug\n(\nstring\n.\nFormat\n(\nexample data name changed, id is {0}\n,\n \ndata\n.\nId\n));\n\n        \n}\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u6dfb\u52a0\u6216\u66f4\u65b0\u6570\u636e\u540e\u53ef\u4ee5\u67e5\u770b\nZKWeb\\App_Data\\Logs\n\u4e0b\u7684\u65e5\u5fd7\u662f\u5426\u8bb0\u5f55\u6210\u529f\u3002\n\n\n\u5220\u9664\u4e8b\u4ef6\u7684\u793a\u4f8b\n\n\u6dfb\u52a0\nExample\\src\\DataCallbacks\\ExampleDataDeleteCallback.cs\n\uff0c\u5185\u5bb9\u5982\u4e0b\n\n\u8fd9\u4e2a\u5904\u7406\u5668\u4f1a\u5728\u6570\u636e\u5220\u9664\u65f6\u8bb0\u5f55\u5230\u65e5\u5fd7\u3002\n\n\n/// \nsummary\n\n\n/// \u5220\u9664\u4e8b\u4ef6\u7684\u793a\u4f8b\n\n\n/// \n/summary\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nExampleDataDeleteCallback\n \n:\n \nIDataDeleteCallback\nExampleTable\n \n{\n\n    \npublic\n \nvoid\n \nBeforeDelete\n(\nDatabaseContext\n \ncontext\n,\n \nExampleTable\n \ndata\n)\n \n{\n\n    \n}\n\n\n    \npublic\n \nvoid\n \nAfterDelete\n(\nDatabaseContext\n \ncontext\n,\n \nExampleTable\n \ndata\n)\n \n{\n\n        \nvar\n \nlogManager\n \n=\n \nApplication\n.\nIoc\n.\nResolve\nLogManager\n();\n\n        \nlogManager\n.\nLogDebug\n(\nstring\n.\nFormat\n(\nexample data deleted, id is {0}\n,\n \ndata\n.\nId\n));\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u5220\u9664\u6570\u636e\u540e\u53ef\u4ee5\u67e5\u770b\nZKWeb\\App_Data\\Logs\n\u4e0b\u7684\u65e5\u5fd7\u662f\u5426\u8bb0\u5f55\u6210\u529f\u3002\n\n\n\u539f\u751f\u67e5\u8be2\n\n\nZKWeb\u5728\u652f\u6301\u6570\u636e\u4e8b\u4ef6\u65f6\u727a\u7272\u4e86\u4e00\u5b9a\u7684\u6027\u80fd\uff0c\u5305\u62ec\u4e0d\u80fd\u5b9e\u73b0\u771f\u6b63\u7684\u6279\u91cf\u64cd\u4f5c\u3002\n\n\u4f46\u4f60\u53ef\u4ee5\u901a\u8fc7\u539f\u751f\u67e5\u8be2\u5b9e\u73b0\uff0c\u4f7f\u7528\u539f\u751f\u67e5\u8be2\u65f6\u5c06\u4e0d\u80fd\u652f\u6301\u6570\u636e\u4e8b\u4ef6\u7b49\u9ad8\u7ea7\u529f\u80fd\u3002\n\n\nNHibernate\u7684\u4f1a\u8bdd\u53ef\u4ee5\u901a\u8fc7\ncontext.Session\n\u83b7\u53d6\u5230\u3002\n\n\ncontext\n.\nSession\n.\nSave\n(\nnew\n \nExampleTable\n());\n\n\n\n\n\n\n\u6267\u884c\u50a8\u5b58\u8fc7\u7a0b\uff08\u6dfb\u52a0\u3001\u66f4\u65b0\u6216\u5220\u9664\uff09\n\n\nvar\n \nquery\n \n=\n \ncontext\n.\nSession\n.\nCreateSQLQuery\n(\nexec some_update_sp @arg\n);\n\n\nquery\n.\nSetParameter\n(\narg\n,\n \n1\n);\n\n\nint\n \naffected\n \n=\n \nquery\n.\nExecuteUpdate\n();\n\n\n\n\n\n\n\u6267\u884c\u50a8\u5b58\u8fc7\u7a0b\uff08\u67e5\u8be2\uff09\n\n\nvar\n \nquery\n \n=\n \ncontext\n.\nSession\n.\nCreateSQLQuery\n(\nexec some_query_sp @arg\n);\n\n\nquery\n.\nSetParameter\n(\narg\n,\n \n1\n);\n\n\nvar\n \nresult\n \n=\n \nquery\n.\nEnumerable\nExampleTable\n();", 
             "title": "\u6570\u636e\u5e93\u7ba1\u7406"
         }, 
         {
             "location": "/core/database/#_1", 
-            "text": "", 
+            "text": "\u6dfb\u52a0 Example\\src\\Database\\ExampleTable.cs \uff0c\u5185\u5bb9\u5982\u4e0b  ///  summary  /// \u793a\u4f8b\u6570\u636e  ///  /summary  public   class   ExampleTable   { \n     public   virtual   long   Id   {   get ;   set ;   } \n     public   virtual   string   Name   {   get ;   set ;   } \n     public   virtual   DateTime   CreateTime   {   get ;   set ;   }  }  ///  summary  /// \u793a\u4f8b\u6570\u636e\u8868\u7684\u7ed3\u6784  ///  /summary  [ExportMany]  public   class   ExampleTableMap   :   ClassMap ExampleTable   { \n     public   ExampleTableMap ()   { \n         Id ( e   =   e . Id ); \n         Map ( e   =   e . Name ). Length ( 0 xffff );   // 0xffff `== no limit, you can confirm later \n         Map ( e   =   e . CreateTime ). Not . Nullable (); \n     }  }   \u6dfb\u52a0\u5b8c\u6bd5\u540e\u5237\u65b0\u6d4f\u89c8\u5668\u53ef\u4ee5\u770b\u5230\u6570\u636e\u5e93\u4e2d\u591a\u51fa\u8fd9\u4e2a\u8868\u3002 \n\u66f4\u591a\u7528\u6cd5\u53ef\u4ee5\u53c2\u8003FluentNHibernte\u7684\u6587\u6863\u3002 \nhttps://github.com/jagregory/fluent-nhibernate/wiki/Getting-started \n\u5728ZKWeb\u4e2d\u5df2\u6709\u63d2\u4ef6\u6b63\u5e38\u4f7f\u7528\u4e00\u5bf9\u591a(Reference, HasMany)\uff0c\u591a\u5bf9\u591a(ManyToMany)\u7684\u529f\u80fd\u3002", 
             "title": "\u6dfb\u52a0\u6570\u636e\u8868"
         }, 
         {
             "location": "/core/database/#_2", 
-            "text": "", 
+            "text": "\u5728ZKWeb\u4e2d\u5347\u7ea7\u6570\u636e\u5e93\u53ea\u9700\u8981\u4fee\u6539\u7c7b\u5e76\u4e14\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u3002 \n\u5728ExampleTable\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u6210\u5458  public   virtual   bool   Deleted   {   get ;   set ;   }   \u5728ExampleTableMap\u7684\u6784\u9020\u51fd\u6570\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u884c  Map ( e   =   e . Deleted );   \u4fdd\u5b58\u540e\u5237\u65b0\u6d4f\u89c8\u5668\u5373\u53ef\u770b\u5230\u6548\u679c\u3002 \n\u6ce8\u610fZKWeb\u4e2d\u53ef\u4ee5\u81ea\u52a8\u6dfb\u52a0\u65b0\u589e\u7684\u5b57\u6bb5\uff0c\u4f46\u662f\u4e0d\u80fd\u4fee\u6539\u6216\u5220\u9664\u539f\u6709\u5b57\u6bb5\u3002", 
             "title": "\u5347\u7ea7\u6570\u636e\u8868"
         }, 
         {
             "location": "/core/database/#_3", 
-            "text": "", 
+            "text": "\u901a\u8fc7 DatabaseManager.GetContext \u83b7\u53d6\u6570\u636e\u5e93\u4e0a\u4e0b\u6587\u53ef\u4ee5\u8fdb\u884c\u589e\u5220\u67e5\u6539\u64cd\u4f5c \n\u5982\u679c\u4f7f\u7528\u4e86 Common.Base \u63d2\u4ef6\u53ef\u4ee5\u4f7f\u7528 GenericRepository \u548c UnitOfWork \u7c7b\u8fdb\u884c\u66f4\u7b80\u5355\u7684\u64cd\u4f5c\uff0c \n\u8be6\u7ec6\u8bf7\u53c2\u8003 Common.Base \u7684\u6587\u6863\u3002  \u4ee5\u4e0b\u51fd\u6570\u53ef\u4ee5\u6dfb\u52a0\u5230 ExampleController \u7528\u4e8e\u6d4b\u8bd5\u662f\u5426\u6b63\u5e38\u5de5\u4f5c\u3002  \u65b0\u589e\u6570\u636e \n\u4f7f\u7528 ref data \u7684\u539f\u56e0\u662f\u56e0\u4e3aNHibernate\u63d2\u5165\u6570\u636e\u65f6\u4f1a\u8fd4\u56de\u53e6\u5916\u4e00\u4e2a\u5bf9\u8c61\u3002 \n\u64cd\u4f5c\u5b8c\u6bd5\u540e\u9700\u8981\u4f7f\u7528 SaveChanges \u63d0\u4ea4\u4e8b\u52a1\uff0c\u4e3a\u4e86\u4fdd\u8bc1\u6570\u636e\u4e00\u81f4\u6027ZKWeb\u4e2d\u7684\u64cd\u4f5c\u90fd\u4f1a\u9ed8\u8ba4\u5f00\u542f\u4e8b\u52a1\u3002  [Action( example/add_data )]  public   string   AddData ()   { \n     var   databaseManager   =   Application . Ioc . Resolve DatabaseManager (); \n     using   ( var   context   =   databaseManager . GetContext ())   { \n         var   data   =   new   ExampleTable ()   { \n             Name   =   test , \n             CreateTime   =   DateTime . UtcNow , \n             Deleted   =   false \n         }; \n         context . Save ( ref   data ); \n         context . SaveChanges ();   // don t forget this \n     } \n     return   success ;  }   \u4fee\u6539\u6570\u636e \n\u8fd9\u91cc\u4f1a\u4fee\u6539\u8868\u4e2d\u7684\u6240\u6709\u6570\u636e\u3002 \n\u548c\u65b0\u589e\u6570\u636e\u4e00\u6837\uff0c\u4fee\u6539\u6570\u636e\u4e5f\u4f1a\u4f7f\u7528 Save \u51fd\u6570\uff0c\u4f46\u662f\u4fee\u6539\u64cd\u4f5c\u5e94\u8be5\u5728\u540e\u9762\u7684\u53c2\u6570\u4e2d\u5b9e\u73b0\uff0c \n\u8fd9\u6837\u4f7f\u7528\u6570\u636e\u5e93\u4e8b\u4ef6\u53ef\u4ee5\u6355\u6349\u5230\u4fee\u6539\u524d\u548c\u4fee\u6539\u540e\u7684\u6570\u636e\u3002  [Action( example/update_data )]  public   string   UpdateData ()   { \n     var   databaseManager   =   Application . Ioc . Resolve DatabaseManager (); \n     using   ( var   context   =   databaseManager . GetContext ())   { \n         foreach   ( var   data   in   context . Query ExampleTable ())   { \n             var   localData   =   data ; \n             context . Save ( ref   localData ,   d   =   d . Name   =   updated ); \n         } \n         context . SaveChanges ();   // don t forget this \n     } \n     return   success ;  }   \u67e5\u8be2\u6570\u636e \n\u8fd9\u91cc\u8fd4\u56de\u6ca1\u6709\u66f4\u65b0\u7684\u6570\u636e\u5185\u5bb9\u3002 \n\u67e5\u8be2\u65f6\u4e0d\u9700\u8981\u8c03\u7528 SaveChanges \u51fd\u6570\u3002  [Action( example/query_data )]  public   string   QueryData ()   { \n     var   databaseManager   =   Application . Ioc . Resolve DatabaseManager (); \n     using   ( var   context   =   databaseManager . GetContext ())   { \n         var   notUpdated   =   context . Query ExampleTable () \n             . Where ( t   =   t . Name   !=   updated ). ToList (); \n         return   string . Format ( these objects are not updated:\\r\\n{0} , \n             JsonConvert . SerializeObject ( notUpdated ,   Formatting . Indented )); \n     }  }   \u5220\u9664\u6570\u636e  [Action( example/remove_data )]  public   string   RemoveData ()   { \n     var   databaseManager   =   Application . Ioc . Resolve DatabaseManager (); \n     using   ( var   context   =   databaseManager . GetContext ())   { \n         long   deleted   =   context . DeleteWhere ExampleTable ( d   =   d . Name   ==   updated ); \n         context . SaveChanges ();   // don t forget this \n         return   string . Format ( {0} objects are removed ,   deleted ); \n     }  }", 
             "title": "\u589e\u5220\u67e5\u6539"
         }, 
         {
             "location": "/core/database/#_4", 
-            "text": "", 
-            "title": "\u6dfb\u52a0\u6570\u636e\u4e8b\u4ef6"
+            "text": "ZKWeb\u652f\u6301\u5b9a\u4e49\u4e8b\u4ef6\u76d1\u542c\u6570\u636e\u7684\u589e\u5220\u67e5\u6539 \n\u5176\u4e2d\u589e\u52a0\u548c\u4fee\u6539\u4f7f\u7528 IDataSaveCallback \uff0c\u5220\u9664\u4f7f\u7528 IDataDeleteCallback \u3002 \n\u5728Before\u6216After\u51fd\u6570\u4e2d\u53ef\u4ee5\u901a\u8fc7\u4f20\u5165\u7684 context \u53c2\u6570\u4fee\u6539\u5173\u8054\u7684\u6570\u636e\uff0c \n\u5728Before\u6216After\u51fd\u6570\u4e2d\u629b\u51fa\u4f8b\u5916\u53ef\u4ee5\u963b\u6b62\u4e8b\u52a1\u63d0\u4ea4\u3002  \u4fdd\u5b58\u4e8b\u4ef6\u7684\u793a\u4f8b\n\u6dfb\u52a0 Example\\src\\DataCallbacks\\ExampleDataSaveCallback.cs \uff0c\u5185\u5bb9\u5982\u4e0b \n\u8fd9\u4e2a\u5904\u7406\u5668\u4f1a\u5728\u6570\u636e\u63d2\u5165\u6216\u540d\u79f0\u6539\u53d8\u65f6\u8bb0\u5f55\u5230\u65e5\u5fd7\u3002  ///  summary  /// \u4fdd\u5b58\u4e8b\u4ef6\u7684\u793a\u4f8b  ///  /summary  [ExportMany]  public   class   ExampleDataSaveCallback   :   IDataSaveCallback ExampleTable   { \n     private   long   IdBeforeSave   {   get ;   set ;   } \n     private   string   NameBeforeSave   {   get ;   set ;   } \n\n     public   void   BeforeSave ( DatabaseContext   context ,   ExampleTable   data )   { \n         IdBeforeSave   =   data . Id ; \n         NameBeforeSave   =   data . Name ; \n     } \n\n     public   void   AfterSave ( DatabaseContext   context ,   ExampleTable   data )   { \n         var   logManager   =   Application . Ioc . Resolve LogManager (); \n         if   ( IdBeforeSave   =   0 )   { \n             logManager . LogDebug ( string . Format ( example data inserted, id is {0} ,   data . Id )); \n         }   else   if   ( NameBeforeSave   !=   data . Name )   { \n             logManager . LogDebug ( string . Format ( example data name changed, id is {0} ,   data . Id )); \n         } \n     }  }   \u6dfb\u52a0\u6216\u66f4\u65b0\u6570\u636e\u540e\u53ef\u4ee5\u67e5\u770b ZKWeb\\App_Data\\Logs \u4e0b\u7684\u65e5\u5fd7\u662f\u5426\u8bb0\u5f55\u6210\u529f\u3002  \u5220\u9664\u4e8b\u4ef6\u7684\u793a\u4f8b \n\u6dfb\u52a0 Example\\src\\DataCallbacks\\ExampleDataDeleteCallback.cs \uff0c\u5185\u5bb9\u5982\u4e0b \n\u8fd9\u4e2a\u5904\u7406\u5668\u4f1a\u5728\u6570\u636e\u5220\u9664\u65f6\u8bb0\u5f55\u5230\u65e5\u5fd7\u3002  ///  summary  /// \u5220\u9664\u4e8b\u4ef6\u7684\u793a\u4f8b  ///  /summary  [ExportMany]  public   class   ExampleDataDeleteCallback   :   IDataDeleteCallback ExampleTable   { \n     public   void   BeforeDelete ( DatabaseContext   context ,   ExampleTable   data )   { \n     } \n\n     public   void   AfterDelete ( DatabaseContext   context ,   ExampleTable   data )   { \n         var   logManager   =   Application . Ioc . Resolve LogManager (); \n         logManager . LogDebug ( string . Format ( example data deleted, id is {0} ,   data . Id )); \n     }  }   \u5220\u9664\u6570\u636e\u540e\u53ef\u4ee5\u67e5\u770b ZKWeb\\App_Data\\Logs \u4e0b\u7684\u65e5\u5fd7\u662f\u5426\u8bb0\u5f55\u6210\u529f\u3002", 
+            "title": "\u6570\u636e\u4e8b\u4ef6"
+        }, 
+        {
+            "location": "/core/database/#_5", 
+            "text": "ZKWeb\u5728\u652f\u6301\u6570\u636e\u4e8b\u4ef6\u65f6\u727a\u7272\u4e86\u4e00\u5b9a\u7684\u6027\u80fd\uff0c\u5305\u62ec\u4e0d\u80fd\u5b9e\u73b0\u771f\u6b63\u7684\u6279\u91cf\u64cd\u4f5c\u3002 \n\u4f46\u4f60\u53ef\u4ee5\u901a\u8fc7\u539f\u751f\u67e5\u8be2\u5b9e\u73b0\uff0c\u4f7f\u7528\u539f\u751f\u67e5\u8be2\u65f6\u5c06\u4e0d\u80fd\u652f\u6301\u6570\u636e\u4e8b\u4ef6\u7b49\u9ad8\u7ea7\u529f\u80fd\u3002  NHibernate\u7684\u4f1a\u8bdd\u53ef\u4ee5\u901a\u8fc7 context.Session \u83b7\u53d6\u5230\u3002  context . Session . Save ( new   ExampleTable ());   \u6267\u884c\u50a8\u5b58\u8fc7\u7a0b\uff08\u6dfb\u52a0\u3001\u66f4\u65b0\u6216\u5220\u9664\uff09  var   query   =   context . Session . CreateSQLQuery ( exec some_update_sp @arg );  query . SetParameter ( arg ,   1 );  int   affected   =   query . ExecuteUpdate ();   \u6267\u884c\u50a8\u5b58\u8fc7\u7a0b\uff08\u67e5\u8be2\uff09  var   query   =   context . Session . CreateSQLQuery ( exec some_query_sp @arg );  query . SetParameter ( arg ,   1 );  var   result   =   query . Enumerable ExampleTable ();", 
+            "title": "\u539f\u751f\u67e5\u8be2"
         }, 
         {
             "location": "/core/unittest/", 
-            "text": "ZKWeb\u4f7f\u7528\u4e86\u72ec\u81ea\u7f16\u5199\u7684\u5355\u5143\u6d4b\u8bd5\u6846\u67b6\uff0c\u7f16\u5199\u65f6\u53c2\u8003\u4e86XUnit\u3002\n\n\u4f7f\u7528\u9ed8\u8ba4\u7684\u63d2\u4ef6\u53ef\u4ee5\u5728\u540e\u53f0\u7f51\u9875\u4e0a\u8fd0\u884c\u5355\u5143\u6d4b\u8bd5\uff0c\u4e5f\u53ef\u4ee5\u5728\u63a7\u5236\u53f0\u4e0a\u8fd0\u884c\u3002\n\nZKWeb\u7684\u5355\u5143\u6d4b\u8bd5\u652f\u6301\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\u548cIoC\u5bb9\u5668\u3002\n\n\n\u4ee5\u4e0b\u5185\u5bb9\u5f85\u7f16\u5199\n\n\n\u521b\u5efa\u6d4b\u8bd5\n\n\n\u8fd0\u884c\u6d4b\u8bd5\n\n\n\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\n\n\n\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfIoC\u5bb9\u5668", 
+            "text": "ZKWeb\u4f7f\u7528\u4e86\u72ec\u81ea\u7f16\u5199\u7684\u5355\u5143\u6d4b\u8bd5\u6846\u67b6\uff0c\u7f16\u5199\u65f6\u53c2\u8003\u4e86XUnit\u3002\n\n\u4f7f\u7528\u9ed8\u8ba4\u7684\u63d2\u4ef6\u53ef\u4ee5\u5728\u540e\u53f0\u7f51\u9875\u4e0a\u8fd0\u884c\u5355\u5143\u6d4b\u8bd5\uff0c\u4e5f\u53ef\u4ee5\u5728\u63a7\u5236\u53f0\u4e0a\u8fd0\u884c\u3002\n\nZKWeb\u7684\u5355\u5143\u6d4b\u8bd5\u652f\u6301\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\u548cIoC\u5bb9\u5668\u3002\n\n\n\u6d4b\u8bd5\u53ef\u4ee5\u76f4\u63a5\u4fdd\u5b58\u5728\u5bf9\u5e94\u7684\u63d2\u4ef6\u6587\u4ef6\u5939\u4e0b\uff0c\u4e5f\u53ef\u4ee5\u5355\u72ec\u4e00\u4e2a\u63d2\u4ef6\u4fdd\u5b58\u3002\n\nZKWeb\u4e2d\u7684\u6d4b\u8bd5\u4e3a\u4e86\u4fbf\u4e8e\u7ba1\u7406\uff0c\u6d4b\u8bd5\u90fd\u76f4\u63a5\u4fdd\u5b58\u5728\u5bf9\u5e94\u63d2\u4ef6\u6587\u4ef6\u5939\u4e0b\u3002\n\n\n\u521b\u5efa\u6d4b\u8bd5\n\n\n\u6dfb\u52a0\nExample\\src\\Tests\\ExampleTest.cs\n\uff0c\u5185\u5bb9\u5982\u4e0b\n\n\u4f7f\u7528\nAssert\n\u7c7b\u6d4b\u8bd5\u6761\u4ef6\u662f\u5426\u6210\u7acb\uff0c\u5982\u679c\u6d4b\u8bd5\u5931\u8d25\u4f1a\u629b\u51fa\nAssertException\n\u3002\n\n\n[UnitTest]\n\n\nclass\n \nExampleTest\n \n{\n\n    \npublic\n \nvoid\n \nMethodA\n()\n \n{\n\n        \nAssert\n.\nIsTrue\n(\n1\n \n==\n \n1\n);\n\n        \nAssert\n.\nIsTrueWith\n(\n1\n \n==\n \n1\n,\n \nif failed this item will be outputed\n);\n\n        \nAssert\n.\nEquals\n(\ntrue\n,\n \ntrue\n);\n\n        \nAssert\n.\nThrows\nArgumentException\n(()\n \n=\n \n{\n \nthrow\n \nnew\n \nArgumentException\n();\n \n});\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u8fd0\u884c\u6d4b\u8bd5\n\n\n\u5728\u63a7\u5236\u53f0\u4e2d\u8fd0\u884c:\n\n\u8bbe\u7f6e\u4e3b\u9879\u76ee\u5230\nZKWeb.Console\n\uff0c\u5e76\u8fd0\u884c\u3002\n\n\n\u5728\u540e\u53f0\u4e2d\u8fd0\u884c:\n\n\u9700\u8981\nUnitTest.WebTester\n\u63d2\u4ef6\uff0c\u767b\u9646\u5230\u540e\u53f0\u70b9\u51fb\"\u5355\u5143\u6d4b\u8bd5\"\u5e76\u70b9\u51fb\"\u8fd0\u884c\"\u6216\"\u5168\u90e8\u8fd0\u884c\"\u5373\u53ef\u3002\n\n\n\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\n\n\n\u5728\u6d4b\u8bd5\u90e8\u5206\u529f\u80fd\u65f6\uff0c\u6709\u65f6\u9700\u8981\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\uff0c\n\n\u53ef\u4ee5\u4f7f\u7528\nHttpContextUtils.OverrideContext\n\u51fd\u6570\u91cd\u8f7d\u5f53\u524d\u7684\u4e0a\u4e0b\u6587\u3002\n\n\u5728\nExampleTest\n\u7c7b\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u51fd\u6570\n\n\npublic\n \nvoid\n \nMethodB\n()\n \n{\n\n    \nusing\n \n(\nHttpContextUtils\n.\nOverrideContext\n(\n/?a=1\n,\n \nPOST\n))\n \n{\n\n        \nvar\n \nrequest\n \n=\n \n(\nHttpRequestMock\n)\nHttpContextUtils\n.\nCurrentContext\n.\nRequest\n;\n\n        \nrequest\n.\nuserHostAddress\n \n=\n \n192.168.168.168\n;\n\n\n        \nAssert\n.\nEquals\n(\nrequest\n.\nGet\nstring\n(\na\n),\n \n1\n);\n\n        \nAssert\n.\nEquals\n(\nrequest\n.\nUserHostAddress\n,\n \n192.168.168.168\n);\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfIoC\u5bb9\u5668\n\n\n\u5728\u6d4b\u8bd5\u90e8\u5206\u529f\u80fd\u65f6\uff0c\u6709\u65f6\u9700\u8981\u5f71\u54cd\u5bb9\u5668\u8fd4\u56de\u7684\u7ec4\u4ef6\uff0c\n\u53ef\u4ee5\u4f7f\u7528\nApplication.OverrideContainer\n\u91cd\u8f7d\u5f53\u524d\u7684IoC\u5bb9\u5668\u3002\n\n\u5728\nExampleTest\n\u7c7b\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u51fd\u6570\n\n\npublic\n \nvoid\n \nMethodC\n()\n \n{\n\n    \nusing\n \n(\nApplication\n.\nOverrideIoc\n())\n \n{\n\n        \n// clear registered delete callback for example table\n\n        \n// becuse container is inherited, Unregister will not work\n\n        \nApplication\n.\nIoc\n.\nRegisterDelegate\n(\n_\n \n=\n \nnew\n \nIDataDeleteCallback\nExampleTable\n[]\n \n{\n \n});\n\n        \nAssert\n.\nIsTrue\n(!\nApplication\n.\nIoc\n.\nResolveMany\nIDataDeleteCallback\nExampleTable\n().\nAny\n());\n\n    \n}\n\n    \n// override is finished\n\n    \nAssert\n.\nIsTrue\n(\nApplication\n.\nIoc\n.\nResolveMany\nIDataDeleteCallback\nExampleTable\n().\nAny\n());\n\n\n}\n\n\n\n\n\n\n\u6a21\u62dfIoc\u5bb9\u5668\u65f6\u6ce8\u610f\u65e7\u7684\u5bb9\u5668\u53ea\u662f\u4f5c\u4e3a\nfallback\n\u4f7f\u7528\uff0c\u65b0\u7684\u5bb9\u5668\u6709\u6ce8\u518c\u7684\u7ec4\u4ef6\u65f6\uff0c\u53ea\u4f1a\u8fd4\u56de\u65b0\u7684\u5bb9\u5668\u6ce8\u518c\u7684\u7ec4\u4ef6\u3002", 
             "title": "\u5355\u5143\u6d4b\u8bd5"
         }, 
         {
             "location": "/core/unittest/#_1", 
-            "text": "", 
+            "text": "\u6dfb\u52a0 Example\\src\\Tests\\ExampleTest.cs \uff0c\u5185\u5bb9\u5982\u4e0b \n\u4f7f\u7528 Assert \u7c7b\u6d4b\u8bd5\u6761\u4ef6\u662f\u5426\u6210\u7acb\uff0c\u5982\u679c\u6d4b\u8bd5\u5931\u8d25\u4f1a\u629b\u51fa AssertException \u3002  [UnitTest]  class   ExampleTest   { \n     public   void   MethodA ()   { \n         Assert . IsTrue ( 1   ==   1 ); \n         Assert . IsTrueWith ( 1   ==   1 ,   if failed this item will be outputed ); \n         Assert . Equals ( true ,   true ); \n         Assert . Throws ArgumentException (()   =   {   throw   new   ArgumentException ();   }); \n     }  }", 
             "title": "\u521b\u5efa\u6d4b\u8bd5"
         }, 
         {
             "location": "/core/unittest/#_2", 
-            "text": "", 
+            "text": "\u5728\u63a7\u5236\u53f0\u4e2d\u8fd0\u884c: \n\u8bbe\u7f6e\u4e3b\u9879\u76ee\u5230 ZKWeb.Console \uff0c\u5e76\u8fd0\u884c\u3002  \u5728\u540e\u53f0\u4e2d\u8fd0\u884c: \n\u9700\u8981 UnitTest.WebTester \u63d2\u4ef6\uff0c\u767b\u9646\u5230\u540e\u53f0\u70b9\u51fb\"\u5355\u5143\u6d4b\u8bd5\"\u5e76\u70b9\u51fb\"\u8fd0\u884c\"\u6216\"\u5168\u90e8\u8fd0\u884c\"\u5373\u53ef\u3002", 
             "title": "\u8fd0\u884c\u6d4b\u8bd5"
         }, 
         {
             "location": "/core/unittest/#http", 
-            "text": "", 
+            "text": "\u5728\u6d4b\u8bd5\u90e8\u5206\u529f\u80fd\u65f6\uff0c\u6709\u65f6\u9700\u8981\u6a21\u62dfHttp\u4e0a\u4e0b\u6587\uff0c \n\u53ef\u4ee5\u4f7f\u7528 HttpContextUtils.OverrideContext \u51fd\u6570\u91cd\u8f7d\u5f53\u524d\u7684\u4e0a\u4e0b\u6587\u3002 \n\u5728 ExampleTest \u7c7b\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u51fd\u6570  public   void   MethodB ()   { \n     using   ( HttpContextUtils . OverrideContext ( /?a=1 ,   POST ))   { \n         var   request   =   ( HttpRequestMock ) HttpContextUtils . CurrentContext . Request ; \n         request . userHostAddress   =   192.168.168.168 ; \n\n         Assert . Equals ( request . Get string ( a ),   1 ); \n         Assert . Equals ( request . UserHostAddress ,   192.168.168.168 ); \n     }  }", 
             "title": "\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfHttp\u4e0a\u4e0b\u6587"
         }, 
         {
             "location": "/core/unittest/#ioc", 
-            "text": "", 
+            "text": "\u5728\u6d4b\u8bd5\u90e8\u5206\u529f\u80fd\u65f6\uff0c\u6709\u65f6\u9700\u8981\u5f71\u54cd\u5bb9\u5668\u8fd4\u56de\u7684\u7ec4\u4ef6\uff0c\n\u53ef\u4ee5\u4f7f\u7528 Application.OverrideContainer \u91cd\u8f7d\u5f53\u524d\u7684IoC\u5bb9\u5668\u3002 \n\u5728 ExampleTest \u7c7b\u4e2d\u6dfb\u52a0\u4ee5\u4e0b\u51fd\u6570  public   void   MethodC ()   { \n     using   ( Application . OverrideIoc ())   { \n         // clear registered delete callback for example table \n         // becuse container is inherited, Unregister will not work \n         Application . Ioc . RegisterDelegate ( _   =   new   IDataDeleteCallback ExampleTable []   {   }); \n         Assert . IsTrue (! Application . Ioc . ResolveMany IDataDeleteCallback ExampleTable (). Any ()); \n     } \n     // override is finished \n     Assert . IsTrue ( Application . Ioc . ResolveMany IDataDeleteCallback ExampleTable (). Any ());  }   \u6a21\u62dfIoc\u5bb9\u5668\u65f6\u6ce8\u610f\u65e7\u7684\u5bb9\u5668\u53ea\u662f\u4f5c\u4e3a fallback \u4f7f\u7528\uff0c\u65b0\u7684\u5bb9\u5668\u6709\u6ce8\u518c\u7684\u7ec4\u4ef6\u65f6\uff0c\u53ea\u4f1a\u8fd4\u56de\u65b0\u7684\u5bb9\u5668\u6ce8\u518c\u7684\u7ec4\u4ef6\u3002", 
             "title": "\u5728\u6d4b\u8bd5\u4e2d\u6a21\u62dfIoC\u5bb9\u5668"
         }, 
         {
             "location": "/plugin/common.base/", 
-            "text": "", 
+            "text": "\u63d2\u4ef6\u5305\u542b\u4e86\u901a\u7528\u6027\u9ad8\u7684\u6700\u57fa\u672c\u7684\u529f\u80fd\u548c\u8d44\u6e90\uff0c\u53ef\u4ee5\u6ee1\u8db3\u5927\u90e8\u5206\u7f51\u7ad9\u7684\u9700\u6c42\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199\n\n\n\n\n\u901a\u7528\u914d\u7f6e\n\n\n\u5b9a\u65f6\u4efb\u52a1\n\n\n\u4f1a\u8bdd\n\n\ncss\u6837\u5f0f\n\n\n(AdminLTE, bootstrap\u7b49)\n\n\njs\u811a\u672c\n\n\n(jquery, bootstrap, underscore, uri\u7b49)\n\n\n\u56fe\u6807\u5b57\u4f53\n\n\n(font-awesome)\n\n\n\u8868\u683c\u6784\u5efa\u5668\n\n\n\u8868\u683c\u641c\u7d22\u680f\u6784\u5efa\u5668\n\n\n\u8868\u5355\u6784\u5efa\u5668\n\n\n\u6570\u636e\u5e93\u64cd\u4f5c\u7c7b\n\n\n(GenericRepository, UnitOfWork)\n\n\n\u524d\u53f0\u9996\u9875\n\n\n\u524d\u53f0\u5934\u90e8\u548c\u5e95\u90e8\n\n\n\u9759\u6001\u6587\u4ef6\u5904\u7406\u5668\n\n\n\u8bed\u8a00\u65f6\u533a\u5904\u7406\u5668", 
             "title": "\u63d2\u4ef6(Common.Base)"
         }, 
         {
-            "location": "/plugin/common.captcha/", 
+            "location": "/plugin/common.base/#_1", 
             "text": "", 
+            "title": "\u901a\u7528\u914d\u7f6e"
+        }, 
+        {
+            "location": "/plugin/common.base/#_2", 
+            "text": "", 
+            "title": "\u5b9a\u65f6\u4efb\u52a1"
+        }, 
+        {
+            "location": "/plugin/common.base/#_3", 
+            "text": "", 
+            "title": "\u4f1a\u8bdd"
+        }, 
+        {
+            "location": "/plugin/common.base/#css", 
+            "text": "(AdminLTE, bootstrap\u7b49)", 
+            "title": "css\u6837\u5f0f"
+        }, 
+        {
+            "location": "/plugin/common.base/#js", 
+            "text": "(jquery, bootstrap, underscore, uri\u7b49)", 
+            "title": "js\u811a\u672c"
+        }, 
+        {
+            "location": "/plugin/common.base/#_4", 
+            "text": "(font-awesome)", 
+            "title": "\u56fe\u6807\u5b57\u4f53"
+        }, 
+        {
+            "location": "/plugin/common.base/#_5", 
+            "text": "", 
+            "title": "\u8868\u683c\u6784\u5efa\u5668"
+        }, 
+        {
+            "location": "/plugin/common.base/#_6", 
+            "text": "", 
+            "title": "\u8868\u683c\u641c\u7d22\u680f\u6784\u5efa\u5668"
+        }, 
+        {
+            "location": "/plugin/common.base/#_7", 
+            "text": "", 
+            "title": "\u8868\u5355\u6784\u5efa\u5668"
+        }, 
+        {
+            "location": "/plugin/common.base/#_8", 
+            "text": "(GenericRepository, UnitOfWork)", 
+            "title": "\u6570\u636e\u5e93\u64cd\u4f5c\u7c7b"
+        }, 
+        {
+            "location": "/plugin/common.base/#_9", 
+            "text": "", 
+            "title": "\u524d\u53f0\u9996\u9875"
+        }, 
+        {
+            "location": "/plugin/common.base/#_10", 
+            "text": "", 
+            "title": "\u524d\u53f0\u5934\u90e8\u548c\u5e95\u90e8"
+        }, 
+        {
+            "location": "/plugin/common.base/#_11", 
+            "text": "", 
+            "title": "\u9759\u6001\u6587\u4ef6\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/plugin/common.base/#_12", 
+            "text": "", 
+            "title": "\u8bed\u8a00\u65f6\u533a\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/plugin/common.captcha/", 
+            "text": "\u63d2\u4ef6\u5305\u62ec\u4e86\u9a8c\u8bc1\u7801\u7684\u663e\u793a\u548c\u9a8c\u8bc1\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199\n\n\n\n\n\u663e\u793a\u9a8c\u8bc1\u7801\n\n\n\u9a8c\u8bc1\u9a8c\u8bc1\u7801\n\n\n\u9a8c\u8bc1\u7801\u8bed\u97f3", 
             "title": "\u63d2\u4ef6(Common.Captcha)"
         }, 
         {
-            "location": "/plugin/common.admin/", 
+            "location": "/plugin/common.captcha/#_1", 
             "text": "", 
+            "title": "\u663e\u793a\u9a8c\u8bc1\u7801"
+        }, 
+        {
+            "location": "/plugin/common.captcha/#_2", 
+            "text": "", 
+            "title": "\u9a8c\u8bc1\u9a8c\u8bc1\u7801"
+        }, 
+        {
+            "location": "/plugin/common.captcha/#_3", 
+            "text": "", 
+            "title": "\u9a8c\u8bc1\u7801\u8bed\u97f3"
+        }, 
+        {
+            "location": "/plugin/common.admin/", 
+            "text": "\u63d2\u4ef6\u5305\u542b\u4e86\u7528\u6237\u548c\u7ba1\u7406\u5458\u6240\u9700\u7684\u6570\u636e\u8868\uff0c\u548c\u6700\u57fa\u7840\u7684\u540e\u53f0\u7ba1\u7406\u9875\u9762\u3002\n\n\u652f\u6301\u5feb\u901f\u5f00\u53d1\u4f7f\u7528\u7684\u81ea\u52a8\u6784\u5efa\u540e\u53f0CRUD\u9875\u9762\u7b49\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199\n\n\n\n\n\u7528\u6237\n\n\n\u7ba1\u7406\u5458\n\n\n\u89d2\u8272\n\n\n\u81ea\u52a8\u6784\u5efa\u540e\u53f0CRUD\u9875\u9762", 
             "title": "\u63d2\u4ef6(Common.Admin)"
+        }, 
+        {
+            "location": "/plugin/common.admin/#_1", 
+            "text": "", 
+            "title": "\u7528\u6237"
+        }, 
+        {
+            "location": "/plugin/common.admin/#_2", 
+            "text": "", 
+            "title": "\u7ba1\u7406\u5458"
+        }, 
+        {
+            "location": "/plugin/common.admin/#_3", 
+            "text": "", 
+            "title": "\u89d2\u8272"
+        }, 
+        {
+            "location": "/plugin/common.admin/#crud", 
+            "text": "", 
+            "title": "\u81ea\u52a8\u6784\u5efa\u540e\u53f0CRUD\u9875\u9762"
         }, 
         {
             "location": "/plugin/common.menupagebase/", 

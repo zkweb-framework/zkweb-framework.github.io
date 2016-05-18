@@ -518,11 +518,62 @@
           <p>ZKWeb使用了独自编写的单元测试框架，编写时参考了XUnit。<br/>
 使用默认的插件可以在后台网页上运行单元测试，也可以在控制台上运行。<br/>
 ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
-<p>以下内容待编写</p>
+<p>测试可以直接保存在对应的插件文件夹下，也可以单独一个插件保存。<br/>
+ZKWeb中的测试为了便于管理，测试都直接保存在对应插件文件夹下。<br/></p>
 <h3 id="_1">创建测试</h3>
+<p>添加<code>Example\src\Tests\ExampleTest.cs</code>，内容如下<br/>
+使用<code>Assert</code>类测试条件是否成立，如果测试失败会抛出<code>AssertException</code>。<br/></p>
+<div class="code"><pre><span></span><span class="na">[UnitTest]</span>
+<span class="k">class</span> <span class="nc">ExampleTest</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">MethodA</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="m">1</span> <span class="p">==</span> <span class="m">1</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrueWith</span><span class="p">(</span><span class="m">1</span> <span class="p">==</span> <span class="m">1</span><span class="p">,</span> <span class="s">&quot;if failed this item will be outputed&quot;</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="p">&lt;</span><span class="n">ArgumentException</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">();</span> <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3 id="_2">运行测试</h3>
+<p>在控制台中运行:<br/>
+设置主项目到<code>ZKWeb.Console</code>，并运行。<br/></p>
+<p>在后台中运行:<br/>
+需要<code>UnitTest.WebTester</code>插件，登陆到后台点击"单元测试"并点击"运行"或"全部运行"即可。<br/></p>
 <h3 id="http">在测试中模拟Http上下文</h3>
+<p>在测试部分功能时，有时需要模拟Http上下文，<br/>
+可以使用<code>HttpContextUtils.OverrideContext</code>函数重载当前的上下文。<br/>
+在<code>ExampleTest</code>类中添加以下函数<br/></p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodB</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">OverrideContext</span><span class="p">(</span><span class="s">&quot;/?a=1&quot;</span><span class="p">,</span> <span class="s">&quot;POST&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpRequestMock</span><span class="p">)</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">userHostAddress</span> <span class="p">=</span> <span class="s">&quot;192.168.168.168&quot;</span><span class="p">;</span>
+
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;a&quot;</span><span class="p">),</span> <span class="s">&quot;1&quot;</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">UserHostAddress</span><span class="p">,</span> <span class="s">&quot;192.168.168.168&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
 <h3 id="ioc">在测试中模拟IoC容器</h3>
+<p>在测试部分功能时，有时需要影响容器返回的组件，
+可以使用<code>Application.OverrideContainer</code>重载当前的IoC容器。<br/>
+在<code>ExampleTest</code>类中添加以下函数<br/></p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodC</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">OverrideIoc</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// clear registered delete callback for example table</span>
+        <span class="c1">// becuse container is inherited, Unregister will not work</span>
+        <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterDelegate</span><span class="p">(</span><span class="n">_</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;[]</span> <span class="p">{</span> <span class="p">});</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(!</span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;().</span><span class="n">Any</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="c1">// override is finished</span>
+    <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;().</span><span class="n">Any</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>模拟Ioc容器时注意旧的容器只是作为<code>fallback</code>使用，新的容器有注册的组件时，只会返回新的容器注册的组件。<br/></p>
           <aside class="copyright" role="note">
             
             Documentation built with

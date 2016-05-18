@@ -217,8 +217,14 @@
             </li>
           
             <li class="anchor">
-              <a title="添加数据事件" href="#_4">
-                添加数据事件
+              <a title="数据事件" href="#_4">
+                数据事件
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="原生查询" href="#_5">
+                原生查询
               </a>
             </li>
           
@@ -524,11 +530,197 @@
 <li>更好的支持MySQL等非微软的数据库，不会像EF只对MSSQL支持好。</li>
 </ul>
 <p>ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/></p>
-<p>以下内容待编写<br/></p>
 <h3 id="_1">添加数据表</h3>
+<p>添加<code>Example\src\Database\ExampleTable.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例数据</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTable</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">long</span> <span class="n">Id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="n">DateTime</span> <span class="n">CreateTime</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例数据表的结构</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTableMap</span> <span class="p">:</span> <span class="n">ClassMap</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nf">ExampleTableMap</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Id</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+        <span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Name</span><span class="p">).</span><span class="n">Length</span><span class="p">(</span><span class="m">0</span><span class="n">xffff</span><span class="p">);</span> <span class="c1">// 0xffff `== no limit, you can confirm later</span>
+        <span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">).</span><span class="n">Not</span><span class="p">.</span><span class="n">Nullable</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加完毕后刷新浏览器可以看到数据库中多出这个表。<br/>
+更多用法可以参考FluentNHibernte的文档。<br/>
+https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
+在ZKWeb中已有插件正常使用一对多(Reference, HasMany)，多对多(ManyToMany)的功能。<br/></p>
 <h3 id="_2">升级数据表</h3>
+<p>在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
+在ExampleTable中添加以下成员<br/></p>
+<div class="code"><pre><span></span><span class="k">public</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">Deleted</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>在ExampleTableMap的构造函数中添加以下行<br/></p>
+<div class="code"><pre><span></span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Deleted</span><span class="p">);</span>
+</pre></div>
+
+
+<p>保存后刷新浏览器即可看到效果。<br/>
+注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
+<img alt="" src="../../img/example_table.jpg" /></p>
 <h3 id="_3">增删查改</h3>
-<h3 id="_4">添加数据事件</h3>
+<p>通过<code>DatabaseManager.GetContext</code>获取数据库上下文可以进行增删查改操作<br/>
+如果使用了<code>Common.Base</code>插件可以使用<code>GenericRepository</code>和<code>UnitOfWork</code>类进行更简单的操作，<br/>
+详细请参考<code>Common.Base</code>的文档。<br/></p>
+<p>以下函数可以添加到<code>ExampleController</code>用于测试是否正常工作。<br/></p>
+<p>新增数据<br/>
+使用<code>ref data</code>的原因是因为NHibernate插入数据时会返回另外一个对象。<br/>
+操作完毕后需要使用<code>SaveChanges</code>提交事务，为了保证数据一致性ZKWeb中的操作都会默认开启事务。<br/></p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/add_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">AddData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span><span class="p">,</span>
+            <span class="n">CreateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">,</span>
+            <span class="n">Deleted</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">};</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>修改数据<br/>
+这里会修改表中的所有数据。<br/>
+和新增数据一样，修改数据也会使用<code>Save</code>函数，但是修改操作应该在后面的参数中实现，<br/>
+这样使用数据库事件可以捕捉到修改前和修改后的数据。<br/></p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/update_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">UpdateData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">data</span> <span class="k">in</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;())</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">localData</span> <span class="p">=</span> <span class="n">data</span><span class="p">;</span>
+            <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">localData</span><span class="p">,</span> <span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>查询数据<br/>
+这里返回没有更新的数据内容。<br/>
+查询时不需要调用<code>SaveChanges</code>函数。<br/></p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/query_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">QueryData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">notUpdated</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;()</span>
+            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">!=</span> <span class="s">&quot;updated&quot;</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
+        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;these objects are not updated:\r\n{0}&quot;</span><span class="p">,</span>
+            <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">notUpdated</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>删除数据<br/></p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/remove_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">RemoveData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">long</span> <span class="n">deleted</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">DeleteWhere</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
+        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} objects are removed&quot;</span><span class="p">,</span> <span class="n">deleted</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_4">数据事件</h3>
+<p>ZKWeb支持定义事件监听数据的增删查改<br/>
+其中增加和修改使用<code>IDataSaveCallback</code>，删除使用<code>IDataDeleteCallback</code>。<br/>
+在Before或After函数中可以通过传入的<code>context</code>参数修改关联的数据，<br/>
+在Before或After函数中抛出例外可以阻止事务提交。<br/></p>
+<p>保存事件的示例
+添加<code>Example\src\DataCallbacks\ExampleDataSaveCallback.cs</code>，内容如下<br/>
+这个处理器会在数据插入或名称改变时记录到日志。<br/></p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 保存事件的示例</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleDataSaveCallback</span> <span class="p">:</span> <span class="n">IDataSaveCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kt">long</span> <span class="n">IdBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">private</span> <span class="kt">string</span> <span class="n">NameBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeSave</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">IdBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+        <span class="n">NameBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterSave</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">IdBeforeSave</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data inserted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">NameBeforeSave</span> <span class="p">!=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data name changed, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加或更新数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
+<p>删除事件的示例<br/>
+添加<code>Example\src\DataCallbacks\ExampleDataDeleteCallback.cs</code>，内容如下<br/>
+这个处理器会在数据删除时记录到日志。<br/></p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 删除事件的示例</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleDataDeleteCallback</span> <span class="p">:</span> <span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeDelete</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterDelete</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data deleted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>删除数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
+<h3 id="_5">原生查询</h3>
+<p>ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
+但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/></p>
+<p>NHibernate的会话可以通过<code>context.Session</code>获取到。</p>
+<div class="code"><pre><span></span><span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">new</span> <span class="n">ExampleTable</span><span class="p">());</span>
+</pre></div>
+
+
+<p>执行储存过程（添加、更新或删除）</p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">CreateSQLQuery</span><span class="p">(</span><span class="s">&quot;exec some_update_sp @arg&quot;</span><span class="p">);</span>
+<span class="n">query</span><span class="p">.</span><span class="n">SetParameter</span><span class="p">(</span><span class="s">&quot;arg&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<span class="kt">int</span> <span class="n">affected</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">ExecuteUpdate</span><span class="p">();</span>
+</pre></div>
+
+
+<p>执行储存过程（查询）</p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">CreateSQLQuery</span><span class="p">(</span><span class="s">&quot;exec some_query_sp @arg&quot;</span><span class="p">);</span>
+<span class="n">query</span><span class="p">.</span><span class="n">SetParameter</span><span class="p">(</span><span class="s">&quot;arg&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Enumerable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;();</span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
