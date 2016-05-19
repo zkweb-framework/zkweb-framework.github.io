@@ -1,0 +1,6 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe =
+[
+    [ "LogisticsPriceRulesEditorAttribute", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe.html#a588a2d7946b1258f52e634fa7c68cade", null ],
+    [ "LogisticsPriceRulesEditorAttribute", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe.html#abc1990a196e0fd84ae591683f84f47ec", null ],
+    [ "DisplayCountryDropdown", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe.html#aad64bd3748ade6ea4cbbbacbb699b5be", null ]
+];

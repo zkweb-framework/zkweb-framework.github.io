@@ -1,0 +1,5 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_matched_datas_editor_attribute =
+[
+    [ "ProductMatchedDatasEditorAttribute", "da/d22/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_matched_datas_editor_attribute.html#a777a563e766d86efc4a931fae5e7c39d", null ],
+    [ "CategoryFieldName", "da/d22/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_matched_datas_editor_attribute.html#a839b666ad8a52ce8333970c30f8b4881", null ]
+];

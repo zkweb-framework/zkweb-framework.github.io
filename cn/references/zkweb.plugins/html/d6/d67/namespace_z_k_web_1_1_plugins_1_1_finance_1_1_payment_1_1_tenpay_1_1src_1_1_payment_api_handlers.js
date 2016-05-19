@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_tenpay_1_1src_1_1_payment_api_handlers =
+[
+    [ "TenpayApiHandler", "d9/dd2/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_tenpay_1_1src_1_1_payment_api_handlers_1_1_tenpay_api_handler.html", "d9/dd2/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_tenpay_1_1src_1_1_payment_api_handlers_1_1_tenpay_api_handler" ]
+];

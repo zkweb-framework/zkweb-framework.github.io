@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>ZKWeb References: ZKWeb.Utils.Functions.HttpContextUtils类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ZKWeb References
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li><a href="../../pages.html"><span>相关页面</span></a></li>
+      <li><a href="../../namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="../../d4/d5a/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ZKWeb.Utils.Functions.HttpContextUtils类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>http上下文的工具类 功能 提供返回HttpContextBase的CurrentContext 提供获取和储存数据到当前http上下文的Items的函数，如果上下文不存在则储存到线程本地的集合中 提供获取和储存数据到当前http上下文的Cookies的函数，如果上下文不存在则储存到线程本地的集合中  
+ <a href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a4756277ef3fd6d6264638137ab738142"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a4756277ef3fd6d6264638137ab738142">PutData&lt; T &gt;</a> (string key, T data)</td></tr>
+<tr class="memdesc:a4756277ef3fd6d6264638137ab738142"><td class="mdescLeft">&#160;</td><td class="mdescRight">储存在一个Http请求中通用的数据 用于代替ViewData，因为ViewData每次描画分视图时都会复制一遍耗费性能  <a href="#a4756277ef3fd6d6264638137ab738142">更多...</a><br /></td></tr>
+<tr class="separator:a4756277ef3fd6d6264638137ab738142"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4049e4fe69adb74c319f7428ab9fce97"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a4049e4fe69adb74c319f7428ab9fce97">GetData&lt; T &gt;</a> (string key, T defaultValue=default(T))</td></tr>
+<tr class="memdesc:a4049e4fe69adb74c319f7428ab9fce97"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在一个Http请求中通用的数据  <a href="#a4049e4fe69adb74c319f7428ab9fce97">更多...</a><br /></td></tr>
+<tr class="separator:a4049e4fe69adb74c319f7428ab9fce97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d3df755eaee4e7ebd52202d25ee7720"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a6d3df755eaee4e7ebd52202d25ee7720">GetOrCreateData&lt; T &gt;</a> (string key, Func&lt; T &gt; defaultCreater)</td></tr>
+<tr class="memdesc:a6d3df755eaee4e7ebd52202d25ee7720"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在一个Http请求中通用的数据，不存在时创建  <a href="#a6d3df755eaee4e7ebd52202d25ee7720">更多...</a><br /></td></tr>
+<tr class="separator:a6d3df755eaee4e7ebd52202d25ee7720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#adba272087e5ec5a5f9f5ed52d0e0b24f">RemoveData</a> (string key)</td></tr>
+<tr class="memdesc:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除在一个Http请求中通用的数据  <a href="#adba272087e5ec5a5f9f5ed52d0e0b24f">更多...</a><br /></td></tr>
+<tr class="separator:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d487761e79d4141674fae0276cb8829"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a9d487761e79d4141674fae0276cb8829">GetClientIpAddress</a> ()</td></tr>
+<tr class="memdesc:a9d487761e79d4141674fae0276cb8829"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取客户端的Ip地址  <a href="#a9d487761e79d4141674fae0276cb8829">更多...</a><br /></td></tr>
+<tr class="separator:a9d487761e79d4141674fae0276cb8829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ad7a1f5bd1c4bf2cb15462a93c90f5600">GetRequestHostUrl</a> ()</td></tr>
+<tr class="memdesc:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求时使用的域名地址 例 <a href="http://localhost">http://localhost</a> 后面不带/  <a href="#ad7a1f5bd1c4bf2cb15462a93c90f5600">更多...</a><br /></td></tr>
+<tr class="separator:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806c815cd6f07c78b34af80ae12e5c01"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a806c815cd6f07c78b34af80ae12e5c01">GetCookie</a> (string key)</td></tr>
+<tr class="memdesc:a806c815cd6f07c78b34af80ae12e5c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Cookie值  <a href="#a806c815cd6f07c78b34af80ae12e5c01">更多...</a><br /></td></tr>
+<tr class="separator:a806c815cd6f07c78b34af80ae12e5c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3172f48a3741b46a96238dbcca001c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ae3172f48a3741b46a96238dbcca001c8">PutCookie</a> (string key, string value, DateTime?expired=default(DateTime?), bool httpOnly=false)</td></tr>
+<tr class="memdesc:ae3172f48a3741b46a96238dbcca001c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置Cookie值  <a href="#ae3172f48a3741b46a96238dbcca001c8">更多...</a><br /></td></tr>
+<tr class="separator:ae3172f48a3741b46a96238dbcca001c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50503b54b523eab92ad86deaf9229be"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ad50503b54b523eab92ad86deaf9229be">RemoveCookie</a> (string key)</td></tr>
+<tr class="memdesc:ad50503b54b523eab92ad86deaf9229be"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除Cookie值  <a href="#ad50503b54b523eab92ad86deaf9229be">更多...</a><br /></td></tr>
+<tr class="separator:ad50503b54b523eab92ad86deaf9229be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83c5a28b7ce40fd54d7810f6170577ea"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a83c5a28b7ce40fd54d7810f6170577ea">OverrideContext</a> (HttpContextBase context)</td></tr>
+<tr class="memdesc:a83c5a28b7ce40fd54d7810f6170577ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#a83c5a28b7ce40fd54d7810f6170577ea">更多...</a><br /></td></tr>
+<tr class="separator:a83c5a28b7ce40fd54d7810f6170577ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ae6f1e47f8a88658d45ea72bc62bc3948">OverrideContext</a> (Uri uri, string method)</td></tr>
+<tr class="memdesc:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#ae6f1e47f8a88658d45ea72bc62bc3948">更多...</a><br /></td></tr>
+<tr class="separator:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a25547f1811e0a0d3426c01aeef2b5fe0">OverrideContext</a> (string path, string method)</td></tr>
+<tr class="memdesc:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#a25547f1811e0a0d3426c01aeef2b5fe0">更多...</a><br /></td></tr>
+<tr class="separator:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:a836ede10c568962466f3f98d2869fd5b"><td class="memItemLeft" align="right" valign="top">static HttpContextBase&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a836ede10c568962466f3f98d2869fd5b">CurrentContext</a><code> [get]</code></td></tr>
+<tr class="memdesc:a836ede10c568962466f3f98d2869fd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前的http上下文  <a href="#a836ede10c568962466f3f98d2869fd5b">更多...</a><br /></td></tr>
+<tr class="separator:a836ede10c568962466f3f98d2869fd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>http上下文的工具类 功能 提供返回HttpContextBase的CurrentContext 提供获取和储存数据到当前http上下文的Items的函数，如果上下文不存在则储存到线程本地的集合中 提供获取和储存数据到当前http上下文的Cookies的函数，如果上下文不存在则储存到线程本地的集合中 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a9d487761e79d4141674fae0276cb8829"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string ZKWeb.Utils.Functions.HttpContextUtils.GetClientIpAddress </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取客户端的Ip地址 </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a806c815cd6f07c78b34af80ae12e5c01"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string ZKWeb.Utils.Functions.HttpContextUtils.GetCookie </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取Cookie值 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4049e4fe69adb74c319f7428ab9fce97"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T ZKWeb.Utils.Functions.HttpContextUtils.GetData&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>default(T)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取在一个Http请求中通用的数据 </p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a class="anchor" id="a6d3df755eaee4e7ebd52202d25ee7720"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T ZKWeb.Utils.Functions.HttpContextUtils.GetOrCreateData&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>defaultCreater</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取在一个Http请求中通用的数据，不存在时创建 </p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a class="anchor" id="ad7a1f5bd1c4bf2cb15462a93c90f5600"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static string ZKWeb.Utils.Functions.HttpContextUtils.GetRequestHostUrl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取请求时使用的域名地址 例 <a href="http://localhost">http://localhost</a> 后面不带/ </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83c5a28b7ce40fd54d7810f6170577ea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IDisposable ZKWeb.Utils.Functions.HttpContextUtils.OverrideContext </td>
+          <td>(</td>
+          <td class="paramtype">HttpContextBase&#160;</td>
+          <td class="paramname"><em>context</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">context</td><td>指定的http上下文</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae6f1e47f8a88658d45ea72bc62bc3948"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IDisposable ZKWeb.Utils.Functions.HttpContextUtils.OverrideContext </td>
+          <td>(</td>
+          <td class="paramtype">Uri&#160;</td>
+          <td class="paramname"><em>uri</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uri</td><td>请求的uri</td></tr>
+    <tr><td class="paramname">method</td><td>请求类型，GET或POST等</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a25547f1811e0a0d3426c01aeef2b5fe0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static IDisposable ZKWeb.Utils.Functions.HttpContextUtils.OverrideContext </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>method</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>请求的路径，不需要带域名</td></tr>
+    <tr><td class="paramname">method</td><td>请求类型，GET或POST</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ae3172f48a3741b46a96238dbcca001c8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ZKWeb.Utils.Functions.HttpContextUtils.PutCookie </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DateTime?&#160;</td>
+          <td class="paramname"><em>expired</em> = <code>default(DateTime?)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>httpOnly</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置Cookie值 </p>
+
+</div>
+</div>
+<a class="anchor" id="a4756277ef3fd6d6264638137ab738142"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ZKWeb.Utils.Functions.HttpContextUtils.PutData&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>储存在一个Http请求中通用的数据 用于代替ViewData，因为ViewData每次描画分视图时都会复制一遍耗费性能 </p>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
+<a class="anchor" id="ad50503b54b523eab92ad86deaf9229be"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool ZKWeb.Utils.Functions.HttpContextUtils.RemoveCookie </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除Cookie值 </p>
+
+</div>
+</div>
+<a class="anchor" id="adba272087e5ec5a5f9f5ed52d0e0b24f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ZKWeb.Utils.Functions.HttpContextUtils.RemoveData </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除在一个Http请求中通用的数据 </p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a836ede10c568962466f3f98d2869fd5b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpContextBase ZKWeb.Utils.Functions.HttpContextUtils.CurrentContext</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前的http上下文 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ZKWeb/ZKWeb.Utils/Functions/<a class="el" href="../../d9/da5/_http_context_utils_8cs.html">HttpContextUtils.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/d17/namespace_z_k_web.html">ZKWeb</a></li><li class="navelem"><a class="el" href="../../d5/dfd/namespace_z_k_web_1_1_utils.html">Utils</a></li><li class="navelem"><a class="el" href="../../d7/dfb/namespace_z_k_web_1_1_utils_1_1_functions.html">Functions</a></li><li class="navelem"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html">HttpContextUtils</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

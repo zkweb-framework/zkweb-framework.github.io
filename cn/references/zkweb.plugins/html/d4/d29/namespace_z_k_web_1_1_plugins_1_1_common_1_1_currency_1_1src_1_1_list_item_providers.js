@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_list_item_providers =
+[
+    [ "CurrencyListItemProvider", "db/dc6/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_list_item_providers_1_1_currency_list_item_provider.html", "db/dc6/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_list_item_providers_1_1_currency_list_item_provider" ]
+];

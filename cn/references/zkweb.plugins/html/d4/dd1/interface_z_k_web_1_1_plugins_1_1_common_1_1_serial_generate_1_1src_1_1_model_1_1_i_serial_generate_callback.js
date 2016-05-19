@@ -1,0 +1,4 @@
+var interface_z_k_web_1_1_plugins_1_1_common_1_1_serial_generate_1_1src_1_1_model_1_1_i_serial_generate_callback =
+[
+    [ "OnGenerate", "d4/dd1/interface_z_k_web_1_1_plugins_1_1_common_1_1_serial_generate_1_1src_1_1_model_1_1_i_serial_generate_callback.html#aaa97092138e4de9dd3b6a31cac166112", null ]
+];

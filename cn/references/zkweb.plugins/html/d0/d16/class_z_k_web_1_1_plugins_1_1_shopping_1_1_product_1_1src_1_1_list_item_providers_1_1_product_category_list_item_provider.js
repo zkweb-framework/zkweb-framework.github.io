@@ -1,0 +1,4 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_category_list_item_provider =
+[
+    [ "GetItems", "d0/d16/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_category_list_item_provider.html#a0cd7d71c6a559970a029ff8fb4a25b6e", null ]
+];

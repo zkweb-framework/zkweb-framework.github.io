@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>ZKWeb Plugins References: ZKWeb.Plugins.Common.Base.src.Managers.ScheduledTaskManager类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ZKWeb Plugins References
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li><a href="../../namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d9/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="../../d4/deb/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ZKWeb.Plugins.Common.Base.src.Managers.ScheduledTaskManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>定时任务管理器 流程 收集所有IScheduledTaskExecutor 每分钟 获取数据库中的lastExecuted 调用ShouldExecuteNow函数 以事务更新数据库中的LastExecuted 更新成功时调用Execute Execute抛出例外时记录到日志  
+ <a href="../../d9/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa4fc58777fc5c6fe09aab7ed658f78f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager.html#aa4fc58777fc5c6fe09aab7ed658f78f4">ScheduledTaskManager</a> ()</td></tr>
+<tr class="memdesc:aa4fc58777fc5c6fe09aab7ed658f78f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建执行定时任务的线程 线程会在AppDomain.Unload的时候收到AbortException  <a href="#aa4fc58777fc5c6fe09aab7ed658f78f4">更多...</a><br /></td></tr>
+<tr class="separator:aa4fc58777fc5c6fe09aab7ed658f78f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f800f269ef27a3ac44a95423c283d54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager.html#a5f800f269ef27a3ac44a95423c283d54">HandleTask</a> (<a class="el" href="../../de/d19/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_scheduled_task_executor.html">IScheduledTaskExecutor</a> executor)</td></tr>
+<tr class="memdesc:a5f800f269ef27a3ac44a95423c283d54"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理单个定时任务  <a href="#a5f800f269ef27a3ac44a95423c283d54">更多...</a><br /></td></tr>
+<tr class="separator:a5f800f269ef27a3ac44a95423c283d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>定时任务管理器 流程 收集所有IScheduledTaskExecutor 每分钟 获取数据库中的lastExecuted 调用ShouldExecuteNow函数 以事务更新数据库中的LastExecuted 更新成功时调用Execute Execute抛出例外时记录到日志 </p>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aa4fc58777fc5c6fe09aab7ed658f78f4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZKWeb.Plugins.Common.Base.src.Managers.ScheduledTaskManager.ScheduledTaskManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建执行定时任务的线程 线程会在AppDomain.Unload的时候收到AbortException </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a5f800f269ef27a3ac44a95423c283d54"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ZKWeb.Plugins.Common.Base.src.Managers.ScheduledTaskManager.HandleTask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d19/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_scheduled_task_executor.html">IScheduledTaskExecutor</a>&#160;</td>
+          <td class="paramname"><em>executor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>处理单个定时任务 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">executor</td><td>定时任务执行器</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ZKWeb.Plugins/Common.Base/src/Managers/<a class="el" href="../../d2/d84/_scheduled_task_manager_8cs.html">ScheduledTaskManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/d17/namespace_z_k_web.html">ZKWeb</a></li><li class="navelem"><a class="el" href="../../d5/dcd/namespace_z_k_web_1_1_plugins.html">Plugins</a></li><li class="navelem"><a class="el" href="../../d1/dea/namespace_z_k_web_1_1_plugins_1_1_common.html">Common</a></li><li class="navelem"><a class="el" href="../../d0/d94/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base.html">Base</a></li><li class="navelem"><a class="el" href="../../df/d8e/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src.html">src</a></li><li class="navelem"><a class="el" href="../../df/db3/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers.html">Managers</a></li><li class="navelem"><a class="el" href="../../d9/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_scheduled_task_manager.html">ScheduledTaskManager</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

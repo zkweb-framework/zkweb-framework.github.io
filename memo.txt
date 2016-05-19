@@ -1,3 +1,14 @@
-﻿http://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
-http://squidfunk.github.io/mkdocs-material/getting-started/
-pip install mkdocs mkdocs-material pygments --index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
+﻿生成文档需要使用mkdocs
+	pip install mkdocs mkdocs-material pygments --index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/
+	http://www.mkdocs.org/user-guide/writing-your-docs/#configure-pages-and-navigation
+	http://squidfunk.github.io/mkdocs-material/getting-started/
+	
+	cd cn
+	mkdocs serve
+	mkdocs build
+
+生成索引需要使用doxygen
+	http://www.stack.nl/~dimitri/doxygen/download.html
+	doxygen尽管对c#支持不好，但是生成出来的文档比shfb容易阅读
+	
+	使用doxygen打开cn\references\zkweb.Doxyfile和zkweb.plugins.Doxyfile并运行即可

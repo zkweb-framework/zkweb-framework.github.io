@@ -1,0 +1,5 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_model_number_display_field =
+[
+    [ "GetDisplayHtml", "d7/d93/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_model_number_display_field.html#aac23641c198cf39b3a0b8d6517d791b6", null ],
+    [ "Name", "d7/d93/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_model_number_display_field.html#ab987a737003b61bac6a858877b1ad82c", null ]
+];

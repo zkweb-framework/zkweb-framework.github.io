@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_repositories =
+[
+    [ "UserContactRepository", "d2/dd8/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_repositories_1_1_user_contact_repository.html", "d2/dd8/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_repositories_1_1_user_contact_repository" ]
+];

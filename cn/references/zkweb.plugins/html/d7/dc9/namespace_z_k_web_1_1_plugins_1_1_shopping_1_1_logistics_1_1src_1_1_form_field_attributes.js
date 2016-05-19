@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes =
+[
+    [ "LogisticsPriceRulesEditorAttribute", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe.html", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe" ]
+];

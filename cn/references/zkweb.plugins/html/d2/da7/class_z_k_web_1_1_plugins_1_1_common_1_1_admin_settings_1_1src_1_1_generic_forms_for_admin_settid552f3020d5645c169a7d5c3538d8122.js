@@ -1,0 +1,8 @@
+var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122 =
+[
+    [ "OnBind", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html#acce71fa75d44d48d9a77d53168b43ed4", null ],
+    [ "OnSubmit", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html#add1aceade04acca3ffa24d4822686736", null ],
+    [ "CopyrightText", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html#a6ed74d350a56ea600b7b08cd2b12f4c6", null ],
+    [ "DocumentTitleFormat", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html#aa4ed47966d7c1bcd41e38da55d22a86f", null ],
+    [ "WebsiteName", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html#a6bb4259cc20cb8b96376fe6da1eb7899", null ]
+];

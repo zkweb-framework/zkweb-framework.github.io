@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel =
+[
+    [ "ChangeAvatarForm", "d1/d90/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_avatar_form.html", "d1/d90/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_avatar_form" ],
+    [ "ChangePasswordForm", "db/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_password_form.html", "db/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_password_form" ]
+];

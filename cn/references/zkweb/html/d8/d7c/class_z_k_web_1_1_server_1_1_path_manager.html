@@ -1,0 +1,494 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>ZKWeb References: ZKWeb.Server.PathManager类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ZKWeb References
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li><a href="../../pages.html"><span>相关页面</span></a></li>
+      <li><a href="../../namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="../../d3/d3a/class_z_k_web_1_1_server_1_1_path_manager-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ZKWeb.Server.PathManager类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>路径管理器  
+ <a href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#details">更多...</a></p>
+<div class="dynheader">
+类 ZKWeb.Server.PathManager 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.png" usemap="#ZKWeb.Server.PathManager_map" alt=""/>
+  <map id="ZKWeb.Server.PathManager_map" name="ZKWeb.Server.PathManager_map">
+<area href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html" title="缓存清理器的接口 这个回调用于清理网站的页面和数据缓存 " alt="ZKWeb.Plugin.Interfaces.ICacheCleaner" shape="rect" coords="0,0,242,24"/>
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a905f9921858e4ef850b960466d1a1a8e"><td class="memItemLeft" align="right" valign="top">virtual List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a905f9921858e4ef850b960466d1a1a8e">GetPluginDirectories</a> ()</td></tr>
+<tr class="memdesc:a905f9921858e4ef850b960466d1a1a8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取插件根目录的绝对路径 网站目录 + 网站配置中定义的插件根目录的相对路径  <a href="#a905f9921858e4ef850b960466d1a1a8e">更多...</a><br /></td></tr>
+<tr class="separator:a905f9921858e4ef850b960466d1a1a8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68e3894e8921cebbd4e263617630652"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#aa68e3894e8921cebbd4e263617630652">GetTemplateFullPathWithoutCache</a> (string path)</td></tr>
+<tr class="memdesc:aa68e3894e8921cebbd4e263617630652"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取模板的完整路径 路径规则 显式指定插件，这时不允许从其他插件或App_Data重载模板 "所在插件:模板路径" 例 "Common.Base:include/header.html" 模板路径 插件目录\模板路径 显式指定插件通常用于模板的继承 不指定插件，允许其他插件或App_Data重载模板 "模板路径" 例 "include/header.html" 查找模板路径的顺序 App_Data\模板路径 按载入顺序反向枚举插件 插件目录\模板路径 模板文件可以在其他插件或在App_Data下重载 路径对应的文件不存在时返回null  <a href="#aa68e3894e8921cebbd4e263617630652">更多...</a><br /></td></tr>
+<tr class="separator:aa68e3894e8921cebbd4e263617630652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9295dd427e799921f261cee5d6c8685"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#ab9295dd427e799921f261cee5d6c8685">GetTemplateFullPath</a> (string path)</td></tr>
+<tr class="memdesc:ab9295dd427e799921f261cee5d6c8685"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取模板的完整路径 使用缓存用于提高获取性能 详细说明请见GetTemplateFullPathWithoutCache  <a href="#ab9295dd427e799921f261cee5d6c8685">更多...</a><br /></td></tr>
+<tr class="separator:ab9295dd427e799921f261cee5d6c8685"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3686f23a7dcca06c922e26c978b67ae1"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a3686f23a7dcca06c922e26c978b67ae1">GetResourceFullPathWithoutCache</a> (params string[] pathParts)</td></tr>
+<tr class="memdesc:a3686f23a7dcca06c922e26c978b67ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取资源文件的完整路径 查找路径的顺序 App_Data\文件路径 按载入顺序反向枚举插件 插件目录\文件路径 资源文件可以在其他插件或在App_Data下重载 路径对应的文件不存在时返回null  <a href="#a3686f23a7dcca06c922e26c978b67ae1">更多...</a><br /></td></tr>
+<tr class="separator:a3686f23a7dcca06c922e26c978b67ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52afe7f475a44679ddcdb0d8aebfc53"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#ac52afe7f475a44679ddcdb0d8aebfc53">GetResourceFullPath</a> (params string[] pathParts)</td></tr>
+<tr class="memdesc:ac52afe7f475a44679ddcdb0d8aebfc53"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取资源文件的完整路径 使用缓存用于提高获取性能 详细说明请见GetResourceFullPathWithoutCache  <a href="#ac52afe7f475a44679ddcdb0d8aebfc53">更多...</a><br /></td></tr>
+<tr class="separator:ac52afe7f475a44679ddcdb0d8aebfc53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f81d91e9ee329d5a80e540fb1b87934"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a7f81d91e9ee329d5a80e540fb1b87934">GetStorageFullPath</a> (params string[] pathParts)</td></tr>
+<tr class="memdesc:a7f81d91e9ee329d5a80e540fb1b87934"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取储存文件的完整路径 无论文件是否存在，返回App_Data\文件路径  <a href="#a7f81d91e9ee329d5a80e540fb1b87934">更多...</a><br /></td></tr>
+<tr class="separator:a7f81d91e9ee329d5a80e540fb1b87934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a864c3e36278f74eab7cdf71d574336f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a864c3e36278f74eab7cdf71d574336f1">ClearCache</a> ()</td></tr>
+<tr class="memdesc:a864c3e36278f74eab7cdf71d574336f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">清理缓存  <a href="#a864c3e36278f74eab7cdf71d574336f1">更多...</a><br /></td></tr>
+<tr class="separator:a864c3e36278f74eab7cdf71d574336f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:abad3baa4a7c2dca734172ca356b6e624"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#abad3baa4a7c2dca734172ca356b6e624">TemplatePathCacheTime</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:abad3baa4a7c2dca734172ca356b6e624"><td class="mdescLeft">&#160;</td><td class="mdescRight">模板路径缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改  <a href="#abad3baa4a7c2dca734172ca356b6e624">更多...</a><br /></td></tr>
+<tr class="separator:abad3baa4a7c2dca734172ca356b6e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5aea776b756f69829a01ff1abdf8e0b9"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a5aea776b756f69829a01ff1abdf8e0b9">ResourcePathCacheTime</a> = TimeSpan.FromSeconds(1)<code> [get, set]</code></td></tr>
+<tr class="memdesc:a5aea776b756f69829a01ff1abdf8e0b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">资源路径的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改  <a href="#a5aea776b756f69829a01ff1abdf8e0b9">更多...</a><br /></td></tr>
+<tr class="separator:a5aea776b756f69829a01ff1abdf8e0b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66429551c84c739b8691c7122eacef6a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a66429551c84c739b8691c7122eacef6a">TemplatePathCache</a> = TimeSpan.FromSeconds(1)<code> [get, set]</code></td></tr>
+<tr class="memdesc:a66429551c84c739b8691c7122eacef6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">模板路径的缓存 { 模板名称: 模板的绝对路径 }  <a href="#a66429551c84c739b8691c7122eacef6a">更多...</a><br /></td></tr>
+<tr class="separator:a66429551c84c739b8691c7122eacef6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1bedb750791bfc1f4c920eff621599e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#aa1bedb750791bfc1f4c920eff621599e">ResourcePathCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aa1bedb750791bfc1f4c920eff621599e"><td class="mdescLeft">&#160;</td><td class="mdescRight">资源路径的缓存 { 资源路径: 资源的绝对路径 }  <a href="#aa1bedb750791bfc1f4c920eff621599e">更多...</a><br /></td></tr>
+<tr class="separator:aa1bedb750791bfc1f4c920eff621599e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>路径管理器 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a864c3e36278f74eab7cdf71d574336f1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ZKWeb.Server.PathManager.ClearCache </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>清理缓存 </p>
+
+<p>实现了 <a class="el" href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html#aded14786337245c895252c66fc9c7617">ZKWeb.Plugin.Interfaces.ICacheCleaner</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a905f9921858e4ef850b960466d1a1a8e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual List&lt;string&gt; ZKWeb.Server.PathManager.GetPluginDirectories </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取插件根目录的绝对路径 网站目录 + 网站配置中定义的插件根目录的相对路径 </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac52afe7f475a44679ddcdb0d8aebfc53"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string ZKWeb.Server.PathManager.GetResourceFullPath </td>
+          <td>(</td>
+          <td class="paramtype">params string[]&#160;</td>
+          <td class="paramname"><em>pathParts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取资源文件的完整路径 使用缓存用于提高获取性能 详细说明请见GetResourceFullPathWithoutCache </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathParts</td><td>路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3686f23a7dcca06c922e26c978b67ae1"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string ZKWeb.Server.PathManager.GetResourceFullPathWithoutCache </td>
+          <td>(</td>
+          <td class="paramtype">params string[]&#160;</td>
+          <td class="paramname"><em>pathParts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取资源文件的完整路径 查找路径的顺序 App_Data\文件路径 按载入顺序反向枚举插件 插件目录\文件路径 资源文件可以在其他插件或在App_Data下重载 路径对应的文件不存在时返回null </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathParts</td><td>路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f81d91e9ee329d5a80e540fb1b87934"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string ZKWeb.Server.PathManager.GetStorageFullPath </td>
+          <td>(</td>
+          <td class="paramtype">params string[]&#160;</td>
+          <td class="paramname"><em>pathParts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取储存文件的完整路径 无论文件是否存在，返回App_Data\文件路径 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pathParts</td><td>路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab9295dd427e799921f261cee5d6c8685"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string ZKWeb.Server.PathManager.GetTemplateFullPath </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取模板的完整路径 使用缓存用于提高获取性能 详细说明请见GetTemplateFullPathWithoutCache </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>模板路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa68e3894e8921cebbd4e263617630652"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual string ZKWeb.Server.PathManager.GetTemplateFullPathWithoutCache </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取模板的完整路径 路径规则 显式指定插件，这时不允许从其他插件或App_Data重载模板 "所在插件:模板路径" 例 "Common.Base:include/header.html" 模板路径 插件目录\模板路径 显式指定插件通常用于模板的继承 不指定插件，允许其他插件或App_Data重载模板 "模板路径" 例 "include/header.html" 查找模板路径的顺序 App_Data\模板路径 按载入顺序反向枚举插件 插件目录\模板路径 模板文件可以在其他插件或在App_Data下重载 路径对应的文件不存在时返回null </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>模板路径</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="aa1bedb750791bfc1f4c920eff621599e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, string&gt; ZKWeb.Server.PathManager.ResourcePathCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">            <span class="keyword">new</span> MemoryCache&lt;string, string&gt;()</div></div><!-- fragment -->
+<p>资源路径的缓存 { 资源路径: 资源的绝对路径 } </p>
+
+</div>
+</div>
+<a class="anchor" id="a5aea776b756f69829a01ff1abdf8e0b9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan ZKWeb.Server.PathManager.ResourcePathCacheTime = TimeSpan.FromSeconds(1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>资源路径的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改 </p>
+
+</div>
+</div>
+<a class="anchor" id="a66429551c84c739b8691c7122eacef6a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, string&gt; ZKWeb.Server.PathManager.TemplatePathCache = TimeSpan.FromSeconds(1)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模板路径的缓存 { 模板名称: 模板的绝对路径 } </p>
+
+</div>
+</div>
+<a class="anchor" id="abad3baa4a7c2dca734172ca356b6e624"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan ZKWeb.Server.PathManager.TemplatePathCacheTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模板路径缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ZKWeb/ZKWeb/Server/<a class="el" href="../../da/d4c/_path_manager_8cs.html">PathManager.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../dc/d17/namespace_z_k_web.html">ZKWeb</a></li><li class="navelem"><a class="el" href="../../d9/df6/namespace_z_k_web_1_1_server.html">Server</a></li><li class="navelem"><a class="el" href="../../d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html">PathManager</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

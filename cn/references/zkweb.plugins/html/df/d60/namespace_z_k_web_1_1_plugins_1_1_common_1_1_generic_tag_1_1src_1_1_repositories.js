@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_repositories =
+[
+    [ "GenericTagRepository", "de/dee/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_repositories_1_1_generic_tag_repository.html", "de/dee/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_repositories_1_1_generic_tag_repository" ]
+];

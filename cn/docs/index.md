@@ -19,6 +19,12 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 用户名: demo<br/>
 密码: 123456<br/>
 
+### 索引文档
+
+最终更新: 2016-05-19<br/>
+<a href="../references/zkweb/html/annotated.html" target="_blank">ZKWeb索引文档</a></br>
+<a href="../references/zkweb.plugins/html/annotated.html" target="_blank">ZKWeb.Plugins索引文档</a>
+
 ### 主要功能
 
 * 支持动态载入和编辑的插件系统

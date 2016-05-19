@@ -1,0 +1,4 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_affects_binders_1_1_weight_binder =
+[
+    [ "Init", "dc/d6c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_affects_binders_1_1_weight_binder.html#a8d3acbe63cbdec71e4a1cc57de6d94cb", null ]
+];

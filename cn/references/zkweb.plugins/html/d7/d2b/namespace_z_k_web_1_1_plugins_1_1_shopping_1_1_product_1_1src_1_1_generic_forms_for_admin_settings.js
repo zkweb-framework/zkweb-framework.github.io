@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings =
+[
+    [ "ProductAlbumSettingsForm", "d8/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_album_settings_form.html", "d8/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_album_settings_form" ]
+];

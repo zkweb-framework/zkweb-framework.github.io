@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_data_callbacks =
+[
+    [ "CheckUsernameDuplicate", "de/d38/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_data_callbacks_1_1_check_username_duplicate.html", "de/d38/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_data_callbacks_1_1_check_username_duplicate" ],
+    [ "PreventDeleteSelf", "dd/d69/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_data_callbacks_1_1_prevent_delete_self.html", "dd/d69/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_data_callbacks_1_1_prevent_delete_self" ]
+];

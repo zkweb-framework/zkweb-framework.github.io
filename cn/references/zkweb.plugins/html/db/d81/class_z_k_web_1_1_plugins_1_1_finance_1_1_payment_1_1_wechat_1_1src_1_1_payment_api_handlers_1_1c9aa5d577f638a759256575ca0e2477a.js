@@ -1,0 +1,7 @@
+var class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a =
+[
+    [ "PartnerId", "db/d81/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a.html#a73f0686d6f9ee066b31140a2cdeeebbe", null ],
+    [ "PartnerKey", "db/d81/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a.html#ab976c07ac91b332b1a8bde880d110aa9", null ],
+    [ "PublicAccountId", "db/d81/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a.html#aaf85cee69ef10b4ab0755a4d016ac87e", null ],
+    [ "ReturnDomain", "db/d81/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a.html#a2202b39b85ad0c136121d40538bfbd8f", null ]
+];
