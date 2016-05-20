@@ -259,43 +259,31 @@
             </li>
           
             <li class="anchor">
-              <a title="表格搜索栏构建器" href="#_6">
-                表格搜索栏构建器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="表单构建器" href="#_7">
+              <a title="表单构建器" href="#_6">
                 表单构建器
               </a>
             </li>
           
             <li class="anchor">
-              <a title="数据库操作类" href="#_8">
+              <a title="数据库操作类" href="#_7">
                 数据库操作类
               </a>
             </li>
           
             <li class="anchor">
-              <a title="前台首页" href="#_9">
-                前台首页
+              <a title="前台页模板" href="#_8">
+                前台页模板
               </a>
             </li>
           
             <li class="anchor">
-              <a title="前台头部和底部" href="#_10">
-                前台头部和底部
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="静态文件处理器" href="#_11">
+              <a title="静态文件处理器" href="#_9">
                 静态文件处理器
               </a>
             </li>
           
             <li class="anchor">
-              <a title="语言时区处理器" href="#_12">
+              <a title="语言时区处理器" href="#_10">
                 语言时区处理器
               </a>
             </li>
@@ -709,16 +697,244 @@
 </ul>
 <h3 id="_5">表格构建器</h3>
 <p>表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
+以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
+表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/></p>
+<p>在<code>ExampleController</code>下添加以下内容</p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/table&quot;)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Table</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AjaxTableBuilder</span><span class="p">();</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">Id</span> <span class="p">=</span> <span class="s">&quot;ExampleTable&quot;</span><span class="p">;</span>
+    <span class="n">table</span><span class="p">.</span><span class="n">Target</span> <span class="p">=</span> <span class="s">&quot;/example/table/search&quot;</span><span class="p">;</span>
+    <span class="kt">var</span> <span class="n">searchBar</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AjaxTableSearchBarBuilder</span><span class="p">();</span>
+    <span class="n">searchBar</span><span class="p">.</span><span class="n">TableId</span> <span class="p">=</span> <span class="n">table</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+    <span class="n">searchBar</span><span class="p">.</span><span class="n">Conditions</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">FormField</span><span class="p">(</span><span class="k">new</span> <span class="n">CheckBoxFieldAttribute</span><span class="p">(</span><span class="s">&quot;Deleted&quot;</span><span class="p">)));</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_table.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">table</span><span class="p">,</span> <span class="n">searchBar</span> <span class="p">});</span>
+<span class="p">}</span>
+
+<span class="na">[Action(&quot;example/table/search&quot;, HttpMethods.POST)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TableSearch</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">json</span> <span class="p">=</span> <span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;json&quot;</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">AjaxTableSearchRequest</span><span class="p">.</span><span class="n">FromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">AjaxTableSearchResponse</span><span class="p">.</span><span class="n">FromRequest</span><span class="p">(</span>
+        <span class="n">request</span><span class="p">,</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleTableCallback</span><span class="p">()</span> <span class="p">});</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加<code>Example\templates\example\example_table.html</code>，内容如下</p>
+<div class="code"><pre><span></span>{% use_title &quot;Example Table&quot; %}
+{% include common.base/header.html %}
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
+    {{ searchBar }}
+    {{ table }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+{% include common.base/footer.html %}
+</pre></div>
+
+
+<p>添加<code>Example\src\AjaxTableCallbacks\ExampleTableCallback.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例的表格搜索回调</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 构建表格时的处理，这里不使用</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnBuildTable</span><span class="p">(</span><span class="n">AjaxTableBuilder</span> <span class="n">table</span><span class="p">,</span> <span class="n">AjaxTableSearchBarBuilder</span> <span class="n">searchBar</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 查询数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
+        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="kt">bool</span> <span class="n">deleted</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Conditions</span><span class="p">.</span><span class="n">GetOrDefault</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;Deleted&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;on&quot;</span><span class="p">;</span>
+        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Deleted</span> <span class="p">==</span> <span class="n">deleted</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 排序数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSort</span><span class="p">(</span>
+        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 选择数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
+        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 添加列和操作等</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnResponse</span><span class="p">(</span><span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">AjaxTableSearchResponse</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddIdColumn</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
+        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">);</span>
+        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;CreateTime&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>在这个例子中表格使用了<code>AjaxTableSearchResponse.FromRequest</code>来构建搜索结果，<br/>
+这个函数可以自动从数据库中获取数据，交给表格搜索回调处理并进行分页，<br/>
+如果需要自己处理也可以自己构建<code>AjaxTableSearchResponse</code>的数据。<br/>
+使用表格回调的原因是搜索时可以支持多个回调，这样易于修改其他插件的表格内容。<br/></p>
+<p>默认表格的样式在<code>static/common.base.tmpl/ajaxTable.tmpl</code>中，<br/>
+如果需要使用自己的样式可以修改<code>table.Template</code>。<br/></p>
+<h3 id="_6">表单构建器</h3>
+<p>表单构建器可以构建常用的表单，并支持多种表单字段和客户端+服务端验证。<br/>
+默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
 使用例子<br/></p>
-<p>编写中</p>
-<h3 id="_6">表格搜索栏构建器</h3>
-<h3 id="_7">表单构建器</h3>
-<h3 id="_8">数据库操作类</h3>
-<p>(GenericRepository, UnitOfWork)<br/></p>
-<h3 id="_9">前台首页</h3>
-<h3 id="_10">前台头部和底部</h3>
-<h3 id="_11">静态文件处理器</h3>
-<h3 id="_12">语言时区处理器</h3>
+<p>在<code>ExampleController</code>下添加以下内容</p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/form&quot;)]</span>
+<span class="na">[Action(&quot;example/form&quot;, HttpMethods.POST)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Form</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">form</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleForm</span><span class="p">();</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">HttpMethod</span> <span class="p">==</span> <span class="n">HttpMethods</span><span class="p">.</span><span class="n">POST</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">form</span><span class="p">.</span><span class="n">Submit</span><span class="p">());</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">form</span><span class="p">.</span><span class="n">Bind</span><span class="p">();</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_form.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">form</span> <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加<code>Example\templates\example\example_form.html</code>，内容如下</p>
+<div class="code"><pre><span></span>{% use_title &quot;Example Form&quot; %}
+{% include common.base/header.html %}
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
+    {{ form }}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+{% include common.base/footer.html %}
+</pre></div>
+
+
+<p>添加<code>Example\src\Forms\ExampleForm.cs</code>，内容如下<br/>
+提示<code>[Required]</code>属性找不到时请引用程序集<code>System.ComponentModel.DataAnnotations</code><br/></p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例表单</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleForm</span> <span class="p">:</span> <span class="n">ModelFormBuilder</span> <span class="p">{</span>
+<span class="na">    [Required]</span>
+<span class="na">    [StringLength(100)]</span>
+<span class="na">    [TextBoxField(&quot;Name&quot;, &quot;Please enter name&quot;)]</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="na">    [Required]</span>
+<span class="na">    [TextBoxField(&quot;Age&quot;, &quot;Please enter age&quot;)]</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Age</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnBind</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Tom&quot;</span><span class="p">;</span>
+        <span class="n">Age</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="kt">object</span> <span class="nf">OnSubmit</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;Hello, {0} ({1})&quot;</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Age</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="p">{</span> <span class="n">message</span> <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>这个插件提供的表单字段类型有，使用时请参考各个字段的文档。<br/></p>
+<ul>
+<li>LabelFieldAttribute(string name)</li>
+<li>TextBoxFieldAttribute(string name, string placeHolder = null)</li>
+<li>PasswordFieldAttribute(string name, string placeHolder = null)</li>
+<li>TextAreaFieldAttribute(string name, int rows, string placeHolder = null)</li>
+<li>CheckBoxFieldAttribute(string name)</li>
+<li>CheckBoxGroupFieldAttribute(string name, Type source)</li>
+<li>CheckBoxGroupsFieldAttribute(string name, Type source)</li>
+<li>CheckBoxTreeFieldAttribute(string name, Type source)</li>
+<li>DropdownListFieldAttribute(string name, Type source)</li>
+<li>SearchableDropdownListFieldAttribute(string name, Type source)</li>
+<li>RadioButtonsFieldAttribute(string name, Type sources)</li>
+<li>FileUploaderFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)</li>
+<li>HiddenFieldAttribute(string name)</li>
+<li>JsonFieldAttribute(string name, Type fieldType)</li>
+<li>HtmlFieldAttribute(string name)</li>
+</ul>
+<h3 id="_7">数据库操作类</h3>
+<p>为了简化数据库操作，这个插件提供了通用仓储<code>GenericRepository</code>和工作单元<code>UnitOfWork</code>。<br/>
+<code>GenericRepository</code>提供了共通的操作函数，<code>UnitOfWork</code>负责管理数据库上下文和事务的提交。<br/>
+使用例子<br/></p>
+<p>在<code>ExampleController</code>下添加以下内容</p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/uow&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">Uow</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// insert data</span>
+    <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">RandomUtils</span><span class="p">.</span><span class="n">RandomString</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
+    <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">WriteData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">r</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">};</span>
+        <span class="n">r</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="c1">// read first not deleted data&#39;s name</span>
+    <span class="kt">var</span> <span class="n">readName</span> <span class="p">=</span> <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">ReadData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">ExampleTable</span><span class="p">&gt;(</span>
+        <span class="n">r</span> <span class="p">=&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">name</span><span class="p">));</span>
+    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">readName</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><code>UnitOfWork</code>不支持嵌套，需要多个仓储使用同一个数据库时请使用<code>RepositoryResolver</code><br/></p>
+<div class="code"><pre><span></span><span class="n">UnitOfWork</span><span class="p">.</span><span class="n">Read</span><span class="p">(</span><span class="n">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">repository</span> <span class="p">=</span> <span class="n">RepositoryResolver</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">context</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">otherRepository</span> <span class="p">=</span> <span class="n">RepositoryResolver</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">OtherTable</span><span class="p">&gt;(</span><span class="n">context</span><span class="p">);</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>需要自定义仓储时，可以创建一个仓储类继承<code>GenericRepository</code>并注册到IoC容器，<br/>
+解决仓储时会自动使用自定义的仓储。<br/></p>
+<h3 id="_8">前台页模板</h3>
+<p>这个插件提供了以下的前台页模板，如有需要可以根据路径在其他插件中重载。</p>
+<ul>
+<li>common.base\footer.html (前台通用尾部)</li>
+<li>common.base\header.html (前台通用头部)</li>
+<li>common.base\index.html (首页)</li>
+</ul>
+<h3 id="_9">静态文件处理器</h3>
+<p>这个插件提供了静态文件专用的路径<code>/static/文件路径</code>，查找规则如下<br/></p>
+<ul>
+<li>查找<code>App_Data\static\文件路径</code></li>
+<li>按插件注册顺序反向查找<code>插件文件夹\static\文件路径</code></li>
+</ul>
+<p>例如注册了插件A和B时，查找<code>/static/a/homepage.js</code>顺序如下<br/></p>
+<ul>
+<li><code>App_Data\static\a\homepage.js</code></li>
+<li><code>B\static\a\homepage.js</code></li>
+<li><code>A\static\a\homepage.js</code></li>
+</ul>
+<h3 id="_10">语言时区处理器</h3>
+<p>这个插件可以自动设置当前请求的语言和时区。<br/>
+默认语言和时区可以修改通用配置<code>LocaleSettings</code>。<br/></p>
+<p>设置语言的顺序是<br/></p>
+<ul>
+<li>客户端传入的Cookies (LocaleUtils.LanguageKey: "ZKWeb.Language")</li>
+<li>客户端浏览器语言，如果<code>LocaleSettings</code>设置允许检测浏览器语言</li>
+<li><code>LocaleSettings</code>中的默认语言</li>
+</ul>
+<p>设置时区的顺序是<br/></p>
+<ul>
+<li>客户端传入的Cookies (LocaleUtils.TimeZoneKey: "ZKWeb.TimeZone")</li>
+<li><code>LocaleSettings</code>中的默认时区</li>
+</ul>
           <aside class="copyright" role="note">
             
             Documentation built with

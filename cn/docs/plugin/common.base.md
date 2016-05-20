@@ -141,21 +141,252 @@ session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 ### 表格构建器
 
 表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
-使用例子<br/>
+以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
+表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/>
 
-编写中
+在`ExampleController`下添加以下内容
+``` csharp
+[Action("example/table")]
+public IActionResult Table() {
+	var table = new AjaxTableBuilder();
+	table.Id = "ExampleTable";
+	table.Target = "/example/table/search";
+	var searchBar = new AjaxTableSearchBarBuilder();
+	searchBar.TableId = table.Id;
+	searchBar.Conditions.Add(new FormField(new CheckBoxFieldAttribute("Deleted")));
+	return new TemplateResult("example/example_table.html", new { table, searchBar });
+}
 
-### 表格搜索栏构建器
+[Action("example/table/search", HttpMethods.POST)]
+public IActionResult TableSearch() {
+	var json = HttpContextUtils.CurrentContext.Request.Get<string>("json");
+	var request = AjaxTableSearchRequest.FromJson(json);
+	var response = AjaxTableSearchResponse.FromRequest(
+		request, new[] { new ExampleTableCallback() });
+	return new JsonResult(response);
+}
+```
+
+添加`Example\templates\example\example_table.html`，内容如下
+``` html
+{% use_title "Example Table" %}
+{% include common.base/header.html %}
+
+<div class="portlet">
+	{{ searchBar }}
+	{{ table }}
+</div>
+
+{% include common.base/footer.html %}
+```
+
+添加`Example\src\AjaxTableCallbacks\ExampleTableCallback.cs`，内容如下
+``` csharp
+/// <summary>
+/// 示例的表格搜索回调
+/// </summary>
+public class ExampleTableCallback : IAjaxTableCallback<ExampleTable> {
+	/// <summary>
+	/// 构建表格时的处理，这里不使用
+	/// </summary>
+	public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) { }
+
+	/// <summary>
+	/// 查询数据
+	/// </summary>
+	public void OnQuery(
+		AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+		if (!string.IsNullOrEmpty(request.Keyword)) {
+			query = query.Where(q => q.Name.Contains(request.Keyword));
+		}
+		bool deleted = request.Conditions.GetOrDefault<string>("Deleted") == "on";
+		query = query.Where(q => q.Deleted == deleted);
+	}
+
+	/// <summary>
+	/// 排序数据
+	/// </summary>
+	public void OnSort(
+		AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+		query = query.OrderByDescending(q => q.Id);
+	}
+
+	/// <summary>
+	/// 选择数据
+	/// </summary>
+	public void OnSelect(
+		AjaxTableSearchRequest request, List<KeyValuePair<ExampleTable, Dictionary<string, object>>> pairs) {
+		foreach (var pair in pairs) {
+			pair.Value["Id"] = pair.Key.Id;
+			pair.Value["Name"] = pair.Key.Name;
+			pair.Value["CreateTime"] = pair.Key.CreateTime.ToClientTimeString();
+		}
+	}
+
+	/// <summary>
+	/// 添加列和操作等
+	/// </summary>
+	public void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+		response.Columns.AddIdColumn("Id");
+		response.Columns.AddMemberColumn("Name");
+		response.Columns.AddMemberColumn("CreateTime");
+	}
+}
+```
+
+在这个例子中表格使用了`AjaxTableSearchResponse.FromRequest`来构建搜索结果，<br/>
+这个函数可以自动从数据库中获取数据，交给表格搜索回调处理并进行分页，<br/>
+如果需要自己处理也可以自己构建`AjaxTableSearchResponse`的数据。<br/>
+使用表格回调的原因是搜索时可以支持多个回调，这样易于修改其他插件的表格内容。<br/>
+
+默认表格的样式在`static/common.base.tmpl/ajaxTable.tmpl`中，<br/>
+如果需要使用自己的样式可以修改`table.Template`。<br/>
 
 ### 表单构建器
 
+表单构建器可以构建常用的表单，并支持多种表单字段和客户端+服务端验证。<br/>
+默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
+使用例子<br/>
+
+在`ExampleController`下添加以下内容
+``` csharp
+[Action("example/form")]
+[Action("example/form", HttpMethods.POST)]
+public IActionResult Form() {
+	var form = new ExampleForm();
+	if (HttpContextUtils.CurrentContext.Request.HttpMethod == HttpMethods.POST) {
+		return new JsonResult(form.Submit());
+	} else {
+		form.Bind();
+		return new TemplateResult("example/example_form.html", new { form });
+	}
+}
+```
+
+添加`Example\templates\example\example_form.html`，内容如下
+``` html
+{% use_title "Example Form" %}
+{% include common.base/header.html %}
+
+<div class="portlet">
+	{{ form }}
+</div>
+
+{% include common.base/footer.html %}
+```
+
+添加`Example\src\Forms\ExampleForm.cs`，内容如下<br/>
+提示`[Required]`属性找不到时请引用程序集`System.ComponentModel.DataAnnotations`<br/>
+``` csharp
+/// <summary>
+/// 示例表单
+/// </summary>
+public class ExampleForm : ModelFormBuilder {
+	[Required]
+	[StringLength(100)]
+	[TextBoxField("Name", "Please enter name")]
+	public string Name { get; set; }
+	[Required]
+	[TextBoxField("Age", "Please enter age")]
+	public int Age { get; set; }
+
+	protected override void OnBind() {
+		Name = "Tom";
+		Age = 25;
+	}
+
+	protected override object OnSubmit() {
+		var message = string.Format("Hello, {0} ({1})", Name, Age);
+		return new { message };
+	}
+}
+```
+
+这个插件提供的表单字段类型有，使用时请参考各个字段的文档。<br/>
+
+- LabelFieldAttribute(string name)
+- TextBoxFieldAttribute(string name, string placeHolder = null)
+- PasswordFieldAttribute(string name, string placeHolder = null)
+- TextAreaFieldAttribute(string name, int rows, string placeHolder = null)
+- CheckBoxFieldAttribute(string name)
+- CheckBoxGroupFieldAttribute(string name, Type source)
+- CheckBoxGroupsFieldAttribute(string name, Type source)
+- CheckBoxTreeFieldAttribute(string name, Type source)
+- DropdownListFieldAttribute(string name, Type source)
+- SearchableDropdownListFieldAttribute(string name, Type source)
+- RadioButtonsFieldAttribute(string name, Type sources)
+- FileUploaderFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)
+- HiddenFieldAttribute(string name)
+- JsonFieldAttribute(string name, Type fieldType)
+- HtmlFieldAttribute(string name)
+
 ### 数据库操作类
-(GenericRepository, UnitOfWork)<br/>
 
-### 前台首页
+为了简化数据库操作，这个插件提供了通用仓储`GenericRepository`和工作单元`UnitOfWork`。<br/>
+`GenericRepository`提供了共通的操作函数，`UnitOfWork`负责管理数据库上下文和事务的提交。<br/>
+使用例子<br/>
 
-### 前台头部和底部
+在`ExampleController`下添加以下内容
+``` csharp
+[Action("example/uow")]
+public string Uow() {
+	// insert data
+	string name = RandomUtils.RandomString(5);
+	UnitOfWork.WriteData<ExampleTable>(r => {
+		var data = new ExampleTable() { Name = name };
+		r.Save(ref data);
+	});
+	// read first not deleted data's name
+	var readName = UnitOfWork.ReadData<ExampleTable, ExampleTable>(
+		r => r.Get(t => t.Name == name));
+	return JsonConvert.SerializeObject(readName);
+}
+```
+
+`UnitOfWork`不支持嵌套，需要多个仓储使用同一个数据库时请使用`RepositoryResolver`<br/>
+``` csharp
+UnitOfWork.Read(context => {
+	var repository = RepositoryResolver.Resolve<ExampleTable>(context);
+	var otherRepository = RepositoryResolver.Resolve<OtherTable>(context);
+});
+```
+
+需要自定义仓储时，可以创建一个仓储类继承`GenericRepository`并注册到IoC容器，<br/>
+解决仓储时会自动使用自定义的仓储。<br/>
+
+### 前台页模板
+
+这个插件提供了以下的前台页模板，如有需要可以根据路径在其他插件中重载。
+
+- common.base\footer.html (前台通用尾部)
+- common.base\header.html (前台通用头部)
+- common.base\index.html (首页)
 
 ### 静态文件处理器
 
+这个插件提供了静态文件专用的路径`/static/文件路径`，查找规则如下<br/>
+
+- 查找`App_Data\static\文件路径`
+- 按插件注册顺序反向查找`插件文件夹\static\文件路径`
+
+例如注册了插件A和B时，查找`/static/a/homepage.js`顺序如下<br/>
+
+- `App_Data\static\a\homepage.js`
+- `B\static\a\homepage.js`
+- `A\static\a\homepage.js`
+
 ### 语言时区处理器
+
+这个插件可以自动设置当前请求的语言和时区。<br/>
+默认语言和时区可以修改通用配置`LocaleSettings`。<br/>
+
+设置语言的顺序是<br/>
+
+- 客户端传入的Cookies (LocaleUtils.LanguageKey: "ZKWeb.Language")
+- 客户端浏览器语言，如果`LocaleSettings`设置允许检测浏览器语言
+- `LocaleSettings`中的默认语言
+
+设置时区的顺序是<br/>
+
+- 客户端传入的Cookies (LocaleUtils.TimeZoneKey: "ZKWeb.TimeZone")
+- `LocaleSettings`中的默认时区
