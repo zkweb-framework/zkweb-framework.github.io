@@ -21,7 +21,7 @@ pages:
 - 插件(Common.LanguageSwitcher):   plugin/common.languageswitcher.md
 - 插件(Common.Currency):           plugin/common.currency.md
 - 插件(Common.Region):             plugin/common.region.md
-- 插件(Common.SerialGenerate):     plugin/common.serial.md
+- 插件(Common.SerialGenerate):     plugin/common.serialgenerate.md
 - 插件(Finance.Payment):           plugin/common.payment.md
 - 插件(Finance.Payment.Alipay):    plugin/common.payment.alipay.md
 - 插件(Finance.Payment.Tenpay):    plugin/common.payment.tenpay.md

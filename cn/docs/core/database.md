@@ -8,7 +8,7 @@ ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
 
 ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/>
 
-### 添加数据表
+### <h2>添加数据表</h2>
 
 添加`Example\src\Database\ExampleTable.cs`，内容如下
 ``` csharp
@@ -39,7 +39,7 @@ public class ExampleTableMap : ClassMap<ExampleTable> {
 https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 在ZKWeb中已有插件正常使用一对多(Reference, HasMany)，多对多(ManyToMany)的功能。<br/>
 
-### 升级数据表
+### <h2>升级数据表</h2>
 
 在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
 在ExampleTable中添加以下成员<br/>
@@ -56,7 +56,7 @@ Map(e => e.Deleted);
 注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
 ![](../img/example_table.jpg)
 
-### 增删查改
+### <h2>增删查改</h2>
 
 通过`DatabaseManager.GetContext`获取数据库上下文可以进行增删查改操作<br/>
 如果使用了`Common.Base`插件可以使用`GenericRepository`和`UnitOfWork`类进行更简单的操作，<br/>
@@ -132,7 +132,7 @@ public string RemoveData() {
 }
 ```
 
-### 数据事件
+### <h2>数据事件</h2>
 
 ZKWeb支持定义事件监听数据的增删查改<br/>
 其中增加和修改使用`IDataSaveCallback`，删除使用`IDataDeleteCallback`。<br/>
@@ -190,7 +190,7 @@ public class ExampleDataDeleteCallback : IDataDeleteCallback<ExampleTable> {
 
 删除数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
 
-### 原生查询
+### <h2>原生查询</h2>
 
 ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
 但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/>

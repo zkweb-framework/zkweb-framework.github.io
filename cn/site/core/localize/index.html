@@ -362,7 +362,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -525,7 +525,7 @@
 语言的翻译由<code>ITranslateProvider</code>实现。<br/>
 每个线程都可以指定不同的语言和时区。<br/>
 使用插件<code>Common.Base</code>时可以自动设置当前线程语言和时区的机制，请参考该插件的文档。<br/></p>
-<h3 id="_1">添加翻译</h3>
+<h3 id="_1"><h2>添加翻译</h2></h3>
 <p>添加<code>Example\src\Translates\zh_CN.cs</code>，内容如下</p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
 <span class="c1">/// 中文翻译</span>
@@ -551,7 +551,7 @@
 
 <p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中。<br/>
 这里保存翻译使用了<code>Dictionary</code>，如果有需要还可以通过其他途径翻译。<br/></p>
-<h3 id="_2">使用翻译</h3>
+<h3 id="_2"><h2>使用翻译</h2></h3>
 <p>在代码中使用翻译<br/>
 类似于gettext，但是gettext使用名称<code>_</code>，这里使用<code>T</code>（Translate的T）。<br/></p>
 <div class="code"><pre><span></span><span class="kt">string</span> <span class="n">translated</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Example&quot;</span><span class="p">);</span> <span class="c1">// 当前语言是中文时，translated等于&quot;示例&quot;</span>
@@ -564,7 +564,7 @@
 </pre></div>
 
 
-<h3 id="_3">转换时区</h3>
+<h3 id="_3"><h2>转换时区</h2></h3>
 <p>转换到客户端的时间，<code>ToClientTime</code>是一个扩展函数。<br/>
 如果客户端指定了时区则使用该时区，否则使用服务器本地时间。<br/></p>
 <div class="code"><pre><span></span><span class="kt">var</span> <span class="n">utcTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
@@ -578,7 +578,7 @@
 </pre></div>
 
 
-<h3 id="_4">指定当前语言</h3>
+<h3 id="_4"><h2>指定当前语言</h2></h3>
 <p>直接设置指定语言<br/></p>
 <div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadLanguage</span><span class="p">(</span><span class="s">&quot;zh-CN&quot;</span><span class="p">);</span>
 </pre></div>
@@ -590,7 +590,7 @@
 </pre></div>
 
 
-<h3 id="_5">指定当前时区</h3>
+<h3 id="_5"><h2>指定当前时区</h2></h3>
 <p>直接设置指定时区</p>
 <div class="code"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadTimezone</span><span class="p">(</span><span class="s">&quot;China Standard Time&quot;</span><span class="p">);</span>
 </pre></div>

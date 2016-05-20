@@ -265,25 +265,31 @@
             </li>
           
             <li class="anchor">
-              <a title="数据库操作类" href="#_7">
+              <a title="更多的表单字段类型" href="#_7">
+                更多的表单字段类型
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="数据库操作类" href="#_8">
                 数据库操作类
               </a>
             </li>
           
             <li class="anchor">
-              <a title="前台页模板" href="#_8">
+              <a title="前台页模板" href="#_9">
                 前台页模板
               </a>
             </li>
           
             <li class="anchor">
-              <a title="静态文件处理器" href="#_9">
+              <a title="静态文件处理器" href="#_10">
                 静态文件处理器
               </a>
             </li>
           
             <li class="anchor">
-              <a title="语言时区处理器" href="#_10">
+              <a title="语言时区处理器" href="#_11">
                 语言时区处理器
               </a>
             </li>
@@ -404,7 +410,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -566,7 +572,7 @@
           <p>插件包含了通用性高的最基本的功能和资源，可以满足大部分网站的需求。<br/>
 在示例项目中使用这个插件时请先引用<code>Common.Base\bin\Common.Base.dll</code>，否则VS会提示错误（但不影响ZKWeb加载）。<br/></p>
 <hr />
-<h3 id="_1">通用配置</h3>
+<h3 id="_1"><h2>通用配置</h2></h3>
 <p>通用配置可以保存网站全局使用的参数，例如网站名称和默认语言等。<br/>
 添加<code>Example\src\config\ExampleConfig.cs</code>，内容如下<br/></p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
@@ -605,7 +611,7 @@
 </pre></div>
 
 
-<h3 id="_2">定时任务</h3>
+<h3 id="_2"><h2>定时任务</h2></h3>
 <p>定时任务可以用于在网站后台执行定时处理。<br/>
 注意网站被IIS回收后，将不会定时执行这些任务（其他的网站内嵌定时任务框架也一样），<br/>
 如果需要定时任务必须在指定的时间运行，请设置IIS程序池常驻或使用独立的进程处理。<br/>
@@ -631,7 +637,7 @@
 </pre></div>
 
 
-<h3 id="_3">会话</h3>
+<h3 id="_3"><h2>会话</h2></h3>
 <p>考虑到网站部署到多个服务器，会话应该保存到数据库中。<br/>
 会话会在当前请求期间共享同一个对象，但不会缓存到这个期间外。<br/></p>
 <p>获取和保存会话<br/>
@@ -661,13 +667,13 @@
 </pre></div>
 
 
-<h3 id="css">css样式</h3>
+<h3 id="css"><h2>css样式</h2></h3>
 <p>这个插件使用了以下css样式，具体用法可以参考他们的官网<br/></p>
 <ul>
 <li>Bootstrap 3.3.2</li>
 <li>AdminLTE 2.3.0</li>
 </ul>
-<h3 id="js">js脚本</h3>
+<h3 id="js"><h2>js脚本</h2></h3>
 <p>这个插件使用了以下js脚本，具体用法可以参考他们的官网<br/></p>
 <ul>
 <li>jQuery 1.11.2<ul>
@@ -690,12 +696,12 @@
 <li>Underscore 1.8.3</li>
 </ul>
 <p>这个插件还带了很多零碎的附加功能，具体可以参考<code>Common.Base\static\common.base.js\custom</code>。</p>
-<h3 id="_4">图标字体</h3>
+<h3 id="_4"><h2>图标字体</h2></h3>
 <p>这个插件使用了以下图标字体，具体用法可以参考他们的官网<br/></p>
 <ul>
 <li>Font Awesome 4.5.0</li>
 </ul>
-<h3 id="_5">表格构建器</h3>
+<h3 id="_5"><h2>表格构建器</h2></h3>
 <p>表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
 以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
 表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/></p>
@@ -789,13 +795,15 @@
 </pre></div>
 
 
-<p>在这个例子中表格使用了<code>AjaxTableSearchResponse.FromRequest</code>来构建搜索结果，<br/>
+<p>效果<br/>
+<img alt="" src="../../img/ajaxtable.jpg" />
+在这个例子中表格使用了<code>AjaxTableSearchResponse.FromRequest</code>来构建搜索结果，<br/>
 这个函数可以自动从数据库中获取数据，交给表格搜索回调处理并进行分页，<br/>
 如果需要自己处理也可以自己构建<code>AjaxTableSearchResponse</code>的数据。<br/>
 使用表格回调的原因是搜索时可以支持多个回调，这样易于修改其他插件的表格内容。<br/></p>
 <p>默认表格的样式在<code>static/common.base.tmpl/ajaxTable.tmpl</code>中，<br/>
 如果需要使用自己的样式可以修改<code>table.Template</code>。<br/></p>
-<h3 id="_6">表单构建器</h3>
+<h3 id="_6"><h2>表单构建器</h2></h3>
 <p>表单构建器可以构建常用的表单，并支持多种表单字段和客户端+服务端验证。<br/>
 默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
 使用例子<br/></p>
@@ -853,7 +861,10 @@
 </pre></div>
 
 
-<p>这个插件提供的表单字段类型有，使用时请参考各个字段的文档。<br/></p>
+<p>效果<br/>
+<img alt="" src="../../img/ajaxform.jpg" /></p>
+<h3 id="_7"><h2>更多的表单字段类型</h2></h3>
+<p>插件还提供了以下表单字段类型，使用时请参考各个字段的文档。<br/></p>
 <ul>
 <li>LabelFieldAttribute(string name)</li>
 <li>TextBoxFieldAttribute(string name, string placeHolder = null)</li>
@@ -871,7 +882,7 @@
 <li>JsonFieldAttribute(string name, Type fieldType)</li>
 <li>HtmlFieldAttribute(string name)</li>
 </ul>
-<h3 id="_7">数据库操作类</h3>
+<h3 id="_8"><h2>数据库操作类</h2></h3>
 <p>为了简化数据库操作，这个插件提供了通用仓储<code>GenericRepository</code>和工作单元<code>UnitOfWork</code>。<br/>
 <code>GenericRepository</code>提供了共通的操作函数，<code>UnitOfWork</code>负责管理数据库上下文和事务的提交。<br/>
 使用例子<br/></p>
@@ -884,10 +895,10 @@
         <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">};</span>
         <span class="n">r</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
     <span class="p">});</span>
-    <span class="c1">// read first not deleted data&#39;s name</span>
-    <span class="kt">var</span> <span class="n">readName</span> <span class="p">=</span> <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">ReadData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">ExampleTable</span><span class="p">&gt;(</span>
+    <span class="c1">// read inserted data</span>
+    <span class="kt">var</span> <span class="n">readData</span> <span class="p">=</span> <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">ReadData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">ExampleTable</span><span class="p">&gt;(</span>
         <span class="n">r</span> <span class="p">=&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">name</span><span class="p">));</span>
-    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">readName</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">readData</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -902,14 +913,14 @@
 
 <p>需要自定义仓储时，可以创建一个仓储类继承<code>GenericRepository</code>并注册到IoC容器，<br/>
 解决仓储时会自动使用自定义的仓储。<br/></p>
-<h3 id="_8">前台页模板</h3>
+<h3 id="_9"><h2>前台页模板</h2></h3>
 <p>这个插件提供了以下的前台页模板，如有需要可以根据路径在其他插件中重载。</p>
 <ul>
 <li>common.base\footer.html (前台通用尾部)</li>
 <li>common.base\header.html (前台通用头部)</li>
 <li>common.base\index.html (首页)</li>
 </ul>
-<h3 id="_9">静态文件处理器</h3>
+<h3 id="_10"><h2>静态文件处理器</h2></h3>
 <p>这个插件提供了静态文件专用的路径<code>/static/文件路径</code>，查找规则如下<br/></p>
 <ul>
 <li>查找<code>App_Data\static\文件路径</code></li>
@@ -921,7 +932,7 @@
 <li><code>B\static\a\homepage.js</code></li>
 <li><code>A\static\a\homepage.js</code></li>
 </ul>
-<h3 id="_10">语言时区处理器</h3>
+<h3 id="_11"><h2>语言时区处理器</h2></h3>
 <p>这个插件可以自动设置当前请求的语言和时区。<br/>
 默认语言和时区可以修改通用配置<code>LocaleSettings</code>。<br/></p>
 <p>设置语言的顺序是<br/></p>

@@ -362,7 +362,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -530,7 +530,7 @@
 <li>更好的支持MySQL等非微软的数据库，不会像EF只对MSSQL支持好。</li>
 </ul>
 <p>ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/></p>
-<h3 id="_1">添加数据表</h3>
+<h3 id="_1"><h2>添加数据表</h2></h3>
 <p>添加<code>Example\src\Database\ExampleTable.cs</code>，内容如下</p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
 <span class="c1">/// 示例数据</span>
@@ -559,7 +559,7 @@
 更多用法可以参考FluentNHibernte的文档。<br/>
 https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 在ZKWeb中已有插件正常使用一对多(Reference, HasMany)，多对多(ManyToMany)的功能。<br/></p>
-<h3 id="_2">升级数据表</h3>
+<h3 id="_2"><h2>升级数据表</h2></h3>
 <p>在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
 在ExampleTable中添加以下成员<br/></p>
 <div class="code"><pre><span></span><span class="k">public</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">Deleted</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
@@ -574,7 +574,7 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 <p>保存后刷新浏览器即可看到效果。<br/>
 注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
 <img alt="" src="../../img/example_table.jpg" /></p>
-<h3 id="_3">增删查改</h3>
+<h3 id="_3"><h2>增删查改</h2></h3>
 <p>通过<code>DatabaseManager.GetContext</code>获取数据库上下文可以进行增删查改操作<br/>
 如果使用了<code>Common.Base</code>插件可以使用<code>GenericRepository</code>和<code>UnitOfWork</code>类进行更简单的操作，<br/>
 详细请参考<code>Common.Base</code>的文档。<br/></p>
@@ -647,7 +647,7 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 </pre></div>
 
 
-<h3 id="_4">数据事件</h3>
+<h3 id="_4"><h2>数据事件</h2></h3>
 <p>ZKWeb支持定义事件监听数据的增删查改<br/>
 其中增加和修改使用<code>IDataSaveCallback</code>，删除使用<code>IDataDeleteCallback</code>。<br/>
 在Before或After函数中可以通过传入的<code>context</code>参数修改关联的数据，<br/>
@@ -701,7 +701,7 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 
 
 <p>删除数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
-<h3 id="_5">原生查询</h3>
+<h3 id="_5"><h2>原生查询</h2></h3>
 <p>ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
 但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/></p>
 <p>NHibernate的会话可以通过<code>context.Session</code>获取到。</p>

@@ -3,7 +3,7 @@
 
 ----------------------------------------------------------
 
-### 通用配置
+### <h2>通用配置</h2>
 
 通用配置可以保存网站全局使用的参数，例如网站名称和默认语言等。<br/>
 添加`Example\src\config\ExampleConfig.cs`，内容如下<br/>
@@ -44,7 +44,7 @@ public string WriteConfig() {
 }
 ```
 
-### 定时任务
+### <h2>定时任务</h2>
 
 定时任务可以用于在网站后台执行定时处理。<br/>
 注意网站被IIS回收后，将不会定时执行这些任务（其他的网站内嵌定时任务框架也一样），<br/>
@@ -72,7 +72,7 @@ public class ExampleTask : IScheduledTaskExecutor {
 }
 ```
 
-### 会话
+### <h2>会话</h2>
 
 考虑到网站部署到多个服务器，会话应该保存到数据库中。<br/>
 会话会在当前请求期间共享同一个对象，但不会缓存到这个期间外。<br/>
@@ -104,14 +104,14 @@ public string SaveSession() {
 session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 ```
 
-### css样式
+### <h2>css样式</h2>
 
 这个插件使用了以下css样式，具体用法可以参考他们的官网<br/>
 
 - Bootstrap 3.3.2
 - AdminLTE 2.3.0
 
-### js脚本
+### <h2>js脚本</h2>
 
 这个插件使用了以下js脚本，具体用法可以参考他们的官网<br/>
 
@@ -132,13 +132,13 @@ session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 
 这个插件还带了很多零碎的附加功能，具体可以参考`Common.Base\static\common.base.js\custom`。
 
-### 图标字体
+### <h2>图标字体</h2>
 
 这个插件使用了以下图标字体，具体用法可以参考他们的官网<br/>
 
 - Font Awesome 4.5.0
 
-### 表格构建器
+### <h2>表格构建器</h2>
 
 表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
 以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
@@ -234,6 +234,8 @@ public class ExampleTableCallback : IAjaxTableCallback<ExampleTable> {
 }
 ```
 
+效果<br/>
+![](../img/ajaxtable.jpg)
 在这个例子中表格使用了`AjaxTableSearchResponse.FromRequest`来构建搜索结果，<br/>
 这个函数可以自动从数据库中获取数据，交给表格搜索回调处理并进行分页，<br/>
 如果需要自己处理也可以自己构建`AjaxTableSearchResponse`的数据。<br/>
@@ -242,7 +244,7 @@ public class ExampleTableCallback : IAjaxTableCallback<ExampleTable> {
 默认表格的样式在`static/common.base.tmpl/ajaxTable.tmpl`中，<br/>
 如果需要使用自己的样式可以修改`table.Template`。<br/>
 
-### 表单构建器
+### <h2>表单构建器</h2>
 
 表单构建器可以构建常用的表单，并支持多种表单字段和客户端+服务端验证。<br/>
 默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
@@ -302,7 +304,12 @@ public class ExampleForm : ModelFormBuilder {
 }
 ```
 
-这个插件提供的表单字段类型有，使用时请参考各个字段的文档。<br/>
+效果<br/>
+![](../img/ajaxform.jpg)
+
+### <h2>更多的表单字段类型</h2>
+
+插件还提供了以下表单字段类型，使用时请参考各个字段的文档。<br/>
 
 - LabelFieldAttribute(string name)
 - TextBoxFieldAttribute(string name, string placeHolder = null)
@@ -320,7 +327,7 @@ public class ExampleForm : ModelFormBuilder {
 - JsonFieldAttribute(string name, Type fieldType)
 - HtmlFieldAttribute(string name)
 
-### 数据库操作类
+### <h2>数据库操作类</h2>
 
 为了简化数据库操作，这个插件提供了通用仓储`GenericRepository`和工作单元`UnitOfWork`。<br/>
 `GenericRepository`提供了共通的操作函数，`UnitOfWork`负责管理数据库上下文和事务的提交。<br/>
@@ -336,10 +343,10 @@ public string Uow() {
 		var data = new ExampleTable() { Name = name };
 		r.Save(ref data);
 	});
-	// read first not deleted data's name
-	var readName = UnitOfWork.ReadData<ExampleTable, ExampleTable>(
+	// read inserted data
+	var readData = UnitOfWork.ReadData<ExampleTable, ExampleTable>(
 		r => r.Get(t => t.Name == name));
-	return JsonConvert.SerializeObject(readName);
+	return JsonConvert.SerializeObject(readData);
 }
 ```
 
@@ -354,7 +361,7 @@ UnitOfWork.Read(context => {
 需要自定义仓储时，可以创建一个仓储类继承`GenericRepository`并注册到IoC容器，<br/>
 解决仓储时会自动使用自定义的仓储。<br/>
 
-### 前台页模板
+### <h2>前台页模板</h2>
 
 这个插件提供了以下的前台页模板，如有需要可以根据路径在其他插件中重载。
 
@@ -362,7 +369,7 @@ UnitOfWork.Read(context => {
 - common.base\header.html (前台通用头部)
 - common.base\index.html (首页)
 
-### 静态文件处理器
+### <h2>静态文件处理器</h2>
 
 这个插件提供了静态文件专用的路径`/static/文件路径`，查找规则如下<br/>
 
@@ -375,7 +382,7 @@ UnitOfWork.Read(context => {
 - `B\static\a\homepage.js`
 - `A\static\a\homepage.js`
 
-### 语言时区处理器
+### <h2>语言时区处理器</h2>
 
 这个插件可以自动设置当前请求的语言和时区。<br/>
 默认语言和时区可以修改通用配置`LocaleSettings`。<br/>

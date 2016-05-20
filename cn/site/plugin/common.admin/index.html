@@ -235,20 +235,32 @@
         <ul>
           
             <li class="anchor">
-              <a title="用户" href="#_1">
-                用户
+              <a title="数据表" href="#_1">
+                数据表
               </a>
             </li>
           
             <li class="anchor">
-              <a title="管理员" href="#_2">
-                管理员
+              <a title="用户注册和登陆" href="#_2">
+                用户注册和登陆
               </a>
             </li>
           
             <li class="anchor">
-              <a title="角色" href="#_3">
-                角色
+              <a title="权限" href="#_3">
+                权限
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="后台页面" href="#_4">
+                后台页面
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="添加后台功能" href="#_5">
+                添加后台功能
               </a>
             </li>
           
@@ -356,7 +368,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -517,12 +529,185 @@
           
           <p>插件包含了用户和管理员所需的数据表，和最基础的后台管理页面。<br/>
 支持快速开发使用的自动构建后台CRUD页面等功能。<br/></p>
-<p>以下待编写</p>
-<hr />
-<h3 id="_1">用户</h3>
-<h3 id="_2">管理员</h3>
-<h3 id="_3">角色</h3>
+<h3 id="_1"><h2>数据表</h2></h3>
+<ul>
+<li>用户 (User)</li>
+<li>角色 (UserRole)</li>
+</ul>
+<p>一个用户可以对应多个角色，用户有用户类型，可以是普通用户或管理员或合作伙伴。</p>
+<h3 id="_2"><h2>用户注册和登陆</h2></h3>
+<p>插件包含了用户注册和登陆页面，地址是</p>
+<ul>
+<li>注册页面 /user/reg</li>
+<li>登陆页面 /user/login</li>
+</ul>
+<p>需要修改样式时可以重载相关的模板文件。</p>
+<h3 id="_3"><h2>权限</h2></h3>
+<p>插件支持权限管理，网站中的权限由<code>IPrivilegesProvider</code>提供。<br/>
+权限是一个字符串，格式推荐是<code>Group:Name</code>，例如<code>AdminManage:View</code>。<br/>
+很多插件支持自动生成权限提供器，例如构建后台CRUD页面时会自动生成增删查改权限。<br/></p>
+<p>需要检查权限时可以使用<code>PrivilegesChecker</code></p>
+<div class="code"><pre><span></span><span class="n">PrivilegesChecker</span><span class="p">.</span><span class="n">Check</span><span class="p">(</span><span class="n">UserTypes</span><span class="p">[]</span> <span class="n">types</span><span class="p">,</span> <span class="k">params</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">privileges</span><span class="p">);</span>
+</pre></div>
+
+
+<h3 id="_4"><h2>后台页面</h2></h3>
+<p>插件提供了默认的后台页面，地址是<code>/admin</code>，主题使用了AdminLTE。<br/>
+网站创建后第一个登陆到后台的用户将会成为超级管理员。<br/>
+后台包含一系列的后台功能，一个功能一个图标（如果自己替换模板页，可以换成别的形式）。<br/>
+<img alt="" src="../../img/admin.jpg" /></p>
+<h3 id="_5"><h2>添加后台功能</h2></h3>
+<p>添加后台功能可以继承AdminApp类实现。<br/>
+添加<code>Example\src\AdminApps\ExampleApp.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例的后台应用</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleApp</span> <span class="p">:</span> <span class="n">AdminApp</span> <span class="p">{</span>
+    <span class="c1">// Name和Url必须提供</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;ExampleApp&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Url</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;/admin/example_app&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// 可选，如果需要指定图标颜色和内容</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">TileClass</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;tile bg-navy&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">IconClass</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;fa fa-rocket&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// 可选，默认只要求管理员不要求指定权限</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="n">UserTypes</span><span class="p">[]</span> <span class="n">AllowedUserTypes</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">UserTypesGroup</span><span class="p">.</span><span class="n">Admin</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">RequiredPrivileges</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="s">&quot;ExampleApp:View&quot;</span> <span class="p">};</span> <span class="p">}</span> <span class="p">}</span>
+
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">IActionResult</span> <span class="nf">Action</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_admin_app.html&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加<code>Example\templates\example\example_admin_app.html</code>，内容如下</p>
+<div class="code"><pre><span></span>{% use_title &quot;Example Admin App&quot; -%}
+{% include common.admin/header.html %}
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet-title&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;caption&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;fa fa-rocket&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;caption-subject&quot;</span><span class="p">&gt;</span>{{ &quot;Example Admin App&quot; | trans }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet-body&quot;</span><span class="p">&gt;</span>
+    hello admin app
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+{% include common.admin/footer.html %}
+</pre></div>
+
+
+<p>刷新后台可以看到多出了<code>ExampleApp</code>的图标<br/>
+<img alt="" src="../../img/example_admin_app.jpg" /></p>
+<p>进入后会显示<code>Action</code>返回的内容<br/>
+<img alt="" src="../../img/example_admin_app_page.jpg" /></p>
 <h3 id="crud">自动构建后台CRUD页面</h3>
+<p>插件提供了根据数据库中的数据快速构建后台CRUD页面的功能，构建时需要使用<code>AdminAppBuilder</code>。<br/></p>
+<p>添加<code>Example\src\AdminApps\ExampleCRUDApp.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例的增删查改应用</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleCRUDApp</span> <span class="p">:</span> <span class="n">AdminAppBuilder</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">ExampleCRUDApp</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="c1">// Name和Url必须提供</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;ExampleCRUDApp&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Url</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;/admin/example_crud_app&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// 可选，如果需要指定图标颜色和内容</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">TileClass</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;tile bg-navy&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">IconClass</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;fa fa-rocket&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+    <span class="c1">// 权限一般不需要手动指定，会根据名称生成&quot;查看&quot;,&quot;修改&quot;,&quot;删除&quot;,&quot;永久删除&quot;权限</span>
+
+    <span class="c1">// 获取添加和编辑使用的表单</span>
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">IModelFormBuilder</span> <span class="nf">GetAddForm</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">new</span> <span class="n">Form</span><span class="p">();</span> <span class="p">}</span>
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">IModelFormBuilder</span> <span class="nf">GetEditForm</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">new</span> <span class="n">Form</span><span class="p">();</span> <span class="p">}</span>
+
+    <span class="c1">// 获取搜索列表使用的回调</span>
+    <span class="k">protected</span> <span class="k">override</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">GetTableCallback</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="k">new</span> <span class="n">TableCallback</span><span class="p">();</span> <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 搜索列表使用的表格回调</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">TableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnBuildTable</span><span class="p">(</span><span class="n">AjaxTableBuilder</span> <span class="n">table</span><span class="p">,</span> <span class="n">AjaxTableSearchBarBuilder</span> <span class="n">searchBar</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 右键菜单分割线</span>
+            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddEditActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 右键编辑菜单项</span>
+            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddAddActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 右键添加菜单项</span>
+            <span class="n">searchBar</span><span class="p">.</span><span class="n">KeywordPlaceHolder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">);</span> <span class="c1">// 搜索栏的预留文本</span>
+            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 搜索栏的分割线</span>
+            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddRecycleBin</span><span class="p">();</span> <span class="c1">// 搜索栏的回收站菜单项</span>
+            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddAddActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 搜索栏的添加菜单项</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
+            <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">FilterByRecycleBin</span><span class="p">(</span><span class="n">request</span><span class="p">);</span> <span class="c1">// 按回收站过滤</span>
+            <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">));</span> <span class="c1">// 按关键词过滤</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSort</span><span class="p">(</span>
+            <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span> <span class="c1">// 按Id倒序排列</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
+            <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span> <span class="c1">// 选择Id</span>
+                <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span> <span class="c1">// 选择名称</span>
+                <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span> <span class="c1">// 选择创建时间</span>
+                <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Deleted&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Deleted</span> <span class="p">?</span> <span class="n">EnumDeleted</span><span class="p">.</span><span class="n">Deleted</span> <span class="p">:</span> <span class="n">EnumDeleted</span><span class="p">.</span><span class="n">None</span><span class="p">;</span> <span class="c1">// 选择删除状态</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">void</span> <span class="nf">OnResponse</span><span class="p">(</span>
+            <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">AjaxTableSearchResponse</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">idColumn</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddIdColumn</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span> <span class="c1">// Id列</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddNoColumn</span><span class="p">();</span> <span class="c1">// 序号列，页序号*页数量+数据位置(从1开始)</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;45%&quot;</span><span class="p">);</span> <span class="c1">// 名称列</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;CreateTime&quot;</span><span class="p">);</span> <span class="c1">// 添加时间列</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddEnumLabelColumn</span><span class="p">(</span><span class="s">&quot;Deleted&quot;</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">EnumDeleted</span><span class="p">));</span> <span class="c1">// 删除状态列</span>
+            <span class="kt">var</span> <span class="n">actionColumn</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddActionColumn</span><span class="p">();</span> <span class="c1">// 操作列</span>
+            <span class="n">actionColumn</span><span class="p">.</span><span class="n">AddEditActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 编辑按钮</span>
+            <span class="n">idColumn</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 批量操作菜单的分割线</span>
+            <span class="n">idColumn</span><span class="p">.</span><span class="n">AddDeleteActionsForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;(</span><span class="n">request</span><span class="p">);</span> <span class="c1">// 批量删除和恢复</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 添加和编辑使用的表单</span>
+    <span class="c1">/// 内部使用GenericRepository.GetById获取和保存数据，如果主键成员不是&quot;Id&quot;请实现自定义的仓储类。</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">class</span> <span class="nc">Form</span> <span class="p">:</span> <span class="n">DataEditFormBuilder</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Form</span><span class="p">&gt;</span> <span class="p">{</span>
+<span class="na">        [Required]</span>
+<span class="na">        [StringLength(100)]</span>
+<span class="na">        [TextBoxField(&quot;Name&quot;, &quot;Please enter name&quot;)]</span>
+        <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnBind</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">bindFrom</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">Name</span> <span class="p">=</span> <span class="n">bindFrom</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span> <span class="c1">// 绑定名称</span>
+        <span class="p">}</span>
+
+        <span class="k">protected</span> <span class="k">override</span> <span class="kt">object</span> <span class="nf">OnSubmit</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">saveTo</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">saveTo</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="n">Name</span><span class="p">;</span> <span class="c1">// 设置名称</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">saveTo</span><span class="p">.</span><span class="n">Id</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">saveTo</span><span class="p">.</span><span class="n">CreateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span> <span class="c1">// 设置创建时间</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="k">new</span> <span class="p">{</span>
+                <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Saved successfully&quot;</span><span class="p">),</span> <span class="c1">// 显示消息</span>
+                <span class="n">script</span> <span class="p">=</span> <span class="n">ScriptStrings</span><span class="p">.</span><span class="n">AjaxtableUpdatedAndCloseModal</span> <span class="c1">// 关闭模态框并刷新列表</span>
+            <span class="p">};</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>效果如图<br/>
+<img alt="" src="../../img/example_crud_app_list.jpg" /></p>
+<p>自动生成的权限如图<br/>
+<img alt="" src="../../img/example_crud_app_privileges.jpg" /></p>
           <aside class="copyright" role="note">
             
             Documentation built with

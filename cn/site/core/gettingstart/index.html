@@ -374,7 +374,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -537,7 +537,7 @@
 核心项目是ZKWeb，<br/>
 插件项目是ZKWeb.Plugins，后面会说明如何添加新的插件项目。<br/></p>
 <p>核心项目只用于运行插件，如果客户需要不同的功能应该通过编写插件支持。<br/></p>
-<h3 id="_1">下载项目</h3>
+<h3 id="_1"><h2>下载项目</h2></h3>
 <p>通过git下载项目</br>
 请把ZKWeb和ZKWeb.Plugins下载到同一个文件夹中</br></p>
 <div class="code"><pre><span></span>git clone https://github.com/zkweb-framework/ZKWeb.git
@@ -545,9 +545,9 @@ git clone https://github.com/zkweb-framework/ZKWeb.Plugins.git
 </pre></div>
 
 
-<h3 id="_2">创建数据库</h3>
+<h3 id="_2"><h2>创建数据库</h2></h3>
 <p>ZKWeb目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL，运行前创建空数据库即可。</br></p>
-<h3 id="_3">修改配置文件</h3>
+<h3 id="_3"><h2>修改配置文件</h2></h3>
 <p>打开ZKWeb\ZKWeb\App_Data\config.json，修改其中的Database和ConnectionString<br />
 使用PostgreSQL数据库时可以按以下的格式配置<br /></p>
 <div class="code"><pre><span></span>&quot;Database&quot;: &quot;postgresql&quot;,
@@ -573,22 +573,22 @@ git clone https://github.com/zkweb-framework/ZKWeb.Plugins.git
 </pre></div>
 
 
-<h3 id="_4">运行网站</h1></h3>
+<h3 id="_4"><h2>运行网站</h2></h3>
 <p>使用Visual Studio 2015以上的版本打开ZKWeb项目，然后运行就可以看到默认的首页。<br/>
 首次运行需要编译所有插件，可能需要几分钟，请耐心等待完毕。
 <img alt="a" src="../../img/index.jpg" /></p>
-<h3 id="_5">登陆后台</h3>
+<h3 id="_5"><h2>登陆后台</h2></h3>
 <p>后台地址是<code>/admin</code>，首次运行网站时应该先注册一个用户并用此用户登录到后台。<br/>
 网站创建后第一个登陆到后台的用户会成为超级管理员。
 <img alt="a" src="../../img/admin_login.jpg" /></p>
-<h3 id="_6">重新初始化数据库</h3>
+<h3 id="_6"><h2>重新初始化数据库</h2></h3>
 <p>步骤:</p>
 <ul>
 <li>清空数据库</li>
 <li>删除App_Data\DatabaseScript.txt</li>
 <li>刷新网站</li>
 </ul>
-<h3 id="_7">部署到服务器</h3>
+<h3 id="_7"><h2>部署到服务器</h2></h3>
 <p>步骤:</p>
 <ul>
 <li>复制App_Data, bin, Global.asax, Web.config到目标目录</li>

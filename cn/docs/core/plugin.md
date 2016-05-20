@@ -2,7 +2,7 @@ ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。
 插件的编译由核心框架完成，不依赖VS。<br/>
 下面使用VS创建插件是因为编写插件时可以有代码提示和调试支持。<br/>
 
-### 插件的目录结构
+### <h2>插件的目录结构</h2>
 
 - ZKWeb.Plugins (默认的插件根目录)
 	- Common.Base (插件文件夹)
@@ -19,7 +19,7 @@ ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。
 
 在`config.json`的`PluginDirectories`可以指定一个或多个插件根目录。
 
-### 创建插件
+### <h2>创建插件</h2>
 步骤
 
 - 打开Visual Studio，创建项目，类型选“类库”，名称填`ExampleForDocument`，不要勾选为解决方案创建文件夹。</p>
@@ -36,7 +36,7 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。
 
 ![](../img/project.jpg)
 
-### 引用插件
+### <h2>引用插件</h2>
 步骤
 
 - 打开`ZKWeb\App_Data\config.json`
@@ -49,7 +49,7 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。
 
 ![](../img/add_plugin.jpg)
 
-### 添加插件说明
+### <h2>添加插件说明</h2>
 
 在`Example`文件夹下创建`plugin.json`，内容如下
 ```
@@ -61,7 +61,7 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。
 
 刷新关于网站即可看到新的名称和说明。
 
-### 添加代码
+### <h2>添加代码</h2>
 
 插件的代码都保存在`src`文件夹下，可以参考文档顶部的目录结构。<br/>
 
@@ -85,7 +85,7 @@ public class Plugin : IPlugin {
 刷新浏览器，在App_Data/Logs下可以看到输出的日志。<br/>
 ExportMany和Ioc将在下一节解释。<br/>
 
-### Ioc容器
+### <h2>Ioc容器</h2>
 
 ZKWeb使用了DryIoc，请先阅读DryIoc的文档:<br/>
 https://bitbucket.org/dadhi/dryioc/wiki/Home<br/>
@@ -98,7 +98,7 @@ ZKWeb全局使用的容器在`Application.Ioc`。<br/>
 DryIoc的性能非常高，可以查看以下的对比:<br/>
 http://www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison<br/>
 
-### Ioc容器的使用例子
+### <h2>Ioc容器的使用例子</h2>
 以下是一个简单的使用例子。
 
 ``` csharp
@@ -120,14 +120,14 @@ public interface IAnimalManager { }
 [ExportMany, SingletonUsage] public class AnimalManager : IAnimalManager { }
 ```
 
-### 组件注册顺序
+### <h2>组件注册顺序</h2>
 
 插件的定义顺序会影响到组件注册顺序，例如`Plugins: [ "A", "B" ]`，<br/>
 插件A有`class ExampleHandlerA : IExampleHandler { }`，<br/>
 插件B有`class ExampleHandlerB : IExampleHandler { }`，<br/>
 这时使用`Application.Ioc.ResolveMany<IExampleHandler>()`会获取到`[ExampleHandlerA, ExampleHandlerB]`。
 
-### 调试插件
+### <h2>调试插件</h2>
 
 调试插件有两种办法，<br/>
 第一种是在插件的VS中选择调试-挂载到进程并选择IIS进程挂载。<br/>

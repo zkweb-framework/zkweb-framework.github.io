@@ -392,7 +392,7 @@
           
             
   <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serial/">
+    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
       插件(Common.SerialGenerate)
     </a>
     
@@ -555,7 +555,7 @@
 在ZKWeb中控制器接口只是一个空接口，自身不拥有状态。<br/>
 获取当前http上下文可以通过<code>HttpContextUtils.CurrentContext</code>，<br/>
 为了更好的支持单元测试，请不要使用<code>HttpContext.Current</code>。<br/></p>
-<h3 id="_1">添加控制器</h3>
+<h3 id="_1"><h2>添加控制器</h2></h3>
 <p>添加<code>Example\src\Controllers\ExampleController.cs</code>，内容如下</br>
 使用<code>Controllers</code>文件夹保存控制器代码是命名习惯，不是必须遵从的。</br></p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
@@ -575,7 +575,7 @@
 控制器中标记了<code>[Action]</code>属性的函数都是可以访问的函数，返回类型可以是<code>string</code>或<code>IActionResult</code>。</br>
 在Action属性中可以指定路径和请求类型(GET或POST)，路径前面如果没有<code>/</code>会自动补上。</br>
 和mvc不一样，ZKWeb的路径完全由Action属性而不是控制器决定，而且处理函数必须标记Action属性。</br></p>
-<h3 id="_2">模板页介绍</h3>
+<h3 id="_2"><h2>模板页介绍</h2></h3>
 <p>ZKWeb的模板系统使用了DotLiquid。</br>
 请先参考DotLiquid的文档:</br>
 http://dotliquidmarkup.org/</br></p>
@@ -585,7 +585,7 @@ http://dotliquidmarkup.org/</br></p>
 <li>模板只编译成语法树而不是IL代码，每个页面第一次打开的速度远比cshtml要快</li>
 <li>没有内存泄漏的问题（可以在网站运行时不断更新模板页）</li>
 </ul>
-<h3 id="_3">使用模板页</h3>
+<h3 id="_3"><h2>使用模板页</h2></h3>
 <p>在上面的<code>ExampleController</code>下添加以下代码</p>
 <div class="code"><pre><span></span><span class="na">[Action(&quot;example/template&quot;)]</span>
 <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TemplateAction</span><span class="p">()</span> <span class="p">{</span>
@@ -602,7 +602,7 @@ http://dotliquidmarkup.org/</br></p>
 <p>完成后的目录结构应该如下</br>
 <img alt="" src="../../img/add_example_page.jpg" /></p>
 <p>保存后在浏览器中打开<code>http://localhost:端口/example/template</code>，即可看到<code>hello, world</code>。</br></p>
-<h3 id="_4">模板标签和过滤器</h3>
+<h3 id="_4"><h2>模板标签和过滤器</h2></h3>
 <p>模板支持自定义的标签和过滤器。</br>
 标签的格式是<code>{% 标签 参数 %}</code></br>
 过滤器的格式是<code>{{ 变量或常量 | 过滤器 | 过滤器: 参数,参数 | 更多过滤器... }}</code></br></p>
@@ -619,9 +619,8 @@ http://dotliquidmarkup.org/</br></p>
 
 <p>刷新页面可以看到以下的效果:</br>
 <img alt="" src="../../img/template_tag_example.jpg" /></p>
-<h3 id="_5">更多的返回类型</h3>
-<p>上面介绍了<code>TemplateResult</code>，ZKWeb还提供了其他类型的结果。</br>
-ZKWeb核心框架中提供的返回类型有:</br></p>
+<h3 id="_5"><h2>更多的返回类型</h2></h3>
+<p>上面介绍了<code>TemplateResult</code>，ZKWeb还提供了其他类型的结果。</br></p>
 <ul>
 <li><code>FileResult(string path, DateTime? ifModifiedSince = null)</code></li>
 <li><code>ImageResult(Image image, ImageFormat format = null)</code></li>
@@ -632,7 +631,7 @@ ZKWeb核心框架中提供的返回类型有:</br></p>
 <li><code>TemplateResult(string path, object argument = null)</code></li>
 </ul>
 <p>如果需要返回其他类型可以自己编写继承<code>IActionResult</code>的类。</br></p>
-<h3 id="_6">获取请求参数</h3>
+<h3 id="_6"><h2>获取请求参数</h2></h3>
 <p>可以使用<code>HttpContextUtils.CurrentContext.Request</code>获取到请求对象并获取里面的参数。</br>
 目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
 获取请求参数的例子: </br></p>
@@ -642,12 +641,12 @@ ZKWeb核心框架中提供的返回类型有:</br></p>
 </pre></div>
 
 
-<h3 id="_7">重载处理函数</h3>
+<h3 id="_7"><h2>重载处理函数</h2></h3>
 <p>ZKWeb支持在一个插件中替换另一个插件的处理函数。</br>
 例如插件A定义了"example/a"，插件B也定义了同样路径的函数，ZKWeb会使用插件B中定义的函数。</br>
 这个功能可以用于编写自己的插件替换掉整个首页或登陆页面的处理函数。</br>
 也因为这个功能ZKWeb不会提示Action属性的路径有冲突，请编写时多加注意。</br></p>
-<h3 id="_8">重载模板</h3>
+<h3 id="_8"><h2>重载模板</h2></h3>
 <p>ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Django一样。</br>
 例如有以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br></p>
 <ul>
@@ -677,7 +676,7 @@ ZKWeb核心框架中提供的返回类型有:</br></p>
 </ul>
 <p>模板还可以通过<code>App_Data\templates</code>重载，结构和上面一样。</br>
 支持模板的重载可以让新的插件随意更换原有插件的网页内容，也可以提供一套用户编辑的系统编辑所有页面。</br></p>
-<h3 id="_9">动态内容</h3>
+<h3 id="_9"><h2>动态内容</h2></h3>
 <p>考虑到实现可视化编辑（动态拖拽和修改页面内容），ZKWeb提供了一套默认的动态内容系统。</br></p>
 <p>这套系统定义了以下的类型<br/></p>
 <ul>
@@ -694,7 +693,7 @@ ZKWeb核心框架中提供的返回类型有:</br></p>
 </ul>
 <p>区域Id全局唯一，请注意是否会产生冲突。</br>
 全局唯一的理由是，有的区域（例如网站头部）是整个网站共享的，这时只需要编辑这个区域就可以应用到所有页面。</br></p>
-<h3 id="_10">添加链接到导航栏</h3>
+<h3 id="_10"><h2>添加链接到导航栏</h2></h3>
 <p>在默认的插件中提供了一个导航栏区域，名称是<code>header_menubar</code>。</br>
 下面演示怎样添加链接到这个区域中。</br></p>
 <p>在<code>Plugin</code>类的<code>Plugin()</code>函数下添加以下代码:</br></p>
