@@ -3,6 +3,8 @@ var searchData=
   ['validators',['Validators',['../df/dbe/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_validators.html',1,'ZKWeb::Utils::Functions::RegexUtils']]],
   ['value',['Value',['../df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache.html#ae0d6b32cf01f1fd94564f8c434cd3965',1,'ZKWeb.Utils.Collections.LazyCache.Value()'],['../d8/d8d/interface_z_k_web_1_1_utils_1_1_functions_1_1_i_tree_node.html#ac5d46f60ac6bc84ef8f5e632b3f60f85',1,'ZKWeb.Utils.Functions.ITreeNode.Value()']]],
   ['variableinurlexpression',['VariableInUrlExpression',['../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a43058ae88154d65b0ebd60cf8ae15683',1,'ZKWeb::Templating::TemplateTags::Fetch']]],
+  ['version',['Version',['../da/d1d/class_z_k_web_1_1_application.html#ad10e987872bf133a50779224651145e6',1,'ZKWeb.Application.Version()'],['../d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#ac4640feea30cd17ddddfc466d1c83c9f',1,'ZKWeb.Plugin.PluginInfo.Version()']]],
+  ['versionobject',['VersionObject',['../d0/d01/class_z_k_web_1_1_plugin_1_1_plugin_info_extensions.html#abc9215b0e0e98ece6177977ce009377f',1,'ZKWeb::Plugin::PluginInfoExtensions']]],
   ['visitallnodes',['VisitAllNodes',['../df/d1d/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_tree_node_extensions_test.html#a6a1e5a07e5103e98d249906189dec385',1,'ZKWeb::Utils::Tests::Extensions::ITreeNodeExtensionsTest']]],
   ['visitallnodes_3c_20t_20_3e',['VisitAllNodes&lt; T &gt;',['../d8/df7/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_tree_node_extensions.html#ada3f3257dfe6cd724ce38f8c06acf4d9',1,'ZKWeb::Utils::Extensions::ITreeNodeExtensions']]]
 ];

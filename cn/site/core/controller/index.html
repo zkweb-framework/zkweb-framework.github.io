@@ -644,8 +644,13 @@ http://dotliquidmarkup.org/</br></p>
 <h3 id="_7"><h2>重载处理函数</h2></h3>
 <p>ZKWeb支持在一个插件中替换另一个插件的处理函数。</br>
 例如插件A定义了"example/a"，插件B也定义了同样路径的函数，ZKWeb会使用插件B中定义的函数。</br>
-这个功能可以用于编写自己的插件替换掉整个首页或登陆页面的处理函数。</br>
-也因为这个功能ZKWeb不会提示Action属性的路径有冲突，请编写时多加注意。</br></p>
+这个功能可以用于编写自己的插件替换掉整个首页或登陆页面。</br>
+重载处理函数时需要指定"OverrideExists"参数，否则会提示冲突。</br></p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/a&quot;, OverrideExists = true)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">ExampleAInPluginB</span><span class="p">()</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+</pre></div>
+
+
 <h3 id="_8"><h2>重载模板</h2></h3>
 <p>ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Django一样。</br>
 例如有以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br></p>

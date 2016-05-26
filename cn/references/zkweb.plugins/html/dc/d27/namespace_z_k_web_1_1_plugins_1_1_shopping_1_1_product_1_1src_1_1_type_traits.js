@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits =
+[
+    [ "ProductStateTrait", "d6/d04/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_state_trait.html", "d6/d04/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_state_trait" ],
+    [ "ProductTypeTrait", "da/d0b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_type_trait.html", "da/d0b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_type_trait" ]
+];

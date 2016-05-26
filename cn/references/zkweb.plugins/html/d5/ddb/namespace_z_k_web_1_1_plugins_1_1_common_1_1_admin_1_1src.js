@@ -9,6 +9,7 @@ var namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src =
     [ "ListItemProviders", "df/de0/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_list_item_providers.html", "df/de0/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_list_item_providers" ],
     [ "Managers", "d6/dd1/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers.html", "d6/dd1/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers" ],
     [ "Model", "d1/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model.html", "d1/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model" ],
+    [ "Scaffolding", "d9/d95/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding.html", "d9/d95/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding" ],
     [ "Translates", "da/d7d/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_translates.html", "da/d7d/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_translates" ],
     [ "Plugin", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin.html", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin" ]
 ];

@@ -97,6 +97,7 @@ var hierarchy =
     [ "ZKWeb.Web.Interfaces.IHttpRequestHandler", "df/d8e/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_handler.html", [
       [ "ZKWeb.Web.ControllerManager", "da/d90/class_z_k_web_1_1_web_1_1_controller_manager.html", null ]
     ] ],
+    [ "ZKWeb.Web.Interfaces.IHttpRequestPreHandler", "de/def/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_pre_handler.html", null ],
     [ "ZKWeb.Localize.Interfaces.ILanguage", "d8/d3a/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_language.html", null ],
     [ "ILiquidizable", null, [
       [ "ZKWeb.Localize.T", "d3/d0e/struct_z_k_web_1_1_localize_1_1_t.html", null ]

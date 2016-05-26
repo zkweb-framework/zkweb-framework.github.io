@@ -138,9 +138,9 @@ session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 
 - Font Awesome 4.5.0
 
-### <h2>表格构建器</h2>
+### <h2>Ajax表格构建器</h2>
 
-表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
+Ajax表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
 以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
 表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/>
 
@@ -161,8 +161,7 @@ public IActionResult Table() {
 public IActionResult TableSearch() {
 	var json = HttpContextUtils.CurrentContext.Request.Get<string>("json");
 	var request = AjaxTableSearchRequest.FromJson(json);
-	var response = AjaxTableSearchResponse.FromRequest(
-		request, new[] { new ExampleTableCallback() });
+	var response = request.BuildResponseFromDatabase(new[] { new ExampleAjaxTableCallback() });
 	return new JsonResult(response);
 }
 ```
@@ -180,12 +179,12 @@ public IActionResult TableSearch() {
 {% include common.base/footer.html %}
 ```
 
-添加`Example\src\AjaxTableCallbacks\ExampleTableCallback.cs`，内容如下
+添加`Example\src\AjaxTableCallbacks\ExampleAjaxTableCallback.cs`，内容如下
 ``` csharp
 /// <summary>
 /// 示例的表格搜索回调
 /// </summary>
-public class ExampleTableCallback : IAjaxTableCallback<ExampleTable> {
+public class ExampleAjaxTableCallback : IAjaxTableCallback<ExampleTable> {
 	/// <summary>
 	/// 构建表格时的处理，这里不使用
 	/// </summary>
@@ -243,6 +242,83 @@ public class ExampleTableCallback : IAjaxTableCallback<ExampleTable> {
 
 默认表格的样式在`static/common.base.tmpl/ajaxTable.tmpl`中，<br/>
 如果需要使用自己的样式可以修改`table.Template`。<br/>
+
+### <h2>静态表格构建器</h2>
+
+静态表格构建器和Ajax表格器不同的时，构建的内容需要使用模板绑定并静态显示，不支持通过Ajax更新。<br/>
+静态表格的参数来源一般来自url。<br/>
+
+在`ExampleController`下添加以下内容
+``` csharp
+[Action("example/static_table")]
+public IActionResult StaticTable() {
+	var request = StaticTableSearchRequest.FromHttpRequest();
+	var response = request.BuildResponseFromDatabase(new[] { new ExampleStaticTableCallback() });
+	return new TemplateResult("example/example_static_table.html", new { response });
+}
+```
+
+添加`Example\templates\example\example_static_table.html`，内容如下
+``` html
+{% use_title "Example Table" %}
+{% include common.base/header.html %}
+
+<div class="portlet">
+	<div>
+		{% for row in response.Rows %}
+		<div>
+			<a>{{ row.Name }}</a>
+			<span>{{ row.CreateTime }}</span>
+		</div>
+		{% endfor %}
+	</div>
+	{% url_pagination response.Pagination %}
+</div>
+
+{% include common.base/footer.html %}
+```
+
+添加`Example\src\StaticTableCallbacks\ExampleStaticTableCallback.cs`，内容如下
+``` csharp
+/// <summary>
+/// 示例的表格搜索回调
+/// </summary>
+public class ExampleStaticTableCallback : IStaticTableCallback<ExampleTable> {
+	/// <summary>
+	/// 查询数据
+	/// </summary>
+	public void OnQuery(
+		StaticTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+		if (!string.IsNullOrEmpty(request.Keyword)) {
+			query = query.Where(q => q.Name.Contains(request.Keyword));
+		}
+		query = query.Where(q => !q.Deleted);
+	}
+
+	/// <summary>
+	/// 排序数据
+	/// </summary>
+	public void OnSort(
+		StaticTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+		query = query.OrderByDescending(q => q.Id);
+	}
+
+	/// <summary>
+	/// 选择数据
+	/// </summary>
+	public void OnSelect(
+		StaticTableSearchRequest request, List<KeyValuePair<ExampleTable, Dictionary<string, object>>> pairs) {
+		foreach (var pair in pairs) {
+			pair.Value["Id"] = pair.Key.Id;
+			pair.Value["Name"] = pair.Key.Name;
+			pair.Value["CreateTime"] = pair.Key.CreateTime.ToClientTimeString();
+		}
+	}
+}
+```
+
+效果<br/>
+![](../img/static_table.jpg)
 
 ### <h2>表单构建器</h2>
 
@@ -397,3 +473,24 @@ UnitOfWork.Read(context => {
 
 - 客户端传入的Cookies (LocaleUtils.TimeZoneKey: "ZKWeb.TimeZone")
 - `LocaleSettings`中的默认时区
+
+### <h2>特征类</h2>
+
+特征类`Trait`用于在外部标记指定类型的某些特征，但不需要修改原有的类型。<br/>
+这个插件提供了以下的特征类<br/>
+
+- EntityTrait (主键名称和类型)
+- RecyclableTrait (是否可回收)
+
+使用特征类的例子<br/>
+``` csharp
+var entityTrait = EntityTrait.For<TData>();
+var expression = ExpressionUtils.MakeMemberEqualiventExpression<TData>(trait.PrimaryKey, id);
+```
+
+提供自定义特征类需要在插件初始化时注册到IoC容器<br/>
+``` csharp
+Application.Ioc.RegisterInstance(
+	new EntityTrait() { PrimaryKey = "Id", PrimaryKeyType = typeof(Guid) },
+	serviceKey: typeof(ExampleTableUseGuidPrimaryKey));
+```

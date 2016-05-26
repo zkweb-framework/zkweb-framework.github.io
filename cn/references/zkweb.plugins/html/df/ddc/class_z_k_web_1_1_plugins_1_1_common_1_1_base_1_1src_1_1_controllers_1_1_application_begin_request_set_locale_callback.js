@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers_1_1_application_begin_request_set_locale_callback =
-[
-    [ "OnRequest", "df/ddc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers_1_1_application_begin_request_set_locale_callback.html#a8456c7e2cd82e2dc182192fd91db52e3", null ]
-];

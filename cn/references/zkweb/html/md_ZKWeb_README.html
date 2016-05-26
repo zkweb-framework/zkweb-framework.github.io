@@ -114,9 +114,12 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 <li>api generation (planned)</li>
 <li>visual page editor (planned)</li>
 </ul>
-<p>State: 0.9.1 alpha<br />
- Plugins: <a href="http://github.com/zkweb-framework/ZKWeb.Plugins">http://github.com/zkweb-framework/ZKWeb.Plugins</a><br />
- Document: <a href="http://zkweb-framework.github.io">http://zkweb-framework.github.io</a> (Chinese only now)</p>
+<p>Version: 0.9.3 testing (backward compatibility is not provided yet)<br />
+</p>
+<p>Plugins: <a href="http://github.com/zkweb-framework/ZKWeb.Plugins">http://github.com/zkweb-framework/ZKWeb.Plugins</a><br />
+ Document: <a href="http://zkweb-framework.github.io">http://zkweb-framework.github.io</a> (Chinese only)<br />
+ References: <a href="http://zkweb-framework.github.io/cn/references/zkweb/html/annotated.html">http://zkweb-framework.github.io/cn/references/zkweb/html/annotated.html</a><br />
+</p>
 <p>Demo Website: <a href="http://zkwebsite.com/admin">http://zkwebsite.com/admin</a><br />
  Demo Account: demo 123456</p>
 <p>This framework is inspired by django<br />
@@ -127,41 +130,35 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
  If you have any license issue please contact <a href="#" onclick="location.href='mai'+'lto:'+'303'+'24'+'815'+'3@'+'qq.'+'co'+'m'; return false;">30324<span style="display: none;">.nosp@m.</span>8153<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>.<br />
 </p>
 <h1>Fast Help:</h1>
-<p>a. How to run? </p><pre class="fragment">Download ZKWeb and ZKWeb.Plugins from github,
-Put ZKWeb and ZKWeb.Plugins in same folder,
-Edit config.json under ZKWeb\App_Data change Database and ConnectionString
-Example for mssql
-    "Database": "mssql",
-    "ConnectionString": "Server=127.0.0.1;Database=test_db;User Id=test_user;Password=123456;",
-Example for postgresql
-    "Database": "postgresql",
-    "ConnectionString": "Server=127.0.0.1;Port=5432;Database=test_db;User Id=test_user;Password=123456;",
-Example for sqlite
-    "Database": "sqlite",
-    "ConnectionString": "Data Source={{App_Data}}\test.db;Version=3;New=True;",
-Example for mysql
-    "Database": "mysql",
-    "ConnectionString": "Server=127.0.0.1;Port=3306;Database=test_db;User Id=test_user;Password=123456;",
-Once database configuration completed, you can run ZKWeb project from visual studio.
-</pre><p>b. How to add plugin? </p><pre class="fragment">Add folder "Example" under "ZKWeb.Plugins" 
-Plugin folder struction:
-    Example
-        bin: compiled assembly
-        src: source files for automatic compilation in developement
-        static: static files
-        template: html templates
-Create "ExampleController.cs" under "Example\src" 
-    [ExportMany]
-    public class ExampleController : IController {
-            [Action("example")]
-            public IActionResult Example() {
-                return new TemplateResult("example/test.html", new { message = "hello world" });
-            }
-    }
-Create "test.html" under "Example\template\example"
-    &lt;div&gt;{{ message }}&lt;/div&gt;
-Edit "ZKWeb\App_Data\config.json", add "Example" to "Plugins" list
-Open browser and visit http://localhost:port/example</pre> </div></div><!-- contents -->
+<p>a. How to run?</p>
+<ul>
+<li>Download <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins from github,</li>
+<li>Put <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins in same folder,</li>
+<li>Edit config.json under <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> change Database and ConnectionString<ul>
+<li>Example for mssql ``` "Database": "mssql", "ConnectionString": "Server=127.0.0.1;Database=test_db;User Id=test_user;Password=123456;", ```</li>
+<li>Example for postgresql ``` "Database": "postgresql", "ConnectionString": "Server=127.0.0.1;Port=5432;Database=test_db;User Id=test_user;Password=123456;", ```</li>
+<li>Example for sqlite ``` "Database": "sqlite", "ConnectionString": "Data Source={{App_Data}}\test.db;Version=3;New=True;", ```</li>
+<li>Example for mysql ``` "Database": "mysql", "ConnectionString": "Server=127.0.0.1;Port=3306;Database=test_db;User Id=test_user;Password=123456;", ```</li>
+</ul>
+</li>
+<li>Once database configuration completed, you can run <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> project from visual studio.</li>
+</ul>
+<p>b. How to add a new plugin?</p>
+<ul>
+<li>Add folder "Example" under "ZKWeb.Plugins"</li>
+<li><p class="startli">Plugin folder struction:</p>
+<p class="startli">``` Example bin: compiled assembly src: source files for automatic compilation in developement static: static files template: html templates ```</p>
+</li>
+<li><p class="startli">Create "ExampleController.cs" under "Example\src"</p>
+<p class="startli">``` csharp [ExportMany] public class ExampleController : IController { [Action("example")] public IActionResult Example() { return new TemplateResult("example/test.html", new { message = "hello world" }); } } ```</p>
+</li>
+<li><p class="startli">Create "test.html" under "Example\template\example"</p>
+<p class="startli">``` html </p><div>{{ message }}</div><p> ```</p>
+</li>
+<li>Edit "ZKWeb\App_Data\config.json", add "Example" to "Plugins" list</li>
+<li>Open browser and visit <a href="http://localhost:port/example">http://localhost:port/example</a> </li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

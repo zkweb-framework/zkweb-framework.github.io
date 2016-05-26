@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getid',['GetId',['../d9/d76/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_list_item_from_data.html#a47942b0bd1fc31709e7d3be1662f2d19',1,'ZKWeb::Plugins::Common::Base::src::Model::ListItemFromData']]]
+  ['frontpagelogopath',['FrontPageLogoPath',['../d8/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_logo_manager.html#a613b2233418ab92a059074a31de980b3',1,'ZKWeb::Plugins::Common::Admin::src::Managers::LogoManager']]]
 ];

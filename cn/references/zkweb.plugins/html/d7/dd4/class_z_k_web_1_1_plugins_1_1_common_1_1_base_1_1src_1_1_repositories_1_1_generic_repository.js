@@ -10,7 +10,5 @@ var class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_ge
     [ "GetById", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#ac31b82ec67b23c1119628e7be61ae619", null ],
     [ "GetMany", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a332837f4acf084d8ca9f4ce4fa006507", null ],
     [ "Save", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#afab6adb423e33b1fcfd54feeeff9a076", null ],
-    [ "Context", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a30484d6c7d454b26a9019fe1cded8034", null ],
-    [ "IdMember", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a56edb8620de53eee8a1304492e76c688", null ],
-    [ "IdType", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#aa509f68881cd7bf1fed2196b7de27bd7", null ]
+    [ "Context", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a30484d6c7d454b26a9019fe1cded8034", null ]
 ];

@@ -12,6 +12,7 @@ var searchData=
   ['ienumerableextensionstest',['IEnumerableExtensionsTest',['../db/df1/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_enumerable_extensions_test.html',1,'ZKWeb::Utils::Tests::Extensions']]],
   ['ihttperrorhandler',['IHttpErrorHandler',['../d7/d79/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_error_handler.html',1,'ZKWeb::Web::Interfaces']]],
   ['ihttprequesthandler',['IHttpRequestHandler',['../df/d8e/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_handler.html',1,'ZKWeb::Web::Interfaces']]],
+  ['ihttprequestprehandler',['IHttpRequestPreHandler',['../de/def/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_pre_handler.html',1,'ZKWeb::Web::Interfaces']]],
   ['ilanguage',['ILanguage',['../d8/d3a/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_language.html',1,'ZKWeb::Localize::Interfaces']]],
   ['imageextensions',['ImageExtensions',['../de/dcb/class_z_k_web_1_1_utils_1_1_extensions_1_1_image_extensions.html',1,'ZKWeb::Utils::Extensions']]],
   ['imageextensionstest',['ImageExtensionsTest',['../da/d1f/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_image_extensions_test.html',1,'ZKWeb::Utils::Tests::Extensions']]],

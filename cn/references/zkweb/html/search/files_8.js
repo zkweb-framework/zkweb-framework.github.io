@@ -12,6 +12,7 @@ var searchData=
   ['ienumerableextensionstest_2ecs',['IEnumerableExtensionsTest.cs',['../d0/df2/_i_enumerable_extensions_test_8cs.html',1,'']]],
   ['ihttperrorhandler_2ecs',['IHttpErrorHandler.cs',['../db/d97/_i_http_error_handler_8cs.html',1,'']]],
   ['ihttprequesthandler_2ecs',['IHttpRequestHandler.cs',['../dd/d10/_i_http_request_handler_8cs.html',1,'']]],
+  ['ihttprequestprehandler_2ecs',['IHttpRequestPreHandler.cs',['../d4/db5/_i_http_request_pre_handler_8cs.html',1,'']]],
   ['ilanguage_2ecs',['ILanguage.cs',['../d4/d30/_i_language_8cs.html',1,'']]],
   ['imageextensions_2ecs',['ImageExtensions.cs',['../df/dd2/_image_extensions_8cs.html',1,'']]],
   ['imageextensionstest_2ecs',['ImageExtensionsTest.cs',['../de/de4/_image_extensions_test_8cs.html',1,'']]],

@@ -5,6 +5,7 @@ var searchData=
   ['actionattribute',['ActionAttribute',['../d7/d17/class_z_k_web_1_1_web_1_1_interfaces_1_1_action_attribute.html',1,'ZKWeb::Web::Interfaces']]],
   ['actionattribute',['ActionAttribute',['../d7/d17/class_z_k_web_1_1_web_1_1_interfaces_1_1_action_attribute.html#ace799f5ba40da7d9a29d2f313bbdaff5',1,'ZKWeb::Web::Interfaces::ActionAttribute']]],
   ['actionattribute_2ecs',['ActionAttribute.cs',['../d2/d66/_action_attribute_8cs.html',1,'']]],
+  ['actions',['Actions',['../da/d90/class_z_k_web_1_1_web_1_1_controller_manager.html#ae7cc01ab5672889ea577963f0593f7d1',1,'ZKWeb::Web::ControllerManager']]],
   ['add',['Add',['../d7/d67/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_extensions.html#af9fafc0c41f6060e14e806636736db38',1,'ZKWeb::Templating::AreaSupport::TemplateAreaExtensions']]],
   ['addafter',['AddAfter',['../d7/d67/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_extensions.html#adbddb58bf3b1ff64061c00f3398e433a',1,'ZKWeb.Templating.AreaSupport.TemplateAreaExtensions.AddAfter()'],['../d2/d69/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_list_extensions.html#a8e25bc0b031ef6e99a74e8f3f02d16ea',1,'ZKWeb.Utils.Tests.Extensions.ListExtensions.AddAfter()']]],
   ['addafter_3c_20t_20_3e',['AddAfter&lt; T &gt;',['../dc/d59/class_z_k_web_1_1_utils_1_1_extensions_1_1_list_extensions.html#a9c92b1016f73a4b74416fca0d8506dad',1,'ZKWeb::Utils::Extensions::ListExtensions']]],
@@ -27,8 +28,8 @@ var searchData=
   ['allteststartinginfo_2ecs',['AllTestStartingInfo.cs',['../d9/de6/_all_test_starting_info_8cs.html',1,'']]],
   ['anonymousid',['anonymousID',['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a468b92c22b21396699202d9913e46703',1,'ZKWeb.Utils.Collections.HttpRequestMock.anonymousID()'],['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#af94068e12b0be4e4031854addfe50497',1,'ZKWeb.Utils.Collections.HttpRequestMock.AnonymousID()']]],
   ['appdatadirectory',['AppDataDirectory',['../d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#ac143991567c7e7b3f3a4c71ba1d009fb',1,'ZKWeb::Server::PathConfig']]],
-  ['application',['Application',['../da/d1d/class_z_k_web_1_1_application.html',1,'ZKWeb']]],
   ['application',['application',['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#afdf00f2e42096050b3e144346c4c90f7',1,'ZKWeb.Utils.Collections.HttpContextMock.application()'],['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a7d6e2378be06f2bea7afd15c54992639',1,'ZKWeb.Utils.Collections.HttpContextMock.Application()']]],
+  ['application',['Application',['../da/d1d/class_z_k_web_1_1_application.html',1,'ZKWeb']]],
   ['application_5fbeginrequest',['Application_BeginRequest',['../da/d1d/class_z_k_web_1_1_application.html#a1b6d6cd6075b5bd5e8c78663e7afb7cb',1,'ZKWeb::Application']]],
   ['application_5ferror',['Application_Error',['../da/d1d/class_z_k_web_1_1_application.html#a52ea12b69bc1a4d2aa379cd3e1978f88',1,'ZKWeb::Application']]],
   ['application_5fstart',['Application_Start',['../da/d1d/class_z_k_web_1_1_application.html#a3eab3e914bffdb8617ab86f6b97bd278',1,'ZKWeb::Application']]],
@@ -55,8 +56,8 @@ var searchData=
   ['assertexception_2ecs',['AssertException.cs',['../d2/dec/_assert_exception_8cs.html',1,'']]],
   ['assertpassedexception',['AssertPassedException',['../d6/d94/class_z_k_web_1_1_utils_1_1_unit_test_1_1_assert_passed_exception.html',1,'ZKWeb::Utils::UnitTest']]],
   ['assertpassedexception_2ecs',['AssertPassedException.cs',['../d8/dd8/_assert_passed_exception_8cs.html',1,'']]],
-  ['assertskipedexception',['AssertSkipedException',['../d3/dd8/class_z_k_web_1_1_utils_1_1_unit_test_1_1_assert_skiped_exception.html',1,'ZKWeb::Utils::UnitTest']]],
   ['assertskipedexception',['AssertSkipedException',['../d3/dd8/class_z_k_web_1_1_utils_1_1_unit_test_1_1_assert_skiped_exception.html#a0af27ba5e7253ef2838e929b7956923f',1,'ZKWeb::Utils::UnitTest::AssertSkipedException']]],
+  ['assertskipedexception',['AssertSkipedException',['../d3/dd8/class_z_k_web_1_1_utils_1_1_unit_test_1_1_assert_skiped_exception.html',1,'ZKWeb::Utils::UnitTest']]],
   ['assertskipedexception_2ecs',['AssertSkipedException.cs',['../d0/d37/_assert_skiped_exception_8cs.html',1,'']]],
   ['asyncpreloadmode',['asyncPreloadMode',['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a716e3579fb3dc3655de07192a1d20ed0',1,'ZKWeb.Utils.Collections.HttpContextMock.asyncPreloadMode()'],['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a90f7b606148abd1068d0f88682153ba8',1,'ZKWeb.Utils.Collections.HttpContextMock.AsyncPreloadMode()']]]
 ];

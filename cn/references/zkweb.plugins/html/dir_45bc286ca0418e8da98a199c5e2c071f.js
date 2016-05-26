@@ -1,8 +1,5 @@
 var dir_45bc286ca0418e8da98a199c5e2c071f =
 [
-    [ "AdminApp.cs", "d5/d9a/_admin_app_8cs.html", [
-      [ "AdminApp", "dd/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_admin_app.html", "dd/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_admin_app" ]
-    ] ],
     [ "IAdminAppBuilder.cs", "dc/ddb/_i_admin_app_builder_8cs.html", [
       [ "IAdminAppBuilder", "d4/d4a/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app_builder.html", "d4/d4a/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app_builder" ]
     ] ],

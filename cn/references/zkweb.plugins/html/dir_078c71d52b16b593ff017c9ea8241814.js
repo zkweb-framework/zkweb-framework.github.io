@@ -21,7 +21,9 @@ var dir_078c71d52b16b593ff017c9ea8241814 =
     [ "ProductSalesInfoDisplayFields", "dir_51ee5d541129e1e951e41abcc3c9b41c.html", "dir_51ee5d541129e1e951e41abcc3c9b41c" ],
     [ "ProductStates", "dir_701804e81dd8b38abf014e774d513237.html", "dir_701804e81dd8b38abf014e774d513237" ],
     [ "ProductTypes", "dir_77972e41c8d711acbe2a56e6bdefbd1a.html", "dir_77972e41c8d711acbe2a56e6bdefbd1a" ],
+    [ "StaticTableCallbacks", "dir_b97f52bc284e6f594fca02b339e0c2df.html", "dir_b97f52bc284e6f594fca02b339e0c2df" ],
     [ "Translates", "dir_dd2a078d4f33dd5a5ec947fe74e91d8d.html", "dir_dd2a078d4f33dd5a5ec947fe74e91d8d" ],
+    [ "TypeTraits", "dir_9233b4f5b16824c4b5493d244165c667.html", "dir_9233b4f5b16824c4b5493d244165c667" ],
     [ "Plugin.cs", "df/dc4/_shopping_8_product_2src_2_plugin_8cs.html", [
       [ "Plugin", "d1/d88/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_plugin.html", "d1/d88/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_plugin" ]
     ] ]

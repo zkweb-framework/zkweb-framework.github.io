@@ -4,6 +4,8 @@ var class_z_k_web_1_1_plugin_1_1_plugin_info =
     [ "Dependencies", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#a7552766becd2918a36ebe7eac42c2e82", null ],
     [ "Description", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#afdb8b91ba8d0fbc8208e7eac621b06ec", null ],
     [ "Directory", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#af4a46952debaff65764f5c201933d4c4", null ],
+    [ "Extra", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#aeea1ab3abff8904006a0c89abb77170a", null ],
     [ "Name", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#a4cd204c7a57dfbe5526f43a48024ee10", null ],
-    [ "References", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#ad92f410e4cd28e0561b27b8d9b1f3a8e", null ]
+    [ "References", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#ad92f410e4cd28e0561b27b8d9b1f3a8e", null ],
+    [ "Version", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#ac4640feea30cd17ddddfc466d1c83c9f", null ]
 ];

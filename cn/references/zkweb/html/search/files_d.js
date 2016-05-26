@@ -8,6 +8,7 @@ var searchData=
   ['pathutilstest_2ecs',['PathUtilsTest.cs',['../db/d90/_path_utils_test_8cs.html',1,'']]],
   ['plainresult_2ecs',['PlainResult.cs',['../d1/d53/_plain_result_8cs.html',1,'']]],
   ['plugininfo_2ecs',['PluginInfo.cs',['../df/d50/_plugin_info_8cs.html',1,'']]],
+  ['plugininfoextensions_2ecs',['PluginInfoExtensions.cs',['../de/db4/_plugin_info_extensions_8cs.html',1,'']]],
   ['pluginmanager_2ecs',['PluginManager.cs',['../d9/dad/_plugin_manager_8cs.html',1,'']]],
   ['pluginreloader_2ecs',['PluginReloader.cs',['../d6/da7/_plugin_reloader_8cs.html',1,'']]],
   ['program_2ecs',['Program.cs',['../dd/d5c/_program_8cs.html',1,'']]]

@@ -110,8 +110,12 @@ var file = request.Files[0];
 
 ZKWeb支持在一个插件中替换另一个插件的处理函数。</br>
 例如插件A定义了"example/a"，插件B也定义了同样路径的函数，ZKWeb会使用插件B中定义的函数。</br>
-这个功能可以用于编写自己的插件替换掉整个首页或登陆页面的处理函数。</br>
-也因为这个功能ZKWeb不会提示Action属性的路径有冲突，请编写时多加注意。</br>
+这个功能可以用于编写自己的插件替换掉整个首页或登陆页面。</br>
+重载处理函数时需要指定"OverrideExists"参数，否则会提示冲突。</br>
+``` csharp
+[Action("example/a", OverrideExists = true)]
+public IActionResult ExampleAInPluginB() { ... }
+```
 
 ### <h2>重载模板</h2>
 

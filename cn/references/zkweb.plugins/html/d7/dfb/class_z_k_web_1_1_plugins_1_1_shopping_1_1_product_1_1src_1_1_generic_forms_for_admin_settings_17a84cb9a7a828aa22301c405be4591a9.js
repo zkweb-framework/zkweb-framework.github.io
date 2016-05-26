@@ -1,0 +1,6 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9 =
+[
+    [ "OnBind", "d7/dfb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9.html#a34a8e14df94af039343ab24fbae2054e", null ],
+    [ "OnSubmit", "d7/dfb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9.html#a69a8b16e2a47d99d6154de22a51b7d74", null ],
+    [ "ProductsPerPage", "d7/dfb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9.html#ae9d3bab5a8ba292c629bc3be21929e64", null ]
+];

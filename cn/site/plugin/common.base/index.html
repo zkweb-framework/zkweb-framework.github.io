@@ -253,8 +253,14 @@
             </li>
           
             <li class="anchor">
-              <a title="表格构建器" href="#_5">
-                表格构建器
+              <a title="Ajax表格构建器" href="#ajax">
+                Ajax表格构建器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="静态表格构建器" href="#_5">
+                静态表格构建器
               </a>
             </li>
           
@@ -291,6 +297,12 @@
             <li class="anchor">
               <a title="语言时区处理器" href="#_11">
                 语言时区处理器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="特征类" href="#_12">
+                特征类
               </a>
             </li>
           
@@ -701,8 +713,8 @@
 <ul>
 <li>Font Awesome 4.5.0</li>
 </ul>
-<h3 id="_5"><h2>表格构建器</h2></h3>
-<p>表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
+<h3 id="ajax"><h2>Ajax表格构建器</h2></h3>
+<p>Ajax表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/>
 以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
 表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/></p>
 <p>在<code>ExampleController</code>下添加以下内容</p>
@@ -721,8 +733,7 @@
 <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TableSearch</span><span class="p">()</span> <span class="p">{</span>
     <span class="kt">var</span> <span class="n">json</span> <span class="p">=</span> <span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;json&quot;</span><span class="p">);</span>
     <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">AjaxTableSearchRequest</span><span class="p">.</span><span class="n">FromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
-    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">AjaxTableSearchResponse</span><span class="p">.</span><span class="n">FromRequest</span><span class="p">(</span>
-        <span class="n">request</span><span class="p">,</span> <span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleTableCallback</span><span class="p">()</span> <span class="p">});</span>
+    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">BuildResponseFromDatabase</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleAjaxTableCallback</span><span class="p">()</span> <span class="p">});</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
@@ -741,11 +752,11 @@
 </pre></div>
 
 
-<p>添加<code>Example\src\AjaxTableCallbacks\ExampleTableCallback.cs</code>，内容如下</p>
+<p>添加<code>Example\src\AjaxTableCallbacks\ExampleAjaxTableCallback.cs</code>，内容如下</p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
 <span class="c1">/// 示例的表格搜索回调</span>
 <span class="c1">/// &lt;/summary&gt;</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleAjaxTableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
     <span class="c1">/// &lt;summary&gt;</span>
     <span class="c1">/// 构建表格时的处理，这里不使用</span>
     <span class="c1">/// &lt;/summary&gt;</span>
@@ -803,6 +814,80 @@
 使用表格回调的原因是搜索时可以支持多个回调，这样易于修改其他插件的表格内容。<br/></p>
 <p>默认表格的样式在<code>static/common.base.tmpl/ajaxTable.tmpl</code>中，<br/>
 如果需要使用自己的样式可以修改<code>table.Template</code>。<br/></p>
+<h3 id="_5"><h2>静态表格构建器</h2></h3>
+<p>静态表格构建器和Ajax表格器不同的时，构建的内容需要使用模板绑定并静态显示，不支持通过Ajax更新。<br/>
+静态表格的参数来源一般来自url。<br/></p>
+<p>在<code>ExampleController</code>下添加以下内容</p>
+<div class="code"><pre><span></span><span class="na">[Action(&quot;example/static_table&quot;)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">StaticTable</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">StaticTableSearchRequest</span><span class="p">.</span><span class="n">FromHttpRequest</span><span class="p">();</span>
+    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">BuildResponseFromDatabase</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleStaticTableCallback</span><span class="p">()</span> <span class="p">});</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_static_table.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">response</span> <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加<code>Example\templates\example\example_static_table.html</code>，内容如下</p>
+<div class="code"><pre><span></span>{% use_title &quot;Example Table&quot; %}
+{% include common.base/header.html %}
+
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% for row in response.Rows %}
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>{{ row.Name }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{ row.CreateTime }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        {% endfor %}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    {% url_pagination response.Pagination %}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+{% include common.base/footer.html %}
+</pre></div>
+
+
+<p>添加<code>Example\src\StaticTableCallbacks\ExampleStaticTableCallback.cs</code>，内容如下</p>
+<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
+<span class="c1">/// 示例的表格搜索回调</span>
+<span class="c1">/// &lt;/summary&gt;</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleStaticTableCallback</span> <span class="p">:</span> <span class="n">IStaticTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 查询数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
+        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="p">!</span><span class="n">q</span><span class="p">.</span><span class="n">Deleted</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 排序数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSort</span><span class="p">(</span>
+        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">/// &lt;summary&gt;</span>
+    <span class="c1">/// 选择数据</span>
+    <span class="c1">/// &lt;/summary&gt;</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
+        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>效果<br/>
+<img alt="" src="../../img/static_table.jpg" /></p>
 <h3 id="_6"><h2>表单构建器</h2></h3>
 <p>表单构建器可以构建常用的表单，并支持多种表单字段和客户端+服务端验证。<br/>
 默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
@@ -946,6 +1031,24 @@
 <li>客户端传入的Cookies (LocaleUtils.TimeZoneKey: "ZKWeb.TimeZone")</li>
 <li><code>LocaleSettings</code>中的默认时区</li>
 </ul>
+<h3 id="_12"><h2>特征类</h2></h3>
+<p>特征类<code>Trait</code>用于在外部标记指定类型的某些特征，但不需要修改原有的类型。<br/>
+这个插件提供了以下的特征类<br/></p>
+<ul>
+<li>EntityTrait (主键名称和类型)</li>
+<li>RecyclableTrait (是否可回收)</li>
+</ul>
+<p>使用特征类的例子<br/></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">entityTrait</span> <span class="p">=</span> <span class="n">EntityTrait</span><span class="p">.</span><span class="n">For</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">expression</span> <span class="p">=</span> <span class="n">ExpressionUtils</span><span class="p">.</span><span class="n">MakeMemberEqualiventExpression</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;(</span><span class="n">trait</span><span class="p">.</span><span class="n">PrimaryKey</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
+</pre></div>
+
+
+<p>提供自定义特征类需要在插件初始化时注册到IoC容器<br/></p>
+<div class="code"><pre><span></span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterInstance</span><span class="p">(</span>
+    <span class="k">new</span> <span class="nf">EntityTrait</span><span class="p">()</span> <span class="p">{</span> <span class="n">PrimaryKey</span> <span class="p">=</span> <span class="s">&quot;Id&quot;</span><span class="p">,</span> <span class="n">PrimaryKeyType</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Guid</span><span class="p">)</span> <span class="p">},</span>
+    <span class="n">serviceKey</span><span class="p">:</span> <span class="k">typeof</span><span class="p">(</span><span class="n">ExampleTableUseGuidPrimaryKey</span><span class="p">));</span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with

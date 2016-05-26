@@ -2,6 +2,7 @@ var searchData=
 [
   ['unitofwork',['UnitOfWork',['../d9/dcf/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_unit_of_work.html',1,'ZKWeb::Plugins::Common::Base::src::Repositories']]],
   ['unittestwebeventhandler',['UnitTestWebEventHandler',['../d7/db7/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_unit_test_event_handlers_1_1_unit_test_web_event_handler.html',1,'ZKWeb::Plugins::UnitTest::WebTester::src::UnitTestEventHandlers']]],
+  ['urlpagination',['UrlPagination',['../dc/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_url_pagination.html',1,'ZKWeb::Plugins::Common::Base::src::TemplateTags']]],
   ['us',['US',['../db/d7f/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_u_s.html',1,'ZKWeb::Plugins::Common::Region::src::Countries']]],
   ['usd',['USD',['../d5/dbf/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_currencies_1_1_u_s_d.html',1,'ZKWeb::Plugins::Common::Currency::src::Currencies']]],
   ['user',['User',['../dc/d39/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_database_1_1_user.html',1,'ZKWeb::Plugins::Common::Admin::src::Database']]],

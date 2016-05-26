@@ -18,6 +18,9 @@ var dir_0f8f6fbe255de788438b41f9eb475ff3 =
     [ "IHttpRequestHandler.cs", "dd/d10/_i_http_request_handler_8cs.html", [
       [ "IHttpRequestHandler", "df/d8e/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_handler.html", "df/d8e/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_handler" ]
     ] ],
+    [ "IHttpRequestPreHandler.cs", "d4/db5/_i_http_request_pre_handler_8cs.html", [
+      [ "IHttpRequestPreHandler", "de/def/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_pre_handler.html", "de/def/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_pre_handler" ]
+    ] ],
     [ "IWebsiteStartHandler.cs", "d6/d95/_i_website_start_handler_8cs.html", [
       [ "IWebsiteStartHandler", "d2/de4/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_website_start_handler.html", "d2/de4/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_website_start_handler" ]
     ] ]

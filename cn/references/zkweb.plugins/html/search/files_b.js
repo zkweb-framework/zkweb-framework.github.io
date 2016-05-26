@@ -18,5 +18,6 @@ var searchData=
   ['logisticsmanageapp_2ecs',['LogisticsManageApp.cs',['../dc/da7/_logistics_manage_app_8cs.html',1,'']]],
   ['logisticspriceruleseditor_2ecs',['LogisticsPriceRulesEditor.cs',['../d0/d78/_logistics_price_rules_editor_8cs.html',1,'']]],
   ['logisticspriceruleseditorattribute_2ecs',['LogisticsPriceRulesEditorAttribute.cs',['../df/d83/_logistics_price_rules_editor_attribute_8cs.html',1,'']]],
-  ['logisticstypelistitemprovider_2ecs',['LogisticsTypeListItemProvider.cs',['../d6/dbf/_logistics_type_list_item_provider_8cs.html',1,'']]]
+  ['logisticstypelistitemprovider_2ecs',['LogisticsTypeListItemProvider.cs',['../d6/dbf/_logistics_type_list_item_provider_8cs.html',1,'']]],
+  ['logomanager_2ecs',['LogoManager.cs',['../d9/d04/_logo_manager_8cs.html',1,'']]]
 ];

@@ -10,6 +10,6 @@ var searchData=
   ['formfieldattributes_2ecs',['FormFieldAttributes.cs',['../d6/d03/_form_field_attributes_8cs.html',1,'']]],
   ['formhtmlprovider_2ecs',['FormHtmlProvider.cs',['../d4/d9f/_form_html_provider_8cs.html',1,'']]],
   ['fr_2ecs',['FR.cs',['../d3/d44/_f_r_8cs.html',1,'']]],
-  ['french_2ecs',['French.cs',['../d0/d4b/_common_8_custom_translate_2src_2_custom_translators_2_french_8cs.html',1,'']]],
-  ['french_2ecs',['French.cs',['../dd/d93/_common_8_base_2src_2_languages_2_french_8cs.html',1,'']]]
+  ['french_2ecs',['French.cs',['../dd/d93/_common_8_base_2src_2_languages_2_french_8cs.html',1,'']]],
+  ['french_2ecs',['French.cs',['../d0/d4b/_common_8_custom_translate_2src_2_custom_translators_2_french_8cs.html',1,'']]]
 ];

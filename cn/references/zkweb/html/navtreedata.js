@@ -29,10 +29,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a3033bfe44e9ff02ca43ecac7a05ca08d",
-"d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a08ad0362ae2dcfdf7fccdd35b204a51a",
-"db/d6f/_translate_manager_8cs.html",
-"de/dfd/class_z_k_web_1_1_utils_1_1_extensions_1_1_http_response_base_extensions.html#a06d47517c586d360b028a340ade4abff"
+"d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a19b137e49a62001a26833ac9191c7ef0",
+"d7/d67/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_extensions.html#adbddb58bf3b1ff64061c00f3398e433a",
+"db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a43058ae88154d65b0ebd60cf8ae15683",
+"de/db4/_plugin_info_extensions_8cs.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

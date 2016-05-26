@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['dataeditformbuilder',['DataEditFormBuilder',['../dd/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_html_builder_1_1_data_edit_form_builder.html#a6b139603217fab9ff91f7651009c0f8d',1,'ZKWeb::Plugins::Common::Base::src::HtmlBuilder::DataEditFormBuilder']]],
+  ['dataeditformbuilder',['DataEditFormBuilder',['../d1/db0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_data_edit_form_builder.html#a79c56f4d5b80b3c74a5d83fdbabce8e5',1,'ZKWeb::Plugins::Common::Base::src::Scaffolding::DataEditFormBuilder']]],
   ['deepcopy',['DeepCopy',['../d5/db3/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_json_serialized_type.html#ad9f3004e094bb55f4cb96f842b52e6f1',1,'ZKWeb::Plugins::Common::Base::src::Model::JsonSerializedType']]],
   ['delete',['Delete',['../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a0be68e598a75f858aef0fad186ba7822',1,'ZKWeb::Plugins::Common::Base::src::Repositories::GenericRepository']]],
   ['deleteaction',['DeleteAction',['../d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html#a476e27d8a6d7648f09a72d9f8fb9aa1d',1,'ZKWeb::Plugins::Common::CustomTranslate::src::Scaffolding::CustomTranslator']]],

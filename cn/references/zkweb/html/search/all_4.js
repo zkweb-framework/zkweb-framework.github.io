@@ -28,5 +28,5 @@ var searchData=
   ['expressionutils_2ecs',['ExpressionUtils.cs',['../d5/df7/_expression_utils_8cs.html',1,'']]],
   ['expressionutilstest',['ExpressionUtilsTest',['../d7/d4f/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_expression_utils_test.html',1,'ZKWeb::Utils::Tests::Functions']]],
   ['expressionutilstest_2ecs',['ExpressionUtilsTest.cs',['../db/d07/_expression_utils_test_8cs.html',1,'']]],
-  ['extra',['Extra',['../d2/d72/class_z_k_web_1_1_server_1_1_website_config.html#af30c1cb064986b524ebcfd56d8f5a550',1,'ZKWeb::Server::WebsiteConfig']]]
+  ['extra',['Extra',['../d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html#aeea1ab3abff8904006a0c89abb77170a',1,'ZKWeb.Plugin.PluginInfo.Extra()'],['../d2/d72/class_z_k_web_1_1_server_1_1_website_config.html#af30c1cb064986b524ebcfd56d8f5a550',1,'ZKWeb.Server.WebsiteConfig.Extra()']]]
 ];

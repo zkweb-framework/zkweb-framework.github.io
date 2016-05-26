@@ -21,6 +21,8 @@ var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src =
     [ "ProductSalesInfoDisplayFields", "d8/d86/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields.html", "d8/d86/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields" ],
     [ "ProductStates", "d7/dde/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_states.html", "d7/dde/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_states" ],
     [ "ProductTypes", "d9/d26/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_types.html", "d9/d26/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_types" ],
+    [ "StaticTableCallbacks", "da/d04/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_static_table_callbacks.html", "da/d04/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_static_table_callbacks" ],
     [ "Translates", "dc/d7a/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_translates.html", "dc/d7a/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_translates" ],
+    [ "TypeTraits", "dc/d27/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits.html", "dc/d27/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits" ],
     [ "Plugin", "d1/d88/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_plugin.html", "d1/d88/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_plugin" ]
 ];

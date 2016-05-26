@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('d7/dd4/class_z_k_web_1_1_plugins_1_1_c
 </div><!--header-->
 <div class="contents">
 
-<p>通用的数据仓储  
+<p>通用的数据仓储 需要在创建后由外部指定数据库上下文，但不负责数据库上下文的提交和释放 注册这个类型到IoC容器时不可以使用单例，否则多线程下会出现问题  
  <a href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#details">更多...</a></p>
 <div class="dynheader">
 类 ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository&lt; TData &gt; 继承关系图:</div>
@@ -161,12 +161,6 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
-<tr class="memitem:a56edb8620de53eee8a1304492e76c688"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a56edb8620de53eee8a1304492e76c688">IdMember</a><code> [get]</code></td></tr>
-<tr class="memdesc:a56edb8620de53eee8a1304492e76c688"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id成员名称  <a href="#a56edb8620de53eee8a1304492e76c688">更多...</a><br /></td></tr>
-<tr class="separator:a56edb8620de53eee8a1304492e76c688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa509f68881cd7bf1fed2196b7de27bd7"><td class="memItemLeft" align="right" valign="top">virtual Type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#aa509f68881cd7bf1fed2196b7de27bd7">IdType</a><code> [get]</code></td></tr>
-<tr class="memdesc:aa509f68881cd7bf1fed2196b7de27bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Id成员类型  <a href="#aa509f68881cd7bf1fed2196b7de27bd7">更多...</a><br /></td></tr>
-<tr class="separator:aa509f68881cd7bf1fed2196b7de27bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30484d6c7d454b26a9019fe1cded8034"><td class="memItemLeft" align="right" valign="top">virtual DatabaseContext&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html#a30484d6c7d454b26a9019fe1cded8034">Context</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a30484d6c7d454b26a9019fe1cded8034"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库上下文，需要在创建后设置  <a href="#a30484d6c7d454b26a9019fe1cded8034">更多...</a><br /></td></tr>
 <tr class="separator:a30484d6c7d454b26a9019fe1cded8034"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,7 +170,7 @@ Public 成员函数</h2></td></tr>
 <tr class="separator:a375c8779e3225a9787d092265792153b inherit properties_interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_repository"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>通用的数据仓储 </p>
+<div class="textblock"><p>通用的数据仓储 需要在创建后由外部指定数据库上下文，但不负责数据库上下文的提交和释放 注册这个类型到IoC容器时不可以使用单例，否则多线程下会出现问题 </p>
 <div class="typeconstraint">
 <dl><dt><b>类型限制</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -562,50 +556,6 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>数据库上下文，需要在创建后设置 </p>
-
-</div>
-</div>
-<a class="anchor" id="a56edb8620de53eee8a1304492e76c688"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual string <a class="el" href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html">ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository</a>&lt; TData &gt;.IdMember</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Id成员名称 </p>
-
-</div>
-</div>
-<a class="anchor" id="aa509f68881cd7bf1fed2196b7de27bd7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual Type <a class="el" href="../../d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html">ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository</a>&lt; TData &gt;.IdType</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Id成员类型 </p>
 
 </div>
 </div>
