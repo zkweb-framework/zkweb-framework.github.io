@@ -1040,7 +1040,7 @@
 </ul>
 <p>使用特征类的例子<br/></p>
 <div class="code"><pre><span></span><span class="kt">var</span> <span class="n">entityTrait</span> <span class="p">=</span> <span class="n">EntityTrait</span><span class="p">.</span><span class="n">For</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;();</span>
-<span class="kt">var</span> <span class="n">expression</span> <span class="p">=</span> <span class="n">ExpressionUtils</span><span class="p">.</span><span class="n">MakeMemberEqualiventExpression</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;(</span><span class="n">trait</span><span class="p">.</span><span class="n">PrimaryKey</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">expression</span> <span class="p">=</span> <span class="n">ExpressionUtils</span><span class="p">.</span><span class="n">MakeMemberEqualiventExpression</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;(</span><span class="n">entityTrait</span><span class="p">.</span><span class="n">PrimaryKey</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
 </pre></div>
 
 

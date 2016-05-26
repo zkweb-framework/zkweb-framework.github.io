@@ -485,7 +485,7 @@ UnitOfWork.Read(context => {
 使用特征类的例子<br/>
 ``` csharp
 var entityTrait = EntityTrait.For<TData>();
-var expression = ExpressionUtils.MakeMemberEqualiventExpression<TData>(trait.PrimaryKey, id);
+var expression = ExpressionUtils.MakeMemberEqualiventExpression<TData>(entityTrait.PrimaryKey, id);
 ```
 
 提供自定义特征类需要在插件初始化时注册到IoC容器<br/>
