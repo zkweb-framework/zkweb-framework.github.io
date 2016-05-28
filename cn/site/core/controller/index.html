@@ -163,6 +163,15 @@
           
             
   <li>
+    <a class="" title="网站配置" href="../config/">
+      网站配置
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
     <a class="" title="插件系统" href="../plugin/">
       插件系统
     </a>
@@ -237,6 +246,12 @@
             <li class="anchor">
               <a title="添加链接到导航栏" href="#_10">
                 添加链接到导航栏
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="模板模块的单独缓存" href="#_11">
+                模板模块的单独缓存
               </a>
             </li>
           
@@ -708,7 +723,7 @@ http://dotliquidmarkup.org/</br></p>
 
 
 <p>创建<code>Example\templates\example.widgets\example_nav.widget</code>，并添加以下内容</p>
-<div class="code"><pre><span></span>{ &quot;Name&quot;: &quot;Example Navbar Item&quot; }
+<div class="code"><pre><span></span><span class="p">{</span> <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Navbar Item&quot;</span> <span class="p">}</span>
 </pre></div>
 
 
@@ -723,6 +738,21 @@ http://dotliquidmarkup.org/</br></p>
 <img alt="" src="../../img/add_navbar_project.jpg" /></p>
 <p>刷新页面可以看到以下的效果:</br>
 <img alt="" src="../../img/add_narbar.jpg" /></p>
+<h3 id="_11"><h2>模板模块的单独缓存</h2></h3>
+<p>模板模块支持设置单独的缓存时间和缓存策略，使用此功能可以大幅提高页面的响应速度。<br/>
+在widget文件指定缓存时间，例如<br/></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Navbar Item&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;CacheTime&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;Locale&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>这里的CacheTime表示该模块的描画结果会缓存15秒，CacheBy表示缓存的隔离策略。<br/>
+这里缓存会按当前的语言和时区来隔离。<br/>
+缓存的隔离策略可以通过实现<code>ICacheIsolationPolicy</code>接口添加。<br/>
+目前<code>Common.Base</code>插件提供了多种缓存的隔离策略，请参考该插件的文档。<br/></p>
           <aside class="copyright" role="note">
             
             Documentation built with

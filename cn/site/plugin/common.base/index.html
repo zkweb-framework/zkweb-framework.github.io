@@ -163,6 +163,15 @@
           
             
   <li>
+    <a class="" title="网站配置" href="../../core/config/">
+      网站配置
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
     <a class="" title="插件系统" href="../../core/plugin/">
       插件系统
     </a>
@@ -303,6 +312,12 @@
             <li class="anchor">
               <a title="特征类" href="#_12">
                 特征类
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="缓存的隔离策略" href="#_13">
+                缓存的隔离策略
               </a>
             </li>
           
@@ -1048,6 +1063,34 @@
 <div class="code"><pre><span></span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterInstance</span><span class="p">(</span>
     <span class="k">new</span> <span class="nf">EntityTrait</span><span class="p">()</span> <span class="p">{</span> <span class="n">PrimaryKey</span> <span class="p">=</span> <span class="s">&quot;Id&quot;</span><span class="p">,</span> <span class="n">PrimaryKeyType</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Guid</span><span class="p">)</span> <span class="p">},</span>
     <span class="n">serviceKey</span><span class="p">:</span> <span class="k">typeof</span><span class="p">(</span><span class="n">ExampleTableUseGuidPrimaryKey</span><span class="p">));</span>
+</pre></div>
+
+
+<h3 id="_13"><h2>缓存的隔离策略</h2></h3>
+<p>有的缓存内容需要按当前的用户或语言时区隔离，这些模式在这里称为"隔离策略"。<br/>
+核心框架提供了隔离策略的接口和使用了隔离策略的缓存类，这个插件提供了各种的隔离策略的实现。<br/></p>
+<ul>
+<li>Ident<br/>
+  按当前登录用户隔离缓存</li>
+<li>Locale<br/>
+  按当前语言和时区隔离缓存</li>
+<li>IdentAndLocale<br/>
+  按当前登录用户、语言和时区隔离缓存</li>
+<li>IdentAndLocaleAndUrl<br/>
+  按当前登录用户、语言、时区和Url隔离缓存</li>
+</ul>
+<p>使用<code>IsolatedMemoryCache</code>+缓存策略的例子</p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">cache</span> <span class="p">=</span> <span class="k">new</span> <span class="n">IsolatedMemoryCache</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;(</span><span class="s">&quot;Ident&quot;</span><span class="p">);</span>
+<span class="n">cache</span><span class="p">.</span><span class="n">Put</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span> <span class="c1">// 实际会使用(当前登录用户Id+&quot;Key&quot;)作为键值</span>
+</pre></div>
+
+
+<p>使用模板模块的描画缓存的例子，指定widget文件的内容</p>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;RecommendedProducts&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;CacheTime&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;IdentAndLocale&quot;</span>
+<span class="p">}</span>
 </pre></div>
           <aside class="copyright" role="note">
             

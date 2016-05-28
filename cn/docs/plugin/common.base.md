@@ -494,3 +494,32 @@ Application.Ioc.RegisterInstance(
 	new EntityTrait() { PrimaryKey = "Id", PrimaryKeyType = typeof(Guid) },
 	serviceKey: typeof(ExampleTableUseGuidPrimaryKey));
 ```
+
+### <h2>缓存的隔离策略</h2>
+
+有的缓存内容需要按当前的用户或语言时区隔离，这些模式在这里称为"隔离策略"。<br/>
+核心框架提供了隔离策略的接口和使用了隔离策略的缓存类，这个插件提供了各种的隔离策略的实现。<br/>
+
+- Ident<br/>
+  按当前登录用户隔离缓存
+- Locale<br/>
+  按当前语言和时区隔离缓存
+- IdentAndLocale<br/>
+  按当前登录用户、语言和时区隔离缓存
+- IdentAndLocaleAndUrl<br/>
+  按当前登录用户、语言、时区和Url隔离缓存
+
+使用`IsolatedMemoryCache`+缓存策略的例子
+``` csharp
+var cache = new IsolatedMemoryCache<string, int>("Ident");
+cache.Put("key", 1); // 实际会使用(当前登录用户Id+"Key")作为键值
+```
+
+使用模板模块的描画缓存的例子，指定widget文件的内容
+``` json
+{
+	"Name": "RecommendedProducts",
+	"CacheTime": 120,
+	"CacheBy": "IdentAndLocale"
+}
+```

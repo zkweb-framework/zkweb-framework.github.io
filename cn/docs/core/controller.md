@@ -168,7 +168,7 @@ areaManager.GetArea("header_menubar").DefaultWidgets.Add("example.widgets/exampl
 ```
 
 创建`Example\templates\example.widgets\example_nav.widget`，并添加以下内容
-```
+``` json
 { "Name": "Example Navbar Item" }
 ```
 
@@ -184,3 +184,20 @@ areaManager.GetArea("header_menubar").DefaultWidgets.Add("example.widgets/exampl
 
 刷新页面可以看到以下的效果:</br>
 ![](../img/add_narbar.jpg)
+
+### <h2>模板模块的单独缓存</h2>
+
+模板模块支持设置单独的缓存时间和缓存策略，使用此功能可以大幅提高页面的响应速度。<br/>
+在widget文件指定缓存时间，例如<br/>
+``` json
+{
+	"Name": "Example Navbar Item",
+	"CacheTime": 15,
+	"CacheBy": "Locale"
+}
+```
+
+这里的CacheTime表示该模块的描画结果会缓存15秒，CacheBy表示缓存的隔离策略。<br/>
+这里缓存会按当前的语言和时区来隔离。<br/>
+缓存的隔离策略可以通过实现`ICacheIsolationPolicy`接口添加。<br/>
+目前`Common.Base`插件提供了多种缓存的隔离策略，请参考该插件的文档。<br/>

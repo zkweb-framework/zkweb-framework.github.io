@@ -3,6 +3,7 @@ site_name: ZKWeb框架文档
 pages:
 - 框架介绍:                        index.md
 - 首次运行:                        core/gettingstart.md
+- 网站配置:                        core/config.md
 - 插件系统:                        core/plugin.md
 - 控制器和模板系统:                 core/controller.md
 - 本地化:                          core/localize.md
