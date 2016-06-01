@@ -93,7 +93,7 @@ public class ExampleApp : AdminApp {
 /// 示例的增删查改应用
 /// </summary>
 [ExportMany]
-public class ExampleCRUDApp : AdminAppBuilder<ExampleTable, ExampleCRUDApp> {
+public class ExampleCRUDApp : AdminAppBuilder<ExampleTable> {
 	// Name和Url必须提供
 	public override string Name { get { return "ExampleCRUDApp"; } }
 	public override string Url { get { return "/admin/example_crud_app"; } }
