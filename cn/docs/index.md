@@ -67,7 +67,7 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 ### <h2>层次结构</h2>
 
 当前核心 + 默认插件的层次结构如下<br/>
-![](../img/architecture.jpg)
+![](img/architecture.jpg)
 
 ### <h2>项目进度</h2>
 
