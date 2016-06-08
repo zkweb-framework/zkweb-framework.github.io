@@ -96,9 +96,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
       <li><a href="functions_func_h.html#index_h"><span>h</span></a></li>
       <li><a href="functions_func_i.html#index_i"><span>i</span></a></li>
       <li><a href="functions_func_j.html#index_j"><span>j</span></a></li>
+      <li><a href="functions_func_k.html#index_k"><span>k</span></a></li>
       <li><a href="functions_func_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_func_m.html#index_m"><span>m</span></a></li>
-      <li><a href="functions_func_n.html#index_n"><span>n</span></a></li>
       <li><a href="functions_func_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_func_p.html#index_p"><span>p</span></a></li>
       <li><a href="functions_func_q.html#index_q"><span>q</span></a></li>
@@ -156,6 +156,9 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 <li>SaveAvatar()
 : <a class="el" href="da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a58eac0fd55d43f16c093b7cb378c500f">ZKWeb.Plugins.Common.Admin.src.Managers.UserManager</a>
 </li>
+<li>SaveFavicon()
+: <a class="el" href="d8/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_logo_manager.html#a163723d11d52afeadc2fab1f508cedbe">ZKWeb.Plugins.Common.Admin.src.Managers.LogoManager</a>
+</li>
 <li>SaveFiles()
 : <a class="el" href="d5/db4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_album_upload_data.html#affb861bcf05ec73aaf9d77abeae23caa">ZKWeb.Plugins.Shopping.Product.src.Model.ProductAlbumUploadData</a>
 </li>
@@ -175,7 +178,7 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="db/d4e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_searchable_dropdown_list_field_attribute.html#ab4942efbe56d0db5b749659b98d9d657">ZKWeb.Plugins.Common.Base.src.Model.SearchableDropdownListFieldAttribute</a>
 </li>
 <li>SearchAction()
-: <a class="el" href="df/ddf/class_admin_app_builder.html#a2fb32aec41915823df9977dcb2eaf077">AdminAppBuilder&lt; TData, TApp &gt;</a>
+: <a class="el" href="df/ddf/class_admin_app_builder.html#a69d2f33fe22b83f3a3d247a8d852e5c5">AdminAppBuilder&lt; TData &gt;</a>
 , <a class="el" href="d4/d27/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder.html#aa31f253058175a3c9920f87fce7e30a1">ZKWeb.Plugins.CMS.ImageBrowser.src.Scaffolding.ImageBrowserBuilder</a>
 , <a class="el" href="d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html#ae9c0043b560301520ef74a397a0ef083">ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator</a>
 , <a class="el" href="d9/db8/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_list_for_menu_page.html#a847e10049a0407bf857d4e127f0b7107">ZKWeb.Plugins.Common.MenuPageBase.src.Scaffolding.GenericListForMenuPage&lt; TData, TPage &gt;</a>
@@ -218,10 +221,21 @@ $(document).ready(function(){initNavTree('functions_func_s.html','');});
 : <a class="el" href="de/d19/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_scheduled_task_executor.html#ae7b7660d98d1758d10030be0a52e1a0b">ZKWeb.Plugins.Common.Base.src.Model.IScheduledTaskExecutor</a>
 , <a class="el" href="db/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scheduled_tasks_1_1_log_cleaner.html#a56b2ae06289b25b4b4c9accca0297f47">ZKWeb.Plugins.Common.Base.src.ScheduledTasks.LogCleaner</a>
 , <a class="el" href="d9/da2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scheduled_tasks_1_1_session_cleaner.html#af4e71a28c7be10e492f63e343f099d08">ZKWeb.Plugins.Common.Base.src.ScheduledTasks.SessionCleaner</a>
+, <a class="el" href="d9/d98/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_cart_product_cleaner.html#ad14e7b7ce291c1a58ee590d22d9f8d02">ZKWeb.Plugins.Shopping.Order.src.ScheduledTasks.CartProductCleaner</a>
+, <a class="el" href="d8/da6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_order_auto_confirmer.html#a506c892c4dd672239dbcb19edacec0d5">ZKWeb.Plugins.Shopping.Order.src.ScheduledTasks.OrderAutoConfirmer</a>
+</li>
+<li>StandardSetupForAdminApp&lt; TApp &gt;()
+: <a class="el" href="d7/de3/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_action_column_extensions.html#aea915e7865eb5999b3aa996ce0ddc134">ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableActionColumnExtensions</a>
+, <a class="el" href="df/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_builder_extensions.html#a3c11a5b57f9bdfb2e9b08b792f993eb3">ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableBuilderExtensions</a>
+, <a class="el" href="d3/d44/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_id_column_extensions.html#a74f812a9598218a19f1b8e4e6d4f0dea">ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableIdColumnExtensions</a>
+, <a class="el" href="de/dff/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_search_bar_builder_extensions.html#a7583d8f6d84b6787dc66f797256e2952">ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableSearchBarBuilderExtensions</a>
 </li>
 <li>Submit()
 : <a class="el" href="d7/d06/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_model_form_builder.html#ad48cc142fe69fd4f0b6a2d4e9ea759f0">ZKWeb.Plugins.Common.Base.src.Model.IModelFormBuilder</a>
 , <a class="el" href="de/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_model_form_builder.html#a79d53af9f1a4a76b33ad520173257a78">ZKWeb.Plugins.Common.Base.src.Scaffolding.ModelFormBuilder</a>
+</li>
+<li>Sum()
+: <a class="el" href="d8/d51/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_order_price_calc_result_extensions.html#a1c679ed195f8bae7bc7ce8b069e85d32">ZKWeb.Plugins.Shopping.Order.src.Extensions.OrderPriceCalcResultExtensions</a>
 </li>
 <li>SwitchToLanguage()
 : <a class="el" href="d3/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_controllers_1_1_api_controller.html#a41a779ddf943ed8f0f110debf0e5f693">ZKWeb.Plugins.Common.LanguageSwitcher.src.Controllers.ApiController</a>

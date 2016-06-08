@@ -22,6 +22,10 @@ var dir_1906c2265841e9515ead641d5ff30d8a =
     [ "MemoryCache.cs", "d0/d01/_memory_cache_8cs.html", [
       [ "MemoryCache", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache" ]
     ] ],
+    [ "Pair.cs", "dd/d56/_pair_8cs.html", [
+      [ "Pair", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair.html", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair" ],
+      [ "Pair", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair.html", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair" ]
+    ] ],
     [ "SimpleDisposable.cs", "d7/d24/_simple_disposable_8cs.html", [
       [ "SimpleDisposable", "d2/d19/class_z_k_web_1_1_utils_1_1_collections_1_1_simple_disposable.html", "d2/d19/class_z_k_web_1_1_utils_1_1_collections_1_1_simple_disposable" ]
     ] ]

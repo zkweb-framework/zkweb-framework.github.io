@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fixed',['Fixed',['../da/d07/namespace_z_k_web_1_1_utils_1_1_extensions.html#aed366167ca0a415bd48e8b5bf98b3fc5a4457d440870ad6d42bab9082d9bf9b61',1,'ZKWeb::Utils::Extensions']]]
+  ['desktop',['Desktop',['../d9/dc2/class_z_k_web_1_1_utils_1_1_functions_1_1_http_device_utils.html#a91508a31ba838fe29f4759f9eb25012da2310408a63388fe57e3a4177168a8798',1,'ZKWeb::Utils::Functions::HttpDeviceUtils']]]
 ];

@@ -2,7 +2,7 @@ var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_p
 [
     [ "Product", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#aa465c7c40c139555d7291ebabf9eeb84", null ],
     [ "ToString", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#a22c3440be546f92cef0c54c1f4058da1", null ],
-    [ "CategoryId", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#a60175502982dad7ca57426a66456dec1", null ],
+    [ "Category", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#a5e126feaafd5e3015cdc7895b5744bf6", null ],
     [ "Classes", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#a9fd6f2ae7cecfc4fc6db19a8645675f4", null ],
     [ "CreateTime", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#ae95d1138b4818d8e28ad2f4a74312ab4", null ],
     [ "Deleted", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html#a99328d03d0d078ec2ff426ddb9784829", null ],

@@ -81,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
       <li><a href="functions.html"><span>全部</span></a></li>
       <li class="current"><a href="functions_func.html"><span>函数</span></a></li>
       <li><a href="functions_vars.html"><span>变量</span></a></li>
+      <li><a href="functions_enum.html"><span>枚举</span></a></li>
       <li><a href="functions_prop.html"><span>属性</span></a></li>
     </ul>
   </div>
@@ -146,13 +147,11 @@ $(document).ready(function(){initNavTree('functions_func_w.html','');});
 <li>WebRoot()
 : <a class="el" href="d6/d10/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_path_utils_test.html#aa8e7abc33ed9f05ae7b330d406019a0f">ZKWeb.Utils.Tests.Functions.PathUtilsTest</a>
 </li>
-<li>WithReadLock()
-: <a class="el" href="d3/d91/class_z_k_web_1_1_utils_1_1_extensions_1_1_reader_writer_lock_slim_extensions.html#a3d3e1fd18aef15a1d694e549519d7e0b">ZKWeb.Utils.Extensions.ReaderWriterLockSlimExtensions</a>
-, <a class="el" href="d9/ddc/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_reader_writer_lock_slim_extensions_test.html#a6ac1ff206090c1c66ff8a5d644b37c05">ZKWeb.Utils.Tests.Extensions.ReaderWriterLockSlimExtensionsTest</a>
+<li>Write()
+: <a class="el" href="d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html#a030f1e081ee6c6cc1b142d686b69ea1f">ZKWeb.Utils.Collections.HttpResponseMock</a>
 </li>
-<li>WithWriteLock()
-: <a class="el" href="d3/d91/class_z_k_web_1_1_utils_1_1_extensions_1_1_reader_writer_lock_slim_extensions.html#aaf31f5e0684ed73946c8e17778a599a0">ZKWeb.Utils.Extensions.ReaderWriterLockSlimExtensions</a>
-, <a class="el" href="d9/ddc/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_reader_writer_lock_slim_extensions_test.html#ae2c2640f899dd4cfaa5e66daeaa7e573">ZKWeb.Utils.Tests.Extensions.ReaderWriterLockSlimExtensionsTest</a>
+<li>WriteAppDataFile()
+: <a class="el" href="d5/d2b/class_z_k_web_1_1_tests_1_1_server_1_1_test_directory_layout.html#a8672abf1d9ad813284f0437ec6b26f2e">ZKWeb.Tests.Server.TestDirectoryLayout</a>
 </li>
 <li>WriteDebugMessage()
 : <a class="el" href="d4/d76/class_z_k_web_1_1_utils_1_1_unit_test_1_1_unit_test_runner.html#a50f88296c213a497636404581bc7af09">ZKWeb.Utils.UnitTest.UnitTestRunner</a>
@@ -163,8 +162,18 @@ $(document).ready(function(){initNavTree('functions_func_w.html','');});
 <li>WriteJson()
 : <a class="el" href="d0/d3a/class_z_k_web_1_1_localize_1_1_json_converters_1_1_t_json_converter.html#ad44688862c3f3a3c5c4e83e52b83f9a4">ZKWeb.Localize.JsonConverters.TJsonConverter</a>
 </li>
+<li>WritePluginFile()
+: <a class="el" href="d5/d2b/class_z_k_web_1_1_tests_1_1_server_1_1_test_directory_layout.html#ab37e02b305447debb2f092e91b522551">ZKWeb.Tests.Server.TestDirectoryLayout</a>
+</li>
 <li>WriteResponse()
-: <a class="el" href="d0/da9/class_z_k_web_1_1_web_1_1_action_results_1_1_file_result.html#a5754d6710e042f093fb2268f33406110">ZKWeb.Web.ActionResults.FileResult</a>
+: <a class="el" href="dc/dc3/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_file_result_test.html#af22446d1465db25cd456c583aabade57">ZKWeb.Tests.Web.ActionResults.FileResultTest</a>
+, <a class="el" href="da/d26/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_image_result_test.html#a09d8ffbbe19081dd097cae12d0f08e16">ZKWeb.Tests.Web.ActionResults.ImageResultTest</a>
+, <a class="el" href="d0/d6b/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_json_result_test.html#a33a5b4e942d366ac36df9d61800e97e2">ZKWeb.Tests.Web.ActionResults.JsonResultTest</a>
+, <a class="el" href="d7/de5/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_plain_result_test.html#a3642b1a7f7e6859fbbef4d13a32943cd">ZKWeb.Tests.Web.ActionResults.PlainResultTest</a>
+, <a class="el" href="df/d33/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_redirect_result_test.html#acbb5186ffa355e27859f4724aea853f4">ZKWeb.Tests.Web.ActionResults.RedirectResultTest</a>
+, <a class="el" href="df/dda/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_stream_result_test.html#aac6ce209730717c355b1bc7b88ee7d87">ZKWeb.Tests.Web.ActionResults.StreamResultTest</a>
+, <a class="el" href="df/d6e/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_template_result_test.html#a5c56ff666144884409c32f3911b4e863">ZKWeb.Tests.Web.ActionResults.TemplateResultTest</a>
+, <a class="el" href="d0/da9/class_z_k_web_1_1_web_1_1_action_results_1_1_file_result.html#a5754d6710e042f093fb2268f33406110">ZKWeb.Web.ActionResults.FileResult</a>
 , <a class="el" href="d0/da8/class_z_k_web_1_1_web_1_1_action_results_1_1_image_result.html#aa189b4b8f08db71df75ec20cabcd2175">ZKWeb.Web.ActionResults.ImageResult</a>
 , <a class="el" href="d4/d11/class_z_k_web_1_1_web_1_1_action_results_1_1_json_result.html#a71a31db9d75a5bca4157ae730834a91e">ZKWeb.Web.ActionResults.JsonResult</a>
 , <a class="el" href="d3/deb/class_z_k_web_1_1_web_1_1_action_results_1_1_plain_result.html#a5d752e69c386d6402f3bd12ecc01d370">ZKWeb.Web.ActionResults.PlainResult</a>

@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_order_price_calculators =
+[
+    [ "DefaultCalculator", "d8/d9d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_order_price_calculators_1_1_default_calculator.html", "d8/d9d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_order_price_calculators_1_1_default_calculator" ]
+];

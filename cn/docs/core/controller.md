@@ -1,4 +1,4 @@
-ZKWeb使用了独自编写的控制器和模板系统，不依赖于asp.net和mvc的组件。<br/>
+ZKWeb使用了独自编写的控制器和模板系统，不依赖于asp.net webform和mvc。<br/>
 在ZKWeb中控制器接口只是一个空接口，自身不拥有状态。<br/>
 获取当前http上下文可以通过`HttpContextUtils.CurrentContext`，<br/>
 为了更好的支持单元测试，请不要使用`HttpContext.Current`。<br/>
@@ -80,9 +80,10 @@ public IActionResult TemplateAction() {
 刷新页面可以看到以下的效果:</br>
 ![](../img/template_tag_example.jpg)
 
-### <h2>更多的返回类型</h2>
+### <h2>框架自带的返回类型</h2>
 
-上面介绍了`TemplateResult`，ZKWeb还提供了其他类型的结果。</br>
+框架提供了以下的返回类型，</br>
+如果需要返回其他类型的结果，可以自己编写继承`IActionResult`的类。</br>
 
 - `FileResult(string path, DateTime? ifModifiedSince = null)`
 - `ImageResult(Image image, ImageFormat format = null)`
@@ -92,11 +93,35 @@ public IActionResult TemplateAction() {
 - `StreamResult(Stream stream, string contentType = null)`
 - `TemplateResult(string path, object argument = null)`
 
-如果需要返回其他类型可以自己编写继承`IActionResult`的类。</br>
+### <h2>框架自带的标签和过滤器</h2>
+
+框架自带了以下的标签<br/>
+
+- area
+	- 描画区域，参考"动态内容"
+	- 例: `{% area test_area %}`
+- fetch
+	- 把指定路径的执行结果设置到变量
+	- 例: `{% fetch /api/login_info > login_info %}`
+- html_lang
+	- 显示当前的页面语言代号
+	- 例: `{% html_lang %}`
+- raw_html
+	- 描画原始的内容，不经过html编码
+	- 例: `{% raw_html variable %}`
+
+框架自带了以下的过滤器<br/>
+
+- trans
+	- 翻译指定的文本
+	- 例: `{% text | trans %}, {% "fixed text" | trans %}`
+- format
+	- 格式化字符串，最多可支持8个参数
+	- 例: `{{ "name is [0], age is [1]" | format: name, age }}`
 
 ### <h2>获取请求参数</h2>
 
-可以使用`HttpContextUtils.CurrentContext.Request`获取到请求对象并获取里面的参数。</br>
+使用`HttpContextUtils.CurrentContext.Request`可以获取到请求对象并获取里面的参数。</br>
 目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
 获取请求参数的例子: </br>
 
@@ -120,7 +145,7 @@ public IActionResult ExampleAInPluginB() { ... }
 ### <h2>重载模板</h2>
 
 ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Django一样。</br>
-例如有以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br>
+以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br>
 
 - Plugins
 	- A
@@ -134,6 +159,44 @@ ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Dja
 
 模板还可以通过`App_Data\templates`重载，结构和上面一样。</br>
 支持模板的重载可以让新的插件随意更换原有插件的网页内容，也可以提供一套用户编辑的系统编辑所有页面。</br>
+
+### <h2>设备专用模板</h2>
+
+ZKWeb支持手机访问时优先读取手机版专用的模板<br/>
+手机专用的模板保存在templates.mobile下。<br/>
+以下的目录结构，在手机访问时会优先使用手机版专用的模板。</br>
+
+- Plugins
+	- A
+		- templates
+			- a
+				- some_page.html (不会使用)
+		- templates.mobile
+			- a
+				- some_page.html (会使用)
+
+### <h2>模板查找规则</h2>
+
+完整的模板查找规则如下
+
+- 显式指定插件，这时不允许从其他插件或App_Data重载模板
+	- "所在插件:模板路径"
+	- 例 "Common.Base:include/header.html"
+	- 模板路径
+		- 插件目录\templates.{device}\模板路径
+		- 插件目录\templates\模板路径
+		- 显式指定插件通常用于模板的继承
+
+- 不指定插件，允许其他插件或App_Data重载模板
+	- "模板路径"
+	- 例 "include/header.html"
+	- 查找模板路径的顺序
+		- App_Data\templates.{device}\模板路径
+		- 按载入顺序反向枚举插件
+			- 插件目录\templates.{device}\模板路径
+		- App_Data\templates\模板路径
+		- 按载入顺序反向枚举插件
+			- 插件目录\templates\模板路径
 
 ### <h2>动态内容</h2>
 

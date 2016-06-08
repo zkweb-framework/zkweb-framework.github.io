@@ -1,5 +1,6 @@
 var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager =
 [
+    [ "UserManager", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#ab4cb52b58016655a860c0c9048b25670", null ],
     [ "ChangePassword", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#abc4af2a24b6b415d0fd186d0e06d081d", null ],
     [ "DeleteAvatar", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a5e5415e87b3613b918a44de461d0584a", null ],
     [ "FindUser", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#ae9c7710091da233b4680fda31dbcefa4", null ],
@@ -11,9 +12,9 @@ var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_
     [ "Logout", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a28d0118aa8c3da275f6bc118145426b8", null ],
     [ "Reg", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a653202be6540f08c9123e6c41365af7a", null ],
     [ "SaveAvatar", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a58eac0fd55d43f16c093b7cb378c500f", null ],
-    [ "AvatarHeight", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a46a546bb60df3292ed83124c8a7246d4", null ],
-    [ "AvatarImageQuality", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#adc4375b6e93364b7f45c67026cbfa108", null ],
-    [ "AvatarWidth", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a18cbfe3acf2a724c6a2910eff728040e", null ],
-    [ "SessionExpireDaysWithoutRememberLogin", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#aa61d2f972f399943855a625a280a5a29", null ],
-    [ "SessionExpireDaysWithRememebrLogin", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a1b55d20f4e2b1f995a7ea0feca59f151", null ]
+    [ "AvatarHeight", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a0c5ea1e8d595168eff50527c87f9d286", null ],
+    [ "AvatarImageQuality", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a087dd4cbf7e6c2625106399360a4b08a", null ],
+    [ "AvatarWidth", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#adc4648a0ce0274e601bdc1357b77f72c", null ],
+    [ "SessionExpireDaysWithoutRememberLogin", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a3f2083d06a20adf32a201b22032d26ee", null ],
+    [ "SessionExpireDaysWithRememebrLogin", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html#a24dd4c5703a412b52632671fb2152351", null ]
 ];

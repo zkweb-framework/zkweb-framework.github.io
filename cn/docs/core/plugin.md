@@ -67,7 +67,6 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。
 
 这里添加在插件加载时输出日志的处理:<br/>
 在src文件夹中创建Plugin.cs，内容如下（引用和命名空间省略，后面的文档也如此）<br/>
-如果提示找不到Resolve函数请手动添加`using DryIoc;`到代码顶部。<br/>
 
 ``` csharp
 /// <summary>
@@ -87,19 +86,21 @@ ExportMany和Ioc将在下一节解释。<br/>
 
 ### <h2>Ioc容器</h2>
 
-ZKWeb使用了DryIoc，请先阅读DryIoc的文档:<br/>
-https://bitbucket.org/dadhi/dryioc/wiki/Home<br/>
+ZKWeb从0.9.5开始使用了自己编写的Ioc容器。<br/>
+容器的接口说明: <br/>
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IRegistrator.cs" target="_blank">IRegistrator</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IResolver.cs" target="_blank">IResolver</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericRegistrator.cs" target="_blank">IGenericRegistrator</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericResolver.cs" target="_blank">IGenericResolver</a><br />
 
 ZKWeb全局使用的容器在`Application.Ioc`。<br/>
-（为什么不使用构造函数注入请参考`global.asax.cs`中的说明，使用全局变量仍然很好的可以支持单元测试）<br/>
 插件可以使用`[ExportMany]`注册组件（参考"添加代码"节），也可以使用`IPlugin`接口在网站启动时注册到`Application.Ioc`中。<br/>
 指定`[SingletonReuse]`属性时可以实现单例。<br/>
-
-DryIoc的性能非常高，可以查看以下的对比:<br/>
-http://www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison<br/>
+ZKWeb考虑到性能，内存占用和代码量，不使用构造函数注入。<br/>
+单元测试时可以使用Application.OverrideIoc重载当前的容器。<br/>
 
 ### <h2>Ioc容器的使用例子</h2>
-以下是一个简单的使用例子。
+以下是简单的使用例子。
 
 ``` csharp
 void Example() {

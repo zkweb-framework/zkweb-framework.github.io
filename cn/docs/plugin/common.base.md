@@ -214,11 +214,11 @@ public class ExampleAjaxTableCallback : IAjaxTableCallback<ExampleTable> {
 	/// 选择数据
 	/// </summary>
 	public void OnSelect(
-		AjaxTableSearchRequest request, List<KeyValuePair<ExampleTable, Dictionary<string, object>>> pairs) {
+		AjaxTableSearchRequest request, List<EntityToTableRow<ExampleTable>> pairs) {
 		foreach (var pair in pairs) {
-			pair.Value["Id"] = pair.Key.Id;
-			pair.Value["Name"] = pair.Key.Name;
-			pair.Value["CreateTime"] = pair.Key.CreateTime.ToClientTimeString();
+			pair.Row["Id"] = pair.Entity.Id;
+			pair.Row["Name"] = pair.Entity.Name;
+			pair.Row["CreateTime"] = pair.Entity.CreateTime.ToClientTimeString();
 		}
 	}
 
@@ -307,11 +307,11 @@ public class ExampleStaticTableCallback : IStaticTableCallback<ExampleTable> {
 	/// 选择数据
 	/// </summary>
 	public void OnSelect(
-		StaticTableSearchRequest request, List<KeyValuePair<ExampleTable, Dictionary<string, object>>> pairs) {
+		StaticTableSearchRequest request, List<EntityToTableRow<ExampleTable>> pairs) {
 		foreach (var pair in pairs) {
-			pair.Value["Id"] = pair.Key.Id;
-			pair.Value["Name"] = pair.Key.Name;
-			pair.Value["CreateTime"] = pair.Key.CreateTime.ToClientTimeString();
+			pair.Row["Id"] = pair.Entity.Id;
+			pair.Row["Name"] = pair.Entity.Name;
+			pair.Row["CreateTime"] = pair.Entity.CreateTime.ToClientTimeString();
 		}
 	}
 }
@@ -383,9 +383,9 @@ public class ExampleForm : ModelFormBuilder {
 效果<br/>
 ![](../img/ajaxform.jpg)
 
-### <h2>更多的表单字段类型</h2>
+### <h2>插件提供的表单字段类型</h2>
 
-插件还提供了以下表单字段类型，使用时请参考各个字段的文档。<br/>
+这个插件提供了以下表单字段类型，使用时请参考各个字段的文档。<br/>
 
 - LabelFieldAttribute(string name)
 - TextBoxFieldAttribute(string name, string placeHolder = null)
@@ -444,6 +444,72 @@ UnitOfWork.Read(context => {
 - common.base\footer.html (前台通用尾部)
 - common.base\header.html (前台通用头部)
 - common.base\index.html (首页)
+
+### <h2>插件提供的标签和过滤器</h2>
+
+这个插件提供了以下的标签<br/>
+
+- copyright_text
+	- 显示版权信息文本
+	- 例: `{% copyright_text %}`
+- include_css_here
+	- 在当前位置引用css文件
+	- 例: `{% include_css_here "/static/common.base.css/test.css" %}`
+	- 例: `{% include_css_here variable %}`
+- include_css_later
+	- 延迟引用css文件，需要配合"render_included_css"标签使用
+	- 这个标签会影响上下文内容，不应该在有缓存的模板模块中使用
+	- 例: `{% include_css_later "/static/common.base.css/test.css" %}`
+	- 例: `{% include_css_later variable %}`
+- include_js_here
+	- 在当前位置引用js文件
+	- 例: `{% include_js_here "/static/common.base.js/test.js" %}`
+	- 例: `{% include_js_here variable %}`
+- include_js_later
+	- 延迟引用javascript文件，需要配合"render_included_js"标签使用
+	- 这个标签会影响上下文内容，不应该在有缓存的模板模块中使用
+	- 例: `{% include_js_later "/static/common.base.js/test.js" %}`
+	- 例: `{% include_js_later variable %}`
+- render_included_css
+	- 描画延迟引用的css资源
+	- 描画后会清空原有的引用，可以重复调用
+	- 例: `{% render_included_css %}`
+- render_included_js
+	- 描画延迟引用的javascript资源
+	- 描画后会清空原有的引用，可以重复调用
+	- 例: `{% render_included_js %}`
+- render_metadata
+	- 描画附加的内容，用于描画head标签中的meta标签
+	- 描画后会清空原有的内容，可以重复调用
+	- 例: `{% render_metadata %}`
+- render_title
+	- 描画当前网站标题
+	- 例: `{% render_title %}`
+- url_pagination
+	- 根据Url分页的控件，需要配合Model.Pagination使用
+	- 例: `{% url_pagination response.Pagination %}`
+- use_meta_description
+	- 设置页面描述，需要配合"render_metadata"标签使用
+	- 例: `{% use_meta_description "description" %}`
+	- 例: `{% use_meta_description variable %}`
+- use_meta_keywords
+	- 设置页面关键词，需要配合"render_metadata"标签使用
+	- 例: `{% use_meta_keywords "keywords" %}`
+	- 例: `{% use_meta_keywords variable %}`
+- use_title
+	- 设置网站标题，需要配合标签"render_title"使用
+	- 例: `{% use_title "Plain Text Title" %}`
+	- 例: `{% use_title variable_title %}`
+- website_name
+	- 显示当前网站名称
+	- 例: `{% website_name %}`
+
+这个插件提供了以下的过滤器<br/>
+
+- website_title
+	- 网站标题
+	- 按WebsiteSettings.DocumentTitleFormat进行格式化
+	- 例: `{{ "Website Title" | website_title }}`
 
 ### <h2>静态文件处理器</h2>
 

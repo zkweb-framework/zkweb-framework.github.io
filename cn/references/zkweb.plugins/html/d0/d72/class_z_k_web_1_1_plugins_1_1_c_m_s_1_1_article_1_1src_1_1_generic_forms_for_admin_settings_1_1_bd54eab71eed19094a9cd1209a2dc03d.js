@@ -1,0 +1,6 @@
+var class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d =
+[
+    [ "OnBind", "d0/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d.html#ab1f12232906929cdcfa2e06b480c950f", null ],
+    [ "OnSubmit", "d0/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d.html#a0a74d3965579df8f63ac00d38959d32f", null ],
+    [ "ArticlesPerPage", "d0/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d.html#a5e50b4a96362a43ce4d285440fa0fd06", null ]
+];

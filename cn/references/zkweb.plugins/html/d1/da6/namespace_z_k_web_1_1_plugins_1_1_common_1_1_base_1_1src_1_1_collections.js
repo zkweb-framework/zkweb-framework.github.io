@@ -1,5 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections =
-[
-    [ "MemoryCacheByIdentity", "d4/d26/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity.html", "d4/d26/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity" ],
-    [ "MemoryCacheByIdentityAndLocale", "d2/d96/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity_and_locale.html", "d2/d96/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity_and_locale" ]
-];

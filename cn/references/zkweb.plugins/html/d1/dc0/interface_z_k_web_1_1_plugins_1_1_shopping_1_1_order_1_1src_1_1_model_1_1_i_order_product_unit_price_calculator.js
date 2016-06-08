@@ -1,0 +1,4 @@
+var interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_product_unit_price_calculator =
+[
+    [ "Calculate", "d1/dc0/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_product_unit_price_calculator.html#a640af744e79d9a0768729a1bd768f8bd", null ]
+];

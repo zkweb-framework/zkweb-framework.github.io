@@ -9,6 +9,9 @@ var dir_d1512bbd29fe9d1773ec18ef9306efc4 =
     [ "HttpContextUtils.cs", "d9/da5/_http_context_utils_8cs.html", [
       [ "HttpContextUtils", "d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html", "d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils" ]
     ] ],
+    [ "HttpDeviceUtils.cs", "d8/d69/_http_device_utils_8cs.html", [
+      [ "HttpDeviceUtils", "d9/dc2/class_z_k_web_1_1_utils_1_1_functions_1_1_http_device_utils.html", "d9/dc2/class_z_k_web_1_1_utils_1_1_functions_1_1_http_device_utils" ]
+    ] ],
     [ "LocaleUtils.cs", "d9/dd9/_locale_utils_8cs.html", [
       [ "LocaleUtils", "d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils.html", "d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils" ]
     ] ],
@@ -29,6 +32,9 @@ var dir_d1512bbd29fe9d1773ec18ef9306efc4 =
       ] ],
       [ "Expressions", "d3/d66/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_expressions.html", "d3/d66/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_expressions" ],
       [ "Validators", "df/dbe/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_validators.html", "df/dbe/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_validators" ]
+    ] ],
+    [ "SystemUtils.cs", "d0/d99/_system_utils_8cs.html", [
+      [ "SystemUtils", "d7/d2b/class_z_k_web_1_1_utils_1_1_functions_1_1_system_utils.html", "d7/d2b/class_z_k_web_1_1_utils_1_1_functions_1_1_system_utils" ]
     ] ],
     [ "TreeUtils.cs", "d3/df9/_tree_utils_8cs.html", [
       [ "TreeUtils", "d3/d50/class_z_k_web_1_1_utils_1_1_functions_1_1_tree_utils.html", "d3/d50/class_z_k_web_1_1_utils_1_1_functions_1_1_tree_utils" ],

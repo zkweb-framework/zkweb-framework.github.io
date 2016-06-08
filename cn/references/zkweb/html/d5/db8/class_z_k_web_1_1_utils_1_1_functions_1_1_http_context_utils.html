@@ -115,46 +115,46 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </div><!--header-->
 <div class="contents">
 
-<p>http上下文的工具类 功能 提供返回HttpContextBase的CurrentContext 提供获取和储存数据到当前http上下文的Items的函数，如果上下文不存在则储存到线程本地的集合中 提供获取和储存数据到当前http上下文的Cookies的函数，如果上下文不存在则储存到线程本地的集合中  
+<p>http上下文的工具类 功能  
  <a href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#details">更多...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:a4756277ef3fd6d6264638137ab738142"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a4756277ef3fd6d6264638137ab738142">PutData&lt; T &gt;</a> (string key, T data)</td></tr>
-<tr class="memdesc:a4756277ef3fd6d6264638137ab738142"><td class="mdescLeft">&#160;</td><td class="mdescRight">储存在一个Http请求中通用的数据 用于代替ViewData，因为ViewData每次描画分视图时都会复制一遍耗费性能  <a href="#a4756277ef3fd6d6264638137ab738142">更多...</a><br /></td></tr>
+<tr class="memdesc:a4756277ef3fd6d6264638137ab738142"><td class="mdescLeft">&#160;</td><td class="mdescRight">储存在一个Http请求中通用的数据 如果上下文不存在则储存到线程本地的集合中  <a href="#a4756277ef3fd6d6264638137ab738142">更多...</a><br /></td></tr>
 <tr class="separator:a4756277ef3fd6d6264638137ab738142"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4049e4fe69adb74c319f7428ab9fce97"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a4049e4fe69adb74c319f7428ab9fce97">GetData&lt; T &gt;</a> (string key, T defaultValue=default(T))</td></tr>
-<tr class="memdesc:a4049e4fe69adb74c319f7428ab9fce97"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在一个Http请求中通用的数据  <a href="#a4049e4fe69adb74c319f7428ab9fce97">更多...</a><br /></td></tr>
+<tr class="memdesc:a4049e4fe69adb74c319f7428ab9fce97"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在一个Http请求中通用的数据 如果上下文不存在则从线程本地的集合中获取  <a href="#a4049e4fe69adb74c319f7428ab9fce97">更多...</a><br /></td></tr>
 <tr class="separator:a4049e4fe69adb74c319f7428ab9fce97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d3df755eaee4e7ebd52202d25ee7720"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a6d3df755eaee4e7ebd52202d25ee7720">GetOrCreateData&lt; T &gt;</a> (string key, Func&lt; T &gt; defaultCreater)</td></tr>
 <tr class="memdesc:a6d3df755eaee4e7ebd52202d25ee7720"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取在一个Http请求中通用的数据，不存在时创建  <a href="#a6d3df755eaee4e7ebd52202d25ee7720">更多...</a><br /></td></tr>
 <tr class="separator:a6d3df755eaee4e7ebd52202d25ee7720"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#adba272087e5ec5a5f9f5ed52d0e0b24f">RemoveData</a> (string key)</td></tr>
-<tr class="memdesc:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除在一个Http请求中通用的数据  <a href="#adba272087e5ec5a5f9f5ed52d0e0b24f">更多...</a><br /></td></tr>
+<tr class="memdesc:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除在一个Http请求中通用的数据 如果上下文不存在则从线程本地的集合中删除  <a href="#adba272087e5ec5a5f9f5ed52d0e0b24f">更多...</a><br /></td></tr>
 <tr class="separator:adba272087e5ec5a5f9f5ed52d0e0b24f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a806c815cd6f07c78b34af80ae12e5c01"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a806c815cd6f07c78b34af80ae12e5c01">GetCookie</a> (string key)</td></tr>
+<tr class="memdesc:a806c815cd6f07c78b34af80ae12e5c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Cookie值 如果上下文不存在则从线程本地的集合中获取  <a href="#a806c815cd6f07c78b34af80ae12e5c01">更多...</a><br /></td></tr>
+<tr class="separator:a806c815cd6f07c78b34af80ae12e5c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a1b2711b8a9145d2e54fb94dc794a69"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a2a1b2711b8a9145d2e54fb94dc794a69">PutCookie</a> (string key, string value, DateTime?expired=null, bool httpOnly=false)</td></tr>
+<tr class="memdesc:a2a1b2711b8a9145d2e54fb94dc794a69"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置Cookie值 如果上下文不存在则储存到线程本地的集合中  <a href="#a2a1b2711b8a9145d2e54fb94dc794a69">更多...</a><br /></td></tr>
+<tr class="separator:a2a1b2711b8a9145d2e54fb94dc794a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad50503b54b523eab92ad86deaf9229be"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ad50503b54b523eab92ad86deaf9229be">RemoveCookie</a> (string key)</td></tr>
+<tr class="memdesc:ad50503b54b523eab92ad86deaf9229be"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除Cookie值 如果上下文不存在则从线程本地的集合中删除  <a href="#ad50503b54b523eab92ad86deaf9229be">更多...</a><br /></td></tr>
+<tr class="separator:ad50503b54b523eab92ad86deaf9229be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d487761e79d4141674fae0276cb8829"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a9d487761e79d4141674fae0276cb8829">GetClientIpAddress</a> ()</td></tr>
 <tr class="memdesc:a9d487761e79d4141674fae0276cb8829"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取客户端的Ip地址  <a href="#a9d487761e79d4141674fae0276cb8829">更多...</a><br /></td></tr>
 <tr class="separator:a9d487761e79d4141674fae0276cb8829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ad7a1f5bd1c4bf2cb15462a93c90f5600">GetRequestHostUrl</a> ()</td></tr>
-<tr class="memdesc:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求时使用的域名地址 例 <a href="http://localhost">http://localhost</a> 后面不带/  <a href="#ad7a1f5bd1c4bf2cb15462a93c90f5600">更多...</a><br /></td></tr>
+<tr class="memdesc:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取请求时使用的域名地址 例: "http://localhost" 后面不带/  <a href="#ad7a1f5bd1c4bf2cb15462a93c90f5600">更多...</a><br /></td></tr>
 <tr class="separator:ad7a1f5bd1c4bf2cb15462a93c90f5600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a806c815cd6f07c78b34af80ae12e5c01"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a806c815cd6f07c78b34af80ae12e5c01">GetCookie</a> (string key)</td></tr>
-<tr class="memdesc:a806c815cd6f07c78b34af80ae12e5c01"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取Cookie值  <a href="#a806c815cd6f07c78b34af80ae12e5c01">更多...</a><br /></td></tr>
-<tr class="separator:a806c815cd6f07c78b34af80ae12e5c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae3172f48a3741b46a96238dbcca001c8"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ae3172f48a3741b46a96238dbcca001c8">PutCookie</a> (string key, string value, DateTime?expired=default(DateTime?), bool httpOnly=false)</td></tr>
-<tr class="memdesc:ae3172f48a3741b46a96238dbcca001c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置Cookie值  <a href="#ae3172f48a3741b46a96238dbcca001c8">更多...</a><br /></td></tr>
-<tr class="separator:ae3172f48a3741b46a96238dbcca001c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad50503b54b523eab92ad86deaf9229be"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ad50503b54b523eab92ad86deaf9229be">RemoveCookie</a> (string key)</td></tr>
-<tr class="memdesc:ad50503b54b523eab92ad86deaf9229be"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除Cookie值  <a href="#ad50503b54b523eab92ad86deaf9229be">更多...</a><br /></td></tr>
-<tr class="separator:ad50503b54b523eab92ad86deaf9229be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a83c5a28b7ce40fd54d7810f6170577ea"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a83c5a28b7ce40fd54d7810f6170577ea">OverrideContext</a> (HttpContextBase context)</td></tr>
-<tr class="memdesc:a83c5a28b7ce40fd54d7810f6170577ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#a83c5a28b7ce40fd54d7810f6170577ea">更多...</a><br /></td></tr>
+<tr class="memdesc:a83c5a28b7ce40fd54d7810f6170577ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载当前使用的http上下文 结束后恢复原有的上下文  <a href="#a83c5a28b7ce40fd54d7810f6170577ea">更多...</a><br /></td></tr>
 <tr class="separator:a83c5a28b7ce40fd54d7810f6170577ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#ae6f1e47f8a88658d45ea72bc62bc3948">OverrideContext</a> (Uri uri, string method)</td></tr>
-<tr class="memdesc:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#ae6f1e47f8a88658d45ea72bc62bc3948">更多...</a><br /></td></tr>
+<tr class="memdesc:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载当前使用的http上下文 结束后恢复原有的上下文  <a href="#ae6f1e47f8a88658d45ea72bc62bc3948">更多...</a><br /></td></tr>
 <tr class="separator:ae6f1e47f8a88658d45ea72bc62bc3948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="memItemLeft" align="right" valign="top">static IDisposable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html#a25547f1811e0a0d3426c01aeef2b5fe0">OverrideContext</a> (string path, string method)</td></tr>
-<tr class="memdesc:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">临时使用指定的http上下文 结束后恢复原有的上下文  <a href="#a25547f1811e0a0d3426c01aeef2b5fe0">更多...</a><br /></td></tr>
+<tr class="memdesc:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">重载当前使用的http上下文 结束后恢复原有的上下文  <a href="#a25547f1811e0a0d3426c01aeef2b5fe0">更多...</a><br /></td></tr>
 <tr class="separator:a25547f1811e0a0d3426c01aeef2b5fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
@@ -164,7 +164,15 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 <tr class="separator:a836ede10c568962466f3f98d2869fd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>http上下文的工具类 功能 提供返回HttpContextBase的CurrentContext 提供获取和储存数据到当前http上下文的Items的函数，如果上下文不存在则储存到线程本地的集合中 提供获取和储存数据到当前http上下文的Cookies的函数，如果上下文不存在则储存到线程本地的集合中 </p>
+<div class="textblock"><p>http上下文的工具类 功能 </p>
+<ul>
+<li>提供返回HttpContextBase的CurrentContext</li>
+<li>提供获取和储存数据到当前http上下文的Items的函数，如果上下文不存在则储存到线程本地的集合中</li>
+<li>提供获取和储存数据到当前http上下文的Cookies的函数，如果上下文不存在则储存到线程本地的集合中</li>
+<li>获取客户端的Ip地址</li>
+<li>获取请求时使用的域名地址</li>
+<li>重载当前使用的http上下文 </li>
+</ul>
 </div><h2 class="groupheader">成员函数说明</h2>
 <a class="anchor" id="a9d487761e79d4141674fae0276cb8829"></a>
 <div class="memitem">
@@ -214,7 +222,14 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>获取Cookie值 </p>
+<p>获取Cookie值 如果上下文不存在则从线程本地的集合中获取 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -250,7 +265,21 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>获取在一个Http请求中通用的数据 </p>
+<p>获取在一个Http请求中通用的数据 如果上下文不存在则从线程本地的集合中获取 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>数据类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+    <tr><td class="paramname">defaultValue</td><td>获取不到时返回的默认值</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 <div class="typeconstraint">
 <dl><dt><b>类型限制</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -295,6 +324,20 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </div><div class="memdoc">
 
 <p>获取在一个Http请求中通用的数据，不存在时创建 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>数据类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+    <tr><td class="paramname">defaultCreater</td><td>获取不到时创建默认值使用的函数</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 <div class="typeconstraint">
 <dl><dt><b>类型限制</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -327,7 +370,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>获取请求时使用的域名地址 例 <a href="http://localhost">http://localhost</a> 后面不带/ </p>
+<p>获取请求时使用的域名地址 例: "http://localhost" 后面不带/ </p>
 <dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
@@ -354,7 +397,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<p>重载当前使用的http上下文 结束后恢复原有的上下文 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">context</td><td>指定的http上下文</td></tr>
@@ -397,7 +440,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<p>重载当前使用的http上下文 结束后恢复原有的上下文 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">uri</td><td>请求的uri</td></tr>
@@ -441,7 +484,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>临时使用指定的http上下文 结束后恢复原有的上下文 </p>
+<p>重载当前使用的http上下文 结束后恢复原有的上下文 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">path</td><td>请求的路径，不需要带域名</td></tr>
@@ -453,7 +496,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 
 </div>
 </div>
-<a class="anchor" id="ae3172f48a3741b46a96238dbcca001c8"></a>
+<a class="anchor" id="a2a1b2711b8a9145d2e54fb94dc794a69"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -476,7 +519,7 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">DateTime?&#160;</td>
-          <td class="paramname"><em>expired</em> = <code>default(DateTime?)</code>, </td>
+          <td class="paramname"><em>expired</em> = <code>null</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -497,7 +540,17 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>设置Cookie值 </p>
+<p>设置Cookie值 如果上下文不存在则储存到线程本地的集合中 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+    <tr><td class="paramname">value</td><td>数据</td></tr>
+    <tr><td class="paramname">expired</td><td>过期时间，null表示在浏览器关闭时过期</td></tr>
+    <tr><td class="paramname">httpOnly</td><td>是否只能通过http获取（javascript中不能获取）</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -533,7 +586,20 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>储存在一个Http请求中通用的数据 用于代替ViewData，因为ViewData每次描画分视图时都会复制一遍耗费性能 </p>
+<p>储存在一个Http请求中通用的数据 如果上下文不存在则储存到线程本地的集合中 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>数据类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+    <tr><td class="paramname">data</td><td>数据</td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="typeconstraint">
 <dl><dt><b>类型限制</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
@@ -567,7 +633,14 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>删除Cookie值 </p>
+<p>删除Cookie值 如果上下文不存在则从线程本地的集合中删除 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -593,7 +666,13 @@ $(document).ready(function(){initNavTree('d5/db8/class_z_k_web_1_1_utils_1_1_fun
 </table>
 </div><div class="memdoc">
 
-<p>删除在一个Http请求中通用的数据 </p>
+<p>删除在一个Http请求中通用的数据 如果上下文不存在则从线程本地的集合中删除 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>键值</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

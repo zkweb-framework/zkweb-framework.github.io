@@ -1,16 +1,14 @@
 var dir_6f82b660d230855714b79c6bb8fb948d =
 [
-    [ "EditingMatchedData.cs", "dd/dac/_editing_matched_data_8cs.html", [
-      [ "EditingMatchedData", "dc/d9f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_matched_data.html", "dc/d9f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_matched_data" ]
-    ] ],
-    [ "EditingPropertyValue.cs", "db/d99/_editing_property_value_8cs.html", [
-      [ "EditingPropertyValue", "da/d12/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_property_value.html", "da/d12/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_property_value" ]
-    ] ],
-    [ "IProductCategoryProvider.cs", "db/d1c/_i_product_category_provider_8cs.html", [
-      [ "IProductCategoryProvider", "df/dbd/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_category_provider.html", "df/dbd/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_category_provider" ]
-    ] ],
+    [ "ExtraConfigKeys.cs", "db/d21/_shopping_8_product_2src_2_model_2_extra_config_keys_8cs.html", null ],
     [ "IProductMatchedDataMatcher.cs", "de/dd1/_i_product_matched_data_matcher_8cs.html", [
       [ "IProductMatchedDataMatcher", "d7/de4/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_matched_data_matcher.html", "d7/de4/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_matched_data_matcher" ]
+    ] ],
+    [ "IProductMatchParametersComparer.cs", "d6/de6/_i_product_match_parameters_comparer_8cs.html", [
+      [ "IProductMatchParametersComparer", "d7/d20/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_comparer.html", "d7/d20/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_comparer" ]
+    ] ],
+    [ "IProductMatchParametersDescriptionProvider.cs", "db/d2f/_i_product_match_parameters_description_provider_8cs.html", [
+      [ "IProductMatchParametersDescriptionProvider", "da/d87/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_description_provider.html", "da/d87/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_description_provider" ]
     ] ],
     [ "IProductSalesInfoDisplayField.cs", "dd/d84/_i_product_sales_info_display_field_8cs.html", [
       [ "IProductSalesInfoDisplayField", "d1/d90/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_sales_info_display_field.html", "d1/d90/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_sales_info_display_field" ]
@@ -25,20 +23,23 @@ var dir_6f82b660d230855714b79c6bb8fb948d =
     [ "ProductAlbumUploadData.cs", "d8/d75/_product_album_upload_data_8cs.html", [
       [ "ProductAlbumUploadData", "d5/db4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_album_upload_data.html", "d5/db4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_album_upload_data" ]
     ] ],
-    [ "ProductCategory.cs", "d2/d85/_product_category_8cs.html", [
-      [ "ProductCategory", "d0/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_category.html", "d0/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_category" ]
-    ] ],
     [ "ProductMatchedDataAffectsBinder.cs", "da/de6/_product_matched_data_affects_binder_8cs.html", [
       [ "ProductMatchedDataAffectsBinder", "d1/da8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_affects_binder.html", "d1/da8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_affects_binder" ]
     ] ],
     [ "ProductMatchedDataConditionBinder.cs", "d7/de1/_product_matched_data_condition_binder_8cs.html", [
       [ "ProductMatchedDataConditionBinder", "d5/d8e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_condition_binder.html", "d5/d8e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_condition_binder" ]
     ] ],
-    [ "ProductProperty.cs", "dc/d75/_product_property_8cs.html", [
-      [ "ProductProperty", "dc/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property.html", "dc/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property" ]
+    [ "ProductMatchedDataForEdit.cs", "de/d1a/_product_matched_data_for_edit_8cs.html", [
+      [ "ProductMatchedDataForEdit", "de/d92/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_for_edit.html", "de/d92/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_for_edit" ]
     ] ],
     [ "ProductPropertyControlType.cs", "df/dbf/_product_property_control_type_8cs.html", "df/dbf/_product_property_control_type_8cs" ],
-    [ "ProductPropertyValue.cs", "d1/d62/_product_property_value_8cs.html", [
-      [ "ProductPropertyValue", "d8/d17/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value.html", "d8/d17/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value" ]
+    [ "ProductPropertyValueForEdit.cs", "dd/d78/_product_property_value_for_edit_8cs.html", [
+      [ "ProductPropertyValueForEdit", "d8/d2c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value_for_edit.html", "d8/d2c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value_for_edit" ]
+    ] ],
+    [ "ProductToPropertyValueForEdit.cs", "db/d42/_product_to_property_value_for_edit_8cs.html", [
+      [ "ProductToPropertyValueForEdit", "dc/d1e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_edit.html", "dc/d1e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_edit" ]
+    ] ],
+    [ "ProductToPropertyValueForMatch.cs", "da/dea/_product_to_property_value_for_match_8cs.html", [
+      [ "ProductToPropertyValueForMatch", "dc/d0c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_match.html", "dc/d0c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_match" ]
     ] ]
 ];

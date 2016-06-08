@@ -280,8 +280,8 @@
             </li>
           
             <li class="anchor">
-              <a title="更多的表单字段类型" href="#_7">
-                更多的表单字段类型
+              <a title="插件提供的表单字段类型" href="#_7">
+                插件提供的表单字段类型
               </a>
             </li>
           
@@ -298,25 +298,31 @@
             </li>
           
             <li class="anchor">
-              <a title="静态文件处理器" href="#_10">
+              <a title="插件提供的标签和过滤器" href="#_10">
+                插件提供的标签和过滤器
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="静态文件处理器" href="#_11">
                 静态文件处理器
               </a>
             </li>
           
             <li class="anchor">
-              <a title="语言时区处理器" href="#_11">
+              <a title="语言时区处理器" href="#_12">
                 语言时区处理器
               </a>
             </li>
           
             <li class="anchor">
-              <a title="特征类" href="#_12">
+              <a title="特征类" href="#_13">
                 特征类
               </a>
             </li>
           
             <li class="anchor">
-              <a title="缓存的隔离策略" href="#_13">
+              <a title="缓存的隔离策略" href="#_14">
                 缓存的隔离策略
               </a>
             </li>
@@ -801,11 +807,11 @@
     <span class="c1">/// 选择数据</span>
     <span class="c1">/// &lt;/summary&gt;</span>
     <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
-        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">EntityToTableRow</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
@@ -890,11 +896,11 @@
     <span class="c1">/// 选择数据</span>
     <span class="c1">/// &lt;/summary&gt;</span>
     <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
-        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">KeyValuePair</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">object</span><span class="p">&gt;&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">EntityToTableRow</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Value</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -963,8 +969,8 @@
 
 <p>效果<br/>
 <img alt="" src="../../img/ajaxform.jpg" /></p>
-<h3 id="_7"><h2>更多的表单字段类型</h2></h3>
-<p>插件还提供了以下表单字段类型，使用时请参考各个字段的文档。<br/></p>
+<h3 id="_7"><h2>插件提供的表单字段类型</h2></h3>
+<p>这个插件提供了以下表单字段类型，使用时请参考各个字段的文档。<br/></p>
 <ul>
 <li>LabelFieldAttribute(string name)</li>
 <li>TextBoxFieldAttribute(string name, string placeHolder = null)</li>
@@ -1020,7 +1026,102 @@
 <li>common.base\header.html (前台通用头部)</li>
 <li>common.base\index.html (首页)</li>
 </ul>
-<h3 id="_10"><h2>静态文件处理器</h2></h3>
+<h3 id="_10"><h2>插件提供的标签和过滤器</h2></h3>
+<p>这个插件提供了以下的标签<br/></p>
+<ul>
+<li>copyright_text<ul>
+<li>显示版权信息文本</li>
+<li>例: <code>{% copyright_text %}</code></li>
+</ul>
+</li>
+<li>include_css_here<ul>
+<li>在当前位置引用css文件</li>
+<li>例: <code>{% include_css_here "/static/common.base.css/test.css" %}</code></li>
+<li>例: <code>{% include_css_here variable %}</code></li>
+</ul>
+</li>
+<li>include_css_later<ul>
+<li>延迟引用css文件，需要配合"render_included_css"标签使用</li>
+<li>这个标签会影响上下文内容，不应该在有缓存的模板模块中使用</li>
+<li>例: <code>{% include_css_later "/static/common.base.css/test.css" %}</code></li>
+<li>例: <code>{% include_css_later variable %}</code></li>
+</ul>
+</li>
+<li>include_js_here<ul>
+<li>在当前位置引用js文件</li>
+<li>例: <code>{% include_js_here "/static/common.base.js/test.js" %}</code></li>
+<li>例: <code>{% include_js_here variable %}</code></li>
+</ul>
+</li>
+<li>include_js_later<ul>
+<li>延迟引用javascript文件，需要配合"render_included_js"标签使用</li>
+<li>这个标签会影响上下文内容，不应该在有缓存的模板模块中使用</li>
+<li>例: <code>{% include_js_later "/static/common.base.js/test.js" %}</code></li>
+<li>例: <code>{% include_js_later variable %}</code></li>
+</ul>
+</li>
+<li>render_included_css<ul>
+<li>描画延迟引用的css资源</li>
+<li>描画后会清空原有的引用，可以重复调用</li>
+<li>例: <code>{% render_included_css %}</code></li>
+</ul>
+</li>
+<li>render_included_js<ul>
+<li>描画延迟引用的javascript资源</li>
+<li>描画后会清空原有的引用，可以重复调用</li>
+<li>例: <code>{% render_included_js %}</code></li>
+</ul>
+</li>
+<li>render_metadata<ul>
+<li>描画附加的内容，用于描画head标签中的meta标签</li>
+<li>描画后会清空原有的内容，可以重复调用</li>
+<li>例: <code>{% render_metadata %}</code></li>
+</ul>
+</li>
+<li>render_title<ul>
+<li>描画当前网站标题</li>
+<li>例: <code>{% render_title %}</code></li>
+</ul>
+</li>
+<li>url_pagination<ul>
+<li>根据Url分页的控件，需要配合Model.Pagination使用</li>
+<li>例: <code>{% url_pagination response.Pagination %}</code></li>
+</ul>
+</li>
+<li>use_meta_description<ul>
+<li>设置页面描述，需要配合"render_metadata"标签使用</li>
+<li>例: <code>{% use_meta_description "description" %}</code></li>
+<li>例: <code>{% use_meta_description variable %}</code></li>
+</ul>
+</li>
+<li>use_meta_keywords<ul>
+<li>设置页面关键词，需要配合"render_metadata"标签使用</li>
+<li>例: <code>{% use_meta_keywords "keywords" %}</code></li>
+<li>例: <code>{% use_meta_keywords variable %}</code></li>
+</ul>
+</li>
+<li>use_title<ul>
+<li>设置网站标题，需要配合标签"render_title"使用</li>
+<li>例: <code>{% use_title "Plain Text Title" %}</code></li>
+<li>例: <code>{% use_title variable_title %}</code></li>
+</ul>
+</li>
+<li>website_name<ul>
+<li>显示当前网站名称</li>
+<li>例: <code>{% website_name %}</code></li>
+</ul>
+</li>
+</ul>
+<p>这个插件提供了以下的过滤器<br/></p>
+<ul>
+<li>website_title<ul>
+<li>网站标题</li>
+<li>按WebsiteSettings.DocumentTitleFormat进行格式化</li>
+<li>例: <code>{{ "Website Title" | website_title }}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="_11"><h2>静态文件处理器</h2></h3>
 <p>这个插件提供了静态文件专用的路径<code>/static/文件路径</code>，查找规则如下<br/></p>
 <ul>
 <li>查找<code>App_Data\static\文件路径</code></li>
@@ -1032,7 +1133,7 @@
 <li><code>B\static\a\homepage.js</code></li>
 <li><code>A\static\a\homepage.js</code></li>
 </ul>
-<h3 id="_11"><h2>语言时区处理器</h2></h3>
+<h3 id="_12"><h2>语言时区处理器</h2></h3>
 <p>这个插件可以自动设置当前请求的语言和时区。<br/>
 默认语言和时区可以修改通用配置<code>LocaleSettings</code>。<br/></p>
 <p>设置语言的顺序是<br/></p>
@@ -1046,7 +1147,7 @@
 <li>客户端传入的Cookies (LocaleUtils.TimeZoneKey: "ZKWeb.TimeZone")</li>
 <li><code>LocaleSettings</code>中的默认时区</li>
 </ul>
-<h3 id="_12"><h2>特征类</h2></h3>
+<h3 id="_13"><h2>特征类</h2></h3>
 <p>特征类<code>Trait</code>用于在外部标记指定类型的某些特征，但不需要修改原有的类型。<br/>
 这个插件提供了以下的特征类<br/></p>
 <ul>
@@ -1066,7 +1167,7 @@
 </pre></div>
 
 
-<h3 id="_13"><h2>缓存的隔离策略</h2></h3>
+<h3 id="_14"><h2>缓存的隔离策略</h2></h3>
 <p>有的缓存内容需要按当前的用户或语言时区隔离，这些模式在这里称为"隔离策略"。<br/>
 核心框架提供了隔离策略的接口和使用了隔离策略的缓存类，这个插件提供了各种的隔离策略的实现。<br/></p>
 <ul>

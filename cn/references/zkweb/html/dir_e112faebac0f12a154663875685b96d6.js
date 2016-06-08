@@ -1,5 +1,6 @@
 var dir_e112faebac0f12a154663875685b96d6 =
 [
+    [ "Cache", "dir_19ce55b0102d371ea1ccac9a9c3435b5.html", "dir_19ce55b0102d371ea1ccac9a9c3435b5" ],
     [ "Database", "dir_8a4fd9f83213b0db688f783d7ee866d4.html", "dir_8a4fd9f83213b0db688f783d7ee866d4" ],
     [ "Localize", "dir_05fb707211c9a4ade618712e5a83fdb6.html", "dir_05fb707211c9a4ade618712e5a83fdb6" ],
     [ "Logging", "dir_526869e93684cd2b65c580e84fd9ef05.html", "dir_526869e93684cd2b65c580e84fd9ef05" ],

@@ -7,5 +7,6 @@ var namespace_z_k_web_1_1_utils_1_1_collections =
     [ "HttpResponseMock", "d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html", "d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock" ],
     [ "LazyCache", "df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache.html", "df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache" ],
     [ "MemoryCache", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache" ],
+    [ "Pair", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair.html", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair" ],
     [ "SimpleDisposable", "d2/d19/class_z_k_web_1_1_utils_1_1_collections_1_1_simple_disposable.html", "d2/d19/class_z_k_web_1_1_utils_1_1_collections_1_1_simple_disposable" ]
 ];

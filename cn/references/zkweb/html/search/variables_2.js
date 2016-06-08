@@ -13,6 +13,5 @@ var searchData=
   ['currentexecutionfilepath',['currentExecutionFilePath',['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a0c4b69fce25fe98c4a025aa73bd09fc0',1,'ZKWeb::Utils::Collections::HttpRequestMock']]],
   ['currentexecutionfilepathextension',['currentExecutionFilePathExtension',['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a9fc1ab89ba7eb9e33721d86cb2874fda',1,'ZKWeb::Utils::Collections::HttpRequestMock']]],
   ['currenthandler',['currentHandler',['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a33cbe6be00dbf1b9f6a3c4b0fb9566cc',1,'ZKWeb::Utils::Collections::HttpContextMock']]],
-  ['currentnotification',['currentNotification',['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a4498ca198e0853b4d3f00c285eb1ec4c',1,'ZKWeb::Utils::Collections::HttpContextMock']]],
-  ['customwidgetscache',['CustomWidgetsCache',['../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a2fffd1655115580319d4d36590cc28e3',1,'ZKWeb::Templating::AreaSupport::TemplateAreaManager']]]
+  ['currentnotification',['currentNotification',['../db/db2/class_z_k_web_1_1_utils_1_1_collections_1_1_http_context_mock.html#a4498ca198e0853b4d3f00c285eb1ec4c',1,'ZKWeb::Utils::Collections::HttpContextMock']]]
 ];

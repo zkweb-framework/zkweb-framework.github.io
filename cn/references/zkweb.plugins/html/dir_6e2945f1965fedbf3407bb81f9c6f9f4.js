@@ -14,5 +14,8 @@ var dir_6e2945f1965fedbf3407bb81f9c6f9f4 =
     ] ],
     [ "ProductPropertyValueExtensions.cs", "d2/dda/_product_property_value_extensions_8cs.html", [
       [ "ProductPropertyValueExtensions", "d6/db3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_value_extensions.html", "d6/db3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_value_extensions" ]
+    ] ],
+    [ "ProductToPropertyValueExtensions.cs", "d6/d36/_product_to_property_value_extensions_8cs.html", [
+      [ "ProductToPropertyValueExtensions", "da/dc1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_to_property_value_extensions.html", "da/dc1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_to_property_value_extensions" ]
     ] ]
 ];

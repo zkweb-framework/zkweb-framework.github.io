@@ -1,35 +1,43 @@
 var hierarchy =
 [
     [ "AdminApp", null, [
-      [ "AdminAppBuilder< TData, TApp >", "df/ddf/class_admin_app_builder.html", null ]
+      [ "AdminAppBuilder< TData >", "df/ddf/class_admin_app_builder.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Article, ArticleManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< Database.Article >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.CMS.Article.src.AdminApps.ArticleManageApp", "d0/dd2/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_admin_apps_1_1_article_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Logistics, LogisticsManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< Database.Logistics >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Logistics.src.AdminApps.LogisticsManageApp", "d3/dea/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_admin_apps_1_1_logistics_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Product, ProductManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< Database.Order >", "df/ddf/class_admin_app_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.AdminApps.OrderManageApp", "d3/d87/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_apps_1_1_order_manage_app.html", null ]
+    ] ],
+    [ "AdminAppBuilder< Database.Product >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductManageApp", "dd/d21/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< PaymentApi, PaymentApiManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< PaymentApi >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentApiManageApp", "df/dbb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< PaymentTransaction, PaymentTransactionRecordsApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< PaymentTransaction >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentTransactionRecordsApp", "de/dd0/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_transaction_records_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< User, AdminManageApp >", "df/ddf/class_admin_app_builder.html", [
-      [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.AdminManageApp", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html", null ]
+    [ "AdminAppBuilder< ProductCategory >", "df/ddf/class_admin_app_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductCategoryManageApp", "dd/d02/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< User, UserManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< ProductProperty >", "df/ddf/class_admin_app_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductPropertyManageApp", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app.html", null ]
+    ] ],
+    [ "AdminAppBuilder< User >", "df/ddf/class_admin_app_builder.html", [
+      [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.AdminManageApp", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.UserManageApp", "d1/dc9/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_user_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< UserRole, RoleManageApp >", "df/ddf/class_admin_app_builder.html", [
+    [ "AdminAppBuilder< UserRole >", "df/ddf/class_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.RoleManageApp", "d4/ddc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_role_manage_app.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.AdminManager", "d4/d4f/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_admin_manager.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableActionColumnExtensions", "d7/de3/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_action_column_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableActionColumnExtensions", "d7/d63/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_action_column_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableBuilderExtensions", "df/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_builder_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.AjaxTableColumn", "da/da8/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_ajax_table_column.html", [
       [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableActionColumn", "d8/d98/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_action_column.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableIdColumn", "dc/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_id_column.html", null ]
@@ -38,12 +46,14 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableColumnsExtensions", "d3/d6c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_columns_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableIdColumnExtensions", "d3/d44/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_id_column_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableIdColumnExtensions", "da/de0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_id_column_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableSearchBarBuilderExtensions", "de/dff/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_search_bar_builder_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableSearchRequestExtensions", "d8/d4d/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_search_request_extensions.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.PaymentApiHandlers.TestApiHandler.ApiData", "dc/dfb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_api_data.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.Alipay.src.PaymentApiHandlers.AlipayApiHandler.ApiData", "df/d6c/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_alipay_1_1src_1_1_payment_api_handlers_1_15a85be1983160c3096277a81007deb3b.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.Tenpay.src.PaymentApiHandlers.TenpayApiHandler.ApiData", "d0/d7c/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_tenpay_1_1src_1_1_payment_api_handlers_1_1bba48c41c74381aaa5238f17bd3eeaf4.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.Wechat.src.PaymentApiHandlers.WechatApiHandler.ApiData", "db/d81/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_wechat_1_1src_1_1_payment_api_handlers_1_1c9aa5d577f638a759256575ca0e2477a.html", null ],
     [ "ZKWeb.Plugins.CMS.Article.src.Database.Article", "d9/da4/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_database_1_1_article.html", null ],
+    [ "ZKWeb.Plugins.CMS.Article.src.Config.ArticleListSettings", "d0/d56/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_config_1_1_article_list_settings.html", null ],
     [ "ZKWeb.Plugins.UnitTest.WebTester.src.Model.AssemblyTestInfo", "d9/d9d/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_model_1_1_assembly_test_info.html", null ],
     [ "Attribute", null, [
       [ "ZKWeb.Plugins.Common.Base.src.Model.FormAttribute", "d9/d06/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_attribute.html", null ],
@@ -72,7 +82,8 @@ var hierarchy =
         [ "ZKWeb.Plugins.Common.Region.src.FormFieldAttributes.RegionEditorAttribute", "da/d07/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_form_field_attributes_1_1_region_editor_attribute.html", null ],
         [ "ZKWeb.Plugins.Shopping.Logistics.src.FormFieldAttributes.LogisticsPriceRulesEditorAttribute", "d4/d4c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_attributes_1_1_logistc4d95d3b9df6d7889ac615ec3fda85fe.html", null ],
         [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldAttributes.ProductMatchedDatasEditorAttribute", "da/d22/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_matched_datas_editor_attribute.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldAttributes.ProductPropertiesEditorAttribute", "d3/d59/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_properties_editor_attribute.html", null ]
+        [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldAttributes.ProductPropertyValuesEditorAttribute", "df/d5c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_034a0338e1fb525998b462a9932ad4ec.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldAttributes.ProductToProperyValuesEditorAttribute", "db/da1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_0a78e3808b59d7bdc6e9b95c43a0b850.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Common.Base.src.Model.GenericConfigAttribute", "d6/db6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_generic_config_attribute.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.Model.LabelCssClassAttribute", "d8/dea/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_label_css_class_attribute.html", null ],
@@ -85,6 +96,8 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Plugins.Common.Captcha.src.Managers.CaptchaManager", "dd/dbe/class_z_k_web_1_1_plugins_1_1_common_1_1_captcha_1_1src_1_1_managers_1_1_captcha_manager.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.CartProduct", "d6/d1d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_cart_product.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Extensions.CartProductExtensions", "de/d2d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_cart_product_extensions.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Managers.CartProductManager", "d9/d5a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_cart_product_manager.html", null ],
     [ "ClassMap", null, [
       [ "ZKWeb.Plugins.CMS.Article.src.Database.ArticleMap", "d1/d83/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_database_1_1_article_map.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.Database.UserMap", "da/d47/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_database_1_1_user_map.html", null ],
@@ -107,15 +120,21 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProductMap", "d4/d42/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProductToPropertyValueMap", "d2/dc3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_to_property_value_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Order.src.Database.UserShippingAddressMap", "d7/d13/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address_map.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductCategoryMap", "d6/d2a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_category_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductMap", "d9/d2e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductMatchedDataMap", "da/da5/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_matched_data_map.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductPropertyMap", "d9/d26/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property_map.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductPropertyValueMap", "d1/d75/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property_value_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductToPropertyValueMap", "d6/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_to_property_value_map.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.ContainerExtensions", "de/d84/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_container_extensions.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Extensions.ContainerExtensions", "d6/de7/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_container_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Model.CountryAndRegion", "da/dc4/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_model_1_1_country_and_region.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.CreateOrderParameters", "df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_parameters.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.CreateOrderProductParameters", "d9/d2a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_product_parameters.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Extensions.CreateOrderProductParametersExtensions", "d2/d9e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_create_order_product_parameters_extensions.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.CreateOrderResult", "de/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_result.html", null ],
     [ "ZKWeb.Plugins.Common.Currency.src.Config.CurrencySettings", "d7/df6/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_config_1_1_currency_settings.html", null ],
-    [ "ZKWeb.Plugins.UnitTest.WebTester.src.Tests.CustomTest", "d2/d1a/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_tests_1_1_custom_test.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.DataEditFormBuilder< Database.GenericClass, Form >", "d1/db0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_data_edit_form_builder.html", [
       [ "ZKWeb.Plugins.Common.GenericClass.src.Scaffolding.GenericClassBuilder.Form", "d2/d4c/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder_1_1_form.html", null ]
     ] ],
@@ -123,9 +142,9 @@ var hierarchy =
       [ "Form", "df/d08/class_form.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.DataTableExtensions", "d5/d74/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_data_table_extensions.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Product.src.Model.EditingMatchedData", "dc/d9f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_matched_data.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Product.src.Model.EditingPropertyValue", "da/d12/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_editing_property_value.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Model.EntityToTableRow< TEntity >", "dd/dd9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_entity_to_table_row.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TypeTraits.EntityTrait", "d7/d65/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_type_traits_1_1_entity_trait.html", null ],
+    [ "ZKWeb.Plugins.CMS.Article.src.Model.ExtraConfigKeys", "d1/dd5/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_model_1_1_extra_config_keys.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.FileUploaderFieldAttributeExtensions", "d6/dfd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_file_uploader_field_attribute_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TemplateFilters.Filters", "df/dcf/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_filters_1_1_filters.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilderExtensions", "dc/dbe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder_extensions.html", null ],
@@ -167,6 +186,9 @@ var hierarchy =
       ] ]
     ] ],
     [ "ZKWeb.Plugins.Common.GenericRecord.src.Database.GenericRecord", "dd/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository< CartProduct >", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.Repositories.CartProductRepository", "d2/dbf/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_repositories_1_1_cart_product_repository.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository< Database.GenericClass >", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html", [
       [ "ZKWeb.Plugins.Common.GenericClass.src.Repositories.GenericClassRepository", "d5/d0e/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_repositories_1_1_generic_class_repository.html", null ]
     ] ],
@@ -183,12 +205,16 @@ var hierarchy =
       [ "ZKWeb.Plugins.Finance.Payment.src.Repositories.PaymentTransactionRepository", "d7/db0/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_repositories_1_1_payment_transaction_repository.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.GenericTag.src.Database.GenericTag", "d5/d5e/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_database_1_1_generic_tag.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.HtmlItemsExtensions", "dd/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_html_items_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Extensions.HtmlItemsExtensions", "de/d02/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_html_items_extensions.html", null ],
     [ "HtmlString", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.Model.MenuItem", "d5/d31/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_menu_item.html", null ]
+      [ "ZKWeb.Plugins.Common.Base.src.Model.HtmlItem", "d5/d82/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_html_item.html", [
+        [ "ZKWeb.Plugins.Common.Base.src.Model.MenuItem", "d5/d31/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_menu_item.html", null ]
+      ] ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Managers.HttpRequestChecker", "de/dce/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_http_request_checker.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Model.IAdminAppBuilder", "d4/d4a/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app_builder.html", [
-      [ "AdminAppBuilder< TData, TApp >", "df/ddf/class_admin_app_builder.html", null ]
+      [ "AdminAppBuilder< TData >", "df/ddf/class_admin_app_builder.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< T >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< Database.Article >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
@@ -212,6 +238,12 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< PaymentTransaction >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentTransactionRecordsApp.TableCallback", "d4/d19/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_transaction_records_app_1_1_table_callback.html", null ]
     ] ],
+    [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< ProductCategory >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductCategoryManageApp.TableCallback", "d4/d01/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app_1_1_table_callback.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< ProductProperty >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductPropertyManageApp.TableCallback", "da/d5a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app_1_1_table_callback.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< TData >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
       [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallbackExtension< TData, TCallback >", "d1/daf/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback_extension.html", null ]
     ] ],
@@ -227,8 +259,10 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.IAjaxTableCallbackExtensions", "d3/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_i_ajax_table_callback_extensions.html", null ],
     [ "ICacheCleaner", null, [
+      [ "ZKWeb.Plugins.CMS.Article.src.Managers.ArticleManager", "dd/d10/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_managers_1_1_article_manager.html", null ],
       [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Managers.ImageManager", "d7/d17/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_managers_1_1_image_manager.html", null ],
       [ "ZKWeb.Plugins.Common.Currency.src.Managers.CurrencyManager", "d4/d4a/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_managers_1_1_currency_manager.html", null ],
+      [ "ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator", "d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html", null ],
       [ "ZKWeb.Plugins.Common.GenericClass.src.Manager.GenericClassManager", "de/d88/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_manager_1_1_generic_class_manager.html", null ],
       [ "ZKWeb.Plugins.Common.GenericTag.src.Manager.GenericTagManager", "df/d30/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_manager_1_1_generic_tag_manager.html", null ],
       [ "ZKWeb.Plugins.Common.Region.src.Managers.RegionManager", "dc/dfa/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_managers_1_1_region_manager.html", null ],
@@ -239,6 +273,7 @@ var hierarchy =
         [ "ZKWeb.Plugins.Common.Region.src.Countries.DE", "d0/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_d_e.html", null ],
         [ "ZKWeb.Plugins.Common.Region.src.Countries.ES", "d6/dba/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_e_s.html", null ],
         [ "ZKWeb.Plugins.Common.Region.src.Countries.FR", "dc/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_f_r.html", null ],
+        [ "ZKWeb.Plugins.Common.Region.src.Countries.GB", "d6/dc8/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_g_b.html", null ],
         [ "ZKWeb.Plugins.Common.Region.src.Countries.GR", "d4/de0/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_g_r.html", null ],
         [ "ZKWeb.Plugins.Common.Region.src.Countries.HK", "dc/dba/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_h_k.html", null ],
         [ "ZKWeb.Plugins.Common.Region.src.Countries.IT", "d6/d74/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_i_t.html", null ],
@@ -251,10 +286,14 @@ var hierarchy =
         [ "ZKWeb.Plugins.Common.Region.src.Countries.US", "db/d7f/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_u_s.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Managers.ProductCategoryManager", "d8/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_category_manager.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager", "d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.ProductCategoryProviders.ProductCategoryJsonProvider", "d2/d57/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_category_providers_1_1_product_category_json_provider.html", null ]
+      [ "ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager", "d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html", null ]
+    ] ],
+    [ "ICacheIsolationPolicy", null, [
+      [ "ZKWeb.Plugins.Common.Base.src.CacheIsolationPolicies.CacheIsolateByIdent", "d6/d8a/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_cache_isolation_policies_1_1_cache_isolate_by_ident.html", null ]
     ] ],
     [ "IController", null, [
+      [ "ZKWeb.Plugins.CMS.Article.src.Controllers.ApiController", "d6/d73/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_controllers_1_1_api_controller.html", null ],
+      [ "ZKWeb.Plugins.CMS.Article.src.Controllers.ArticleController", "dc/ddb/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_controllers_1_1_article_controller.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.Controllers.ApiController", "d7/d0b/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.Controllers.UserController", "d0/db3/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_controllers_1_1_user_controller.html", null ],
       [ "ZKWeb.Plugins.Common.AdminSettings.src.Controllers.ApiController", "db/d1f/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_controllers_1_1_api_controller.html", null ],
@@ -265,6 +304,8 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Region.src.Controllers.ApiController", "df/dc7/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Common.UserPanel.src.Controllers.ApiController", "dc/d15/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Finance.Payment.src.Controllers.PaymentController", "de/dfb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_controllers_1_1_payment_controller.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Controllers.CartController", "d4/dde/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_controllers_1_1_cart_controller.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Controllers.OrderController", "df/d08/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_controllers_1_1_order_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Controllers.ApiController", "de/d69/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Controllers.ProductController", "d2/d5b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers_1_1_product_controller.html", null ]
     ] ],
@@ -323,7 +364,8 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Logistics.src.FormFieldHandlers.LogisticsPriceRulesEditor", "dc/d80/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_form_field_handlers_1_1_logistics_price_rules_editor.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldHandlers.ProductAlbumUploader", "da/de8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers_1_1_product_album_uploader.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldHandlers.ProductMatchedDataEditor", "db/d05/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers_1_1_product_matched_data_editor.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldHandlers.ProductPropertiesEditor", "d4/df4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers_1_1_product_properties_editor.html", null ]
+      [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldHandlers.ProductPropertyValuesEditor", "d9/d5f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers_1_1_product_property_values_editor.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.FormFieldHandlers.ProductToProperyValuesEditor", "dc/d64/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers_1_1_product_to_propery_values_editor.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IFormFieldParseFromEnv", "d4/d07/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_form_field_parse_from_env.html", [
       [ "ZKWeb.Plugins.Common.Base.src.Model.FileUploaderFieldAttribute", "d1/d1e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_file_uploader_field_attribute.html", null ],
@@ -380,6 +422,7 @@ var hierarchy =
         [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder", "d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.ModelFormBuilder", "de/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_model_form_builder.html", [
+        [ "ZKWeb.Plugins.CMS.Article.src.GenericFormsForAdminSettings.ArticleListSettingsForm.Form", "d0/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d.html", null ],
         [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Scaffolding.ImageBrowserBuilder.Form", "dc/d59/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Common.Admin.src.Forms.AdminLoginForm", "dc/de4/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_admin_login_form.html", null ],
         [ "ZKWeb.Plugins.Common.Admin.src.Forms.UserLoginForm", "d4/dc5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_user_login_form.html", null ],
@@ -402,13 +445,16 @@ var hierarchy =
         [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentApiManageApp.SelectTypeForAddForm", "d3/deb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form.html", null ],
         [ "ZKWeb.Plugins.Finance.Payment.src.Forms.TestPaymentForm", "d1/d92/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_forms_1_1_test_payment_form.html", null ],
         [ "ZKWeb.Plugins.Finance.Payment.src.PaymentApiHandlers.TestApiHandler.TestApiPayForm", "d8/d4e/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_test_api_pay_form.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Order.src.GenericFormsForAdminSettings.OrderSettingsForm.Form", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductAlbumSettingsForm.Form", "da/dfc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1c754364b8dcf191aa9c156ed6753b052.html", null ],
         [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductListSettingsForm.Form", "d7/dfb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Config.LanguageSwitcherSettings", "dc/dd7/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_config_1_1_language_switcher_settings.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductCategory", "d0/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_category.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductProperty", "dc/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property.html", null ],
-      [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductPropertyValue", "d8/d17/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value.html", null ]
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductCategory", "dd/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_category.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductProperty", "d4/d55/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductPropertyValue", "da/de4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property_value.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.TypeTraits.ProductStateTrait", "d6/d04/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_state_trait.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.TypeTraits.ProductTypeTrait", "da/d0b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_type_trait.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IListItemGroupsProvider", "d1/d37/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_list_item_groups_provider.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.ListItemProviders.PrivilegesListItemGroupsProvider", "de/dec/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_list_item_providers_1_1_privileges_list_item_groups_provider.html", null ]
@@ -428,6 +474,8 @@ var hierarchy =
       [ "ZKWeb.Plugins.Finance.Payment.src.ListItemProviders.PaymentTransactionTypeListItemProvider", "d0/d84/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_list_item_providers_1_1_payment_trada207a397b70ad0bdc31efa53c71203d.html", null ],
       [ "ZKWeb.Plugins.Shopping.Logistics.src.ListItemProviders.LogisticsTypeListItemProvider", "d2/d09/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_list_item_providers_1_1_logistics_type_list_item_provider.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.ListItemProviders.ProductCategoryListItemProvider", "d0/d16/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_category_list_item_provider.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.ListItemProviders.ProductNonSalesPropertyListItemProvider", "df/dde/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_no120e79e4972999fce3f1c74d027d9dec.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Product.src.ListItemProviders.ProductSalesPropertyListItemProvider", "d3/ddf/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_sales_property_list_item_provider.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.ListItemProviders.ProductStateListItemProvider", "dc/d59/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_state_list_item_provider.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.ListItemProviders.ProductTypeListItemProvider", "d7/d3e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers_1_1_product_type_list_item_provider.html", null ]
     ] ],
@@ -441,11 +489,13 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.MenuPageBase.src.Model.IMenuProvider", "df/d6c/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_model_1_1_i_menu_provider.html", [
       [ "ZKWeb.Plugins.Common.AdminSettings.src.Model.IAdminSettingsMenuProvider", "da/d00/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_model_1_1_i_admin_settings_menu_provider.html", [
         [ "GenericFormForAdminSettings", "d2/d16/class_generic_form_for_admin_settings.html", [
+          [ "ZKWeb.Plugins.CMS.Article.src.GenericFormsForAdminSettings.ArticleListSettingsForm", "d4/d16/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_article_list_settings_form.html", null ],
           [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.LocaleSettingsForm", "d8/d91/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settings_1_1_locale_settings_form.html", null ],
           [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.WebsiteSettingsForm", "dc/dd6/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settings_1_1_website_settings_form.html", null ],
           [ "ZKWeb.Plugins.Common.Currency.src.GenericFormsForAdminSettings.CurrencySettingsForm", "db/d80/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_generic_forms_for_admin_settings_1_1_currency_settings_form.html", null ],
           [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.GenericFormsForAdminSettings.LanguageSwitcherSettingsForm", "da/d13/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se2f7872d2e6ef3a4b2e3ddcbe059f6bd9.html", null ],
           [ "ZKWeb.Plugins.Common.Region.src.GenericFormsForAdminSettings.RegionSettingsForm", "db/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_generic_forms_for_admin_settings_1_1_region_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Shopping.Order.src.GenericFormsForAdminSettings.OrderSettingsForm", "d6/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form.html", null ],
           [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductAlbumSettingsForm", "d8/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_album_settings_form.html", null ],
           [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductListSettingsForm", "d7/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_list_settings_form.html", null ]
         ] ],
@@ -463,6 +513,12 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Model.IModelFormBuilder", "d7/d06/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_model_form_builder.html", [
       [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.ModelFormBuilder", "de/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_model_form_builder.html", null ]
     ] ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.IOrderPriceCalculator", "d6/d3f/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_price_calculator.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.OrderPriceCalculators.DefaultCalculator", "d8/d9d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_order_price_calculators_1_1_default_calculator.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.IOrderProductUnitPriceCalculator", "d1/dc0/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_product_unit_price_calculator.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.OrderProductUnitPriceCalaculators.DefaultCalculator", "d7/d32/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_order_product_unit_price_calaculators_1_1_default_calculator.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Model.IPaymentApiHandler", "d8/d99/interface_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_model_1_1_i_payment_api_handler.html", [
       [ "ZKWeb.Plugins.Finance.Payment.Alipay.src.PaymentApiHandlers.AlipayApiHandler", "de/dd1/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1_alipay_1_1src_1_1_payment_api_handlers_1_1_alipay_api_handler.html", null ],
       [ "ZKWeb.Plugins.Finance.Payment.src.PaymentApiHandlers.TestApiHandler", "d1/d45/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler.html", null ],
@@ -476,11 +532,13 @@ var hierarchy =
       [ "ZKWeb.Plugins.Finance.Payment.src.PaymentTransactionHandlers.TestTransactionHandler", "d9/d1f/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_transaction_handlers_1_1_test_transaction_handler.html", null ]
     ] ],
     [ "IPlugin", null, [
+      [ "ZKWeb.Plugins.CMS.Article.src.Plugin", "d5/dcf/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.Plugin", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.Plugin", "d0/d21/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Plugin", "d3/d9f/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Common.UserPanel.src.Plugin", "dd/da3/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Demo.src.Plugin", "d2/db1/class_z_k_web_1_1_plugins_1_1_demo_1_1src_1_1_plugin.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Plugin", "d2/d7f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_plugin.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Plugin", "d1/d88/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_plugin.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Model.IPrivilegesProvider", "d5/db6/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_privileges_provider.html", [
@@ -499,12 +557,15 @@ var hierarchy =
         ] ]
       ] ]
     ] ],
-    [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductCategoryProvider", "df/dbd/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_category_provider.html", [
-      [ "ZKWeb.Plugins.Shopping.Product.src.ProductCategoryProviders.ProductCategoryJsonProvider", "d2/d57/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_category_providers_1_1_product_category_json_provider.html", null ]
-    ] ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductMatchedDataMatcher", "d7/de4/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_matched_data_matcher.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchedDataMatchers.OrderCountMatcher", "d3/d94/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_order_count_matcher.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchedDataMatchers.PropertyMatcher", "d2/d5b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_property_matcher.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductMatchParametersComparer", "d7/d20/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_comparer.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchParametersComparers.PropertiesComparer", "d9/dc6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_match_parameters_comparers_1_1_properties_comparer.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductMatchParametersDescriptionProvider", "da/d87/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_description_provider.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchParametersDescriptionProviders.PropertiesDescriptionProvider", "d9/df5/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_match_parameters_descripti3bb837b91548e5d8770a78e65e2dec08.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductSalesInfoDisplayField", "d1/d90/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_sales_info_display_field.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.ProductSalesInfoDisplayFields.BrandDisplayField", "d1/d00/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_brand_display_field.html", null ],
@@ -527,10 +588,15 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IScheduledTaskExecutor", "de/d19/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_scheduled_task_executor.html", [
       [ "ZKWeb.Plugins.Common.Base.src.ScheduledTasks.LogCleaner", "db/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scheduled_tasks_1_1_log_cleaner.html", null ],
-      [ "ZKWeb.Plugins.Common.Base.src.ScheduledTasks.SessionCleaner", "d9/da2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scheduled_tasks_1_1_session_cleaner.html", null ]
+      [ "ZKWeb.Plugins.Common.Base.src.ScheduledTasks.SessionCleaner", "d9/da2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scheduled_tasks_1_1_session_cleaner.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.ScheduledTasks.CartProductCleaner", "d9/d98/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_cart_product_cleaner.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.ScheduledTasks.OrderAutoConfirmer", "d8/da6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_order_auto_confirmer.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.SerialGenerate.src.Model.ISerialGenerateCallback", "d4/dd1/interface_z_k_web_1_1_plugins_1_1_common_1_1_serial_generate_1_1src_1_1_model_1_1_i_serial_generate_callback.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IStaticTableCallback< T >", "d1/da7/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_static_table_callback.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Model.IStaticTableCallback< Database.Article >", "d1/da7/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_static_table_callback.html", [
+      [ "ZKWeb.Plugins.CMS.Article.src.StaticTableCallbacks.ArticleTableCallback", "dd/d04/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_static_table_callbacks_1_1_article_table_callback.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IStaticTableCallback< Database.Product >", "d1/da7/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_static_table_callback.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.StaticTableCallbacks.ProductTableCallback", "d5/dcd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_static_table_callbacks_1_1_product_table_callback.html", null ]
     ] ],
@@ -629,6 +695,10 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Logistics.src.Translates.ko_KR", "d9/d93/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_translates_1_1ko___k_r.html", null ],
       [ "ZKWeb.Plugins.Shopping.Logistics.src.Translates.zh_CN", "d1/d30/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_translates_1_1zh___c_n.html", null ],
       [ "ZKWeb.Plugins.Shopping.Logistics.src.Translates.zh_TW", "dd/d17/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_translates_1_1zh___t_w.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Translates.ja_JP", "dd/d80/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_translates_1_1ja___j_p.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Translates.ko_KR", "d7/d3d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_translates_1_1ko___k_r.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Translates.zh_CN", "de/d34/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_translates_1_1zh___c_n.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Translates.zh_TW", "d3/d1f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_translates_1_1zh___t_w.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Translates.ja_JP", "d8/dda/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_translates_1_1ja___j_p.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Translates.ko_KR", "d2/d98/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_translates_1_1ko___k_r.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Translates.zh_CN", "dd/d33/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_translates_1_1zh___c_n.html", null ],
@@ -642,9 +712,6 @@ var hierarchy =
       [ "ZKWeb.Plugins.UnitTest.WebTester.src.UnitTestEventHandlers.UnitTestWebEventHandler", "d7/db7/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_unit_test_event_handlers_1_1_unit_test_web_event_handler.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Model.IUserLoginCallback", "dc/de1/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_user_login_callback.html", null ],
-    [ "IUserType", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.Model.JsonSerializedType< T >", "d5/db3/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_json_serialized_type.html", null ]
-    ] ],
     [ "IWebsiteStartHandler", null, [
       [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Scaffolding.ImageBrowserBuilder", "d4/d27/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminApp", "d1/d2c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app.html", null ],
@@ -653,25 +720,25 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Config.LocaleSettings", "df/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_config_1_1_locale_settings.html", null ],
     [ "ZKWeb.Plugins.Shopping.Logistics.src.Database.Logistics", "d5/d55/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_database_1_1_logistics.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.LogoManager", "d8/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_logo_manager.html", null ],
-    [ "MemoryCache", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.Collections.MemoryCacheByIdentity< TKey, TValue >", "d4/d26/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity.html", null ],
-      [ "ZKWeb.Plugins.Common.Base.src.Collections.MemoryCacheByIdentityAndLocale< TKey, TValue >", "d2/d96/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections_1_1_memory_cache_by_identity_and_locale.html", null ]
-    ] ],
-    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.MenuItemsExtensions", "df/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.MenuItemsExtensions", "d5/da6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.MenuItemsExtensions", "df/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.Order", "da/da0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderComment", "d0/de9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_comment.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderDelivery", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderDeliveryToOrderProduct", "de/da9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_to_order_product.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Managers.OrderManager", "d4/ddb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_order_manager.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderPriceCalcResult", "df/da2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_price_calc_result.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Extensions.OrderPriceCalcResultExtensions", "d8/d51/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_order_price_calc_result_extensions.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProduct", "d9/d4d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderProductDisplayInfo", "d2/d69/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_product_display_info.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProductToPropertyValue", "d9/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_to_property_value.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Config.OrderSettings", "d5/da0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_config_1_1_order_settings.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.PaginationExtensions", "d9/de7/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_pagination_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Tests.Extensions.PaginationExtensionsTest", "dc/db7/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_tests_1_1_extensions_1_1_pagination_extensions_test.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderPriceCalcResult.Part", "db/dbe/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_price_calc_result_1_1_part.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Database.PaymentApi", "d4/d70/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_database_1_1_payment_api.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Database.PaymentTransaction", "d7/d6e/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_database_1_1_payment_transaction.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Managers.PaymentTransactionManager", "d1/d3f/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_managers_1_1_payment_transaction_manager.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Order.src.Model.PriceCalcResult", "de/d19/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_price_calc_result.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Order.src.Model.PricePart", "d3/d7e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_price_part.html", null ],
     [ "ZKWeb.Plugins.Shopping.Logistics.src.Model.PriceRule", "d9/d8d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_model_1_1_price_rule.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.PrivilegesChecker", "d3/dcb/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_privileges_checker.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.PrivilegesTranslator", "d7/d67/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_privileges_translator.html", null ],
@@ -695,11 +762,14 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchedDataConditionBinders.PropertiesBinder", "d1/dab/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_condition_binders_1_1_properties_binder.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Extensions.ProductMatchedDataExtensions", "dc/da9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_matched_data_extensions.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductMatchedDataForEdit", "de/d92/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_matched_data_for_edit.html", null ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Extensions.ProductPropertyExtensions", "d6/dff/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_extensions.html", null ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Extensions.ProductPropertyValueExtensions", "d6/db3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_value_extensions.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Product.src.TypeTraits.ProductStateTrait", "d6/d04/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_state_trait.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductPropertyValueForEdit", "d8/d2c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_property_value_for_edit.html", null ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductToPropertyValue", "de/dc8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_to_property_value.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Product.src.TypeTraits.ProductTypeTrait", "da/d0b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_type_traits_1_1_product_type_trait.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Extensions.ProductToPropertyValueExtensions", "da/dc1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_to_property_value_extensions.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductToPropertyValueForEdit", "dc/d1e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_edit.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductToPropertyValueForMatch", "dc/d0c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_match.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TypeTraits.RecyclableTrait", "d4/da2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_type_traits_1_1_recyclable_trait.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Model.Region", "dd/d90/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_model_1_1_region.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Config.RegionSettings", "da/d25/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_config_1_1_region_settings.html", null ],
@@ -732,6 +802,12 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< PaymentTransaction, Form >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentTransactionRecordsApp.Form", "d5/dfa/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_transaction_records_app_1_1_form.html", null ]
     ] ],
+    [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< ProductCategory, Form >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductCategoryManageApp.Form", "d3/d49/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app_1_1_form.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< ProductProperty, Form >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductPropertyManageApp.Form", "d8/d3d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app_1_1_form.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< User, BaseForm >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.AdminManageApp.BaseForm", "da/d45/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app_1_1_base_form.html", [
         [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.AdminManageApp.AddForm", "dc/d08/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app_1_1_add_form.html", null ],
@@ -746,9 +822,18 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.RoleManageApp.Form", "d5/d76/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_role_manage_app_1_1_form.html", null ]
     ] ],
     [ "Tag", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeCss", "db/d9f/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css.html", null ],
-      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeJs", "d8/da1/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.CopyrightText", "d4/d52/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_copyright_text.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeCssHere", "d8/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_here.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeCssLater", "d3/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_later.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeJsHere", "d5/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_here.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeJsLater", "d9/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_later.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderIncludedCss", "d2/d16/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_css.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderIncludedJs", "de/d24/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_js.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderMetadata", "d4/ddd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_metadata.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderTitle", "da/dfb/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_title.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UrlPagination", "dc/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_url_pagination.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UseMetaDescription", "d3/d01/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_description.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UseMetaKeywords", "d8/dc5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_keywords.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UseTitle", "d4/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_title.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.WebsiteName", "d6/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_website_name.html", null ]
     ] ],

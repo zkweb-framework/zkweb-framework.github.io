@@ -109,7 +109,6 @@ $(document).ready(function(){initNavTree('d7/da8/class_z_k_web_1_1_templating_1_
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
 <a href="#pro-methods">Protected 成员函数</a> &#124;
-<a href="#pro-attribs">Protected 属性</a> &#124;
 <a href="#properties">属性</a> &#124;
 <a href="../../d2/d92/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
@@ -125,12 +124,15 @@ $(document).ready(function(){initNavTree('d7/da8/class_z_k_web_1_1_templating_1_
  <div class="center">
   <img src="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.png" usemap="#ZKWeb.Templating.AreaSupport.TemplateAreaManager_map" alt=""/>
   <map id="ZKWeb.Templating.AreaSupport.TemplateAreaManager_map" name="ZKWeb.Templating.AreaSupport.TemplateAreaManager_map">
-<area href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html" title="缓存清理器的接口 这个回调用于清理网站的页面和数据缓存 " alt="ZKWeb.Plugin.Interfaces.ICacheCleaner" shape="rect" coords="0,0,327,24"/>
+<area href="../../d4/d31/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_cleaner.html" title="缓存清理器的接口 这个回调用于清理网站的页面和数据缓存 " alt="ZKWeb.Cache.Interfaces.ICacheCleaner" shape="rect" coords="0,0,327,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
+<tr class="memitem:a364e5dac412b0ded9802282c50185eff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a364e5dac412b0ded9802282c50185eff">TemplateAreaManager</a> ()</td></tr>
+<tr class="memdesc:a364e5dac412b0ded9802282c50185eff"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#a364e5dac412b0ded9802282c50185eff">更多...</a><br /></td></tr>
+<tr class="separator:a364e5dac412b0ded9802282c50185eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa43b8444840184bd3788905be00b3c48"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html">TemplateArea</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#aa43b8444840184bd3788905be00b3c48">GetArea</a> (string areaId)</td></tr>
 <tr class="memdesc:aa43b8444840184bd3788905be00b3c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取区域 没有时新建指定Id的区域并返回  <a href="#aa43b8444840184bd3788905be00b3c48">更多...</a><br /></td></tr>
 <tr class="separator:aa43b8444840184bd3788905be00b3c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +142,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a64c60bd0adda24ddc7c8b30171a49fee"><td class="memItemLeft" align="right" valign="top">virtual List&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a64c60bd0adda24ddc7c8b30171a49fee">GetCustomWidgets</a> (string areaId)</td></tr>
 <tr class="memdesc:a64c60bd0adda24ddc7c8b30171a49fee"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取区域的自定义模块列表 没有时返回null  <a href="#a64c60bd0adda24ddc7c8b30171a49fee">更多...</a><br /></td></tr>
 <tr class="separator:a64c60bd0adda24ddc7c8b30171a49fee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af31168501e02fa56842ab3ddb4789cdc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#af31168501e02fa56842ab3ddb4789cdc">SetCustomWidgets</a> (string areaId, List&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt; widgets)</td></tr>
-<tr class="memdesc:af31168501e02fa56842ab3ddb4789cdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置区域的自定义模块列表 列表等于null时删除  <a href="#af31168501e02fa56842ab3ddb4789cdc">更多...</a><br /></td></tr>
-<tr class="separator:af31168501e02fa56842ab3ddb4789cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5624cc1c1a11d5647331cb9fa77c9d24"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a5624cc1c1a11d5647331cb9fa77c9d24">SetCustomWidgets</a> (string areaId, IList&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt; widgets)</td></tr>
+<tr class="memdesc:a5624cc1c1a11d5647331cb9fa77c9d24"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置区域的自定义模块列表 列表等于null时删除  <a href="#a5624cc1c1a11d5647331cb9fa77c9d24">更多...</a><br /></td></tr>
+<tr class="separator:a5624cc1c1a11d5647331cb9fa77c9d24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a2f1c17511c93afa9c197a6ee682f8"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a15a2f1c17511c93afa9c197a6ee682f8">RenderWidget</a> (Context context, <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> widget)</td></tr>
 <tr class="memdesc:a15a2f1c17511c93afa9c197a6ee682f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画模块 返回描画结果  <a href="#a15a2f1c17511c93afa9c197a6ee682f8">更多...</a><br /></td></tr>
 <tr class="separator:a15a2f1c17511c93afa9c197a6ee682f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,33 +158,48 @@ Protected 成员函数</h2></td></tr>
 <tr class="memdesc:ad1463c44fcebca97deb682b85ebe38e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取保存区域的自定义模块列表的Json绝对路径 路径 App_Data/areas/{areaId}.widgets  <a href="#ad1463c44fcebca97deb682b85ebe38e6">更多...</a><br /></td></tr>
 <tr class="separator:ad1463c44fcebca97deb682b85ebe38e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected 属性</h2></td></tr>
-<tr class="memitem:a8b1222c6d9ab69338936e1269f259fe1"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="../../db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html">TemplateArea</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a8b1222c6d9ab69338936e1269f259fe1">Areas</a></td></tr>
-<tr class="memdesc:a8b1222c6d9ab69338936e1269f259fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知的区域列表  <a href="#a8b1222c6d9ab69338936e1269f259fe1">更多...</a><br /></td></tr>
-<tr class="separator:a8b1222c6d9ab69338936e1269f259fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a66777cb95fd44b653a4146e4fc716c89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a66777cb95fd44b653a4146e4fc716c89">WidgetRenderCache</a></td></tr>
-<tr class="memdesc:a66777cb95fd44b653a4146e4fc716c89"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块描画结果的缓存 { 模块名称和参数: 描画结果, ... }  <a href="#a66777cb95fd44b653a4146e4fc716c89">更多...</a><br /></td></tr>
-<tr class="separator:a66777cb95fd44b653a4146e4fc716c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab35bb6fd628fbf58a49bb7ed2deb5d5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, <a class="el" href="../../dd/dbe/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info.html">TemplateWidgetInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#ab35bb6fd628fbf58a49bb7ed2deb5d5e">WidgetInfoCache</a></td></tr>
-<tr class="memdesc:ab35bb6fd628fbf58a49bb7ed2deb5d5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块信息的缓存 { 模块名称: 模块信息, ... }  <a href="#ab35bb6fd628fbf58a49bb7ed2deb5d5e">更多...</a><br /></td></tr>
-<tr class="separator:ab35bb6fd628fbf58a49bb7ed2deb5d5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2fffd1655115580319d4d36590cc28e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, List&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a2fffd1655115580319d4d36590cc28e3">CustomWidgetsCache</a></td></tr>
-<tr class="memdesc:a2fffd1655115580319d4d36590cc28e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义模块列表的缓存 { 区域Id: 自定义模块列表, ... }  <a href="#a2fffd1655115580319d4d36590cc28e3">更多...</a><br /></td></tr>
-<tr class="separator:a2fffd1655115580319d4d36590cc28e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
 <tr class="memitem:ad8a82fb99ef10a69c4beaa3cc8dc9d04"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#ad8a82fb99ef10a69c4beaa3cc8dc9d04">WidgetInfoCacheTime</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ad8a82fb99ef10a69c4beaa3cc8dc9d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块信息的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改  <a href="#ad8a82fb99ef10a69c4beaa3cc8dc9d04">更多...</a><br /></td></tr>
+<tr class="memdesc:ad8a82fb99ef10a69c4beaa3cc8dc9d04"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块信息的缓存时间 默认是2秒，可通过网站配置指定  <a href="#ad8a82fb99ef10a69c4beaa3cc8dc9d04">更多...</a><br /></td></tr>
 <tr class="separator:ad8a82fb99ef10a69c4beaa3cc8dc9d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add36b6b139c062058936878bb84f4dc6"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#add36b6b139c062058936878bb84f4dc6">CustomWidgetsCacheTime</a> = TimeSpan.FromSeconds(1)<code> [get, set]</code></td></tr>
-<tr class="memdesc:add36b6b139c062058936878bb84f4dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义模块列表的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改  <a href="#add36b6b139c062058936878bb84f4dc6">更多...</a><br /></td></tr>
+<tr class="memitem:add36b6b139c062058936878bb84f4dc6"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#add36b6b139c062058936878bb84f4dc6">CustomWidgetsCacheTime</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:add36b6b139c062058936878bb84f4dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义模块列表的缓存时间 默认是2秒，可通过网站配置指定  <a href="#add36b6b139c062058936878bb84f4dc6">更多...</a><br /></td></tr>
 <tr class="separator:add36b6b139c062058936878bb84f4dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b1222c6d9ab69338936e1269f259fe1"><td class="memItemLeft" align="right" valign="top">Dictionary&lt; string, <a class="el" href="../../db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html">TemplateArea</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a8b1222c6d9ab69338936e1269f259fe1">Areas</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a8b1222c6d9ab69338936e1269f259fe1"><td class="mdescLeft">&#160;</td><td class="mdescRight">已知的区域列表  <a href="#a8b1222c6d9ab69338936e1269f259fe1">更多...</a><br /></td></tr>
+<tr class="separator:a8b1222c6d9ab69338936e1269f259fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37645cfc4d57e4b0bd045466a70d75ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt; string, <a class="el" href="../../dd/dbe/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info.html">TemplateWidgetInfo</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#a37645cfc4d57e4b0bd045466a70d75ff">WidgetInfoCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a37645cfc4d57e4b0bd045466a70d75ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块信息的缓存 按当前设备隔离 { 模块名称: 模块信息, ... }  <a href="#a37645cfc4d57e4b0bd045466a70d75ff">更多...</a><br /></td></tr>
+<tr class="separator:a37645cfc4d57e4b0bd045466a70d75ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d534e659e8decc41028fad6bb242e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt; string, List&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#af1d534e659e8decc41028fad6bb242e7">CustomWidgetsCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af1d534e659e8decc41028fad6bb242e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">自定义模块列表的缓存 按当前设备隔离 { 区域Id: 自定义模块列表, ... }  <a href="#af1d534e659e8decc41028fad6bb242e7">更多...</a><br /></td></tr>
+<tr class="separator:af1d534e659e8decc41028fad6bb242e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2d5ac62d8052e57cf37af2172c0195f"><td class="memItemLeft" align="right" valign="top">ConcurrentDictionary&lt; string, <a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html#af2d5ac62d8052e57cf37af2172c0195f">WidgetRenderCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af2d5ac62d8052e57cf37af2172c0195f"><td class="mdescLeft">&#160;</td><td class="mdescRight">模块描画结果的缓存 { 隔离策略: { 模块名称和参数: 描画结果, ...}, ... }  <a href="#af2d5ac62d8052e57cf37af2172c0195f">更多...</a><br /></td></tr>
+<tr class="separator:af2d5ac62d8052e57cf37af2172c0195f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>提供区域(Area)和模块(Widget)的管理 </p>
-</div><h2 class="groupheader">成员函数说明</h2>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a364e5dac412b0ded9802282c50185eff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZKWeb.Templating.AreaSupport.TemplateAreaManager.TemplateAreaManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
 <a class="anchor" id="a7e6d82e8ddec8a844f9f3ce52d84011a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -206,7 +223,7 @@ Protected 属性</h2></td></tr>
 
 <p>清理缓存 </p>
 
-<p>实现了 <a class="el" href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html#aded14786337245c895252c66fc9c7617">ZKWeb.Plugin.Interfaces.ICacheCleaner</a>.</p>
+<p>实现了 <a class="el" href="../../d4/d31/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_cleaner.html#a7e2d8f24fbef9a8c620f06f9b6d3f522">ZKWeb.Cache.Interfaces.ICacheCleaner</a>.</p>
 
 </div>
 </div>
@@ -386,7 +403,7 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af31168501e02fa56842ab3ddb4789cdc"></a>
+<a class="anchor" id="a5624cc1c1a11d5647331cb9fa77c9d24"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -402,7 +419,7 @@ Protected 属性</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">List&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt;&#160;</td>
+          <td class="paramtype">IList&lt; <a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a> &gt;&#160;</td>
           <td class="paramname"><em>widgets</em>&#160;</td>
         </tr>
         <tr>
@@ -429,7 +446,7 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">类成员变量说明</h2>
+<h2 class="groupheader">属性说明</h2>
 <a class="anchor" id="a8b1222c6d9ab69338936e1269f259fe1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -443,16 +460,16 @@ Protected 属性</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">            <span class="keyword">new</span> Dictionary&lt;string, TemplateArea&gt;()</div></div><!-- fragment -->
+
 <p>已知的区域列表 </p>
 
 </div>
 </div>
-<a class="anchor" id="a2fffd1655115580319d4d36590cc28e3"></a>
+<a class="anchor" id="af1d534e659e8decc41028fad6bb242e7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -460,65 +477,20 @@ Protected 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, List&lt;<a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a>&gt; &gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.CustomWidgetsCache</td>
+          <td class="memname"><a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt;string, List&lt;<a class="el" href="../../d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html">TemplateWidget</a>&gt; &gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.CustomWidgetsCache</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">            <span class="keyword">new</span> MemoryCache&lt;string, List&lt;TemplateWidget&gt;&gt;()</div></div><!-- fragment -->
-<p>自定义模块列表的缓存 { 区域Id: 自定义模块列表, ... } </p>
+
+<p>自定义模块列表的缓存 按当前设备隔离 { 区域Id: 自定义模块列表, ... } </p>
 
 </div>
 </div>
-<a class="anchor" id="ab35bb6fd628fbf58a49bb7ed2deb5d5e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, <a class="el" href="../../dd/dbe/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info.html">TemplateWidgetInfo</a>&gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.WidgetInfoCache</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">            <span class="keyword">new</span> MemoryCache&lt;string, TemplateWidgetInfo&gt;()</div></div><!-- fragment -->
-<p>模块信息的缓存 { 模块名称: 模块信息, ... } </p>
-
-</div>
-</div>
-<a class="anchor" id="a66777cb95fd44b653a4146e4fc716c89"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, string&gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.WidgetRenderCache</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<b>初始值:</b><div class="fragment"><div class="line">=</div><div class="line">            <span class="keyword">new</span> MemoryCache&lt;string, string&gt;()</div></div><!-- fragment -->
-<p>模块描画结果的缓存 { 模块名称和参数: 描画结果, ... } </p>
-
-</div>
-</div>
-<h2 class="groupheader">属性说明</h2>
 <a class="anchor" id="add36b6b139c062058936878bb84f4dc6"></a>
 <div class="memitem">
 <div class="memproto">
@@ -527,7 +499,7 @@ Protected 属性</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">TimeSpan ZKWeb.Templating.AreaSupport.TemplateAreaManager.CustomWidgetsCacheTime = TimeSpan.FromSeconds(1)</td>
+          <td class="memname">TimeSpan ZKWeb.Templating.AreaSupport.TemplateAreaManager.CustomWidgetsCacheTime</td>
         </tr>
       </table>
   </td>
@@ -537,7 +509,29 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>自定义模块列表的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改 </p>
+<p>自定义模块列表的缓存时间 默认是2秒，可通过网站配置指定 </p>
+
+</div>
+</div>
+<a class="anchor" id="a37645cfc4d57e4b0bd045466a70d75ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt;string, <a class="el" href="../../dd/dbe/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info.html">TemplateWidgetInfo</a>&gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.WidgetInfoCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模块信息的缓存 按当前设备隔离 { 模块名称: 模块信息, ... } </p>
 
 </div>
 </div>
@@ -559,7 +553,29 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>模块信息的缓存时间 缓存用于减少硬盘查询次数，但时间不能超过1秒否则影响修改 </p>
+<p>模块信息的缓存时间 默认是2秒，可通过网站配置指定 </p>
+
+</div>
+</div>
+<a class="anchor" id="af2d5ac62d8052e57cf37af2172c0195f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConcurrentDictionary&lt;string, <a class="el" href="../../d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html">IsolatedMemoryCache</a>&lt;string, string&gt; &gt; ZKWeb.Templating.AreaSupport.TemplateAreaManager.WidgetRenderCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>模块描画结果的缓存 { 隔离策略: { 模块名称和参数: 描画结果, ...}, ... } </p>
 
 </div>
 </div>

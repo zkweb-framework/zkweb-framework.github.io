@@ -1,8 +1,17 @@
 var namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags =
 [
-    [ "IncludeCss", "db/d9f/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css.html", "db/d9f/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css" ],
-    [ "IncludeJs", "d8/da1/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js.html", "d8/da1/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js" ],
+    [ "CopyrightText", "d4/d52/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_copyright_text.html", "d4/d52/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_copyright_text" ],
+    [ "IncludeCssHere", "d8/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_here.html", "d8/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_here" ],
+    [ "IncludeCssLater", "d3/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_later.html", "d3/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_later" ],
+    [ "IncludeJsHere", "d5/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_here.html", "d5/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_here" ],
+    [ "IncludeJsLater", "d9/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_later.html", "d9/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_later" ],
+    [ "RenderIncludedCss", "d2/d16/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_css.html", "d2/d16/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_css" ],
+    [ "RenderIncludedJs", "de/d24/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_js.html", "de/d24/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_js" ],
+    [ "RenderMetadata", "d4/ddd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_metadata.html", "d4/ddd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_metadata" ],
+    [ "RenderTitle", "da/dfb/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_title.html", "da/dfb/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_title" ],
     [ "UrlPagination", "dc/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_url_pagination.html", "dc/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_url_pagination" ],
+    [ "UseMetaDescription", "d3/d01/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_description.html", "d3/d01/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_description" ],
+    [ "UseMetaKeywords", "d8/dc5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_keywords.html", "d8/dc5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_keywords" ],
     [ "UseTitle", "d4/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_title.html", "d4/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_title" ],
     [ "WebsiteName", "d6/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_website_name.html", "d6/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_website_name" ]
 ];

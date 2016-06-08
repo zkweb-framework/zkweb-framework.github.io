@@ -1,5 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_properties_editor_attribute =
-[
-    [ "ProductPropertiesEditorAttribute", "d3/d59/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_properties_editor_attribute.html#ab204803dd643a3662d3848dcdf6d8821", null ],
-    [ "CategoryFieldName", "d3/d59/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_properties_editor_attribute.html#a2b7269545bd77e4b78407ca40c4d1f10", null ]
-];

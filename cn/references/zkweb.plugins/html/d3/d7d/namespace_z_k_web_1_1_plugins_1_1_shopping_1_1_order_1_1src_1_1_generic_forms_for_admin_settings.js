@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings =
+[
+    [ "OrderSettingsForm", "d6/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form.html", "d6/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form" ]
+];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['imageresizemode',['ImageResizeMode',['../da/d07/namespace_z_k_web_1_1_utils_1_1_extensions.html#aed366167ca0a415bd48e8b5bf98b3fc5',1,'ZKWeb::Utils::Extensions']]]
+  ['devicetypes',['DeviceTypes',['../d9/dc2/class_z_k_web_1_1_utils_1_1_functions_1_1_http_device_utils.html#a91508a31ba838fe29f4759f9eb25012d',1,'ZKWeb::Utils::Functions::HttpDeviceUtils']]]
 ];

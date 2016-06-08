@@ -10,7 +10,5 @@ var dir_70e677ace5f030af4d54b4056693509f =
     [ "PluginManager.cs", "d9/dad/_plugin_manager_8cs.html", [
       [ "PluginManager", "d3/d71/class_z_k_web_1_1_plugin_1_1_plugin_manager.html", "d3/d71/class_z_k_web_1_1_plugin_1_1_plugin_manager" ]
     ] ],
-    [ "PluginReloader.cs", "d6/da7/_plugin_reloader_8cs.html", [
-      [ "PluginReloader", "dd/d00/class_z_k_web_1_1_plugin_1_1_plugin_reloader.html", "dd/d00/class_z_k_web_1_1_plugin_1_1_plugin_reloader" ]
-    ] ]
+    [ "PluginReloader.cs", "d6/da7/_plugin_reloader_8cs.html", null ]
 ];

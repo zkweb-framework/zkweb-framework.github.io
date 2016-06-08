@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mssql',['MSSQL',['../dc/d40/class_z_k_web_1_1_server_1_1_database_types.html#a4ee23a4b010a3df22cd650ec2468fcbb',1,'ZKWeb::Server::DatabaseTypes']]],
-  ['mysql',['MySQL',['../dc/d40/class_z_k_web_1_1_server_1_1_database_types.html#a3669e91c56c5bec3702d69a23622987b',1,'ZKWeb::Server::DatabaseTypes']]]
+  ['mssql',['MSSQL',['../d9/d80/class_z_k_web_1_1_database_1_1_database_types.html#a0687fc2152552d7012b87dfa617cfc65',1,'ZKWeb::Database::DatabaseTypes']]],
+  ['mysql',['MySQL',['../d9/d80/class_z_k_web_1_1_database_1_1_database_types.html#aad9182eb66865a6938818721fcdb8f5f',1,'ZKWeb::Database::DatabaseTypes']]]
 ];

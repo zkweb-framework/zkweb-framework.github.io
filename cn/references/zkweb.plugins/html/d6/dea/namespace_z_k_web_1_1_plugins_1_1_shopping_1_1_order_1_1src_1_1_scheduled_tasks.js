@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks =
+[
+    [ "CartProductCleaner", "d9/d98/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_cart_product_cleaner.html", "d9/d98/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_cart_product_cleaner" ],
+    [ "OrderAutoConfirmer", "d8/da6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_order_auto_confirmer.html", "d8/da6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_scheduled_tasks_1_1_order_auto_confirmer" ]
+];

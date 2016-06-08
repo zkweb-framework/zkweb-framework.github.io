@@ -184,7 +184,13 @@
             </li>
           
             <li class="anchor">
-              <a title="项目进度" href="#_5">
+              <a title="性能数据" href="#_5">
+                性能数据
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="项目进度" href="#_6">
                 项目进度
               </a>
             </li>
@@ -551,32 +557,31 @@
 用户名: demo<br/>
 密码: 123456<br/></p>
 <h3 id="_2"><h2>索引文档</h2></h3>
-<p>最终更新: 2016-05-26<br/>
+<p>最终更新: 2016-06-08<br/>
 <a href="../references/zkweb/html/annotated.html" target="_blank">ZKWeb索引文档</a></br>
 <a href="../references/zkweb.plugins/html/annotated.html" target="_blank">ZKWeb.Plugins索引文档</a></p>
 <h3 id="_3"><h2>主要功能</h2></h3>
 <ul>
 <li>支持动态载入和编辑的插件系统<ul>
-<li>插件代码编辑保存后可直接刷新浏览器</li>
-</ul>
-</li>
-<li>使用Ioc容器对各项功能进行扩展<ul>
-<li>功能的可扩展性强</li>
-<li>可支持单元测试时覆盖任意组件</li>
+<li>使用Csscript + Codedom</li>
+<li>编辑后自动重新编译</li>
 </ul>
 </li>
 <li>支持从代码自动更新数据库<ul>
-<li>添加数据表或字段后不需要运行任何命令，刷新浏览器即可更新到数据库</li>
+<li>使用NHibernate</li>
+<li>添加数据表或字段后不需要运行任何命令，刷新浏览器即可更新到数据库  </li>
 </ul>
 </li>
+<li>使用简单和高性能的Ioc容器</li>
 <li>支持数据库事件<ul>
 <li>允许添加回调，在数据修改或删除前后在同一个事务中进行操作</li>
 <li>支持对比修改前后的数据</li>
 </ul>
 </li>
 <li>Django风格的模板系统<ul>
-<li>不需预编译成dll，载入速度快且没有内存泄漏问题</li>
-<li>允许新的插件对原有插件的模板进行覆盖（规则同Django）</li>
+<li>使用DotLiquid</li>
+<li>支持模板重载</li>
+<li>支持手机版专用模板（优先从templates.mobile读取模板内容）</li>
 <li>支持区域和针对区域的动态内容，可以在这基础上实现可视化编辑</li>
 <li>支持对页面中的部分内容进行单独缓存，可以大幅提升页面的响应速度</li>
 </ul>
@@ -616,7 +621,16 @@
 <h3 id="_4"><h2>层次结构</h2></h3>
 <p>当前核心 + 默认插件的层次结构如下<br/>
 <img alt="" src="./img/architecture.jpg" /></p>
-<h3 id="_5"><h2>项目进度</h2></h3>
+<h3 id="_5"><h2>性能数据</h2></h3>
+<ul>
+<li>2016-05-27 (i7 Q720 1.6Ghz x 4 core, ab -n 2000 -c 8, vmware player 12)<ul>
+<li>首页 2.240ms, 2.165ms, 2.123ms</li>
+<li>商品列表页 2.131ms, 2.013ms, 2.132ms</li>
+<li>商品详情页 2.165ms, 2.136ms, 2.193ms</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6"><h2>项目进度</h2></h3>
 <p>核心框架已开发完毕，但仍处于测试阶段。</br>
 正在逐步完善业务插件，目标是发布一个完整的商城网站。</p>
 <p>讨论QQ群：522083886。</p>

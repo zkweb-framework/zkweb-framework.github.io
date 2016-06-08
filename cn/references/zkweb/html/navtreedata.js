@@ -1,7 +1,7 @@
 var NAVTREE =
 [
   [ "ZKWeb References", "index.html", [
-    [ "README", "md_ZKWeb_README.html", null ],
+    [ "Extendable .net web framework<br/>", "md_ZKWeb_README.html", null ],
     [ "包", null, [
       [ "包", "namespaces.html", "namespaces" ],
       [ "包函数", "namespacemembers.html", [
@@ -17,6 +17,7 @@ var NAVTREE =
         [ "全部", "functions.html", "functions_dup" ],
         [ "函数", "functions_func.html", "functions_func" ],
         [ "变量", "functions_vars.html", null ],
+        [ "枚举", "functions_enum.html", null ],
         [ "属性", "functions_prop.html", "functions_prop" ]
       ] ]
     ] ],
@@ -29,10 +30,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a19b137e49a62001a26833ac9191c7ef0",
-"d7/d67/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_extensions.html#adbddb58bf3b1ff64061c00f3398e433a",
-"db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a43058ae88154d65b0ebd60cf8ae15683",
-"de/db4/_plugin_info_extensions_8cs.html"
+"d2/dea/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_random_utils_test.html#ab5e0911ef827521fd60c3763e76745c0",
+"d5/d2d/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_container.html#a1eb28f192f049b9869a25bc41f1c2962",
+"d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a5ae18689b35d221d04f2ecd8996ce1cf",
+"db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html#adda0c0573f7e5b5224d6804423a0e51d",
+"dd/de0/struct_z_k_web_1_1_cache_1_1_isolated_memory_cache_key.html#aaced4738005a9a4523a9f8fb5cce8caa",
+"functions_prop_c.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

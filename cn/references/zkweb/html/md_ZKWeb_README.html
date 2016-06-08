@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>ZKWeb References: README</title>
+<title>ZKWeb References: Extendable .net web framework&lt;br/&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,22 +99,55 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">README </div>  </div>
+<div class="title">Extendable .net web framework<br />
+ </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Web framework based on System.Web supports</p><ul>
-<li>dynamic plugins (supported, csscript + codedom)</li>
-<li>code first database auto migration (supported, nhibernate)</li>
-<li>ioc container (supported, dryioc)</li>
-<li>simple and extendable template sysetm (supported, dotliquid)</li>
-<li>multi language support (supported)</li>
-<li>multi timezone support (supported)</li>
-<li>form generation (supported by plugin)</li>
-<li>scaffolding (supported by plugin)</li>
-<li>api generation (planned)</li>
-<li>visual page editor (planned)</li>
+<div class="textblock"><p>Features:<br />
+</p>
+<ul>
+<li>Dynamic plugins<ul>
+<li>Csscript + Codedom</li>
+<li>Auto compile after modification</li>
 </ul>
-<p>Version: 0.9.3 testing (backward compatibility is not provided yet)<br />
+</li>
+<li>Code first database auto migration<ul>
+<li>NHibernate</li>
+<li>Auto migration without any handwrite command</li>
+</ul>
+</li>
+<li>Simple and high performance Ioc container</li>
+<li>Simple and extendable template sysetm<ul>
+<li>DotLiquid</li>
+<li>Template overriding like django</li>
+<li>Mobile specialized templates</li>
+<li>Dynamic contents (area + widget pattern)</li>
+<li>Per widget render result cache (perform extremely fast rending)</li>
+</ul>
+</li>
+<li>Multi language support</li>
+<li>Multi timezone support</li>
+<li>Unit test support<ul>
+<li>Console and web test runner</li>
+<li>Ioc container overridden</li>
+<li>Http context overridden</li>
+<li>Temporary database</li>
+</ul>
+</li>
+<li>Form generation<ul>
+<li>Supported by plugin</li>
+</ul>
+</li>
+<li>Scaffolding<ul>
+<li>Supported by plugin</li>
+</ul>
+</li>
+<li>Visual page editor<ul>
+<li>Prepared and planned</li>
+</ul>
+</li>
+</ul>
+<p>Version: 0.9.5 testing (backward compatibility is not provided yet)<br />
 </p>
 <p>Plugins: <a href="http://github.com/zkweb-framework/ZKWeb.Plugins">http://github.com/zkweb-framework/ZKWeb.Plugins</a><br />
  Document: <a href="http://zkweb-framework.github.io">http://zkweb-framework.github.io</a> (Chinese only)<br />
@@ -129,11 +162,11 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
  Copyright © 2016 303248153<br />
  If you have any license issue please contact <a href="#" onclick="location.href='mai'+'lto:'+'303'+'24'+'815'+'3@'+'qq.'+'co'+'m'; return false;">30324<span style="display: none;">.nosp@m.</span>8153<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>.<br />
 </p>
-<h1>Fast Help:</h1>
-<p>a. How to run?</p>
+<h3>Fast Help:</h3>
+<p>a. How to getting start?</p>
 <ul>
-<li>Download <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins from github,</li>
-<li>Put <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins in same folder,</li>
+<li>Download <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins from github</li>
+<li>Put <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins in same folder</li>
 <li>Edit config.json under <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> change Database and ConnectionString<ul>
 <li>Example for mssql ``` "Database": "mssql", "ConnectionString": "Server=127.0.0.1;Database=test_db;User Id=test_user;Password=123456;", ```</li>
 <li>Example for postgresql ``` "Database": "postgresql", "ConnectionString": "Server=127.0.0.1;Port=5432;Database=test_db;User Id=test_user;Password=123456;", ```</li>
@@ -143,11 +176,11 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 </li>
 <li>Once database configuration completed, you can run <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> project from visual studio.</li>
 </ul>
-<p>b. How to add a new plugin?</p>
+<p>b. How to add my own plugin?</p>
 <ul>
 <li>Add folder "Example" under "ZKWeb.Plugins"</li>
 <li><p class="startli">Plugin folder struction:</p>
-<p class="startli">``` Example bin: compiled assembly src: source files for automatic compilation in developement static: static files template: html templates ```</p>
+<p class="startli">``` Example bin: compiled assembly src: source files for automatic compilation in developement static: static files template: default html templates template.mobile: mobile specialized html templates template.desktop: desktop specialized html templates ```</p>
 </li>
 <li><p class="startli">Create "ExampleController.cs" under "Example\src"</p>
 <p class="startli">``` csharp [ExportMany] public class ExampleController : IController { [Action("example")] public IActionResult Example() { return new TemplateResult("example/test.html", new { message = "hello world" }); } } ```</p>

@@ -1,0 +1,9 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form =
+[
+    [ "OnBind", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a6457a7dacd4faf45df5d8227a1816e48", null ],
+    [ "OnSubmit", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a7ca896d6b79618c8544b4bab7de0a4fb", null ],
+    [ "AllowAnonymousVisitorCreateOrder", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a3257b60548ed0fd258eec3952c362a76", null ],
+    [ "AutoConfirmOrderAfterDays", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a5a818874c587010a0feac5946850b472", null ],
+    [ "BuynowCartProductExpiresDays", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a689cefe49a21a163cc10628cce695634", null ],
+    [ "NormalCartProductExpiresDays", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html#a9c5451c8a63def508eb018a2401a434c", null ]
+];

@@ -625,8 +625,7 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。<
 <h3 id="_5"><h2>添加代码</h2></h3>
 <p>插件的代码都保存在<code>src</code>文件夹下，可以参考文档顶部的目录结构。<br/></p>
 <p>这里添加在插件加载时输出日志的处理:<br/>
-在src文件夹中创建Plugin.cs，内容如下（引用和命名空间省略，后面的文档也如此）<br/>
-如果提示找不到Resolve函数请手动添加<code>using DryIoc;</code>到代码顶部。<br/></p>
+在src文件夹中创建Plugin.cs，内容如下（引用和命名空间省略，后面的文档也如此）<br/></p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
 <span class="c1">/// 插件加载时输出一行日志</span>
 <span class="c1">/// &lt;/summary&gt;</span>
@@ -643,16 +642,19 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。<
 <p>刷新浏览器，在App_Data/Logs下可以看到输出的日志。<br/>
 ExportMany和Ioc将在下一节解释。<br/></p>
 <h3 id="ioc"><h2>Ioc容器</h2></h3>
-<p>ZKWeb使用了DryIoc，请先阅读DryIoc的文档:<br/>
-https://bitbucket.org/dadhi/dryioc/wiki/Home<br/></p>
+<p>ZKWeb从0.9.5开始使用了自己编写的Ioc容器。<br/>
+容器的接口说明: <br/>
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IRegistrator.cs" target="_blank">IRegistrator</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IResolver.cs" target="_blank">IResolver</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericRegistrator.cs" target="_blank">IGenericRegistrator</a><br />
+<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericResolver.cs" target="_blank">IGenericResolver</a><br /></p>
 <p>ZKWeb全局使用的容器在<code>Application.Ioc</code>。<br/>
-（为什么不使用构造函数注入请参考<code>global.asax.cs</code>中的说明，使用全局变量仍然很好的可以支持单元测试）<br/>
 插件可以使用<code>[ExportMany]</code>注册组件（参考"添加代码"节），也可以使用<code>IPlugin</code>接口在网站启动时注册到<code>Application.Ioc</code>中。<br/>
-指定<code>[SingletonReuse]</code>属性时可以实现单例。<br/></p>
-<p>DryIoc的性能非常高，可以查看以下的对比:<br/>
-http://www.palmmedia.de/Blog/2011/8/30/ioc-container-benchmark-performance-comparison<br/></p>
+指定<code>[SingletonReuse]</code>属性时可以实现单例。<br/>
+ZKWeb考虑到性能，内存占用和代码量，不使用构造函数注入。<br/>
+单元测试时可以使用Application.OverrideIoc重载当前的容器。<br/></p>
 <h3 id="ioc_1"><h2>Ioc容器的使用例子</h2></h3>
-<p>以下是一个简单的使用例子。</p>
+<p>以下是简单的使用例子。</p>
 <div class="code"><pre><span></span><span class="k">void</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
     <span class="kt">var</span> <span class="n">animals</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">&gt;()</span>
     <span class="c1">// animals contains instances of Dog and Cow</span>

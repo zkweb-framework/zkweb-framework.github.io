@@ -3,8 +3,13 @@ var hierarchy =
     [ "ZKWeb.Utils.UnitTest.Event.AllTestCompletedInfo", "d1/dc7/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_all_test_completed_info.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.AllTestStartingInfo", "d1/d1d/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_all_test_starting_info.html", null ],
     [ "ZKWeb.Tests.ApplicationTest", "d1/d3b/class_z_k_web_1_1_tests_1_1_application_test.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateTags.AreaTest", "d9/dc7/class_z_k_web_1_1_tests_1_1_templating_1_1_template_tags_1_1_area_test.html", null ],
     [ "ZKWeb.Utils.UnitTest.Assert", "dd/d6a/class_z_k_web_1_1_utils_1_1_unit_test_1_1_assert.html", null ],
     [ "Attribute", null, [
+      [ "ZKWeb.Utils.IocContainer.ExportManyAttribute", "d2/d8f/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_export_many_attribute.html", null ],
+      [ "ZKWeb.Utils.IocContainer.ReuseAttribute", "dc/dea/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_reuse_attribute.html", [
+        [ "ZKWeb.Utils.IocContainer.SingletonReuseAttribute", "de/da5/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_singleton_reuse_attribute.html", null ]
+      ] ],
       [ "ZKWeb.Utils.UnitTest.UnitTestAttribute", "db/dcc/class_z_k_web_1_1_utils_1_1_unit_test_1_1_unit_test_attribute.html", null ],
       [ "ZKWeb.Web.Interfaces.ActionAttribute", "d7/d17/class_z_k_web_1_1_web_1_1_interfaces_1_1_action_attribute.html", null ]
     ] ],
@@ -14,9 +19,18 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Utils.Extensions.ByteArrayExtensions", "d1/d8e/class_z_k_web_1_1_utils_1_1_extensions_1_1_byte_array_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.ByteArrayExtensionsTest", "dd/db6/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_byte_array_extensions_test.html", null ],
+    [ "ZKWeb.Tests.Cache.CacheIsolationPoliciesTest", "df/dc0/class_z_k_web_1_1_tests_1_1_cache_1_1_cache_isolation_policies_test.html", null ],
+    [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.ClassService", "da/d7b/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_class_service.html", [
+      [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.SingletonImplementation", "d0/d98/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_singleton_implementation.html", null ],
+      [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.TransientImplementation", "d1/d0d/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_transient_implementation.html", null ]
+    ] ],
     [ "ZKWeb.Server.ConfigManager", "d8/dee/class_z_k_web_1_1_server_1_1_config_manager.html", null ],
+    [ "ZKWeb.Tests.Server.ConfigManagerTest", "db/d65/class_z_k_web_1_1_tests_1_1_server_1_1_config_manager_test.html", null ],
+    [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest", "db/d1f/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test.html", null ],
+    [ "ZKWeb.Tests.Web.ControllerManagerTest", "d3/d2c/class_z_k_web_1_1_tests_1_1_web_1_1_controller_manager_test.html", null ],
+    [ "ZKWeb.Tests.Database.DatabaseContextTest", "d2/dc8/class_z_k_web_1_1_tests_1_1_database_1_1_database_context_test.html", null ],
     [ "ZKWeb.Database.DatabaseManager", "d1/d47/class_z_k_web_1_1_database_1_1_database_manager.html", null ],
-    [ "ZKWeb.Server.DatabaseTypes", "dc/d40/class_z_k_web_1_1_server_1_1_database_types.html", null ],
+    [ "ZKWeb.Database.DatabaseTypes", "d9/d80/class_z_k_web_1_1_database_1_1_database_types.html", null ],
     [ "ZKWeb.Utils.Extensions.DateTimeExtensions", "d5/d9b/class_z_k_web_1_1_utils_1_1_extensions_1_1_date_time_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.DateTimeExtensionsTest", "d0/d7d/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_date_time_extensions_test.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.DebugMessageInfo", "d2/d32/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_debug_message_info.html", null ],
@@ -33,9 +47,13 @@ var hierarchy =
     [ "ZKWeb.Utils.Functions.RegexUtils.Expressions", "d3/d66/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils_1_1_expressions.html", null ],
     [ "ZKWeb.Utils.Functions.ExpressionUtils", "d5/d9a/class_z_k_web_1_1_utils_1_1_functions_1_1_expression_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.ExpressionUtilsTest", "d7/d4f/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_expression_utils_test.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateTags.FetchTest", "d4/da8/class_z_k_web_1_1_tests_1_1_templating_1_1_template_tags_1_1_fetch_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.FileResultTest", "dc/dc3/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_file_result_test.html", null ],
     [ "ZKWeb.Utils.Functions.FileUtils", "da/de3/class_z_k_web_1_1_utils_1_1_functions_1_1_file_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.FileUtilsTest", "d8/db9/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_file_utils_test.html", null ],
     [ "ZKWeb.Templating.TemplateFilters.Filters", "d3/d76/class_z_k_web_1_1_templating_1_1_template_filters_1_1_filters.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateFilters.FiltersTest", "df/d10/class_z_k_web_1_1_tests_1_1_templating_1_1_template_filters_1_1_filters_test.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateTags.HtmlLangTest", "d3/dc0/class_z_k_web_1_1_tests_1_1_templating_1_1_template_tags_1_1_html_lang_test.html", null ],
     [ "ZKWeb.Utils.Extensions.HtmlTextWriterExtensions", "d1/da4/class_z_k_web_1_1_utils_1_1_extensions_1_1_html_text_writer_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.HtmlTextWriterExtensionsTest", "d3/dd4/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_html_text_writer_extensions_test.html", null ],
     [ "HttpApplication", null, [
@@ -46,6 +64,8 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Utils.Functions.HttpContextUtils", "d5/db8/class_z_k_web_1_1_utils_1_1_functions_1_1_http_context_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.HttpContextUtilsTest", "d0/d1b/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_http_context_utils_test.html", null ],
+    [ "ZKWeb.Utils.Functions.HttpDeviceUtils", "d9/dc2/class_z_k_web_1_1_utils_1_1_functions_1_1_http_device_utils.html", null ],
+    [ "ZKWeb.Utils.Tests.Functions.HttpDeviceUtilsTest", "d4/d09/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_http_device_utils_test.html", null ],
     [ "ZKWeb.Web.Interfaces.HttpMethods", "d6/df1/class_z_k_web_1_1_web_1_1_interfaces_1_1_http_methods.html", null ],
     [ "HttpPostedFileBase", null, [
       [ "ZKWeb.Utils.Collections.HttpPostedFileMock", "d5/d08/class_z_k_web_1_1_utils_1_1_collections_1_1_http_posted_file_mock.html", null ],
@@ -70,28 +90,54 @@ var hierarchy =
       [ "ZKWeb.Web.ActionResults.StreamResult", "d7/d23/class_z_k_web_1_1_web_1_1_action_results_1_1_stream_result.html", null ],
       [ "ZKWeb.Web.ActionResults.TemplateResult", "d8/da2/class_z_k_web_1_1_web_1_1_action_results_1_1_template_result.html", null ]
     ] ],
-    [ "ZKWeb.Plugin.Interfaces.ICacheCleaner", "db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html", [
+    [ "ZKWeb.Cache.Interfaces.ICacheCleaner", "d4/d31/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_cleaner.html", [
       [ "ZKWeb.Localize.TranslateManager", "d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html", null ],
       [ "ZKWeb.Server.PathManager", "d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html", null ],
       [ "ZKWeb.Templating.AreaSupport.TemplateAreaManager", "d7/da8/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_manager.html", null ],
       [ "ZKWeb.Templating.TemplateFileSystem", "de/d86/class_z_k_web_1_1_templating_1_1_template_file_system.html", null ]
     ] ],
+    [ "ZKWeb.Cache.Interfaces.ICacheIsolationPolicy", "da/d48/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_isolation_policy.html", [
+      [ "ZKWeb.Cache.Policies.CacheIsolateByDevice", "d1/d17/class_z_k_web_1_1_cache_1_1_policies_1_1_cache_isolate_by_device.html", null ],
+      [ "ZKWeb.Cache.Policies.CacheIsolateByLocale", "d7/d89/class_z_k_web_1_1_cache_1_1_policies_1_1_cache_isolate_by_locale.html", null ],
+      [ "ZKWeb.Cache.Policies.CacheIsolateByUrl", "df/d7a/class_z_k_web_1_1_cache_1_1_policies_1_1_cache_isolate_by_url.html", null ]
+    ] ],
+    [ "ICloneable", null, [
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", [
+        [ "ZKWeb.Utils.IocContainer.Container", "d5/d2d/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_container.html", null ]
+      ] ]
+    ] ],
     [ "ZKWeb.Web.Interfaces.IController", "d0/d9a/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_controller.html", null ],
     [ "ZKWeb.Database.Interfaces.IDatabaseInitializeHandler", "d3/dc3/interface_z_k_web_1_1_database_1_1_interfaces_1_1_i_database_initialize_handler.html", null ],
     [ "ZKWeb.Database.Interfaces.IDataDeleteCallback< T >", "da/d50/interface_z_k_web_1_1_database_1_1_interfaces_1_1_i_data_delete_callback.html", null ],
+    [ "ZKWeb.Database.Interfaces.IDataDeleteCallback< TestTable >", "da/d50/interface_z_k_web_1_1_database_1_1_interfaces_1_1_i_data_delete_callback.html", null ],
     [ "ZKWeb.Database.Interfaces.IDataSaveCallback< T >", "db/de1/interface_z_k_web_1_1_database_1_1_interfaces_1_1_i_data_save_callback.html", null ],
+    [ "ZKWeb.Database.Interfaces.IDataSaveCallback< TestTable >", "db/de1/interface_z_k_web_1_1_database_1_1_interfaces_1_1_i_data_save_callback.html", null ],
     [ "ZKWeb.Utils.Extensions.IDictionaryExtensions", "dd/da5/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_dictionary_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.IDictionaryExtensionsTest", "d8/d85/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_dictionary_extensions_test.html", null ],
     [ "IDisposable", null, [
       [ "ZKWeb.Database.DatabaseContext", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html", null ],
+      [ "ZKWeb.Tests.Server.TestDirectoryLayout", "d5/d2b/class_z_k_web_1_1_tests_1_1_server_1_1_test_directory_layout.html", null ],
       [ "ZKWeb.Utils.Collections.SimpleDisposable", "d2/d19/class_z_k_web_1_1_utils_1_1_collections_1_1_simple_disposable.html", null ],
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", null ],
       [ "ZKWeb.Web.ActionResults.ImageResult", "d0/da8/class_z_k_web_1_1_web_1_1_action_results_1_1_image_result.html", null ],
       [ "ZKWeb.Web.ActionResults.StreamResult", "d7/d23/class_z_k_web_1_1_web_1_1_action_results_1_1_stream_result.html", null ]
     ] ],
     [ "ZKWeb.Utils.Extensions.IEnumerableExtensions", "d4/df4/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_enumerable_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.IEnumerableExtensionsTest", "db/df1/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_enumerable_extensions_test.html", null ],
+    [ "IEquatable< IsolatedMemoryCacheKey< TKey >>", null, [
+      [ "ZKWeb.Cache.IsolatedMemoryCacheKey< TKey >", "dd/de0/struct_z_k_web_1_1_cache_1_1_isolated_memory_cache_key.html", null ]
+    ] ],
+    [ "IEquatable< Pair< TFirst, TSecond >>", null, [
+      [ "ZKWeb.Utils.Collections.Pair< TFirst, TSecond >", "d6/d21/struct_z_k_web_1_1_utils_1_1_collections_1_1_pair.html", null ]
+    ] ],
     [ "IFileSystem", null, [
       [ "ZKWeb.Templating.TemplateFileSystem", "de/d86/class_z_k_web_1_1_templating_1_1_template_file_system.html", null ]
+    ] ],
+    [ "ZKWeb.Utils.IocContainer.IGenericRegistrator", "d3/d8b/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_generic_registrator.html", [
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", null ]
+    ] ],
+    [ "ZKWeb.Utils.IocContainer.IGenericResolver", "d2/d24/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_generic_resolver.html", [
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", null ]
     ] ],
     [ "ZKWeb.Web.Interfaces.IHttpErrorHandler", "d7/d79/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_error_handler.html", null ],
     [ "ZKWeb.Web.Interfaces.IHttpRequestHandler", "df/d8e/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_http_request_handler.html", [
@@ -102,12 +148,25 @@ var hierarchy =
     [ "ILiquidizable", null, [
       [ "ZKWeb.Localize.T", "d3/d0e/struct_z_k_web_1_1_localize_1_1_t.html", null ]
     ] ],
+    [ "ZKWeb.Utils.Tests.Extensions.IListExtensions", "de/d62/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_list_extensions.html", null ],
+    [ "ZKWeb.Utils.Extensions.IListExtensions", "d7/d98/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_list_extensions.html", null ],
     [ "ZKWeb.Utils.Extensions.ImageExtensions", "de/dcb/class_z_k_web_1_1_utils_1_1_extensions_1_1_image_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.ImageExtensionsTest", "da/d1f/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_image_extensions_test.html", null ],
-    [ "ZKWeb.Serialize.InitializeJsonNet", "d3/d68/class_z_k_web_1_1_serialize_1_1_initialize_json_net.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.ImageResultTest", "da/d26/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_image_result_test.html", null ],
+    [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.InterfaceService", "d3/d95/interface_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_interface_service.html", [
+      [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.SingletonImplementation", "d0/d98/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_singleton_implementation.html", null ],
+      [ "ZKWeb.Utils.Tests.IocContainer.ContainerTest.TransientImplementation", "d1/d0d/class_z_k_web_1_1_utils_1_1_tests_1_1_ioc_container_1_1_container_test_1_1_transient_implementation.html", null ]
+    ] ],
     [ "ZKWeb.Plugin.Interfaces.IPlugin", "d5/d4f/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_plugin.html", null ],
+    [ "ZKWeb.Utils.IocContainer.IRegistrator", "d6/de2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_registrator.html", [
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", null ]
+    ] ],
+    [ "ZKWeb.Utils.IocContainer.IResolver", "d9/db6/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_resolver.html", [
+      [ "ZKWeb.Utils.IocContainer.IContainer", "dd/dc2/interface_z_k_web_1_1_utils_1_1_ioc_container_1_1_i_container.html", null ]
+    ] ],
     [ "ZKWeb.Utils.Extensions.ISetExtensions", "d0/de3/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_set_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.ISetExtensionsTest", "dd/dbd/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_i_set_extensions_test.html", null ],
+    [ "ZKWeb.Tests.Cache.IsolatedMemoryCacheTest", "d0/db3/class_z_k_web_1_1_tests_1_1_cache_1_1_isolated_memory_cache_test.html", null ],
     [ "ZKWeb.Localize.Interfaces.ITranslateProvider", "df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html", null ],
     [ "ZKWeb.Utils.Functions.ITreeNode< T >", "d8/d8d/interface_z_k_web_1_1_utils_1_1_functions_1_1_i_tree_node.html", null ],
     [ "ZKWeb.Utils.Extensions.ITreeNodeExtensions", "d8/df7/class_z_k_web_1_1_utils_1_1_extensions_1_1_i_tree_node_extensions.html", null ],
@@ -115,26 +174,28 @@ var hierarchy =
     [ "ZKWeb.Utils.UnitTest.Event.IUnitTestEventHandler", "df/df7/interface_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_i_unit_test_event_handler.html", [
       [ "ZKWeb.Console.UnitTestConsoleEventHandler", "d8/d67/class_z_k_web_1_1_console_1_1_unit_test_console_event_handler.html", null ]
     ] ],
+    [ "IUserType", null, [
+      [ "ZKWeb.Database.UserTypes.JsonSerializedType< T >", "dd/d10/class_z_k_web_1_1_database_1_1_user_types_1_1_json_serialized_type.html", null ]
+    ] ],
     [ "ZKWeb.Web.Interfaces.IWebsiteStartHandler", "d2/de4/interface_z_k_web_1_1_web_1_1_interfaces_1_1_i_website_start_handler.html", null ],
     [ "JsonConverter", null, [
       [ "ZKWeb.Localize.JsonConverters.TJsonConverter", "d0/d3a/class_z_k_web_1_1_localize_1_1_json_converters_1_1_t_json_converter.html", null ]
     ] ],
+    [ "ZKWeb.Tests.Serialize.JsonNetTest", "d5/dd7/class_z_k_web_1_1_tests_1_1_serialize_1_1_json_net_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.JsonResultTest", "d0/d6b/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_json_result_test.html", null ],
     [ "ZKWeb.Utils.Collections.LazyCache< T >", "df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache.html", null ],
     [ "ZKWeb.Utils.Tests.Collections.LazyCacheTest", "d6/d84/class_z_k_web_1_1_utils_1_1_tests_1_1_collections_1_1_lazy_cache_test.html", null ],
-    [ "ZKWeb.Utils.Extensions.ListExtensions", "dc/d59/class_z_k_web_1_1_utils_1_1_extensions_1_1_list_extensions.html", null ],
-    [ "ZKWeb.Utils.Tests.Extensions.ListExtensions", "d2/d69/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_list_extensions.html", null ],
     [ "ZKWeb.Utils.Functions.LocaleUtils", "d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.LocaleUtilsTest", "da/dc7/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_locale_utils_test.html", null ],
     [ "ZKWeb.Logging.LogManager", "dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html", null ],
+    [ "ZKWeb.Tests.Logging.LogManagerTest", "d1/d7f/class_z_k_web_1_1_tests_1_1_logging_1_1_log_manager_test.html", null ],
     [ "ZKWeb.Utils.Extensions.MemberInfoExtensions", "d5/dff/class_z_k_web_1_1_utils_1_1_extensions_1_1_member_info_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.MemberInfoExtensionsTest", "d3/de4/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_member_info_extensions_test.html", null ],
     [ "ZKWeb.Utils.Collections.MemoryCache< TKey, TValue >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
     [ "ZKWeb.Utils.Collections.MemoryCache< int, string >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
-    [ "ZKWeb.Utils.Collections.MemoryCache< KeyValuePair< string, string >, string >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
-    [ "ZKWeb.Utils.Collections.MemoryCache< string, List< ITranslateProvider > >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
-    [ "ZKWeb.Utils.Collections.MemoryCache< string, List< ZKWeb.Templating.AreaSupport.TemplateWidget > >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
-    [ "ZKWeb.Utils.Collections.MemoryCache< string, string >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
-    [ "ZKWeb.Utils.Collections.MemoryCache< string, ZKWeb.Templating.AreaSupport.TemplateWidgetInfo >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", null ],
+    [ "ZKWeb.Utils.Collections.MemoryCache< IsolatedMemoryCacheKey< TKey >, TValue >", "d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html", [
+      [ "ZKWeb.Cache.IsolatedMemoryCache< TKey, TValue >", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html", null ]
+    ] ],
     [ "ZKWeb.Utils.Tests.Collections.MemoryCacheTest", "d7/d5f/class_z_k_web_1_1_utils_1_1_tests_1_1_collections_1_1_memory_cache_test.html", null ],
     [ "ZKWeb.Utils.Extensions.MethodInfoExtensions", "d0/d4a/class_z_k_web_1_1_utils_1_1_extensions_1_1_method_info_extensions.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.MethodInfoExtensionsTest", "d9/d0b/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_method_info_extensions_test.html", null ],
@@ -144,23 +205,27 @@ var hierarchy =
     [ "ZKWeb.Utils.Functions.PasswordUtils", "db/db5/class_z_k_web_1_1_utils_1_1_functions_1_1_password_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.PasswordUtilsTest", "db/d89/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_password_utils_test.html", null ],
     [ "ZKWeb.Server.PathConfig", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html", null ],
+    [ "ZKWeb.Tests.Server.PathManagerTest", "d2/d33/class_z_k_web_1_1_tests_1_1_server_1_1_path_manager_test.html", null ],
     [ "ZKWeb.Utils.Functions.PathUtils", "d8/d90/class_z_k_web_1_1_utils_1_1_functions_1_1_path_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.PathUtilsTest", "d6/d10/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_path_utils_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.PlainResultTest", "d7/de5/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_plain_result_test.html", null ],
     [ "ZKWeb.Plugin.PluginInfo", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html", null ],
     [ "ZKWeb.Plugin.PluginInfoExtensions", "d0/d01/class_z_k_web_1_1_plugin_1_1_plugin_info_extensions.html", null ],
     [ "ZKWeb.Plugin.PluginManager", "d3/d71/class_z_k_web_1_1_plugin_1_1_plugin_manager.html", null ],
-    [ "ZKWeb.Plugin.PluginReloader", "dd/d00/class_z_k_web_1_1_plugin_1_1_plugin_reloader.html", null ],
     [ "ZKWeb.Console.Program", "d4/dd7/class_z_k_web_1_1_console_1_1_program.html", null ],
     [ "ZKWeb.Utils.Functions.RandomUtils", "db/da8/class_z_k_web_1_1_utils_1_1_functions_1_1_random_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.RandomUtilsTest", "d2/dea/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_random_utils_test.html", null ],
-    [ "ZKWeb.Utils.Extensions.ReaderWriterLockSlimExtensions", "d3/d91/class_z_k_web_1_1_utils_1_1_extensions_1_1_reader_writer_lock_slim_extensions.html", null ],
-    [ "ZKWeb.Utils.Tests.Extensions.ReaderWriterLockSlimExtensionsTest", "d9/ddc/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_reader_writer_lock_slim_extensions_test.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateTags.RawHtmlTest", "d0/da8/class_z_k_web_1_1_tests_1_1_templating_1_1_template_tags_1_1_raw_html_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.RedirectResultTest", "df/d33/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_redirect_result_test.html", null ],
     [ "ZKWeb.Utils.Functions.ReflectionUtils", "d0/d1e/class_z_k_web_1_1_utils_1_1_functions_1_1_reflection_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.ReflectionUtilsTest", "d5/ddd/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_reflection_utils_test.html", null ],
     [ "ZKWeb.Utils.Functions.RegexUtils", "dc/dac/class_z_k_web_1_1_utils_1_1_functions_1_1_regex_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.RegexUtilsTest", "d8/dc0/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_regex_utils_test.html", null ],
     [ "ZKWeb.Properties.Resources", "d8/dfb/class_z_k_web_1_1_properties_1_1_resources.html", null ],
     [ "ZKWeb.Utils.Tests.Collections.SimpleDisposableTest", "d6/d16/class_z_k_web_1_1_utils_1_1_tests_1_1_collections_1_1_simple_disposable_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.StreamResultTest", "df/dda/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_stream_result_test.html", null ],
+    [ "ZKWeb.Utils.Functions.SystemUtils", "d7/d2b/class_z_k_web_1_1_utils_1_1_functions_1_1_system_utils.html", null ],
+    [ "ZKWeb.Utils.Tests.Functions.SystemUtilsTest", "d7/d04/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_system_utils_test.html", null ],
     [ "Tag", null, [
       [ "ZKWeb.Templating.TemplateTags.Area", "d0/d66/class_z_k_web_1_1_templating_1_1_template_tags_1_1_area.html", null ],
       [ "ZKWeb.Templating.TemplateTags.Fetch", "db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html", null ],
@@ -169,14 +234,25 @@ var hierarchy =
     ] ],
     [ "ZKWeb.Templating.AreaSupport.TemplateArea", "db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html", null ],
     [ "ZKWeb.Templating.AreaSupport.TemplateAreaExtensions", "d7/d67/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area_extensions.html", null ],
+    [ "ZKWeb.Tests.Templating.AreaSupport.TemplateAreaExtensionsTest", "d9/d0b/class_z_k_web_1_1_tests_1_1_templating_1_1_area_support_1_1_template_area_extensions_test.html", null ],
+    [ "ZKWeb.Tests.Templating.AreaSupport.TemplateAreaManagerTest", "d4/df5/class_z_k_web_1_1_tests_1_1_templating_1_1_area_support_1_1_template_area_manager_test.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateFileSystemTest", "df/dfc/class_z_k_web_1_1_tests_1_1_templating_1_1_template_file_system_test.html", null ],
     [ "ZKWeb.Templating.TemplateManager", "de/d4f/class_z_k_web_1_1_templating_1_1_template_manager.html", null ],
+    [ "ZKWeb.Tests.Templating.TemplateManagerTest", "d6/d18/class_z_k_web_1_1_tests_1_1_templating_1_1_template_manager_test.html", null ],
+    [ "ZKWeb.Tests.Web.ActionResults.TemplateResultTest", "df/d6e/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_template_result_test.html", null ],
     [ "ZKWeb.Templating.AreaSupport.TemplateWidget", "d7/d46/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget.html", null ],
+    [ "ZKWeb.Templating.AreaSupport.TemplateWidgetExtensions", "dd/d4d/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_extensions.html", null ],
+    [ "ZKWeb.Tests.Templating.AreaSupport.TemplateWidgetExtensionsTest", "d0/dd1/class_z_k_web_1_1_tests_1_1_templating_1_1_area_support_1_1_template_widget_extensions_test.html", null ],
     [ "ZKWeb.Templating.AreaSupport.TemplateWidgetInfo", "dd/dbe/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info.html", null ],
+    [ "ZKWeb.Templating.AreaSupport.TemplateWidgetInfoExtensions", "d4/d85/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_widget_info_extensions.html", null ],
+    [ "ZKWeb.Tests.Templating.AreaSupport.TemplateWidgetInfoExtensionsTest", "db/d1d/class_z_k_web_1_1_tests_1_1_templating_1_1_area_support_1_1_template_widget_info_extensions_test.html", null ],
     [ "ZKWeb.Utils.Tests.Extensions.ExpressionExtensionsTest.TestClass", "d1/d8b/class_z_k_web_1_1_utils_1_1_tests_1_1_extensions_1_1_expression_extensions_test_1_1_test_class.html", null ],
+    [ "ZKWeb.Tests.Web.ControllerManagerTest.TestController", "d6/da6/class_z_k_web_1_1_tests_1_1_web_1_1_controller_manager_test_1_1_test_controller.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.TestFailedInfo", "d7/d34/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_test_failed_info.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.TestPassedInfo", "dc/de6/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_test_passed_info.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.TestSkippedInfo", "d1/d93/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_test_skipped_info.html", null ],
     [ "ZKWeb.Utils.UnitTest.Event.TestStartingInfo", "d2/d12/class_z_k_web_1_1_utils_1_1_unit_test_1_1_event_1_1_test_starting_info.html", null ],
+    [ "ZKWeb.Tests.Localize.TranslateManagerTest", "dd/dc1/class_z_k_web_1_1_tests_1_1_localize_1_1_translate_manager_test.html", null ],
     [ "ZKWeb.Utils.Functions.TreeUtils", "d3/d50/class_z_k_web_1_1_utils_1_1_functions_1_1_tree_utils.html", null ],
     [ "ZKWeb.Utils.Tests.Functions.TreeUtilsTest", "dd/d9a/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_tree_utils_test.html", null ],
     [ "ZKWeb.UnitTest.UnitTestManager", "d0/d3a/class_z_k_web_1_1_unit_test_1_1_unit_test_manager.html", null ],

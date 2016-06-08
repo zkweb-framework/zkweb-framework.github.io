@@ -135,14 +135,14 @@ public class ExampleCRUDApp : AdminAppBuilder<ExampleTable> {
 			AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
 			query = query.OrderByDescending(q => q.Id); // 按Id倒序排列
 		}
-		
+
 		public void OnSelect(
-			AjaxTableSearchRequest request, List<KeyValuePair<ExampleTable, Dictionary<string, object>>> pairs) {
+			AjaxTableSearchRequest request, List<EntityToTableRow<ExampleTable>> pairs) {
 			foreach (var pair in pairs) {
-				pair.Value["Id"] = pair.Key.Id; // 选择Id
-				pair.Value["Name"] = pair.Key.Name; // 选择名称
-				pair.Value["CreateTime"] = pair.Key.CreateTime.ToClientTimeString(); // 选择创建时间
-				pair.Value["Deleted"] = pair.Key.Deleted ? EnumDeleted.Deleted : EnumDeleted.None; // 选择删除状态
+				pair.Row["Id"] = pair.Entity.Id; // 选择Id
+				pair.Row["Name"] = pair.Entity.Name; // 选择名称
+				pair.Row["CreateTime"] = pair.Entity.CreateTime.ToClientTimeString(); // 选择创建时间
+				pair.Row["Deleted"] = pair.Entity.Deleted ? EnumDeleted.Deleted : EnumDeleted.None; // 选择删除状态
 			}
 		}
 

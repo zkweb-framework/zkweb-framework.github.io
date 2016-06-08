@@ -1,6 +1,6 @@
 var namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src =
 [
-    [ "Collections", "d1/da6/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections.html", "d1/da6/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_collections" ],
+    [ "CacheIsolationPolicies", "d0/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_cache_isolation_policies.html", "d0/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_cache_isolation_policies" ],
     [ "Config", "d8/d85/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_config.html", "d8/d85/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_config" ],
     [ "Controllers", "d7/d20/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers.html", "d7/d20/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers" ],
     [ "Database", "db/d4b/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_database.html", "db/d4b/namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_database" ],

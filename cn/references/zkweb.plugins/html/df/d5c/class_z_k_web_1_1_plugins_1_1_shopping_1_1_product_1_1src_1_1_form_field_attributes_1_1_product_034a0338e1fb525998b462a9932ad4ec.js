@@ -1,0 +1,4 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_034a0338e1fb525998b462a9932ad4ec =
+[
+    [ "ProductPropertyValuesEditorAttribute", "df/d5c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes_1_1_product_034a0338e1fb525998b462a9932ad4ec.html#a71d1d39a73dd4c8b31d8085ef685ffa6", null ]
+];

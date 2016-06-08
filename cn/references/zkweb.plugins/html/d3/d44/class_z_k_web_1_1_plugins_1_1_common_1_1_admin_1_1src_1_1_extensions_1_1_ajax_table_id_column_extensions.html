@@ -124,6 +124,9 @@ $(document).ready(function(){initNavTree('d3/d44/class_z_k_web_1_1_plugins_1_1_c
 <tr class="memitem:ab99ce338759c07f85382a2b632b4418a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_id_column_extensions.html#ab99ce338759c07f85382a2b632b4418a">AddDeleteActionsForAdminApp&lt; TApp &gt;</a> (this <a class="el" href="../../dc/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_id_column.html">AjaxTableIdColumn</a> column, <a class="el" href="../../de/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_ajax_table_search_request.html">AjaxTableSearchRequest</a> request)</td></tr>
 <tr class="memdesc:ab99ce338759c07f85382a2b632b4418a"><td class="mdescLeft">&#160;</td><td class="mdescRight">添加删除相关的按钮 如果数据类型可以回收，则添加批量删除或批量恢复和永久删除 如果数据类型不可以回收，则添加批量永久删除 根据后台应用自动生成  <a href="#ab99ce338759c07f85382a2b632b4418a">更多...</a><br /></td></tr>
 <tr class="separator:ab99ce338759c07f85382a2b632b4418a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f812a9598218a19f1b8e4e6d4f0dea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d44/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_id_column_extensions.html#a74f812a9598218a19f1b8e4e6d4f0dea">StandardSetupForAdminApp&lt; TApp &gt;</a> (this <a class="el" href="../../dc/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_id_column.html">AjaxTableIdColumn</a> column, <a class="el" href="../../de/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_ajax_table_search_request.html">AjaxTableSearchRequest</a> request)</td></tr>
+<tr class="memdesc:a74f812a9598218a19f1b8e4e6d4f0dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">对后台应用使用的Ajax表格Id列进行标准的设置 添加以下菜单项  <a href="#a74f812a9598218a19f1b8e4e6d4f0dea">更多...</a><br /></td></tr>
+<tr class="separator:a74f812a9598218a19f1b8e4e6d4f0dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Ajax表格Id列的扩展函数 </p>
@@ -251,8 +254,70 @@ $(document).ready(function(){initNavTree('d3/d44/class_z_k_web_1_1_plugins_1_1_c
 
 </div>
 </div>
+<a class="anchor" id="a74f812a9598218a19f1b8e4e6d4f0dea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableIdColumnExtensions.StandardSetupForAdminApp&lt; TApp &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="../../dc/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_id_column.html">AjaxTableIdColumn</a>&#160;</td>
+          <td class="paramname"><em>column</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d33/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_ajax_table_search_request.html">AjaxTableSearchRequest</a>&#160;</td>
+          <td class="paramname"><em>request</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>对后台应用使用的Ajax表格Id列进行标准的设置 添加以下菜单项 </p>
+<ul>
+<li>删除菜单（如果批量操作Url不是空） </li>
+</ul>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TApp</td><td>后台应用类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">column</td><td>Id列</td></tr>
+    <tr><td class="paramname">request</td><td>搜索请求</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>类型限制</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>IAdminAppBuilder</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+</div>
+</div>
 <hr/>该类的文档由以下文件生成:<ul>
-<li>ZKWeb.Plugins/Common.Admin/src/Extensions/<a class="el" href="../../db/d1c/_common_8_admin_2src_2_extensions_2_ajax_table_id_column_extensions_8cs.html">AjaxTableIdColumnExtensions.cs</a></li>
+<li>ZKWeb.Plugins/Common.Admin/src/Extensions/_AjaxTable/<a class="el" href="../../dd/db2/_common_8_admin_2src_2_extensions_2___ajax_table_2_ajax_table_id_column_extensions_8cs.html">AjaxTableIdColumnExtensions.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

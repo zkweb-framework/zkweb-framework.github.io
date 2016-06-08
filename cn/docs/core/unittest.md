@@ -54,9 +54,7 @@ public void MethodB() {
 ``` csharp
 public void MethodC() {
 	using (Application.OverrideIoc()) {
-		// clear registered delete callback for example table
-		// becuse container is inherited, Unregister will not work
-		Application.Ioc.RegisterDelegate(_ => new IDataDeleteCallback<ExampleTable>[] { });
+		Application.Ioc.Unregister<IDataDeleteCallback<ExampleTable>>();
 		Assert.IsTrue(!Application.Ioc.ResolveMany<IDataDeleteCallback<ExampleTable>>().Any());
 	}
 	// override is finished
@@ -65,3 +63,15 @@ public void MethodC() {
 ```
 
 模拟Ioc容器时注意旧的容器只是作为`fallback`使用，新的容器有注册的组件时，只会返回新的容器注册的组件。<br/>
+
+### <h2>在测试中使用临时数据库</h2>
+
+单元测试时可以在一定范围使用一个空白的临时数据库。<br/>
+临时数据库使用了sqlite + 临时文件，结束后会自动删除该文件。<br/>
+如果需要查看临时数据库的内容，可以在using结束之前下一个断点，然后用数据库浏览器打开临时文件夹下的数据库文件。<br/>
+``` csharp
+var unitTestManager = Application.Ioc.Resolve<UnitTestManager>();
+using (unitTestManager.UseTemporaryDatabase()) {
+	// 数据库操作代码
+}
+```

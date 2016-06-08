@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('d7/dcd/class_z_k_web_1_1_localize_1_1_
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 成员函数</a> &#124;
-<a href="#pro-attribs">Protected 属性</a> &#124;
 <a href="#properties">属性</a> &#124;
 <a href="../../d4/d47/class_z_k_web_1_1_localize_1_1_translate_manager-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
@@ -124,12 +123,15 @@ $(document).ready(function(){initNavTree('d7/dcd/class_z_k_web_1_1_localize_1_1_
  <div class="center">
   <img src="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.png" usemap="#ZKWeb.Localize.TranslateManager_map" alt=""/>
   <map id="ZKWeb.Localize.TranslateManager_map" name="ZKWeb.Localize.TranslateManager_map">
-<area href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html" title="缓存清理器的接口 这个回调用于清理网站的页面和数据缓存 " alt="ZKWeb.Plugin.Interfaces.ICacheCleaner" shape="rect" coords="0,0,242,24"/>
+<area href="../../d4/d31/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_cleaner.html" title="缓存清理器的接口 这个回调用于清理网站的页面和数据缓存 " alt="ZKWeb.Cache.Interfaces.ICacheCleaner" shape="rect" coords="0,0,244,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
+<tr class="memitem:aed823f9276255725007cab7249742c10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#aed823f9276255725007cab7249742c10">TranslateManager</a> ()</td></tr>
+<tr class="memdesc:aed823f9276255725007cab7249742c10"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#aed823f9276255725007cab7249742c10">更多...</a><br /></td></tr>
+<tr class="separator:aed823f9276255725007cab7249742c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09f97b22272cd8e48656be66595388bb"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#a09f97b22272cd8e48656be66595388bb">Translate</a> (string text)</td></tr>
 <tr class="memdesc:a09f97b22272cd8e48656be66595388bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">按当前语言翻译文本  <a href="#a09f97b22272cd8e48656be66595388bb">更多...</a><br /></td></tr>
 <tr class="separator:a09f97b22272cd8e48656be66595388bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,24 +145,39 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:af21a8f41e951dfc4c5d6c80dac827130"><td class="mdescLeft">&#160;</td><td class="mdescRight">清理缓存  <a href="#af21a8f41e951dfc4c5d6c80dac827130">更多...</a><br /></td></tr>
 <tr class="separator:af21a8f41e951dfc4c5d6c80dac827130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected 属性</h2></td></tr>
-<tr class="memitem:adc59009965aff65d67b002360c99088e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; KeyValuePair&lt; string, string &gt;, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#adc59009965aff65d67b002360c99088e">TranslateCache</a> = new <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;KeyValuePair&lt;string, string&gt;, string&gt;()</td></tr>
-<tr class="memdesc:adc59009965aff65d67b002360c99088e"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译缓存 { (文本, 语言): 翻译, ... }  <a href="#adc59009965aff65d67b002360c99088e">更多...</a><br /></td></tr>
-<tr class="separator:adc59009965aff65d67b002360c99088e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, List&lt; <a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#a0a87ec509af4cd6c9ced941f983eb9cc">TranslateProvidersCache</a> = new <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, List&lt;<a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a>&gt;&gt;()</td></tr>
-<tr class="memdesc:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译提供器的缓存 { 语言: 提供器列表, ... }  <a href="#a0a87ec509af4cd6c9ced941f983eb9cc">更多...</a><br /></td></tr>
-<tr class="separator:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
 <tr class="memitem:afeb2d982c84866ad0addb2e6eeeb9ba0"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#afeb2d982c84866ad0addb2e6eeeb9ba0">TranslateCacheTime</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:afeb2d982c84866ad0addb2e6eeeb9ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译的缓存时间，默认是3秒  <a href="#afeb2d982c84866ad0addb2e6eeeb9ba0">更多...</a><br /></td></tr>
+<tr class="memdesc:afeb2d982c84866ad0addb2e6eeeb9ba0"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译的缓存时间 默认是3秒，可通过网站配置指定  <a href="#afeb2d982c84866ad0addb2e6eeeb9ba0">更多...</a><br /></td></tr>
 <tr class="separator:afeb2d982c84866ad0addb2e6eeeb9ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5cd69a7f8036e136f20cf1872c891dea"><td class="memItemLeft" align="right" valign="top">ConcurrentDictionary&lt; string, <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#a5cd69a7f8036e136f20cf1872c891dea">TranslateCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5cd69a7f8036e136f20cf1872c891dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译缓存 { 语言: { 文本: 翻译, ... } }  <a href="#a5cd69a7f8036e136f20cf1872c891dea">更多...</a><br /></td></tr>
+<tr class="separator:a5cd69a7f8036e136f20cf1872c891dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt; string, List&lt; <a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcd/class_z_k_web_1_1_localize_1_1_translate_manager.html#a0a87ec509af4cd6c9ced941f983eb9cc">TranslateProvidersCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译提供器的缓存 { 语言: 提供器列表, ... }  <a href="#a0a87ec509af4cd6c9ced941f983eb9cc">更多...</a><br /></td></tr>
+<tr class="separator:a0a87ec509af4cd6c9ced941f983eb9cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>翻译管理器 </p>
-</div><h2 class="groupheader">成员函数说明</h2>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="aed823f9276255725007cab7249742c10"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ZKWeb.Localize.TranslateManager.TranslateManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
 <a class="anchor" id="af21a8f41e951dfc4c5d6c80dac827130"></a>
 <div class="memitem">
 <div class="memproto">
@@ -184,7 +201,7 @@ Protected 属性</h2></td></tr>
 
 <p>清理缓存 </p>
 
-<p>实现了 <a class="el" href="../../db/d63/interface_z_k_web_1_1_plugin_1_1_interfaces_1_1_i_cache_cleaner.html#aded14786337245c895252c66fc9c7617">ZKWeb.Plugin.Interfaces.ICacheCleaner</a>.</p>
+<p>实现了 <a class="el" href="../../d4/d31/interface_z_k_web_1_1_cache_1_1_interfaces_1_1_i_cache_cleaner.html#a7e2d8f24fbef9a8c620f06f9b6d3f522">ZKWeb.Cache.Interfaces.ICacheCleaner</a>.</p>
 
 </div>
 </div>
@@ -298,52 +315,29 @@ Protected 属性</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">类成员变量说明</h2>
-<a class="anchor" id="adc59009965aff65d67b002360c99088e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;KeyValuePair&lt;string, string&gt;, string&gt; ZKWeb.Localize.TranslateManager.TranslateCache = new <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;KeyValuePair&lt;string, string&gt;, string&gt;()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>翻译缓存 { (文本, 语言): 翻译, ... } </p>
-
-</div>
-</div>
-<a class="anchor" id="a0a87ec509af4cd6c9ced941f983eb9cc"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, List&lt;<a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a>&gt; &gt; ZKWeb.Localize.TranslateManager.TranslateProvidersCache = new <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, List&lt;<a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a>&gt;&gt;()</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>翻译提供器的缓存 { 语言: 提供器列表, ... } </p>
-
-</div>
-</div>
 <h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="a5cd69a7f8036e136f20cf1872c891dea"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConcurrentDictionary&lt;string, <a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, string&gt; &gt; ZKWeb.Localize.TranslateManager.TranslateCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>翻译缓存 { 语言: { 文本: 翻译, ... } } </p>
+
+</div>
+</div>
 <a class="anchor" id="afeb2d982c84866ad0addb2e6eeeb9ba0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -362,7 +356,29 @@ Protected 属性</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>翻译的缓存时间，默认是3秒 </p>
+<p>翻译的缓存时间 默认是3秒，可通过网站配置指定 </p>
+
+</div>
+</div>
+<a class="anchor" id="a0a87ec509af4cd6c9ced941f983eb9cc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html">MemoryCache</a>&lt;string, List&lt;<a class="el" href="../../df/d99/interface_z_k_web_1_1_localize_1_1_interfaces_1_1_i_translate_provider.html">ITranslateProvider</a>&gt; &gt; ZKWeb.Localize.TranslateManager.TranslateProvidersCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>翻译提供器的缓存 { 语言: 提供器列表, ... } </p>
 
 </div>
 </div>

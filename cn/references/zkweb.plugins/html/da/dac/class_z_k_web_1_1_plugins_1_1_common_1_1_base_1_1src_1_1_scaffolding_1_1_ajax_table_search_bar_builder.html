@@ -148,6 +148,12 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:adf6dc27ea6033c29e2610b352af62659"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_search_bar_builder.html#adf6dc27ea6033c29e2610b352af62659">Conditions</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:adf6dc27ea6033c29e2610b352af62659"><td class="mdescLeft">&#160;</td><td class="mdescRight">高级搜索框的条件项  <a href="#adf6dc27ea6033c29e2610b352af62659">更多...</a><br /></td></tr>
 <tr class="separator:adf6dc27ea6033c29e2610b352af62659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81c120a4206b323edae1c8a1f148c005"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d5/d82/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_html_item.html">HtmlItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_search_bar_builder.html#a81c120a4206b323edae1c8a1f148c005">BeforeItems</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a81c120a4206b323edae1c8a1f148c005"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示在搜索框之前的项  <a href="#a81c120a4206b323edae1c8a1f148c005">更多...</a><br /></td></tr>
+<tr class="separator:a81c120a4206b323edae1c8a1f148c005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add9b594a384a4238847ccffbf5cfce58"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d5/d82/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_html_item.html">HtmlItem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_search_bar_builder.html#add9b594a384a4238847ccffbf5cfce58">AfterItems</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:add9b594a384a4238847ccffbf5cfce58"><td class="mdescLeft">&#160;</td><td class="mdescRight">显示在搜索框之后的项  <a href="#add9b594a384a4238847ccffbf5cfce58">更多...</a><br /></td></tr>
+<tr class="separator:add9b594a384a4238847ccffbf5cfce58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Ajax表格搜索栏构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 例子 var searchBar = Application.Ioc.Resolve[<a class="el" href="../../da/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_search_bar_builder.html" title="Ajax表格搜索栏构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 例子 var searchBar = Application...">AjaxTableSearchBarBuilder</a>](); searchBar.TableId = "TestList"; searchBar.Conditions.Add(new FormField(new TextBoxFieldAttribute("TestCondition"))); return new TemplateResult("test_table.html", new { table, searchBar }); </p>
@@ -189,6 +195,50 @@ Public 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="add9b594a384a4238847ccffbf5cfce58"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="../../d5/d82/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_html_item.html">HtmlItem</a>&gt; ZKWeb.Plugins.Common.Base.src.Scaffolding.AjaxTableSearchBarBuilder.AfterItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显示在搜索框之后的项 </p>
+
+</div>
+</div>
+<a class="anchor" id="a81c120a4206b323edae1c8a1f148c005"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="../../d5/d82/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_html_item.html">HtmlItem</a>&gt; ZKWeb.Plugins.Common.Base.src.Scaffolding.AjaxTableSearchBarBuilder.BeforeItems</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>显示在搜索框之前的项 </p>
+
+</div>
+</div>
 <a class="anchor" id="adf6dc27ea6033c29e2610b352af62659"></a>
 <div class="memitem">
 <div class="memproto">

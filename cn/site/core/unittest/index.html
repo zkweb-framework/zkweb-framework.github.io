@@ -240,6 +240,12 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="在测试中使用临时数据库" href="#_3">
+                在测试中使用临时数据库
+              </a>
+            </li>
+          
         </ul>
       
     
@@ -571,9 +577,7 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
 在<code>ExampleTest</code>类中添加以下函数<br/></p>
 <div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodC</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">using</span> <span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">OverrideIoc</span><span class="p">())</span> <span class="p">{</span>
-        <span class="c1">// clear registered delete callback for example table</span>
-        <span class="c1">// becuse container is inherited, Unregister will not work</span>
-        <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterDelegate</span><span class="p">(</span><span class="n">_</span> <span class="p">=&gt;</span> <span class="k">new</span> <span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;[]</span> <span class="p">{</span> <span class="p">});</span>
+        <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Unregister</span><span class="p">&lt;</span><span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;();</span>
         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(!</span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;().</span><span class="n">Any</span><span class="p">());</span>
     <span class="p">}</span>
     <span class="c1">// override is finished</span>
@@ -583,6 +587,15 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
 
 
 <p>模拟Ioc容器时注意旧的容器只是作为<code>fallback</code>使用，新的容器有注册的组件时，只会返回新的容器注册的组件。<br/></p>
+<h3 id="_3"><h2>在测试中使用临时数据库</h2></h3>
+<p>单元测试时可以在一定范围使用一个空白的临时数据库。<br/>
+临时数据库使用了sqlite + 临时文件，结束后会自动删除该文件。<br/>
+如果需要查看临时数据库的内容，可以在using结束之前下一个断点，然后用数据库浏览器打开临时文件夹下的数据库文件。<br/></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">unitTestManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">UnitTestManager</span><span class="p">&gt;();</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">unitTestManager</span><span class="p">.</span><span class="n">UseTemporaryDatabase</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// 数据库操作代码</span>
+<span class="p">}</span>
+</pre></div>
           <aside class="copyright" role="note">
             
             Documentation built with
