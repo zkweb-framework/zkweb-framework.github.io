@@ -25,7 +25,7 @@ ZKWeb目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL，运�
 使用SQLite数据库时可以按以下的格式配置<br />
 ```
 "Database": "sqlite",
-"ConnectionString": "Data Source={{App_Data}}\\test.db;Version=3;New=True;",
+"ConnectionString": "Data Source={{App_Data}}/test.db;Version=3",
 ```
 使用MSSQL数据库时可以按以下的格式配置<br />
 ```
