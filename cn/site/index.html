@@ -623,10 +623,22 @@
 <img alt="" src="./img/architecture.jpg" /></p>
 <h3 id="_5"><h2>性能数据</h2></h3>
 <ul>
-<li>2016-05-27 (i7 Q720 1.6Ghz x 4 core, ab -n 2000 -c 8, vmware player 12)<ul>
+<li>2016-05-27 (i7 Q720 1.6Ghz x 4 core 4 threads, ab -n 2000 -c 8, vmware player 12)<ul>
 <li>首页 2.240ms, 2.165ms, 2.123ms</li>
 <li>商品列表页 2.131ms, 2.013ms, 2.132ms</li>
 <li>商品详情页 2.165ms, 2.136ms, 2.193ms</li>
+</ul>
+</li>
+<li>2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 8, vmware player 12)<ul>
+<li>首页 1.406ms, 1.441ms, 1.453ms</li>
+<li>商品列表页 1.457ms, 1.297ms, 1.207ms</li>
+<li>商品详情页 1.723ms, 1.695ms, 1.719ms</li>
+</ul>
+</li>
+<li>2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 16, real machine)<ul>
+<li>首页 0.793ms, 0.824ms, 0.809ms</li>
+<li>商品列表页 0.708ms, 0.672ms, 0.694ms</li>
+<li>商品详情页 0.853ms, 0.827ms, 0.827ms</li>
 </ul>
 </li>
 </ul>

@@ -72,10 +72,18 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 
 ### <h2>性能数据</h2>
 
-- 2016-05-27 (i7 Q720 1.6Ghz x 4 core, ab -n 2000 -c 8, vmware player 12)
+- 2016-05-27 (i7 Q720 1.6Ghz x 4 core 4 threads, ab -n 2000 -c 8, vmware player 12)
 	- 首页 2.240ms, 2.165ms, 2.123ms
 	- 商品列表页 2.131ms, 2.013ms, 2.132ms
 	- 商品详情页 2.165ms, 2.136ms, 2.193ms
+- 2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 8, vmware player 12)
+	- 首页 1.406ms, 1.441ms, 1.453ms
+	- 商品列表页 1.457ms, 1.297ms, 1.207ms
+	- 商品详情页 1.723ms, 1.695ms, 1.719ms
+- 2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 16, real machine)
+	- 首页 0.793ms, 0.824ms, 0.809ms
+	- 商品列表页 0.708ms, 0.672ms, 0.694ms
+	- 商品详情页 0.853ms, 0.827ms, 0.827ms
 
 
 ### <h2>项目进度</h2>
