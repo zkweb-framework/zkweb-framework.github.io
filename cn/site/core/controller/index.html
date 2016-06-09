@@ -692,12 +692,17 @@ http://dotliquidmarkup.org/</br></p>
 <ul>
 <li>trans<ul>
 <li>翻译指定的文本</li>
-<li>例: <code>{% text | trans %}, {% "fixed text" | trans %}</code></li>
+<li>例: <code>{{ text | trans }}, {{ "fixed text" | trans }}</code></li>
 </ul>
 </li>
 <li>format<ul>
 <li>格式化字符串，最多可支持8个参数</li>
 <li>例: <code>{{ "name is [0], age is [1]" | format: name, age }}</code></li>
+</ul>
+</li>
+<li>raw_html<ul>
+<li>描画原始的内容，不经过html编码</li>
+<li>例: <code>{{ variable | raw_html }}</code></li>
 </ul>
 </li>
 </ul>

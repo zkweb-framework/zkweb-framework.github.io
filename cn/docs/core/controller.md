@@ -114,10 +114,13 @@ public IActionResult TemplateAction() {
 
 - trans
 	- 翻译指定的文本
-	- 例: `{% text | trans %}, {% "fixed text" | trans %}`
+	- 例: `{{ text | trans }}, {{ "fixed text" | trans }}`
 - format
 	- 格式化字符串，最多可支持8个参数
 	- 例: `{{ "name is [0], age is [1]" | format: name, age }}`
+- raw_html
+	- 描画原始的内容，不经过html编码
+	- 例: `{{ variable | raw_html }}`
 
 ### <h2>获取请求参数</h2>
 
