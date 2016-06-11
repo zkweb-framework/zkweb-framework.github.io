@@ -555,8 +555,9 @@
 <p>插件支持权限管理，网站中的权限由<code>IPrivilegesProvider</code>提供。<br/>
 权限是一个字符串，格式推荐是<code>Group:Name</code>，例如<code>AdminManage:View</code>。<br/>
 很多插件支持自动生成权限提供器，例如构建后台CRUD页面时会自动生成增删查改权限。<br/></p>
-<p>需要检查权限时可以使用<code>PrivilegesChecker</code></p>
-<div class="code"><pre><span></span><span class="n">PrivilegesChecker</span><span class="p">.</span><span class="n">Check</span><span class="p">(</span><span class="n">UserTypes</span><span class="p">[]</span> <span class="n">types</span><span class="p">,</span> <span class="k">params</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">privileges</span><span class="p">);</span>
+<p>需要检查权限时可以使用<code>PrivilegeManager</code></p>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">privilegeManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">PrivilegeManager</span><span class="p">&gt;();</span>
+<span class="n">privilegeManager</span><span class="p">.</span><span class="n">Check</span><span class="p">(</span><span class="n">UserTypesGroup</span><span class="p">.</span><span class="n">Admin</span><span class="p">,</span> <span class="s">&quot;AdminManage:Edit&quot;</span><span class="p">);</span>
 </pre></div>
 
 
@@ -572,7 +573,7 @@
 <span class="c1">/// 示例的后台应用</span>
 <span class="c1">/// &lt;/summary&gt;</span>
 <span class="na">[ExportMany]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleApp</span> <span class="p">:</span> <span class="n">AdminApp</span> <span class="p">{</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleApp</span> <span class="p">:</span> <span class="n">SimpleAdminAppBuilder</span> <span class="p">{</span>
     <span class="c1">// Name和Url必须提供</span>
     <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;ExampleApp&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
     <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">Url</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;/admin/example_app&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
@@ -638,13 +639,8 @@
     <span class="c1">/// &lt;/summary&gt;</span>
     <span class="k">public</span> <span class="k">class</span> <span class="nc">TableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
         <span class="k">public</span> <span class="k">void</span> <span class="nf">OnBuildTable</span><span class="p">(</span><span class="n">AjaxTableBuilder</span> <span class="n">table</span><span class="p">,</span> <span class="n">AjaxTableSearchBarBuilder</span> <span class="n">searchBar</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 右键菜单分割线</span>
-            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddEditActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 右键编辑菜单项</span>
-            <span class="n">table</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddAddActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 右键添加菜单项</span>
-            <span class="n">searchBar</span><span class="p">.</span><span class="n">KeywordPlaceHolder</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">);</span> <span class="c1">// 搜索栏的预留文本</span>
-            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 搜索栏的分割线</span>
-            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddRecycleBin</span><span class="p">();</span> <span class="c1">// 搜索栏的回收站菜单项</span>
-            <span class="n">searchBar</span><span class="p">.</span><span class="n">MenuItems</span><span class="p">.</span><span class="n">AddAddActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 搜索栏的添加菜单项</span>
+            <span class="n">table</span><span class="p">.</span><span class="n">StandardSetupForCrudPage</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 设置表格</span>
+            <span class="n">searchBar</span><span class="p">.</span><span class="n">StandardSetupForCrudPage</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;(</span><span class="s">&quot;Name&quot;</span><span class="p">);</span> <span class="c1">// 设置搜索栏</span>
         <span class="p">}</span>
 
         <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
@@ -672,21 +668,17 @@
 
         <span class="k">public</span> <span class="k">void</span> <span class="nf">OnResponse</span><span class="p">(</span>
             <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">AjaxTableSearchResponse</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">idColumn</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddIdColumn</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span> <span class="c1">// Id列</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddIdColumn</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">).</span><span class="n">StandardSetupForCrudPage</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;(</span><span class="n">request</span><span class="p">);</span> <span class="c1">// Id列</span>
             <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddNoColumn</span><span class="p">();</span> <span class="c1">// 序号列，页序号*页数量+数据位置(从1开始)</span>
             <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">,</span> <span class="s">&quot;45%&quot;</span><span class="p">);</span> <span class="c1">// 名称列</span>
             <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;CreateTime&quot;</span><span class="p">);</span> <span class="c1">// 添加时间列</span>
             <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddEnumLabelColumn</span><span class="p">(</span><span class="s">&quot;Deleted&quot;</span><span class="p">,</span> <span class="k">typeof</span><span class="p">(</span><span class="n">EnumDeleted</span><span class="p">));</span> <span class="c1">// 删除状态列</span>
-            <span class="kt">var</span> <span class="n">actionColumn</span> <span class="p">=</span> <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddActionColumn</span><span class="p">();</span> <span class="c1">// 操作列</span>
-            <span class="n">actionColumn</span><span class="p">.</span><span class="n">AddEditActionForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;();</span> <span class="c1">// 编辑按钮</span>
-            <span class="n">idColumn</span><span class="p">.</span><span class="n">AddDivider</span><span class="p">();</span> <span class="c1">// 批量操作菜单的分割线</span>
-            <span class="n">idColumn</span><span class="p">.</span><span class="n">AddDeleteActionsForAdminApp</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;(</span><span class="n">request</span><span class="p">);</span> <span class="c1">// 批量删除和恢复</span>
+            <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddActionColumn</span><span class="p">().</span><span class="n">StandardSetupForCrudPage</span><span class="p">&lt;</span><span class="n">ExampleCRUDApp</span><span class="p">&gt;(</span><span class="n">request</span><span class="p">);</span> <span class="c1">// 操作列</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="c1">/// &lt;summary&gt;</span>
     <span class="c1">/// 添加和编辑使用的表单</span>
-    <span class="c1">/// 内部使用GenericRepository.GetById获取和保存数据，如果主键成员不是&quot;Id&quot;请实现自定义的仓储类。</span>
     <span class="c1">/// &lt;/summary&gt;</span>
     <span class="k">public</span> <span class="k">class</span> <span class="nc">Form</span> <span class="p">:</span> <span class="n">DataEditFormBuilder</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">Form</span><span class="p">&gt;</span> <span class="p">{</span>
 <span class="na">        [Required]</span>

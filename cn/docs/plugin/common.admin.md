@@ -23,9 +23,10 @@
 权限是一个字符串，格式推荐是`Group:Name`，例如`AdminManage:View`。<br/>
 很多插件支持自动生成权限提供器，例如构建后台CRUD页面时会自动生成增删查改权限。<br/>
 
-需要检查权限时可以使用`PrivilegesChecker`
+需要检查权限时可以使用`PrivilegeManager`
 ``` csharp
-PrivilegesChecker.Check(UserTypes[] types, params string[] privileges);
+var privilegeManager = Application.Ioc.Resolve<PrivilegeManager>();
+privilegeManager.Check(UserTypesGroup.Admin, "AdminManage:Edit");
 ```
 
 ### <h2>后台页面</h2>
@@ -44,7 +45,7 @@ PrivilegesChecker.Check(UserTypes[] types, params string[] privileges);
 /// 示例的后台应用
 /// </summary>
 [ExportMany]
-public class ExampleApp : AdminApp {
+public class ExampleApp : SimpleAdminAppBuilder {
 	// Name和Url必须提供
 	public override string Name { get { return "ExampleApp"; } }
 	public override string Url { get { return "/admin/example_app"; } }
@@ -114,13 +115,8 @@ public class ExampleCRUDApp : AdminAppBuilder<ExampleTable> {
 	/// </summary>
 	public class TableCallback : IAjaxTableCallback<ExampleTable> {
 		public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
-			table.MenuItems.AddDivider(); // 右键菜单分割线
-			table.MenuItems.AddEditActionForAdminApp<ExampleCRUDApp>(); // 右键编辑菜单项
-			table.MenuItems.AddAddActionForAdminApp<ExampleCRUDApp>(); // 右键添加菜单项
-			searchBar.KeywordPlaceHolder = new T("Name"); // 搜索栏的预留文本
-			searchBar.MenuItems.AddDivider(); // 搜索栏的分割线
-			searchBar.MenuItems.AddRecycleBin(); // 搜索栏的回收站菜单项
-			searchBar.MenuItems.AddAddActionForAdminApp<ExampleCRUDApp>(); // 搜索栏的添加菜单项
+			table.StandardSetupForCrudPage<ExampleCRUDApp>(); // 设置表格
+			searchBar.StandardSetupForCrudPage<ExampleCRUDApp>("Name"); // 设置搜索栏
 		}
 
 		public void OnQuery(
@@ -148,21 +144,17 @@ public class ExampleCRUDApp : AdminAppBuilder<ExampleTable> {
 
 		public void OnResponse(
 			AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
-			var idColumn = response.Columns.AddIdColumn("Id"); // Id列
+			response.Columns.AddIdColumn("Id").StandardSetupForCrudPage<ExampleCRUDApp>(request); // Id列
 			response.Columns.AddNoColumn(); // 序号列，页序号*页数量+数据位置(从1开始)
 			response.Columns.AddMemberColumn("Name", "45%"); // 名称列
 			response.Columns.AddMemberColumn("CreateTime"); // 添加时间列
 			response.Columns.AddEnumLabelColumn("Deleted", typeof(EnumDeleted)); // 删除状态列
-			var actionColumn = response.Columns.AddActionColumn(); // 操作列
-			actionColumn.AddEditActionForAdminApp<ExampleCRUDApp>(); // 编辑按钮
-			idColumn.AddDivider(); // 批量操作菜单的分割线
-			idColumn.AddDeleteActionsForAdminApp<ExampleCRUDApp>(request); // 批量删除和恢复
+			response.Columns.AddActionColumn().StandardSetupForCrudPage<ExampleCRUDApp>(request); // 操作列
 		}
 	}
 
 	/// <summary>
 	/// 添加和编辑使用的表单
-	/// 内部使用GenericRepository.GetById获取和保存数据，如果主键成员不是"Id"请实现自定义的仓储类。
 	/// </summary>
 	public class Form : DataEditFormBuilder<ExampleTable, Form> {
 		[Required]
