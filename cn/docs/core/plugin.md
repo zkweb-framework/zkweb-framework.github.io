@@ -94,10 +94,12 @@ ZKWeb从0.9.5开始使用了自己编写的Ioc容器。<br/>
 <a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericResolver.cs" target="_blank">IGenericResolver</a><br />
 
 ZKWeb全局使用的容器在`Application.Ioc`。<br/>
-插件可以使用`[ExportMany]`注册组件（参考"添加代码"节），也可以使用`IPlugin`接口在网站启动时注册到`Application.Ioc`中。<br/>
+插件可以使用`[ExportMany]`或`[Export]`注册组件，也可以使用`IPlugin`接口在网站启动时注册到`Application.Ioc`中。<br/>
 指定`[SingletonReuse]`属性时可以实现单例。<br/>
 ZKWeb考虑到性能，内存占用和代码量，不使用构造函数注入。<br/>
-单元测试时可以使用Application.OverrideIoc重载当前的容器。<br/>
+单元测试时可以使用`Application.OverrideIoc`重载当前的容器。<br/>
+
+ZKWeb在扫描类型时只会扫描公开的类型，如果类型标记了Export属性但是修饰符是private或者internal则不会被注册。<br/>
 
 ### <h2>Ioc容器的使用例子</h2>
 以下是简单的使用例子。
