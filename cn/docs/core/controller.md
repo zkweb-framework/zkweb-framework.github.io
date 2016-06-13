@@ -259,11 +259,20 @@ areaManager.GetArea("header_menubar").DefaultWidgets.Add("example.widgets/exampl
 {
 	"Name": "Example Navbar Item",
 	"CacheTime": 15,
-	"CacheBy": "Locale"
+	"CacheBy": "Locale,Url"
 }
 ```
 
 这里的CacheTime表示该模块的描画结果会缓存15秒，CacheBy表示缓存的隔离策略。<br/>
 这里缓存会按当前的语言和时区来隔离。<br/>
+有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。
+
 缓存的隔离策略可以通过实现`ICacheIsolationPolicy`接口添加。<br/>
-目前`Common.Base`插件提供了多种缓存的隔离策略，请参考该插件的文档。<br/>
+目前核心插件提供了以下的缓存策略<br/>
+
+- Device<br/>
+  按设备隔离
+- Locale<br/>
+  按当前语言和时区隔离
+- Url<br/>
+  按当前请求url隔离

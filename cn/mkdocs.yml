@@ -12,7 +12,7 @@ pages:
 - 插件(Common.Base):               plugin/common.base.md
 - 插件(Common.Captcha):            plugin/common.captcha.md
 - 插件(Common.Admin):              plugin/common.admin.md
-- 插件(Common.MenuPageBase):       plugin/common.menupagebase.md
+- 插件(Common.MenuPage):           plugin/common.menupage.md
 - 插件(Common.AdminSettings):      plugin/common.adminsettings.md
 - 插件(Common.UserPanel):          plugin/common.userpanel.md
 - 插件(Common.UserContact):        plugin/common.usercontact.md
@@ -21,6 +21,7 @@ pages:
 - 插件(Common.GenericRecord):      plugin/common.genericrecord.md
 - 插件(Common.LanguageSwitcher):   plugin/common.languageswitcher.md
 - 插件(Common.Currency):           plugin/common.currency.md
+- 插件(Common.PesudoStatic):       plugin/common.pesudostatic.md
 - 插件(Common.Region):             plugin/common.region.md
 - 插件(Common.SerialGenerate):     plugin/common.serialgenerate.md
 - 插件(Finance.Payment):           plugin/common.payment.md

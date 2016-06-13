@@ -327,6 +327,12 @@
               </a>
             </li>
           
+            <li class="anchor">
+              <a title="全局过滤网址" href="#_15">
+                全局过滤网址
+              </a>
+            </li>
+          
         </ul>
       
     
@@ -353,8 +359,8 @@
           
             
   <li>
-    <a class="" title="插件(Common.MenuPageBase)" href="../common.menupagebase/">
-      插件(Common.MenuPageBase)
+    <a class="" title="插件(Common.MenuPage)" href="../common.menupage/">
+      插件(Common.MenuPage)
     </a>
     
   </li>
@@ -427,6 +433,15 @@
   <li>
     <a class="" title="插件(Common.Currency)" href="../common.currency/">
       插件(Common.Currency)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.PesudoStatic)" href="../common.pesudostatic/">
+      插件(Common.PesudoStatic)
     </a>
     
   </li>
@@ -1060,6 +1075,12 @@
 <li>例: <code>{% include_js_later variable %}</code></li>
 </ul>
 </li>
+<li>render_extra_metadata<ul>
+<li>描画额外的meta标签</li>
+<li>描画后会清空原有的内容，可以重复调用</li>
+<li>例: <code>{% render_extra_metadata %}</code></li>
+</ul>
+</li>
 <li>render_included_css<ul>
 <li>描画延迟引用的css资源</li>
 <li>描画后会清空原有的引用，可以重复调用</li>
@@ -1072,10 +1093,16 @@
 <li>例: <code>{% render_included_js %}</code></li>
 </ul>
 </li>
-<li>render_metadata<ul>
-<li>描画附加的内容，用于描画head标签中的meta标签</li>
-<li>描画后会清空原有的内容，可以重复调用</li>
-<li>例: <code>{% render_metadata %}</code></li>
+<li>remder_meta_description<ul>
+<li>描画页面描述</li>
+<li>如果有指定关键词时使用指定的描述，否则使用网站设置中的描述</li>
+<li>例: <code>{% remder_meta_description %}</code></li>
+</ul>
+</li>
+<li>render_meta_keywords<ul>
+<li>描画页面关键词</li>
+<li>如果有指定关键词时使用指定的关键词，否则使用网站设置中的关键词</li>
+<li>例: <code>{% render_meta_keywords %}</code></li>
 </ul>
 </li>
 <li>render_title<ul>
@@ -1089,13 +1116,13 @@
 </ul>
 </li>
 <li>use_meta_description<ul>
-<li>设置页面描述，需要配合"render_metadata"标签使用</li>
+<li>设置页面描述，需要配合"remder_meta_description"标签使用</li>
 <li>例: <code>{% use_meta_description "description" %}</code></li>
 <li>例: <code>{% use_meta_description variable %}</code></li>
 </ul>
 </li>
 <li>use_meta_keywords<ul>
-<li>设置页面关键词，需要配合"render_metadata"标签使用</li>
+<li>设置页面关键词，需要配合"render_meta_keywords"标签使用</li>
 <li>例: <code>{% use_meta_keywords "keywords" %}</code></li>
 <li>例: <code>{% use_meta_keywords variable %}</code></li>
 </ul>
@@ -1118,6 +1145,30 @@
 <li>网站标题</li>
 <li>按WebsiteSettings.DocumentTitleFormat进行格式化</li>
 <li>例: <code>{{ "Website Title" | website_title }}</code></li>
+</ul>
+</li>
+<li>url<ul>
+<li>全局过滤网址</li>
+<li>请参考下面"全局过滤网址"的说明</li>
+<li>例: <code>{{ "/example" | url }}</code></li>
+</ul>
+</li>
+<li>url_get_param<ul>
+<li>获取Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_get_param: "key" }}</code></li>
+<li>例: <code>{{ test_url | url_get_param: variable }}</code></li>
+</ul>
+</li>
+<li>url_set_param<ul>
+<li>设置Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_set_param: "key", "value" | url }}</code></li>
+<li>例: <code>{{ test_url | url_set_param: "key", variable | url }}</code></li>
+</ul>
+</li>
+<li>url_remove_param<ul>
+<li>删除Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_remove_param: "key" }}</code></li>
+<li>例: <code>{{ test_url | url_remove_param: variable }}</code></li>
 </ul>
 </li>
 </ul>
@@ -1168,30 +1219,17 @@
 
 
 <h3 id="_14"><h2>缓存的隔离策略</h2></h3>
-<p>有的缓存内容需要按当前的用户或语言时区隔离，这些模式在这里称为"隔离策略"。<br/>
-核心框架提供了隔离策略的接口和使用了隔离策略的缓存类，这个插件提供了各种的隔离策略的实现。<br/></p>
+<p>插件提供了以下的缓存策略:<br/>
+关于缓存策略可以查看<a href="../../core/controller/">控制器和模板系统</a>。<br/></p>
 <ul>
 <li>Ident<br/>
   按当前登录用户隔离缓存</li>
-<li>Locale<br/>
-  按当前语言和时区隔离缓存</li>
-<li>IdentAndLocale<br/>
-  按当前登录用户、语言和时区隔离缓存</li>
-<li>IdentAndLocaleAndUrl<br/>
-  按当前登录用户、语言、时区和Url隔离缓存</li>
 </ul>
-<p>使用<code>IsolatedMemoryCache</code>+缓存策略的例子</p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">cache</span> <span class="p">=</span> <span class="k">new</span> <span class="n">IsolatedMemoryCache</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">int</span><span class="p">&gt;(</span><span class="s">&quot;Ident&quot;</span><span class="p">);</span>
-<span class="n">cache</span><span class="p">.</span><span class="n">Put</span><span class="p">(</span><span class="s">&quot;key&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span> <span class="c1">// 实际会使用(当前登录用户Id+&quot;Key&quot;)作为键值</span>
-</pre></div>
-
-
-<p>使用模板模块的描画缓存的例子，指定widget文件的内容</p>
-<div class="code"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;RecommendedProducts&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;CacheTime&quot;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
-    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;IdentAndLocale&quot;</span>
-<span class="p">}</span>
+<h3 id="_15"><h2>全局过滤网址</h2></h3>
+<p>为了支持伪静态等高级功能，这个插件提供了全局过滤网址的功能。<br/>
+描画a标签的href等时应该添加<code>url</code>过滤器。<br/>
+需要全局过滤网址时可以注册到<code>IUrlFilter</code>接口。<br/></p>
+<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &quot;</span><span class="err">/</span><span class="na">example</span><span class="err">/</span><span class="na">view</span><span class="err">?</span><span class="na">id</span><span class="o">=</span><span class="s">[0]&quot;</span> <span class="err">|</span> <span class="na">format:</span> <span class="na">exampleId</span> <span class="err">|</span> <span class="na">url</span> <span class="err">}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </pre></div>
           <aside class="copyright" role="note">
             

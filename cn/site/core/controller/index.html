@@ -335,8 +335,8 @@
           
             
   <li>
-    <a class="" title="插件(Common.MenuPageBase)" href="../../plugin/common.menupagebase/">
-      插件(Common.MenuPageBase)
+    <a class="" title="插件(Common.MenuPage)" href="../../plugin/common.menupage/">
+      插件(Common.MenuPage)
     </a>
     
   </li>
@@ -409,6 +409,15 @@
   <li>
     <a class="" title="插件(Common.Currency)" href="../../plugin/common.currency/">
       插件(Common.Currency)
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="插件(Common.PesudoStatic)" href="../../plugin/common.pesudostatic/">
+      插件(Common.PesudoStatic)
     </a>
     
   </li>
@@ -867,15 +876,24 @@ http://dotliquidmarkup.org/</br></p>
 <div class="code"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Navbar Item&quot;</span><span class="p">,</span>
     <span class="nt">&quot;CacheTime&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
-    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;Locale&quot;</span>
+    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;Locale,Url&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <p>这里的CacheTime表示该模块的描画结果会缓存15秒，CacheBy表示缓存的隔离策略。<br/>
 这里缓存会按当前的语言和时区来隔离。<br/>
-缓存的隔离策略可以通过实现<code>ICacheIsolationPolicy</code>接口添加。<br/>
-目前<code>Common.Base</code>插件提供了多种缓存的隔离策略，请参考该插件的文档。<br/></p>
+有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。</p>
+<p>缓存的隔离策略可以通过实现<code>ICacheIsolationPolicy</code>接口添加。<br/>
+目前核心插件提供了以下的缓存策略<br/></p>
+<ul>
+<li>Device<br/>
+  按设备隔离</li>
+<li>Locale<br/>
+  按当前语言和时区隔离</li>
+<li>Url<br/>
+  按当前请求url隔离</li>
+</ul>
           <aside class="copyright" role="note">
             
             Documentation built with
