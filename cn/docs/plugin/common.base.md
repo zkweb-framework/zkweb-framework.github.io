@@ -402,6 +402,8 @@ public class ExampleForm : ModelFormBuilder {
 - HiddenFieldAttribute(string name)
 - JsonFieldAttribute(string name, Type fieldType)
 - HtmlFieldAttribute(string name)
+- RichTextEditorAttribute(string name, string config)
+  - 这个类型需要引用其他插件实现，现成的插件可以引用CMS.CKEditor
 
 ### <h2>数据库操作类</h2>
 
