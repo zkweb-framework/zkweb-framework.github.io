@@ -36,6 +36,7 @@ ZKWeb的网站配置内容都保存在`App_Data\config.json`中，不需要修�
 - ZKWeb.CustomWidgetsCacheTime 自定义模块列表的缓存时间，单位是秒
 - ZKWeb.TemplateCacheTime 模板的缓存时间，单位是秒
 - ZKWeb.DisplayFullExceptionForTemplate 是否在描画模板发生例外时显示完整信息
+- ZKWeb.DisplayFullExceptionForRequest 是否在请求发生例外时显示完整信息
 - ZKWeb.ClearCacheAfterUsedMemoryMoreThan 内存占用超过此数值时自动清理缓存，单位是MB
 - ZKWeb.CleanCacheCheckInterval 缓存自动清理器的检查间隔，单位是秒
 

@@ -107,15 +107,18 @@ $(document).ready(function(){initNavTree('db/d2a/class_z_k_web_1_1_templating_1_
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">类</a> &#124;
 <a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-attribs">Public 属性</a> &#124;
 <a href="#pub-static-attribs">静态 Public 属性</a> &#124;
+<a href="#properties">属性</a> &#124;
 <a href="../../df/d47/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch-members.html">所有成员列表</a>  </div>
   <div class="headertitle">
 <div class="title">ZKWeb.Templating.TemplateTags.Fetch类 参考</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>把指定路径的执行结果设置到变量 指定的路径可以是get也可以是post，会自动检测 例子 {% fetch /api/login_info &gt; login_info %} {{ login_info }} 例子，url支持变量 {% fetch /api/product_info?id={id} &gt; product_info %} {{ product_info }} 路径中的变量的获取顺序 当前模板上下文中的变量 当前http上下文中的参数 执行结果 结果是JsonResult或PlainResult时使用返回的结果 其他结果时使用描画的内容，但不支持二进制  
+<p>把指定路径的执行结果设置到变量 指定的路径可以是get也可以是post，会自动检测 路径中的变量的获取顺序  
  <a href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#details">更多...</a></p>
 <div class="dynheader">
 类 ZKWeb.Templating.TemplateTags.Fetch 继承关系图:</div>
@@ -126,21 +129,90 @@ $(document).ready(function(){initNavTree('db/d2a/class_z_k_web_1_1_templating_1_
 </map>
  </div></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>FetchHttpContext</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">抓取数据时使用的Http上下文 继承当前上下文的Items <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><b>FetchHttpRequest</b></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">抓取数据时使用的Http请求 继承当前上下文的Cookies和Headers <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
+<tr class="memitem:ac7543b445776d47e121f6275cc5f399b"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#ac7543b445776d47e121f6275cc5f399b">Initialize</a> (string tagName, string markup, List&lt; string &gt; tokens)</td></tr>
+<tr class="memdesc:ac7543b445776d47e121f6275cc5f399b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#ac7543b445776d47e121f6275cc5f399b">更多...</a><br /></td></tr>
+<tr class="separator:ac7543b445776d47e121f6275cc5f399b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67d2055eba97383026b124429426682c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a67d2055eba97383026b124429426682c">Render</a> (Context context, TextWriter result)</td></tr>
 <tr class="memdesc:a67d2055eba97383026b124429426682c"><td class="mdescLeft">&#160;</td><td class="mdescRight">把指定url的执行结果设置到变量  <a href="#a67d2055eba97383026b124429426682c">更多...</a><br /></td></tr>
 <tr class="separator:a67d2055eba97383026b124429426682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:adfc317fad4255bada3d940843d1216cc"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#adfc317fad4255bada3d940843d1216cc">VariableNameForAllQueryParameters</a> = &quot;*query&quot;</td></tr>
+<tr class="memdesc:adfc317fad4255bada3d940843d1216cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用当前请求的参数的变量名  <a href="#adfc317fad4255bada3d940843d1216cc">更多...</a><br /></td></tr>
+<tr class="separator:adfc317fad4255bada3d940843d1216cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 静态 Public 属性</h2></td></tr>
 <tr class="memitem:a43058ae88154d65b0ebd60cf8ae15683"><td class="memItemLeft" align="right" valign="top">static readonly Regex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a43058ae88154d65b0ebd60cf8ae15683">VariableInUrlExpression</a> = new Regex(&quot;{.+?}&quot;)</td></tr>
 <tr class="memdesc:a43058ae88154d65b0ebd60cf8ae15683"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取url中的变量使用的正则表达式  <a href="#a43058ae88154d65b0ebd60cf8ae15683">更多...</a><br /></td></tr>
 <tr class="separator:a43058ae88154d65b0ebd60cf8ae15683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:ab34f5e4ceee7b625fa70ee2993b8dd30"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#ab34f5e4ceee7b625fa70ee2993b8dd30">PathAndQuery</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:ab34f5e4ceee7b625fa70ee2993b8dd30"><td class="mdescLeft">&#160;</td><td class="mdescRight">路径和请求参数  <a href="#ab34f5e4ceee7b625fa70ee2993b8dd30">更多...</a><br /></td></tr>
+<tr class="separator:ab34f5e4ceee7b625fa70ee2993b8dd30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af559c2606e7fad95f2895d17b816b2bf"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#af559c2606e7fad95f2895d17b816b2bf">Variable</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:af559c2606e7fad95f2895d17b816b2bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">变量  <a href="#af559c2606e7fad95f2895d17b816b2bf">更多...</a><br /></td></tr>
+<tr class="separator:af559c2606e7fad95f2895d17b816b2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>把指定路径的执行结果设置到变量 指定的路径可以是get也可以是post，会自动检测 例子 {% fetch /api/login_info &gt; login_info %} {{ login_info }} 例子，url支持变量 {% fetch /api/product_info?id={id} &gt; product_info %} {{ product_info }} 路径中的变量的获取顺序 当前模板上下文中的变量 当前http上下文中的参数 执行结果 结果是JsonResult或PlainResult时使用返回的结果 其他结果时使用描画的内容，但不支持二进制 </p>
+<div class="textblock"><p>把指定路径的执行结果设置到变量 指定的路径可以是get也可以是post，会自动检测 路径中的变量的获取顺序 </p>
+<ul>
+<li>等于"*query"时使用当前请求的参数</li>
+<li>当前模板上下文中的变量</li>
+<li>当前http上下文中的参数 执行结果</li>
+<li>结果是JsonResult或PlainResult时使用返回的结果</li>
+<li>其他结果时使用描画的内容，但不支持二进制 </li>
+</ul>
+<p>{% fetch /api/example_info &gt; example_info %} {{ example_info }} url支持变量 {% fetch /api/example_info?id={id} &gt; example_info %} {% fetch /api/example_info?{*query} &gt; example_info %} {{ example_info }} </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="ac7543b445776d47e121f6275cc5f399b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void ZKWeb.Templating.TemplateTags.Fetch.Initialize </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>tagName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>markup</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; string &gt;&#160;</td>
+          <td class="paramname"><em>tokens</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+
+</div>
+</div>
 <a class="anchor" id="a67d2055eba97383026b124429426682c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -189,6 +261,65 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>获取url中的变量使用的正则表达式 </p>
+
+</div>
+</div>
+<a class="anchor" id="adfc317fad4255bada3d940843d1216cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const string ZKWeb.Templating.TemplateTags.Fetch.VariableNameForAllQueryParameters = &quot;*query&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用当前请求的参数的变量名 </p>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="ab34f5e4ceee7b625fa70ee2993b8dd30"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ZKWeb.Templating.TemplateTags.Fetch.PathAndQuery</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>路径和请求参数 </p>
+
+</div>
+</div>
+<a class="anchor" id="af559c2606e7fad95f2895d17b816b2bf"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ZKWeb.Templating.TemplateTags.Fetch.Variable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>变量 </p>
 
 </div>
 </div>

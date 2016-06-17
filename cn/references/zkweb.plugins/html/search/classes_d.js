@@ -12,6 +12,7 @@ var searchData=
   ['orderdeliverymap',['OrderDeliveryMap',['../d0/d63/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_map.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
   ['orderdeliverytoorderproduct',['OrderDeliveryToOrderProduct',['../de/da9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_to_order_product.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
   ['orderdeliverytoorderproductmap',['OrderDeliveryToOrderProductMap',['../da/dd7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_to_order_product_map.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
+  ['ordermanage',['OrderManage',['../d8/d0f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_user_panel_pages_1_1_order_manage.html',1,'ZKWeb::Plugins::Shopping::Order::src::UserPanelPages']]],
   ['ordermanageapp',['OrderManageApp',['../d3/d87/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_apps_1_1_order_manage_app.html',1,'ZKWeb::Plugins::Shopping::Order::src::AdminApps']]],
   ['ordermanager',['OrderManager',['../d4/ddb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_order_manager.html',1,'ZKWeb::Plugins::Shopping::Order::src::Managers']]],
   ['ordermap',['OrderMap',['../d4/d09/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_map.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
@@ -23,5 +24,5 @@ var searchData=
   ['orderproducttopropertyvalue',['OrderProductToPropertyValue',['../d9/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_to_property_value.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
   ['orderproducttopropertyvaluemap',['OrderProductToPropertyValueMap',['../d2/dc3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_to_property_value_map.html',1,'ZKWeb::Plugins::Shopping::Order::src::Database']]],
   ['ordersettings',['OrderSettings',['../d5/da0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_config_1_1_order_settings.html',1,'ZKWeb::Plugins::Shopping::Order::src::Config']]],
-  ['ordersettingsform',['OrderSettingsForm',['../d6/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form.html',1,'ZKWeb::Plugins::Shopping::Order::src::GenericFormsForAdminSettings']]]
+  ['ordersettingsform',['OrderSettingsForm',['../d6/d70/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_settings_pages_1_1_order_settings_form.html',1,'ZKWeb::Plugins::Shopping::Order::src::AdminSettingsPages']]]
 ];

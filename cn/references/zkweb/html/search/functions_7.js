@@ -1,5 +1,13 @@
 var searchData=
 [
-  ['httppostedfilemock',['HttpPostedFileMock',['../d5/d08/class_z_k_web_1_1_utils_1_1_collections_1_1_http_posted_file_mock.html#a2313792abee82be87d863dbbd36d25da',1,'ZKWeb::Utils::Collections::HttpPostedFileMock']]],
-  ['httppostedfilewrapper',['HttpPostedFileWrapper',['../de/d3e/class_z_k_web_1_1_utils_1_1_collections_1_1_http_posted_file_wrapper.html#a34bf197c8e3d49717326d064313ca0d9',1,'ZKWeb::Utils::Collections::HttpPostedFileWrapper']]]
+  ['htmldecode',['HtmlDecode',['../d5/d8c/class_z_k_web_standard_1_1_tests_1_1_utils_1_1_http_utils_test.html#a852c0804a0a709bee1ca0851616f93a6',1,'ZKWebStandard.Tests.Utils.HttpUtilsTest.HtmlDecode()'],['../d2/dc1/class_z_k_web_standard_1_1_utils_1_1_http_utils.html#a4e432ba9fc3df07749a484437a1d39ed',1,'ZKWebStandard.Utils.HttpUtils.HtmlDecode()']]],
+  ['htmlencode',['HtmlEncode',['../d5/d8c/class_z_k_web_standard_1_1_tests_1_1_utils_1_1_http_utils_test.html#acd72f7b8a292bb10edfc476d213e6d93',1,'ZKWebStandard.Tests.Utils.HttpUtilsTest.HtmlEncode()'],['../d2/dc1/class_z_k_web_standard_1_1_utils_1_1_http_utils.html#a4e3a0c9d4d4dbb3850df072ecac514eb',1,'ZKWebStandard.Utils.HttpUtils.HtmlEncode()']]],
+  ['htmlstring',['HtmlString',['../d3/d2e/class_z_k_web_standard_1_1_collection_1_1_html_string.html#aac1fe21af5d308a68e2d56d022692db8',1,'ZKWebStandard::Collection::HtmlString']]],
+  ['httpcontextmock',['HttpContextMock',['../de/dbf/class_z_k_web_standard_1_1_web_1_1_mock_1_1_http_context_mock.html#a747d5243f48d32d015e53a814043d6af',1,'ZKWebStandard.Web.Mock.HttpContextMock.HttpContextMock()'],['../de/dbf/class_z_k_web_standard_1_1_web_1_1_mock_1_1_http_context_mock.html#ab9f641222a177cb9e1b6bcdb2b928bcd',1,'ZKWebStandard.Web.Mock.HttpContextMock.HttpContextMock(string pathAndQuery, string method)']]],
+  ['httpcontextwrapper',['HttpContextWrapper',['../d0/d8e/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_context_wrapper.html#a0d6cd2b1dbf1c60471a374d637a3b234',1,'ZKWebStandard::Web::Wrappers::HttpContextWrapper']]],
+  ['httpexception',['HttpException',['../d5/dca/class_z_k_web_standard_1_1_web_1_1_http_exception.html#a13a71c0e18ecc276fb2975ccfaae7a70',1,'ZKWebStandard::Web::HttpException']]],
+  ['httprequestmock',['HttpRequestMock',['../df/dcb/class_z_k_web_standard_1_1_web_1_1_mock_1_1_http_request_mock.html#a2d5db542e38cb0153d18d37e182fa445',1,'ZKWebStandard::Web::Mock::HttpRequestMock']]],
+  ['httprequestwrapper',['HttpRequestWrapper',['../d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#aa28c06b81b6d410ca7242db0ecf49e6f',1,'ZKWebStandard::Web::Wrappers::HttpRequestWrapper']]],
+  ['httpresponsemock',['HttpResponseMock',['../d3/d0e/class_z_k_web_standard_1_1_web_1_1_mock_1_1_http_response_mock.html#a18182378b3ade64e325c50527d56436b',1,'ZKWebStandard::Web::Mock::HttpResponseMock']]],
+  ['httpresponsewrapper',['HttpResponseWrapper',['../de/d94/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_response_wrapper.html#ae585e2d6e89fdc83b1e4e6e75f794e79',1,'ZKWebStandard::Web::Wrappers::HttpResponseWrapper']]]
 ];

@@ -12,15 +12,6 @@ var searchData=
   ['genericconfigattribute',['GenericConfigAttribute',['../d6/db6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_generic_config_attribute.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['genericconfigmanager',['GenericConfigManager',['../df/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_generic_config_manager.html',1,'ZKWeb::Plugins::Common::Base::src::Managers']]],
   ['genericconfigmap',['GenericConfigMap',['../d1/d40/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_database_1_1_generic_config_map.html',1,'ZKWeb::Plugins::Common::Base::src::Database']]],
-  ['genericformforadminsettings',['GenericFormForAdminSettings',['../d2/d16/class_generic_form_for_admin_settings.html',1,'']]],
-  ['genericformformenupage',['GenericFormForMenuPage',['../d9/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_form_for_menu_page.html',1,'ZKWeb::Plugins::Common::MenuPageBase::src::Scaffolding']]],
-  ['genericformforuserpanel',['GenericFormForUserPanel',['../d7/d7e/class_generic_form_for_user_panel.html',1,'']]],
-  ['genericlistforadminsettings',['GenericListForAdminSettings',['../df/da7/class_generic_list_for_admin_settings.html',1,'']]],
-  ['genericlistforadminsettings_3c_20database_2egenericclass_2c_20genericclassbuilder_20_3e',['GenericListForAdminSettings&lt; Database.GenericClass, GenericClassBuilder &gt;',['../df/da7/class_generic_list_for_admin_settings.html',1,'']]],
-  ['genericlistforadminsettings_3c_20database_2egenerictag_2c_20generictagbuilder_20_3e',['GenericListForAdminSettings&lt; Database.GenericTag, GenericTagBuilder &gt;',['../df/da7/class_generic_list_for_admin_settings.html',1,'']]],
-  ['genericlistforadminsettings_3c_20translation_2c_20customtranslator_20_3e',['GenericListForAdminSettings&lt; Translation, CustomTranslator &gt;',['../df/da7/class_generic_list_for_admin_settings.html',1,'']]],
-  ['genericlistformenupage',['GenericListForMenuPage',['../d9/db8/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_list_for_menu_page.html',1,'ZKWeb::Plugins::Common::MenuPageBase::src::Scaffolding']]],
-  ['genericpageformenupage',['GenericPageForMenuPage',['../da/d1b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_page_for_menu_page.html',1,'ZKWeb::Plugins::Common::MenuPageBase::src::Scaffolding']]],
   ['genericrecord',['GenericRecord',['../dd/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record.html',1,'ZKWeb::Plugins::Common::GenericRecord::src::Database']]],
   ['genericrecordmap',['GenericRecordMap',['../db/d20/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record_map.html',1,'ZKWeb::Plugins::Common::GenericRecord::src::Database']]],
   ['genericrecordrepository',['GenericRecordRepository',['../dd/d00/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_repositories_1_1_generic_record_repository.html',1,'ZKWeb::Plugins::Common::GenericRecord::src::Repositories']]],
@@ -40,6 +31,6 @@ var searchData=
   ['german',['German',['../df/db2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_german.html',1,'ZKWeb::Plugins::Common::Base::src::Languages']]],
   ['german',['German',['../da/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_german.html',1,'ZKWeb::Plugins::Common::CustomTranslate::src::CustomTranslators']]],
   ['gr',['GR',['../d4/de0/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_g_r.html',1,'ZKWeb::Plugins::Common::Region::src::Countries']]],
-  ['greek',['Greek',['../d8/d9d/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_greek.html',1,'ZKWeb::Plugins::Common::Base::src::Languages']]],
-  ['greek',['Greek',['../d0/d8d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_greek.html',1,'ZKWeb::Plugins::Common::CustomTranslate::src::CustomTranslators']]]
+  ['greek',['Greek',['../d0/d8d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_greek.html',1,'ZKWeb::Plugins::Common::CustomTranslate::src::CustomTranslators']]],
+  ['greek',['Greek',['../d8/d9d/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_greek.html',1,'ZKWeb::Plugins::Common::Base::src::Languages']]]
 ];

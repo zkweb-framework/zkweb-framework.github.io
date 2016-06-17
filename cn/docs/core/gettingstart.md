@@ -1,15 +1,23 @@
 ZKWeb运行时需要核心项目和插件。<br/>
 核心项目是ZKWeb，<br/>
 插件项目是ZKWeb.Plugins，后面会说明如何添加新的插件项目。<br/>
-
 核心项目只用于运行插件，如果客户需要不同的功能应该通过编写插件支持。<br/>
 
 ### <h2>下载项目</h2>
 通过git下载项目</br>
 请把ZKWeb和ZKWeb.Plugins下载到同一个文件夹中</br>
+
 ```
 git clone https://github.com/zkweb-framework/ZKWeb.git
 git clone https://github.com/zkweb-framework/ZKWeb.Plugins.git
+```
+
+### <h2>使用Asp.Net Core版本</h2>
+需要使用Asp.Net Core版本时，请在下载完成后运行
+
+```
+cd ZKWeb
+git checkout aspnet_core
 ```
 
 ### <h2>创建数据库</h2>
@@ -55,7 +63,7 @@ ZKWeb目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL，运�
 - 删除App_Data\DatabaseScript.txt
 - 刷新网站
 
-### <h2>部署到服务器</h2>
+### <h2>部署到服务器 (Asp.Net)</h2>
 步骤:
 
 - 复制App_Data, bin, Global.asax, Web.config到目标目录
@@ -73,3 +81,23 @@ ZKWeb目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL，运�
 - Web.config
 
 IIS配置和普通的asp.net网站一样，不需要特别的设置。
+
+### <h2>部署到服务器 (Asp.Net Core)</h2>
+步骤:
+
+- 发布ZKWeb项目到网站根目录
+- 复制App_Data到网站根目录
+- 复制所有插件到App_Data\Plugins（复制到其他目录时相应修改下面的配置）
+- 修改App_Data\config.json中的`PluginDirectories`，值`[ "App_Data/Plugins" ]`
+- 如果不需要服务器上修改代码，可以删除插件下的所有src文件夹（可使用批处理或工具删除）
+
+最终的目录结构应该如下
+
+- App_Data
+	- Plugins
+	- config.json
+- ZKWeb.exe
+- 其他DLL
+- Web.config
+
+目前未成功在IIS上部署Asp.Net Core，但可以使用`ZKWeb.exe`运行，仍需要更多测试。

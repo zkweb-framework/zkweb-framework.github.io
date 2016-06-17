@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('d3/d0c/class_z_k_web_1_1_plugins_1_1_c
  <div class="center">
   <img src="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.png" usemap="#ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder_map" alt=""/>
   <map id="ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder_map" name="ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder_map">
-<area href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html" title="表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 创建的例子 var form = Application.Ioc.Resolve[FormBuilder](); form.Attribute = new FormAttribute() { Name = &quot;TestForm&quot; }; form.Fields.Add(new FormField(new TextBoxFieldAttribute(&quot;Username&quot;))); form.Fields.Add(new FormField(new PasswordFieldAttribute(&quot;Password&quot;))); 绑定的例子 form.BindValuesFromAnonymousObject(new { Username = &quot;TestUser&quot;, Password = &quot;TestPassword&quot; }); return new TemplateResult(&quot;test_form.html&quot;, new { form }); 提交的例子 var values = form.ParseValues(HttpContextUtils.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string](&quot;Username&quot;); var password = values.GetOrDefault[string](&quot;Password&quot;); " alt="ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder" shape="rect" coords="0,56,367,80"/>
+<area href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html" title="表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 " alt="ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder" shape="rect" coords="0,56,367,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -158,34 +158,34 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:ad7c37e0f7712739c5545fb90f57bcb18"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#ad7c37e0f7712739c5545fb90f57bcb18">GetTabId</a> (string groupName)</td></tr>
 <tr class="memdesc:ad7c37e0f7712739c5545fb90f57bcb18"><td class="mdescLeft">&#160;</td><td class="mdescRight">从分组名称获取标签Id，不带#  <a href="#ad7c37e0f7712739c5545fb90f57bcb18">更多...</a><br /></td></tr>
 <tr class="separator:ad7c37e0f7712739c5545fb90f57bcb18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac772e78fefd681fb66da08b09969d32b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#ac772e78fefd681fb66da08b09969d32b">RenderTabContainerBeginTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:ac772e78fefd681fb66da08b09969d32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签容器的开始标签  <a href="#ac772e78fefd681fb66da08b09969d32b">更多...</a><br /></td></tr>
-<tr class="separator:ac772e78fefd681fb66da08b09969d32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad653d74a4f584fb3e5dd4987180e9c59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#ad653d74a4f584fb3e5dd4987180e9c59">RenderTabContainerEndTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:ad653d74a4f584fb3e5dd4987180e9c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签容器的结束标签  <a href="#ad653d74a4f584fb3e5dd4987180e9c59">更多...</a><br /></td></tr>
-<tr class="separator:ad653d74a4f584fb3e5dd4987180e9c59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4857cd251819f9255ec4d8c7e6e717f7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a4857cd251819f9255ec4d8c7e6e717f7">RenderTabs</a> (HtmlTextWriter html, IEnumerable&lt; IGrouping&lt; string, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&gt; groups)</td></tr>
-<tr class="memdesc:a4857cd251819f9255ec4d8c7e6e717f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签  <a href="#a4857cd251819f9255ec4d8c7e6e717f7">更多...</a><br /></td></tr>
-<tr class="separator:a4857cd251819f9255ec4d8c7e6e717f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd57f5650584cea6082626f4154ef8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a3fd57f5650584cea6082626f4154ef8a">RenderTabContents</a> (HtmlTextWriter html, IEnumerable&lt; IGrouping&lt; string, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&gt; groups)</td></tr>
-<tr class="memdesc:a3fd57f5650584cea6082626f4154ef8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签内容  <a href="#a3fd57f5650584cea6082626f4154ef8a">更多...</a><br /></td></tr>
-<tr class="separator:a3fd57f5650584cea6082626f4154ef8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69dd04ca53af1258726e46e32dc52ac4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a69dd04ca53af1258726e46e32dc52ac4">RenderTabContainerBeginTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:a69dd04ca53af1258726e46e32dc52ac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签容器的开始标签  <a href="#a69dd04ca53af1258726e46e32dc52ac4">更多...</a><br /></td></tr>
+<tr class="separator:a69dd04ca53af1258726e46e32dc52ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88976ab653bcbc2b2eab8f357130631f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a88976ab653bcbc2b2eab8f357130631f">RenderTabContainerEndTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:a88976ab653bcbc2b2eab8f357130631f"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签容器的结束标签  <a href="#a88976ab653bcbc2b2eab8f357130631f">更多...</a><br /></td></tr>
+<tr class="separator:a88976ab653bcbc2b2eab8f357130631f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12192b4cd3e6055a41e675a724b0aa1a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a12192b4cd3e6055a41e675a724b0aa1a">RenderTabs</a> (StringBuilder html, IEnumerable&lt; IGrouping&lt; string, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&gt; groups)</td></tr>
+<tr class="memdesc:a12192b4cd3e6055a41e675a724b0aa1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签  <a href="#a12192b4cd3e6055a41e675a724b0aa1a">更多...</a><br /></td></tr>
+<tr class="separator:a12192b4cd3e6055a41e675a724b0aa1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39985b339f096543b093b0ea8bd4e724"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html#a39985b339f096543b093b0ea8bd4e724">RenderTabContents</a> (StringBuilder html, IEnumerable&lt; IGrouping&lt; string, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&gt; groups)</td></tr>
+<tr class="memdesc:a39985b339f096543b093b0ea8bd4e724"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画标签内容  <a href="#a39985b339f096543b093b0ea8bd4e724">更多...</a><br /></td></tr>
+<tr class="separator:a39985b339f096543b093b0ea8bd4e724"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder')"><img src="../../closed.png" alt="-"/>&#160;Protected 成员函数 继承自 <a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html">ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder</a></td></tr>
-<tr class="memitem:a1c4cd4b3c91e9d17e0a6d6249f5c57d3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a1c4cd4b3c91e9d17e0a6d6249f5c57d3">RenderFormBeginTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:a1c4cd4b3c91e9d17e0a6d6249f5c57d3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的开始标签  <a href="#a1c4cd4b3c91e9d17e0a6d6249f5c57d3">更多...</a><br /></td></tr>
-<tr class="separator:a1c4cd4b3c91e9d17e0a6d6249f5c57d3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e6dec6b301d4881dc6360da6e68e8e inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a32e6dec6b301d4881dc6360da6e68e8e">RenderFormEndTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:a32e6dec6b301d4881dc6360da6e68e8e inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的结束标签  <a href="#a32e6dec6b301d4881dc6360da6e68e8e">更多...</a><br /></td></tr>
-<tr class="separator:a32e6dec6b301d4881dc6360da6e68e8e inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed5524dca9d86fd2f5cafec8433e796 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#abed5524dca9d86fd2f5cafec8433e796">RenderFormField</a> (HtmlTextWriter html, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> field)</td></tr>
-<tr class="memdesc:abed5524dca9d86fd2f5cafec8433e796 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单字段  <a href="#abed5524dca9d86fd2f5cafec8433e796">更多...</a><br /></td></tr>
-<tr class="separator:abed5524dca9d86fd2f5cafec8433e796 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec9afb8b354c3420f5fa2ef048c150a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#afec9afb8b354c3420f5fa2ef048c150a">RenderCsrfToken</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:afec9afb8b354c3420f5fa2ef048c150a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画csrf校验值  <a href="#afec9afb8b354c3420f5fa2ef048c150a">更多...</a><br /></td></tr>
-<tr class="separator:afec9afb8b354c3420f5fa2ef048c150a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b2c871cea3a6ac3fe0f23515b4911a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ae7b2c871cea3a6ac3fe0f23515b4911a">RenderSubmitButton</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:ae7b2c871cea3a6ac3fe0f23515b4911a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画提交按钮  <a href="#ae7b2c871cea3a6ac3fe0f23515b4911a">更多...</a><br /></td></tr>
-<tr class="separator:ae7b2c871cea3a6ac3fe0f23515b4911a inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f1a8d7549b0ae92039b06e267209da inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a62f1a8d7549b0ae92039b06e267209da">RenderFormBeginTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:a62f1a8d7549b0ae92039b06e267209da inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的开始标签  <a href="#a62f1a8d7549b0ae92039b06e267209da">更多...</a><br /></td></tr>
+<tr class="separator:a62f1a8d7549b0ae92039b06e267209da inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af806dee4e8a65bbac02c556ee1eebd0b inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#af806dee4e8a65bbac02c556ee1eebd0b">RenderFormEndTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:af806dee4e8a65bbac02c556ee1eebd0b inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的结束标签  <a href="#af806dee4e8a65bbac02c556ee1eebd0b">更多...</a><br /></td></tr>
+<tr class="separator:af806dee4e8a65bbac02c556ee1eebd0b inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b020b5216c42c276f8f41a4aff9282 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ae0b020b5216c42c276f8f41a4aff9282">RenderFormField</a> (StringBuilder html, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> field)</td></tr>
+<tr class="memdesc:ae0b020b5216c42c276f8f41a4aff9282 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单字段  <a href="#ae0b020b5216c42c276f8f41a4aff9282">更多...</a><br /></td></tr>
+<tr class="separator:ae0b020b5216c42c276f8f41a4aff9282 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7754a77a573caf27067793d17ccfc6 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#acf7754a77a573caf27067793d17ccfc6">RenderCsrfToken</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:acf7754a77a573caf27067793d17ccfc6 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画csrf校验值  <a href="#acf7754a77a573caf27067793d17ccfc6">更多...</a><br /></td></tr>
+<tr class="separator:acf7754a77a573caf27067793d17ccfc6 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac795e51b5c02fc8a16f4c4e894b0e8b3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ac795e51b5c02fc8a16f4c4e894b0e8b3">RenderSubmitButton</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:ac795e51b5c02fc8a16f4c4e894b0e8b3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画提交按钮  <a href="#ac795e51b5c02fc8a16f4c4e894b0e8b3">更多...</a><br /></td></tr>
+<tr class="separator:ac795e51b5c02fc8a16f4c4e894b0e8b3 inherit pro_methods_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 额外继承的成员函数</h2></td></tr>
@@ -196,6 +196,9 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:a486284c80c95b77657f99b9d634b438e inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a486284c80c95b77657f99b9d634b438e">Fields</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:a486284c80c95b77657f99b9d634b438e inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">表单字段列表  <a href="#a486284c80c95b77657f99b9d634b438e">更多...</a><br /></td></tr>
 <tr class="separator:a486284c80c95b77657f99b9d634b438e inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3761f7dbf8e381da85c58bd100ebf9 inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a7a3761f7dbf8e381da85c58bd100ebf9">CsrfToken</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a7a3761f7dbf8e381da85c58bd100ebf9 inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前客户端使用的csrf校验值  <a href="#a7a3761f7dbf8e381da85c58bd100ebf9">更多...</a><br /></td></tr>
+<tr class="separator:a7a3761f7dbf8e381da85c58bd100ebf9 inherit properties_class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>表单构建器，支持多标签 按字段的Group分组，没有指定Group的字段分到"基本信息"中 </p>
@@ -233,7 +236,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac772e78fefd681fb66da08b09969d32b"></a>
+<a class="anchor" id="a69dd04ca53af1258726e46e32dc52ac4"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -243,7 +246,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder.RenderTabContainerBeginTag </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -265,7 +268,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ad653d74a4f584fb3e5dd4987180e9c59"></a>
+<a class="anchor" id="a88976ab653bcbc2b2eab8f357130631f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +278,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder.RenderTabContainerEndTag </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -297,7 +300,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3fd57f5650584cea6082626f4154ef8a"></a>
+<a class="anchor" id="a39985b339f096543b093b0ea8bd4e724"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -307,7 +310,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder.RenderTabContents </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em>, </td>
         </tr>
         <tr>
@@ -340,7 +343,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4857cd251819f9255ec4d8c7e6e717f7"></a>
+<a class="anchor" id="a12192b4cd3e6055a41e675a724b0aa1a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -350,7 +353,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder.RenderTabs </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em>, </td>
         </tr>
         <tr>

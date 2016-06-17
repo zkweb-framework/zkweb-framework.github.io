@@ -1,6 +1,8 @@
 var dir_70e677ace5f030af4d54b4056693509f =
 [
-    [ "Interfaces", "dir_04c5931ee8f565fad04afc1e75be3e2f.html", "dir_04c5931ee8f565fad04afc1e75be3e2f" ],
+    [ "IPlugin.cs", "d0/d6a/_i_plugin_8cs.html", [
+      [ "IPlugin", "df/d95/interface_z_k_web_1_1_plugin_1_1_i_plugin.html", null ]
+    ] ],
     [ "PluginInfo.cs", "df/d50/_plugin_info_8cs.html", [
       [ "PluginInfo", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info.html", "d0/d30/class_z_k_web_1_1_plugin_1_1_plugin_info" ]
     ] ],

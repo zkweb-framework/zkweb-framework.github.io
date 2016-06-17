@@ -767,7 +767,7 @@
 
 <span class="na">[Action(&quot;example/table/search&quot;, HttpMethods.POST)]</span>
 <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TableSearch</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">json</span> <span class="p">=</span> <span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;json&quot;</span><span class="p">);</span>
+    <span class="kt">var</span> <span class="n">json</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;json&quot;</span><span class="p">);</span>
     <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">AjaxTableSearchRequest</span><span class="p">.</span><span class="n">FromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
     <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">BuildResponseFromDatabase</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleAjaxTableCallback</span><span class="p">()</span> <span class="p">});</span>
     <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
@@ -933,7 +933,7 @@
 <span class="na">[Action(&quot;example/form&quot;, HttpMethods.POST)]</span>
 <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Form</span><span class="p">()</span> <span class="p">{</span>
     <span class="kt">var</span> <span class="n">form</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleForm</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">HttpMethod</span> <span class="p">==</span> <span class="n">HttpMethods</span><span class="p">.</span><span class="n">POST</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Method</span> <span class="p">==</span> <span class="n">HttpMethods</span><span class="p">.</span><span class="n">POST</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">form</span><span class="p">.</span><span class="n">Submit</span><span class="p">());</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
         <span class="n">form</span><span class="p">.</span><span class="n">Bind</span><span class="p">();</span>
@@ -1169,6 +1169,12 @@
 <li>删除Url参数，传入的url是空值时使用当前请求的url</li>
 <li>例: <code>{{ "" | url_remove_param: "key" }}</code></li>
 <li>例: <code>{{ test_url | url_remove_param: variable }}</code></li>
+</ul>
+</li>
+<li>html_attributes<ul>
+<li>描画Html标签</li>
+<li>需要传入类型是<code>IDictionary&lt;string, string&gt;</code>的参数</li>
+<li>例: <code>{{ attribtues | html_attributes }}</code></li>
 </ul>
 </li>
 </ul>

@@ -1,6 +1,7 @@
 var dir_078c71d52b16b593ff017c9ea8241814 =
 [
     [ "AdminApps", "dir_9b5fe10b70a592b2f61c2de4cbb23d3a.html", "dir_9b5fe10b70a592b2f61c2de4cbb23d3a" ],
+    [ "AdminSettingsPages", "dir_7d68d99f099e58f6a5cad4f4051b20a2.html", "dir_7d68d99f099e58f6a5cad4f4051b20a2" ],
     [ "Config", "dir_66fe6d87bf604bf4c6f172b8e131bb68.html", "dir_66fe6d87bf604bf4c6f172b8e131bb68" ],
     [ "Controllers", "dir_eac4e9efdf2c5bb821ca88234c9a1f52.html", "dir_eac4e9efdf2c5bb821ca88234c9a1f52" ],
     [ "Database", "dir_08b92171e5f8fa22666662072dc17cf5.html", "dir_08b92171e5f8fa22666662072dc17cf5" ],
@@ -8,7 +9,6 @@ var dir_078c71d52b16b593ff017c9ea8241814 =
     [ "FormFieldAttributes", "dir_864d4bc6f1479bdf91d63f38bcc6a590.html", "dir_864d4bc6f1479bdf91d63f38bcc6a590" ],
     [ "FormFieldHandlers", "dir_905755ca740e280127dbc29e8b719953.html", "dir_905755ca740e280127dbc29e8b719953" ],
     [ "GenericClasses", "dir_38a32ae1f6dc4386ea02aa032fc57d76.html", "dir_38a32ae1f6dc4386ea02aa032fc57d76" ],
-    [ "GenericFormsForAdminSettings", "dir_ca81d6d6a20b401a5d0e3e9d6aad7201.html", "dir_ca81d6d6a20b401a5d0e3e9d6aad7201" ],
     [ "GenericTags", "dir_bfc77b7e16818fe9d320bad8af24c7ff.html", "dir_bfc77b7e16818fe9d320bad8af24c7ff" ],
     [ "ImageBrowsers", "dir_11de1faeecd052d83ffe68ddc1133a63.html", "dir_11de1faeecd052d83ffe68ddc1133a63" ],
     [ "ListItemProviders", "dir_cfa15814c33d1a6e6a17d25a0ec42803.html", "dir_cfa15814c33d1a6e6a17d25a0ec42803" ],

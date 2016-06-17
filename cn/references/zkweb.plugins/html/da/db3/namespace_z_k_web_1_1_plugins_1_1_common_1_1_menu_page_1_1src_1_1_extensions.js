@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_extensions =
+[
+    [ "MenuItemGroupExtensions", "de/d58/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_extensions_1_1_menu_item_group_extensions.html", "de/d58/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_extensions_1_1_menu_item_group_extensions" ]
+];

@@ -11,6 +11,7 @@ var dir_9140d63614dbd7677c81e551f00e670e =
     [ "Model", "dir_45bc286ca0418e8da98a199c5e2c071f.html", "dir_45bc286ca0418e8da98a199c5e2c071f" ],
     [ "Scaffolding", "dir_a638fa92a989ef54aeeccaba4cbd69b9.html", "dir_a638fa92a989ef54aeeccaba4cbd69b9" ],
     [ "Translates", "dir_83bbcba56f6ef09e551b13221568e86e.html", "dir_83bbcba56f6ef09e551b13221568e86e" ],
+    [ "TypeTraits", "dir_7a93e035295f967f74150d7182a22caf.html", "dir_7a93e035295f967f74150d7182a22caf" ],
     [ "Plugin.cs", "d5/d90/_common_8_admin_2src_2_plugin_8cs.html", [
       [ "Plugin", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin.html", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin" ]
     ] ]

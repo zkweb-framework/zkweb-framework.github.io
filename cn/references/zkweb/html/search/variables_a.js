@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['mssql',['MSSQL',['../d9/d80/class_z_k_web_1_1_database_1_1_database_types.html#a0687fc2152552d7012b87dfa617cfc65',1,'ZKWeb::Database::DatabaseTypes']]],
-  ['mysql',['MySQL',['../d9/d80/class_z_k_web_1_1_database_1_1_database_types.html#aad9182eb66865a6938818721fcdb8f5f',1,'ZKWeb::Database::DatabaseTypes']]]
+  ['tel',['Tel',['../da/da3/class_z_k_web_standard_1_1_utils_1_1_regex_utils_1_1_expressions.html#a795fb69abeb564b52091a1ea7c87c758',1,'ZKWebStandard::Utils::RegexUtils::Expressions']]],
+  ['timezonekey',['TimeZoneKey',['../d6/d61/class_z_k_web_standard_1_1_utils_1_1_locale_utils.html#a152bf014c20a3fd5749376057ed01480',1,'ZKWebStandard::Utils::LocaleUtils']]],
+  ['typefactorscache',['TypeFactorsCache',['../df/d03/class_z_k_web_standard_1_1_ioc_1_1_container.html#a891f45c2db00ca645e86a986f04605a1',1,'ZKWebStandard::Ioc::Container']]]
 ];

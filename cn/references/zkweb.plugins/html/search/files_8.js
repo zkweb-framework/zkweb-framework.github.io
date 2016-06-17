@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['iadminappbuilder_2ecs',['IAdminAppBuilder.cs',['../dc/ddb/_i_admin_app_builder_8cs.html',1,'']]],
+  ['iadminapp_2ecs',['IAdminApp.cs',['../d4/d86/_i_admin_app_8cs.html',1,'']]],
+  ['iadminappextensions_2ecs',['IAdminAppExtensions.cs',['../de/d43/_i_admin_app_extensions_8cs.html',1,'']]],
   ['iadminsettingsmenuprovider_2ecs',['IAdminSettingsMenuProvider.cs',['../d0/d1d/_i_admin_settings_menu_provider_8cs.html',1,'']]],
   ['iajaxtablecallback_2ecs',['IAjaxTableCallback.cs',['../d2/dfe/_i_ajax_table_callback_8cs.html',1,'']]],
   ['iajaxtablecallbackextension_2ecs',['IAjaxTableCallbackExtension.cs',['../d2/dc2/_i_ajax_table_callback_extension_8cs.html',1,'']]],
   ['iajaxtablecallbackextensions_2ecs',['IAjaxTableCallbackExtensions.cs',['../d1/d64/_i_ajax_table_callback_extensions_8cs.html',1,'']]],
+  ['icrudpagebuilder_2ecs',['ICrudPageBuilder.cs',['../d0/d90/_i_crud_page_builder_8cs.html',1,'']]],
   ['icurrency_2ecs',['ICurrency.cs',['../d8/d84/_i_currency_8cs.html',1,'']]],
   ['idataeditformextension_2ecs',['IDataEditFormExtension.cs',['../de/daf/_i_data_edit_form_extension_8cs.html',1,'']]],
   ['iformfieldhandler_2ecs',['IFormFieldHandler.cs',['../d8/dc7/_i_form_field_handler_8cs.html',1,'']]],
@@ -17,6 +19,7 @@ var searchData=
   ['ilogisticstype_2ecs',['ILogisticsType.cs',['../df/dd8/_i_logistics_type_8cs.html',1,'']]],
   ['imagebrowserbuilder_2ecs',['ImageBrowserBuilder.cs',['../d4/d9c/_image_browser_builder_8cs.html',1,'']]],
   ['imagemanager_2ecs',['ImageManager.cs',['../d2/d82/_image_manager_8cs.html',1,'']]],
+  ['imenupage_2ecs',['IMenuPage.cs',['../d1/dac/_i_menu_page_8cs.html',1,'']]],
   ['imenuprovider_2ecs',['IMenuProvider.cs',['../dd/d9a/_i_menu_provider_8cs.html',1,'']]],
   ['imodelformbuilder_2ecs',['IModelFormBuilder.cs',['../d1/de5/_i_model_form_builder_8cs.html',1,'']]],
   ['includecsshere_2ecs',['IncludeCssHere.cs',['../d3/d27/_include_css_here_8cs.html',1,'']]],
@@ -44,8 +47,9 @@ var searchData=
   ['istatictablecallbackextension_2ecs',['IStaticTableCallbackExtension.cs',['../d7/df0/_i_static_table_callback_extension_8cs.html',1,'']]],
   ['istatictablecallbackextensions_2ecs',['IStaticTableCallbackExtensions.cs',['../d2/dd9/_i_static_table_callback_extensions_8cs.html',1,'']]],
   ['it_2ecs',['IT.cs',['../d1/dce/_i_t_8cs.html',1,'']]],
-  ['italian_2ecs',['Italian.cs',['../dd/db9/_common_8_custom_translate_2src_2_custom_translators_2_italian_8cs.html',1,'']]],
   ['italian_2ecs',['Italian.cs',['../de/da6/_common_8_base_2src_2_languages_2_italian_8cs.html',1,'']]],
+  ['italian_2ecs',['Italian.cs',['../dd/db9/_common_8_custom_translate_2src_2_custom_translators_2_italian_8cs.html',1,'']]],
+  ['iurlfilter_2ecs',['IUrlFilter.cs',['../d4/d3a/_i_url_filter_8cs.html',1,'']]],
   ['iuserlogincallback_2ecs',['IUserLoginCallback.cs',['../dd/d69/_i_user_login_callback_8cs.html',1,'']]],
   ['iuserpanelmenuprovider_2ecs',['IUserPanelMenuProvider.cs',['../d3/d98/_i_user_panel_menu_provider_8cs.html',1,'']]]
 ];

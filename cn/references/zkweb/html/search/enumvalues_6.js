@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['returndefault',['ReturnDefault',['../da/d54/namespace_z_k_web_1_1_utils_1_1_ioc_container.html#a5546bccfbb8eaa243052960d58b3900aa51518d70078d4592195b101a236fb147',1,'ZKWeb::Utils::IocContainer']]]
+  ['returndefault',['ReturnDefault',['../d4/d49/namespace_z_k_web_standard_1_1_ioc.html#a7ab91d10206af6b52a23e88169bb13cfa51518d70078d4592195b101a236fb147',1,'ZKWebStandard::Ioc']]]
 ];

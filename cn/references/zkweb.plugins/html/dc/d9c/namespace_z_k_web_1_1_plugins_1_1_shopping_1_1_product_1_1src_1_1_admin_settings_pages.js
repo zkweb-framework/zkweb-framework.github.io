@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages =
+[
+    [ "ProductAlbumSettingsForm", "de/da7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_album_settings_form.html", "de/da7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_album_settings_form" ],
+    [ "ProductListSettingsForm", "d0/d3d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form.html", "d0/d3d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form" ]
+];

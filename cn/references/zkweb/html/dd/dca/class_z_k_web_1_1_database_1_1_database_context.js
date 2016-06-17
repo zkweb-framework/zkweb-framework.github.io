@@ -1,6 +1,6 @@
 var class_z_k_web_1_1_database_1_1_database_context =
 [
-    [ "DatabaseContext", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a342426bab78f6d80069af99f979de85c", null ],
+    [ "DatabaseContext", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a6a9eb56b0eb1b2b06cffa4d1facf81c4", null ],
     [ "Count< T >", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a02b7b958a08185353e5af0105847ed10", null ],
     [ "Delete< T >", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a35b8644aefa7a8fa0b23d780f6998cd0", null ],
     [ "DeleteWhere< T >", "dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a18acbce1a633533ddff3872eca1697c5", null ],

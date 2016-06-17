@@ -1,6 +1,7 @@
 var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src =
 [
     [ "AdminApps", "d2/d65/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps.html", "d2/d65/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps" ],
+    [ "AdminSettingsPages", "dc/d9c/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages.html", "dc/d9c/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages" ],
     [ "Config", "d2/d78/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_config.html", "d2/d78/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_config" ],
     [ "Controllers", "db/dba/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers.html", "db/dba/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers" ],
     [ "Database", "da/dce/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database.html", "da/dce/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database" ],
@@ -8,7 +9,6 @@ var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src =
     [ "FormFieldAttributes", "da/dc3/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes.html", "da/dc3/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_attributes" ],
     [ "FormFieldHandlers", "da/dce/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers.html", "da/dce/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_form_field_handlers" ],
     [ "GenericClasses", "d3/dec/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_classes.html", "d3/dec/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_classes" ],
-    [ "GenericFormsForAdminSettings", "d7/d2b/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings.html", "d7/d2b/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings" ],
     [ "GenericTags", "da/d1a/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_tags.html", "da/d1a/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_tags" ],
     [ "ImageBrowsers", "d9/d0c/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_image_browsers.html", "d9/d0c/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_image_browsers" ],
     [ "ListItemProviders", "d5/d49/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers.html", "d5/d49/namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_list_item_providers" ],

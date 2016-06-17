@@ -4,7 +4,7 @@ var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src =
     [ "Database", "db/dae/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_database.html", "db/dae/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_database" ],
     [ "DataCallbacks", "db/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_data_callbacks.html", "db/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_data_callbacks" ],
     [ "DataEditFormCallbacks", "db/def/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_data_edit_form_callbacks.html", "db/def/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_data_edit_form_callbacks" ],
-    [ "GenericFormsForUserPanel", "d4/d4f/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel.html", "d4/d4f/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel" ],
     [ "Repositories", "dc/da5/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_repositories.html", "dc/da5/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_repositories" ],
-    [ "Translates", "d5/d2e/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_translates.html", "d5/d2e/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_translates" ]
+    [ "Translates", "d5/d2e/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_translates.html", "d5/d2e/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_translates" ],
+    [ "UserPanelPages", "db/d69/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_user_panel_pages.html", "db/d69/namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_user_panel_pages" ]
 ];

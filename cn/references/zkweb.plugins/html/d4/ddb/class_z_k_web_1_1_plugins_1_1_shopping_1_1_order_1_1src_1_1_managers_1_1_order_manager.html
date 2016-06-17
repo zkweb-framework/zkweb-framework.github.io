@@ -119,15 +119,55 @@ $(document).ready(function(){initNavTree('d4/ddb/class_z_k_web_1_1_plugins_1_1_s
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
 <tr class="memitem:ae8bad9458b2d5df81d7387defe6b6e36"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/da2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_price_calc_result.html">OrderPriceCalcResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_order_manager.html#ae8bad9458b2d5df81d7387defe6b6e36">CalculateOrderProductUnitPrice</a> (long?userId, <a class="el" href="../../d9/d2a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_product_parameters.html">CreateOrderProductParameters</a> parameters)</td></tr>
-<tr class="memdesc:ae8bad9458b2d5df81d7387defe6b6e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算订单商品的单价 返回价格大于或等于0  <a href="#ae8bad9458b2d5df81d7387defe6b6e36">更多...</a><br /></td></tr>
+<tr class="memdesc:ae8bad9458b2d5df81d7387defe6b6e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算订单商品的单价 返回价格保证大于或等于0  <a href="#ae8bad9458b2d5df81d7387defe6b6e36">更多...</a><br /></td></tr>
 <tr class="separator:ae8bad9458b2d5df81d7387defe6b6e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a91d9f3dff27339a2409b1e755db1fb"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../df/da2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_price_calc_result.html">OrderPriceCalcResult</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_order_manager.html#a4a91d9f3dff27339a2409b1e755db1fb">CalculateOrderPrice</a> (<a class="el" href="../../df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_parameters.html">CreateOrderParameters</a> parameters)</td></tr>
-<tr class="memdesc:a4a91d9f3dff27339a2409b1e755db1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算订单的价格 返回价格大于0  <a href="#a4a91d9f3dff27339a2409b1e755db1fb">更多...</a><br /></td></tr>
+<tr class="memdesc:a4a91d9f3dff27339a2409b1e755db1fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算订单的价格 返回价格保证大于0  <a href="#a4a91d9f3dff27339a2409b1e755db1fb">更多...</a><br /></td></tr>
 <tr class="separator:a4a91d9f3dff27339a2409b1e755db1fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cea9488a1200d6c5d5101d4e1c2cd09"><td class="memItemLeft" align="right" valign="top">virtual Pair&lt; Pair&lt; decimal, string &gt;, string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/ddb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_managers_1_1_order_manager.html#a6cea9488a1200d6c5d5101d4e1c2cd09">CalculateLogisticsCost</a> (long logisticsId, <a class="el" href="../../df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_parameters.html">CreateOrderParameters</a> parameters)</td></tr>
+<tr class="memdesc:a6cea9488a1200d6c5d5101d4e1c2cd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算订单的运费 返回 ((运费, 货币), 错误信息)  <a href="#a6cea9488a1200d6c5d5101d4e1c2cd09">更多...</a><br /></td></tr>
+<tr class="separator:a6cea9488a1200d6c5d5101d4e1c2cd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>订单管理器 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a6cea9488a1200d6c5d5101d4e1c2cd09"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Pair&lt;Pair&lt;decimal, string&gt;, string&gt; ZKWeb.Plugins.Shopping.Order.src.Managers.OrderManager.CalculateLogisticsCost </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>logisticsId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_parameters.html">CreateOrderParameters</a>&#160;</td>
+          <td class="paramname"><em>parameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>计算订单的运费 返回 ((运费, 货币), 错误信息) </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a4a91d9f3dff27339a2409b1e755db1fb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -150,7 +190,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算订单的价格 返回价格大于0 </p>
+<p>计算订单的价格 返回价格保证大于0 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">parameters</td><td>创建订单的参数</td></tr>
@@ -193,7 +233,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>计算订单商品的单价 返回价格大于或等于0 </p>
+<p>计算订单商品的单价 返回价格保证大于或等于0 </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">userId</td><td>用户Id，未登录时等于null</td></tr>

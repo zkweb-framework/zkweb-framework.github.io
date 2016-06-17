@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['ifunresolved',['IfUnresolved',['../da/d54/namespace_z_k_web_1_1_utils_1_1_ioc_container.html#a5546bccfbb8eaa243052960d58b3900a',1,'ZKWeb::Utils::IocContainer']]],
-  ['imageresizemode',['ImageResizeMode',['../da/d07/namespace_z_k_web_1_1_utils_1_1_extensions.html#aed366167ca0a415bd48e8b5bf98b3fc5',1,'ZKWeb::Utils::Extensions']]]
+  ['ifunresolved',['IfUnresolved',['../d4/d49/namespace_z_k_web_standard_1_1_ioc.html#a7ab91d10206af6b52a23e88169bb13cf',1,'ZKWebStandard::Ioc']]],
+  ['imageresizemode',['ImageResizeMode',['../d4/daf/namespace_z_k_web_standard_1_1_extensions.html#a068a382409dc8de6d7523b4d3b9fd167',1,'ZKWebStandard::Extensions']]]
 ];

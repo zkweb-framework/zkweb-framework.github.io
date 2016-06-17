@@ -116,7 +116,7 @@ $(document).ready(function(){initNavTree('da/df9/class_z_k_web_1_1_plugins_1_1_c
 </div><!--header-->
 <div class="contents">
 
-<p>表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 创建的例子 var form = Application.Ioc.Resolve[<a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html" title="表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 创建的例子 var form = Application.Ioc.Resolve[FormBuilder](); form.Attribute = new FormAttribute() { Name = &quot;TestForm&quot; }; form.Fields.Add(new FormField(new TextBoxFieldAttribute(&quot;Username&quot;))); form.Fields.Add(new FormField(new PasswordFieldAttribute(&quot;Password&quot;))); 绑定的例子 form.BindValuesFromAnonymousObject(new { Username = &quot;TestUser&quot;, Password = &quot;TestPassword&quot; }); return new TemplateResult(&quot;test_form.html&quot;, new { form }); 提交的例子 var values = form.ParseValues(HttpContextUtils.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string](&quot;Username&quot;); var password = values.GetOrDefault[string](&quot;Password&quot;); ">FormBuilder</a>](); form.Attribute = new FormAttribute() { Name = "TestForm" }; form.Fields.Add(new FormField(new TextBoxFieldAttribute("Username"))); form.Fields.Add(new FormField(new PasswordFieldAttribute("Password"))); 绑定的例子 form.BindValuesFromAnonymousObject(new { Username = "TestUser", Password = "TestPassword" }); return new TemplateResult("test_form.html", new { form }); 提交的例子 var values = form.ParseValues(HttpContextUtils.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string]("Username"); var password = values.GetOrDefault[string]("Password");  
+<p>表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取  
  <a href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#details">更多...</a></p>
 <div class="dynheader">
 类 ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder 继承关系图:</div>
@@ -148,21 +148,21 @@ Public 属性</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 成员函数</h2></td></tr>
-<tr class="memitem:a1c4cd4b3c91e9d17e0a6d6249f5c57d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a1c4cd4b3c91e9d17e0a6d6249f5c57d3">RenderFormBeginTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:a1c4cd4b3c91e9d17e0a6d6249f5c57d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的开始标签  <a href="#a1c4cd4b3c91e9d17e0a6d6249f5c57d3">更多...</a><br /></td></tr>
-<tr class="separator:a1c4cd4b3c91e9d17e0a6d6249f5c57d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32e6dec6b301d4881dc6360da6e68e8e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a32e6dec6b301d4881dc6360da6e68e8e">RenderFormEndTag</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:a32e6dec6b301d4881dc6360da6e68e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的结束标签  <a href="#a32e6dec6b301d4881dc6360da6e68e8e">更多...</a><br /></td></tr>
-<tr class="separator:a32e6dec6b301d4881dc6360da6e68e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed5524dca9d86fd2f5cafec8433e796"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#abed5524dca9d86fd2f5cafec8433e796">RenderFormField</a> (HtmlTextWriter html, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> field)</td></tr>
-<tr class="memdesc:abed5524dca9d86fd2f5cafec8433e796"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单字段  <a href="#abed5524dca9d86fd2f5cafec8433e796">更多...</a><br /></td></tr>
-<tr class="separator:abed5524dca9d86fd2f5cafec8433e796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afec9afb8b354c3420f5fa2ef048c150a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#afec9afb8b354c3420f5fa2ef048c150a">RenderCsrfToken</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:afec9afb8b354c3420f5fa2ef048c150a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画csrf校验值  <a href="#afec9afb8b354c3420f5fa2ef048c150a">更多...</a><br /></td></tr>
-<tr class="separator:afec9afb8b354c3420f5fa2ef048c150a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7b2c871cea3a6ac3fe0f23515b4911a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ae7b2c871cea3a6ac3fe0f23515b4911a">RenderSubmitButton</a> (HtmlTextWriter html)</td></tr>
-<tr class="memdesc:ae7b2c871cea3a6ac3fe0f23515b4911a"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画提交按钮  <a href="#ae7b2c871cea3a6ac3fe0f23515b4911a">更多...</a><br /></td></tr>
-<tr class="separator:ae7b2c871cea3a6ac3fe0f23515b4911a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62f1a8d7549b0ae92039b06e267209da"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a62f1a8d7549b0ae92039b06e267209da">RenderFormBeginTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:a62f1a8d7549b0ae92039b06e267209da"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的开始标签  <a href="#a62f1a8d7549b0ae92039b06e267209da">更多...</a><br /></td></tr>
+<tr class="separator:a62f1a8d7549b0ae92039b06e267209da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af806dee4e8a65bbac02c556ee1eebd0b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#af806dee4e8a65bbac02c556ee1eebd0b">RenderFormEndTag</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:af806dee4e8a65bbac02c556ee1eebd0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单的结束标签  <a href="#af806dee4e8a65bbac02c556ee1eebd0b">更多...</a><br /></td></tr>
+<tr class="separator:af806dee4e8a65bbac02c556ee1eebd0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b020b5216c42c276f8f41a4aff9282"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ae0b020b5216c42c276f8f41a4aff9282">RenderFormField</a> (StringBuilder html, <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> field)</td></tr>
+<tr class="memdesc:ae0b020b5216c42c276f8f41a4aff9282"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画表单字段  <a href="#ae0b020b5216c42c276f8f41a4aff9282">更多...</a><br /></td></tr>
+<tr class="separator:ae0b020b5216c42c276f8f41a4aff9282"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf7754a77a573caf27067793d17ccfc6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#acf7754a77a573caf27067793d17ccfc6">RenderCsrfToken</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:acf7754a77a573caf27067793d17ccfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画csrf校验值  <a href="#acf7754a77a573caf27067793d17ccfc6">更多...</a><br /></td></tr>
+<tr class="separator:acf7754a77a573caf27067793d17ccfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac795e51b5c02fc8a16f4c4e894b0e8b3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#ac795e51b5c02fc8a16f4c4e894b0e8b3">RenderSubmitButton</a> (StringBuilder html)</td></tr>
+<tr class="memdesc:ac795e51b5c02fc8a16f4c4e894b0e8b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">描画提交按钮  <a href="#ac795e51b5c02fc8a16f4c4e894b0e8b3">更多...</a><br /></td></tr>
+<tr class="separator:ac795e51b5c02fc8a16f4c4e894b0e8b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
@@ -172,9 +172,13 @@ Protected 成员函数</h2></td></tr>
 <tr class="memitem:a486284c80c95b77657f99b9d634b438e"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../de/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_form_field.html">FormField</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a486284c80c95b77657f99b9d634b438e">Fields</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:a486284c80c95b77657f99b9d634b438e"><td class="mdescLeft">&#160;</td><td class="mdescRight">表单字段列表  <a href="#a486284c80c95b77657f99b9d634b438e">更多...</a><br /></td></tr>
 <tr class="separator:a486284c80c95b77657f99b9d634b438e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a3761f7dbf8e381da85c58bd100ebf9"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html#a7a3761f7dbf8e381da85c58bd100ebf9">CsrfToken</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a7a3761f7dbf8e381da85c58bd100ebf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前客户端使用的csrf校验值  <a href="#a7a3761f7dbf8e381da85c58bd100ebf9">更多...</a><br /></td></tr>
+<tr class="separator:a7a3761f7dbf8e381da85c58bd100ebf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 创建的例子 var form = Application.Ioc.Resolve[<a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html" title="表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 创建的例子 var form = Application.Ioc.Resolve[FormBuilder](); form.Attribute = new FormAttribute() { Name = &quot;TestForm&quot; }; form.Fields.Add(new FormField(new TextBoxFieldAttribute(&quot;Username&quot;))); form.Fields.Add(new FormField(new PasswordFieldAttribute(&quot;Password&quot;))); 绑定的例子 form.BindValuesFromAnonymousObject(new { Username = &quot;TestUser&quot;, Password = &quot;TestPassword&quot; }); return new TemplateResult(&quot;test_form.html&quot;, new { form }); 提交的例子 var values = form.ParseValues(HttpContextUtils.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string](&quot;Username&quot;); var password = values.GetOrDefault[string](&quot;Password&quot;); ">FormBuilder</a>](); form.Attribute = new FormAttribute() { Name = "TestForm" }; form.Fields.Add(new FormField(new TextBoxFieldAttribute("Username"))); form.Fields.Add(new FormField(new PasswordFieldAttribute("Password"))); 绑定的例子 form.BindValuesFromAnonymousObject(new { Username = "TestUser", Password = "TestPassword" }); return new TemplateResult("test_form.html", new { form }); 提交的例子 var values = form.ParseValues(HttpContextUtils.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string]("Username"); var password = values.GetOrDefault[string]("Password"); </p>
+<div class="textblock"><p>表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 </p>
+<p>// 创建 var form = Application.Ioc.Resolve[<a class="el" href="../../da/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder.html" title="表单构建器 这个类可以通过Ioc替换，使用时注意要通过Ioc获取 ">FormBuilder</a>](); form.Attribute = new FormAttribute() { Name = "TestForm" }; form.Fields.Add(new FormField(new TextBoxFieldAttribute("Username"))); form.Fields.Add(new FormField(new PasswordFieldAttribute("Password"))); // 绑定 form.BindValuesFromAnonymousObject(new { Username = "TestUser", Password = "TestPassword" }); return new TemplateResult("test_form.html", new { form }); // 提交 var values = form.ParseValues(HttpManager.CurrentContext.Request.GetParams()); var username = values.GetOrDefault[string]("Username"); var password = values.GetOrDefault[string]("Password"); </p>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
 <a class="anchor" id="a4da97f513746770545ff8f4c568750e5"></a>
 <div class="memitem">
@@ -194,7 +198,7 @@ Protected 成员函数</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">成员函数说明</h2>
-<a class="anchor" id="afec9afb8b354c3420f5fa2ef048c150a"></a>
+<a class="anchor" id="acf7754a77a573caf27067793d17ccfc6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -204,7 +208,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.RenderCsrfToken </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -226,7 +230,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a1c4cd4b3c91e9d17e0a6d6249f5c57d3"></a>
+<a class="anchor" id="a62f1a8d7549b0ae92039b06e267209da"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -236,7 +240,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.RenderFormBeginTag </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -258,7 +262,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a32e6dec6b301d4881dc6360da6e68e8e"></a>
+<a class="anchor" id="af806dee4e8a65bbac02c556ee1eebd0b"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -268,7 +272,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.RenderFormEndTag </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -290,7 +294,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abed5524dca9d86fd2f5cafec8433e796"></a>
+<a class="anchor" id="ae0b020b5216c42c276f8f41a4aff9282"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -300,7 +304,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.RenderFormField </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em>, </td>
         </tr>
         <tr>
@@ -333,7 +337,7 @@ Protected 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae7b2c871cea3a6ac3fe0f23515b4911a"></a>
+<a class="anchor" id="ac795e51b5c02fc8a16f4c4e894b0e8b3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -343,7 +347,7 @@ Protected 成员函数</h2></td></tr>
         <tr>
           <td class="memname">virtual void ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.RenderSubmitButton </td>
           <td>(</td>
-          <td class="paramtype">HtmlTextWriter&#160;</td>
+          <td class="paramtype">StringBuilder&#160;</td>
           <td class="paramname"><em>html</em></td><td>)</td>
           <td></td>
         </tr>
@@ -432,6 +436,28 @@ Protected 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>表单属性，可省略 </p>
+
+</div>
+</div>
+<a class="anchor" id="a7a3761f7dbf8e381da85c58bd100ebf9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilder.CsrfToken</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>当前客户端使用的csrf校验值 </p>
 
 </div>
 </div>

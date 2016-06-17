@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
-<title>ZKWeb References: Extendable .net web framework&lt;br/&gt;</title>
+<title>ZKWeb References: Extendable .net web framework</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -99,8 +99,7 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Extendable .net web framework<br />
- </div>  </div>
+<div class="title">Extendable .net web framework </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Features:<br />
@@ -112,7 +111,7 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 </ul>
 </li>
 <li>Code first database auto migration<ul>
-<li>NHibernate</li>
+<li>FluentNHibernate</li>
 <li>Auto migration without any handwrite command</li>
 </ul>
 </li>
@@ -127,7 +126,7 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 </li>
 <li>Multi language support</li>
 <li>Multi timezone support</li>
-<li>Unit test support<ul>
+<li>Testing support<ul>
 <li>Console and web test runner</li>
 <li>Ioc container overridden</li>
 <li>Http context overridden</li>
@@ -142,12 +141,21 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 <li>Supported by plugin</li>
 </ul>
 </li>
+<li>Pesudo static<ul>
+<li>Supported by plugin</li>
+</ul>
+</li>
 <li>Visual page editor<ul>
 <li>Prepared and planned</li>
 </ul>
 </li>
 </ul>
-<p>Version: 0.9.5 testing (backward compatibility is not provided yet)<br />
+<p>Version: 0.9.8 testing (backward compatibility is not provided yet)<br />
+</p>
+<p><a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> provided both Asp.Net and Asp.Net Core version now.<br />
+ For Asp.Net Core version please checkout <code>aspnet_core</code> branch.<br />
+ Both version compatible with same plugins.<br />
+ Plugins should use the abstraction layer <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> provided, and shouldn't dependent on Asp.Net (Core).<br />
 </p>
 <p>Plugins: <a href="http://github.com/zkweb-framework/ZKWeb.Plugins">http://github.com/zkweb-framework/ZKWeb.Plugins</a><br />
  Document: <a href="http://zkweb-framework.github.io">http://zkweb-framework.github.io</a> (Chinese only)<br />
@@ -155,22 +163,21 @@ $(document).ready(function(){initNavTree('md_ZKWeb_README.html','');});
 </p>
 <p>Demo Website: <a href="http://zkwebsite.com/admin">http://zkwebsite.com/admin</a><br />
  Demo Account: demo 123456</p>
-<p>This framework is inspired by django<br />
- All comments are written in chinese at this moment because main developers are chinese.<br />
+<p>This framework is inspired by django, all comments are written in chinese.<br />
 </p>
 <p>MIT License<br />
  Copyright © 2016 303248153<br />
  If you have any license issue please contact <a href="#" onclick="location.href='mai'+'lto:'+'303'+'24'+'815'+'3@'+'qq.'+'co'+'m'; return false;">30324<span style="display: none;">.nosp@m.</span>8153<span style="display: none;">.nosp@m.</span>@qq.c<span style="display: none;">.nosp@m.</span>om</a>.<br />
 </p>
-<h3>Fast Help:</h3>
-<p>a. How to getting start?</p>
+<h3>Getting Started:</h3>
+<p>a. How to run this project?</p>
 <ul>
 <li>Download <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins from github</li>
 <li>Put <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> and ZKWeb.Plugins in same folder</li>
 <li>Edit config.json under <a class="el" href="dc/d17/namespace_z_k_web.html">ZKWeb</a> change Database and ConnectionString<ul>
 <li>Example for mssql ``` "Database": "mssql", "ConnectionString": "Server=127.0.0.1;Database=test_db;User Id=test_user;Password=123456;", ```</li>
 <li>Example for postgresql ``` "Database": "postgresql", "ConnectionString": "Server=127.0.0.1;Port=5432;Database=test_db;User Id=test_user;Password=123456;", ```</li>
-<li>Example for sqlite ``` "Database": "sqlite", "ConnectionString": "Data Source={{App_Data}}\test.db;Version=3;New=True;", ```</li>
+<li>Example for sqlite ``` "Database": "sqlite", "ConnectionString": "Data Source={{App_Data}}/test.db;Version=3;", ```</li>
 <li>Example for mysql ``` "Database": "mysql", "ConnectionString": "Server=127.0.0.1;Port=3306;Database=test_db;User Id=test_user;Password=123456;", ```</li>
 </ul>
 </li>

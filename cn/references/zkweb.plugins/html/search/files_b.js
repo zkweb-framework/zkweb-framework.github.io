@@ -16,6 +16,7 @@ var searchData=
   ['logcleaner_2ecs',['LogCleaner.cs',['../da/d02/_log_cleaner_8cs.html',1,'']]],
   ['logistics_2ecs',['Logistics.cs',['../d5/d11/_logistics_8cs.html',1,'']]],
   ['logisticsmanageapp_2ecs',['LogisticsManageApp.cs',['../dc/da7/_logistics_manage_app_8cs.html',1,'']]],
+  ['logisticsmanager_2ecs',['LogisticsManager.cs',['../d9/d61/_logistics_manager_8cs.html',1,'']]],
   ['logisticspriceruleseditor_2ecs',['LogisticsPriceRulesEditor.cs',['../d0/d78/_logistics_price_rules_editor_8cs.html',1,'']]],
   ['logisticspriceruleseditorattribute_2ecs',['LogisticsPriceRulesEditorAttribute.cs',['../df/d83/_logistics_price_rules_editor_attribute_8cs.html',1,'']]],
   ['logisticstypelistitemprovider_2ecs',['LogisticsTypeListItemProvider.cs',['../d6/dbf/_logistics_type_list_item_provider_8cs.html',1,'']]],

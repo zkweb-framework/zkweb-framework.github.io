@@ -1,0 +1,8 @@
+var class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2 =
+[
+    [ "OnBind", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html#a640157ebd35e9dbcc50b3b7ab20c8d7b", null ],
+    [ "OnSubmit", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html#ad2414f147509479c6701bd64d0f4e2ae", null ],
+    [ "DisplaySwitcherOnAdminPanel", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html#ac5fc13b991d69219cbc559646aa91d12", null ],
+    [ "DisplaySwitcherOnFrontPages", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html#ad27cd54d94f5f8b819f2c222ba1e062a", null ],
+    [ "SwitchableLanguages", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html#ae2f6f86e2b6d9349b257f281b35558c3", null ]
+];

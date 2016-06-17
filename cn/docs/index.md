@@ -6,7 +6,10 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 每个插件程序集可以包含功能所需要的业务处理，数据库处理，控制器和模板。<br/>
 插件系统可以实现相同的业务代码提供给不同的客户时，只需要写一次并只管理一份代码。<br/>
 
-框架和插件编写时均考虑了实现可视化编辑（可视化编辑功能目前还没有开始编写）。<br/>
+ZKWeb目前同时提供了Asp.Net和Asp.Net Core版本。<br/>
+需要使用Asp.Net Core版本时请下载`aspnet_core`分支。<br/>
+Asp.Net和Asp.Net Core版本都兼容相同的插件。<br/>
+编写插件应该使用`ZKWebStandard`提供的抽象层而不去依赖Asp.Net或Asp.Net Core。<br/>
 
 ### <h2>项目地址</h2>
 
@@ -21,7 +24,7 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 
 ### <h2>索引文档</h2>
 
-最终更新: 2016-06-08<br/>
+最终更新: 2016-06-17<br/>
 <a href="../references/zkweb/html/annotated.html" target="_blank">ZKWeb索引文档</a></br>
 <a href="../references/zkweb.plugins/html/annotated.html" target="_blank">ZKWeb.Plugins索引文档</a>
 
@@ -31,7 +34,7 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 	- 使用Csscript + Codedom
 	- 编辑后自动重新编译
 - 支持从代码自动更新数据库
-	- 使用NHibernate
+	- 使用FluentNHibernate
 	- 添加数据表或字段后不需要运行任何命令，刷新浏览器即可更新到数据库	
 - 使用简单和高性能的Ioc容器
 - 支持数据库事件
@@ -64,6 +67,9 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 	- 支持回收站
 	- 支持自动生成和检查权限
 	- 不通过代码生成器，减少程序的代码量和内存占用
+- 支持伪静态
+	- 全局自动生成和处理伪静态url，不需要编写正则
+	- 几乎没有额外的性能开销
 
 ### <h2>层次结构</h2>
 
@@ -84,7 +90,14 @@ ZKWeb是一个用于快速开发网站的框架。<br/>
 	- 首页 0.793ms, 0.824ms, 0.809ms
 	- 商品列表页 0.708ms, 0.672ms, 0.694ms
 	- 商品详情页 0.853ms, 0.827ms, 0.827ms
-
+- 2016-06-17 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net core)
+	- 首页 0.852ms, 0.799ms, 0.801ms
+	- 商品列表页 0.879ms, 0.740ms, 0.742ms
+	- 商品详情页 0.941ms, 0.877ms, 0.879ms
+- 2016-06-17 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net)
+	- 首页 0.674ms, 0.688ms, 0.672ms
+	- 商品列表页 0.648ms, 0.770ms, 0.645ms
+	- 商品详情页 0.736ms, 0.756ms, 0.775ms
 
 ### <h2>项目进度</h2>
 

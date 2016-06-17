@@ -557,7 +557,10 @@
 <p>框架更注重功能的分离而不是层次的分离，<br/>
 每个插件程序集可以包含功能所需要的业务处理，数据库处理，控制器和模板。<br/>
 插件系统可以实现相同的业务代码提供给不同的客户时，只需要写一次并只管理一份代码。<br/></p>
-<p>框架和插件编写时均考虑了实现可视化编辑（可视化编辑功能目前还没有开始编写）。<br/></p>
+<p>ZKWeb目前同时提供了Asp.Net和Asp.Net Core版本。<br/>
+需要使用Asp.Net Core版本时请下载<code>aspnet_core</code>分支。<br/>
+Asp.Net和Asp.Net Core版本都兼容相同的插件。<br/>
+编写插件应该使用<code>ZKWebStandard</code>提供的抽象层而不去依赖Asp.Net或Asp.Net Core。<br/></p>
 <h3 id="_1"><h2>项目地址</h2></h3>
 <p><a href="https://github.com/zkweb-framework/ZKWeb" target="_blank">https://github.com/zkweb-framework/ZKWeb</a></br>
 <a href="https://github.com/zkweb-framework/ZKWeb.Plugins" target="_blank">https://github.com/zkweb-framework/ZKWeb.Plugins</a></p>
@@ -566,7 +569,7 @@
 用户名: demo<br/>
 密码: 123456<br/></p>
 <h3 id="_2"><h2>索引文档</h2></h3>
-<p>最终更新: 2016-06-08<br/>
+<p>最终更新: 2016-06-17<br/>
 <a href="../references/zkweb/html/annotated.html" target="_blank">ZKWeb索引文档</a></br>
 <a href="../references/zkweb.plugins/html/annotated.html" target="_blank">ZKWeb.Plugins索引文档</a></p>
 <h3 id="_3"><h2>主要功能</h2></h3>
@@ -577,7 +580,7 @@
 </ul>
 </li>
 <li>支持从代码自动更新数据库<ul>
-<li>使用NHibernate</li>
+<li>使用FluentNHibernate</li>
 <li>添加数据表或字段后不需要运行任何命令，刷新浏览器即可更新到数据库  </li>
 </ul>
 </li>
@@ -626,6 +629,11 @@
 <li>不通过代码生成器，减少程序的代码量和内存占用</li>
 </ul>
 </li>
+<li>支持伪静态<ul>
+<li>全局自动生成和处理伪静态url，不需要编写正则</li>
+<li>几乎没有额外的性能开销</li>
+</ul>
+</li>
 </ul>
 <h3 id="_4"><h2>层次结构</h2></h3>
 <p>当前核心 + 默认插件的层次结构如下<br/>
@@ -648,6 +656,18 @@
 <li>首页 0.793ms, 0.824ms, 0.809ms</li>
 <li>商品列表页 0.708ms, 0.672ms, 0.694ms</li>
 <li>商品详情页 0.853ms, 0.827ms, 0.827ms</li>
+</ul>
+</li>
+<li>2016-06-17 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net core)<ul>
+<li>首页 0.852ms, 0.799ms, 0.801ms</li>
+<li>商品列表页 0.879ms, 0.740ms, 0.742ms</li>
+<li>商品详情页 0.941ms, 0.877ms, 0.879ms</li>
+</ul>
+</li>
+<li>2016-06-17 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net)<ul>
+<li>首页 0.674ms, 0.688ms, 0.672ms</li>
+<li>商品列表页 0.648ms, 0.770ms, 0.645ms</li>
+<li>商品详情页 0.736ms, 0.756ms, 0.775ms</li>
 </ul>
 </li>
 </ul>

@@ -1,0 +1,28 @@
+var class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper =
+[
+    [ "HttpRequestWrapper", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#aa28c06b81b6d410ca7242db0ecf49e6f", null ],
+    [ "GetCookie", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a585f77e649f6157a3153c0f20ae80664", null ],
+    [ "GetCookies", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a5a977fe74c33c1ecc8c5a68304943d13", null ],
+    [ "GetFormValue", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#ad001170d95d760961ec8131bd96a6e79", null ],
+    [ "GetFormValues", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a8a22665033b8b7358eca80f8fa490ffc", null ],
+    [ "GetHeader", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#ab605e39fa7ff993fe3722f74145fcfb6", null ],
+    [ "GetHeaders", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#ac15e3f77686bc927d42676e36c3df829", null ],
+    [ "GetPostedFile", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#adfc0737c8bb229a02a9dfffac071d33a", null ],
+    [ "GetPostedFiles", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a0604037db4fb838d36d6de1ab24c17bc", null ],
+    [ "GetQueryValue", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a53fa43bf25863e63b7203443b5dcf3d9", null ],
+    [ "GetQueryValues", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a2ba6013abf20721ec172eb1fb5032032", null ],
+    [ "Body", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#ae5b7139be292aef7cf549fb5f5142faf", null ],
+    [ "ContentLength", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a7e46e34611aee59286285147b571bb58", null ],
+    [ "ContentType", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a4ba1d24042473fa762357f1790436c2d", null ],
+    [ "Host", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a23e44b96c74b4b7f7a5bc53d4d739cfa", null ],
+    [ "HttpContext", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a5b73b9950c0457efd86992588669f8e4", null ],
+    [ "IsHttps", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#aee8247f1ef6c5543b60bb98bca461542", null ],
+    [ "Method", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#afb6e6aff42a961574f9b918e53b05a97", null ],
+    [ "OriginalRequest", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#af36ada4af3d3d4cf66f8308bc7d36da1", null ],
+    [ "Path", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#adb550acaef8bf0e5ebaa3949f6730cde", null ],
+    [ "Protocol", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a5bd17718059fea1f5fb3b519f72f2433", null ],
+    [ "QueryString", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a3c505535fc34200303f97e44c6391317", null ],
+    [ "RemoteIpAddress", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#ad5dff5d57be9a46c500ae3de9056d5f4", null ],
+    [ "RemotePort", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a96a91c08586e8ccda240081bbb709c2f", null ],
+    [ "Scheme", "d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#a152d8e8bb9522892aeb1979d4b4d0229", null ]
+];

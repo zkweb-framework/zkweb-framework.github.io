@@ -1,10 +1,10 @@
-ZKWeb使用了独自编写的控制器和模板系统，不依赖于asp.net webform和mvc。<br/>
-在ZKWeb中控制器接口只是一个空接口，自身不拥有状态。<br/>
-获取当前http上下文可以通过`HttpContextUtils.CurrentContext`，<br/>
-为了更好的支持单元测试，请不要使用`HttpContext.Current`。<br/>
+ZKWeb使用了独自编写的控制器和模板系统，不依赖于Asp.Net Webform和Mvc。<br/>
+ZKWeb提供了对Http的抽象封装，不依赖于Asp.Net和Asp.Net Core。<br/>
+获取当前Http上下文应该使用`HttpManager.CurrentContext`。<br/>
 
 ### <h2>添加控制器</h2>
 
+控制器接口只是一个空接口，自身不拥有状态。<br/>
 添加`Example\src\Controllers\ExampleController.cs`，内容如下</br>
 使用`Controllers`文件夹保存控制器代码是命名习惯，不是必须遵从的。</br>
 
@@ -124,12 +124,12 @@ public IActionResult TemplateAction() {
 
 ### <h2>获取请求参数</h2>
 
-使用`HttpContextUtils.CurrentContext.Request`可以获取到请求对象并获取里面的参数。</br>
+使用`HttpManager.CurrentContext.Request`可以获取到请求对象并获取里面的参数。</br>
 目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
 获取请求参数的例子: </br>
 
 ``` csharp
-var request = HttpContextUtils.CurrentContext.Request;
+var request = HttpManager.CurrentContext.Request;
 var id = request.Get<int>("id"); // a collection combines Form and Request
 var file = request.Files[0];
 ```

@@ -1,8 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e =
-[
-    [ "OnBind", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html#a193c6a726f6624d495d1166952f03331", null ],
-    [ "OnSubmit", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html#a6eef8b137a660f955b2e8037d7874f61", null ],
-    [ "DisplaySwitcherOnAdminPanel", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html#a5df2f53920908aa5ae511ca4c218113f", null ],
-    [ "DisplaySwitcherOnFrontPages", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html#a8ae4645133dba35b46511ec76d23acec", null ],
-    [ "SwitchableLanguages", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html#a36ee4aea2e9589add9ece488a94217e4", null ]
-];

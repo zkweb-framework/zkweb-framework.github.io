@@ -1,9 +1,10 @@
 var class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address =
 [
+    [ "UserShippingAddress", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a179a8516b3400c68eae91c6e22f69f06", null ],
     [ "ToString", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a5b073eadd315d92051b3fb00a5d83e60", null ],
     [ "Country", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a0e84f0477f8124923199e4d386d2a6f0", null ],
     [ "CreateTime", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#ab5812af4b8cc044d0a0172afc93c24f5", null ],
-    [ "Deleted", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a21052d87b169c889ebcdbcd2316ce915", null ],
+    [ "Deleted", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#ab60778a0c567b380ef5cd93be1986ec7", null ],
     [ "DetailedAddress", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a7d5dc2321ed55ee81eb68f082c892bc3", null ],
     [ "DisplayOrder", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#ac56d2678963ac1288dc6104268320e34", null ],
     [ "Id", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html#a3312bef2810d9d10da8ef7ce2632b637", null ],

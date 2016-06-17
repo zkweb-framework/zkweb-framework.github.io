@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['output',['output',['../d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html#a4da8cd3700b4c9560419ceceadda7020',1,'ZKWeb::Utils::Collections::HttpResponseMock']]],
-  ['outputstream',['outputStream',['../d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html#a8d948befdc81b9f0af6b0c54155a1811',1,'ZKWeb::Utils::Collections::HttpResponseMock']]]
+  ['variableinurlexpression',['VariableInUrlExpression',['../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#a43058ae88154d65b0ebd60cf8ae15683',1,'ZKWeb::Templating::TemplateTags::Fetch']]],
+  ['variablenameforallqueryparameters',['VariableNameForAllQueryParameters',['../db/d2a/class_z_k_web_1_1_templating_1_1_template_tags_1_1_fetch.html#adfc317fad4255bada3d940843d1216cc',1,'ZKWeb::Templating::TemplateTags::Fetch']]]
 ];

@@ -1,7 +1,8 @@
 var searchData=
 [
   ['object',['Object',['../d4/d11/class_z_k_web_1_1_web_1_1_action_results_1_1_json_result.html#ab4a88983a7a3efb6ef1525dcac7e87bc',1,'ZKWeb::Web::ActionResults::JsonResult']]],
-  ['output',['Output',['../d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html#af0ecd6bbb0562c98878d2d813b73077d',1,'ZKWeb::Utils::Collections::HttpResponseMock']]],
-  ['outputstream',['OutputStream',['../d9/da4/class_z_k_web_1_1_utils_1_1_collections_1_1_http_response_mock.html#a0ade8aeedd057bf7edd0d52fabdee94e',1,'ZKWeb::Utils::Collections::HttpResponseMock']]],
-  ['overrideexists',['OverrideExists',['../d7/d17/class_z_k_web_1_1_web_1_1_interfaces_1_1_action_attribute.html#a8d615483cb497d001f6cb8cdabe5c410',1,'ZKWeb::Web::Interfaces::ActionAttribute']]]
+  ['originalcontext',['OriginalContext',['../d0/d8e/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_context_wrapper.html#a5b8327ece642c37147b06b62126ce8c0',1,'ZKWebStandard::Web::Wrappers::HttpContextWrapper']]],
+  ['originalrequest',['OriginalRequest',['../d0/dcc/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_request_wrapper.html#af36ada4af3d3d4cf66f8308bc7d36da1',1,'ZKWebStandard::Web::Wrappers::HttpRequestWrapper']]],
+  ['originalresponse',['OriginalResponse',['../de/d94/class_z_k_web_standard_1_1_web_1_1_wrappers_1_1_http_response_wrapper.html#a4ccce7f7e929e022edfedb48fe21f1a0',1,'ZKWebStandard::Web::Wrappers::HttpResponseWrapper']]],
+  ['overrideexists',['OverrideExists',['../d8/d29/class_z_k_web_1_1_web_1_1_action_attribute.html#aea76fa9defed4b54fd81fbb27afee51c',1,'ZKWeb::Web::ActionAttribute']]]
 ];

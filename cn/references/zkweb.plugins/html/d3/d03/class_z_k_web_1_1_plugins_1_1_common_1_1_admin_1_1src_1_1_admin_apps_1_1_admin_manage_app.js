@@ -8,9 +8,9 @@ var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_adm
     [ "GetEditForm", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#aae9119742b602f322099453cbdcb75fb", null ],
     [ "GetTableCallback", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a2d0d644289b9c106f3e519eac55fc14d", null ],
     [ "AllowedUserTypes", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a027cc87a761c23d88f4f9e8551b1e012", null ],
+    [ "DataTypeName", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#afe71334ca8156f01e6e65d61aab5e5b6", null ],
     [ "IconClass", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a5ae9b407cbcacf426f9cdc6b487069de", null ],
     [ "Name", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#ac0675971eaf834a433e1829f3ca6b0d6", null ],
     [ "TileClass", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a013b9aa6f11e95d81c9d1225d7c7802d", null ],
-    [ "TypeName", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a2c4b487973de4b965c8afe5987905377", null ],
     [ "Url", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html#a6131000af9eddd8a319c9080fd253ab2", null ]
 ];

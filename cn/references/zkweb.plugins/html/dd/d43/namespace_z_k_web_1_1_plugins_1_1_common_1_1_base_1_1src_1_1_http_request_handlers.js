@@ -1,0 +1,5 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers =
+[
+    [ "LocaleHandler", "de/db6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_locale_handler.html", "de/db6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_locale_handler" ],
+    [ "StaticHandler", "df/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_static_handler.html", "df/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_static_handler" ]
+];

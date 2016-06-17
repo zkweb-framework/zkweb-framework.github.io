@@ -159,7 +159,7 @@ public IActionResult Table() {
 
 [Action("example/table/search", HttpMethods.POST)]
 public IActionResult TableSearch() {
-	var json = HttpContextUtils.CurrentContext.Request.Get<string>("json");
+	var json = HttpManager.CurrentContext.Request.Get<string>("json");
 	var request = AjaxTableSearchRequest.FromJson(json);
 	var response = request.BuildResponseFromDatabase(new[] { new ExampleAjaxTableCallback() });
 	return new JsonResult(response);
@@ -332,7 +332,7 @@ public class ExampleStaticTableCallback : IStaticTableCallback<ExampleTable> {
 [Action("example/form", HttpMethods.POST)]
 public IActionResult Form() {
 	var form = new ExampleForm();
-	if (HttpContextUtils.CurrentContext.Request.HttpMethod == HttpMethods.POST) {
+	if (HttpManager.CurrentContext.Request.Method == HttpMethods.POST) {
 		return new JsonResult(form.Submit());
 	} else {
 		form.Bind();
@@ -534,6 +534,10 @@ UnitOfWork.Read(context => {
 	- 删除Url参数，传入的url是空值时使用当前请求的url
 	- 例: `{{ "" | url_remove_param: "key" }}`
 	- 例: `{{ test_url | url_remove_param: variable }}`
+- html_attributes
+	- 描画Html标签
+	- 需要传入类型是`IDictionary<string, string>`的参数
+	- 例: `{{ attribtues | html_attributes }}`
 
 ### <h2>静态文件处理器</h2>
 

@@ -1,40 +1,70 @@
 var hierarchy =
 [
-    [ "AdminApp", null, [
-      [ "AdminAppBuilder< TData >", "df/ddf/class_admin_app_builder.html", null ]
-    ] ],
-    [ "AdminAppBuilder< Database.Article >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< Database.Article >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.CMS.Article.src.AdminApps.ArticleManageApp", "d0/dd2/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_admin_apps_1_1_article_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Logistics >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< Database.Logistics >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Logistics.src.AdminApps.LogisticsManageApp", "d3/dea/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_admin_apps_1_1_logistics_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Order >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< Database.Order >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Order.src.AdminApps.OrderManageApp", "d3/d87/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_apps_1_1_order_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< Database.Product >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< Database.Product >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductManageApp", "dd/d21/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< PaymentApi >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< PaymentApi >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentApiManageApp", "df/dbb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< PaymentTransaction >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< PaymentTransaction >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentTransactionRecordsApp", "de/dd0/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_transaction_records_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< ProductCategory >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< ProductCategory >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductCategoryManageApp", "dd/d02/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< ProductProperty >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< ProductProperty >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.AdminApps.ProductPropertyManageApp", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< User >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< User >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.AdminManageApp", "d3/d03/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_admin_manage_app.html", null ],
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.UserManageApp", "d1/dc9/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_user_manage_app.html", null ]
     ] ],
-    [ "AdminAppBuilder< UserRole >", "df/ddf/class_admin_app_builder.html", [
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< UserRole >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.RoleManageApp", "d4/ddc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_role_manage_app.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.AdminManager", "d4/d4f/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_admin_manager.html", null ],
+    [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsCrudPageBuilder< Database.GenericClass >", "d8/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Common.GenericClass.src.Scaffolding.GenericClassBuilder", "dd/d1a/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder.html", [
+        [ "ZKWeb.Plugins.CMS.Article.src.GenericClasses.ArticleClass", "db/d2e/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_classes_1_1_article_class.html", null ],
+        [ "ZKWeb.Plugins.Common.GenericClass.src.GenericClasses.DefaultClass", "d4/d62/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_generic_classes_1_1_default_class.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Product.src.GenericClasses.ProductClass", "d2/db7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_classes_1_1_product_class.html", null ]
+      ] ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsCrudPageBuilder< Database.GenericTag >", "d8/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Common.GenericTag.src.Scaffolding.GenericTagBuilder", "d1/d18/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_scaffolding_1_1_generic_tag_builder.html", [
+        [ "ZKWeb.Plugins.CMS.Article.src.GenericTags.ArticleTag", "d0/df9/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_tags_1_1_article_tag.html", null ],
+        [ "ZKWeb.Plugins.Common.GenericTag.src.GenericTags.DefaultTag", "da/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_generic_tags_1_1_default_tag.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Product.src.GenericTags.ProductTag", "d4/da4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_tags_1_1_product_tag.html", null ]
+      ] ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsCrudPageBuilder< Translation >", "d8/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator", "d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html", [
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Arabic", "d7/d8a/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_arabic.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Chinese", "dc/df5/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_chinese.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Czech", "da/da6/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_czech.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.English", "dc/dca/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_english.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.French", "d2/d38/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_french.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.German", "da/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_german.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Greek", "d0/d8d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_greek.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Italian", "d3/d17/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_italian.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Japanese", "d1/d9c/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_japanese.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Korean", "d9/de1/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_korean.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Polish", "dc/dec/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_polish.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Russian", "d6/d4d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_russian.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Spanish", "d8/db8/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_spanish.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Thai", "d1/d37/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_thai.html", null ],
+        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.TraditionalChinese", "d1/dad/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_traditional_chinese.html", null ]
+      ] ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableActionColumnExtensions", "d7/de3/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_action_column_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.AjaxTableActionColumnExtensions", "d7/d63/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_ajax_table_action_column_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableBuilderExtensions", "df/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_builder_extensions.html", null ],
@@ -127,7 +157,6 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductPropertyValueMap", "d1/d75/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property_value_map.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductToPropertyValueMap", "d6/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_to_property_value_map.html", null ]
     ] ],
-    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.ContainerExtensions", "de/d84/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_container_extensions.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Extensions.ContainerExtensions", "d6/de7/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_container_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Model.CountryAndRegion", "da/dc4/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_model_1_1_country_and_region.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Model.CreateOrderParameters", "df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_parameters.html", null ],
@@ -138,9 +167,6 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.DataEditFormBuilder< Database.GenericClass, Form >", "d1/db0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_data_edit_form_builder.html", [
       [ "ZKWeb.Plugins.Common.GenericClass.src.Scaffolding.GenericClassBuilder.Form", "d2/d4c/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder_1_1_form.html", null ]
     ] ],
-    [ "DataEditFormBuilderTestData", null, [
-      [ "Form", "df/d08/class_form.html", null ]
-    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.DataTableExtensions", "d5/d74/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_data_table_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.EntityToTableRow< TEntity >", "dd/dd9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_entity_to_table_row.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TypeTraits.EntityTrait", "d7/d65/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_type_traits_1_1_entity_trait.html", null ],
@@ -148,43 +174,9 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.FileUploaderFieldAttributeExtensions", "d6/dfd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_file_uploader_field_attribute_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TemplateFilters.Filters", "df/dcf/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_filters_1_1_filters.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.FormBuilderExtensions", "dc/dbe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_builder_extensions.html", null ],
-    [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.FormHtmlProvider", "d4/d4f/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_form_html_provider.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Extensions.FormFieldExtensions", "dc/d56/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_form_field_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.GenericClass.src.Database.GenericClass", "d9/db7/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_database_1_1_generic_class.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Database.GenericConfig", "d2/ddf/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_database_1_1_generic_config.html", null ],
-    [ "ZKWeb.Plugins.Common.Base.src.Managers.GenericConfigManager", "df/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_generic_config_manager.html", null ],
-    [ "GenericListForAdminSettings< Database.GenericClass, GenericClassBuilder >", "df/da7/class_generic_list_for_admin_settings.html", [
-      [ "ZKWeb.Plugins.Common.GenericClass.src.Scaffolding.GenericClassBuilder", "dd/d1a/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder.html", [
-        [ "ZKWeb.Plugins.CMS.Article.src.GenericClasses.ArticleClass", "db/d2e/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_classes_1_1_article_class.html", null ],
-        [ "ZKWeb.Plugins.Common.GenericClass.src.GenericClasses.DefaultClass", "d4/d62/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_generic_classes_1_1_default_class.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Product.src.GenericClasses.ProductClass", "d2/db7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_classes_1_1_product_class.html", null ]
-      ] ]
-    ] ],
-    [ "GenericListForAdminSettings< Database.GenericTag, GenericTagBuilder >", "df/da7/class_generic_list_for_admin_settings.html", [
-      [ "ZKWeb.Plugins.Common.GenericTag.src.Scaffolding.GenericTagBuilder", "d1/d18/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_scaffolding_1_1_generic_tag_builder.html", [
-        [ "ZKWeb.Plugins.CMS.Article.src.GenericTags.ArticleTag", "d0/df9/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_tags_1_1_article_tag.html", null ],
-        [ "ZKWeb.Plugins.Common.GenericTag.src.GenericTags.DefaultTag", "da/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_tag_1_1src_1_1_generic_tags_1_1_default_tag.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Product.src.GenericTags.ProductTag", "d4/da4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_tags_1_1_product_tag.html", null ]
-      ] ]
-    ] ],
-    [ "GenericListForAdminSettings< Translation, CustomTranslator >", "df/da7/class_generic_list_for_admin_settings.html", [
-      [ "ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator", "d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html", [
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Arabic", "d7/d8a/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_arabic.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Chinese", "dc/df5/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_chinese.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Czech", "da/da6/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_czech.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.English", "dc/dca/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_english.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.French", "d2/d38/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_french.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.German", "da/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_german.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Greek", "d0/d8d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_greek.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Italian", "d3/d17/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_italian.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Japanese", "d1/d9c/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_japanese.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Korean", "d9/de1/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_korean.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Polish", "dc/dec/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_polish.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Russian", "d6/d4d/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_russian.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Spanish", "d8/db8/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_spanish.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.Thai", "d1/d37/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_thai.html", null ],
-        [ "ZKWeb.Plugins.Common.CustomTranslate.src.CustomTranslators.TraditionalChinese", "d1/dad/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_traditional_chinese.html", null ]
-      ] ]
-    ] ],
     [ "ZKWeb.Plugins.Common.GenericRecord.src.Database.GenericRecord", "dd/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Repositories.GenericRepository< CartProduct >", "d7/dd4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_generic_repository.html", [
       [ "ZKWeb.Plugins.Shopping.Order.src.Repositories.CartProductRepository", "d2/dbf/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_repositories_1_1_cart_product_repository.html", null ]
@@ -213,9 +205,14 @@ var hierarchy =
       ] ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Managers.HttpRequestChecker", "de/dce/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_http_request_checker.html", null ],
-    [ "ZKWeb.Plugins.Common.Admin.src.Model.IAdminAppBuilder", "d4/d4a/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app_builder.html", [
-      [ "AdminAppBuilder< TData >", "df/ddf/class_admin_app_builder.html", null ]
+    [ "ZKWeb.Plugins.Common.Admin.src.Model.IAdminApp", "d8/d5b/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app.html", [
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< TData >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", null ],
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.SimpleAdminAppBuilder", "d3/dbc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_simple_admin_app_builder.html", [
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminApps.AdminSettingsApp", "d7/df4/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_apps_1_1_admin_settings_app.html", null ],
+        [ "ZKWeb.Plugins.UnitTest.WebTester.src.AdminApps.WebTesterApp", "d5/db2/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_admin_apps_1_1_web_tester_app.html", null ]
+      ] ]
     ] ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Extensions.IAdminAppExtensions", "dc/d35/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_i_admin_app_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< T >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< Database.Article >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
       [ "ZKWeb.Plugins.CMS.Article.src.AdminApps.ArticleManageApp.TableCallback", "d4/d73/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_admin_apps_1_1_article_manage_app_1_1_table_callback.html", null ]
@@ -254,6 +251,9 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< UserRole >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.RoleManageApp.SearchCallback", "d1/d76/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_role_manage_app_1_1_search_callback.html", null ]
     ] ],
+    [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallback< UserShippingAddress >", "da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.UserPanelPages.UserShippingAddressManage.TableCallback", "d9/d6f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_user_panel_pages_1_1_user_shipping_a53568df090ba24868ab2cbf5eb65df2b.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Model.IAjaxTableCallbackExtension< User, UserManageApp.TableCallback >", "d1/daf/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback_extension.html", [
       [ "ZKWeb.Plugins.Common.UserContact.src.AjaxTableCallbacks.AddColumnsToUserManageApp", "d2/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_ajax_table_callbacks_1_1_add_columns_to_user_manage_app.html", null ]
     ] ],
@@ -261,6 +261,7 @@ var hierarchy =
     [ "ICacheCleaner", null, [
       [ "ZKWeb.Plugins.CMS.Article.src.Managers.ArticleManager", "dd/d10/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_managers_1_1_article_manager.html", null ],
       [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Managers.ImageManager", "d7/d17/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_managers_1_1_image_manager.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.Managers.GenericConfigManager", "df/d79/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_managers_1_1_generic_config_manager.html", null ],
       [ "ZKWeb.Plugins.Common.Currency.src.Managers.CurrencyManager", "d4/d4a/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_managers_1_1_currency_manager.html", null ],
       [ "ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator", "d4/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator.html", null ],
       [ "ZKWeb.Plugins.Common.GenericClass.src.Manager.GenericClassManager", "de/d88/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_manager_1_1_generic_class_manager.html", null ],
@@ -304,10 +305,20 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Region.src.Controllers.ApiController", "df/dc7/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Common.UserPanel.src.Controllers.ApiController", "dc/d15/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Finance.Payment.src.Controllers.PaymentController", "de/dfb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_controllers_1_1_payment_controller.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Controllers.ApiController", "de/d4a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Order.src.Controllers.CartController", "d4/dde/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_controllers_1_1_cart_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Order.src.Controllers.OrderController", "df/d08/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_controllers_1_1_order_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Controllers.ApiController", "de/d69/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers_1_1_api_controller.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Controllers.ProductController", "d2/d5b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_controllers_1_1_product_controller.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Model.ICrudPageBuilder", "d8/db2/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.CrudPageBuilder< TData >", "db/d46/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_crud_page_builder.html", [
+        [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminAppBuilder< TData >", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", null ],
+        [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.CrudMenuPageBuilder< TData >", "d7/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_crud_menu_page_builder.html", [
+          [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsCrudPageBuilder< TData >", "d8/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_crud_page_builder.html", null ],
+          [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelCrudPageBuilder< TData >", "dc/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_crud_page_builder.html", null ]
+        ] ]
+      ] ]
     ] ],
     [ "ZKWeb.Plugins.Common.Currency.src.Model.ICurrency", "d4/d46/interface_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_model_1_1_i_currency.html", [
       [ "ZKWeb.Plugins.Common.Currency.src.Currencies.CHF", "dd/d72/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_currencies_1_1_c_h_f.html", null ],
@@ -380,10 +391,11 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Base.src.FormFieldValidators.StringLength", "d1/d10/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_form_field_validators_1_1_string_length.html", null ]
     ] ],
     [ "IHttpRequestHandler", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.Controllers.StaticHandler", "dc/db0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers_1_1_static_handler.html", null ]
+      [ "ZKWeb.Plugins.Common.Base.src.HttpRequestHandlers.StaticHandler", "df/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_static_handler.html", null ],
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.HttpRequestHandlers.PesudoStaticHandler", "dd/d8e/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_http_request_handlers_1_1_pesudo_static_handler.html", null ]
     ] ],
     [ "IHttpRequestPreHandler", null, [
-      [ "ZKWeb.Plugins.Common.Base.src.Controllers.LocaleHandler", "de/d57/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_controllers_1_1_locale_handler.html", null ]
+      [ "ZKWeb.Plugins.Common.Base.src.HttpRequestHandlers.LocaleHandler", "de/db6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_http_request_handlers_1_1_locale_handler.html", null ]
     ] ],
     [ "ILanguage", null, [
       [ "ZKWeb.Plugins.Common.Base.src.Languages.Arabic", "d8/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_arabic.html", null ],
@@ -403,10 +415,6 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Base.src.Languages.TraditionalChinese", "d8/da1/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_traditional_chinese.html", null ]
     ] ],
     [ "ILiquidizable", null, [
-      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminApp", "d1/d2c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app.html", [
-        [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminApps.AdminSettingsApp", "d7/df4/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_apps_1_1_admin_settings_app.html", null ],
-        [ "ZKWeb.Plugins.UnitTest.WebTester.src.AdminApps.WebTesterApp", "d5/db2/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_admin_apps_1_1_web_tester_app.html", null ]
-      ] ],
       [ "ZKWeb.Plugins.Common.Base.src.Model.BaseTableSearchResponse", "d8/d4b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_base_table_search_response.html", [
         [ "ZKWeb.Plugins.Common.Base.src.Model.AjaxTableSearchResponse", "d0/dad/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_ajax_table_search_response.html", null ],
         [ "ZKWeb.Plugins.Common.Base.src.Model.StaticTableSearchResponse", "d0/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_static_table_search_response.html", null ]
@@ -422,34 +430,39 @@ var hierarchy =
         [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabFormBuilder", "d3/d0c/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_form_builder.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.ModelFormBuilder", "de/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_model_form_builder.html", [
-        [ "ZKWeb.Plugins.CMS.Article.src.GenericFormsForAdminSettings.ArticleListSettingsForm.Form", "d0/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_bd54eab71eed19094a9cd1209a2dc03d.html", null ],
+        [ "ZKWeb.Plugins.CMS.Article.src.AdminSettingsPages.ArticleListSettingsForm.Form", "d9/d12/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_admin_settings_pages_1_1_article_list_settings_form_1_1_form.html", null ],
         [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Scaffolding.ImageBrowserBuilder.Form", "dc/d59/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Common.Admin.src.Forms.AdminLoginForm", "dc/de4/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_admin_login_form.html", null ],
         [ "ZKWeb.Plugins.Common.Admin.src.Forms.UserLoginForm", "d4/dc5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_user_login_form.html", null ],
         [ "ZKWeb.Plugins.Common.Admin.src.Forms.UserRegForm", "da/d89/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_user_reg_form.html", null ],
-        [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.LocaleSettingsForm.Form", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html", null ],
-        [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.WebsiteSettingsForm.Form", "d2/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settid552f3020d5645c169a7d5c3538d8122.html", null ],
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminSettingsPages.LocaleSettingsForm.Form", "db/d50/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_settings_pages_1_1_locale_settings_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminSettingsPages.WebsiteSettingsForm.Form", "db/d7f/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_settings_pages_1_1_website_settings_form_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.DataEditFormBuilder< TData, TForm >", "d1/db0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_data_edit_form_builder.html", [
+          [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.UserOwnedDataEditFormBuilder< TData, TForm >", "df/df6/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_user_owned_data_edit_form_builder.html", [
+            [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.TabUserOwnedDataEditFormBuilder< TData, TForm >", "dd/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_tab_user_owned_data_edit_form_builder.html", null ]
+          ] ],
           [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< TData, TForm >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", null ]
         ] ],
         [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabModelFormBuilder", "d7/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_model_form_builder.html", [
           [ "ZKWeb.Plugins.Common.Admin.src.Forms.AdminAboutMeForm", "da/d7c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_forms_1_1_admin_about_me_form.html", null ]
         ] ],
-        [ "ZKWeb.Plugins.Common.Currency.src.GenericFormsForAdminSettings.CurrencySettingsForm.Form", "d6/dd3/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_generic_forms_for_admin_settings_1_9c98e35a1590d28197bdc3bf6279931c.html", null ],
+        [ "ZKWeb.Plugins.Common.Currency.src.AdminSettingsPages.CurrencySettingsForm.Form", "de/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_admin_settings_pages_1_1_currency_settings_form_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Common.CustomTranslate.src.Scaffolding.CustomTranslator.Form", "d3/de2/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_scaffolding_1_1_custom_translator_1_1_form.html", null ],
-        [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.GenericFormsForAdminSettings.LanguageSwitcherSettingsForm.Form", "d2/d0d/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se69ac9c23bc536b5340907396bd393d1e.html", null ],
-        [ "ZKWeb.Plugins.Common.Region.src.GenericFormsForAdminSettings.RegionSettingsForm.Form", "d2/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_generic_forms_for_admin_settings_1_1_region_settings_form_1_1_form.html", null ],
-        [ "ZKWeb.Plugins.Common.UserContact.src.GenericFormsForUserPanel.ContactInfoForm.Form", "d2/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel_1_1_contact_info_form_1_1_form.html", null ],
-        [ "ZKWeb.Plugins.Common.UserPanel.src.GenericFormsForUserPanel.ChangeAvatarForm.Form", "d7/d27/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_avatar_form_1_1_form.html", null ],
-        [ "ZKWeb.Plugins.Common.UserPanel.src.GenericFormsForUserPanel.ChangePasswordForm.Form", "db/d0e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_password_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.AdminSettingsPages.LanguageSwitcherSettingsForm.Form", "de/dcc/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_l43fe428b669bc22f70400250eac6b2b2.html", null ],
+        [ "ZKWeb.Plugins.Common.PesudoStatic.src.AdminSettingsPages.PesudoStaticSettingsForm.Form", "d0/d4a/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_admin_settings_pages_1_1_pesudo_static_settings_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.Region.src.AdminSettingsPages.RegionSettingsForm.Form", "d5/d55/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_admin_settings_pages_1_1_region_settings_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.UserContact.src.UserPanelPages.ContactInfoForm.Form", "dc/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_user_panel_pages_1_1_contact_info_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.UserPanel.src.UserPanelPages.ChangeAvatarForm.Form", "d2/de2/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_avatar_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Common.UserPanel.src.UserPanelPages.ChangePasswordForm.Form", "d6/da0/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_password_form_1_1_form.html", null ],
         [ "ZKWeb.Plugins.Finance.Payment.src.AdminApps.PaymentApiManageApp.SelectTypeForAddForm", "d3/deb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form.html", null ],
         [ "ZKWeb.Plugins.Finance.Payment.src.Forms.TestPaymentForm", "d1/d92/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_forms_1_1_test_payment_form.html", null ],
         [ "ZKWeb.Plugins.Finance.Payment.src.PaymentApiHandlers.TestApiHandler.TestApiPayForm", "d8/d4e/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_test_api_pay_form.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Order.src.GenericFormsForAdminSettings.OrderSettingsForm.Form", "d4/d43/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form_1_1_form.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductAlbumSettingsForm.Form", "da/dfc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1c754364b8dcf191aa9c156ed6753b052.html", null ],
-        [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductListSettingsForm.Form", "d7/dfb/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_17a84cb9a7a828aa22301c405be4591a9.html", null ]
+        [ "ZKWeb.Plugins.Shopping.Order.src.AdminSettingsPages.OrderSettingsForm.Form", "d1/d9e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_settings_pages_1_1_order_settings_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Product.src.AdminSettingsPages.ProductAlbumSettingsForm.Form", "d6/dd6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_album_settings_form_1_1_form.html", null ],
+        [ "ZKWeb.Plugins.Shopping.Product.src.AdminSettingsPages.ProductListSettingsForm.Form", "d5/d48/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form_1_1_form.html", null ]
       ] ],
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Config.LanguageSwitcherSettings", "dc/dd7/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_config_1_1_language_switcher_settings.html", null ],
+      [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderProductDisplayInfo", "d2/d69/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_product_display_info.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductCategory", "dd/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_category.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductProperty", "d4/d55/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property.html", null ],
       [ "ZKWeb.Plugins.Shopping.Product.src.Database.ProductPropertyValue", "da/de4/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_property_value.html", null ],
@@ -486,27 +499,42 @@ var hierarchy =
       [ "ZKWeb.Plugins.Shopping.Logistics.src.LogisticsTypes.Express", "dc/d70/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_logistics_types_1_1_express.html", null ],
       [ "ZKWeb.Plugins.Shopping.Logistics.src.LogisticsTypes.SurfaceMail", "da/d45/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_logistics_types_1_1_surface_mail.html", null ]
     ] ],
-    [ "ZKWeb.Plugins.Common.MenuPageBase.src.Model.IMenuProvider", "df/d6c/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_model_1_1_i_menu_provider.html", [
+    [ "ZKWeb.Plugins.Common.MenuPage.src.Model.IMenuProvider", "d6/d45/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_model_1_1_i_menu_provider.html", [
       [ "ZKWeb.Plugins.Common.AdminSettings.src.Model.IAdminSettingsMenuProvider", "da/d00/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_model_1_1_i_admin_settings_menu_provider.html", [
-        [ "GenericFormForAdminSettings", "d2/d16/class_generic_form_for_admin_settings.html", [
-          [ "ZKWeb.Plugins.CMS.Article.src.GenericFormsForAdminSettings.ArticleListSettingsForm", "d4/d16/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_generic_forms_for_admin_settings_1_1_article_list_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.LocaleSettingsForm", "d8/d91/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settings_1_1_locale_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Common.AdminSettings.src.GenericFormsForAdminSettings.WebsiteSettingsForm", "dc/dd6/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_settings_1_1_website_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Common.Currency.src.GenericFormsForAdminSettings.CurrencySettingsForm", "db/d80/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_generic_forms_for_admin_settings_1_1_currency_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.GenericFormsForAdminSettings.LanguageSwitcherSettingsForm", "da/d13/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_generic_forms_for_admin_se2f7872d2e6ef3a4b2e3ddcbe059f6bd9.html", null ],
-          [ "ZKWeb.Plugins.Common.Region.src.GenericFormsForAdminSettings.RegionSettingsForm", "db/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_generic_forms_for_admin_settings_1_1_region_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Shopping.Order.src.GenericFormsForAdminSettings.OrderSettingsForm", "d6/d72/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_generic_forms_for_admin_settings_1_1_order_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductAlbumSettingsForm", "d8/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_album_settings_form.html", null ],
-          [ "ZKWeb.Plugins.Shopping.Product.src.GenericFormsForAdminSettings.ProductListSettingsForm", "d7/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_generic_forms_for_admin_settings_1_1_product_list_settings_form.html", null ]
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsCrudPageBuilder< TData >", "d8/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_crud_page_builder.html", null ],
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsFormPageBuilder", "d8/dcf/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_form_page_builder.html", [
+          [ "ZKWeb.Plugins.CMS.Article.src.AdminSettingsPages.ArticleListSettingsForm", "d5/d90/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_admin_settings_pages_1_1_article_list_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminSettingsPages.LocaleSettingsForm", "d8/d80/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_settings_pages_1_1_locale_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.AdminSettings.src.AdminSettingsPages.WebsiteSettingsForm", "d7/d6c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_admin_settings_pages_1_1_website_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.Currency.src.AdminSettingsPages.CurrencySettingsForm", "d8/df7/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_admin_settings_pages_1_1_currency_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.AdminSettingsPages.LanguageSwitcherSettingsForm", "de/ddf/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_admin_settings_pages_1_1_language_switcher_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.PesudoStatic.src.AdminSettingsPages.PesudoStaticSettingsForm", "d1/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_admin_settings_pages_1_1_pesudo_static_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Common.Region.src.AdminSettingsPages.RegionSettingsForm", "de/d68/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_admin_settings_pages_1_1_region_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Shopping.Order.src.AdminSettingsPages.OrderSettingsForm", "d6/d70/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_admin_settings_pages_1_1_order_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Shopping.Product.src.AdminSettingsPages.ProductAlbumSettingsForm", "de/da7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_album_settings_form.html", null ],
+          [ "ZKWeb.Plugins.Shopping.Product.src.AdminSettingsPages.ProductListSettingsForm", "d0/d3d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form.html", null ]
         ] ],
-        [ "GenericListForAdminSettings< TData, TPage >", "df/da7/class_generic_list_for_admin_settings.html", null ]
+        [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsSimplePageBuilder", "df/d35/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_simple_page_builder.html", null ]
+      ] ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Model.IMenuPage", "da/d8b/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_model_1_1_i_menu_page.html", [
+        [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.CrudMenuPageBuilder< TData >", "d7/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_crud_menu_page_builder.html", null ],
+        [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.SimpleMenuPageBuilder", "df/dbb/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_simple_menu_page_builder.html", [
+          [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsSimplePageBuilder", "df/d35/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_simple_page_builder.html", null ],
+          [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.FormMenuPageBuilder", "d0/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_form_menu_page_builder.html", [
+            [ "ZKWeb.Plugins.Common.AdminSettings.src.Scaffolding.AdminSettingsFormPageBuilder", "d8/dcf/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_scaffolding_1_1_admin_settings_form_page_builder.html", null ],
+            [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelFormPageBuilder", "de/dc2/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_form_page_builder.html", [
+              [ "ZKWeb.Plugins.Common.UserContact.src.UserPanelPages.ContactInfoForm", "d6/d86/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_user_panel_pages_1_1_contact_info_form.html", null ],
+              [ "ZKWeb.Plugins.Common.UserPanel.src.UserPanelPages.ChangeAvatarForm", "db/db1/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_avatar_form.html", null ],
+              [ "ZKWeb.Plugins.Common.UserPanel.src.UserPanelPages.ChangePasswordForm", "dc/d8f/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_password_form.html", null ]
+            ] ]
+          ] ],
+          [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelSimplePageBuilder", "d3/d7e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_simple_page_builder.html", null ]
+        ] ]
       ] ],
       [ "ZKWeb.Plugins.Common.UserPanel.src.Model.IUserPanelMenuProvider", "d5/de1/interface_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_model_1_1_i_user_panel_menu_provider.html", [
-        [ "GenericFormForUserPanel", "d7/d7e/class_generic_form_for_user_panel.html", [
-          [ "ZKWeb.Plugins.Common.UserContact.src.GenericFormsForUserPanel.ContactInfoForm", "df/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel_1_1_contact_info_form.html", null ],
-          [ "ZKWeb.Plugins.Common.UserPanel.src.GenericFormsForUserPanel.ChangeAvatarForm", "d1/d90/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_avatar_form.html", null ],
-          [ "ZKWeb.Plugins.Common.UserPanel.src.GenericFormsForUserPanel.ChangePasswordForm", "db/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_generic_forms_for_user_panel_1_1_change_password_form.html", null ]
-        ] ],
+        [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelCrudPageBuilder< TData >", "dc/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_crud_page_builder.html", null ],
+        [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelFormPageBuilder", "de/dc2/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_form_page_builder.html", null ],
+        [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelSimplePageBuilder", "d3/d7e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_simple_page_builder.html", null ],
         [ "ZKWeb.Plugins.Common.UserPanel.src.UserPanelMenuProviders.UserPanelIndex", "d0/d1d/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_menu_providers_1_1_user_panel_index.html", null ]
       ] ]
     ] ],
@@ -546,16 +574,9 @@ var hierarchy =
         [ "ZKWeb.Plugins.CMS.Article.src.ImageBrowsers.ArticleImageBrowser", "d1/d72/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_image_browsers_1_1_article_image_browser.html", null ],
         [ "ZKWeb.Plugins.Shopping.Product.src.ImageBrowsers.ProductImageBrowser", "da/d77/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_image_browsers_1_1_product_image_browser.html", null ]
       ] ],
-      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminApp", "d1/d2c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Scaffolding.GenericPageForMenuPage", "da/d1b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_page_for_menu_page.html", [
-        [ "ZKWeb.Plugins.Common.MenuPageBase.src.Scaffolding.GenericFormForMenuPage", "d9/d92/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_form_for_menu_page.html", [
-          [ "GenericFormForAdminSettings", "d2/d16/class_generic_form_for_admin_settings.html", null ],
-          [ "GenericFormForUserPanel", "d7/d7e/class_generic_form_for_user_panel.html", null ]
-        ] ],
-        [ "ZKWeb.Plugins.Common.MenuPageBase.src.Scaffolding.GenericListForMenuPage< TData, TPage >", "d9/db8/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_list_for_menu_page.html", [
-          [ "GenericListForAdminSettings< TData, TPage >", "df/da7/class_generic_list_for_admin_settings.html", null ]
-        ] ]
-      ] ]
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.CrudPageBuilder< TData >", "db/d46/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_crud_page_builder.html", null ],
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.SimpleAdminAppBuilder", "d3/dbc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_simple_admin_app_builder.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.SimpleMenuPageBuilder", "df/dbb/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_simple_menu_page_builder.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Model.IProductMatchedDataMatcher", "d7/de4/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_matched_data_matcher.html", [
       [ "ZKWeb.Plugins.Shopping.Product.src.ProductMatchedDataMatchers.OrderCountMatcher", "d3/d94/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_order_count_matcher.html", null ],
@@ -604,6 +625,9 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.Base.src.Model.IStaticTableCallbackExtension< TData, TCallback >", "d7/da0/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_static_table_callback_extension.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.IStaticTableCallbackExtensions", "d8/de0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_i_static_table_callback_extensions.html", null ],
+    [ "ITestEventHandler", null, [
+      [ "ZKWeb.Plugins.UnitTest.WebTester.src.UnitTestEventHandlers.UnitTestWebEventHandler", "d7/db7/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_unit_test_event_handlers_1_1_unit_test_web_event_handler.html", null ]
+    ] ],
     [ "ITranslateProvider", null, [
       [ "ZKWeb.Plugins.CMS.Article.src.Translates.ja_JP", "df/da4/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_translates_1_1ja___j_p.html", null ],
       [ "ZKWeb.Plugins.CMS.Article.src.Translates.ko_KR", "d1/d4b/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_article_1_1src_1_1_translates_1_1ko___k_r.html", null ],
@@ -659,10 +683,14 @@ var hierarchy =
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Translates.ko_KR", "d6/df4/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_translates_1_1ko___k_r.html", null ],
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Translates.zh_CN", "d2/dd3/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_translates_1_1zh___c_n.html", null ],
       [ "ZKWeb.Plugins.Common.LanguageSwitcher.src.Translates.zh_TW", "de/d23/class_z_k_web_1_1_plugins_1_1_common_1_1_language_switcher_1_1src_1_1_translates_1_1zh___t_w.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Translates.ja_JP", "d4/dac/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_translates_1_1ja___j_p.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Translates.ko_KR", "d1/d3c/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_translates_1_1ko___k_r.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Translates.zh_CN", "dd/d28/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_translates_1_1zh___c_n.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Translates.zh_TW", "d1/d5d/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_translates_1_1zh___t_w.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Translates.ja_JP", "d6/d49/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_translates_1_1ja___j_p.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Translates.ko_KR", "dc/d1f/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_translates_1_1ko___k_r.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Translates.zh_CN", "d7/dad/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_translates_1_1zh___c_n.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Translates.zh_TW", "da/da7/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_translates_1_1zh___t_w.html", null ],
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.Translates.ja_JP", "d8/dc8/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_translates_1_1ja___j_p.html", null ],
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.Translates.ko_KR", "d7/d34/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_translates_1_1ko___k_r.html", null ],
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.Translates.zh_CN", "db/d85/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_translates_1_1zh___c_n.html", null ],
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.Translates.zh_TW", "d3/d26/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_translates_1_1zh___t_w.html", null ],
       [ "ZKWeb.Plugins.Common.Region.src.Translates.en_US", "dc/de5/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_translates_1_1en___u_s.html", null ],
       [ "ZKWeb.Plugins.Common.Region.src.Translates.ja_JP", "d3/df9/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_translates_1_1ja___j_p.html", null ],
       [ "ZKWeb.Plugins.Common.Region.src.Translates.ko_KR", "d3/dcd/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_translates_1_1ko___k_r.html", null ],
@@ -708,20 +736,23 @@ var hierarchy =
       [ "ZKWeb.Plugins.UnitTest.WebTester.src.Translates.zh_CN", "d9/d16/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_translates_1_1zh___c_n.html", null ],
       [ "ZKWeb.Plugins.UnitTest.WebTester.src.Translates.zh_TW", "dc/dcf/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_translates_1_1zh___t_w.html", null ]
     ] ],
-    [ "IUnitTestEventHandler", null, [
-      [ "ZKWeb.Plugins.UnitTest.WebTester.src.UnitTestEventHandlers.UnitTestWebEventHandler", "d7/db7/class_z_k_web_1_1_plugins_1_1_unit_test_1_1_web_tester_1_1src_1_1_unit_test_event_handlers_1_1_unit_test_web_event_handler.html", null ]
+    [ "ZKWeb.Plugins.Common.Base.src.Model.IUrlFilter", "d1/d03/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_url_filter.html", [
+      [ "ZKWeb.Plugins.Common.PesudoStatic.src.UrlFilters.PesudoStaticUrlFilter", "d5/d86/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_url_filters_1_1_pesudo_static_url_filter.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Model.IUserLoginCallback", "dc/de1/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_user_login_callback.html", null ],
     [ "IWebsiteStartHandler", null, [
       [ "ZKWeb.Plugins.CMS.ImageBrowser.src.Scaffolding.ImageBrowserBuilder", "d4/d27/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder.html", null ],
-      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.AdminApp", "d1/d2c/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app.html", null ],
-      [ "ZKWeb.Plugins.Common.MenuPageBase.src.Scaffolding.GenericPageForMenuPage", "da/d1b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_scaffolding_1_1_generic_page_for_menu_page.html", null ]
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.CrudPageBuilder< TData >", "db/d46/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_crud_page_builder.html", null ],
+      [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.SimpleAdminAppBuilder", "d3/dbc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_simple_admin_app_builder.html", null ],
+      [ "ZKWeb.Plugins.Common.MenuPage.src.Scaffolding.SimpleMenuPageBuilder", "df/dbb/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_simple_menu_page_builder.html", null ]
     ] ],
     [ "ZKWeb.Plugins.Common.Base.src.Config.LocaleSettings", "df/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_config_1_1_locale_settings.html", null ],
     [ "ZKWeb.Plugins.Shopping.Logistics.src.Database.Logistics", "d5/d55/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_database_1_1_logistics.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Logistics.src.Manager.LogisticsManager", "df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_manager_1_1_logistics_manager.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.LogoManager", "d8/d73/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_logo_manager.html", null ],
-    [ "ZKWeb.Plugins.Common.Base.src.Extensions.MenuItemsExtensions", "d5/da6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.MenuPage.src.Extensions.MenuItemGroupExtensions", "de/d58/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_extensions_1_1_menu_item_group_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Extensions.MenuItemsExtensions", "df/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
+    [ "ZKWeb.Plugins.Common.Base.src.Extensions.MenuItemsExtensions", "d5/da6/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_menu_items_extensions.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.Order", "da/da0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderComment", "d0/de9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_comment.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderDelivery", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery.html", null ],
@@ -730,7 +761,6 @@ var hierarchy =
     [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderPriceCalcResult", "df/da2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_price_calc_result.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Extensions.OrderPriceCalcResultExtensions", "d8/d51/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_order_price_calc_result_extensions.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProduct", "d9/d4d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product.html", null ],
-    [ "ZKWeb.Plugins.Shopping.Order.src.Model.OrderProductDisplayInfo", "d2/d69/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_order_product_display_info.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.OrderProductToPropertyValue", "d9/ddc/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_product_to_property_value.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Config.OrderSettings", "d5/da0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_config_1_1_order_settings.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Extensions.PaginationExtensions", "d9/de7/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_pagination_extensions.html", null ],
@@ -739,8 +769,11 @@ var hierarchy =
     [ "ZKWeb.Plugins.Finance.Payment.src.Database.PaymentApi", "d4/d70/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_database_1_1_payment_api.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Database.PaymentTransaction", "d7/d6e/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_database_1_1_payment_transaction.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Managers.PaymentTransactionManager", "d1/d3f/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_managers_1_1_payment_transaction_manager.html", null ],
+    [ "ZKWeb.Plugins.Common.PesudoStatic.src.Tests.HttpRequestHandlers.PesudoStaticHandlerTest", "d4/d7f/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_tests_1_1_http_request_handler79972ca056c7c3b7992b4a7812633c25.html", null ],
+    [ "ZKWeb.Plugins.Common.PesudoStatic.src.Config.PesudoStaticSettings", "db/d1e/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_config_1_1_pesudo_static_settings.html", null ],
+    [ "ZKWeb.Plugins.Common.PesudoStatic.src.Tests.UrlFilters.PesudoStaticUrlFilterTest", "dd/d1f/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_tests_1_1_url_filters_1_1_pesudo_static_url_filter_test.html", null ],
     [ "ZKWeb.Plugins.Shopping.Logistics.src.Model.PriceRule", "d9/d8d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_model_1_1_price_rule.html", null ],
-    [ "ZKWeb.Plugins.Common.Admin.src.Managers.PrivilegesChecker", "d3/dcb/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_privileges_checker.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Managers.PrivilegeManager", "d7/dbd/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_privilege_manager.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.PrivilegesTranslator", "d7/d67/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_privileges_translator.html", null ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Database.Product", "dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html", null ],
     [ "ZKWeb.Plugins.Shopping.Product.src.Managers.ProductAlbumManager", "dd/db0/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_album_manager.html", null ],
@@ -772,6 +805,7 @@ var hierarchy =
     [ "ZKWeb.Plugins.Shopping.Product.src.Model.ProductToPropertyValueForMatch", "dc/d0c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_product_to_property_value_for_match.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.TypeTraits.RecyclableTrait", "d4/da2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_type_traits_1_1_recyclable_trait.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Model.Region", "dd/d90/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_model_1_1_region.html", null ],
+    [ "ZKWeb.Plugins.Common.Region.src.Extensions.RegionNodeException", "d1/d96/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_extensions_1_1_region_node_exception.html", null ],
     [ "ZKWeb.Plugins.Common.Region.src.Config.RegionSettings", "da/d25/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_config_1_1_region_settings.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Repositories.RepositoryResolver", "d9/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_repositories_1_1_repository_resolver.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Database.ScheduledTask", "da/dc2/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_database_1_1_scheduled_task.html", null ],
@@ -821,15 +855,20 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.Base.src.Scaffolding.TabDataEditFormBuilder< UserRole, Form >", "dc/dfc/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_tab_data_edit_form_builder.html", [
       [ "ZKWeb.Plugins.Common.Admin.src.AdminApps.RoleManageApp.Form", "d5/d76/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_admin_apps_1_1_role_manage_app_1_1_form.html", null ]
     ] ],
+    [ "ZKWeb.Plugins.Common.Admin.src.Scaffolding.TabUserOwnedDataEditFormBuilder< UserShippingAddress, Form >", "dd/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_tab_user_owned_data_edit_form_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.UserPanelPages.UserShippingAddressManage.Form", "d5/d1a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_user_panel_pages_1_1_user_shipping_address_manage_1_1_form.html", null ]
+    ] ],
     [ "Tag", null, [
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.CopyrightText", "d4/d52/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_copyright_text.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeCssHere", "d8/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_here.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeCssLater", "d3/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_later.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeJsHere", "d5/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_here.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.IncludeJsLater", "d9/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_js_later.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderExtraMetadata", "d8/d2e/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_extra_metadata.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderIncludedCss", "d2/d16/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_css.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderIncludedJs", "de/d24/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_included_js.html", null ],
-      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderMetadata", "d4/ddd/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_metadata.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderMetaDescription", "d3/dad/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_meta_description.html", null ],
+      [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderMetaKeywords", "d1/df5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_meta_keywords.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.RenderTitle", "da/dfb/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_render_title.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UrlPagination", "dc/d8b/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_url_pagination.html", null ],
       [ "ZKWeb.Plugins.Common.Base.src.TemplateTags.UseMetaDescription", "d3/d01/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_use_meta_description.html", null ],
@@ -843,8 +882,16 @@ var hierarchy =
     [ "ZKWeb.Plugins.Common.UserContact.src.Database.UserContact", "d3/db7/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_database_1_1_user_contact.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Database.UserExtensions", "db/ddd/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_database_1_1_user_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Managers.UserManager", "da/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_managers_1_1_user_manager.html", null ],
+    [ "ZKWeb.Plugins.Common.Admin.src.TypeTraits.UserOwnedTrait", "d3/d5a/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_type_traits_1_1_user_owned_trait.html", null ],
+    [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelCrudPageBuilder< Database.Order >", "dc/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.UserPanelPages.OrderManage", "d8/d0f/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_user_panel_pages_1_1_order_manage.html", null ]
+    ] ],
+    [ "ZKWeb.Plugins.Common.UserPanel.src.Scaffolding.UserPanelCrudPageBuilder< UserShippingAddress >", "dc/d42/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_scaffolding_1_1_user_panel_crud_page_builder.html", [
+      [ "ZKWeb.Plugins.Shopping.Order.src.UserPanelPages.UserShippingAddressManage", "d2/de6/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_user_panel_pages_1_1_user_shipping_address_manage.html", null ]
+    ] ],
     [ "ZKWeb.Plugins.Common.Admin.src.Database.UserRole", "d0/d07/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_database_1_1_user_role.html", null ],
     [ "ZKWeb.Plugins.Shopping.Order.src.Database.UserShippingAddress", "d7/dd3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_user_shipping_address.html", null ],
+    [ "ZKWeb.Plugins.Shopping.Order.src.Extensions.UserShippingAddressExtensions", "da/de3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_user_shipping_address_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Admin.src.Model.UserTypesGroup", "d2/da1/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_user_types_group.html", null ],
     [ "ZKWeb.Plugins.Finance.Payment.src.Extensions.WebReceiveFundsTransactionExtensions", "d7/d98/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_web_receive_funds_transaction_extensions.html", null ],
     [ "ZKWeb.Plugins.Common.Base.src.Config.WebsiteSettings", "d5/da0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_config_1_1_website_settings.html", null ],

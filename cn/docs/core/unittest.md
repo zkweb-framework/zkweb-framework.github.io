@@ -10,7 +10,7 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/>
 添加`Example\src\Tests\ExampleTest.cs`，内容如下<br/>
 使用`Assert`类测试条件是否成立，如果测试失败会抛出`AssertException`。<br/>
 ``` csharp
-[UnitTest]
+[Tests]
 class ExampleTest {
 	public void MethodA() {
 		Assert.IsTrue(1 == 1);
@@ -32,16 +32,16 @@ class ExampleTest {
 ### <h2>在测试中模拟Http上下文</h2>
 
 在测试部分功能时，有时需要模拟Http上下文，<br/>
-可以使用`HttpContextUtils.OverrideContext`函数重载当前的上下文。<br/>
+可以使用`HttpManager.OverrideContext`函数重载当前的上下文。<br/>
 在`ExampleTest`类中添加以下函数<br/>
 ``` csharp
 public void MethodB() {
-	using (HttpContextUtils.OverrideContext("/?a=1", "POST")) {
-		var request = (HttpRequestMock)HttpContextUtils.CurrentContext.Request;
-		request.userHostAddress = "192.168.168.168";
+	using (HttpManager.OverrideContext("/?a=1", "POST")) {
+		var request = (HttpRequestMock)HttpManager.CurrentContext.Request;
+		request.remoteIpAddress = IPAddress.Parse("192.168.168.168");
 
 		Assert.Equals(request.Get<string>("a"), "1");
-		Assert.Equals(request.UserHostAddress, "192.168.168.168");
+		Assert.Equals(request.RemoteIpAddress, IPAddress.Parse("192.168.168.168"));
 	}
 }
 ```
@@ -70,8 +70,8 @@ public void MethodC() {
 临时数据库使用了sqlite + 临时文件，结束后会自动删除该文件。<br/>
 如果需要查看临时数据库的内容，可以在using结束之前下一个断点，然后用数据库浏览器打开临时文件夹下的数据库文件。<br/>
 ``` csharp
-var unitTestManager = Application.Ioc.Resolve<UnitTestManager>();
-using (unitTestManager.UseTemporaryDatabase()) {
+var testManager = Application.Ioc.Resolve<TestManager>();
+using (TestManager.UseTemporaryDatabase()) {
 	// 数据库操作代码
 }
 ```

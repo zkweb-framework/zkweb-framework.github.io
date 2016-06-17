@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['iadminappbuilder',['IAdminAppBuilder',['../d4/d4a/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app_builder.html',1,'ZKWeb::Plugins::Common::Admin::src::Model']]],
+  ['iadminapp',['IAdminApp',['../d8/d5b/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_admin_app.html',1,'ZKWeb::Plugins::Common::Admin::src::Model']]],
+  ['iadminappextensions',['IAdminAppExtensions',['../dc/d35/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_i_admin_app_extensions.html',1,'ZKWeb::Plugins::Common::Admin::src::Extensions']]],
   ['iadminsettingsmenuprovider',['IAdminSettingsMenuProvider',['../da/d00/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_model_1_1_i_admin_settings_menu_provider.html',1,'ZKWeb::Plugins::Common::AdminSettings::src::Model']]],
   ['iajaxtablecallback',['IAjaxTableCallback',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallback_3c_20database_2earticle_20_3e',['IAjaxTableCallback&lt; Database.Article &gt;',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
@@ -15,9 +16,11 @@ var searchData=
   ['iajaxtablecallback_3c_20tdata_20_3e',['IAjaxTableCallback&lt; TData &gt;',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallback_3c_20user_20_3e',['IAjaxTableCallback&lt; User &gt;',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallback_3c_20userrole_20_3e',['IAjaxTableCallback&lt; UserRole &gt;',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
+  ['iajaxtablecallback_3c_20usershippingaddress_20_3e',['IAjaxTableCallback&lt; UserShippingAddress &gt;',['../da/d66/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallbackextension',['IAjaxTableCallbackExtension',['../d1/daf/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback_extension.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallbackextension_3c_20user_2c_20usermanageapp_2etablecallback_20_3e',['IAjaxTableCallbackExtension&lt; User, UserManageApp.TableCallback &gt;',['../d1/daf/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_ajax_table_callback_extension.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iajaxtablecallbackextensions',['IAjaxTableCallbackExtensions',['../d3/dfe/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_i_ajax_table_callback_extensions.html',1,'ZKWeb::Plugins::Common::Base::src::Extensions']]],
+  ['icrudpagebuilder',['ICrudPageBuilder',['../d8/db2/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_crud_page_builder.html',1,'ZKWeb::Plugins::Common::Admin::src::Model']]],
   ['icurrency',['ICurrency',['../d4/d46/interface_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_model_1_1_i_currency.html',1,'ZKWeb::Plugins::Common::Currency::src::Model']]],
   ['icurrencyextensions',['ICurrencyExtensions',['../d9/d71/class_z_k_web_1_1_plugins_1_1_common_1_1_currency_1_1src_1_1_model_1_1_i_currency_extensions.html',1,'ZKWeb::Plugins::Common::Currency::src::Model']]],
   ['idataeditformextension',['IDataEditFormExtension',['../de/d61/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_data_edit_form_extension.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
@@ -32,7 +35,8 @@ var searchData=
   ['ilogisticstype',['ILogisticsType',['../d2/db7/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_model_1_1_i_logistics_type.html',1,'ZKWeb::Plugins::Shopping::Logistics::src::Model']]],
   ['imagebrowserbuilder',['ImageBrowserBuilder',['../d4/d27/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_scaffolding_1_1_image_browser_builder.html',1,'ZKWeb::Plugins::CMS::ImageBrowser::src::Scaffolding']]],
   ['imagemanager',['ImageManager',['../d7/d17/class_z_k_web_1_1_plugins_1_1_c_m_s_1_1_image_browser_1_1src_1_1_managers_1_1_image_manager.html',1,'ZKWeb::Plugins::CMS::ImageBrowser::src::Managers']]],
-  ['imenuprovider',['IMenuProvider',['../df/d6c/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_base_1_1src_1_1_model_1_1_i_menu_provider.html',1,'ZKWeb::Plugins::Common::MenuPageBase::src::Model']]],
+  ['imenupage',['IMenuPage',['../da/d8b/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_model_1_1_i_menu_page.html',1,'ZKWeb::Plugins::Common::MenuPage::src::Model']]],
+  ['imenuprovider',['IMenuProvider',['../d6/d45/interface_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_model_1_1_i_menu_provider.html',1,'ZKWeb::Plugins::Common::MenuPage::src::Model']]],
   ['imodelformbuilder',['IModelFormBuilder',['../d7/d06/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_model_form_builder.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['includecsshere',['IncludeCssHere',['../d8/da5/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_here.html',1,'ZKWeb::Plugins::Common::Base::src::TemplateTags']]],
   ['includecsslater',['IncludeCssLater',['../d3/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_template_tags_1_1_include_css_later.html',1,'ZKWeb::Plugins::Common::Base::src::TemplateTags']]],
@@ -62,8 +66,9 @@ var searchData=
   ['istatictablecallbackextension',['IStaticTableCallbackExtension',['../d7/da0/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_static_table_callback_extension.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['istatictablecallbackextensions',['IStaticTableCallbackExtensions',['../d8/de0/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_extensions_1_1_i_static_table_callback_extensions.html',1,'ZKWeb::Plugins::Common::Base::src::Extensions']]],
   ['it',['IT',['../d6/d74/class_z_k_web_1_1_plugins_1_1_common_1_1_region_1_1src_1_1_countries_1_1_i_t.html',1,'ZKWeb::Plugins::Common::Region::src::Countries']]],
-  ['italian',['Italian',['../d3/d17/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_italian.html',1,'ZKWeb::Plugins::Common::CustomTranslate::src::CustomTranslators']]],
   ['italian',['Italian',['../da/dd8/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_languages_1_1_italian.html',1,'ZKWeb::Plugins::Common::Base::src::Languages']]],
+  ['italian',['Italian',['../d3/d17/class_z_k_web_1_1_plugins_1_1_common_1_1_custom_translate_1_1src_1_1_custom_translators_1_1_italian.html',1,'ZKWeb::Plugins::Common::CustomTranslate::src::CustomTranslators']]],
+  ['iurlfilter',['IUrlFilter',['../d1/d03/interface_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_i_url_filter.html',1,'ZKWeb::Plugins::Common::Base::src::Model']]],
   ['iuserlogincallback',['IUserLoginCallback',['../dc/de1/interface_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model_1_1_i_user_login_callback.html',1,'ZKWeb::Plugins::Common::Admin::src::Model']]],
   ['iuserpanelmenuprovider',['IUserPanelMenuProvider',['../d5/de1/interface_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_model_1_1_i_user_panel_menu_provider.html',1,'ZKWeb::Plugins::Common::UserPanel::src::Model']]]
 ];

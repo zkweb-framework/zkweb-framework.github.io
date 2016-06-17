@@ -1,7 +1,11 @@
 var NAVTREE =
 [
   [ "ZKWeb References", "index.html", [
-    [ "Extendable .net web framework<br/>", "md_ZKWeb_README.html", null ],
+    [ "Extendable .net web framework", "md_ZKWeb_README.html", null ],
+    [ "0.9.5 Release Note", "md_ZKWeb_ReleaseNotes_ReleaseNote.0.9.5.html", null ],
+    [ "0.9.6 Release Note", "md_ZKWeb_ReleaseNotes_ReleaseNote.0.9.6.html", null ],
+    [ "0.9.7 Release Note", "md_ZKWeb_ReleaseNotes_ReleaseNote.0.9.7.html", null ],
+    [ "0.9.8 Release Note", "md_ZKWeb_ReleaseNotes_ReleaseNote.0.9.8.html", null ],
     [ "包", null, [
       [ "包", "namespaces.html", "namespaces" ],
       [ "包函数", "namespacemembers.html", [
@@ -17,7 +21,6 @@ var NAVTREE =
         [ "全部", "functions.html", "functions_dup" ],
         [ "函数", "functions_func.html", "functions_func" ],
         [ "变量", "functions_vars.html", null ],
-        [ "枚举", "functions_enum.html", null ],
         [ "属性", "functions_prop.html", "functions_prop" ]
       ] ]
     ] ],
@@ -30,12 +33,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d2/dea/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_random_utils_test.html#ab5e0911ef827521fd60c3763e76745c0",
-"d5/d2d/class_z_k_web_1_1_utils_1_1_ioc_container_1_1_container.html#a1eb28f192f049b9869a25bc41f1c2962",
-"d8/d7c/class_z_k_web_1_1_server_1_1_path_manager.html#a5ae18689b35d221d04f2ecd8996ce1cf",
-"db/d2b/class_z_k_web_1_1_templating_1_1_area_support_1_1_template_area.html#adda0c0573f7e5b5224d6804423a0e51d",
-"dd/de0/struct_z_k_web_1_1_cache_1_1_isolated_memory_cache_key.html#aaced4738005a9a4523a9f8fb5cce8caa",
-"functions_prop_c.html"
+"d2/d90/interface_z_k_web_standard_1_1_testing_1_1_events_1_1_i_test_event_handler.html",
+"d5/d2b/class_z_k_web_1_1_tests_1_1_server_1_1_test_directory_layout.html#af4ccaf371953c6f003fcf6b659e9c738",
+"d8/da9/interface_z_k_web_1_1_web_1_1_i_action_result.html",
+"dc/d14/_password_utils_8cs.html",
+"df/d03/class_z_k_web_standard_1_1_ioc_1_1_container.html#a382379b8f0ec7f105dc97dad302e2975",
+"functions_prop_k.html"
 ];
 
 var SYNCONMSG = '点击 关闭 面板同步';

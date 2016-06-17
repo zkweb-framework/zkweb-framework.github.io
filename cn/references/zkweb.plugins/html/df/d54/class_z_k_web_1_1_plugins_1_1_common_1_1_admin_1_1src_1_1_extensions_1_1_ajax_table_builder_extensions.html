@@ -118,14 +118,14 @@ $(document).ready(function(){initNavTree('df/d54/class_z_k_web_1_1_plugins_1_1_c
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
-<tr class="memitem:a3c11a5b57f9bdfb2e9b08b792f993eb3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_builder_extensions.html#a3c11a5b57f9bdfb2e9b08b792f993eb3">StandardSetupForAdminApp&lt; TApp &gt;</a> (this <a class="el" href="../../d1/d55/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_builder.html">AjaxTableBuilder</a> table)</td></tr>
-<tr class="memdesc:a3c11a5b57f9bdfb2e9b08b792f993eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">对后台应用使用的表格构建器进行标准的设置 添加以下菜单项  <a href="#a3c11a5b57f9bdfb2e9b08b792f993eb3">更多...</a><br /></td></tr>
-<tr class="separator:a3c11a5b57f9bdfb2e9b08b792f993eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52994cc364247698b7e214fbb836a7e9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d54/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_builder_extensions.html#a52994cc364247698b7e214fbb836a7e9">StandardSetupForCrudPage&lt; TBuilder &gt;</a> (this <a class="el" href="../../d1/d55/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_builder.html">AjaxTableBuilder</a> table)</td></tr>
+<tr class="memdesc:a52994cc364247698b7e214fbb836a7e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">对增删查改页面使用的表格构建器进行标准的设置 添加以下菜单项  <a href="#a52994cc364247698b7e214fbb836a7e9">更多...</a><br /></td></tr>
+<tr class="separator:a52994cc364247698b7e214fbb836a7e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>Ajax表格构建器的扩展函数 </p>
 </div><h2 class="groupheader">成员函数说明</h2>
-<a class="anchor" id="a3c11a5b57f9bdfb2e9b08b792f993eb3"></a>
+<a class="anchor" id="a52994cc364247698b7e214fbb836a7e9"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -133,7 +133,7 @@ $(document).ready(function(){initNavTree('df/d54/class_z_k_web_1_1_plugins_1_1_c
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableBuilderExtensions.StandardSetupForAdminApp&lt; TApp &gt; </td>
+          <td class="memname">static void ZKWeb.Plugins.Common.Admin.src.Extensions.AjaxTableBuilderExtensions.StandardSetupForCrudPage&lt; TBuilder &gt; </td>
           <td>(</td>
           <td class="paramtype">this <a class="el" href="../../d1/d55/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_scaffolding_1_1_ajax_table_builder.html">AjaxTableBuilder</a>&#160;</td>
           <td class="paramname"><em>table</em></td><td>)</td>
@@ -147,29 +147,29 @@ $(document).ready(function(){initNavTree('df/d54/class_z_k_web_1_1_plugins_1_1_c
 </table>
 </div><div class="memdoc">
 
-<p>对后台应用使用的表格构建器进行标准的设置 添加以下菜单项 </p>
+<p>对增删查改页面使用的表格构建器进行标准的设置 添加以下菜单项 </p>
 <ul>
 <li>编辑菜单（如果编辑Url不是空）</li>
 <li>添加菜单（如果添加Url不是空） </li>
 </ul>
 <dl class="tparams"><dt>模板参数</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">TApp</td><td></td></tr>
+    <tr><td class="paramname">TBuilder</td><td>构建器的类型</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
-    <tr><td class="paramname">table</td><td></td></tr>
+    <tr><td class="paramname">table</td><td>Ajax表格</td></tr>
   </table>
   </dd>
 </dl>
 <div class="typeconstraint">
 <dl><dt><b>类型限制</b></dt><dd>
 <table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
-<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>IAdminAppBuilder</em></td><td>&#160;</td></tr>
-<tr><td valign="top"><em>TApp</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TBuilder</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TBuilder</em></td><td>&#160;:</td><td valign="top"><em>ICrudPageBuilder</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>TBuilder</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
 </table>
 </dd>
 </dl>

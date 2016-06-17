@@ -9,5 +9,9 @@ var searchData=
   ['container_2ecs',['Container.cs',['../da/dfc/_container_8cs.html',1,'']]],
   ['containertest_2ecs',['ContainerTest.cs',['../da/de6/_container_test_8cs.html',1,'']]],
   ['controllermanager_2ecs',['ControllerManager.cs',['../de/d0f/_controller_manager_8cs.html',1,'']]],
-  ['controllermanagertest_2ecs',['ControllerManagerTest.cs',['../d0/df0/_controller_manager_test_8cs.html',1,'']]]
+  ['controllermanagertest_2ecs',['ControllerManagerTest.cs',['../d0/df0/_controller_manager_test_8cs.html',1,'']]],
+  ['corehttpcontextwrapper_2ecs',['CoreHttpContextWrapper.cs',['../db/d5b/_core_http_context_wrapper_8cs.html',1,'']]],
+  ['corehttppostedfilewrapper_2ecs',['CoreHttpPostedFileWrapper.cs',['../d4/d49/_core_http_posted_file_wrapper_8cs.html',1,'']]],
+  ['corehttprequestwrapper_2ecs',['CoreHttpRequestWrapper.cs',['../d1/d82/_core_http_request_wrapper_8cs.html',1,'']]],
+  ['corehttpresponsewrapper_2ecs',['CoreHttpResponseWrapper.cs',['../d2/d9f/_core_http_response_wrapper_8cs.html',1,'']]]
 ];

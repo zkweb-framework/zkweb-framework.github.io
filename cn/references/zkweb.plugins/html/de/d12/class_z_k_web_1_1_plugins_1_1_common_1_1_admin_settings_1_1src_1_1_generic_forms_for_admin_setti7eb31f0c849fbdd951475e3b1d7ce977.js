@@ -1,8 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977 =
-[
-    [ "OnBind", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html#abafb1b1649986da1af5716ca8f45be0f", null ],
-    [ "OnSubmit", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html#a962ffeb4b696cfd99a2c25a8f534d734", null ],
-    [ "AllowDetectLanguageFromBrowser", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html#a59b31cbe25edaa36f4a13da172517dcf", null ],
-    [ "DefaultLanguage", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html#a1e09faab8fa9b6b128bad8b4bac1d625", null ],
-    [ "DefaultTimezone", "de/d12/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_generic_forms_for_admin_setti7eb31f0c849fbdd951475e3b1d7ce977.html#a9f7c6c7f8502eb464410e561c7c0d8a0", null ]
-];

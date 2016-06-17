@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('dd/dca/class_z_k_web_1_1_database_1_1_
 </div><!--header-->
 <div class="contents">
 
-<p>数据库上下文 这个类用于包装对数据库的操作和触发以下事件 IDataSaveCallback IDataDeleteCallback NHibernate本身支持事件但不适合使用（修改数据需要同时改状态，需要绑定的事件较多等）  
+<p>数据库上下文 这个类用于包装对数据库的操作和触发以下事件  
  <a href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#details">更多...</a></p>
 <div class="dynheader">
 类 ZKWeb.Database.DatabaseContext 继承关系图:</div>
@@ -128,9 +128,9 @@ $(document).ready(function(){initNavTree('dd/dca/class_z_k_web_1_1_database_1_1_
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 成员函数</h2></td></tr>
-<tr class="memitem:a342426bab78f6d80069af99f979de85c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a342426bab78f6d80069af99f979de85c">DatabaseContext</a> (ISessionFactory sessionFactory, IsolationLevel isolationLevel)</td></tr>
-<tr class="memdesc:a342426bab78f6d80069af99f979de85c"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#a342426bab78f6d80069af99f979de85c">更多...</a><br /></td></tr>
-<tr class="separator:a342426bab78f6d80069af99f979de85c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9eb56b0eb1b2b06cffa4d1facf81c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a6a9eb56b0eb1b2b06cffa4d1facf81c4">DatabaseContext</a> (ISessionFactory sessionFactory, IsolationLevel?isolationLevel)</td></tr>
+<tr class="memdesc:a6a9eb56b0eb1b2b06cffa4d1facf81c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#a6a9eb56b0eb1b2b06cffa4d1facf81c4">更多...</a><br /></td></tr>
+<tr class="separator:a6a9eb56b0eb1b2b06cffa4d1facf81c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cc6806beecb9f498c4801e50edc60bb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a2cc6806beecb9f498c4801e50edc60bb">Dispose</a> ()</td></tr>
 <tr class="memdesc:a2cc6806beecb9f498c4801e50edc60bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放创建的数据库会话和事务  <a href="#a2cc6806beecb9f498c4801e50edc60bb">更多...</a><br /></td></tr>
 <tr class="separator:a2cc6806beecb9f498c4801e50edc60bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,22 +156,26 @@ Public 成员函数</h2></td></tr>
 <tr class="memdesc:a18acbce1a633533ddff3872eca1697c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">批量删除 返回删除的数量  <a href="#a18acbce1a633533ddff3872eca1697c5">更多...</a><br /></td></tr>
 <tr class="separator:a18acbce1a633533ddff3872eca1697c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c2eeee307aac08cac81f71864118135"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a0c2eeee307aac08cac81f71864118135">SaveChanges</a> ()</td></tr>
-<tr class="memdesc:a0c2eeee307aac08cac81f71864118135"><td class="mdescLeft">&#160;</td><td class="mdescRight">提交所有修改 如数据库上下文在删除前没有调用此函数则所有修改都不会被提交  <a href="#a0c2eeee307aac08cac81f71864118135">更多...</a><br /></td></tr>
+<tr class="memdesc:a0c2eeee307aac08cac81f71864118135"><td class="mdescLeft">&#160;</td><td class="mdescRight">提交所有修改 如果使用了事务但没有调用此函数，则所有修改都不会被提交  <a href="#a0c2eeee307aac08cac81f71864118135">更多...</a><br /></td></tr>
 <tr class="separator:a0c2eeee307aac08cac81f71864118135"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
-<tr class="memitem:a7974a5fac98dd12ab69247c49dd5d223"><td class="memItemLeft" align="right" valign="top">ISession&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a7974a5fac98dd12ab69247c49dd5d223">Session</a><code> [get]</code></td></tr>
+<tr class="memitem:a7974a5fac98dd12ab69247c49dd5d223"><td class="memItemLeft" align="right" valign="top">ISession&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a7974a5fac98dd12ab69247c49dd5d223">Session</a><code> [get, protected set]</code></td></tr>
 <tr class="memdesc:a7974a5fac98dd12ab69247c49dd5d223"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库会话  <a href="#a7974a5fac98dd12ab69247c49dd5d223">更多...</a><br /></td></tr>
 <tr class="separator:a7974a5fac98dd12ab69247c49dd5d223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099758b3c871a6cf49d9e9af3a4f10c5"><td class="memItemLeft" align="right" valign="top">ITransaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a099758b3c871a6cf49d9e9af3a4f10c5">Transaction</a><code> [get]</code></td></tr>
-<tr class="memdesc:a099758b3c871a6cf49d9e9af3a4f10c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库事务  <a href="#a099758b3c871a6cf49d9e9af3a4f10c5">更多...</a><br /></td></tr>
+<tr class="memitem:a099758b3c871a6cf49d9e9af3a4f10c5"><td class="memItemLeft" align="right" valign="top">ITransaction&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dca/class_z_k_web_1_1_database_1_1_database_context.html#a099758b3c871a6cf49d9e9af3a4f10c5">Transaction</a><code> [get, protected set]</code></td></tr>
+<tr class="memdesc:a099758b3c871a6cf49d9e9af3a4f10c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">数据库事务 等于null时表示没有开启  <a href="#a099758b3c871a6cf49d9e9af3a4f10c5">更多...</a><br /></td></tr>
 <tr class="separator:a099758b3c871a6cf49d9e9af3a4f10c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
-<div class="textblock"><p>数据库上下文 这个类用于包装对数据库的操作和触发以下事件 IDataSaveCallback IDataDeleteCallback NHibernate本身支持事件但不适合使用（修改数据需要同时改状态，需要绑定的事件较多等） </p>
+<div class="textblock"><p>数据库上下文 这个类用于包装对数据库的操作和触发以下事件 </p>
+<ul>
+<li><a class="el" href="../../d4/d45/interface_z_k_web_1_1_database_1_1_i_data_save_callback.html" title="保存数据到数据库时的回调 ">IDataSaveCallback</a></li>
+<li><a class="el" href="../../d0/db7/interface_z_k_web_1_1_database_1_1_i_data_delete_callback.html" title="从数据库删除数据时的处理 ">IDataDeleteCallback</a> NHibernate本身支持事件但不适合使用（修改数据需要同时改状态，需要绑定的事件较多等） </li>
+</ul>
 </div><h2 class="groupheader">构造及析构函数说明</h2>
-<a class="anchor" id="a342426bab78f6d80069af99f979de85c"></a>
+<a class="anchor" id="a6a9eb56b0eb1b2b06cffa4d1facf81c4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -184,7 +188,7 @@ Public 成员函数</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IsolationLevel&#160;</td>
+          <td class="paramtype">IsolationLevel?&#160;</td>
           <td class="paramname"><em>isolationLevel</em>&#160;</td>
         </tr>
         <tr>
@@ -199,7 +203,7 @@ Public 成员函数</h2></td></tr>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">sessionFactory</td><td>数据库会话生成器</td></tr>
-    <tr><td class="paramname">isolationLevel</td><td>事务的隔离等级</td></tr>
+    <tr><td class="paramname">isolationLevel</td><td>事务的隔离等级，等于null时不开启事务</td></tr>
   </table>
   </dd>
 </dl>
@@ -537,7 +541,7 @@ Public 成员函数</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>提交所有修改 如数据库上下文在删除前没有调用此函数则所有修改都不会被提交 </p>
+<p>提交所有修改 如果使用了事务但没有调用此函数，则所有修改都不会被提交 </p>
 
 </div>
 </div>
@@ -612,7 +616,7 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -634,12 +638,12 @@ Public 成员函数</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">protected set</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>数据库事务 </p>
+<p>数据库事务 等于null时表示没有开启 </p>
 
 </div>
 </div>

@@ -593,12 +593,12 @@
           
             <h1>控制器和模板系统</h1>
           
-          <p>ZKWeb使用了独自编写的控制器和模板系统，不依赖于asp.net webform和mvc。<br/>
-在ZKWeb中控制器接口只是一个空接口，自身不拥有状态。<br/>
-获取当前http上下文可以通过<code>HttpContextUtils.CurrentContext</code>，<br/>
-为了更好的支持单元测试，请不要使用<code>HttpContext.Current</code>。<br/></p>
+          <p>ZKWeb使用了独自编写的控制器和模板系统，不依赖于Asp.Net Webform和Mvc。<br/>
+ZKWeb提供了对Http的抽象封装，不依赖于Asp.Net和Asp.Net Core。<br/>
+获取当前Http上下文应该使用<code>HttpManager.CurrentContext</code>。<br/></p>
 <h3 id="_1"><h2>添加控制器</h2></h3>
-<p>添加<code>Example\src\Controllers\ExampleController.cs</code>，内容如下</br>
+<p>控制器接口只是一个空接口，自身不拥有状态。<br/>
+添加<code>Example\src\Controllers\ExampleController.cs</code>，内容如下</br>
 使用<code>Controllers</code>文件夹保存控制器代码是命名习惯，不是必须遵从的。</br></p>
 <div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
 <span class="c1">/// 示例使用的控制器</span>
@@ -716,10 +716,10 @@ http://dotliquidmarkup.org/</br></p>
 </li>
 </ul>
 <h3 id="_7"><h2>获取请求参数</h2></h3>
-<p>使用<code>HttpContextUtils.CurrentContext.Request</code>可以获取到请求对象并获取里面的参数。</br>
+<p>使用<code>HttpManager.CurrentContext.Request</code>可以获取到请求对象并获取里面的参数。</br>
 目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
 获取请求参数的例子: </br></p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
 <span class="kt">var</span> <span class="n">id</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="s">&quot;id&quot;</span><span class="p">);</span> <span class="c1">// a collection combines Form and Request</span>
 <span class="kt">var</span> <span class="n">file</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Files</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
 </pre></div>

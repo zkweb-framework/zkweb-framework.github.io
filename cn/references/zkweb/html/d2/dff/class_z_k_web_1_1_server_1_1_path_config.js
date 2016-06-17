@@ -7,5 +7,6 @@ var class_z_k_web_1_1_server_1_1_path_config =
     [ "LogsDirectory", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#af6cbd8032edef824ae556fe1421df548", null ],
     [ "PluginInfoFilename", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#ac5098d4c955ecfdad8192c3723483a76", null ],
     [ "TemplateDirectoryName", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#a5d4beb02fb248b5de22b17fa00a558d2", null ],
-    [ "WebsiteConfigPath", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#ac31e780db676b7c7ef91ea11c2fc376d", null ]
+    [ "WebsiteConfigPath", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#ac31e780db676b7c7ef91ea11c2fc376d", null ],
+    [ "WebsiteRootDirectory", "d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#a1e4648df7444b06cde991952587fd700", null ]
 ];

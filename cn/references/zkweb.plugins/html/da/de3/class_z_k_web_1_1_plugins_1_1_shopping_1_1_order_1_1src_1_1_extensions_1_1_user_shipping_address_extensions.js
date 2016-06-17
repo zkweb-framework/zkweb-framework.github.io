@@ -1,0 +1,4 @@
+var class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_user_shipping_address_extensions =
+[
+    [ "GenerateSummary", "da/de3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_user_shipping_address_extensions.html#a1b2a42ff48228bb69ff741b2f7df5b02", null ]
+];

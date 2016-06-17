@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['languagekey',['LanguageKey',['../d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils.html#a0a27ec0935156a64aae301e4185128f2',1,'ZKWeb::Utils::Functions::LocaleUtils']]],
-  ['logonuseridentity',['logonUserIdentity',['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#aad880dc89cb65bb2b43896b0bd5cb473',1,'ZKWeb::Utils::Collections::HttpRequestMock']]]
+  ['setcookiedatakeyprefix',['SetCookieDataKeyPrefix',['../d2/d2a/class_z_k_web_standard_1_1_extensions_1_1_i_http_context_extensions.html#a72261869569259d41435e392770b4fe2',1,'ZKWebStandard::Extensions::IHttpContextExtensions']]],
+  ['sqlite',['SQLite',['../d9/d80/class_z_k_web_1_1_database_1_1_database_types.html#a24752f9e7c183e7cdf75d47bcba43e4a',1,'ZKWeb::Database::DatabaseTypes']]]
 ];

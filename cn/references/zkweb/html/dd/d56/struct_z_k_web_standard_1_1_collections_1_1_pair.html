@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>ZKWeb References: ZKWebStandard.Collections.Pair&lt; TFirst, TSecond &gt; 模板类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ZKWeb References
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li><a href="../../pages.html"><span>相关页面</span></a></li>
+      <li><a href="../../namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="../../df/d5c/class_z_k_web_standard_1_1_collections_1_1_pair-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ZKWebStandard.Collections.Pair&lt; TFirst, TSecond &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>对类型 代替Tuple的原因: Tuple是class，创建时消耗较大 代替KeyValuePair的原因: KeyValuePair没有重载GetHashCode，作为词典的键会导致频繁冲突 校验值的生成:  
+ <a href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#details">更多...</a></p>
+<div class="dynheader">
+类 ZKWebStandard.Collections.Pair&lt; TFirst, TSecond &gt; 继承关系图:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.png" usemap="#ZKWebStandard.Collections.Pair_3C_20TFirst_2C_20TSecond_20_3E_map" alt=""/>
+  <map id="ZKWebStandard.Collections.Pair_3C_20TFirst_2C_20TSecond_20_3E_map" name="ZKWebStandard.Collections.Pair&lt; TFirst, TSecond &gt;_map">
+</map>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ad5c06e480a0c6b61fcfb0e493cbe318e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#ad5c06e480a0c6b61fcfb0e493cbe318e">Pair</a> (TFirst first, TSecond second)</td></tr>
+<tr class="memdesc:ad5c06e480a0c6b61fcfb0e493cbe318e"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#ad5c06e480a0c6b61fcfb0e493cbe318e">更多...</a><br /></td></tr>
+<tr class="separator:ad5c06e480a0c6b61fcfb0e493cbe318e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabd725a5dd5f19672792f587ae309fbc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#aabd725a5dd5f19672792f587ae309fbc">Equals</a> (<a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt; TFirst, TSecond &gt; obj)</td></tr>
+<tr class="memdesc:aabd725a5dd5f19672792f587ae309fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较是否相等  <a href="#aabd725a5dd5f19672792f587ae309fbc">更多...</a><br /></td></tr>
+<tr class="separator:aabd725a5dd5f19672792f587ae309fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7b6a29c720998e8a8e2f07fbbb41946"><td class="memItemLeft" align="right" valign="top">override bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#af7b6a29c720998e8a8e2f07fbbb41946">Equals</a> (object obj)</td></tr>
+<tr class="memdesc:af7b6a29c720998e8a8e2f07fbbb41946"><td class="mdescLeft">&#160;</td><td class="mdescRight">比较是否相等  <a href="#af7b6a29c720998e8a8e2f07fbbb41946">更多...</a><br /></td></tr>
+<tr class="separator:af7b6a29c720998e8a8e2f07fbbb41946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1c9f75c0303ea1a6f31367e5853c9e"><td class="memItemLeft" align="right" valign="top">override int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#a3c1c9f75c0303ea1a6f31367e5853c9e">GetHashCode</a> ()</td></tr>
+<tr class="memdesc:a3c1c9f75c0303ea1a6f31367e5853c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取校验值  <a href="#a3c1c9f75c0303ea1a6f31367e5853c9e">更多...</a><br /></td></tr>
+<tr class="separator:a3c1c9f75c0303ea1a6f31367e5853c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:afab9885feed7d0bace5c2495cfa6a3d2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt; TFirst, TSecond &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#afab9885feed7d0bace5c2495cfa6a3d2">Create&lt; TFirst, TSecond &gt;</a> (TFirst first, TSecond second)</td></tr>
+<tr class="memdesc:afab9885feed7d0bace5c2495cfa6a3d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建对  <a href="#afab9885feed7d0bace5c2495cfa6a3d2">更多...</a><br /></td></tr>
+<tr class="separator:afab9885feed7d0bace5c2495cfa6a3d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:aed530bbc5d605e5ad2e5aacb848b1c9d"><td class="memItemLeft" align="right" valign="top">TFirst&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#aed530bbc5d605e5ad2e5aacb848b1c9d">First</a><code> [get]</code></td></tr>
+<tr class="memdesc:aed530bbc5d605e5ad2e5aacb848b1c9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">第一个值  <a href="#aed530bbc5d605e5ad2e5aacb848b1c9d">更多...</a><br /></td></tr>
+<tr class="separator:aed530bbc5d605e5ad2e5aacb848b1c9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc694e9d695261121b5266f31bfee962"><td class="memItemLeft" align="right" valign="top">TSecond&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html#adc694e9d695261121b5266f31bfee962">Second</a><code> [get]</code></td></tr>
+<tr class="memdesc:adc694e9d695261121b5266f31bfee962"><td class="mdescLeft">&#160;</td><td class="mdescRight">第二个值  <a href="#adc694e9d695261121b5266f31bfee962">更多...</a><br /></td></tr>
+<tr class="separator:adc694e9d695261121b5266f31bfee962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>对类型 代替Tuple的原因: Tuple是class，创建时消耗较大 代替KeyValuePair的原因: KeyValuePair没有重载GetHashCode，作为词典的键会导致频繁冲突 校验值的生成: </p>
+<p>对类型的静态函数 </p>
+<ul>
+<li>这个函数生成校验值时使用hash(first) ^ hash(second)</li>
+<li>如果两个值相同可能会导致一直生成相同的校验，使用时应注意避免这种情况 </li>
+</ul>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>第一个值的类型</td></tr>
+    <tr><td class="paramname">TSecond</td><td>第二个值的类型</td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="ad5c06e480a0c6b61fcfb0e493cbe318e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.<a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a> </td>
+          <td>(</td>
+          <td class="paramtype">TFirst&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TSecond&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>第一个值</td></tr>
+    <tr><td class="paramname">second</td><td>第二个值</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="afab9885feed7d0bace5c2495cfa6a3d2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt;TFirst, TSecond&gt; <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.Create&lt; TFirst, TSecond &gt; </td>
+          <td>(</td>
+          <td class="paramtype">TFirst&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TSecond&#160;</td>
+          <td class="paramname"><em>second</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>创建对 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TFirst</td><td>第一个值的类型</td></tr>
+    <tr><td class="paramname">TSecond</td><td>第二个值的类型</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td></td></tr>
+    <tr><td class="paramname">second</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aabd725a5dd5f19672792f587ae309fbc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.Equals </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt; TFirst, TSecond &gt;&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比较是否相等 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>比较的对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="af7b6a29c720998e8a8e2f07fbbb41946"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override bool <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.Equals </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>比较是否相等 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>比较的对象</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3c1c9f75c0303ea1a6f31367e5853c9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override int <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.GetHashCode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取校验值 </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="aed530bbc5d605e5ad2e5aacb848b1c9d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TFirst <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.First</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>第一个值 </p>
+
+</div>
+</div>
+<a class="anchor" id="adc694e9d695261121b5266f31bfee962"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TSecond <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">ZKWebStandard.Collections.Pair</a>&lt; TFirst, TSecond &gt;.Second</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>第二个值 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ZKWeb/ZKWebStandard/Collections/<a class="el" href="../../dd/d56/_pair_8cs.html">Pair.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/d52/namespace_z_k_web_standard.html">ZKWebStandard</a></li><li class="navelem"><a class="el" href="../../df/db4/namespace_z_k_web_standard_1_1_collections.html">Collections</a></li><li class="navelem"><a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

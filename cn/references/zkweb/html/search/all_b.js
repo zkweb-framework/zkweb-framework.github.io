@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['languagekey',['LanguageKey',['../d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils.html#a0a27ec0935156a64aae301e4185128f2',1,'ZKWeb::Utils::Functions::LocaleUtils']]],
-  ['lastrevokeexpires',['LastRevokeExpires',['../d2/dad/class_z_k_web_1_1_utils_1_1_collections_1_1_memory_cache.html#af81425a803ae4a184a2fc1690b2c3c65',1,'ZKWeb::Utils::Collections::MemoryCache']]],
-  ['lazycache',['LazyCache',['../df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache.html',1,'ZKWeb::Utils::Collections']]],
-  ['lazycache',['LazyCache',['../df/d04/class_z_k_web_1_1_utils_1_1_collections_1_1_lazy_cache.html#add0fbf185322a4529376c4a4ebcc6d1f',1,'ZKWeb::Utils::Collections::LazyCache']]],
-  ['lazycache_2ecs',['LazyCache.cs',['../dc/dd6/_lazy_cache_8cs.html',1,'']]],
-  ['lazycachetest',['LazyCacheTest',['../d6/d84/class_z_k_web_1_1_utils_1_1_tests_1_1_collections_1_1_lazy_cache_test.html',1,'ZKWeb::Utils::Tests::Collections']]],
-  ['lazycachetest_2ecs',['LazyCacheTest.cs',['../d2/d7f/_lazy_cache_test_8cs.html',1,'']]],
-  ['localeutils',['LocaleUtils',['../d6/dd6/class_z_k_web_1_1_utils_1_1_functions_1_1_locale_utils.html',1,'ZKWeb::Utils::Functions']]],
-  ['localeutils_2ecs',['LocaleUtils.cs',['../d9/dd9/_locale_utils_8cs.html',1,'']]],
-  ['localeutilstest',['LocaleUtilsTest',['../da/dc7/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_locale_utils_test.html',1,'ZKWeb::Utils::Tests::Functions']]],
-  ['localeutilstest_2ecs',['LocaleUtilsTest.cs',['../d6/ddc/_locale_utils_test_8cs.html',1,'']]],
-  ['log',['Log',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html#a3f4de3a8808ecde55ca2589085c5f2d1',1,'ZKWeb::Logging::LogManager']]],
-  ['logdebug',['LogDebug',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html#a3ea1bd49684742801124a471813c25b0',1,'ZKWeb::Logging::LogManager']]],
-  ['logerror',['LogError',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html#adb68c75e12da9db531cb86db08ffbb44',1,'ZKWeb::Logging::LogManager']]],
-  ['loginfo',['LogInfo',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html#ac46cf2b7d49241e672442ba0a0e361e5',1,'ZKWeb::Logging::LogManager']]],
-  ['logmanager',['LogManager',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html',1,'ZKWeb::Logging']]],
-  ['logmanager_2ecs',['LogManager.cs',['../d8/d30/_log_manager_8cs.html',1,'']]],
-  ['logmanagertest',['LogManagerTest',['../d1/d7f/class_z_k_web_1_1_tests_1_1_logging_1_1_log_manager_test.html',1,'ZKWeb::Tests::Logging']]],
-  ['logmanagertest_2ecs',['LogManagerTest.cs',['../db/db1/_log_manager_test_8cs.html',1,'']]],
-  ['logonuseridentity',['logonUserIdentity',['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#aad880dc89cb65bb2b43896b0bd5cb473',1,'ZKWeb.Utils.Collections.HttpRequestMock.logonUserIdentity()'],['../d3/d84/class_z_k_web_1_1_utils_1_1_collections_1_1_http_request_mock.html#a51bee349a03a4b77dd6dd6d76e14800b',1,'ZKWeb.Utils.Collections.HttpRequestMock.LogonUserIdentity()']]],
-  ['logsdirectory',['LogsDirectory',['../d2/dff/class_z_k_web_1_1_server_1_1_path_config.html#af6cbd8032edef824ae556fe1421df548',1,'ZKWeb::Server::PathConfig']]],
-  ['logtransaction',['LogTransaction',['../dc/d28/class_z_k_web_1_1_logging_1_1_log_manager.html#ae8265582356aff75ee49c6456f285c61',1,'ZKWeb::Logging::LogManager']]]
+  ['key',['Key',['../dd/de0/struct_z_k_web_1_1_cache_1_1_isolated_memory_cache_key.html#a2cf81f09ba0a6f2584a7f9441d067c33',1,'ZKWeb::Cache::IsolatedMemoryCacheKey']]]
 ];

@@ -8,5 +8,6 @@ var class_z_k_web_1_1_cache_1_1_isolated_memory_cache =
     [ "GetOrDefault", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html#a5c3bd9092ad6df9ae9f9a9ed22ff232e", null ],
     [ "Put", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html#ac9fb0eaa239045ade5be861b3f80f221", null ],
     [ "Remove", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html#a8b2ab2bdca96963891046df65eb4d6b2", null ],
+    [ "TryGetValue", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html#a153a533bef47ab19bec7e58b2607a08d", null ],
     [ "IsolationPolicies", "d1/d90/class_z_k_web_1_1_cache_1_1_isolated_memory_cache.html#aa1c7193ccb81c96ca625077f5c39aabe", null ]
 ];

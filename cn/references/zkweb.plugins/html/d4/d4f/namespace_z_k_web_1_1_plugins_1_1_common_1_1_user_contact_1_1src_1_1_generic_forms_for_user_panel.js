@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel =
-[
-    [ "ContactInfoForm", "df/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel_1_1_contact_info_form.html", "df/d9e/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_generic_forms_for_user_panel_1_1_contact_info_form" ]
-];

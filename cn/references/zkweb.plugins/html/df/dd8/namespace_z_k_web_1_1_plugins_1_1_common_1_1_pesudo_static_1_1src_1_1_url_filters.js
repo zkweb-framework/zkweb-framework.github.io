@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_url_filters =
+[
+    [ "PesudoStaticUrlFilter", "d5/d86/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_url_filters_1_1_pesudo_static_url_filter.html", "d5/d86/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_url_filters_1_1_pesudo_static_url_filter" ]
+];

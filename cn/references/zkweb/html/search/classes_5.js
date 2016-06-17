@@ -4,8 +4,8 @@ var searchData=
   ['fetchtest',['FetchTest',['../d4/da8/class_z_k_web_1_1_tests_1_1_templating_1_1_template_tags_1_1_fetch_test.html',1,'ZKWeb::Tests::Templating::TemplateTags']]],
   ['fileresult',['FileResult',['../d0/da9/class_z_k_web_1_1_web_1_1_action_results_1_1_file_result.html',1,'ZKWeb::Web::ActionResults']]],
   ['fileresulttest',['FileResultTest',['../dc/dc3/class_z_k_web_1_1_tests_1_1_web_1_1_action_results_1_1_file_result_test.html',1,'ZKWeb::Tests::Web::ActionResults']]],
-  ['fileutils',['FileUtils',['../da/de3/class_z_k_web_1_1_utils_1_1_functions_1_1_file_utils.html',1,'ZKWeb::Utils::Functions']]],
-  ['fileutilstest',['FileUtilsTest',['../d8/db9/class_z_k_web_1_1_utils_1_1_tests_1_1_functions_1_1_file_utils_test.html',1,'ZKWeb::Utils::Tests::Functions']]],
+  ['fileutils',['FileUtils',['../d7/d8f/class_z_k_web_standard_1_1_utils_1_1_file_utils.html',1,'ZKWebStandard::Utils']]],
+  ['fileutilstest',['FileUtilsTest',['../d1/dba/class_z_k_web_standard_1_1_tests_1_1_functions_1_1_file_utils_test.html',1,'ZKWebStandard::Tests::Functions']]],
   ['filters',['Filters',['../d3/d76/class_z_k_web_1_1_templating_1_1_template_filters_1_1_filters.html',1,'ZKWeb::Templating::TemplateFilters']]],
   ['filterstest',['FiltersTest',['../df/d10/class_z_k_web_1_1_tests_1_1_templating_1_1_template_filters_1_1_filters_test.html',1,'ZKWeb::Tests::Templating::TemplateFilters']]]
 ];

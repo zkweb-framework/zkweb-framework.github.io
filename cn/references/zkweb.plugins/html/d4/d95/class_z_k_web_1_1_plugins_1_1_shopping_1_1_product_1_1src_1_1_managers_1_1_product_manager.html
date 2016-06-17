@@ -130,6 +130,9 @@ Public 成员函数</h2></td></tr>
 <tr class="memitem:a0f75c77fc2bdb5a789c23c0b881a0a46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a0f75c77fc2bdb5a789c23c0b881a0a46">ProductManager</a> ()</td></tr>
 <tr class="memdesc:a0f75c77fc2bdb5a789c23c0b881a0a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#a0f75c77fc2bdb5a789c23c0b881a0a46">更多...</a><br /></td></tr>
 <tr class="separator:a0f75c77fc2bdb5a789c23c0b881a0a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae80904e3630b76f4dddaee6e7896bcdd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html">Database.Product</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#ae80904e3630b76f4dddaee6e7896bcdd">GetProduct</a> (long productId)</td></tr>
+<tr class="memdesc:ae80904e3630b76f4dddaee6e7896bcdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取商品 商品不存在时返回null，存在时同时获取关联的数据 结果会按商品Id缓存一定时间  <a href="#ae80904e3630b76f4dddaee6e7896bcdd">更多...</a><br /></td></tr>
+<tr class="separator:ae80904e3630b76f4dddaee6e7896bcdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9420a73148653a8b0cb5ca1309d9b1c"><td class="memItemLeft" align="right" valign="top">virtual object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#aa9420a73148653a8b0cb5ca1309d9b1c">GetProductApiInfo</a> (long productId)</td></tr>
 <tr class="memdesc:aa9420a73148653a8b0cb5ca1309d9b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取商品信息 商品不存在时返回null，但商品已下架或等待销售时仍然返回信息 结果会按商品Id和当前登录用户缓存一定时间  <a href="#aa9420a73148653a8b0cb5ca1309d9b1c">更多...</a><br /></td></tr>
 <tr class="separator:aa9420a73148653a8b0cb5ca1309d9b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,18 +145,24 @@ Public 成员函数</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 属性</h2></td></tr>
+<tr class="memitem:a25d54c44ea57a94ad30a227c654e02aa"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a25d54c44ea57a94ad30a227c654e02aa">ProductCacheTime</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a25d54c44ea57a94ad30a227c654e02aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品的缓存时间 默认是3秒，可通过网站配置指定  <a href="#a25d54c44ea57a94ad30a227c654e02aa">更多...</a><br /></td></tr>
+<tr class="separator:a25d54c44ea57a94ad30a227c654e02aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25fe5bb3b6ac6f79b940cc9c8a4e231d"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a25fe5bb3b6ac6f79b940cc9c8a4e231d">ProductApiInfoCacheTime</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a25fe5bb3b6ac6f79b940cc9c8a4e231d"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品信息的缓存时间 默认是15秒，可通过网站配置指定  <a href="#a25fe5bb3b6ac6f79b940cc9c8a4e231d">更多...</a><br /></td></tr>
 <tr class="separator:a25fe5bb3b6ac6f79b940cc9c8a4e231d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23fd993dfae309197891a6b18c152eda"><td class="memItemLeft" align="right" valign="top">IsolatedMemoryCache&lt; long, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a23fd993dfae309197891a6b18c152eda">ProductApiInfoCache</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a23fd993dfae309197891a6b18c152eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品信息的缓存  <a href="#a23fd993dfae309197891a6b18c152eda">更多...</a><br /></td></tr>
-<tr class="separator:a23fd993dfae309197891a6b18c152eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df2343c53a8dd1bdc2c9cdda87f4317"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a4df2343c53a8dd1bdc2c9cdda87f4317">ProductSearchResultCacheTime</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a4df2343c53a8dd1bdc2c9cdda87f4317"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品搜索结果的缓存时间 默认是15秒，可通过网站配置指定  <a href="#a4df2343c53a8dd1bdc2c9cdda87f4317">更多...</a><br /></td></tr>
 <tr class="separator:a4df2343c53a8dd1bdc2c9cdda87f4317"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ca1363a158e435b10006154fb77bfbe"><td class="memItemLeft" align="right" valign="top">IsolatedMemoryCache&lt; string, <a class="el" href="../../d0/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_static_table_search_response.html">StaticTableSearchResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a7ca1363a158e435b10006154fb77bfbe">ProductSearchResultCache</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:a7ca1363a158e435b10006154fb77bfbe"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品搜索结果的缓存  <a href="#a7ca1363a158e435b10006154fb77bfbe">更多...</a><br /></td></tr>
-<tr class="separator:a7ca1363a158e435b10006154fb77bfbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af986a7f4a5350a82c8e5e3fb612456bd"><td class="memItemLeft" align="right" valign="top">MemoryCache&lt; long, <a class="el" href="../../dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html">Database.Product</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#af986a7f4a5350a82c8e5e3fb612456bd">ProductCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af986a7f4a5350a82c8e5e3fb612456bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品的缓存  <a href="#af986a7f4a5350a82c8e5e3fb612456bd">更多...</a><br /></td></tr>
+<tr class="separator:af986a7f4a5350a82c8e5e3fb612456bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23fd993dfae309197891a6b18c152eda"><td class="memItemLeft" align="right" valign="top">IsolatedMemoryCache&lt; long, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a23fd993dfae309197891a6b18c152eda">ProductApiInfoCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a23fd993dfae309197891a6b18c152eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品信息的缓存  <a href="#a23fd993dfae309197891a6b18c152eda">更多...</a><br /></td></tr>
+<tr class="separator:a23fd993dfae309197891a6b18c152eda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05f40904e727a43a760c4a534624de6b"><td class="memItemLeft" align="right" valign="top">IsolatedMemoryCache&lt; int, <a class="el" href="../../d0/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_static_table_search_response.html">StaticTableSearchResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_managers_1_1_product_manager.html#a05f40904e727a43a760c4a534624de6b">ProductSearchResultCache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a05f40904e727a43a760c4a534624de6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">商品搜索结果的缓存  <a href="#a05f40904e727a43a760c4a534624de6b">更多...</a><br /></td></tr>
+<tr class="separator:a05f40904e727a43a760c4a534624de6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>商品管理器 </p>
@@ -198,6 +207,39 @@ Public 成员函数</h2></td></tr>
 </div><div class="memdoc">
 
 <p>清理缓存 </p>
+
+</div>
+</div>
+<a class="anchor" id="ae80904e3630b76f4dddaee6e7896bcdd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html">Database.Product</a> ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager.GetProduct </td>
+          <td>(</td>
+          <td class="paramtype">long&#160;</td>
+          <td class="paramname"><em>productId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取商品 商品不存在时返回null，存在时同时获取关联的数据 结果会按商品Id缓存一定时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">productId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
 </div>
@@ -305,7 +347,7 @@ Public 成员函数</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7ca1363a158e435b10006154fb77bfbe"></a>
+<a class="anchor" id="af986a7f4a5350a82c8e5e3fb612456bd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -313,7 +355,51 @@ Public 成员函数</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IsolatedMemoryCache&lt;string, <a class="el" href="../../d0/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_static_table_search_response.html">StaticTableSearchResponse</a>&gt; ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager.ProductSearchResultCache</td>
+          <td class="memname">MemoryCache&lt;long, <a class="el" href="../../dd/df8/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product.html">Database.Product</a>&gt; ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager.ProductCache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>商品的缓存 </p>
+
+</div>
+</div>
+<a class="anchor" id="a25d54c44ea57a94ad30a227c654e02aa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager.ProductCacheTime</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>商品的缓存时间 默认是3秒，可通过网站配置指定 </p>
+
+</div>
+</div>
+<a class="anchor" id="a05f40904e727a43a760c4a534624de6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IsolatedMemoryCache&lt;int, <a class="el" href="../../d0/db4/class_z_k_web_1_1_plugins_1_1_common_1_1_base_1_1src_1_1_model_1_1_static_table_search_response.html">StaticTableSearchResponse</a>&gt; ZKWeb.Plugins.Shopping.Product.src.Managers.ProductManager.ProductSearchResultCache</td>
         </tr>
       </table>
   </td>

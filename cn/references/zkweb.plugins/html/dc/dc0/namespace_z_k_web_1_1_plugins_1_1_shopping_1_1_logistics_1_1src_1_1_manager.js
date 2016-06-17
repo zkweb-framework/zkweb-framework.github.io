@@ -1,0 +1,4 @@
+var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_manager =
+[
+    [ "LogisticsManager", "df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_manager_1_1_logistics_manager.html", "df/dc2/class_z_k_web_1_1_plugins_1_1_shopping_1_1_logistics_1_1src_1_1_manager_1_1_logistics_manager" ]
+];

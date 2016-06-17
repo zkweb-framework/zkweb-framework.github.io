@@ -547,7 +547,7 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
 <h3 id="_1"><h2>创建测试</h2></h3>
 <p>添加<code>Example\src\Tests\ExampleTest.cs</code>，内容如下<br/>
 使用<code>Assert</code>类测试条件是否成立，如果测试失败会抛出<code>AssertException</code>。<br/></p>
-<div class="code"><pre><span></span><span class="na">[UnitTest]</span>
+<div class="code"><pre><span></span><span class="na">[Tests]</span>
 <span class="k">class</span> <span class="nc">ExampleTest</span> <span class="p">{</span>
     <span class="k">public</span> <span class="k">void</span> <span class="nf">MethodA</span><span class="p">()</span> <span class="p">{</span>
         <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="m">1</span> <span class="p">==</span> <span class="m">1</span><span class="p">);</span>
@@ -566,15 +566,15 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
 需要<code>UnitTest.WebTester</code>插件，登陆到后台点击"单元测试"并点击"运行"或"全部运行"即可。<br/></p>
 <h3 id="http"><h2>在测试中模拟Http上下文</h2></h3>
 <p>在测试部分功能时，有时需要模拟Http上下文，<br/>
-可以使用<code>HttpContextUtils.OverrideContext</code>函数重载当前的上下文。<br/>
+可以使用<code>HttpManager.OverrideContext</code>函数重载当前的上下文。<br/>
 在<code>ExampleTest</code>类中添加以下函数<br/></p>
 <div class="code"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodB</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">using</span> <span class="p">(</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">OverrideContext</span><span class="p">(</span><span class="s">&quot;/?a=1&quot;</span><span class="p">,</span> <span class="s">&quot;POST&quot;</span><span class="p">))</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpRequestMock</span><span class="p">)</span><span class="n">HttpContextUtils</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
-        <span class="n">request</span><span class="p">.</span><span class="n">userHostAddress</span> <span class="p">=</span> <span class="s">&quot;192.168.168.168&quot;</span><span class="p">;</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">OverrideContext</span><span class="p">(</span><span class="s">&quot;/?a=1&quot;</span><span class="p">,</span> <span class="s">&quot;POST&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpRequestMock</span><span class="p">)</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">remoteIpAddress</span> <span class="p">=</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;192.168.168.168&quot;</span><span class="p">);</span>
 
         <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;a&quot;</span><span class="p">),</span> <span class="s">&quot;1&quot;</span><span class="p">);</span>
-        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">UserHostAddress</span><span class="p">,</span> <span class="s">&quot;192.168.168.168&quot;</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">RemoteIpAddress</span><span class="p">,</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;192.168.168.168&quot;</span><span class="p">));</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -600,8 +600,8 @@ ZKWeb的单元测试支持模拟Http上下文和IoC容器。<br/></p>
 <p>单元测试时可以在一定范围使用一个空白的临时数据库。<br/>
 临时数据库使用了sqlite + 临时文件，结束后会自动删除该文件。<br/>
 如果需要查看临时数据库的内容，可以在using结束之前下一个断点，然后用数据库浏览器打开临时文件夹下的数据库文件。<br/></p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">unitTestManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">UnitTestManager</span><span class="p">&gt;();</span>
-<span class="k">using</span> <span class="p">(</span><span class="n">unitTestManager</span><span class="p">.</span><span class="n">UseTemporaryDatabase</span><span class="p">())</span> <span class="p">{</span>
+<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">testManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">TestManager</span><span class="p">&gt;();</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">TestManager</span><span class="p">.</span><span class="n">UseTemporaryDatabase</span><span class="p">())</span> <span class="p">{</span>
     <span class="c1">// 数据库操作代码</span>
 <span class="p">}</span>
 </pre></div>

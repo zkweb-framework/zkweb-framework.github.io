@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>ZKWeb References: ZKWebStandard.Collections.MemoryCache&lt; TKey, TValue &gt; 模板类 参考</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../resize.js"></script>
+<script type="text/javascript" src="../../navtreedata.js"></script>
+<script type="text/javascript" src="../../navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/searchdata.js"></script>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ZKWeb References
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'搜索');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.html"><span>首页</span></a></li>
+      <li><a href="../../pages.html"><span>相关页面</span></a></li>
+      <li><a href="../../namespaces.html"><span>包</span></a></li>
+      <li class="current"><a href="../../annotated.html"><span>类</span></a></li>
+      <li><a href="../../files.html"><span>文件</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="搜索" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.html"><span>类列表</span></a></li>
+      <li><a href="../../classes.html"><span>类索引</span></a></li>
+      <li><a href="../../hierarchy.html"><span>类继承关系</span></a></li>
+      <li><a href="../../functions.html"><span>类成员</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html','../../');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#properties">属性</a> &#124;
+<a href="../../d5/d23/class_z_k_web_standard_1_1_collections_1_1_memory_cache-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">ZKWebStandard.Collections.MemoryCache&lt; TKey, TValue &gt; 模板类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>缓存类，支持指定过期时间，线程安全  
+ <a href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#details">更多...</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a5e3e3b15cc02bb688f17b262729f5274"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a5e3e3b15cc02bb688f17b262729f5274">MemoryCache</a> ()</td></tr>
+<tr class="memdesc:a5e3e3b15cc02bb688f17b262729f5274"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化  <a href="#a5e3e3b15cc02bb688f17b262729f5274">更多...</a><br /></td></tr>
+<tr class="separator:a5e3e3b15cc02bb688f17b262729f5274"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09ce12ae2f7e01ad8134d1ab9a28427f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a09ce12ae2f7e01ad8134d1ab9a28427f">Put</a> (TKey key, TValue value, TimeSpan keepTime)</td></tr>
+<tr class="memdesc:a09ce12ae2f7e01ad8134d1ab9a28427f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置缓存数据  <a href="#a09ce12ae2f7e01ad8134d1ab9a28427f">更多...</a><br /></td></tr>
+<tr class="separator:a09ce12ae2f7e01ad8134d1ab9a28427f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a94c838a4185245f25afe8e5b41f28b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a9a94c838a4185245f25afe8e5b41f28b">TryGetValue</a> (TKey key, out TValue value)</td></tr>
+<tr class="memdesc:a9a94c838a4185245f25afe8e5b41f28b"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓存数据 没有或已过期时返回false  <a href="#a9a94c838a4185245f25afe8e5b41f28b">更多...</a><br /></td></tr>
+<tr class="separator:a9a94c838a4185245f25afe8e5b41f28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb2fa608c95aa7fc4f99999971d8326c"><td class="memItemLeft" align="right" valign="top">TValue&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#afb2fa608c95aa7fc4f99999971d8326c">GetOrDefault</a> (TKey key, TValue defaultValue=default(TValue))</td></tr>
+<tr class="memdesc:afb2fa608c95aa7fc4f99999971d8326c"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取缓存数据 没有或已过期时返回默认值  <a href="#afb2fa608c95aa7fc4f99999971d8326c">更多...</a><br /></td></tr>
+<tr class="separator:afb2fa608c95aa7fc4f99999971d8326c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22c127e1422688a4233a35b0b14c9b01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a22c127e1422688a4233a35b0b14c9b01">Remove</a> (TKey key)</td></tr>
+<tr class="memdesc:a22c127e1422688a4233a35b0b14c9b01"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除缓存数据  <a href="#a22c127e1422688a4233a35b0b14c9b01">更多...</a><br /></td></tr>
+<tr class="separator:a22c127e1422688a4233a35b0b14c9b01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70115b6c6a22a6c472ef0c9ae57378c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a70115b6c6a22a6c472ef0c9ae57378c4">Count</a> ()</td></tr>
+<tr class="memdesc:a70115b6c6a22a6c472ef0c9ae57378c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">返回在缓存中的对象数量  <a href="#a70115b6c6a22a6c472ef0c9ae57378c4">更多...</a><br /></td></tr>
+<tr class="separator:a70115b6c6a22a6c472ef0c9ae57378c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24884ba1bfe92a22093c18a49f379c64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a24884ba1bfe92a22093c18a49f379c64">Clear</a> ()</td></tr>
+<tr class="memdesc:a24884ba1bfe92a22093c18a49f379c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空缓存数据  <a href="#a24884ba1bfe92a22093c18a49f379c64">更多...</a><br /></td></tr>
+<tr class="separator:a24884ba1bfe92a22093c18a49f379c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:a33b28dd2d33894549c893dd40baefedc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#a33b28dd2d33894549c893dd40baefedc">RevokeExpires</a> ()</td></tr>
+<tr class="memdesc:a33b28dd2d33894549c893dd40baefedc"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除过期的缓存数据 固定每180秒一次  <a href="#a33b28dd2d33894549c893dd40baefedc">更多...</a><br /></td></tr>
+<tr class="separator:a33b28dd2d33894549c893dd40baefedc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+属性</h2></td></tr>
+<tr class="memitem:aeb80f410356efc8d2386cce15ae517f2"><td class="memItemLeft" align="right" valign="top">TimeSpan&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#aeb80f410356efc8d2386cce15ae517f2">RevokeExpiresInterval</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aeb80f410356efc8d2386cce15ae517f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">定期删除过期数据的间隔时间 默认180秒  <a href="#aeb80f410356efc8d2386cce15ae517f2">更多...</a><br /></td></tr>
+<tr class="separator:aeb80f410356efc8d2386cce15ae517f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecf27ec02bcfc4fb83f1fe06f2dd4970"><td class="memItemLeft" align="right" valign="top">IDictionary&lt; TKey, <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt; TValue, DateTime &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#aecf27ec02bcfc4fb83f1fe06f2dd4970">Cache</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:aecf27ec02bcfc4fb83f1fe06f2dd4970"><td class="mdescLeft">&#160;</td><td class="mdescRight">缓存数据 结构 { 键, (对象, 过期时间) } 使用了线程锁所以这里只需要普通的Dictionary  <a href="#aecf27ec02bcfc4fb83f1fe06f2dd4970">更多...</a><br /></td></tr>
+<tr class="separator:aecf27ec02bcfc4fb83f1fe06f2dd4970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2ca389633eb42725442096e422d8c86"><td class="memItemLeft" align="right" valign="top">ReaderWriterLockSlim&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#ae2ca389633eb42725442096e422d8c86">CacheLock</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae2ca389633eb42725442096e422d8c86"><td class="mdescLeft">&#160;</td><td class="mdescRight">缓存数据的线程锁  <a href="#ae2ca389633eb42725442096e422d8c86">更多...</a><br /></td></tr>
+<tr class="separator:ae2ca389633eb42725442096e422d8c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca54dfd1aabd3acbd01b1cd10506a77"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html#afca54dfd1aabd3acbd01b1cd10506a77">LastRevokeExpires</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:afca54dfd1aabd3acbd01b1cd10506a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">最后一次删除过期缓存的时间  <a href="#afca54dfd1aabd3acbd01b1cd10506a77">更多...</a><br /></td></tr>
+<tr class="separator:afca54dfd1aabd3acbd01b1cd10506a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>缓存类，支持指定过期时间，线程安全 </p>
+<dl class="tparams"><dt>模板参数</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TKey</td><td>键类型</td></tr>
+    <tr><td class="paramname">TValue</td><td>值类型</td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">构造及析构函数说明</h2>
+<a class="anchor" id="a5e3e3b15cc02bb688f17b262729f5274"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.<a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">MemoryCache</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a class="anchor" id="a24884ba1bfe92a22093c18a49f379c64"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.Clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清空缓存数据 </p>
+
+</div>
+</div>
+<a class="anchor" id="a70115b6c6a22a6c472ef0c9ae57378c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.Count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>返回在缓存中的对象数量 </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="afb2fa608c95aa7fc4f99999971d8326c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TValue <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.GetOrDefault </td>
+          <td>(</td>
+          <td class="paramtype">TKey&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TValue&#160;</td>
+          <td class="paramname"><em>defaultValue</em> = <code>default(TValue)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓存数据 没有或已过期时返回默认值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>缓存键</td></tr>
+    <tr><td class="paramname">defaultValue</td><td>默认值</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09ce12ae2f7e01ad8134d1ab9a28427f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.Put </td>
+          <td>(</td>
+          <td class="paramtype">TKey&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TValue&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TimeSpan&#160;</td>
+          <td class="paramname"><em>keepTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置缓存数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>缓存键</td></tr>
+    <tr><td class="paramname">value</td><td>缓存值</td></tr>
+    <tr><td class="paramname">keepTime</td><td>保留时间</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a22c127e1422688a4233a35b0b14c9b01"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.Remove </td>
+          <td>(</td>
+          <td class="paramtype">TKey&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除缓存数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>缓存键</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a33b28dd2d33894549c893dd40baefedc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.RevokeExpires </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>删除过期的缓存数据 固定每180秒一次 </p>
+
+</div>
+</div>
+<a class="anchor" id="a9a94c838a4185245f25afe8e5b41f28b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.TryGetValue </td>
+          <td>(</td>
+          <td class="paramtype">TKey&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out TValue&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取缓存数据 没有或已过期时返回false </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>缓存键</td></tr>
+    <tr><td class="paramname">value</td><td>缓存值</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">属性说明</h2>
+<a class="anchor" id="aecf27ec02bcfc4fb83f1fe06f2dd4970"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IDictionary&lt;TKey, <a class="el" href="../../dd/d56/struct_z_k_web_standard_1_1_collections_1_1_pair.html">Pair</a>&lt;TValue, DateTime&gt; &gt; <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.Cache</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>缓存数据 结构 { 键, (对象, 过期时间) } 使用了线程锁所以这里只需要普通的Dictionary </p>
+
+</div>
+</div>
+<a class="anchor" id="ae2ca389633eb42725442096e422d8c86"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ReaderWriterLockSlim <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.CacheLock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>缓存数据的线程锁 </p>
+
+</div>
+</div>
+<a class="anchor" id="afca54dfd1aabd3acbd01b1cd10506a77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DateTime <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.LastRevokeExpires</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>最后一次删除过期缓存的时间 </p>
+
+</div>
+</div>
+<a class="anchor" id="aeb80f410356efc8d2386cce15ae517f2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TimeSpan <a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">ZKWebStandard.Collections.MemoryCache</a>&lt; TKey, TValue &gt;.RevokeExpiresInterval</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>定期删除过期数据的间隔时间 默认180秒 </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>ZKWeb/ZKWebStandard/Collections/<a class="el" href="../../d0/d01/_memory_cache_8cs.html">MemoryCache.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="../../d0/d52/namespace_z_k_web_standard.html">ZKWebStandard</a></li><li class="navelem"><a class="el" href="../../df/db4/namespace_z_k_web_standard_1_1_collections.html">Collections</a></li><li class="navelem"><a class="el" href="../../da/d21/class_z_k_web_standard_1_1_collections_1_1_memory_cache.html">MemoryCache</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

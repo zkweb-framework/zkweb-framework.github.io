@@ -120,11 +120,14 @@ $(document).ready(function(){initNavTree('d3/d76/class_z_k_web_1_1_templating_1_
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 静态 Public 成员函数</h2></td></tr>
 <tr class="memitem:ab455ff951f70f16d4b5c8359b85089ce"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/class_z_k_web_1_1_templating_1_1_template_filters_1_1_filters.html#ab455ff951f70f16d4b5c8359b85089ce">Trans</a> (string text)</td></tr>
-<tr class="memdesc:ab455ff951f70f16d4b5c8359b85089ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译指定的文本 例子 {% text | trans %} {% "fixed text" | trans %}  <a href="#ab455ff951f70f16d4b5c8359b85089ce">更多...</a><br /></td></tr>
+<tr class="memdesc:ab455ff951f70f16d4b5c8359b85089ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">翻译指定的文本  <a href="#ab455ff951f70f16d4b5c8359b85089ce">更多...</a><br /></td></tr>
 <tr class="separator:ab455ff951f70f16d4b5c8359b85089ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eb785df5b8dd2538cae075c1997ec14"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/class_z_k_web_1_1_templating_1_1_template_filters_1_1_filters.html#a3eb785df5b8dd2538cae075c1997ec14">Format</a> (string text, object arg_0=null, object arg_1=null, object arg_2=null, object arg_3=null, object arg_4=null, object arg_5=null, object arg_6=null, object arg_7=null)</td></tr>
-<tr class="memdesc:a3eb785df5b8dd2538cae075c1997ec14"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化字符串 最多可支持8个参数 例子 {{ "name is [0], age is [1]" | format: name, age }}  <a href="#a3eb785df5b8dd2538cae075c1997ec14">更多...</a><br /></td></tr>
+<tr class="memdesc:a3eb785df5b8dd2538cae075c1997ec14"><td class="mdescLeft">&#160;</td><td class="mdescRight">格式化字符串 最多可支持8个参数  <a href="#a3eb785df5b8dd2538cae075c1997ec14">更多...</a><br /></td></tr>
 <tr class="separator:a3eb785df5b8dd2538cae075c1997ec14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe9ef42f103870d9346959833df5ce7"><td class="memItemLeft" align="right" valign="top">static object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d76/class_z_k_web_1_1_templating_1_1_template_filters_1_1_filters.html#a4fe9ef42f103870d9346959833df5ce7">RawHtml</a> (string text)</td></tr>
+<tr class="memdesc:a4fe9ef42f103870d9346959833df5ce7"><td class="mdescLeft">&#160;</td><td class="mdescRight">把字符串作为原始html描画  <a href="#a4fe9ef42f103870d9346959833df5ce7">更多...</a><br /></td></tr>
+<tr class="separator:a4fe9ef42f103870d9346959833df5ce7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p>模板系统的过滤器 </p>
@@ -203,7 +206,42 @@ $(document).ready(function(){initNavTree('d3/d76/class_z_k_web_1_1_templating_1_
 </table>
 </div><div class="memdoc">
 
-<p>格式化字符串 最多可支持8个参数 例子 {{ "name is [0], age is [1]" | format: name, age }} </p>
+<p>格式化字符串 最多可支持8个参数 </p>
+<p>{{ "name is [0], age is [1]" | format: name, age }} </p>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4fe9ef42f103870d9346959833df5ce7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static object ZKWeb.Templating.TemplateFilters.Filters.RawHtml </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>把字符串作为原始html描画 </p>
+<p>{{ variable | raw_html }} </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>返回</dt><dd></dd></dl>
 
 </div>
@@ -230,7 +268,8 @@ $(document).ready(function(){initNavTree('d3/d76/class_z_k_web_1_1_templating_1_
 </table>
 </div><div class="memdoc">
 
-<p>翻译指定的文本 例子 {% text | trans %} {% "fixed text" | trans %} </p>
+<p>翻译指定的文本 </p>
+<p>{{ text | trans }} {{ "fixed text" | trans }} </p>
 <dl class="params"><dt>参数</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>需要翻译的文本</td></tr>

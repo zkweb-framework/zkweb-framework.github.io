@@ -10,6 +10,7 @@ var dir_44ee465362de01dc223451b3658df989 =
     [ "CreateOrderResult.cs", "d9/dde/_create_order_result_8cs.html", [
       [ "CreateOrderResult", "de/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_result.html", "de/d73/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_create_order_result" ]
     ] ],
+    [ "ExtraConfigKeys.cs", "d3/dec/_shopping_8_order_2src_2_model_2_extra_config_keys_8cs.html", null ],
     [ "IOrderPriceCalculator.cs", "d5/d5c/_i_order_price_calculator_8cs.html", [
       [ "IOrderPriceCalculator", "d6/d3f/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_price_calculator.html", "d6/d3f/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_model_1_1_i_order_price_calculator" ]
     ] ],

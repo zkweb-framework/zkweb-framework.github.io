@@ -11,5 +11,6 @@ var namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src =
     [ "Model", "d1/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model.html", "d1/d47/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_model" ],
     [ "Scaffolding", "d9/d95/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding.html", "d9/d95/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding" ],
     [ "Translates", "da/d7d/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_translates.html", "da/d7d/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_translates" ],
+    [ "TypeTraits", "d8/d43/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_type_traits.html", "d8/d43/namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_type_traits" ],
     [ "Plugin", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin.html", "d0/d6e/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_plugin" ]
 ];
