@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_list_item_providers_1_1_payment_api_type_list_item_provider =
-[
-    [ "GetItems", "d9/d6d/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_list_item_providers_1_1_payment_api_type_list_item_provider.html#a6e081adf2aaad624da22acaa829bc1d8", null ]
-];

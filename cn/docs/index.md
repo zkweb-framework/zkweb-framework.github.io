@@ -1,15 +1,14 @@
 ZKWeb是一个用于快速开发网站的框架。<br/>
 提供了编辑即编译，和全自动管理数据库结构的功能。<br/>
-模板系统和自动生成组件参考了Django的做法，并遵从Don't repeat yourself原则。<br/>
+模板系统和自动生成组件参考了Django的做法，并遵从**Don't repeat yourself**原则。<br/>
 
 框架更注重功能的分离而不是层次的分离，<br/>
 每个插件程序集可以包含功能所需要的业务处理，数据库处理，控制器和模板。<br/>
 插件系统可以实现相同的业务代码提供给不同的客户时，只需要写一次并只管理一份代码。<br/>
 
-ZKWeb目前同时提供了Asp.Net和Asp.Net Core版本。<br/>
-需要使用Asp.Net Core版本时请下载`aspnet_core`分支。<br/>
-Asp.Net和Asp.Net Core版本都兼容相同的插件。<br/>
-编写插件应该使用`ZKWebStandard`提供的抽象层而不去依赖Asp.Net或Asp.Net Core。<br/>
+ZKWeb目前同时提供**Asp.Net**, **Asp.Net Core**, **Owin**版本。<br/>
+所有版本都兼容相同的插件。<br/>
+编写插件应该使用**ZKWebStandard**提供的抽象层而不去依赖**Asp.Net**或**Asp.Net Core**。<br/>
 
 ### <h2>项目地址</h2>
 
@@ -24,9 +23,9 @@ Asp.Net和Asp.Net Core版本都兼容相同的插件。<br/>
 
 ### <h2>索引文档</h2>
 
-最终更新: 2016-06-17<br/>
-<a href="../references/zkweb/html/annotated.html" target="_blank">ZKWeb索引文档</a></br>
-<a href="../references/zkweb.plugins/html/annotated.html" target="_blank">ZKWeb.Plugins索引文档</a>
+最终更新: 2016-06-19<br/>
+<a href="../references/zkweb/index.html" target="_blank">ZKWeb索引文档</a></br>
+<a href="../references/zkweb.plugins/index.html" target="_blank">ZKWeb.Plugins索引文档</a>
 
 ### <h2>主要功能</h2>
 
@@ -101,7 +100,7 @@ Asp.Net和Asp.Net Core版本都兼容相同的插件。<br/>
 
 ### <h2>项目进度</h2>
 
-核心框架已开发完毕，但仍处于测试阶段。</br>
-正在逐步完善业务插件，目标是发布一个完整的商城网站。
+核心框架已开发完毕，正在进行正式版本的测试。</br>
+业务插件仍在编写，目标是使用这套框架做一个开源的商城系统。</br>
 
 讨论QQ群：522083886。

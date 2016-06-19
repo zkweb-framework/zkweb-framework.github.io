@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_image_browsers_1_1_product_image_browser =
-[
-    [ "Category", "da/d77/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_image_browsers_1_1_product_image_browser.html#aec367072c54e6ac967a2e1bb0dfbe463", null ]
-];

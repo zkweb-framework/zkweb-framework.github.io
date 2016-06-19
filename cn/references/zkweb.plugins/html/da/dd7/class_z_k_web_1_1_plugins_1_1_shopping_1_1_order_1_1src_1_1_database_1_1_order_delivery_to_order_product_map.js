@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_to_order_product_map =
-[
-    [ "OrderDeliveryToOrderProductMap", "da/dd7/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_database_1_1_order_delivery_to_order_product_map.html#a4cc43e282b85213d90a4a04ee4ffbe27", null ]
-];

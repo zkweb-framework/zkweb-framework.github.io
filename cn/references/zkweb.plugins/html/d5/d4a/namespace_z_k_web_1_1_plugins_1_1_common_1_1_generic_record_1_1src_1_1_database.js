@@ -1,5 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database =
-[
-    [ "GenericRecord", "dd/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record.html", "dd/da9/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record" ],
-    [ "GenericRecordMap", "db/d20/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record_map.html", "db/d20/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record_map" ]
-];

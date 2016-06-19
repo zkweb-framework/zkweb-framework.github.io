@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_search_bar_builder_extensions =
-[
-    [ "StandardSetupForCrudPage< TBuilder >", "de/dff/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_extensions_1_1_ajax_table_search_bar_builder_extensions.html#a02a74ed1cd1f0e1bded31fca028cadeb", null ]
-];

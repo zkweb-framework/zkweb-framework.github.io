@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding =
-[
-    [ "GenericClassBuilder", "dd/d1a/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder.html", "dd/d1a/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_class_1_1src_1_1_scaffolding_1_1_generic_class_builder" ]
-];

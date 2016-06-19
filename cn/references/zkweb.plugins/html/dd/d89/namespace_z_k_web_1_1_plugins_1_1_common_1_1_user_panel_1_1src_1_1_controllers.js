@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_controllers =
-[
-    [ "ApiController", "dc/d15/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_controllers_1_1_api_controller.html", "dc/d15/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_controllers_1_1_api_controller" ]
-];

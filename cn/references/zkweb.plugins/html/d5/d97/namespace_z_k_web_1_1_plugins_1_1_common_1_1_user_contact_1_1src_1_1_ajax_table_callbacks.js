@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_ajax_table_callbacks =
-[
-    [ "AddColumnsToUserManageApp", "d2/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_ajax_table_callbacks_1_1_add_columns_to_user_manage_app.html", "d2/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_user_contact_1_1src_1_1_ajax_table_callbacks_1_1_add_columns_to_user_manage_app" ]
-];

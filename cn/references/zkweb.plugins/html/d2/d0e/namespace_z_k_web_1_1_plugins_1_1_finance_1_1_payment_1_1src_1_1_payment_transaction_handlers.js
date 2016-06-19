@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_transaction_handlers =
-[
-    [ "TestTransactionHandler", "d9/d1f/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_transaction_handlers_1_1_test_transaction_handler.html", "d9/d1f/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_transaction_handlers_1_1_test_transaction_handler" ]
-];

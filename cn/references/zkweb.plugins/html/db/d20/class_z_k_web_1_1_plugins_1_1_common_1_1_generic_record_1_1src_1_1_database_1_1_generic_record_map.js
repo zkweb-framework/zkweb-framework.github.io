@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record_map =
-[
-    [ "GenericRecordMap", "db/d20/class_z_k_web_1_1_plugins_1_1_common_1_1_generic_record_1_1src_1_1_database_1_1_generic_record_map.html#a2e9f99f0a1ae5c01304bab33bfd6c3f8", null ]
-];

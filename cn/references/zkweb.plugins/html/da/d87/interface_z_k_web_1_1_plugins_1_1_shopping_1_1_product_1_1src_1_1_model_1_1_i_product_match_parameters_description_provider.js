@@ -1,4 +1,0 @@
-var interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_description_provider =
-[
-    [ "GetDescription", "da/d87/interface_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_model_1_1_i_product_match_parameters_description_provider.html#a14e2c570cd9efdd57383aba96d41bb95", null ]
-];

@@ -1,6 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps =
-[
-    [ "ProductCategoryManageApp", "dd/d02/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app.html", "dd/d02/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_category_manage_app" ],
-    [ "ProductManageApp", "dd/d21/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_manage_app.html", "dd/d21/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_manage_app" ],
-    [ "ProductPropertyManageApp", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app.html", "db/d8a/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_apps_1_1_product_property_manage_app" ]
-];

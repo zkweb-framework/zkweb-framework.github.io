@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_list_item_providers_1_1_privileges_list_item_groups_provider =
-[
-    [ "GetGroups", "de/dec/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_list_item_providers_1_1_privileges_list_item_groups_provider.html#aaa47955a787aea37cd0d8014fbe702f7", null ]
-];

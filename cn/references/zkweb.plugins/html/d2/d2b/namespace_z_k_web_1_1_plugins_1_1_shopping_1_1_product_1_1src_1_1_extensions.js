@@ -1,9 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions =
-[
-    [ "ProductCategoryExtensions", "dc/d6b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_category_extensions.html", "dc/d6b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_category_extensions" ],
-    [ "ProductExtensions", "d1/d5c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_extensions.html", "d1/d5c/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_extensions" ],
-    [ "ProductMatchedDataExtensions", "dc/da9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_matched_data_extensions.html", "dc/da9/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_matched_data_extensions" ],
-    [ "ProductPropertyExtensions", "d6/dff/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_extensions.html", "d6/dff/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_extensions" ],
-    [ "ProductPropertyValueExtensions", "d6/db3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_value_extensions.html", "d6/db3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_property_value_extensions" ],
-    [ "ProductToPropertyValueExtensions", "da/dc1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_to_property_value_extensions.html", "da/dc1/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_extensions_1_1_product_to_property_value_extensions" ]
-];

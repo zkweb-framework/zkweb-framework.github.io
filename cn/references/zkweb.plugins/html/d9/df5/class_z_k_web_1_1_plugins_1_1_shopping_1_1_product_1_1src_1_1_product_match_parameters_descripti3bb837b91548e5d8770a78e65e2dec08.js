@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_match_parameters_descripti3bb837b91548e5d8770a78e65e2dec08 =
-[
-    [ "GetDescription", "d9/df5/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_match_parameters_descripti3bb837b91548e5d8770a78e65e2dec08.html#a9b88a26d463d8bbfaf99e8d5c691fea0", null ]
-];

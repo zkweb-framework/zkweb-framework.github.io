@@ -1,5 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_api_data =
-[
-    [ "CheckPaymentPassword", "dc/dfb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_api_data.html#a2ec32bdcc8b182e71227b94a88d279cc", null ],
-    [ "PaymentPassword", "dc/dfb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_payment_api_handlers_1_1_test_api_handler_1_1_api_data.html#aa944f0219d949ba3ca2dc6e6b7dba37c", null ]
-];

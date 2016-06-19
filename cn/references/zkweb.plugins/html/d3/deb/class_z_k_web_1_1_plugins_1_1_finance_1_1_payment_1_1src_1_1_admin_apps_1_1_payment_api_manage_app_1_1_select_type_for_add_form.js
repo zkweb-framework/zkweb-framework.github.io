@@ -1,6 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form =
-[
-    [ "OnBind", "d3/deb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form.html#a7e35e57c645918dca8298c70fcc9c024", null ],
-    [ "OnSubmit", "d3/deb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form.html#a4682e6dc69f54c0eee535c88f9fe5ac3", null ],
-    [ "Type", "d3/deb/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_admin_apps_1_1_payment_api_manage_app_1_1_select_type_for_add_form.html#a8dd8acf979841fbe39ef137a989f6af4", null ]
-];

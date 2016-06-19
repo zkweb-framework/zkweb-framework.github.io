@@ -1,8 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding =
-[
-    [ "AdminAppBuilder", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder.html", "db/d19/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_admin_app_builder" ],
-    [ "CrudPageBuilder", "db/d46/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_crud_page_builder.html", "db/d46/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_crud_page_builder" ],
-    [ "SimpleAdminAppBuilder", "d3/dbc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_simple_admin_app_builder.html", "d3/dbc/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_simple_admin_app_builder" ],
-    [ "TabUserOwnedDataEditFormBuilder", "dd/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_tab_user_owned_data_edit_form_builder.html", "dd/dd5/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_tab_user_owned_data_edit_form_builder" ],
-    [ "UserOwnedDataEditFormBuilder", "df/df6/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_user_owned_data_edit_form_builder.html", "df/df6/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_1_1src_1_1_scaffolding_1_1_user_owned_data_edit_form_builder" ]
-];

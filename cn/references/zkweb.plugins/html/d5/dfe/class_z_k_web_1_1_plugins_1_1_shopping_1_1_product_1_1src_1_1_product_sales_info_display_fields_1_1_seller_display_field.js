@@ -1,5 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_seller_display_field =
-[
-    [ "GetDisplayHtml", "d5/dfe/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_seller_display_field.html#a3547b6fb7d417c72e52c0cef89524238", null ],
-    [ "Name", "d5/dfe/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_sales_info_display_fields_1_1_seller_display_field.html#abc135abc613906bf4c51ca621470e985", null ]
-];

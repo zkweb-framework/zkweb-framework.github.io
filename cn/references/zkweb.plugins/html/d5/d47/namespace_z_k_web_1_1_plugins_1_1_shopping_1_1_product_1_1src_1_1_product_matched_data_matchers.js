@@ -1,5 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers =
-[
-    [ "OrderCountMatcher", "d3/d94/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_order_count_matcher.html", "d3/d94/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_order_count_matcher" ],
-    [ "PropertyMatcher", "d2/d5b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_property_matcher.html", "d2/d5b/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_matchers_1_1_property_matcher" ]
-];

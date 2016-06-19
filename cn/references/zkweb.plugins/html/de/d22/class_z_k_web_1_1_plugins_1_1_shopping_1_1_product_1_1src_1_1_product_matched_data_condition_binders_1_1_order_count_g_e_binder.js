@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_condition_binders_1_1_order_count_g_e_binder =
-[
-    [ "Init", "de/d22/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_product_matched_data_condition_binders_1_1_order_count_g_e_binder.html#a99f04dd83a1b27607f4cd7ab3100eea5", null ]
-];

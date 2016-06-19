@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_controllers_1_1_api_controller =
-[
-    [ "AdminSettingsMenuGroups", "db/d1f/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_controllers_1_1_api_controller.html#a224fbb3118bdf252e2adb24ea22a2c1c", null ]
-];

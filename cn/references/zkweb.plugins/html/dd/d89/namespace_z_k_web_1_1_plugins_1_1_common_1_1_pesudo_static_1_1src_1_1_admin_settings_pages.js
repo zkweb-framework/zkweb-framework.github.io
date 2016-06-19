@@ -1,4 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_admin_settings_pages =
-[
-    [ "PesudoStaticSettingsForm", "d1/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_admin_settings_pages_1_1_pesudo_static_settings_form.html", "d1/d8c/class_z_k_web_1_1_plugins_1_1_common_1_1_pesudo_static_1_1src_1_1_admin_settings_pages_1_1_pesudo_static_settings_form" ]
-];

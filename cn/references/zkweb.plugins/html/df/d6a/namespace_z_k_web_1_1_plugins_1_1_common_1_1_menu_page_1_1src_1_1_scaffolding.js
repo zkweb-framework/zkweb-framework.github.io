@@ -1,6 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding =
-[
-    [ "CrudMenuPageBuilder", "d7/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_crud_menu_page_builder.html", "d7/dab/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_crud_menu_page_builder" ],
-    [ "FormMenuPageBuilder", "d0/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_form_menu_page_builder.html", "d0/d7b/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_form_menu_page_builder" ],
-    [ "SimpleMenuPageBuilder", "df/dbb/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_simple_menu_page_builder.html", "df/dbb/class_z_k_web_1_1_plugins_1_1_common_1_1_menu_page_1_1src_1_1_scaffolding_1_1_simple_menu_page_builder" ]
-];

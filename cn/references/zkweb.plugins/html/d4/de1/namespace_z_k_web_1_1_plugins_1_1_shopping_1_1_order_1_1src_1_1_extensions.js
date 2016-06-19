@@ -1,7 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions =
-[
-    [ "CartProductExtensions", "de/d2d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_cart_product_extensions.html", "de/d2d/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_cart_product_extensions" ],
-    [ "CreateOrderProductParametersExtensions", "d2/d9e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_create_order_product_parameters_extensions.html", "d2/d9e/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_create_order_product_parameters_extensions" ],
-    [ "OrderPriceCalcResultExtensions", "d8/d51/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_order_price_calc_result_extensions.html", "d8/d51/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_order_price_calc_result_extensions" ],
-    [ "UserShippingAddressExtensions", "da/de3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_user_shipping_address_extensions.html", "da/de3/class_z_k_web_1_1_plugins_1_1_shopping_1_1_order_1_1src_1_1_extensions_1_1_user_shipping_address_extensions" ]
-];

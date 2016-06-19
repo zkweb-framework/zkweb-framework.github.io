@@ -1,5 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages =
-[
-    [ "ChangeAvatarForm", "db/db1/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_avatar_form.html", "db/db1/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_avatar_form" ],
-    [ "ChangePasswordForm", "dc/d8f/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_password_form.html", "dc/d8f/class_z_k_web_1_1_plugins_1_1_common_1_1_user_panel_1_1src_1_1_user_panel_pages_1_1_change_password_form" ]
-];

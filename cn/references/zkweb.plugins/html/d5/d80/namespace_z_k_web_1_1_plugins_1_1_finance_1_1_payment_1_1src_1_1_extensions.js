@@ -1,5 +1,0 @@
-var namespace_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions =
-[
-    [ "ContainerExtensions", "d6/de7/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_container_extensions.html", "d6/de7/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_container_extensions" ],
-    [ "WebReceiveFundsTransactionExtensions", "d7/d98/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_web_receive_funds_transaction_extensions.html", "d7/d98/class_z_k_web_1_1_plugins_1_1_finance_1_1_payment_1_1src_1_1_extensions_1_1_web_receive_funds_transaction_extensions" ]
-];

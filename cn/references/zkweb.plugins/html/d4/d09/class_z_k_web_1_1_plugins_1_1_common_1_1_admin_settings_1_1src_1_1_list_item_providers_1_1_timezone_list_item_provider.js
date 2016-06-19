@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_list_item_providers_1_1_timezone_list_item_provider =
-[
-    [ "GetItems", "d4/d09/class_z_k_web_1_1_plugins_1_1_common_1_1_admin_settings_1_1src_1_1_list_item_providers_1_1_timezone_list_item_provider.html#ad39c4153be41547bbfe03f1de1862a0f", null ]
-];

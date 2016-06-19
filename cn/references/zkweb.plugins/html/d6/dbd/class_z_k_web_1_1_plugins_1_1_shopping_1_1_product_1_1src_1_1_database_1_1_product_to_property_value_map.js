@@ -1,4 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_to_property_value_map =
-[
-    [ "ProductToPropertyValueMap", "d6/dbd/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_database_1_1_product_to_property_value_map.html#ad40c819a6f6d07a59acdfd25b8febefa", null ]
-];

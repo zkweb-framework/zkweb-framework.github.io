@@ -1,6 +1,0 @@
-var class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form_1_1_form =
-[
-    [ "OnBind", "d5/d48/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form_1_1_form.html#a62877a070175e16071200d600a95ef8c", null ],
-    [ "OnSubmit", "d5/d48/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form_1_1_form.html#a70f52aa156b85cca9c597ef7ca678f55", null ],
-    [ "ProductsPerPage", "d5/d48/class_z_k_web_1_1_plugins_1_1_shopping_1_1_product_1_1src_1_1_admin_settings_pages_1_1_product_list_settings_form_1_1_form.html#a579168e8c5ce7a2e815971d3258b1c02", null ]
-];

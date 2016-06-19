@@ -1,4 +1,4 @@
-ZKWeb的网站配置内容都保存在`App_Data\config.json`中，不需要修改传统的`web.config`。<br/>
+ZKWeb的网站配置内容都保存在**App_Data\config.json**中，不需要修改传统的**web.config**。<br/>
 
 ### <h2>配置内容</h2>
 ``` json
