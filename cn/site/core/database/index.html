@@ -1,545 +1,298 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
-    
-      
-        <title>数据库管理 - ZKWeb框架文档</title>
-      
-      
-      
-      
-    
-    <meta property="og:url" content="None">
-    <meta property="og:title" content="ZKWeb框架文档">
-    <meta property="og:image" content="None/../../">
-    <meta name="apple-mobile-web-app-title" content="ZKWeb框架文档">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../None">
-    <link rel="icon" type="image/x-icon" href="../../None">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-0dac3e5884.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
-    
-    
-      
-      
-      
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=微软雅黑:400,700|微软雅黑">
-      <style>
-        body, input {
-          font-family: '微软雅黑', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: '微软雅黑', 'Courier New', 'Courier', monospace;
-        }
-      </style>
-    
-    
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
-    
-  </head>
-  
-  
-  
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>数据库管理 - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="数据库管理, 数据库管理">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../unittest/">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../localize/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
             
-          </span>
-        
-        数据库管理
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../..">框架介绍</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../gettingstart/">首次运行</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../config/">网站配置</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../plugin/">插件系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../controller/">控制器和模板系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../localize/">本地化</a>
+                  </li>
+                  
+                  <li class="active" >
+                    <a href="./">数据库管理</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unittest/">单元测试</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../../plugin/common.base/">基础插件 (Common.Base)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.captcha/">验证码 (Common.Captcha)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.admin/">管理员 (Common.Admin)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.menupage/">菜单页 (Common.MenuPage)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.adminsettings/">管理员设置 (Common.AdminSettings)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.userpanel/">用户中心 (Common.UserPanel)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.usercontact/">联系人 (Common.UserContact)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.genericclass/">通用分类 (Common.GenericClass)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.generictag/">通用标签 (Common.GenericTag)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.genericrecord/">通用记录 (Common.GenericRecord)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.languageswitcher/">语言切换器 (Common.LanguageSwitcher)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.currency/">货币 (Common.Currency)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.pesudostatic/">伪静态 (Common.PesudoStatic)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.region/">地区 (Common.Region)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.serialgenerate/">流水号 (Common.SerialGenerate)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment/">支付 (Finance.Payment)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.alipay/">支付宝 (Finance.Payment.Alipay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.tenpay/">财付通 (Finance.Payment.Tenpay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.wechat/">微信支付 (Finance.Payment.WeChat)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.ckeditor/">CKEditor (CMS.CKEditor)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.imagebrowser/">图片管理器 (CMS.ImageBrowser)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.atricle/">文章 (CMS.Article)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.product/">商品 (Shopping.Product)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.logistics/">物流 (Shopping.Logistics)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.order/">订单 (Shopping.Order)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.aftersales/">售后 (Shopping.AfterSales)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/unittest.webtester/">网页测试运行器 (UnitTest.WebTester)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.customtranslate/">自定义翻译 (Common.CustomTranslate)</a>
+                  </li>
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
       </div>
     </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/zkweb-framework" title="@zkweb-framework on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
-  
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          ZKWeb框架文档
-          <span class="version">
-            
-          </span>
-        </strong>
-        
-      </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
-          
-            
-  <li>
-    <a class="" title="框架介绍" href="../..">
-      框架介绍
-    </a>
-    
-  </li>
 
-          
-            
-  <li>
-    <a class="" title="首次运行" href="../gettingstart/">
-      首次运行
-    </a>
-    
-  </li>
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="网站配置" href="../config/">
-      网站配置
-    </a>
-    
-  </li>
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="插件系统" href="../plugin/">
-      插件系统
-    </a>
-    
-  </li>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
 
-          
-            
-  <li>
-    <a class="" title="控制器和模板系统" href="../controller/">
-      控制器和模板系统
-    </a>
-    
-  </li>
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
 
-          
-            
-  <li>
-    <a class="" title="本地化" href="../localize/">
-      本地化
-    </a>
-    
-  </li>
+                
+                  <li class="main">
+                    <a href="#_1">添加数据表</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="current" title="数据库管理" href="./">
-      数据库管理
-    </a>
-    
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="添加数据表" href="#_1">
-                添加数据表
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="升级数据表" href="#_2">
-                升级数据表
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="增删查改" href="#_3">
-                增删查改
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="数据事件" href="#_4">
-                数据事件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="原生查询" href="#_5">
-                原生查询
-              </a>
-            </li>
-          
-        </ul>
-      
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_2">升级数据表</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="单元测试" href="../unittest/">
-      单元测试
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_3">增删查改</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Base)" href="../../plugin/common.base/">
-      插件(Common.Base)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_4">数据事件</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Captcha)" href="../../plugin/common.captcha/">
-      插件(Common.Captcha)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_5">原生查询</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Admin)" href="../../plugin/common.admin/">
-      插件(Common.Admin)
-    </a>
-    
-  </li>
+                  
+                
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.MenuPage)" href="../../plugin/common.menupage/">
-      插件(Common.MenuPage)
-    </a>
-    
-  </li>
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.AdminSettings)" href="../../plugin/common.adminsettings/">
-      插件(Common.AdminSettings)
-    </a>
-    
-  </li>
+            </div>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserPanel)" href="../../plugin/common.userpanel/">
-      插件(Common.UserPanel)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserContact)" href="../../plugin/common.usercontact/">
-      插件(Common.UserContact)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericClass)" href="../../plugin/common.genericclass/">
-      插件(Common.GenericClass)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericTag)" href="../../plugin/common.generictag/">
-      插件(Common.GenericTag)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericRecord)" href="../../plugin/common.genericrecord/">
-      插件(Common.GenericRecord)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.LanguageSwitcher)" href="../../plugin/common.languageswitcher/">
-      插件(Common.LanguageSwitcher)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.Currency)" href="../../plugin/common.currency/">
-      插件(Common.Currency)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.PesudoStatic)" href="../../plugin/common.pesudostatic/">
-      插件(Common.PesudoStatic)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.Region)" href="../../plugin/common.region/">
-      插件(Common.Region)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
-      插件(Common.SerialGenerate)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment)" href="../../plugin/common.payment/">
-      插件(Finance.Payment)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Alipay)" href="../../plugin/common.payment.alipay/">
-      插件(Finance.Payment.Alipay)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Tenpay)" href="../../plugin/common.payment.tenpay/">
-      插件(Finance.Payment.Tenpay)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.WeChat)" href="../../plugin/common.payment.wechat/">
-      插件(Finance.Payment.WeChat)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.CKEditor)" href="../../plugin/cms.ckeditor/">
-      插件(CMS.CKEditor)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.ImageBrowser)" href="../../plugin/cms.imagebrowser/">
-      插件(CMS.ImageBrowser)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.Article)" href="../../plugin/cms.atricle/">
-      插件(CMS.Article)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Product)" href="../../plugin/shopping.product/">
-      插件(Shopping.Product)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Logistics)" href="../../plugin/shopping.logistics/">
-      插件(Shopping.Logistics)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Order)" href="../../plugin/shopping.order/">
-      插件(Shopping.Order)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.AfterSales)" href="../../plugin/shopping.aftersales/">
-      插件(Shopping.AfterSales)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(UnitTest.WebTester)" href="../../plugin/unittest.webtester/">
-      插件(UnitTest.WebTester)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.CustomTranslate)" href="../../plugin/common.customtranslate/">
-      插件(Common.CustomTranslate)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="实例(创建博客网站)" href="../../example/make_blog/">
-      实例(创建博客网站)
-    </a>
-    
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
+          <div id="main-content" class="span9">
             
               
-              <li>
-                <a href="https://github.com/zkweb-framework" target="_blank" title="@zkweb-framework on GitHub">
-                  @zkweb-framework on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
-</nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
-          
-            <h1>数据库管理</h1>
-          
-          <p>ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
+                <h1>数据库管理</h1><br/>
+              
+              <p>ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
 目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL。<br/>
 使用NHibernate的理由有<br/></p>
 <ul>
@@ -550,28 +303,27 @@
 <p>ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/></p>
 <h3 id="_1"><h2>添加数据表</h2></h3>
 <p>添加<code>Example\src\Database\ExampleTable.cs</code>，内容如下</p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例数据</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTable</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">long</span> <span class="n">Id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="k">virtual</span> <span class="n">DateTime</span> <span class="n">CreateTime</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例数据
+/// &lt;/summary&gt;
+public class ExampleTable {
+    public virtual long Id { get; set; }
+    public virtual string Name { get; set; }
+    public virtual DateTime CreateTime { get; set; }
+}
 
-<span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例数据表的结构</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[ExportMany]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTableMap</span> <span class="p">:</span> <span class="n">ClassMap</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="nf">ExampleTableMap</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">Id</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-        <span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Name</span><span class="p">).</span><span class="n">Length</span><span class="p">(</span><span class="m">0</span><span class="n">xffff</span><span class="p">);</span> <span class="c1">// 0xffff `== no limit, you can confirm later</span>
-        <span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">).</span><span class="n">Not</span><span class="p">.</span><span class="n">Nullable</span><span class="p">();</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+/// &lt;summary&gt;
+/// 示例数据表的结构
+/// &lt;/summary&gt;
+[ExportMany]
+public class ExampleTableMap : ClassMap&lt;ExampleTable&gt; {
+    public ExampleTableMap() {
+        Id(e =&gt; e.Id);
+        Map(e =&gt; e.Name).Length(0xffff); // 0xffff `== no limit, you can confirm later
+        Map(e =&gt; e.CreateTime).Not.Nullable();
+    }
+}
+</code></pre>
 
 <p>添加完毕后刷新浏览器可以看到数据库中多出这个表。<br/>
 更多用法可以参考FluentNHibernte的文档。<br/>
@@ -580,14 +332,12 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 <h3 id="_2"><h2>升级数据表</h2></h3>
 <p>在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
 在ExampleTable中添加以下成员<br/></p>
-<div class="code"><pre><span></span><span class="k">public</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">Deleted</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">public virtual bool Deleted { get; set; }
+</code></pre>
 
 <p>在ExampleTableMap的构造函数中添加以下行<br/></p>
-<div class="code"><pre><span></span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Deleted</span><span class="p">);</span>
-</pre></div>
-
+<pre><code class="csharp">Map(e =&gt; e.Deleted);
+</code></pre>
 
 <p>保存后刷新浏览器即可看到效果。<br/>
 注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
@@ -600,70 +350,66 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 <p>新增数据<br/>
 使用<code>ref data</code>的原因是因为NHibernate插入数据时会返回另外一个对象。<br/>
 操作完毕后需要使用<code>SaveChanges</code>提交事务，为了保证数据一致性ZKWeb中的操作都会默认开启事务。<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/add_data&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">AddData</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span>
-            <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span><span class="p">,</span>
-            <span class="n">CreateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">,</span>
-            <span class="n">Deleted</span> <span class="p">=</span> <span class="k">false</span>
-        <span class="p">};</span>
-        <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
-        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/add_data&quot;)]
+public string AddData() {
+    var databaseManager = Application.Ioc.Resolve&lt;DatabaseManager&gt;();
+    using (var context = databaseManager.GetContext()) {
+        var data = new ExampleTable() {
+            Name = &quot;test&quot;,
+            CreateTime = DateTime.UtcNow,
+            Deleted = false
+        };
+        context.Save(ref data);
+        context.SaveChanges(); // don't forget this
+    }
+    return &quot;success&quot;;
+}
+</code></pre>
 
 <p>修改数据<br/>
 这里会修改表中的所有数据。<br/>
 和新增数据一样，修改数据也会使用<code>Save</code>函数，但是修改操作应该在后面的参数中实现，<br/>
 这样使用数据库事件可以捕捉到修改前和修改后的数据。<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/update_data&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">UpdateData</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">data</span> <span class="k">in</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;())</span> <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">localData</span> <span class="p">=</span> <span class="n">data</span><span class="p">;</span>
-            <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">localData</span><span class="p">,</span> <span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
-        <span class="p">}</span>
-        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
-    <span class="p">}</span>
-    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/update_data&quot;)]
+public string UpdateData() {
+    var databaseManager = Application.Ioc.Resolve&lt;DatabaseManager&gt;();
+    using (var context = databaseManager.GetContext()) {
+        foreach (var data in context.Query&lt;ExampleTable&gt;()) {
+            var localData = data;
+            context.Save(ref localData, d =&gt; d.Name = &quot;updated&quot;);
+        }
+        context.SaveChanges(); // don't forget this
+    }
+    return &quot;success&quot;;
+}
+</code></pre>
 
 <p>查询数据<br/>
 这里返回没有更新的数据内容。<br/>
 查询时不需要调用<code>SaveChanges</code>函数。<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/query_data&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">QueryData</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">notUpdated</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;()</span>
-            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">!=</span> <span class="s">&quot;updated&quot;</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
-        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;these objects are not updated:\r\n{0}&quot;</span><span class="p">,</span>
-            <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">notUpdated</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">));</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/query_data&quot;)]
+public string QueryData() {
+    var databaseManager = Application.Ioc.Resolve&lt;DatabaseManager&gt;();
+    using (var context = databaseManager.GetContext()) {
+        var notUpdated = context.Query&lt;ExampleTable&gt;()
+            .Where(t =&gt; t.Name != &quot;updated&quot;).ToList();
+        return string.Format(&quot;these objects are not updated:\r\n{0}&quot;,
+            JsonConvert.SerializeObject(notUpdated, Formatting.Indented));
+    }
+}
+</code></pre>
 
 <p>删除数据<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/remove_data&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">RemoveData</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
-    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">GetContext</span><span class="p">())</span> <span class="p">{</span>
-        <span class="kt">long</span> <span class="n">deleted</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">DeleteWhere</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
-        <span class="n">context</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span> <span class="c1">// don&#39;t forget this</span>
-        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} objects are removed&quot;</span><span class="p">,</span> <span class="n">deleted</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/remove_data&quot;)]
+public string RemoveData() {
+    var databaseManager = Application.Ioc.Resolve&lt;DatabaseManager&gt;();
+    using (var context = databaseManager.GetContext()) {
+        long deleted = context.DeleteWhere&lt;ExampleTable&gt;(d =&gt; d.Name == &quot;updated&quot;);
+        context.SaveChanges(); // don't forget this
+        return string.Format(&quot;{0} objects are removed&quot;, deleted);
+    }
+}
+</code></pre>
 
 <h3 id="_4"><h2>数据事件</h2></h3>
 <p>ZKWeb支持定义事件监听数据的增删查改<br/>
@@ -673,145 +419,115 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 <p>保存事件的示例
 添加<code>Example\src\DataCallbacks\ExampleDataSaveCallback.cs</code>，内容如下<br/>
 这个处理器会在数据插入或名称改变时记录到日志。<br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 保存事件的示例</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[ExportMany]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleDataSaveCallback</span> <span class="p">:</span> <span class="n">IDataSaveCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="k">private</span> <span class="kt">long</span> <span class="n">IdBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">private</span> <span class="kt">string</span> <span class="n">NameBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 保存事件的示例
+/// &lt;/summary&gt;
+[ExportMany]
+public class ExampleDataSaveCallback : IDataSaveCallback&lt;ExampleTable&gt; {
+    private long IdBeforeSave { get; set; }
+    private string NameBeforeSave { get; set; }
 
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeSave</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">IdBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-        <span class="n">NameBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
-    <span class="p">}</span>
+    public void BeforeSave(DatabaseContext context, ExampleTable data) {
+        IdBeforeSave = data.Id;
+        NameBeforeSave = data.Name;
+    }
 
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterSave</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">IdBeforeSave</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data inserted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">NameBeforeSave</span> <span class="p">!=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data name changed, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    public void AfterSave(DatabaseContext context, ExampleTable data) {
+        var logManager = Application.Ioc.Resolve&lt;LogManager&gt;();
+        if (IdBeforeSave &lt;= 0) {
+            logManager.LogDebug(string.Format(&quot;example data inserted, id is {0}&quot;, data.Id));
+        } else if (NameBeforeSave != data.Name) {
+            logManager.LogDebug(string.Format(&quot;example data name changed, id is {0}&quot;, data.Id));
+        }
+    }
+}
+</code></pre>
 
 <p>添加或更新数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
 <p>删除事件的示例<br/>
 添加<code>Example\src\DataCallbacks\ExampleDataDeleteCallback.cs</code>，内容如下<br/>
 这个处理器会在数据删除时记录到日志。<br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 删除事件的示例</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[ExportMany]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleDataDeleteCallback</span> <span class="p">:</span> <span class="n">IDataDeleteCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeDelete</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 删除事件的示例
+/// &lt;/summary&gt;
+[ExportMany]
+public class ExampleDataDeleteCallback : IDataDeleteCallback&lt;ExampleTable&gt; {
+    public void BeforeDelete(DatabaseContext context, ExampleTable data) {
+    }
 
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterDelete</span><span class="p">(</span><span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
-        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data deleted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    public void AfterDelete(DatabaseContext context, ExampleTable data) {
+        var logManager = Application.Ioc.Resolve&lt;LogManager&gt;();
+        logManager.LogDebug(string.Format(&quot;example data deleted, id is {0}&quot;, data.Id));
+    }
+}
+</code></pre>
 
 <p>删除数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
 <h3 id="_5"><h2>原生查询</h2></h3>
 <p>ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
 但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/></p>
 <p>NHibernate的会话可以通过<code>context.Session</code>获取到。</p>
-<div class="code"><pre><span></span><span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">new</span> <span class="n">ExampleTable</span><span class="p">());</span>
-</pre></div>
-
+<pre><code class="csharp">context.Session.Save(new ExampleTable());
+</code></pre>
 
 <p>执行储存过程（添加、更新或删除）</p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">CreateSQLQuery</span><span class="p">(</span><span class="s">&quot;exec some_update_sp @arg&quot;</span><span class="p">);</span>
-<span class="n">query</span><span class="p">.</span><span class="n">SetParameter</span><span class="p">(</span><span class="s">&quot;arg&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
-<span class="kt">int</span> <span class="n">affected</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">ExecuteUpdate</span><span class="p">();</span>
-</pre></div>
-
+<pre><code class="csharp">var query = context.Session.CreateSQLQuery(&quot;exec some_update_sp @arg&quot;);
+query.SetParameter(&quot;arg&quot;, 1);
+int affected = query.ExecuteUpdate();
+</code></pre>
 
 <p>执行储存过程（查询）</p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Session</span><span class="p">.</span><span class="n">CreateSQLQuery</span><span class="p">(</span><span class="s">&quot;exec some_query_sp @arg&quot;</span><span class="p">);</span>
-<span class="n">query</span><span class="p">.</span><span class="n">SetParameter</span><span class="p">(</span><span class="s">&quot;arg&quot;</span><span class="p">,</span> <span class="m">1</span><span class="p">);</span>
-<span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Enumerable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;();</span>
-</pre></div>
-          <aside class="copyright" role="note">
+<pre><code class="csharp">var query = context.Session.CreateSQLQuery(&quot;exec some_query_sp @arg&quot;);
+query.SetParameter(&quot;arg&quot;, 1);
+var result = query.Enumerable&lt;ExampleTable&gt;();
+</code></pre>
             
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
-              
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
-      
-        <a href="../localize/" title="本地化">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
-            </div>
-            <div class="stretch">
-              <div class="title">
-                本地化
-              </div>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../unittest/" title="单元测试">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                单元测试
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-  </nav>
 
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
-    
-    
-  </body>
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
 </html>

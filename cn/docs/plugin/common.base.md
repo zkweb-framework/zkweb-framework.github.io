@@ -540,6 +540,9 @@ UnitOfWork.Read(context => {
 	- 描画Html标签
 	- 需要传入类型是`IDictionary<string, string>`的参数
 	- 例: `{{ attribtues | html_attributes }}`
+- json
+	- 使用Json序列化对象
+	- 例: `{{ obj | json }}`
 
 ### <h2>静态文件处理器</h2>
 

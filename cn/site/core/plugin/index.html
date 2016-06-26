@@ -1,569 +1,322 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
-    
-      
-        <title>插件系统 - ZKWeb框架文档</title>
-      
-      
-      
-      
-    
-    <meta property="og:url" content="None">
-    <meta property="og:title" content="ZKWeb框架文档">
-    <meta property="og:image" content="None/../../">
-    <meta name="apple-mobile-web-app-title" content="ZKWeb框架文档">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../None">
-    <link rel="icon" type="image/x-icon" href="../../None">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-0dac3e5884.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
-    
-    
-      
-      
-      
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=微软雅黑:400,700|微软雅黑">
-      <style>
-        body, input {
-          font-family: '微软雅黑', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: '微软雅黑', 'Courier New', 'Courier', monospace;
-        }
-      </style>
-    
-    
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
-    
-  </head>
-  
-  
-  
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>插件系统 - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="插件系统, 插件系统">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../controller/">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../config/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
             
-          </span>
-        
-        插件系统
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../..">框架介绍</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../gettingstart/">首次运行</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../config/">网站配置</a>
+                  </li>
+                  
+                  <li class="active" >
+                    <a href="./">插件系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../controller/">控制器和模板系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../localize/">本地化</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../database/">数据库管理</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unittest/">单元测试</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../../plugin/common.base/">基础插件 (Common.Base)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.captcha/">验证码 (Common.Captcha)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.admin/">管理员 (Common.Admin)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.menupage/">菜单页 (Common.MenuPage)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.adminsettings/">管理员设置 (Common.AdminSettings)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.userpanel/">用户中心 (Common.UserPanel)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.usercontact/">联系人 (Common.UserContact)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.genericclass/">通用分类 (Common.GenericClass)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.generictag/">通用标签 (Common.GenericTag)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.genericrecord/">通用记录 (Common.GenericRecord)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.languageswitcher/">语言切换器 (Common.LanguageSwitcher)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.currency/">货币 (Common.Currency)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.pesudostatic/">伪静态 (Common.PesudoStatic)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.region/">地区 (Common.Region)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.serialgenerate/">流水号 (Common.SerialGenerate)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment/">支付 (Finance.Payment)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.alipay/">支付宝 (Finance.Payment.Alipay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.tenpay/">财付通 (Finance.Payment.Tenpay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.payment.wechat/">微信支付 (Finance.Payment.WeChat)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.ckeditor/">CKEditor (CMS.CKEditor)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.imagebrowser/">图片管理器 (CMS.ImageBrowser)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/cms.atricle/">文章 (CMS.Article)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.product/">商品 (Shopping.Product)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.logistics/">物流 (Shopping.Logistics)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.order/">订单 (Shopping.Order)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/shopping.aftersales/">售后 (Shopping.AfterSales)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/unittest.webtester/">网页测试运行器 (UnitTest.WebTester)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../plugin/common.customtranslate/">自定义翻译 (Common.CustomTranslate)</a>
+                  </li>
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
       </div>
     </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/zkweb-framework" title="@zkweb-framework on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
-  
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          ZKWeb框架文档
-          <span class="version">
-            
-          </span>
-        </strong>
-        
-      </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
-          
-            
-  <li>
-    <a class="" title="框架介绍" href="../..">
-      框架介绍
-    </a>
-    
-  </li>
 
-          
-            
-  <li>
-    <a class="" title="首次运行" href="../gettingstart/">
-      首次运行
-    </a>
-    
-  </li>
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="网站配置" href="../config/">
-      网站配置
-    </a>
-    
-  </li>
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
 
-          
-            
-  <li>
-    <a class="current" title="插件系统" href="./">
-      插件系统
-    </a>
-    
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="插件的目录结构" href="#_1">
-                插件的目录结构
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="创建插件" href="#_2">
-                创建插件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="引用插件" href="#_3">
-                引用插件
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="添加插件说明" href="#_4">
-                添加插件说明
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="添加代码" href="#_5">
-                添加代码
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Ioc容器" href="#ioc">
-                Ioc容器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Ioc容器的使用例子" href="#ioc_1">
-                Ioc容器的使用例子
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="组件注册顺序" href="#_6">
-                组件注册顺序
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="调试插件" href="#_7">
-                调试插件
-              </a>
-            </li>
-          
-        </ul>
-      
-    
-  </li>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
 
-          
-            
-  <li>
-    <a class="" title="控制器和模板系统" href="../controller/">
-      控制器和模板系统
-    </a>
-    
-  </li>
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
 
-          
-            
-  <li>
-    <a class="" title="本地化" href="../localize/">
-      本地化
-    </a>
-    
-  </li>
+                
+                  <li class="main">
+                    <a href="#_1">插件的目录结构</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="数据库管理" href="../database/">
-      数据库管理
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_2">创建插件</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="单元测试" href="../unittest/">
-      单元测试
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_3">引用插件</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Base)" href="../../plugin/common.base/">
-      插件(Common.Base)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_4">添加插件说明</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Captcha)" href="../../plugin/common.captcha/">
-      插件(Common.Captcha)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_5">添加代码</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Admin)" href="../../plugin/common.admin/">
-      插件(Common.Admin)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#ioc">Ioc容器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.MenuPage)" href="../../plugin/common.menupage/">
-      插件(Common.MenuPage)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#ioc_1">Ioc容器的使用例子</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.AdminSettings)" href="../../plugin/common.adminsettings/">
-      插件(Common.AdminSettings)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_6">组件注册顺序</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserPanel)" href="../../plugin/common.userpanel/">
-      插件(Common.UserPanel)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_7">调试插件</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserContact)" href="../../plugin/common.usercontact/">
-      插件(Common.UserContact)
-    </a>
-    
-  </li>
+                  
+                
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericClass)" href="../../plugin/common.genericclass/">
-      插件(Common.GenericClass)
-    </a>
-    
-  </li>
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericTag)" href="../../plugin/common.generictag/">
-      插件(Common.GenericTag)
-    </a>
-    
-  </li>
+            </div>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericRecord)" href="../../plugin/common.genericrecord/">
-      插件(Common.GenericRecord)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.LanguageSwitcher)" href="../../plugin/common.languageswitcher/">
-      插件(Common.LanguageSwitcher)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.Currency)" href="../../plugin/common.currency/">
-      插件(Common.Currency)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.PesudoStatic)" href="../../plugin/common.pesudostatic/">
-      插件(Common.PesudoStatic)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.Region)" href="../../plugin/common.region/">
-      插件(Common.Region)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../../plugin/common.serialgenerate/">
-      插件(Common.SerialGenerate)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment)" href="../../plugin/common.payment/">
-      插件(Finance.Payment)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Alipay)" href="../../plugin/common.payment.alipay/">
-      插件(Finance.Payment.Alipay)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Tenpay)" href="../../plugin/common.payment.tenpay/">
-      插件(Finance.Payment.Tenpay)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.WeChat)" href="../../plugin/common.payment.wechat/">
-      插件(Finance.Payment.WeChat)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.CKEditor)" href="../../plugin/cms.ckeditor/">
-      插件(CMS.CKEditor)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.ImageBrowser)" href="../../plugin/cms.imagebrowser/">
-      插件(CMS.ImageBrowser)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.Article)" href="../../plugin/cms.atricle/">
-      插件(CMS.Article)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Product)" href="../../plugin/shopping.product/">
-      插件(Shopping.Product)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Logistics)" href="../../plugin/shopping.logistics/">
-      插件(Shopping.Logistics)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Order)" href="../../plugin/shopping.order/">
-      插件(Shopping.Order)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.AfterSales)" href="../../plugin/shopping.aftersales/">
-      插件(Shopping.AfterSales)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(UnitTest.WebTester)" href="../../plugin/unittest.webtester/">
-      插件(UnitTest.WebTester)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.CustomTranslate)" href="../../plugin/common.customtranslate/">
-      插件(Common.CustomTranslate)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="实例(创建博客网站)" href="../../example/make_blog/">
-      实例(创建博客网站)
-    </a>
-    
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
+          <div id="main-content" class="span9">
             
               
-              <li>
-                <a href="https://github.com/zkweb-framework" target="_blank" title="@zkweb-framework on GitHub">
-                  @zkweb-framework on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
-</nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
-          
-            <h1>插件系统</h1>
-          
-          <p>ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。<br/>
+                <h1>插件系统</h1><br/>
+              
+              <p>ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。<br/>
 插件的编译由核心框架完成，不依赖VS。<br/>
 下面使用VS创建插件是因为编写插件时可以有代码提示和调试支持。<br/></p>
 <h3 id="_1"><h2>插件的目录结构</h2></h3>
@@ -623,30 +376,28 @@ ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。<
 <p><img alt="" src="../../img/add_plugin.jpg" /></p>
 <h3 id="_4"><h2>添加插件说明</h2></h3>
 <p>在<strong>Example</strong>文件夹下创建<strong>plugin.json</strong>，内容如下</p>
-<div class="code"><pre><span></span>{
+<pre><code>{
     &quot;Name&quot;: &quot;Example&quot;,
     &quot;Description&quot;: &quot;Example plugin for document&quot;
 }
-</pre></div>
-
+</code></pre>
 
 <p>刷新关于网站即可看到新的名称和说明。</p>
 <h3 id="_5"><h2>添加代码</h2></h3>
 <p>插件的代码都保存在<strong>src</strong>文件夹下，可以参考文档顶部的目录结构。<br/></p>
 <p>这里添加在插件加载时输出日志的处理:<br/>
 在<strong>src</strong>文件夹下创建<strong>Plugin.cs</strong>，内容如下（引用和命名空间省略，后面的文档也如此）<br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 插件加载时输出一行日志</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[ExportMany]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">Plugin</span> <span class="p">:</span> <span class="n">IPlugin</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="nf">Plugin</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
-        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="s">&quot;Example plugin loaded&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 插件加载时输出一行日志
+/// &lt;/summary&gt;
+[ExportMany]
+public class Plugin : IPlugin {
+    public Plugin() {
+        var logManager = Application.Ioc.Resolve&lt;LogManager&gt;();
+        logManager.LogDebug(&quot;Example plugin loaded&quot;);
+    }
+}
+</code></pre>
 
 <p>刷新浏览器，在<strong>App_Data/logs</strong>下可以看到输出的日志。<br/>
 ExportMany和Ioc将在下一节解释。<br/></p>
@@ -665,24 +416,23 @@ ZKWeb考虑到性能，内存占用和代码量，不使用构造函数注入。
 <p>ZKWeb在扫描类型时只会扫描公开的类型，如果类型标记了Export属性但是修饰符是private或者internal则不会被注册。<br/></p>
 <h3 id="ioc_1"><h2>Ioc容器的使用例子</h2></h3>
 <p>以下是简单的使用例子。</p>
-<div class="code"><pre><span></span><span class="k">void</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">animals</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">&gt;()</span>
-    <span class="c1">// animals contains instances of Dog and Cow</span>
+<pre><code class="csharp">void Example() {
+    var animals = Application.Ioc.ResolveMany&lt;IAnimal&gt;()
+    // animals contains instances of Dog and Cow
 
-    <span class="kt">var</span> <span class="n">animalManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
-    <span class="c1">// animalManager is AnimalManager</span>
+    var animalManager = Application.Ioc.Resolve&lt;IAnimalManager&gt;();
+    // animalManager is AnimalManager
 
-    <span class="kt">var</span> <span class="n">otherAnimalManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
-    <span class="c1">// animalManager only create once, otherAnimalManager == animalManager</span>
-<span class="p">}</span>
-<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
-<span class="na">[ExportMany]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
-<span class="na">[ExportMany]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">Cow</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+    var otherAnimalManager = Application.Ioc.Resolve&lt;IAnimalManager&gt;();
+    // animalManager only create once, otherAnimalManager == animalManager
+}
+public interface IAnimal { }
+[ExportMany] public class Dog : IAnimal { }
+[ExportMany] public class Cow : IAnimal { }
 
-<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimalManager</span> <span class="p">{</span> <span class="p">}</span>
-<span class="na">[ExportMany, SingletonUsage]</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">AnimalManager</span> <span class="p">:</span> <span class="n">IAnimalManager</span> <span class="p">{</span> <span class="p">}</span>
-</pre></div>
-
+public interface IAnimalManager { }
+[ExportMany, SingletonUsage] public class AnimalManager : IAnimalManager { }
+</code></pre>
 
 <h3 id="_6"><h2>组件注册顺序</h2></h3>
 <p>插件的定义顺序会影响到组件注册顺序，例如<code>Plugins: [ "A", "B" ]</code>，<br/>
@@ -696,79 +446,53 @@ Asp.Net和Owin选择iisexpress.exe。<br/>
 Asp.Net Core选择ZKWeb.AspNetCore.exe。<br/></p>
 <p>第二种是把需要调试的文件拖动到打开托管项目的VS中，然后在里面下断点。<br/></p>
 <p><img alt="" src="../../img/attach_process.jpg" /></p>
-          <aside class="copyright" role="note">
             
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
-              
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
-      
-        <a href="../config/" title="网站配置">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
-            </div>
-            <div class="stretch">
-              <div class="title">
-                网站配置
-              </div>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../controller/" title="控制器和模板系统">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                控制器和模板系统
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-  </nav>
 
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
-    
-    
-  </body>
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
 </html>

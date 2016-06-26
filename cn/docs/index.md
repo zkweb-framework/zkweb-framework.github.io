@@ -1,14 +1,10 @@
-ZKWeb是一个用于快速开发网站的框架。<br/>
-提供了编辑即编译，和全自动管理数据库结构的功能。<br/>
-模板系统和自动生成组件参考了Django的做法，并遵从**Don't repeat yourself**原则。<br/>
+ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
+提供了动态插件和全自动管理数据库结构的功能。<br/>
+模板系统和自动生成页面参考了Django的做法，并遵从Don't repeat yourself原则。<br/>
 
-框架更注重功能的分离而不是层次的分离，<br/>
-每个插件程序集可以包含功能所需要的业务处理，数据库处理，控制器和模板。<br/>
-插件系统可以实现相同的业务代码提供给不同的客户时，只需要写一次并只管理一份代码。<br/>
-
-ZKWeb目前同时提供**Asp.Net**, **Asp.Net Core**, **Owin**版本。<br/>
+ZKWeb目前同时提供Asp.Net, Asp.Net Core, Owin版本。<br/>
 所有版本都兼容相同的插件。<br/>
-编写插件应该使用**ZKWebStandard**提供的抽象层而不去依赖**Asp.Net**或**Asp.Net Core**。<br/>
+编写插件应该使用ZKWebStandard提供的抽象层而不去依赖Asp.Net或Asp.Net Core。<br/>
 
 ### <h2>项目地址</h2>
 

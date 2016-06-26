@@ -1,638 +1,390 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
-<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
-    
-      
-        <title>插件(Common.Base) - ZKWeb框架文档</title>
-      
-      
-      
-      
-    
-    <meta property="og:url" content="None">
-    <meta property="og:title" content="ZKWeb框架文档">
-    <meta property="og:image" content="None/../../">
-    <meta name="apple-mobile-web-app-title" content="ZKWeb框架文档">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    
-    
-    <link rel="shortcut icon" type="image/x-icon" href="../../None">
-    <link rel="icon" type="image/x-icon" href="../../None">
-    <style>
-      @font-face {
-      	font-family: 'Icon';
-      	src: url('../../assets/fonts/icon.eot?52m981');
-      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
-               format('embedded-opentype'),
-      		   url('../../assets/fonts/icon.woff?52m981')
-               format('woff'),
-      		   url('../../assets/fonts/icon.ttf?52m981')
-               format('truetype'),
-      		   url('../../assets/fonts/icon.svg?52m981#icon')
-               format('svg');
-      	font-weight: normal;
-      	font-style: normal;
-      }
-    </style>
-    <link rel="stylesheet" href="../../assets/stylesheets/application-0dac3e5884.css">
-    
-      <link rel="stylesheet" href="../../assets/stylesheets/palettes-05ab2406df.css">
-    
-    
-      
-      
-      
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=微软雅黑:400,700|微软雅黑">
-      <style>
-        body, input {
-          font-family: '微软雅黑', Helvetica, Arial, sans-serif;
-        }
-        pre, code {
-          font-family: '微软雅黑', 'Courier New', 'Courier', monospace;
-        }
-      </style>
-    
-    
-    <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
-    
-  </head>
-  
-  
-  
-  <body class="palette-primary-blue-grey palette-accent-blue-grey">
-    
-    <div class="backdrop">
-      <div class="backdrop-paper"></div>
-    </div>
-    <input class="toggle" type="checkbox" id="toggle-drawer">
-    <input class="toggle" type="checkbox" id="toggle-search">
-    <label class="toggle-button overlay" for="toggle-drawer"></label>
-    <header class="header">
-      <nav aria-label="Header">
-  <div class="bar default">
-    <div class="button button-menu" role="button" aria-label="Menu">
-      <label class="toggle-button icon icon-menu" for="toggle-drawer">
-        <span></span>
-      </label>
-    </div>
-    <div class="stretch">
-      <div class="title">
-        
-          <span class="path">
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>基础插件 (Common.Base) - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="基础插件 (Common.Base), 基础插件 (Common.Base)">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../common.captcha/">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../../core/unittest/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
             
-          </span>
-        
-        插件(Common.Base)
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../..">框架介绍</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li >
+                    <a href="../../core/gettingstart/">首次运行</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/config/">网站配置</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/plugin/">插件系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/controller/">控制器和模板系统</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/localize/">本地化</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/database/">数据库管理</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/unittest/">单元测试</a>
+                  </li>
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                  <li class="active" >
+                    <a href="./">基础插件 (Common.Base)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.captcha/">验证码 (Common.Captcha)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.admin/">管理员 (Common.Admin)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.menupage/">菜单页 (Common.MenuPage)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.adminsettings/">管理员设置 (Common.AdminSettings)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.userpanel/">用户中心 (Common.UserPanel)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.usercontact/">联系人 (Common.UserContact)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.genericclass/">通用分类 (Common.GenericClass)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.generictag/">通用标签 (Common.GenericTag)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.genericrecord/">通用记录 (Common.GenericRecord)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.languageswitcher/">语言切换器 (Common.LanguageSwitcher)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.currency/">货币 (Common.Currency)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.pesudostatic/">伪静态 (Common.PesudoStatic)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.region/">地区 (Common.Region)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.serialgenerate/">流水号 (Common.SerialGenerate)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.payment/">支付 (Finance.Payment)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.payment.alipay/">支付宝 (Finance.Payment.Alipay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.payment.tenpay/">财付通 (Finance.Payment.Tenpay)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.payment.wechat/">微信支付 (Finance.Payment.WeChat)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../cms.ckeditor/">CKEditor (CMS.CKEditor)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../cms.imagebrowser/">图片管理器 (CMS.ImageBrowser)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../cms.atricle/">文章 (CMS.Article)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../shopping.product/">商品 (Shopping.Product)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../shopping.logistics/">物流 (Shopping.Logistics)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../shopping.order/">订单 (Shopping.Order)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../shopping.aftersales/">售后 (Shopping.AfterSales)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unittest.webtester/">网页测试运行器 (UnitTest.WebTester)</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../common.customtranslate/">自定义翻译 (Common.CustomTranslate)</a>
+                  </li>
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
       </div>
     </div>
-    
-    
-      
-      <div class="button button-github" role="button" aria-label="GitHub">
-        <a href="https://github.com/zkweb-framework" title="@zkweb-framework on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
-      </div>
-    
-    <div class="button button-search" role="button" aria-label="Search">
-      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
-    </div>
-  </div>
-  <div class="bar search">
-    <div class="button button-close" role="button" aria-label="Close">
-      <label class="toggle-button icon icon-back" for="toggle-search"></label>
-    </div>
-    <div class="stretch">
-      <div class="field">
-        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
-      </div>
-    </div>
-    <div class="button button-reset" role="button" aria-label="Search">
-      <button class="toggle-button icon icon-close" id="reset-search"></button>
-    </div>
-  </div>
-</nav>
-    </header>
-    <main class="main">
-      
-      <div class="drawer">
-        <nav aria-label="Navigation">
-  
-  <a href="/" class="project">
-    <div class="banner">
-      
-      <div class="name">
-        <strong>
-          ZKWeb框架文档
-          <span class="version">
-            
-          </span>
-        </strong>
-        
-      </div>
-    </div>
-  </a>
-  <div class="scrollable">
-    <div class="wrapper">
-      
-      <div class="toc">
-        <ul>
-          
-            
-  <li>
-    <a class="" title="框架介绍" href="../..">
-      框架介绍
-    </a>
-    
-  </li>
 
-          
-            
-  <li>
-    <a class="" title="首次运行" href="../../core/gettingstart/">
-      首次运行
-    </a>
-    
-  </li>
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="网站配置" href="../../core/config/">
-      网站配置
-    </a>
-    
-  </li>
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="插件系统" href="../../core/plugin/">
-      插件系统
-    </a>
-    
-  </li>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
 
-          
-            
-  <li>
-    <a class="" title="控制器和模板系统" href="../../core/controller/">
-      控制器和模板系统
-    </a>
-    
-  </li>
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
 
-          
-            
-  <li>
-    <a class="" title="本地化" href="../../core/localize/">
-      本地化
-    </a>
-    
-  </li>
+                
+                  <li class="main">
+                    <a href="#_1">通用配置</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="数据库管理" href="../../core/database/">
-      数据库管理
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_2">定时任务</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="单元测试" href="../../core/unittest/">
-      单元测试
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_3">会话</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="current" title="插件(Common.Base)" href="./">
-      插件(Common.Base)
-    </a>
-    
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="通用配置" href="#_1">
-                通用配置
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="定时任务" href="#_2">
-                定时任务
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="会话" href="#_3">
-                会话
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="css样式" href="#css">
-                css样式
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="js脚本" href="#js">
-                js脚本
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="图标字体" href="#_4">
-                图标字体
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="Ajax表格构建器" href="#ajax">
-                Ajax表格构建器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="静态表格构建器" href="#_5">
-                静态表格构建器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="表单构建器" href="#_6">
-                表单构建器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="插件提供的表单字段类型" href="#_7">
-                插件提供的表单字段类型
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="数据库操作类" href="#_8">
-                数据库操作类
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="前台页模板" href="#_9">
-                前台页模板
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="插件提供的标签和过滤器" href="#_10">
-                插件提供的标签和过滤器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="静态文件处理器" href="#_11">
-                静态文件处理器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="语言时区处理器" href="#_12">
-                语言时区处理器
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="特征类" href="#_13">
-                特征类
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="缓存的隔离策略" href="#_14">
-                缓存的隔离策略
-              </a>
-            </li>
-          
-            <li class="anchor">
-              <a title="全局过滤网址" href="#_15">
-                全局过滤网址
-              </a>
-            </li>
-          
-        </ul>
-      
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#css">css样式</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Captcha)" href="../common.captcha/">
-      插件(Common.Captcha)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#js">js脚本</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Admin)" href="../common.admin/">
-      插件(Common.Admin)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_4">图标字体</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.MenuPage)" href="../common.menupage/">
-      插件(Common.MenuPage)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#ajax">Ajax表格构建器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.AdminSettings)" href="../common.adminsettings/">
-      插件(Common.AdminSettings)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_5">静态表格构建器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserPanel)" href="../common.userpanel/">
-      插件(Common.UserPanel)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_6">表单构建器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.UserContact)" href="../common.usercontact/">
-      插件(Common.UserContact)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_7">插件提供的表单字段类型</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericClass)" href="../common.genericclass/">
-      插件(Common.GenericClass)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_8">数据库操作类</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericTag)" href="../common.generictag/">
-      插件(Common.GenericTag)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_9">前台页模板</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.GenericRecord)" href="../common.genericrecord/">
-      插件(Common.GenericRecord)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_10">插件提供的标签和过滤器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.LanguageSwitcher)" href="../common.languageswitcher/">
-      插件(Common.LanguageSwitcher)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_11">静态文件处理器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Currency)" href="../common.currency/">
-      插件(Common.Currency)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_12">语言时区处理器</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.PesudoStatic)" href="../common.pesudostatic/">
-      插件(Common.PesudoStatic)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_13">特征类</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.Region)" href="../common.region/">
-      插件(Common.Region)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_14">缓存的隔离策略</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Common.SerialGenerate)" href="../common.serialgenerate/">
-      插件(Common.SerialGenerate)
-    </a>
-    
-  </li>
+                  
+                
+                  <li class="main">
+                    <a href="#_15">全局过滤网址</a>
+                  </li>
 
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment)" href="../common.payment/">
-      插件(Finance.Payment)
-    </a>
-    
-  </li>
+                  
+                
 
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Alipay)" href="../common.payment.alipay/">
-      插件(Finance.Payment.Alipay)
-    </a>
-    
-  </li>
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
 
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.Tenpay)" href="../common.payment.tenpay/">
-      插件(Finance.Payment.Tenpay)
-    </a>
-    
-  </li>
+            </div>
+          </div>
 
-          
-            
-  <li>
-    <a class="" title="插件(Finance.Payment.WeChat)" href="../common.payment.wechat/">
-      插件(Finance.Payment.WeChat)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.CKEditor)" href="../cms.ckeditor/">
-      插件(CMS.CKEditor)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.ImageBrowser)" href="../cms.imagebrowser/">
-      插件(CMS.ImageBrowser)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(CMS.Article)" href="../cms.atricle/">
-      插件(CMS.Article)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Product)" href="../shopping.product/">
-      插件(Shopping.Product)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Logistics)" href="../shopping.logistics/">
-      插件(Shopping.Logistics)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.Order)" href="../shopping.order/">
-      插件(Shopping.Order)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Shopping.AfterSales)" href="../shopping.aftersales/">
-      插件(Shopping.AfterSales)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(UnitTest.WebTester)" href="../unittest.webtester/">
-      插件(UnitTest.WebTester)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="插件(Common.CustomTranslate)" href="../common.customtranslate/">
-      插件(Common.CustomTranslate)
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="实例(创建博客网站)" href="../../example/make_blog/">
-      实例(创建博客网站)
-    </a>
-    
-  </li>
-
-          
-        </ul>
-        
-          <hr>
-          <span class="section">The author</span>
-          <ul>
-            
+          <div id="main-content" class="span9">
             
               
-              <li>
-                <a href="https://github.com/zkweb-framework" target="_blank" title="@zkweb-framework on GitHub">
-                  @zkweb-framework on GitHub
-                </a>
-              </li>
-            
-          </ul>
-        
-      </div>
-    </div>
-  </div>
-</nav>
-      </div>
-      <article class="article">
-        <div class="wrapper">
-          
-            <h1>插件(Common.Base)</h1>
-          
-          <p>插件包含了通用性高的最基本的功能和资源，可以满足大部分网站的需求。<br/>
+                <h1>基础插件 (Common.Base)</h1><br/>
+              
+              <p>插件包含了通用性高的最基本的功能和资源，可以满足大部分网站的需求。<br/>
 在示例项目中使用这个插件时请先引用<code>Common.Base\bin\Common.Base.dll</code>，否则VS会提示错误（但不影响ZKWeb加载）。<br/></p>
 <hr />
 <h3 id="_1"><h2>通用配置</h2></h3>
 <p>通用配置可以保存网站全局使用的参数，例如网站名称和默认语言等。<br/>
 添加<code>Example\src\config\ExampleConfig.cs</code>，内容如下<br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例配置</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[GenericConfig(&quot;Example.ExampleConfig&quot;, CacheTime = 15)]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleConfig</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="kt">string</span> <span class="n">ExampleName</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-    <span class="k">public</span> <span class="kt">int</span> <span class="n">ExampleCount</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例配置
+/// &lt;/summary&gt;
+[GenericConfig(&quot;Example.ExampleConfig&quot;, CacheTime = 15)]
+public class ExampleConfig {
+    public string ExampleName { get; set; }
+    public int ExampleCount { get; set; }
+}
+</code></pre>
 
 <p>配置需要添加<code>GenericConfig</code>属性，第一个参数是保存到数据库时使用的键名，CacheTime可以指定缓存时间（秒）。<br/>
 缓存时间不会影响到网站部署到单个进程时的读取，单个进程时读取配置总能读到最新的配置。<br/>
@@ -640,24 +392,23 @@
 <p>读取和写入配置<br/>
 注意首次获取<code>ExampleConfig</code>或之前保存了null值时会返回一个新的实例，GetData不会返回null。<br/>
 在<code>ExampleController</code>下添加以下内容<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/read_config&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">ReadConfig</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">configManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">GenericConfigManager</span><span class="p">&gt;();</span>
-    <span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="n">configManager</span><span class="p">.</span><span class="n">GetData</span><span class="p">&lt;</span><span class="n">ExampleConfig</span><span class="p">&gt;();</span>
-    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-<span class="p">}</span>
+<pre><code class="csharp">[Action(&quot;example/read_config&quot;)]
+public string ReadConfig() {
+    var configManager = Application.Ioc.Resolve&lt;GenericConfigManager&gt;();
+    var config = configManager.GetData&lt;ExampleConfig&gt;();
+    return JsonConvert.SerializeObject(config);
+}
 
-<span class="na">[Action(&quot;example/write_config&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">WriteConfig</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">configManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">GenericConfigManager</span><span class="p">&gt;();</span>
-    <span class="kt">var</span> <span class="n">config</span> <span class="p">=</span> <span class="n">configManager</span><span class="p">.</span><span class="n">GetData</span><span class="p">&lt;</span><span class="n">ExampleConfig</span><span class="p">&gt;();</span>
-    <span class="n">config</span><span class="p">.</span><span class="n">ExampleName</span> <span class="p">=</span> <span class="s">&quot;updated&quot;</span><span class="p">;</span>
-    <span class="n">config</span><span class="p">.</span><span class="n">ExampleCount</span><span class="p">++;</span>
-    <span class="n">configManager</span><span class="p">.</span><span class="n">PutData</span><span class="p">(</span><span class="n">config</span><span class="p">);</span>
-    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
+[Action(&quot;example/write_config&quot;)]
+public string WriteConfig() {
+    var configManager = Application.Ioc.Resolve&lt;GenericConfigManager&gt;();
+    var config = configManager.GetData&lt;ExampleConfig&gt;();
+    config.ExampleName = &quot;updated&quot;;
+    config.ExampleCount++;
+    configManager.PutData(config);
+    return &quot;success&quot;;
+}
+</code></pre>
 
 <h3 id="_2"><h2>定时任务</h2></h3>
 <p>定时任务可以用于在网站后台执行定时处理。<br/>
@@ -666,24 +417,23 @@
 定时任务已考虑到部署到多个服务器时的情况，部署到多个服务器仍可以保证任务不被重复执行。<br/></p>
 <p>添加<code>Example\src\ScheduledTasks\ExampleTask.cs</code>，内容如下<br/>
 这个任务每15分钟写入一次日志<br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例任务</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="na">[ExportMany, SingletonReuse]</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTask</span> <span class="p">:</span> <span class="n">IScheduledTaskExecutor</span> <span class="p">{</span>
-    <span class="k">public</span> <span class="kt">string</span> <span class="n">Key</span> <span class="p">{</span> <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="s">&quot;Example.ExampleTask&quot;</span><span class="p">;</span> <span class="p">}</span> <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例任务
+/// &lt;/summary&gt;
+[ExportMany, SingletonReuse]
+public class ExampleTask : IScheduledTaskExecutor {
+    public string Key { get { return &quot;Example.ExampleTask&quot;; } }
 
-    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">ShouldExecuteNow</span><span class="p">(</span><span class="n">DateTime</span> <span class="n">lastExecuted</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">((</span><span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span> <span class="p">-</span> <span class="n">lastExecuted</span><span class="p">).</span><span class="n">TotalMinutes</span> <span class="p">&gt;</span> <span class="m">15</span><span class="p">);</span>
-    <span class="p">}</span>
+    public bool ShouldExecuteNow(DateTime lastExecuted) {
+        return ((DateTime.UtcNow - lastExecuted).TotalMinutes &gt; 15);
+    }
 
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">Execute</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
-        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="s">&quot;Example task executed&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    public void Execute() {
+        var logManager = Application.Ioc.Resolve&lt;LogManager&gt;();
+        logManager.LogDebug(&quot;Example task executed&quot;);
+    }
+}
+</code></pre>
 
 <h3 id="_3"><h2>会话</h2></h3>
 <p>考虑到网站部署到多个服务器，会话应该保存到数据库中。<br/>
@@ -691,29 +441,27 @@
 <p>获取和保存会话<br/>
 在<code>ExampleController</code>下添加以下内容<br/>
 调用<code>SaveSession</code>可以保存之前使用<code>GetSession</code>获取的会话。<br/></p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/get_session&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">GetSession</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">sessionManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">SessionManager</span><span class="p">&gt;();</span>
-    <span class="kt">var</span> <span class="n">session</span> <span class="p">=</span> <span class="n">sessionManager</span><span class="p">.</span><span class="n">GetSession</span><span class="p">();</span>
-    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">);</span>
-<span class="p">}</span>
+<pre><code class="csharp">[Action(&quot;example/get_session&quot;)]
+public string GetSession() {
+    var sessionManager = Application.Ioc.Resolve&lt;SessionManager&gt;();
+    var session = sessionManager.GetSession();
+    return JsonConvert.SerializeObject(session, Formatting.Indented);
+}
 
-<span class="na">[Action(&quot;example/save_session&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">SaveSession</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">sessionManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">SessionManager</span><span class="p">&gt;();</span>
-    <span class="kt">var</span> <span class="n">session</span> <span class="p">=</span> <span class="n">sessionManager</span><span class="p">.</span><span class="n">GetSession</span><span class="p">();</span>
-    <span class="n">session</span><span class="p">.</span><span class="n">Items</span><span class="p">[</span><span class="s">&quot;ExampleKey&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
-    <span class="n">sessionManager</span><span class="p">.</span><span class="n">SaveSession</span><span class="p">();</span>
-    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
+[Action(&quot;example/save_session&quot;)]
+public string SaveSession() {
+    var sessionManager = Application.Ioc.Resolve&lt;SessionManager&gt;();
+    var session = sessionManager.GetSession();
+    session.Items[&quot;ExampleKey&quot;] = DateTime.UtcNow;
+    sessionManager.SaveSession();
+    return &quot;success&quot;;
+}
+</code></pre>
 
 <p>会话有过期时间，需要延长过期时间时可以使用<code>SetExpiresAtLeast</code>函数。<br/>
 以下代码设置会话最少有效一个小时<br/></p>
-<div class="code"><pre><span></span><span class="n">session</span><span class="p">.</span><span class="n">SetExpiresAtLeast</span><span class="p">(</span><span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromHours</span><span class="p">(</span><span class="m">1</span><span class="p">));</span>
-</pre></div>
-
+<pre><code class="csharp">session.SetExpiresAtLeast(TimeSpan.FromHours(1));
+</code></pre>
 
 <h3 id="css"><h2>css样式</h2></h3>
 <p>这个插件使用了以下css样式，具体用法可以参考他们的官网<br/></p>
@@ -754,93 +502,90 @@
 以下例子没有针对前台显示优化，实际在前台使用时需要其他样式。<br/>
 表格构建器可以单独使用，不一定和搜索栏构建器一起使用。<br/></p>
 <p>在<code>ExampleController</code>下添加以下内容</p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/table&quot;)]</span>
-<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Table</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">table</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AjaxTableBuilder</span><span class="p">();</span>
-    <span class="n">table</span><span class="p">.</span><span class="n">Id</span> <span class="p">=</span> <span class="s">&quot;ExampleTable&quot;</span><span class="p">;</span>
-    <span class="n">table</span><span class="p">.</span><span class="n">Target</span> <span class="p">=</span> <span class="s">&quot;/example/table/search&quot;</span><span class="p">;</span>
-    <span class="kt">var</span> <span class="n">searchBar</span> <span class="p">=</span> <span class="k">new</span> <span class="n">AjaxTableSearchBarBuilder</span><span class="p">();</span>
-    <span class="n">searchBar</span><span class="p">.</span><span class="n">TableId</span> <span class="p">=</span> <span class="n">table</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-    <span class="n">searchBar</span><span class="p">.</span><span class="n">Conditions</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="k">new</span> <span class="n">FormField</span><span class="p">(</span><span class="k">new</span> <span class="n">CheckBoxFieldAttribute</span><span class="p">(</span><span class="s">&quot;Deleted&quot;</span><span class="p">)));</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_table.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">table</span><span class="p">,</span> <span class="n">searchBar</span> <span class="p">});</span>
-<span class="p">}</span>
+<pre><code class="csharp">[Action(&quot;example/table&quot;)]
+public IActionResult Table() {
+    var table = new AjaxTableBuilder();
+    table.Id = &quot;ExampleTable&quot;;
+    table.Target = &quot;/example/table/search&quot;;
+    var searchBar = new AjaxTableSearchBarBuilder();
+    searchBar.TableId = table.Id;
+    searchBar.Conditions.Add(new FormField(new CheckBoxFieldAttribute(&quot;Deleted&quot;)));
+    return new TemplateResult(&quot;example/example_table.html&quot;, new { table, searchBar });
+}
 
-<span class="na">[Action(&quot;example/table/search&quot;, HttpMethods.POST)]</span>
-<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">TableSearch</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">json</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;json&quot;</span><span class="p">);</span>
-    <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">AjaxTableSearchRequest</span><span class="p">.</span><span class="n">FromJson</span><span class="p">(</span><span class="n">json</span><span class="p">);</span>
-    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">BuildResponseFromDatabase</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleAjaxTableCallback</span><span class="p">()</span> <span class="p">});</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">response</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
+[Action(&quot;example/table/search&quot;, HttpMethods.POST)]
+public IActionResult TableSearch() {
+    var json = HttpManager.CurrentContext.Request.Get&lt;string&gt;(&quot;json&quot;);
+    var request = AjaxTableSearchRequest.FromJson(json);
+    var response = request.BuildResponseFromDatabase(new[] { new ExampleAjaxTableCallback() });
+    return new JsonResult(response);
+}
+</code></pre>
 
 <p>添加<code>Example\templates\example\example_table.html</code>，内容如下</p>
-<div class="code"><pre><span></span>{% use_title &quot;Example Table&quot; %}
+<pre><code class="html">{% use_title &quot;Example Table&quot; %}
 {% include common.base/header.html %}
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
+&lt;div class=&quot;portlet&quot;&gt;
     {{ searchBar }}
     {{ table }}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+&lt;/div&gt;
 
 {% include common.base/footer.html %}
-</pre></div>
-
+</code></pre>
 
 <p>添加<code>Example\src\AjaxTableCallbacks\ExampleAjaxTableCallback.cs</code>，内容如下</p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例的表格搜索回调</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleAjaxTableCallback</span> <span class="p">:</span> <span class="n">IAjaxTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 构建表格时的处理，这里不使用</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnBuildTable</span><span class="p">(</span><span class="n">AjaxTableBuilder</span> <span class="n">table</span><span class="p">,</span> <span class="n">AjaxTableSearchBarBuilder</span> <span class="n">searchBar</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例的表格搜索回调
+/// &lt;/summary&gt;
+public class ExampleAjaxTableCallback : IAjaxTableCallback&lt;ExampleTable&gt; {
+    /// &lt;summary&gt;
+    /// 构建表格时的处理，这里不使用
+    /// &lt;/summary&gt;
+    public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) { }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 查询数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
-        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">))</span> <span class="p">{</span>
-            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">));</span>
-        <span class="p">}</span>
-        <span class="kt">bool</span> <span class="n">deleted</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Conditions</span><span class="p">.</span><span class="n">GetOrDefault</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;Deleted&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;on&quot;</span><span class="p">;</span>
-        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Deleted</span> <span class="p">==</span> <span class="n">deleted</span><span class="p">);</span>
-    <span class="p">}</span>
+    /// &lt;summary&gt;
+    /// 查询数据
+    /// &lt;/summary&gt;
+    public void OnQuery(
+        AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+        if (!string.IsNullOrEmpty(request.Keyword)) {
+            query = query.Where(q =&gt; q.Name.Contains(request.Keyword));
+        }
+        bool deleted = request.Conditions.GetOrDefault&lt;string&gt;(&quot;Deleted&quot;) == &quot;on&quot;;
+        query = query.Where(q =&gt; q.Deleted == deleted);
+    }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 排序数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSort</span><span class="p">(</span>
-        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-    <span class="p">}</span>
+    /// &lt;summary&gt;
+    /// 排序数据
+    /// &lt;/summary&gt;
+    public void OnSort(
+        AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+        query = query.OrderByDescending(q =&gt; q.Id);
+    }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 选择数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
-        <span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">EntityToTableRow</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    /// &lt;summary&gt;
+    /// 选择数据
+    /// &lt;/summary&gt;
+    public void OnSelect(
+        AjaxTableSearchRequest request, List&lt;EntityToTableRow&lt;ExampleTable&gt;&gt; pairs) {
+        foreach (var pair in pairs) {
+            pair.Row[&quot;Id&quot;] = pair.Entity.Id;
+            pair.Row[&quot;Name&quot;] = pair.Entity.Name;
+            pair.Row[&quot;CreateTime&quot;] = pair.Entity.CreateTime.ToClientTimeString();
+        }
+    }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 添加列和操作等</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnResponse</span><span class="p">(</span><span class="n">AjaxTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">AjaxTableSearchResponse</span> <span class="n">response</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddIdColumn</span><span class="p">(</span><span class="s">&quot;Id&quot;</span><span class="p">);</span>
-        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;Name&quot;</span><span class="p">);</span>
-        <span class="n">response</span><span class="p">.</span><span class="n">Columns</span><span class="p">.</span><span class="n">AddMemberColumn</span><span class="p">(</span><span class="s">&quot;CreateTime&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    /// &lt;summary&gt;
+    /// 添加列和操作等
+    /// &lt;/summary&gt;
+    public void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+        response.Columns.AddIdColumn(&quot;Id&quot;);
+        response.Columns.AddMemberColumn(&quot;Name&quot;);
+        response.Columns.AddMemberColumn(&quot;CreateTime&quot;);
+    }
+}
+</code></pre>
 
 <p>效果<br/>
 <img alt="" src="../../img/ajaxtable.jpg" />
@@ -854,73 +599,70 @@
 <p>静态表格构建器和Ajax表格器不同的时，构建的内容需要使用模板绑定并静态显示，不支持通过Ajax更新。<br/>
 静态表格的参数来源一般来自url。<br/></p>
 <p>在<code>ExampleController</code>下添加以下内容</p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/static_table&quot;)]</span>
-<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">StaticTable</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">StaticTableSearchRequest</span><span class="p">.</span><span class="n">FromHttpRequest</span><span class="p">();</span>
-    <span class="kt">var</span> <span class="n">response</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">BuildResponseFromDatabase</span><span class="p">(</span><span class="k">new</span><span class="p">[]</span> <span class="p">{</span> <span class="k">new</span> <span class="n">ExampleStaticTableCallback</span><span class="p">()</span> <span class="p">});</span>
-    <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_static_table.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">response</span> <span class="p">});</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/static_table&quot;)]
+public IActionResult StaticTable() {
+    var request = StaticTableSearchRequest.FromHttpRequest();
+    var response = request.BuildResponseFromDatabase(new[] { new ExampleStaticTableCallback() });
+    return new TemplateResult(&quot;example/example_static_table.html&quot;, new { response });
+}
+</code></pre>
 
 <p>添加<code>Example\templates\example\example_static_table.html</code>，内容如下</p>
-<div class="code"><pre><span></span>{% use_title &quot;Example Table&quot; %}
+<pre><code class="html">{% use_title &quot;Example Table&quot; %}
 {% include common.base/header.html %}
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+&lt;div class=&quot;portlet&quot;&gt;
+    &lt;div&gt;
         {% for row in response.Rows %}
-        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>{{ row.Name }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-            <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>{{ row.CreateTime }}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        &lt;div&gt;
+            &lt;a&gt;{{ row.Name }}&lt;/a&gt;
+            &lt;span&gt;{{ row.CreateTime }}&lt;/span&gt;
+        &lt;/div&gt;
         {% endfor %}
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    &lt;/div&gt;
     {% url_pagination response.Pagination %}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+&lt;/div&gt;
 
 {% include common.base/footer.html %}
-</pre></div>
-
+</code></pre>
 
 <p>添加<code>Example\src\StaticTableCallbacks\ExampleStaticTableCallback.cs</code>，内容如下</p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例的表格搜索回调</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleStaticTableCallback</span> <span class="p">:</span> <span class="n">IStaticTableCallback</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 查询数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnQuery</span><span class="p">(</span>
-        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">))</span> <span class="p">{</span>
-            <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Name</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Keyword</span><span class="p">));</span>
-        <span class="p">}</span>
-        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="p">!</span><span class="n">q</span><span class="p">.</span><span class="n">Deleted</span><span class="p">);</span>
-    <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例的表格搜索回调
+/// &lt;/summary&gt;
+public class ExampleStaticTableCallback : IStaticTableCallback&lt;ExampleTable&gt; {
+    /// &lt;summary&gt;
+    /// 查询数据
+    /// &lt;/summary&gt;
+    public void OnQuery(
+        StaticTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+        if (!string.IsNullOrEmpty(request.Keyword)) {
+            query = query.Where(q =&gt; q.Name.Contains(request.Keyword));
+        }
+        query = query.Where(q =&gt; !q.Deleted);
+    }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 排序数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSort</span><span class="p">(</span>
-        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">DatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="k">ref</span> <span class="n">IQueryable</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">query</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">query</span> <span class="p">=</span> <span class="n">query</span><span class="p">.</span><span class="n">OrderByDescending</span><span class="p">(</span><span class="n">q</span> <span class="p">=&gt;</span> <span class="n">q</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
-    <span class="p">}</span>
+    /// &lt;summary&gt;
+    /// 排序数据
+    /// &lt;/summary&gt;
+    public void OnSort(
+        StaticTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+        query = query.OrderByDescending(q =&gt; q.Id);
+    }
 
-    <span class="c1">/// &lt;summary&gt;</span>
-    <span class="c1">/// 选择数据</span>
-    <span class="c1">/// &lt;/summary&gt;</span>
-    <span class="k">public</span> <span class="k">void</span> <span class="nf">OnSelect</span><span class="p">(</span>
-        <span class="n">StaticTableSearchRequest</span> <span class="n">request</span><span class="p">,</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">EntityToTableRow</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">pair</span> <span class="k">in</span> <span class="n">pairs</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Id&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
-            <span class="n">pair</span><span class="p">.</span><span class="n">Row</span><span class="p">[</span><span class="s">&quot;CreateTime&quot;</span><span class="p">]</span> <span class="p">=</span> <span class="n">pair</span><span class="p">.</span><span class="n">Entity</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">.</span><span class="n">ToClientTimeString</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    /// &lt;summary&gt;
+    /// 选择数据
+    /// &lt;/summary&gt;
+    public void OnSelect(
+        StaticTableSearchRequest request, List&lt;EntityToTableRow&lt;ExampleTable&gt;&gt; pairs) {
+        foreach (var pair in pairs) {
+            pair.Row[&quot;Id&quot;] = pair.Entity.Id;
+            pair.Row[&quot;Name&quot;] = pair.Entity.Name;
+            pair.Row[&quot;CreateTime&quot;] = pair.Entity.CreateTime.ToClientTimeString();
+        }
+    }
+}
+</code></pre>
 
 <p>效果<br/>
 <img alt="" src="../../img/static_table.jpg" /></p>
@@ -929,58 +671,55 @@
 默认构建的表单都会带CSRF校验值，防止跨站攻击。<br/>
 使用例子<br/></p>
 <p>在<code>ExampleController</code>下添加以下内容</p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/form&quot;)]</span>
-<span class="na">[Action(&quot;example/form&quot;, HttpMethods.POST)]</span>
-<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Form</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">form</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleForm</span><span class="p">();</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Method</span> <span class="p">==</span> <span class="n">HttpMethods</span><span class="p">.</span><span class="n">POST</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="n">form</span><span class="p">.</span><span class="n">Submit</span><span class="p">());</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">form</span><span class="p">.</span><span class="n">Bind</span><span class="p">();</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;example/example_form.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">form</span> <span class="p">});</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/form&quot;)]
+[Action(&quot;example/form&quot;, HttpMethods.POST)]
+public IActionResult Form() {
+    var form = new ExampleForm();
+    if (HttpManager.CurrentContext.Request.Method == HttpMethods.POST) {
+        return new JsonResult(form.Submit());
+    } else {
+        form.Bind();
+        return new TemplateResult(&quot;example/example_form.html&quot;, new { form });
+    }
+}
+</code></pre>
 
 <p>添加<code>Example\templates\example\example_form.html</code>，内容如下</p>
-<div class="code"><pre><span></span>{% use_title &quot;Example Form&quot; %}
+<pre><code class="html">{% use_title &quot;Example Form&quot; %}
 {% include common.base/header.html %}
 
-<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;portlet&quot;</span><span class="p">&gt;</span>
+&lt;div class=&quot;portlet&quot;&gt;
     {{ form }}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+&lt;/div&gt;
 
 {% include common.base/footer.html %}
-</pre></div>
-
+</code></pre>
 
 <p>添加<code>Example\src\Forms\ExampleForm.cs</code>，内容如下<br/>
 提示<code>[Required]</code>属性找不到时请引用程序集<code>System.ComponentModel.DataAnnotations</code><br/></p>
-<div class="code"><pre><span></span><span class="c1">/// &lt;summary&gt;</span>
-<span class="c1">/// 示例表单</span>
-<span class="c1">/// &lt;/summary&gt;</span>
-<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleForm</span> <span class="p">:</span> <span class="n">ModelFormBuilder</span> <span class="p">{</span>
-<span class="na">    [Required]</span>
-<span class="na">    [StringLength(100)]</span>
-<span class="na">    [TextBoxField(&quot;Name&quot;, &quot;Please enter name&quot;)]</span>
-    <span class="k">public</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
-<span class="na">    [Required]</span>
-<span class="na">    [TextBoxField(&quot;Age&quot;, &quot;Please enter age&quot;)]</span>
-    <span class="k">public</span> <span class="kt">int</span> <span class="n">Age</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例表单
+/// &lt;/summary&gt;
+public class ExampleForm : ModelFormBuilder {
+    [Required]
+    [StringLength(100)]
+    [TextBoxField(&quot;Name&quot;, &quot;Please enter name&quot;)]
+    public string Name { get; set; }
+    [Required]
+    [TextBoxField(&quot;Age&quot;, &quot;Please enter age&quot;)]
+    public int Age { get; set; }
 
-    <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnBind</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;Tom&quot;</span><span class="p">;</span>
-        <span class="n">Age</span> <span class="p">=</span> <span class="m">25</span><span class="p">;</span>
-    <span class="p">}</span>
+    protected override void OnBind() {
+        Name = &quot;Tom&quot;;
+        Age = 25;
+    }
 
-    <span class="k">protected</span> <span class="k">override</span> <span class="kt">object</span> <span class="nf">OnSubmit</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;Hello, {0} ({1})&quot;</span><span class="p">,</span> <span class="n">Name</span><span class="p">,</span> <span class="n">Age</span><span class="p">);</span>
-        <span class="k">return</span> <span class="k">new</span> <span class="p">{</span> <span class="n">message</span> <span class="p">};</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
+    protected override object OnSubmit() {
+        var message = string.Format(&quot;Hello, {0} ({1})&quot;, Name, Age);
+        return new { message };
+    }
+}
+</code></pre>
 
 <p>效果<br/>
 <img alt="" src="../../img/ajaxform.jpg" /></p>
@@ -1010,29 +749,27 @@
 <code>GenericRepository</code>提供了共通的操作函数，<code>UnitOfWork</code>负责管理数据库上下文和事务的提交。<br/>
 使用例子<br/></p>
 <p>在<code>ExampleController</code>下添加以下内容</p>
-<div class="code"><pre><span></span><span class="na">[Action(&quot;example/uow&quot;)]</span>
-<span class="k">public</span> <span class="kt">string</span> <span class="nf">Uow</span><span class="p">()</span> <span class="p">{</span>
-    <span class="c1">// insert data</span>
-    <span class="kt">string</span> <span class="n">name</span> <span class="p">=</span> <span class="n">RandomUtils</span><span class="p">.</span><span class="n">RandomString</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
-    <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">WriteData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">r</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="n">name</span> <span class="p">};</span>
-        <span class="n">r</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
-    <span class="p">});</span>
-    <span class="c1">// read inserted data</span>
-    <span class="kt">var</span> <span class="n">readData</span> <span class="p">=</span> <span class="n">UnitOfWork</span><span class="p">.</span><span class="n">ReadData</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">,</span> <span class="n">ExampleTable</span><span class="p">&gt;(</span>
-        <span class="n">r</span> <span class="p">=&gt;</span> <span class="n">r</span><span class="p">.</span><span class="n">Get</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">name</span><span class="p">));</span>
-    <span class="k">return</span> <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">readData</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-
+<pre><code class="csharp">[Action(&quot;example/uow&quot;)]
+public string Uow() {
+    // insert data
+    string name = RandomUtils.RandomString(5);
+    UnitOfWork.WriteData&lt;ExampleTable&gt;(r =&gt; {
+        var data = new ExampleTable() { Name = name };
+        r.Save(ref data);
+    });
+    // read inserted data
+    var readData = UnitOfWork.ReadData&lt;ExampleTable, ExampleTable&gt;(
+        r =&gt; r.Get(t =&gt; t.Name == name));
+    return JsonConvert.SerializeObject(readData);
+}
+</code></pre>
 
 <p><code>UnitOfWork</code>不支持嵌套，需要多个仓储使用同一个数据库时请使用<code>RepositoryResolver</code><br/></p>
-<div class="code"><pre><span></span><span class="n">UnitOfWork</span><span class="p">.</span><span class="n">Read</span><span class="p">(</span><span class="n">context</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">repository</span> <span class="p">=</span> <span class="n">RepositoryResolver</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">context</span><span class="p">);</span>
-    <span class="kt">var</span> <span class="n">otherRepository</span> <span class="p">=</span> <span class="n">RepositoryResolver</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">OtherTable</span><span class="p">&gt;(</span><span class="n">context</span><span class="p">);</span>
-<span class="p">});</span>
-</pre></div>
-
+<pre><code class="csharp">UnitOfWork.Read(context =&gt; {
+    var repository = RepositoryResolver.Resolve&lt;ExampleTable&gt;(context);
+    var otherRepository = RepositoryResolver.Resolve&lt;OtherTable&gt;(context);
+});
+</code></pre>
 
 <p>需要自定义仓储时，可以创建一个仓储类继承<code>GenericRepository</code>并注册到IoC容器，<br/>
 解决仓储时会自动使用自定义的仓储。<br/></p>
@@ -1179,6 +916,11 @@
 <li>例: <code>{{ attribtues | html_attributes }}</code></li>
 </ul>
 </li>
+<li>json<ul>
+<li>使用Json序列化对象</li>
+<li>例: <code>{{ obj | json }}</code></li>
+</ul>
+</li>
 </ul>
 <h3 id="_11"><h2>静态文件处理器</h2></h3>
 <p>这个插件提供了静态文件专用的路径<code>/static/文件路径</code>，查找规则如下<br/></p>
@@ -1214,17 +956,15 @@
 <li>RecyclableTrait (是否可回收)</li>
 </ul>
 <p>使用特征类的例子<br/></p>
-<div class="code"><pre><span></span><span class="kt">var</span> <span class="n">entityTrait</span> <span class="p">=</span> <span class="n">EntityTrait</span><span class="p">.</span><span class="n">For</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;();</span>
-<span class="kt">var</span> <span class="n">expression</span> <span class="p">=</span> <span class="n">ExpressionUtils</span><span class="p">.</span><span class="n">MakeMemberEqualiventExpression</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;(</span><span class="n">entityTrait</span><span class="p">.</span><span class="n">PrimaryKey</span><span class="p">,</span> <span class="n">id</span><span class="p">);</span>
-</pre></div>
-
+<pre><code class="csharp">var entityTrait = EntityTrait.For&lt;TData&gt;();
+var expression = ExpressionUtils.MakeMemberEqualiventExpression&lt;TData&gt;(entityTrait.PrimaryKey, id);
+</code></pre>
 
 <p>提供自定义特征类需要在插件初始化时注册到IoC容器<br/></p>
-<div class="code"><pre><span></span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterInstance</span><span class="p">(</span>
-    <span class="k">new</span> <span class="nf">EntityTrait</span><span class="p">()</span> <span class="p">{</span> <span class="n">PrimaryKey</span> <span class="p">=</span> <span class="s">&quot;Id&quot;</span><span class="p">,</span> <span class="n">PrimaryKeyType</span> <span class="p">=</span> <span class="k">typeof</span><span class="p">(</span><span class="n">Guid</span><span class="p">)</span> <span class="p">},</span>
-    <span class="n">serviceKey</span><span class="p">:</span> <span class="k">typeof</span><span class="p">(</span><span class="n">ExampleTableUseGuidPrimaryKey</span><span class="p">));</span>
-</pre></div>
-
+<pre><code class="csharp">Application.Ioc.RegisterInstance(
+    new EntityTrait() { PrimaryKey = &quot;Id&quot;, PrimaryKeyType = typeof(Guid) },
+    serviceKey: typeof(ExampleTableUseGuidPrimaryKey));
+</code></pre>
 
 <h3 id="_14"><h2>缓存的隔离策略</h2></h3>
 <p>插件提供了以下的缓存策略:<br/>
@@ -1237,81 +977,55 @@
 <p>为了支持伪静态等高级功能，这个插件提供了全局过滤网址的功能。<br/>
 描画a标签的href等时应该添加<code>url</code>过滤器。<br/>
 需要全局过滤网址时可以注册到<code>IUrlFilter</code>接口。<br/></p>
-<div class="code"><pre><span></span><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;{{ &quot;</span><span class="err">/</span><span class="na">example</span><span class="err">/</span><span class="na">view</span><span class="err">?</span><span class="na">id</span><span class="o">=</span><span class="s">[0]&quot;</span> <span class="err">|</span> <span class="na">format:</span> <span class="na">exampleId</span> <span class="err">|</span> <span class="na">url</span> <span class="err">}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-</pre></div>
-          <aside class="copyright" role="note">
+<pre><code class="html">&lt;a href=&quot;{{ &quot;/example/view?id=[0]&quot; | format: exampleId | url }}&quot;&gt;&lt;/a&gt;
+</code></pre>
             
-            Documentation built with
-            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
-            using the
-            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
-              Material
-            </a>
-            theme.
-          </aside>
-          
-            <footer class="footer">
-              
-  <nav class="pagination" aria-label="Footer">
-    <div class="previous">
-      
-        <a href="../../core/unittest/" title="单元测试">
-          <span class="direction">
-            Previous
-          </span>
-          <div class="page">
-            <div class="button button-previous" role="button" aria-label="Previous">
-              <i class="icon icon-back"></i>
-            </div>
-            <div class="stretch">
-              <div class="title">
-                单元测试
-              </div>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-    <div class="next">
-      
-        <a href="../common.captcha/" title="插件(Common.Captcha)">
-          <span class="direction">
-            Next
-          </span>
-          <div class="page">
-            <div class="stretch">
-              <div class="title">
-                插件(Common.Captcha)
-              </div>
-            </div>
-            <div class="button button-next" role="button" aria-label="Next">
-              <i class="icon icon-forward"></i>
-            </div>
-          </div>
-        </a>
-      
-    </div>
-  </nav>
 
-            </footer>
-          
-        </div>
-      </article>
-      <div class="results" role="status" aria-live="polite">
-        <div class="scrollable">
-          <div class="wrapper">
-            <div class="meta"></div>
-            <div class="list"></div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <script>
-      var base_url = '../..';
-      var repo_id  = '';
-    </script>
-    <script src="../../assets/javascripts/application-997097ee0c.js"></script>
-    
-    
-  </body>
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
 </html>

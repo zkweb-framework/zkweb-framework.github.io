@@ -1,55 +1,52 @@
 site_name: ZKWeb框架文档
+repo_url: https://github.com/zkweb-framework
+copyright: Copyright © 2016 303248153@github
+theme_dir: docs_theme
 
 pages:
-- 框架介绍:                        index.md
-- 首次运行:                        core/gettingstart.md
-- 网站配置:                        core/config.md
-- 插件系统:                        core/plugin.md
-- 控制器和模板系统:                 core/controller.md
-- 本地化:                          core/localize.md
-- 数据库管理:                      core/database.md
-- 单元测试:                        core/unittest.md
-- 插件(Common.Base):               plugin/common.base.md
-- 插件(Common.Captcha):            plugin/common.captcha.md
-- 插件(Common.Admin):              plugin/common.admin.md
-- 插件(Common.MenuPage):           plugin/common.menupage.md
-- 插件(Common.AdminSettings):      plugin/common.adminsettings.md
-- 插件(Common.UserPanel):          plugin/common.userpanel.md
-- 插件(Common.UserContact):        plugin/common.usercontact.md
-- 插件(Common.GenericClass):       plugin/common.genericclass.md
-- 插件(Common.GenericTag):         plugin/common.generictag.md
-- 插件(Common.GenericRecord):      plugin/common.genericrecord.md
-- 插件(Common.LanguageSwitcher):   plugin/common.languageswitcher.md
-- 插件(Common.Currency):           plugin/common.currency.md
-- 插件(Common.PesudoStatic):       plugin/common.pesudostatic.md
-- 插件(Common.Region):             plugin/common.region.md
-- 插件(Common.SerialGenerate):     plugin/common.serialgenerate.md
-- 插件(Finance.Payment):           plugin/common.payment.md
-- 插件(Finance.Payment.Alipay):    plugin/common.payment.alipay.md
-- 插件(Finance.Payment.Tenpay):    plugin/common.payment.tenpay.md
-- 插件(Finance.Payment.WeChat):    plugin/common.payment.wechat.md
-- 插件(CMS.CKEditor):              plugin/cms.ckeditor.md
-- 插件(CMS.ImageBrowser):          plugin/cms.imagebrowser.md
-- 插件(CMS.Article):               plugin/cms.atricle.md
-- 插件(Shopping.Product):          plugin/shopping.product.md
-- 插件(Shopping.Logistics):        plugin/shopping.logistics.md
-- 插件(Shopping.Order):            plugin/shopping.order.md
-- 插件(Shopping.AfterSales):       plugin/shopping.aftersales.md
-- 插件(UnitTest.WebTester):        plugin/unittest.webtester.md
-- 插件(Common.CustomTranslate):    plugin/common.customtranslate.md
-- 实例(创建博客网站):               example/make_blog.md
-
-theme: material
+- 框架入门:
+  - 框架介绍:                        index.md
+- 核心功能:
+  - 首次运行:                        core/gettingstart.md
+  - 网站配置:                        core/config.md
+  - 插件系统:                        core/plugin.md
+  - 控制器和模板系统:                 core/controller.md
+  - 本地化:                          core/localize.md
+  - 数据库管理:                      core/database.md
+  - 单元测试:                        core/unittest.md
+- 插件:
+  - 基础插件 (Common.Base):           plugin/common.base.md
+  - 验证码 (Common.Captcha):          plugin/common.captcha.md
+  - 管理员 (Common.Admin):              plugin/common.admin.md
+  - 菜单页 (Common.MenuPage):           plugin/common.menupage.md
+  - 管理员设置 (Common.AdminSettings):      plugin/common.adminsettings.md
+  - 用户中心 (Common.UserPanel):          plugin/common.userpanel.md
+  - 联系人 (Common.UserContact):        plugin/common.usercontact.md
+  - 通用分类 (Common.GenericClass):       plugin/common.genericclass.md
+  - 通用标签 (Common.GenericTag):         plugin/common.generictag.md
+  - 通用记录 (Common.GenericRecord):      plugin/common.genericrecord.md
+  - 语言切换器 (Common.LanguageSwitcher):   plugin/common.languageswitcher.md
+  - 货币 (Common.Currency):           plugin/common.currency.md
+  - 伪静态 (Common.PesudoStatic):       plugin/common.pesudostatic.md
+  - 地区 (Common.Region):             plugin/common.region.md
+  - 流水号 (Common.SerialGenerate):     plugin/common.serialgenerate.md
+  - 支付 (Finance.Payment):           plugin/common.payment.md
+  - 支付宝 (Finance.Payment.Alipay):    plugin/common.payment.alipay.md
+  - 财付通 (Finance.Payment.Tenpay):    plugin/common.payment.tenpay.md
+  - 微信支付 (Finance.Payment.WeChat):    plugin/common.payment.wechat.md
+  - CKEditor (CMS.CKEditor):              plugin/cms.ckeditor.md
+  - 图片管理器 (CMS.ImageBrowser):          plugin/cms.imagebrowser.md
+  - 文章 (CMS.Article):               plugin/cms.atricle.md
+  - 商品 (Shopping.Product):          plugin/shopping.product.md
+  - 物流 (Shopping.Logistics):        plugin/shopping.logistics.md
+  - 订单 (Shopping.Order):            plugin/shopping.order.md
+  - 售后 (Shopping.AfterSales):       plugin/shopping.aftersales.md
+  - 网页测试运行器 (UnitTest.WebTester):        plugin/unittest.webtester.md
+  - 自定义翻译 (Common.CustomTranslate):    plugin/common.customtranslate.md
 
 extra:
     font:
         text: "微软雅黑"
         code: "微软雅黑"
-    palette:
-        primary: "blue grey"
-        accent: "blue grey"
     author:
         github: "zkweb-framework"
-
-markdown_extensions:
-    - codehilite(css_class=code)

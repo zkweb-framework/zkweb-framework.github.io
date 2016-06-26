@@ -2,299 +2,231 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+        
     <url>
      <loc>None/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
+        
     <url>
      <loc>None/core/gettingstart/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/config/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/plugin/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/controller/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/localize/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/database/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/core/unittest/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
+        
     <url>
      <loc>None/plugin/common.base/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.captcha/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.admin/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.menupage/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.adminsettings/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.userpanel/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.usercontact/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.genericclass/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.generictag/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.genericrecord/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.languageswitcher/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.currency/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.pesudostatic/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.region/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.serialgenerate/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.payment/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.payment.alipay/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.payment.tenpay/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.payment.wechat/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/cms.ckeditor/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/cms.imagebrowser/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/cms.atricle/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/shopping.product/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/shopping.logistics/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/shopping.order/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/shopping.aftersales/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/unittest.webtester/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
+        
     <url>
      <loc>None/plugin/common.customtranslate/</loc>
-     <lastmod>2016-06-19</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-    <url>
-     <loc>None/example/make_blog/</loc>
-     <lastmod>2016-06-19</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
+        
     
 
 </urlset>
