@@ -7,8 +7,6 @@
 	mkdocs serve
 	mkdocs build
 
-生成索引需要使用doxygen
-	http://www.stack.nl/~dimitri/doxygen/download.html
-	doxygen尽管对c#支持不好，但是生成出来的文档比shfb容易阅读
-	
-	使用doxygen打开cn\references\zkweb.Doxyfile和zkweb.plugins.Doxyfile并运行即可
+生成索引需要使用shfb
+	https://shfb.codeplex.com/
+	使用shfb打开cn\references\zkweb.shfbproj和zkweb.plugins.shfbproj并运行即可
