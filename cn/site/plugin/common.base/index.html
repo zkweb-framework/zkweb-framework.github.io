@@ -27,7 +27,7 @@
           <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../common.captcha/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../../core/unittest/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../../core/unit_test/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -50,6 +50,18 @@
                     <a href="../..">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="../../core/create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="../../core/gettingstart/">首次运行</a>
+                    <a href="../../core/website_struct/">网站结构</a>
                   </li>
                   
                   <li >
-                    <a href="../../core/config/">网站配置</a>
+                    <a href="../../core/website_config/">配置文件</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/ioc_container/">IoC容器</a>
                   </li>
                   
                   <li >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li >
-                    <a href="../../core/controller/">控制器和模板系统</a>
+                    <a href="../../core/controller/">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="../../core/localize/">本地化</a>
+                    <a href="../../core/http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="../../core/database/">数据库管理</a>
+                    <a href="../../core/template_engine/">模板引擎</a>
                   </li>
                   
                   <li >
-                    <a href="../../core/unittest/">单元测试</a>
+                    <a href="../../core/database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/multi_language/">多语言</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/multi_timezone/">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../../core/unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -351,6 +379,12 @@
                 
                   <li class="main">
                     <a href="#_15">全局过滤网址</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_16">层次结构</a>
                   </li>
 
                   
@@ -979,6 +1013,10 @@ var expression = ExpressionUtils.MakeMemberEqualiventExpression&lt;TData&gt;(ent
 需要全局过滤网址时可以注册到<code>IUrlFilter</code>接口。<br/></p>
 <pre><code class="html">&lt;a href=&quot;{{ &quot;/example/view?id=[0]&quot; | format: exampleId | url }}&quot;&gt;&lt;/a&gt;
 </code></pre>
+
+<h3 id="_16"><h2>层次结构</h2></h3>
+<p>当前核心 + 默认插件的层次结构如下<br/>
+<img alt="" src="../img/architecture.jpg" /></p>
             
 
           </div> <!--/span-->

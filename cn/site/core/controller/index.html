@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>控制器和模板系统 - ZKWeb框架文档</title>
+  <title>控制器 - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="控制器和模板系统, 控制器和模板系统">
+  <meta name="description" content="控制器, 控制器">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,7 +24,7 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../localize/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../http_handlers/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
           <a class="repo-link btn btn-inverse btn-small " rel="next" href="../plugin/">
@@ -50,6 +50,18 @@
                     <a href="../..">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="../create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="../gettingstart/">首次运行</a>
+                    <a href="../website_struct/">网站结构</a>
                   </li>
                   
                   <li >
-                    <a href="../config/">网站配置</a>
+                    <a href="../website_config/">配置文件</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../ioc_container/">IoC容器</a>
                   </li>
                   
                   <li >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li class="active" >
-                    <a href="./">控制器和模板系统</a>
+                    <a href="./">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="../localize/">本地化</a>
+                    <a href="../http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="../database/">数据库管理</a>
+                    <a href="../template_engine/">模板引擎</a>
                   </li>
                   
                   <li >
-                    <a href="../unittest/">单元测试</a>
+                    <a href="../database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_language/">多语言</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_timezone/">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -344,7 +372,7 @@
           <div id="main-content" class="span9">
             
               
-                <h1>控制器和模板系统</h1><br/>
+                <h1>控制器</h1><br/>
               
               <p>ZKWeb使用了独自编写的控制器和模板系统，不依赖于Asp.Net Webform和Mvc。<br/>
 ZKWeb提供了对Http的抽象封装，不依赖于Asp.Net和Asp.Net Core。<br/>

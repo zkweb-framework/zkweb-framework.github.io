@@ -611,3 +611,8 @@ Application.Ioc.RegisterInstance(
 ``` html
 <a href="{{ "/example/view?id=[0]" | format: exampleId | url }}"></a>
 ```
+
+### <h2>层次结构</h2>
+
+当前核心 + 默认插件的层次结构如下<br/>
+![](img/architecture.jpg)

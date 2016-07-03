@@ -5,15 +5,22 @@ theme_dir: docs_theme
 
 pages:
 - 框架入门:
-  - 框架介绍:                        index.md
+  - 框架介绍: index.md
+  - 创建项目: core/create_project.md
+  - 开发项目: core/start_project.md
+  - 发布网站: core/publish_website.md
 - 核心功能:
-  - 首次运行:                        core/gettingstart.md
-  - 网站配置:                        core/config.md
-  - 插件系统:                        core/plugin.md
-  - 控制器和模板系统:                 core/controller.md
-  - 本地化:                          core/localize.md
-  - 数据库管理:                      core/database.md
-  - 单元测试:                        core/unittest.md
+  - 网站结构: core/website_struct.md
+  - 配置文件: core/website_config.md
+  - IoC容器: core/ioc_container.md
+  - 插件系统: core/plugin.md
+  - 控制器: core/controller.md
+  - 请求和错误处理: core/http_handlers.md
+  - 模板引擎: core/template_engine.md
+  - 数据库: core/database.md
+  - 多语言: core/multi_language.md
+  - 多时区: core/multi_timezone.md
+  - 单元测试: core/unit_test.md
 - 插件:
   - 基础插件 (Common.Base):           plugin/common.base.md
   - 验证码 (Common.Captcha):          plugin/common.captcha.md

@@ -24,7 +24,7 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="core/gettingstart/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="core/create_project/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
           <a class="repo-link btn btn-inverse btn-small disabled" rel="next" >
@@ -50,6 +50,18 @@
                     <a href=".">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="core/create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="core/gettingstart/">首次运行</a>
+                    <a href="core/website_struct/">网站结构</a>
                   </li>
                   
                   <li >
-                    <a href="core/config/">网站配置</a>
+                    <a href="core/website_config/">配置文件</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/ioc_container/">IoC容器</a>
                   </li>
                   
                   <li >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li >
-                    <a href="core/controller/">控制器和模板系统</a>
+                    <a href="core/controller/">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="core/localize/">本地化</a>
+                    <a href="core/http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="core/database/">数据库管理</a>
+                    <a href="core/template_engine/">模板引擎</a>
                   </li>
                   
                   <li >
-                    <a href="core/unittest/">单元测试</a>
+                    <a href="core/database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/multi_language/">多语言</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/multi_timezone/">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="core/unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -276,19 +304,13 @@
                   
                 
                   <li class="">
-                    <a href="#_4">层次结构</a>
+                    <a href="#_4">性能数据</a>
                   </li>
 
                   
                 
                   <li class="">
-                    <a href="#_5">性能数据</a>
-                  </li>
-
-                  
-                
-                  <li class="">
-                    <a href="#_6">项目进度</a>
+                    <a href="#_5">项目进度</a>
                   </li>
 
                   
@@ -361,7 +383,7 @@
 <li>可以检测并使用Cookies指定的时区</li>
 </ul>
 </li>
-<li>自动生成表单（需要Common.Base插件）<ul>
+<li>自动生成表单（需要使用默认插件集）<ul>
 <li>支持从类型的成员自动生成表单</li>
 <li>支持客户端和服务端的表单验证</li>
 <li>支持防跨站攻击验证，默认开启</li>
@@ -369,48 +391,28 @@
 <li>支持在其他插件中扩展现有的表单</li>
 </ul>
 </li>
-<li>管理员后台（需要使用Common.Admin插件）<ul>
+<li>管理员后台（需要使用默认插件集）<ul>
 <li>基于AdminLTE</li>
 <li>同时支持电脑和手机，所有页面自适应</li>
 </ul>
 </li>
-<li>自动生成增删查改（需要使用Common.Admin插件）<ul>
+<li>自动生成增删查改（需要使用默认插件集）<ul>
 <li>允许生成管理员使用的增删查改页面</li>
+<li>允许生成会员中心使用的增删查改页面</li>
 <li>支持批量操作和高级搜索</li>
 <li>支持回收站</li>
 <li>支持自动生成和检查权限</li>
 <li>不通过代码生成器，减少程序的代码量和内存占用</li>
 </ul>
 </li>
-<li>支持伪静态<ul>
+<li>支持伪静态（需要使用默认插件集）<ul>
 <li>全局自动生成和处理伪静态url，不需要编写正则</li>
 <li>几乎没有额外的性能开销</li>
 </ul>
 </li>
 </ul>
-<h3 id="_4"><h2>层次结构</h2></h3>
-<p>当前核心 + 默认插件的层次结构如下<br/>
-<img alt="" src="./img/architecture.jpg" /></p>
-<h3 id="_5"><h2>性能数据</h2></h3>
+<h3 id="_4"><h2>性能数据</h2></h3>
 <ul>
-<li>2016-05-27 (i7 Q720 1.6Ghz x 4 core 4 threads, ab -n 2000 -c 8, vmware player 12)<ul>
-<li>首页 2.240ms, 2.165ms, 2.123ms</li>
-<li>商品列表页 2.131ms, 2.013ms, 2.132ms</li>
-<li>商品详情页 2.165ms, 2.136ms, 2.193ms</li>
-</ul>
-</li>
-<li>2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 8, vmware player 12)<ul>
-<li>首页 1.406ms, 1.441ms, 1.453ms</li>
-<li>商品列表页 1.457ms, 1.297ms, 1.207ms</li>
-<li>商品详情页 1.723ms, 1.695ms, 1.719ms</li>
-</ul>
-</li>
-<li>2016-06-08 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 4000 -c 16, real machine)<ul>
-<li>首页 0.793ms, 0.824ms, 0.809ms</li>
-<li>商品列表页 0.708ms, 0.672ms, 0.694ms</li>
-<li>商品详情页 0.853ms, 0.827ms, 0.827ms</li>
-</ul>
-</li>
 <li>2016-06-17 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net core)<ul>
 <li>首页 0.852ms, 0.799ms, 0.801ms</li>
 <li>商品列表页 0.879ms, 0.740ms, 0.742ms</li>
@@ -424,10 +426,10 @@
 </ul>
 </li>
 </ul>
-<h3 id="_6"><h2>项目进度</h2></h3>
+<h3 id="_5"><h2>项目进度</h2></h3>
 <p>核心框架已开发完毕，正在进行正式版本的测试。</br>
 业务插件仍在编写，目标是使用这套框架做一个开源的商城系统。</br></p>
-<p>讨论QQ群：522083886。</p>
+<p>讨论QQ群：522083886</p>
             
 
           </div> <!--/span-->

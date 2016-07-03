@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>本地化 - ZKWeb框架文档</title>
+  <title>配置文件 - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="本地化, 本地化">
+  <meta name="description" content="配置文件, 配置文件">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,10 +24,10 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../database/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../ioc_container/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../controller/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../website_struct/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -50,6 +50,18 @@
                     <a href="../..">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="../create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="../gettingstart/">首次运行</a>
+                    <a href="../website_struct/">网站结构</a>
+                  </li>
+                  
+                  <li class="active" >
+                    <a href="./">配置文件</a>
                   </li>
                   
                   <li >
-                    <a href="../config/">网站配置</a>
+                    <a href="../ioc_container/">IoC容器</a>
                   </li>
                   
                   <li >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li >
-                    <a href="../controller/">控制器和模板系统</a>
-                  </li>
-                  
-                  <li class="active" >
-                    <a href="./">本地化</a>
+                    <a href="../controller/">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="../database/">数据库管理</a>
+                    <a href="../http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="../unittest/">单元测试</a>
+                    <a href="../template_engine/">模板引擎</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_language/">多语言</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_timezone/">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -247,36 +275,6 @@
                 
 
                 
-                  <li class="main">
-                    <a href="#_1">添加翻译</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_2">使用翻译</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_3">转换时区</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_4">指定当前语言</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_5">指定当前时区</a>
-                  </li>
-
-                  
-                
 
                   <div class="promo">
                     <hr/>
@@ -290,78 +288,61 @@
           <div id="main-content" class="span9">
             
               
-                <h1>本地化</h1><br/>
+                <h1>配置文件</h1><br/>
               
-              <p>ZKWeb核心框架支持多语言和多时区，<br/>
-语言的翻译由<code>ITranslateProvider</code>实现。<br/>
-每个线程都可以指定不同的语言和时区。<br/>
-使用插件<code>Common.Base</code>时可以自动设置当前线程语言和时区的机制，请参考该插件的文档。<br/></p>
-<h3 id="_1"><h2>添加翻译</h2></h3>
-<p>添加<code>Example\src\Translates\zh_CN.cs</code>，内容如下</p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 中文翻译
-/// &lt;/summary&gt;
-[ExportMany, SingletonReuse]
-public class zh_CN : ITranslateProvider {
-    private static HashSet&lt;string&gt; Codes = new HashSet&lt;string&gt;() { &quot;zh-CN&quot; };
-    private static Dictionary&lt;string, string&gt; Translates = new Dictionary&lt;string, string&gt;()
-    {
-        { &quot;Example&quot;, &quot;示例&quot; }
-    };
+              <p>ZKWeb的网站配置内容都保存在<code>App_Data\config.json</code>中。<br/></p>
+<h4>配置内容</h4>
 
-    public bool CanTranslate(string code) {
-        return Codes.Contains(code);
-    }
-
-    public string Translate(string text) {
-        return Translates.GetOrDefault(text);
-    }
+<pre><code class="json">{
+    &quot;Database&quot;: 数据库名称,
+    &quot;ConnectionString&quot;: 数据库连接字符串,
+    &quot;PluginDirectories&quot;: [ 用于查找插件的目录列表 ],
+    &quot;Plugins&quot;: [ 插件列表 ],
+    &quot;Extra&quot;: { 附加配置 }
 }
 </code></pre>
 
-<p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中。<br/>
-这里保存翻译使用了<code>Dictionary</code>，如果有需要还可以通过其他途径翻译。<br/></p>
-<h3 id="_2"><h2>使用翻译</h2></h3>
-<p>在代码中使用翻译<br/>
-类似于gettext，但是gettext使用名称<code>_</code>，这里使用<code>T</code>（Translate的T）。<br/></p>
-<pre><code class="csharp">string translated = new T(&quot;Example&quot;); // 当前语言是中文时，translated等于&quot;示例&quot;
-</code></pre>
+<h4>各配置的说明</h4>
 
-<p>在模板中使用翻译，通过过滤器翻译字符串或变量<br/></p>
-<pre><code class="html">&lt;p&gt;{{ &quot;Example&quot; | trans }}&lt;/p&gt;
-&lt;p&gt;{{ stringVariable | trans }}&lt;/p&gt;
-</code></pre>
+<ul>
+<li>Database 数据库名称<ul>
+<li>可以是"postgresql", "sqlite", "mssql", "mysql"</li>
+</ul>
+</li>
+<li>ConnectionString 数据库连接字符串<ul>
+<li>填写标准的连接字符串即可</li>
+</ul>
+</li>
+<li>PluginDirectories 用于查找插件的目录列表<ul>
+<li>会从这些目录中查找插件</li>
+<li>应该填写相对于网站程序的路径，不填写时使用<code>["App_Data/Plugins"]</code></li>
+</ul>
+</li>
+<li>PluginDirectories 插件列表<ul>
+<li>插件文件夹的名称</li>
+<li>这里的顺序会影响到插件的加载顺序，加载顺序会影响到组件注册的顺序和资源文件的读取顺序等</li>
+</ul>
+</li>
+<li>Extra 附加配置<ul>
+<li>附加配置可以用来修改高级的配置，例如各项缓存时间等</li>
+</ul>
+</li>
+</ul>
+<h4>附加配置</h4>
 
-<h3 id="_3"><h2>转换时区</h2></h3>
-<p>转换到客户端的时间，<code>ToClientTime</code>是一个扩展函数。<br/>
-如果客户端指定了时区则使用该时区，否则使用服务器本地时间。<br/></p>
-<pre><code class="csharp">var utcTime = DateTime.UtcNow;
-var clientTime = utcTime.ToClientTime();
-</code></pre>
-
-<p>从客户端时间转换到utc时间，常用于客户端的时间控件提交值到服务器。</p>
-<pre><code class="csharp">var clientTime = DateTime.Parse(timeParam);
-var utcTime = clientTime.FromClientTime();
-</code></pre>
-
-<h3 id="_4"><h2>指定当前语言</h2></h3>
-<p>直接设置指定语言<br/></p>
-<pre><code class="csharp">LocaleUtils.SetThreadLanguage(&quot;zh-CN&quot;);
-</code></pre>
-
-<p>自动设置语言（Cookies =&gt; 浏览器语言 =&gt; 默认语言）<br/>
-第一个参数决定是否检测浏览器语言<br/></p>
-<pre><code class="csharp">LocaleUtils.SetThreadLanguageAutomatic(true, &quot;en-US&quot;);
-</code></pre>
-
-<h3 id="_5"><h2>指定当前时区</h2></h3>
-<p>直接设置指定时区</p>
-<pre><code class="csharp">LocaleUtils.SetThreadTimezone(&quot;China Standard Time&quot;);
-</code></pre>
-
-<p>自动设置时区（Cookies =&gt; 默认时区）</p>
-<pre><code class="csharp">LocaleUtils.SetThreadTimezoneAutomatic(&quot;GMT Standard Time&quot;);
-</code></pre>
+<p>核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。</p>
+<ul>
+<li>ZKWeb.TranslateCacheTime 翻译的缓存时间，单位是秒</li>
+<li>ZKWeb.TemplatePathCacheTime 模板路径缓存时间，单位是秒</li>
+<li>ZKWeb.ResourcePathCacheTime 资源路径的缓存时间，单位是秒</li>
+<li>ZKWeb.WidgetInfoCacheTime 模块信息的缓存时间，单位是秒</li>
+<li>ZKWeb.CustomWidgetsCacheTime 自定义模块列表的缓存时间，单位是秒</li>
+<li>ZKWeb.TemplateCacheTime 模板的缓存时间，单位是秒</li>
+<li>ZKWeb.DisplayFullExceptionForTemplate 是否在描画模板发生例外时显示完整信息</li>
+<li>ZKWeb.DisplayFullExceptionForRequest 是否在请求发生例外时显示完整信息</li>
+<li>ZKWeb.ClearCacheAfterUsedMemoryMoreThan 内存占用超过此数值时自动清理缓存，单位是MB</li>
+<li>ZKWeb.CleanCacheCheckInterval 缓存自动清理器的检查间隔，单位是秒</li>
+</ul>
             
 
           </div> <!--/span-->

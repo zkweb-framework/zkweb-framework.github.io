@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>网站配置 - ZKWeb框架文档</title>
+  <title>多时区 - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="网站配置, 网站配置">
+  <meta name="description" content="多时区, 多时区">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,10 +24,10 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../plugin/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../unit_test/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../gettingstart/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../multi_language/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -50,6 +50,18 @@
                     <a href="../..">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="../create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="../gettingstart/">首次运行</a>
+                    <a href="../website_struct/">网站结构</a>
                   </li>
                   
-                  <li class="active" >
-                    <a href="./">网站配置</a>
+                  <li >
+                    <a href="../website_config/">配置文件</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../ioc_container/">IoC容器</a>
                   </li>
                   
                   <li >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li >
-                    <a href="../controller/">控制器和模板系统</a>
+                    <a href="../controller/">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="../localize/">本地化</a>
+                    <a href="../http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="../database/">数据库管理</a>
+                    <a href="../template_engine/">模板引擎</a>
                   </li>
                   
                   <li >
-                    <a href="../unittest/">单元测试</a>
+                    <a href="../database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_language/">多语言</a>
+                  </li>
+                  
+                  <li class="active" >
+                    <a href="./">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -247,24 +275,6 @@
                 
 
                 
-                  <li class="main">
-                    <a href="#_1">配置内容</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_2">附加配置</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_3">配置的完整示例</a>
-                  </li>
-
-                  
-                
 
                   <div class="promo">
                     <hr/>
@@ -278,63 +288,9 @@
           <div id="main-content" class="span9">
             
               
-                <h1>网站配置</h1><br/>
+                <h1>多时区</h1><br/>
               
-              <p>ZKWeb的网站配置内容都保存在<strong>App_Data\config.json</strong>中，不需要修改传统的<strong>web.config</strong>。<br/></p>
-<h3 id="_1"><h2>配置内容</h2></h3>
-<pre><code class="json">{
-    &quot;Database&quot;: 数据库名称,
-    &quot;ConnectionString&quot;: 数据库连接字符串,
-    &quot;PluginDirectories&quot;: [ 插件目录的列表 ],
-    &quot;Plugins&quot;: [ 插件列表 ],
-    &quot;Extra&quot;: { 附加配置 }
-}
-</code></pre>
-
-<p>各配置的说明<br/></p>
-<ul>
-<li>数据库名称<br/>
-  可以是"postgresql", "sqlite", "mssql", "mysql"</li>
-<li>数据库连接字符串<br/>
-  填写该数据库试用的标准的连接字符串即可</li>
-<li>插件目录的列表<br/>
-  相对于网站程序的路径，不指定时是<code>["App_Data/Plugins"]</code></li>
-<li>插件列表<br/>
-  加载的列表，在插件目录下的文件夹名称<br/>
-  注意这里的顺序会影响到插件的加载顺序，加载顺序会影响到组件注册的顺序和模板文件的读取顺序等</li>
-<li>附加配置<br/>
-  附加配置可以用来修改高级的配置，例如各项缓存时间等</li>
-</ul>
-<h3 id="_2"><h2>附加配置</h2></h3>
-<p>核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。</p>
-<ul>
-<li>ZKWeb.TranslateCacheTime 翻译的缓存时间，单位是秒</li>
-<li>ZKWeb.TemplatePathCacheTime 模板路径缓存时间，单位是秒</li>
-<li>ZKWeb.ResourcePathCacheTime 资源路径的缓存时间，单位是秒</li>
-<li>ZKWeb.WidgetInfoCacheTime 模块信息的缓存时间，单位是秒</li>
-<li>ZKWeb.CustomWidgetsCacheTime 自定义模块列表的缓存时间，单位是秒</li>
-<li>ZKWeb.TemplateCacheTime 模板的缓存时间，单位是秒</li>
-<li>ZKWeb.DisplayFullExceptionForTemplate 是否在描画模板发生例外时显示完整信息</li>
-<li>ZKWeb.DisplayFullExceptionForRequest 是否在请求发生例外时显示完整信息</li>
-<li>ZKWeb.ClearCacheAfterUsedMemoryMoreThan 内存占用超过此数值时自动清理缓存，单位是MB</li>
-<li>ZKWeb.CleanCacheCheckInterval 缓存自动清理器的检查间隔，单位是秒</li>
-</ul>
-<h3 id="_3"><h2>配置的完整示例</h2></h3>
-<p>以下是一个完整的配置文件的示例</p>
-<pre><code class="json">{
-    &quot;Database&quot;: &quot;postgresql&quot;,
-    &quot;ConnectionString&quot;: &quot;Server=127.0.0.1;Port=5432;Database=zkweb;User Id=postgres;Password=123456;&quot;,
-    &quot;PluginDirectories&quot;: [ &quot;../../ZKWeb.Plugins&quot; ],
-    &quot;Plugins&quot;: [
-        &quot;Common.Base&quot;,
-        &quot;Common.Captcha&quot;,
-        &quot;Common.Admin&quot;
-    ],
-    &quot;Extra&quot;: {
-        &quot;ZKWeb.DisplayFullExceptionForTemplate&quot;: false
-    },
-}
-</code></pre>
+              
             
 
           </div> <!--/span-->

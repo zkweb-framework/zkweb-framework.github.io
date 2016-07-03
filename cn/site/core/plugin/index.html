@@ -27,7 +27,7 @@
           <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../controller/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../config/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../ioc_container/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -50,6 +50,18 @@
                     <a href="../..">框架介绍</a>
                   </li>
                   
+                  <li >
+                    <a href="../create_project/">创建项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../start_project/">开发项目</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../publish_website/">发布网站</a>
+                  </li>
+                  
                 </ul>
               </li>
                 
@@ -58,11 +70,15 @@
                 <ul class="dropdown-menu">
                   
                   <li >
-                    <a href="../gettingstart/">首次运行</a>
+                    <a href="../website_struct/">网站结构</a>
                   </li>
                   
                   <li >
-                    <a href="../config/">网站配置</a>
+                    <a href="../website_config/">配置文件</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../ioc_container/">IoC容器</a>
                   </li>
                   
                   <li class="active" >
@@ -70,19 +86,31 @@
                   </li>
                   
                   <li >
-                    <a href="../controller/">控制器和模板系统</a>
+                    <a href="../controller/">控制器</a>
                   </li>
                   
                   <li >
-                    <a href="../localize/">本地化</a>
+                    <a href="../http_handlers/">请求和错误处理</a>
                   </li>
                   
                   <li >
-                    <a href="../database/">数据库管理</a>
+                    <a href="../template_engine/">模板引擎</a>
                   </li>
                   
                   <li >
-                    <a href="../unittest/">单元测试</a>
+                    <a href="../database/">数据库</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_language/">多语言</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../multi_timezone/">多时区</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../unit_test/">单元测试</a>
                   </li>
                   
                 </ul>
@@ -247,60 +275,6 @@
                 
 
                 
-                  <li class="main">
-                    <a href="#_1">插件的目录结构</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_2">创建插件</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_3">引用插件</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_4">添加插件说明</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_5">添加代码</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#ioc">Ioc容器</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#ioc_1">Ioc容器的使用例子</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_6">组件注册顺序</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_7">调试插件</a>
-                  </li>
-
-                  
-                
 
                   <div class="promo">
                     <hr/>
@@ -316,136 +290,75 @@
               
                 <h1>插件系统</h1><br/>
               
-              <p>ZKWeb的插件系统以文件夹为单位，每个文件夹等于一个插件。<br/>
-插件的编译由核心框架完成，不依赖VS。<br/>
-下面使用VS创建插件是因为编写插件时可以有代码提示和调试支持。<br/></p>
-<h3 id="_1"><h2>插件的目录结构</h2></h3>
+              <p>ZKWeb中的插件以文件夹为单位，插件的编译由框架完成，不依赖Visual Studio。<br/>
+ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新编译。<br/></p>
+<h4>插件的查找和加载</h4>
+
+<p>ZKWeb会根据<code>App_Data\config.json</code>中的<code>PluginDirectories</code>对插件进行查找。<br/>
+加载时会按<code>Plugins</code>中定义的顺序进行加载。<br/>
+<img alt="插件列表" src="../../img/config_json_plugins.jpg" /></p>
+<p>使用上面的配置时<br/>
+如果项目在<code>D:\Projects\Hello.World\src\Hello.World</code>，将会尝试从以下的路径载入<code>Common.Base</code>插件<br/></p>
 <ul>
-<li>ZKWeb.Plugins (默认的插件根目录)<ul>
-<li>Common.Base (插件文件夹)</li>
-<li>Common.Admin (插件文件夹)</li>
-<li>...</li>
+<li><code>D:\Projects\ZKWeb.Plugins\Common.Base</code></li>
+<li><code>D:\Projects\Hello.World\src\Hello.World\Common.Base</code></li>
 </ul>
-</li>
-<li>ZKWeb.Example (示例的插件根目录)<ul>
-<li>ExampleForDocument (插件文件夹)<ul>
-<li>bin (储存这个插件编译出来的dll文件)</li>
-<li>src (储存代码文件，发布时可以把这个文件夹除外)</li>
-<li>static (储存静态文件)</li>
-<li>templates (储存模板文件)</li>
-</ul>
-</li>
-<li>OtherExample (插件文件夹)<ul>
-<li>同上</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><strong>App_Data\config.json</strong>的<strong>PluginDirectories</strong>可以指定一个或多个插件根目录。</p>
-<h3 id="_2"><h2>创建插件</h2></h3>
-<p>步骤</p>
-<ul>
-<li>打开Visual Studio，创建项目，类型选“类库”，名称填<strong>ExampleForDocument</strong>，不要勾选为解决方案创建文件夹。</p></li>
-<li>从nuget安装<strong>ZKWeb</strong></li>
-<li>在项目下添加文件夹<strong>Example</strong></li>
-</ul>
-<p>创建后的目录结构应该如下:<br/>
-ZKWeb.Example文件夹需要自己创建，或者使用github上现成项目。</p>
-<ul>
-<li>ZKWeb</li>
-<li>ZKWeb.Example<ul>
-<li>ExampleForDocument<ul>
-<li>Example</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p><img alt="" src="../../img/project.jpg" /></p>
-<h3 id="_3"><h2>引用插件</h2></h3>
-<p>步骤</p>
-<ul>
-<li>打开<strong>ZKWeb\App_Data\config.json</strong></li>
-<li>修改<strong>PluginDirectories</strong>，在后面添加<code>"../../../ZKWeb.Examples/ExampleForDocument"</code></li>
-<li>修改<strong>Plugins</strong>，在后面添加<code>"Example"</code></li>
-<li>刷新浏览器，在后台中查看"关于网站"是否显示了这个插件，点击右上角图标会显示关于网站</li>
-</ul>
-<p>引用插件时需要注意依赖顺序，在前面的插件会先加载。
-这里的顺序也会影响到IoC容器中的注册顺序和模板文件的查找顺序。</p>
-<p><img alt="" src="../../img/add_plugin.jpg" /></p>
-<h3 id="_4"><h2>添加插件说明</h2></h3>
-<p>在<strong>Example</strong>文件夹下创建<strong>plugin.json</strong>，内容如下</p>
-<pre><code>{
-    &quot;Name&quot;: &quot;Example&quot;,
-    &quot;Description&quot;: &quot;Example plugin for document&quot;
+<p>载入<code>Common.Base</code>插件后，会接着载入<code>Common.Captcha</code>插件，直到所有插件加载完毕。</p>
+<h4>插件信息</h4>
+
+<p>插件信息储存在<code>插件文件夹\plugin.json</code>中，格式如下。<br/></p>
+<pre><code class="json">{
+    &quot;Name&quot;: &quot;插件名称&quot;,
+    &quot;Version&quot;:  &quot;插件版本&quot;,
+    &quot;Description&quot;: &quot;插件描述&quot;,
+    &quot;Dependencies&quot;: [ &quot;依赖的其他插件&quot; ],
+    &quot;References&quot;: [ &quot;依赖的程序集&quot; ]
 }
 </code></pre>
 
-<p>刷新关于网站即可看到新的名称和说明。</p>
-<h3 id="_5"><h2>添加代码</h2></h3>
-<p>插件的代码都保存在<strong>src</strong>文件夹下，可以参考文档顶部的目录结构。<br/></p>
-<p>这里添加在插件加载时输出日志的处理:<br/>
-在<strong>src</strong>文件夹下创建<strong>Plugin.cs</strong>，内容如下（引用和命名空间省略，后面的文档也如此）<br/></p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 插件加载时输出一行日志
-/// &lt;/summary&gt;
-[ExportMany]
-public class Plugin : IPlugin {
-    public Plugin() {
-        var logManager = Application.Ioc.Resolve&lt;LogManager&gt;();
-        logManager.LogDebug(&quot;Example plugin loaded&quot;);
-    }
-}
+<h4>依赖外部程序集</h4>
+
+<p>插件有时候需要依赖外部的程序集，但从Nuget安装的程序包不会被ZKWeb自动识别。<br/>
+这时候就需要指定<code>plugin.json</code>中的<code>References</code>。<br/>
+例如依赖<code>CsQuery</code>这个外部组件时，先复制<code>CsQuery.dll</code>到<code>插件文件夹\references</code>下，<br/>
+然后添加<code>"CsQuery"</code>到<code>plugin.json</code>中的<code>References</code>即可。<br/></p>
+<p>CKEditor插件依赖外部程序集的例子
+<img alt="依赖外部程序集的例子" src="../../img/ckeditor_reference_example.jpg" /></p>
+<h4>资源文件的读取顺序</h4>
+
+<p>ZKWeb使用了类似Django的重叠+透过式文件系统，一个插件可以简单的重载另外一个插件的资源文件。<br/>
+例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，目录结构如下时<br/>
+<img alt="资源文件重载的示例" src="../../img/resource_override_example.jpg" />
+读取资源<code>templates/some_folder/some.html</code>会读取<code>PluginB</code>下的文件，<br/>
+读取资源<code>static/other_folder/other.txt</code>会读取<code>PluginA</code>下的文件。<br/></p>
+<p>获取资源文件可以使用以下的代码</p>
+<pre><code class="csharp">var pathManager = Application.Ioc.Resolve&lt;PathManager&gt;();
+var fullPath = pathManager.GetResourceFullPath(&quot;templates&quot;, &quot;some_folder&quot;, &quot;some.html&quot;);
 </code></pre>
 
-<p>刷新浏览器，在<strong>App_Data/logs</strong>下可以看到输出的日志。<br/>
-ExportMany和Ioc将在下一节解释。<br/></p>
-<h3 id="ioc"><h2>Ioc容器</h2></h3>
-<p>ZKWeb从0.9.5开始使用了自己编写的Ioc容器。<br/>
-容器的接口说明: <br/>
-<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IRegistrator.cs" target="_blank">IRegistrator</a><br />
-<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IResolver.cs" target="_blank">IResolver</a><br />
-<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericRegistrator.cs" target="_blank">IGenericRegistrator</a><br />
-<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb.Utils/IocContainer/IGenericResolver.cs" target="_blank">IGenericResolver</a><br /></p>
-<p>ZKWeb全局使用的容器在<code>Application.Ioc</code>。<br/>
-插件可以使用<code>[ExportMany]</code>或<code>[Export]</code>注册组件，也可以使用<code>IPlugin</code>接口在网站启动时注册到<code>Application.Ioc</code>中。<br/>
-指定<code>[SingletonReuse]</code>属性时可以实现单例。<br/>
-ZKWeb考虑到性能，内存占用和代码量，不使用构造函数注入。<br/>
-单元测试时可以使用<code>Application.OverrideIoc</code>重载当前的容器。<br/></p>
-<p>ZKWeb在扫描类型时只会扫描公开的类型，如果类型标记了Export属性但是修饰符是private或者internal则不会被注册。<br/></p>
-<h3 id="ioc_1"><h2>Ioc容器的使用例子</h2></h3>
-<p>以下是简单的使用例子。</p>
-<pre><code class="csharp">void Example() {
-    var animals = Application.Ioc.ResolveMany&lt;IAnimal&gt;()
-    // animals contains instances of Dog and Cow
+<h4>组件的注册顺序</h4>
 
-    var animalManager = Application.Ioc.Resolve&lt;IAnimalManager&gt;();
-    // animalManager is AnimalManager
-
-    var otherAnimalManager = Application.Ioc.Resolve&lt;IAnimalManager&gt;();
-    // animalManager only create once, otherAnimalManager == animalManager
-}
-public interface IAnimal { }
-[ExportMany] public class Dog : IAnimal { }
-[ExportMany] public class Cow : IAnimal { }
-
-public interface IAnimalManager { }
-[ExportMany, SingletonUsage] public class AnimalManager : IAnimalManager { }
-</code></pre>
-
-<h3 id="_6"><h2>组件注册顺序</h2></h3>
-<p>插件的定义顺序会影响到组件注册顺序，例如<code>Plugins: [ "A", "B" ]</code>，<br/>
-插件A有<code>class ExampleHandlerA : IExampleHandler { }</code>，<br/>
-插件B有<code>class ExampleHandlerB : IExampleHandler { }</code>，<br/>
+<p>插件的载入顺序还会影响到组件的注册顺序，例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，<br/>
+插件<code>PluginA</code>有<code>[ExportMany]class ExampleHandlerA : IExampleHandler { }</code>，<br/>
+插件<code>PluginB</code>有<code>[ExportMany]class ExampleHandlerB : IExampleHandler { }</code>，<br/>
 这时使用<code>Application.Ioc.ResolveMany&lt;IExampleHandler&gt;()</code>会获取到<code>[ExampleHandlerA, ExampleHandlerB]</code>。</p>
-<h3 id="_7"><h2>调试插件</h2></h3>
-<p>调试插件有两种办法:<br/></p>
-<p>第一种是在插件的VS中选择调试-挂载到进程并选择IIS进程或Kestrel进程挂载。<br/>
-Asp.Net和Owin选择iisexpress.exe。<br/>
-Asp.Net Core选择ZKWeb.AspNetCore.exe。<br/></p>
-<p>第二种是把需要调试的文件拖动到打开托管项目的VS中，然后在里面下断点。<br/></p>
-<p><img alt="" src="../../img/attach_process.jpg" /></p>
+<h4>调试插件</h4>
+
+<p>调试在主项目内的插件很简单，直接F5运行并下断点即可。<br/></p>
+<p>调试在主项目外的插件有两种办法:</p>
+<ul>
+<li>第一种<ul>
+<li>在插件的VS中选择调试-挂载到进程并选择IIS进程或Kestrel进程挂载</li>
+<li>Asp.Net和Owin选择<code>iisexpress.exe</code></li>
+<li>Asp.Net Core选择<code>项目主程序.exe</code></li>
+</ul>
+</li>
+<li>第二种<ul>
+<li>把需要调试的文件拖动到Visual Studio中，然后在里面下断点</li>
+</ul>
+</li>
+</ul>
+<p><img alt="挂载到进程" src="../../img/attach_process.jpg" /></p>
             
 
           </div> <!--/span-->
