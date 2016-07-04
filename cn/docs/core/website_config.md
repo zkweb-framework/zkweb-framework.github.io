@@ -26,6 +26,14 @@ ZKWeb的网站配置内容都保存在`App_Data\config.json`中。<br/>
 - Extra 附加配置
 	- 附加配置可以用来修改高级的配置，例如各项缓存时间等
 
+### 获取配置
+
+获取网站配置可以使用`ConfigManager`。
+``` csharp
+var configManager = Application.Ioc.Resolve<ConfigManager>();
+var value = configManager.WebsiteConfig.Extra.GetOrDefault<bool>("SomeExtraConfiguration");
+```
+
 ### 附加配置
 
 核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。

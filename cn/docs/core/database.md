@@ -1,29 +1,24 @@
 ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
 目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL。<br/>
-使用NHibernate的理由有<br/>
+
+### 使用NHibernate的理由
 
 - 不保存数据库状态和更新历史，不会像EF一样容易出现metadata相关的错误
 - 可以实现自动更新数据库，添加字段后不需要任何额外操作就可以应用到数据表
-- 更好的支持MySQL等非微软的数据库，不会像EF只对MSSQL支持好。
+- 更好的支持MySQL等非微软的数据库
 
-ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/>
+ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml配置。
 
-### <h2>添加数据表</h2>
+### 添加数据表
 
-添加`Example\src\Database\ExampleTable.cs`，内容如下
+添加`src\Database\ExampleTable.cs`，内容如下
 ``` csharp
-/// <summary>
-/// 示例数据
-/// </summary>
 public class ExampleTable {
 	public virtual long Id { get; set; }
 	public virtual string Name { get; set; }
 	public virtual DateTime CreateTime { get; set; }
 }
 
-/// <summary>
-/// 示例数据表的结构
-/// </summary>
 [ExportMany]
 public class ExampleTableMap : ClassMap<ExampleTable> {
 	public ExampleTableMap() {
@@ -34,12 +29,12 @@ public class ExampleTableMap : ClassMap<ExampleTable> {
 }
 ```
 
-添加完毕后刷新浏览器可以看到数据库中多出这个表。<br/>
-更多用法可以参考FluentNHibernte的文档。<br/>
-https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
-在ZKWeb中已有插件正常使用一对多(Reference, HasMany)，多对多(ManyToMany)的功能。<br/>
+添加以后刷新浏览器即可看到数据库多出了这个表，更多用法推荐参考
+[FluentNHibernte的文档](https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started)。<br/>
+ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/>
+![添加数据表的例子](../img/create_table_example.jpg)
 
-### <h2>升级数据表</h2>
+### 升级数据表
 
 在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
 在ExampleTable中添加以下成员<br/>
@@ -56,15 +51,12 @@ Map(e => e.Deleted);
 注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
 ![](../img/example_table.jpg)
 
-### <h2>增删查改</h2>
+### 增删查改
 
-通过`DatabaseManager.GetContext`获取数据库上下文可以进行增删查改操作<br/>
-如果使用了`Common.Base`插件可以使用`GenericRepository`和`UnitOfWork`类进行更简单的操作，<br/>
-详细请参考`Common.Base`的文档。<br/>
+通过`DatabaseManager`获取数据库上下文可以进行增删查改等操作<br/>
+默认的程序集中提供了仓储和工作单元来规范数据库操作，详细可以查看`Common.Base`插件的文档。<br/>
 
-以下函数可以添加到`ExampleController`用于测试是否正常工作。<br/>
-
-新增数据<br/>
+**新增数据的例子**<br/>
 使用`ref data`的原因是因为NHibernate插入数据时会返回另外一个对象。<br/>
 操作完毕后需要使用`SaveChanges`提交事务，为了保证数据一致性ZKWeb中的操作都会默认开启事务。<br/>
 ``` csharp
@@ -84,9 +76,9 @@ public string AddData() {
 }
 ```
 
-修改数据<br/>
+**修改数据的例子**<br/>
 这里会修改表中的所有数据。<br/>
-和新增数据一样，修改数据也会使用`Save`函数，但是修改操作应该在后面的参数中实现，<br/>
+和新增数据一样，修改数据也会使用`Save`函数，但是修改操作应该在`action`参数中实现，<br/>
 这样使用数据库事件可以捕捉到修改前和修改后的数据。<br/>
 ``` csharp
 [Action("example/update_data")]
@@ -103,7 +95,7 @@ public string UpdateData() {
 }
 ```
 
-查询数据<br/>
+**查询数据的例子**<br/>
 这里返回没有更新的数据内容。<br/>
 查询时不需要调用`SaveChanges`函数。<br/>
 ``` csharp
@@ -119,7 +111,7 @@ public string QueryData() {
 }
 ```
 
-删除数据<br/>
+**删除数据的例子**<br/>
 ``` csharp
 [Action("example/remove_data")]
 public string RemoveData() {
@@ -132,7 +124,7 @@ public string RemoveData() {
 }
 ```
 
-### <h2>数据事件</h2>
+### 数据事件
 
 ZKWeb支持定义事件监听数据的增删查改<br/>
 其中增加和修改使用`IDataSaveCallback`，删除使用`IDataDeleteCallback`。<br/>
@@ -140,7 +132,7 @@ ZKWeb支持定义事件监听数据的增删查改<br/>
 在Before或After函数中抛出例外可以阻止事务提交。<br/>
 
 保存事件的示例
-添加`Example\src\DataCallbacks\ExampleDataSaveCallback.cs`，内容如下<br/>
+添加`src\DataCallbacks\ExampleDataSaveCallback.cs`，内容如下<br/>
 这个处理器会在数据插入或名称改变时记录到日志。<br/>
 ``` csharp
 /// <summary>
@@ -170,7 +162,7 @@ public class ExampleDataSaveCallback : IDataSaveCallback<ExampleTable> {
 添加或更新数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
 
 删除事件的示例<br/>
-添加`Example\src\DataCallbacks\ExampleDataDeleteCallback.cs`，内容如下<br/>
+添加`src\DataCallbacks\ExampleDataDeleteCallback.cs`，内容如下<br/>
 这个处理器会在数据删除时记录到日志。<br/>
 ``` csharp
 /// <summary>
@@ -190,10 +182,10 @@ public class ExampleDataDeleteCallback : IDataDeleteCallback<ExampleTable> {
 
 删除数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
 
-### <h2>原生查询</h2>
+### 原生查询
 
 ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
-但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/>
+但可以使用原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/>
 
 NHibernate的会话可以通过`context.Session`获取到。
 ``` csharp

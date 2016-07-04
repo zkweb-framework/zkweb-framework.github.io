@@ -16,10 +16,5 @@ namespace ZKWeb.Examples.ZKWeb.Examples.src.Controllers {
 			var age = request.Get<int>("age");
 			return new JsonResult(new { name, age });
 		}
-
-		[Action("/", OverrideExists = true)]
-		public IActionResult CustomIndexPage() {
-			return new PlainResult("hello overridden action");
-		}
 	}
 }

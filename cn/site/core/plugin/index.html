@@ -98,6 +98,14 @@
                   </li>
                   
                   <li >
+                    <a href="../dynamic_contents/">动态内容</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../isolated_cache/">缓存隔离</a>
+                  </li>
+                  
+                  <li >
                     <a href="../database/">数据库</a>
                   </li>
                   
@@ -359,7 +367,14 @@ ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新
 <img alt="依赖外部程序集的例子" src="../../img/ckeditor_reference_example.jpg" /></p>
 <h3 id="_4">资源文件的读取顺序</h3>
 <p>ZKWeb使用了类似Django的重叠+透过式文件系统，一个插件可以简单的重载另外一个插件的资源文件。<br/>
-例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，目录结构如下时<br/>
+读取资源文件的顺序如下，会返回最先存在的路径。<br/></p>
+<pre><code>&quot;App_Data/路径&quot;
+foreach (按加载顺序反序枚举插件) {
+    &quot;插件目录/路径&quot;
+}
+</code></pre>
+
+<p>例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，目录结构如下时<br/>
 <img alt="资源文件重载的示例" src="../../img/resource_override_example.jpg" />
 读取资源<code>templates/some_folder/some.html</code>会读取<code>PluginB</code>下的文件，<br/>
 读取资源<code>static/other_folder/other.txt</code>会读取<code>PluginA</code>下的文件。<br/></p>

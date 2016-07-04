@@ -27,7 +27,7 @@
           <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../multi_language/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../template_engine/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../isolated_cache/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -95,6 +95,14 @@
                   
                   <li >
                     <a href="../template_engine/">模板引擎</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../dynamic_contents/">动态内容</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../isolated_cache/">缓存隔离</a>
                   </li>
                   
                   <li class="active" >
@@ -276,6 +284,12 @@
 
                 
                   <li class="main">
+                    <a href="#nhibernate">使用NHibernate的理由</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
                     <a href="#_1">添加数据表</a>
                   </li>
 
@@ -321,28 +335,22 @@
                 <h1>数据库</h1><br/>
               
               <p>ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
-目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL。<br/>
-使用NHibernate的理由有<br/></p>
+目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL。<br/></p>
+<h3 id="nhibernate">使用NHibernate的理由</h3>
 <ul>
 <li>不保存数据库状态和更新历史，不会像EF一样容易出现metadata相关的错误</li>
 <li>可以实现自动更新数据库，添加字段后不需要任何额外操作就可以应用到数据表</li>
-<li>更好的支持MySQL等非微软的数据库，不会像EF只对MSSQL支持好。</li>
+<li>更好的支持MySQL等非微软的数据库</li>
 </ul>
-<p>ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml。<br/></p>
-<h3 id="_1"><h2>添加数据表</h2></h3>
-<p>添加<code>Example\src\Database\ExampleTable.cs</code>，内容如下</p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 示例数据
-/// &lt;/summary&gt;
-public class ExampleTable {
+<p>ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml配置。</p>
+<h3 id="_1">添加数据表</h3>
+<p>添加<code>src\Database\ExampleTable.cs</code>，内容如下</p>
+<pre><code class="csharp">public class ExampleTable {
     public virtual long Id { get; set; }
     public virtual string Name { get; set; }
     public virtual DateTime CreateTime { get; set; }
 }
 
-/// &lt;summary&gt;
-/// 示例数据表的结构
-/// &lt;/summary&gt;
 [ExportMany]
 public class ExampleTableMap : ClassMap&lt;ExampleTable&gt; {
     public ExampleTableMap() {
@@ -353,11 +361,11 @@ public class ExampleTableMap : ClassMap&lt;ExampleTable&gt; {
 }
 </code></pre>
 
-<p>添加完毕后刷新浏览器可以看到数据库中多出这个表。<br/>
-更多用法可以参考FluentNHibernte的文档。<br/>
-https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
-在ZKWeb中已有插件正常使用一对多(Reference, HasMany)，多对多(ManyToMany)的功能。<br/></p>
-<h3 id="_2"><h2>升级数据表</h2></h3>
+<p>添加以后刷新浏览器即可看到数据库多出了这个表，更多用法推荐参考
+<a href="https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started">FluentNHibernte的文档</a>。<br/>
+ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/>
+<img alt="添加数据表的例子" src="../../img/create_table_example.jpg" /></p>
+<h3 id="_2">升级数据表</h3>
 <p>在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
 在ExampleTable中添加以下成员<br/></p>
 <pre><code class="csharp">public virtual bool Deleted { get; set; }
@@ -370,12 +378,10 @@ https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started<br/>
 <p>保存后刷新浏览器即可看到效果。<br/>
 注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
 <img alt="" src="../../img/example_table.jpg" /></p>
-<h3 id="_3"><h2>增删查改</h2></h3>
-<p>通过<code>DatabaseManager.GetContext</code>获取数据库上下文可以进行增删查改操作<br/>
-如果使用了<code>Common.Base</code>插件可以使用<code>GenericRepository</code>和<code>UnitOfWork</code>类进行更简单的操作，<br/>
-详细请参考<code>Common.Base</code>的文档。<br/></p>
-<p>以下函数可以添加到<code>ExampleController</code>用于测试是否正常工作。<br/></p>
-<p>新增数据<br/>
+<h3 id="_3">增删查改</h3>
+<p>通过<code>DatabaseManager</code>获取数据库上下文可以进行增删查改等操作<br/>
+默认的程序集中提供了仓储和工作单元来规范数据库操作，详细可以查看<code>Common.Base</code>插件的文档。<br/></p>
+<p><strong>新增数据的例子</strong><br/>
 使用<code>ref data</code>的原因是因为NHibernate插入数据时会返回另外一个对象。<br/>
 操作完毕后需要使用<code>SaveChanges</code>提交事务，为了保证数据一致性ZKWeb中的操作都会默认开启事务。<br/></p>
 <pre><code class="csharp">[Action(&quot;example/add_data&quot;)]
@@ -394,9 +400,9 @@ public string AddData() {
 }
 </code></pre>
 
-<p>修改数据<br/>
+<p><strong>修改数据的例子</strong><br/>
 这里会修改表中的所有数据。<br/>
-和新增数据一样，修改数据也会使用<code>Save</code>函数，但是修改操作应该在后面的参数中实现，<br/>
+和新增数据一样，修改数据也会使用<code>Save</code>函数，但是修改操作应该在<code>action</code>参数中实现，<br/>
 这样使用数据库事件可以捕捉到修改前和修改后的数据。<br/></p>
 <pre><code class="csharp">[Action(&quot;example/update_data&quot;)]
 public string UpdateData() {
@@ -412,7 +418,7 @@ public string UpdateData() {
 }
 </code></pre>
 
-<p>查询数据<br/>
+<p><strong>查询数据的例子</strong><br/>
 这里返回没有更新的数据内容。<br/>
 查询时不需要调用<code>SaveChanges</code>函数。<br/></p>
 <pre><code class="csharp">[Action(&quot;example/query_data&quot;)]
@@ -427,7 +433,7 @@ public string QueryData() {
 }
 </code></pre>
 
-<p>删除数据<br/></p>
+<p><strong>删除数据的例子</strong><br/></p>
 <pre><code class="csharp">[Action(&quot;example/remove_data&quot;)]
 public string RemoveData() {
     var databaseManager = Application.Ioc.Resolve&lt;DatabaseManager&gt;();
@@ -439,13 +445,13 @@ public string RemoveData() {
 }
 </code></pre>
 
-<h3 id="_4"><h2>数据事件</h2></h3>
+<h3 id="_4">数据事件</h3>
 <p>ZKWeb支持定义事件监听数据的增删查改<br/>
 其中增加和修改使用<code>IDataSaveCallback</code>，删除使用<code>IDataDeleteCallback</code>。<br/>
 在Before或After函数中可以通过传入的<code>context</code>参数修改关联的数据，<br/>
 在Before或After函数中抛出例外可以阻止事务提交。<br/></p>
 <p>保存事件的示例
-添加<code>Example\src\DataCallbacks\ExampleDataSaveCallback.cs</code>，内容如下<br/>
+添加<code>src\DataCallbacks\ExampleDataSaveCallback.cs</code>，内容如下<br/>
 这个处理器会在数据插入或名称改变时记录到日志。<br/></p>
 <pre><code class="csharp">/// &lt;summary&gt;
 /// 保存事件的示例
@@ -473,7 +479,7 @@ public class ExampleDataSaveCallback : IDataSaveCallback&lt;ExampleTable&gt; {
 
 <p>添加或更新数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
 <p>删除事件的示例<br/>
-添加<code>Example\src\DataCallbacks\ExampleDataDeleteCallback.cs</code>，内容如下<br/>
+添加<code>src\DataCallbacks\ExampleDataDeleteCallback.cs</code>，内容如下<br/>
 这个处理器会在数据删除时记录到日志。<br/></p>
 <pre><code class="csharp">/// &lt;summary&gt;
 /// 删除事件的示例
@@ -491,9 +497,9 @@ public class ExampleDataDeleteCallback : IDataDeleteCallback&lt;ExampleTable&gt;
 </code></pre>
 
 <p>删除数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
-<h3 id="_5"><h2>原生查询</h2></h3>
+<h3 id="_5">原生查询</h3>
 <p>ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
-但你可以通过原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/></p>
+但可以使用原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/></p>
 <p>NHibernate的会话可以通过<code>context.Session</code>获取到。</p>
 <pre><code class="csharp">context.Session.Save(new ExampleTable());
 </code></pre>

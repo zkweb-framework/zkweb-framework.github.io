@@ -98,6 +98,14 @@
                   </li>
                   
                   <li >
+                    <a href="../dynamic_contents/">动态内容</a>
+                  </li>
+                  
+                  <li >
+                    <a href="../isolated_cache/">缓存隔离</a>
+                  </li>
+                  
+                  <li >
                     <a href="../database/">数据库</a>
                   </li>
                   
@@ -288,7 +296,13 @@
                   
                 
                   <li class="main">
-                    <a href="#_3">附加配置</a>
+                    <a href="#_3">获取配置</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">附加配置</a>
                   </li>
 
                   
@@ -344,7 +358,13 @@
 </ul>
 </li>
 </ul>
-<h3 id="_3">附加配置</h3>
+<h3 id="_3">获取配置</h3>
+<p>获取网站配置可以使用<code>ConfigManager</code>。</p>
+<pre><code class="csharp">var configManager = Application.Ioc.Resolve&lt;ConfigManager&gt;();
+var value = configManager.WebsiteConfig.Extra.GetOrDefault&lt;bool&gt;(&quot;SomeExtraConfiguration&quot;);
+</code></pre>
+
+<h3 id="_4">附加配置</h3>
 <p>核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。</p>
 <ul>
 <li>ZKWeb.TranslateCacheTime 翻译的缓存时间，单位是秒</li>

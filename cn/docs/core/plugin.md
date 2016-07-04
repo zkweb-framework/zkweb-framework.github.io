@@ -41,6 +41,14 @@ CKEditor插件依赖外部程序集的例子
 ### 资源文件的读取顺序
 
 ZKWeb使用了类似Django的重叠+透过式文件系统，一个插件可以简单的重载另外一个插件的资源文件。<br/>
+读取资源文件的顺序如下，会返回最先存在的路径。<br/>
+```
+"App_Data/路径"
+foreach (按加载顺序反序枚举插件) {
+	"插件目录/路径"
+}
+```
+
 例如`Plugins: [ "PluginA", "PluginB" ]`，目录结构如下时<br/>
 ![资源文件重载的示例](../img/resource_override_example.jpg)
 读取资源`templates/some_folder/some.html`会读取`PluginB`下的文件，<br/>

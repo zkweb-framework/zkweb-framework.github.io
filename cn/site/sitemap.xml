@@ -74,6 +74,18 @@
     </url>
         
     <url>
+     <loc>None/core/dynamic_contents/</loc>
+     <lastmod>2016-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/core/isolated_cache/</loc>
+     <lastmod>2016-07-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>None/core/database/</loc>
      <lastmod>2016-07-04</lastmod>
      <changefreq>daily</changefreq>

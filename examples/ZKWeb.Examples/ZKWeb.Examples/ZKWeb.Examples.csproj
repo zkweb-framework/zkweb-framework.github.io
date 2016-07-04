@@ -147,6 +147,7 @@
   <ItemGroup>
     <Content Include="ZKWeb.Examples\static\zkweb.examples.css\hello.css" />
     <Content Include="ZKWeb.Examples\static\zkweb.examples.js\hello.js" />
+    <Content Include="ZKWeb.Examples\templates\example.widgets\example_nav.html" />
     <Content Include="ZKWeb.Examples\templates\zkweb.examples\hello.html" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -158,13 +159,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="ZKWeb.Examples\templates\example.widgets\example_nav.widget" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ZKWeb.Examples\src\Controllers\DatabaseExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\ExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\PostExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Database\ExampleTable.cs" />
     <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpErrorHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpRequestHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\Plugin.cs" />
@@ -173,6 +177,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
