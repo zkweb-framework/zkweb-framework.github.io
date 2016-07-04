@@ -275,6 +275,42 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">插件的查找和加载</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">插件信息</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">依赖外部程序集</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">资源文件的读取顺序</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_5">组件的注册顺序</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_6">调试插件</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -292,8 +328,7 @@
               
               <p>ZKWeb中的插件以文件夹为单位，插件的编译由框架完成，不依赖Visual Studio。<br/>
 ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新编译。<br/></p>
-<h4>插件的查找和加载</h4>
-
+<h3 id="_1">插件的查找和加载</h3>
 <p>ZKWeb会根据<code>App_Data\config.json</code>中的<code>PluginDirectories</code>对插件进行查找。<br/>
 加载时会按<code>Plugins</code>中定义的顺序进行加载。<br/>
 <img alt="插件列表" src="../../img/config_json_plugins.jpg" /></p>
@@ -304,8 +339,7 @@ ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新
 <li><code>D:\Projects\Hello.World\src\Hello.World\Common.Base</code></li>
 </ul>
 <p>载入<code>Common.Base</code>插件后，会接着载入<code>Common.Captcha</code>插件，直到所有插件加载完毕。</p>
-<h4>插件信息</h4>
-
+<h3 id="_2">插件信息</h3>
 <p>插件信息储存在<code>插件文件夹\plugin.json</code>中，格式如下。<br/></p>
 <pre><code class="json">{
     &quot;Name&quot;: &quot;插件名称&quot;,
@@ -316,16 +350,14 @@ ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新
 }
 </code></pre>
 
-<h4>依赖外部程序集</h4>
-
+<h3 id="_3">依赖外部程序集</h3>
 <p>插件有时候需要依赖外部的程序集，但从Nuget安装的程序包不会被ZKWeb自动识别。<br/>
 这时候就需要指定<code>plugin.json</code>中的<code>References</code>。<br/>
 例如依赖<code>CsQuery</code>这个外部组件时，先复制<code>CsQuery.dll</code>到<code>插件文件夹\references</code>下，<br/>
 然后添加<code>"CsQuery"</code>到<code>plugin.json</code>中的<code>References</code>即可。<br/></p>
 <p>CKEditor插件依赖外部程序集的例子
 <img alt="依赖外部程序集的例子" src="../../img/ckeditor_reference_example.jpg" /></p>
-<h4>资源文件的读取顺序</h4>
-
+<h3 id="_4">资源文件的读取顺序</h3>
 <p>ZKWeb使用了类似Django的重叠+透过式文件系统，一个插件可以简单的重载另外一个插件的资源文件。<br/>
 例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，目录结构如下时<br/>
 <img alt="资源文件重载的示例" src="../../img/resource_override_example.jpg" />
@@ -336,14 +368,12 @@ ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新
 var fullPath = pathManager.GetResourceFullPath(&quot;templates&quot;, &quot;some_folder&quot;, &quot;some.html&quot;);
 </code></pre>
 
-<h4>组件的注册顺序</h4>
-
+<h3 id="_5">组件的注册顺序</h3>
 <p>插件的载入顺序还会影响到组件的注册顺序，例如<code>Plugins: [ "PluginA", "PluginB" ]</code>，<br/>
 插件<code>PluginA</code>有<code>[ExportMany]class ExampleHandlerA : IExampleHandler { }</code>，<br/>
 插件<code>PluginB</code>有<code>[ExportMany]class ExampleHandlerB : IExampleHandler { }</code>，<br/>
 这时使用<code>Application.Ioc.ResolveMany&lt;IExampleHandler&gt;()</code>会获取到<code>[ExampleHandlerA, ExampleHandlerB]</code>。</p>
-<h4>调试插件</h4>
-
+<h3 id="_6">调试插件</h3>
 <p>调试在主项目内的插件很简单，直接F5运行并下断点即可。<br/></p>
 <p>调试在主项目外的插件有两种办法:</p>
 <ul>

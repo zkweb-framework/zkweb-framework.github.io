@@ -275,6 +275,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#http">Http请求处理器的例子</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#http_1">Http错误处理器的例子</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#http_2">Http处理器的介绍</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -290,7 +308,75 @@
               
                 <h1>请求和错误处理</h1><br/>
               
-              
+              <p>在ZKWeb控制器只能处理固定的Url，如果需要灵活处理Url可以使用Http处理器。<br/>
+控制器(ControllerManager)也是基于IHttpRequestHandler实现的。<br/></p>
+<h3 id="http">Http请求处理器的例子</h3>
+<p>以下的处理器可以在访问<code>/example/handler/xxx</code>时显示"the path is xxx"</p>
+<pre><code class="csharp">[ExportMany]
+public class HttpRequestHandlerExample : IHttpRequestHandler {
+    public const string Prefix = &quot;/example/handler/&quot;;
+    public void OnRequest() {
+        var request = HttpManager.CurrentContext.Request;
+        var response = HttpManager.CurrentContext.Response;
+        if (request.Path.StartsWith(Prefix)) {
+            new PlainResult(&quot;the path is &quot; + request.Path.Substring(Prefix.Length))
+                .WriteResponse(response);
+            response.End();
+        }
+    }
+}
+</code></pre>
+
+<h3 id="http_1">Http错误处理器的例子</h3>
+<p>以下的处理器可以定义自定义的404页面</p>
+<pre><code class="csharp">[ExportMany]
+public class HttpErrorHandlerExample : IHttpRequestErrorHandler {
+    public void OnError(Exception ex) {
+        var httpEx = ex as HttpException; // HttpException in ZKWebStandard.Web
+        if (httpEx != null &amp;&amp; httpEx.StatusCode == 404) {
+            var response = HttpManager.CurrentContext.Response;
+            new PlainResult(&quot;custom 404 page&quot;).WriteResponse(response);
+            response.End();
+        }
+    }
+}
+</code></pre>
+
+<h3 id="http_2">Http处理器的介绍</h3>
+<p>在ZKWeb中，有以下类型的Http处理器：<br/></p>
+<ul>
+<li>IHttpRequestPreHandler<ul>
+<li>Http请求的预处理器</li>
+<li>这类处理器不应该返回结果，只应该用来设置数据，例如当前请求的语言</li>
+</ul>
+</li>
+<li>IHttpRequestHandler<ul>
+<li>Http请求的处理器</li>
+<li>这类处理器在请求的路径匹配时可以直接返回结果</li>
+</ul>
+</li>
+<li>IHttpRequestErrorHandler<ul>
+<li>请求错误的处理器</li>
+<li>用于处理请求中发生的错误，例如自定义404页面</li>
+</ul>
+</li>
+</ul>
+<p>ZKWeb处理Http请求的流程如下<br/></p>
+<pre><code class="csharp">try {
+    foreach (按插件注册顺序调用预处理器) {
+        调用IHttpRequestPreHandler.OnRequest
+    }
+    foreach (按插件注册顺序反序调用处理器) {
+        调用IHttpRequestHandler.OnRequest
+    }
+    throw new HttpException(404, &quot;Not Found&quot;);
+} catch (代表请求结束的例外) {
+} catch (Exception ex) {
+    foreach (按插件注册顺序反序调用错误处理器) {
+        调用IHttpRequestErrorHandler.OnError
+    }
+}
+</code></pre>
             
 
           </div> <!--/span-->

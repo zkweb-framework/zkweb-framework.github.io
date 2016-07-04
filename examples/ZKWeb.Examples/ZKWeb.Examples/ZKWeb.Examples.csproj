@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{f2b86975-3d06-4cbf-832a-b4f96371aefe}</ProjectGuid>
+    <ProjectGuid>{F2B86975-3D06-4CBF-832A-B4F96371AEFE}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -163,7 +163,10 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ZKWeb.Examples\src\Controllers\HelloController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\ExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\PostExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpErrorHandlerExample.cs" />
+    <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpRequestHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\Plugin.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

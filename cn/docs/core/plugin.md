@@ -1,7 +1,7 @@
 ZKWeb中的插件以文件夹为单位，插件的编译由框架完成，不依赖Visual Studio。<br/>
 ZKWeb会自动检测插件文件是否有修改，如果有修改则自动重新编译。<br/>
 
-<h4>插件的查找和加载</h4>
+### 插件的查找和加载
 
 ZKWeb会根据`App_Data\config.json`中的`PluginDirectories`对插件进行查找。<br/>
 加载时会按`Plugins`中定义的顺序进行加载。<br/>
@@ -15,7 +15,7 @@ ZKWeb会根据`App_Data\config.json`中的`PluginDirectories`对插件进行查�
 
 载入`Common.Base`插件后，会接着载入`Common.Captcha`插件，直到所有插件加载完毕。
 
-<h4>插件信息</h4>
+### 插件信息
 
 插件信息储存在`插件文件夹\plugin.json`中，格式如下。<br/>
 ``` json
@@ -28,7 +28,7 @@ ZKWeb会根据`App_Data\config.json`中的`PluginDirectories`对插件进行查�
 }
 ```
 
-<h4>依赖外部程序集</h4>
+### 依赖外部程序集
 
 插件有时候需要依赖外部的程序集，但从Nuget安装的程序包不会被ZKWeb自动识别。<br/>
 这时候就需要指定`plugin.json`中的`References`。<br/>
@@ -38,7 +38,7 @@ ZKWeb会根据`App_Data\config.json`中的`PluginDirectories`对插件进行查�
 CKEditor插件依赖外部程序集的例子
 ![依赖外部程序集的例子](../img/ckeditor_reference_example.jpg)
 
-<h4>资源文件的读取顺序</h4>
+### 资源文件的读取顺序
 
 ZKWeb使用了类似Django的重叠+透过式文件系统，一个插件可以简单的重载另外一个插件的资源文件。<br/>
 例如`Plugins: [ "PluginA", "PluginB" ]`，目录结构如下时<br/>
@@ -53,14 +53,14 @@ var pathManager = Application.Ioc.Resolve<PathManager>();
 var fullPath = pathManager.GetResourceFullPath("templates", "some_folder", "some.html");
 ```
 
-<h4>组件的注册顺序</h4>
+### 组件的注册顺序
 
 插件的载入顺序还会影响到组件的注册顺序，例如`Plugins: [ "PluginA", "PluginB" ]`，<br/>
 插件`PluginA`有`[ExportMany]class ExampleHandlerA : IExampleHandler { }`，<br/>
 插件`PluginB`有`[ExportMany]class ExampleHandlerB : IExampleHandler { }`，<br/>
 这时使用`Application.Ioc.ResolveMany<IExampleHandler>()`会获取到`[ExampleHandlerA, ExampleHandlerB]`。
 
-<h4>调试插件</h4>
+### 调试插件
 
 调试在主项目内的插件很简单，直接F5运行并下断点即可。<br/>
 

@@ -1,6 +1,6 @@
 ZKWeb的网站配置内容都保存在`App_Data\config.json`中。<br/>
 
-<h4>配置内容</h4>
+### 配置内容
 ``` json
 {
 	"Database": 数据库名称,
@@ -11,7 +11,7 @@ ZKWeb的网站配置内容都保存在`App_Data\config.json`中。<br/>
 }
 ```
 
-<h4>各配置的说明</h4>
+### 各配置的说明
 
 - Database 数据库名称
 	- 可以是"postgresql", "sqlite", "mssql", "mysql"
@@ -26,7 +26,7 @@ ZKWeb的网站配置内容都保存在`App_Data\config.json`中。<br/>
 - Extra 附加配置
 	- 附加配置可以用来修改高级的配置，例如各项缓存时间等
 
-<h4>附加配置</h4>
+### 附加配置
 
 核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。
 

@@ -275,6 +275,78 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">模板页介绍</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">使用模板页</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">模板标签和过滤器</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">框架自带的标签和过滤器</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_5">获取请求参数</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_6">重载处理函数</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_7">重载模板</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_8">设备专用模板</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_9">模板查找规则</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_10">动态内容</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_11">添加链接到导航栏</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_12">模板模块的单独缓存</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -290,7 +362,262 @@
               
                 <h1>模板引擎</h1><br/>
               
-              
+              <h3 id="_1"><h2>模板页介绍</h2></h3>
+<p>ZKWeb的模板系统使用了DotLiquid。</br>
+请先参考DotLiquid的文档:</br>
+http://dotliquidmarkup.org/</br></p>
+<p>使用它代替cshtml的原因有</br></p>
+<ul>
+<li>模板只要求参数不要求环境，可以纯粹当成是字符串模板使用</li>
+<li>模板只编译成语法树而不是IL代码，每个页面第一次打开的速度远比cshtml要快</li>
+<li>没有内存泄漏的问题（可以在网站运行时不断更新模板页）</li>
+</ul>
+<h3 id="_2"><h2>使用模板页</h2></h3>
+<p>在上面的<code>ExampleController</code>下添加以下代码</p>
+<pre><code class="csharp">[Action(&quot;example/template&quot;)]
+public IActionResult TemplateAction() {
+    return new TemplateResult(&quot;example/example_page.html&quot;, new { text = &quot;world&quot; });
+}
+</code></pre>
+
+<p>在<code>Example</code>文件夹下创建<code>templates\example</code>文件夹，并添加<code>example_page.html</code>文件，内容如下</p>
+<pre><code class="html">&lt;p&gt;hello, {{ arg }}&lt;/p&gt;
+</code></pre>
+
+<p>完成后的目录结构应该如下</br>
+<img alt="" src="../../img/add_example_page.jpg" /></p>
+<p>保存后在浏览器中打开<code>http://localhost:端口/example/template</code>，即可看到<code>hello, world</code>。</br></p>
+<h3 id="_3"><h2>模板标签和过滤器</h2></h3>
+<p>模板支持自定义的标签和过滤器。</br>
+标签的格式是<code>{% 标签 参数 %}</code></br>
+过滤器的格式是<code>{{ 变量或常量 | 过滤器 | 过滤器: 参数,参数 | 更多过滤器... }}</code></br></p>
+<p>修改上面的模板页内容:</br></p>
+<pre><code class="html">{% use_title &quot;Example Title&quot; %}
+{% include common.base/header.html %}
+
+&lt;div&gt;{{ &quot;HomePage&quot; | trans }}&lt;/div&gt;
+&lt;div&gt;hello, {{ text | upcase }}&lt;/div&gt;
+
+{% include common.base/footer.html %}
+</code></pre>
+
+<p>刷新页面可以看到以下的效果:</br>
+<img alt="" src="../../img/template_tag_example.jpg" /></p>
+<h3 id="_4"><h2>框架自带的标签和过滤器</h2></h3>
+<p>框架自带了以下的标签<br/></p>
+<ul>
+<li>area<ul>
+<li>描画区域，参考"动态内容"</li>
+<li>例: <code>{% area test_area %}</code></li>
+</ul>
+</li>
+<li>fetch<ul>
+<li>把指定路径的执行结果设置到变量</li>
+<li>例: <code>{% fetch /api/login_info &gt; login_info %}</code></li>
+</ul>
+</li>
+<li>html_lang<ul>
+<li>显示当前的页面语言代号</li>
+<li>例: <code>{% html_lang %}</code></li>
+</ul>
+</li>
+<li>raw_html<ul>
+<li>描画原始的内容，不经过html编码</li>
+<li>例: <code>{% raw_html variable %}</code></li>
+</ul>
+</li>
+</ul>
+<p>框架自带了以下的过滤器<br/></p>
+<ul>
+<li>trans<ul>
+<li>翻译指定的文本</li>
+<li>例: <code>{{ text | trans }}, {{ "fixed text" | trans }}</code></li>
+</ul>
+</li>
+<li>format<ul>
+<li>格式化字符串，最多可支持8个参数</li>
+<li>例: <code>{{ "name is [0], age is [1]" | format: name, age }}</code></li>
+</ul>
+</li>
+<li>raw_html<ul>
+<li>描画原始的内容，不经过html编码</li>
+<li>例: <code>{{ variable | raw_html }}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="_5"><h2>获取请求参数</h2></h3>
+<p>使用<code>HttpManager.CurrentContext.Request</code>可以获取到请求对象并获取里面的参数。</br>
+目前ZKWeb不能像mvc那样通过函数参数来获取请求参数，但很多情况下不需要自己获取。</br>
+获取请求参数的例子: </br></p>
+<pre><code class="csharp">var request = HttpManager.CurrentContext.Request;
+var id = request.Get&lt;int&gt;(&quot;id&quot;); // a collection combines Form and Request
+var file = request.Files[0];
+</code></pre>
+
+<h3 id="_6"><h2>重载处理函数</h2></h3>
+<p>ZKWeb支持在一个插件中替换另一个插件的处理函数。</br>
+例如插件A定义了"example/a"，插件B也定义了同样路径的函数，ZKWeb会使用插件B中定义的函数。</br>
+这个功能可以用于编写自己的插件替换掉整个首页或登陆页面。</br>
+重载处理函数时需要指定"OverrideExists"参数，否则会提示冲突。</br></p>
+<pre><code class="csharp">[Action(&quot;example/a&quot;, OverrideExists = true)]
+public IActionResult ExampleAInPluginB() { ... }
+</code></pre>
+
+<h3 id="_7"><h2>重载模板</h2></h3>
+<p>ZKWeb支持在一个插件中替换另一个插件的模板文件，这点和Django一样。</br>
+以下的目录结构，插件B在插件A后面加载时，插件B的模板页会替换到插件A的模板页。</br></p>
+<ul>
+<li>Plugins<ul>
+<li>A<ul>
+<li>templates<ul>
+<li>a<ul>
+<li>some_page.html (不会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>B<ul>
+<li>templates<ul>
+<li>a<ul>
+<li>some_page.html (会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>模板还可以通过<code>App_Data\templates</code>重载，结构和上面一样。</br>
+支持模板的重载可以让新的插件随意更换原有插件的网页内容，也可以提供一套用户编辑的系统编辑所有页面。</br></p>
+<h3 id="_8"><h2>设备专用模板</h2></h3>
+<p>ZKWeb支持手机访问时优先读取手机版专用的模板<br/>
+手机专用的模板保存在templates.mobile下。<br/>
+以下的目录结构，在手机访问时会优先使用手机版专用的模板。</br></p>
+<ul>
+<li>Plugins<ul>
+<li>A<ul>
+<li>templates<ul>
+<li>a<ul>
+<li>some_page.html (不会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>templates.mobile<ul>
+<li>a<ul>
+<li>some_page.html (会使用)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_9"><h2>模板查找规则</h2></h3>
+<p>完整的模板查找规则如下</p>
+<ul>
+<li>
+<p>显式指定插件，这时不允许从其他插件或App_Data重载模板</p>
+<ul>
+<li>"所在插件:模板路径"</li>
+<li>例 "Common.Base:include/header.html"</li>
+<li>模板路径<ul>
+<li>插件目录\templates.{device}\模板路径</li>
+<li>插件目录\templates\模板路径</li>
+<li>显式指定插件通常用于模板的继承</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>不指定插件，允许其他插件或App_Data重载模板</p>
+<ul>
+<li>"模板路径"</li>
+<li>例 "include/header.html"</li>
+<li>查找模板路径的顺序<ul>
+<li>App_Data\templates.{device}\模板路径</li>
+<li>按载入顺序反向枚举插件<ul>
+<li>插件目录\templates.{device}\模板路径</li>
+</ul>
+</li>
+<li>App_Data\templates\模板路径</li>
+<li>按载入顺序反向枚举插件<ul>
+<li>插件目录\templates\模板路径</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_10"><h2>动态内容</h2></h3>
+<p>考虑到实现可视化编辑（动态拖拽和修改页面内容），ZKWeb提供了一套默认的动态内容系统。</br></p>
+<p>这套系统定义了以下的类型<br/></p>
+<ul>
+<li>区域 (area)</li>
+<li>模块 (widget)</li>
+</ul>
+<p>每个区域下可以有多个模块，但区域不能嵌套区域。<br/>
+可视化编辑时可以拖动模块加入区域，模块可以通过自定义的参数调整里面的内容。<br/></p>
+<p>在模板页中使用<code>{% area 区域Id %}</code>时会查找这个区域下的所有模块并加入到里面。<br/>
+查找顺序是<br/></p>
+<ul>
+<li>App_Data\areas\{区域Id}.widgets</li>
+<li>程序中注册的默认模块列表</li>
+</ul>
+<p>区域Id全局唯一，请注意是否会产生冲突。</br>
+全局唯一的理由是，有的区域（例如网站头部）是整个网站共享的，这时只需要编辑这个区域就可以应用到所有页面。</br></p>
+<h3 id="_11"><h2>添加链接到导航栏</h2></h3>
+<p>在默认的插件中提供了一个导航栏区域，名称是<code>header_menubar</code>。</br>
+下面演示怎样添加链接到这个区域中。</br></p>
+<p>在<code>Plugin</code>类的<code>Plugin()</code>函数下添加以下代码:</br></p>
+<pre><code class="csharp">var areaManager = Application.Ioc.Resolve&lt;TemplateAreaManager&gt;();
+areaManager.GetArea(&quot;header_menubar&quot;).DefaultWidgets.Add(&quot;example.widgets/example_nav&quot;);
+</code></pre>
+
+<p>创建<code>Example\templates\example.widgets\example_nav.widget</code>，并添加以下内容</p>
+<pre><code class="json">{ &quot;Name&quot;: &quot;Example Navbar Item&quot; }
+</code></pre>
+
+<p>创建<code>Example\templates\example.widgets\example_nav.html</code>，并添加以下内容</p>
+<pre><code class="html">&lt;ul class=&quot;nav&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;/example/template&quot;&gt;{{ &quot;Example&quot; }}&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+<p>添加后文件结构应该如下:</br>
+<img alt="" src="../../img/add_navbar_project.jpg" /></p>
+<p>刷新页面可以看到以下的效果:</br>
+<img alt="" src="../../img/add_narbar.jpg" /></p>
+<h3 id="_12"><h2>模板模块的单独缓存</h2></h3>
+<p>模板模块支持设置单独的缓存时间和缓存策略，使用此功能可以大幅提高页面的响应速度。<br/>
+在widget文件指定缓存时间，例如<br/></p>
+<pre><code class="json">{
+    &quot;Name&quot;: &quot;Example Navbar Item&quot;,
+    &quot;CacheTime&quot;: 15,
+    &quot;CacheBy&quot;: &quot;Locale,Url&quot;
+}
+</code></pre>
+
+<p>这里的CacheTime表示该模块的描画结果会缓存15秒，CacheBy表示缓存的隔离策略。<br/>
+这里缓存会按当前的语言和时区来隔离。<br/>
+有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。</p>
+<p>缓存的隔离策略可以通过实现<code>ICacheIsolationPolicy</code>接口添加。<br/>
+目前核心插件提供了以下的缓存策略<br/></p>
+<ul>
+<li>Device<br/>
+  按设备隔离</li>
+<li>Locale<br/>
+  按当前语言和时区隔离</li>
+<li>Url<br/>
+  按当前请求url隔离</li>
+</ul>
             
 
           </div> <!--/span-->

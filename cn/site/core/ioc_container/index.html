@@ -275,6 +275,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">简单的使用例子</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#ioc">全局的IoC容器</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">在插件中注册组件</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -292,8 +310,7 @@
               
               <p>ZKWeb需要使用IoC容器来管理各个插件中的组件。<br/>
 ZKWeb提供的IoC容器比较简单，为了性能并不支持对构造函数和成员的依赖注入。<br/></p>
-<h4>简单的使用例子</h4>
-
+<h3 id="_1">简单的使用例子</h3>
 <pre><code class="csharp">void Example() {
     var animals = Application.Ioc.ResolveMany&lt;IAnimal&gt;()
     // animals contains instances of Dog and Cow
@@ -313,12 +330,10 @@ public interface IAnimalManager { }
 [ExportMany, SingletonUsage] public class AnimalManager : IAnimalManager { }
 </code></pre>
 
-<h4>全局的IoC容器</h4>
-
+<h3 id="ioc">全局的IoC容器</h3>
 <p>ZKWeb使用了一个全局变量储存IoC容器，这个全局变量在<code>Application.Ioc</code>。<br/>
 虽然使用了全局变量，但这个全局变量可以在线程范围内使用<code>Application.OverrideIoc</code>进行重载，以便测试。<br/></p>
-<h4>在插件中注册组件</h4>
-
+<h3 id="_2">在插件中注册组件</h3>
 <p>插件可以标记<code>[ExportMany]</code>属性注册组件，同时标记<code>[SingletonReuse]</code>属性可以注册成单例。<br/>
 请注意标记该属性的类需要是公开类，私有类不会被扫描。<br/>
 如果不想使用属性注册组件，可以实现<code>IPlugin</code>接口在插件载入时手动注册到<code>Application.Ioc</code></p>
