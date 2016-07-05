@@ -3,7 +3,7 @@ using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
 using ZKWebStandard.Web;
 
-namespace ZKWeb.Examples.ZKWeb.Examples.src.HttpHandlers {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.HttpHandlers {
 	[ExportMany]
 	public class HttpRequestHandlerExample : IHttpRequestHandler {
 		public const string Prefix = "/example/handler/";

@@ -2,8 +2,8 @@
   "Database": "sqlite",
   "ConnectionString": "Data Source={{App_Data}}/test.db;Version=3;",
   "PluginDirectories": [
-    "../../../../ZKWeb.Plugins",
-    "./"
+    "../ZKWeb.Examples.Plugins",
+    "../../../../ZKWeb.Plugins"
   ],
   "Plugins": [
     "Common.Base",

@@ -131,13 +131,10 @@ ZKWeb支持定义事件监听数据的增删查改<br/>
 在Before或After函数中可以通过传入的`context`参数修改关联的数据，<br/>
 在Before或After函数中抛出例外可以阻止事务提交。<br/>
 
-保存事件的示例
+**保存事件的示例**<br/>
 添加`src\DataCallbacks\ExampleDataSaveCallback.cs`，内容如下<br/>
 这个处理器会在数据插入或名称改变时记录到日志。<br/>
 ``` csharp
-/// <summary>
-/// 保存事件的示例
-/// </summary>
 [ExportMany]
 public class ExampleDataSaveCallback : IDataSaveCallback<ExampleTable> {
 	private long IdBeforeSave { get; set; }
@@ -161,13 +158,10 @@ public class ExampleDataSaveCallback : IDataSaveCallback<ExampleTable> {
 
 添加或更新数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
 
-删除事件的示例<br/>
+**删除事件的示例**<br/>
 添加`src\DataCallbacks\ExampleDataDeleteCallback.cs`，内容如下<br/>
 这个处理器会在数据删除时记录到日志。<br/>
 ``` csharp
-/// <summary>
-/// 删除事件的示例
-/// </summary>
 [ExportMany]
 public class ExampleDataDeleteCallback : IDataDeleteCallback<ExampleTable> {
 	public void BeforeDelete(DatabaseContext context, ExampleTable data) {

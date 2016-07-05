@@ -4,7 +4,7 @@ using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
 using ZKWebStandard.Web;
 
-namespace ZKWeb.Examples.ZKWeb.Examples.src.HttpHandlers {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.HttpHandlers {
 	[ExportMany]
 	public class HttpErrorHandlerExample : IHttpRequestErrorHandler {
 		public void OnError(Exception ex) {

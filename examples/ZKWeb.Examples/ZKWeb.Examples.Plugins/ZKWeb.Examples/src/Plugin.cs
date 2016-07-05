@@ -2,7 +2,7 @@ using ZKWeb.Plugin;
 using ZKWeb.Templating.DynamicContents;
 using ZKWebStandard.Ioc;
 
-namespace ZKWeb.Examples.ZKWeb.Examples.src {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src {
 	/// <summary>
 	/// Plugin Entry Point
 	/// </summary>

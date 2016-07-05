@@ -315,6 +315,7 @@
 <p><img alt="网站结构" src="../../img/website_struct.jpg" /></p>
 <h3 id="_2">网站结构的详解</h3>
 <ul>
+<li>Hello.World.AspNetCore 启动网站的项目<ul>
 <li>App_Data 数据文件，这里面文件不会在更新时覆盖<ul>
 <li>logs 日志文件夹</li>
 <li>config.json 网站的配置文件</li>
@@ -323,6 +324,10 @@
 </ul>
 </li>
 <li>bin 程序文件，用于运行网站</li>
+<li>web.config IIS中使用的网站配置文件</li>
+</ul>
+</li>
+<li>Hello.World.Plugins 插件项目<ul>
 <li>Hello.World 一个插件文件夹<ul>
 <li>bin 由插件编译出来的程序集</li>
 <li>src 插件的源代码<ul>
@@ -339,7 +344,8 @@
 <li>plugin.json 插件信息</li>
 </ul>
 </li>
-<li>web.config IIS中使用的网站配置文件</li>
+</ul>
+</li>
 </ul>
 <p><br/>
 一个网站有多个插件，插件可以储存在不同的目录中。<br/>

@@ -2,7 +2,7 @@ using ZKWeb.Web;
 using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
 
-namespace ZKWeb.Examples.ZKWeb.Examples.src.Controllers {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
 	public class ExampleController : IController {
 		[Action("example/plain_text")]

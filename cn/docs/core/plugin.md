@@ -70,9 +70,9 @@ var fullPath = pathManager.GetResourceFullPath("templates", "some_folder", "some
 
 ### 调试插件
 
-调试在主项目内的插件很简单，直接F5运行并下断点即可。<br/>
+调试在项目内的插件很简单，直接F5运行并下断点即可。<br/>
 
-调试在主项目外的插件有两种办法:
+调试在项目外的插件有两种办法:
 
 - 第一种
 	- 在插件的VS中选择调试-挂载到进程并选择IIS进程或Kestrel进程挂载

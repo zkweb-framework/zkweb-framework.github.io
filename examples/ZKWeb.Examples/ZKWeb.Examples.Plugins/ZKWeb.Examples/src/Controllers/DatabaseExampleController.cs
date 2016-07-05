@@ -2,11 +2,11 @@
 using System;
 using System.Linq;
 using ZKWeb.Database;
-using ZKWeb.Examples.ZKWeb.Examples.src.Database;
+using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Database;
 using ZKWeb.Web;
 using ZKWebStandard.Ioc;
 
-namespace ZKWeb.Examples.ZKWeb.Examples.src.Controllers {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
 	public class DatabaseExampleController : IController {
 		[Action("example/add_data")]

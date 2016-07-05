@@ -12,7 +12,7 @@ namespace ZKWeb.Examples.Console {
 
 		public static void RunTests() {
 			Application.Initialize(
-				Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "../../../ZKWeb.Examples"));
+				Path.Combine(Path.GetDirectoryName(typeof(Program).Assembly.Location), "../../../ZKWeb.Examples.AspNet"));
 
 			var unitTestManager = Application.Ioc.Resolve<TestManager>();
 			unitTestManager.RunAllAssemblyTest(new TestConsoleEventHandler());

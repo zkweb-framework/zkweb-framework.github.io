@@ -450,13 +450,10 @@ public string RemoveData() {
 其中增加和修改使用<code>IDataSaveCallback</code>，删除使用<code>IDataDeleteCallback</code>。<br/>
 在Before或After函数中可以通过传入的<code>context</code>参数修改关联的数据，<br/>
 在Before或After函数中抛出例外可以阻止事务提交。<br/></p>
-<p>保存事件的示例
+<p><strong>保存事件的示例</strong><br/>
 添加<code>src\DataCallbacks\ExampleDataSaveCallback.cs</code>，内容如下<br/>
 这个处理器会在数据插入或名称改变时记录到日志。<br/></p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 保存事件的示例
-/// &lt;/summary&gt;
-[ExportMany]
+<pre><code class="csharp">[ExportMany]
 public class ExampleDataSaveCallback : IDataSaveCallback&lt;ExampleTable&gt; {
     private long IdBeforeSave { get; set; }
     private string NameBeforeSave { get; set; }
@@ -478,13 +475,10 @@ public class ExampleDataSaveCallback : IDataSaveCallback&lt;ExampleTable&gt; {
 </code></pre>
 
 <p>添加或更新数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功。<br/></p>
-<p>删除事件的示例<br/>
+<p><strong>删除事件的示例</strong><br/>
 添加<code>src\DataCallbacks\ExampleDataDeleteCallback.cs</code>，内容如下<br/>
 这个处理器会在数据删除时记录到日志。<br/></p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 删除事件的示例
-/// &lt;/summary&gt;
-[ExportMany]
+<pre><code class="csharp">[ExportMany]
 public class ExampleDataDeleteCallback : IDataDeleteCallback&lt;ExampleTable&gt; {
     public void BeforeDelete(DatabaseContext context, ExampleTable data) {
     }

@@ -284,31 +284,19 @@
 
                 
                   <li class="main">
-                    <a href="#_1">添加翻译</a>
+                    <a href="#_1">设置当前线程的语言</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_2">使用翻译</a>
+                    <a href="#_2">添加翻译</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_3">转换时区</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_4">指定当前语言</a>
-                  </li>
-
-                  
-                
-                  <li class="main">
-                    <a href="#_5">指定当前时区</a>
+                    <a href="#_3">使用翻译</a>
                   </li>
 
                   
@@ -328,16 +316,23 @@
               
                 <h1>多语言</h1><br/>
               
-              <p>ZKWeb核心框架支持多语言和多时区，<br/>
-语言的翻译由<code>ITranslateProvider</code>实现。<br/>
-每个线程都可以指定不同的语言和时区。<br/>
-使用插件<code>Common.Base</code>时可以自动设置当前线程语言和时区的机制，请参考该插件的文档。<br/></p>
-<h3 id="_1"><h2>添加翻译</h2></h3>
-<p>添加<code>Example\src\Translates\zh_CN.cs</code>，内容如下</p>
-<pre><code class="csharp">/// &lt;summary&gt;
-/// 中文翻译
-/// &lt;/summary&gt;
-[ExportMany, SingletonReuse]
+              <p>ZKWeb支持多语言功能。<br/>
+语言的翻译由<code>ITranslateProvider</code>实现，每个线程都可以指定不同的语言和时区。<br/>
+默认的插件集提供了自动设置当前线程语言和时区的功能，请参考<code>Common.Base</code>插件的文档。<br/></p>
+<h3 id="_1">设置当前线程的语言</h3>
+<p>设置指定语言<br/></p>
+<pre><code class="csharp">LocaleUtils.SetThreadLanguage(&quot;zh-CN&quot;);
+</code></pre>
+
+<p>自动设置语言（Cookies =&gt; 浏览器语言 =&gt; 默认语言）<br/>
+第一个参数决定是否检测浏览器语言<br/></p>
+<pre><code class="csharp">LocaleUtils.SetThreadLanguageAutomatic(true, &quot;en-US&quot;);
+</code></pre>
+
+<h3 id="_2">添加翻译</h3>
+<p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中。<br/>
+添加<code>src\Translates\zh_CN.cs</code>，内容如下</p>
+<pre><code class="csharp">[ExportMany, SingletonReuse]
 public class zh_CN : ITranslateProvider {
     private static HashSet&lt;string&gt; Codes = new HashSet&lt;string&gt;() { &quot;zh-CN&quot; };
     private static Dictionary&lt;string, string&gt; Translates = new Dictionary&lt;string, string&gt;()
@@ -355,48 +350,14 @@ public class zh_CN : ITranslateProvider {
 }
 </code></pre>
 
-<p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中。<br/>
-这里保存翻译使用了<code>Dictionary</code>，如果有需要还可以通过其他途径翻译。<br/></p>
-<h3 id="_2"><h2>使用翻译</h2></h3>
-<p>在代码中使用翻译<br/>
-类似于gettext，但是gettext使用名称<code>_</code>，这里使用<code>T</code>（Translate的T）。<br/></p>
+<h3 id="_3">使用翻译</h3>
+<p>在代码中使用翻译<br/></p>
 <pre><code class="csharp">string translated = new T(&quot;Example&quot;); // 当前语言是中文时，translated等于&quot;示例&quot;
 </code></pre>
 
 <p>在模板中使用翻译，通过过滤器翻译字符串或变量<br/></p>
 <pre><code class="html">&lt;p&gt;{{ &quot;Example&quot; | trans }}&lt;/p&gt;
 &lt;p&gt;{{ stringVariable | trans }}&lt;/p&gt;
-</code></pre>
-
-<h3 id="_3"><h2>转换时区</h2></h3>
-<p>转换到客户端的时间，<code>ToClientTime</code>是一个扩展函数。<br/>
-如果客户端指定了时区则使用该时区，否则使用服务器本地时间。<br/></p>
-<pre><code class="csharp">var utcTime = DateTime.UtcNow;
-var clientTime = utcTime.ToClientTime();
-</code></pre>
-
-<p>从客户端时间转换到utc时间，常用于客户端的时间控件提交值到服务器。</p>
-<pre><code class="csharp">var clientTime = DateTime.Parse(timeParam);
-var utcTime = clientTime.FromClientTime();
-</code></pre>
-
-<h3 id="_4"><h2>指定当前语言</h2></h3>
-<p>直接设置指定语言<br/></p>
-<pre><code class="csharp">LocaleUtils.SetThreadLanguage(&quot;zh-CN&quot;);
-</code></pre>
-
-<p>自动设置语言（Cookies =&gt; 浏览器语言 =&gt; 默认语言）<br/>
-第一个参数决定是否检测浏览器语言<br/></p>
-<pre><code class="csharp">LocaleUtils.SetThreadLanguageAutomatic(true, &quot;en-US&quot;);
-</code></pre>
-
-<h3 id="_5"><h2>指定当前时区</h2></h3>
-<p>直接设置指定时区</p>
-<pre><code class="csharp">LocaleUtils.SetThreadTimezone(&quot;China Standard Time&quot;);
-</code></pre>
-
-<p>自动设置时区（Cookies =&gt; 默认时区）</p>
-<pre><code class="csharp">LocaleUtils.SetThreadTimezoneAutomatic(&quot;GMT Standard Time&quot;);
 </code></pre>
             
 

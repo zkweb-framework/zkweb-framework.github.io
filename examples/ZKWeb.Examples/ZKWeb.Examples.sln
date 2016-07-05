@@ -2,9 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKWeb.Examples", "ZKWeb.Examples\ZKWeb.Examples.csproj", "{F2B86975-3D06-4CBF-832A-B4F96371AEFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKWeb.Examples.AspNet", "ZKWeb.Examples.AspNet\ZKWeb.Examples.AspNet.csproj", "{8588DF83-3955-4E3F-9584-C4288E922526}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKWeb.Examples.Console", "ZKWeb.Examples.Console\ZKWeb.Examples.Console.csproj", "{1F5D6D8E-421D-443B-AD1F-CBB0C6D6843B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKWeb.Examples.Console", "ZKWeb.Examples.Console\ZKWeb.Examples.Console.csproj", "{98FACBBD-59A2-486F-AB21-DB2F6CFA3C04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZKWeb.Examples.Plugins", "ZKWeb.Examples.Plugins\ZKWeb.Examples.Plugins.csproj", "{72EDAD5B-7F7F-4A93-86C8-CCF7D97767F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,14 +14,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2B86975-3D06-4CBF-832A-B4F96371AEFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2B86975-3D06-4CBF-832A-B4F96371AEFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2B86975-3D06-4CBF-832A-B4F96371AEFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2B86975-3D06-4CBF-832A-B4F96371AEFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F5D6D8E-421D-443B-AD1F-CBB0C6D6843B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F5D6D8E-421D-443B-AD1F-CBB0C6D6843B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F5D6D8E-421D-443B-AD1F-CBB0C6D6843B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F5D6D8E-421D-443B-AD1F-CBB0C6D6843B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8588DF83-3955-4E3F-9584-C4288E922526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8588DF83-3955-4E3F-9584-C4288E922526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8588DF83-3955-4E3F-9584-C4288E922526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8588DF83-3955-4E3F-9584-C4288E922526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98FACBBD-59A2-486F-AB21-DB2F6CFA3C04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98FACBBD-59A2-486F-AB21-DB2F6CFA3C04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98FACBBD-59A2-486F-AB21-DB2F6CFA3C04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98FACBBD-59A2-486F-AB21-DB2F6CFA3C04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72EDAD5B-7F7F-4A93-86C8-CCF7D97767F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72EDAD5B-7F7F-4A93-86C8-CCF7D97767F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72EDAD5B-7F7F-4A93-86C8-CCF7D97767F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72EDAD5B-7F7F-4A93-86C8-CCF7D97767F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

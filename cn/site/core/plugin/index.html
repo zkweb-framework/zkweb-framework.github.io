@@ -389,8 +389,8 @@ var fullPath = pathManager.GetResourceFullPath(&quot;templates&quot;, &quot;some
 插件<code>PluginB</code>有<code>[ExportMany]class ExampleHandlerB : IExampleHandler { }</code>，<br/>
 这时使用<code>Application.Ioc.ResolveMany&lt;IExampleHandler&gt;()</code>会获取到<code>[ExampleHandlerA, ExampleHandlerB]</code>。</p>
 <h3 id="_6">调试插件</h3>
-<p>调试在主项目内的插件很简单，直接F5运行并下断点即可。<br/></p>
-<p>调试在主项目外的插件有两种办法:</p>
+<p>调试在项目内的插件很简单，直接F5运行并下断点即可。<br/></p>
+<p>调试在项目外的插件有两种办法:</p>
 <ul>
 <li>第一种<ul>
 <li>在插件的VS中选择调试-挂载到进程并选择IIS进程或Kestrel进程挂载</li>
