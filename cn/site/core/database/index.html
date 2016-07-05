@@ -319,6 +319,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_6">全局修改表名</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -508,6 +514,28 @@ int affected = query.ExecuteUpdate();
 <pre><code class="csharp">var query = context.Session.CreateSQLQuery(&quot;exec some_query_sp @arg&quot;);
 query.SetParameter(&quot;arg&quot;, 1);
 var result = query.Enumerable&lt;ExampleTable&gt;();
+</code></pre>
+
+<h3 id="_6">全局修改表名</h3>
+<p>ZKWeb允许在初始化数据库时调用注册的处理器。<br/>
+可以注册<code>IDatabaseInitializeHandler</code>实现全局修改表名。<br/>
+全局修改表名非常危险，推荐只在首次部署到服务器之前进行修改。<br/>
+修改示例<br/></p>
+<pre><code>[ExportMany]
+public class DatabaseInitializeHandlerDemo : IDatabaseInitializeHandler {
+    public void OnInitialize(FluentConfiguration configuration) {
+        configuration.Mappings(m =&gt; {
+            m.FluentMappings.Conventions.Add(
+                ConventionBuilder.Class.Always(x =&gt;
+                x.Table(string.Format(&quot;demo_{0}&quot;, x.EntityType.Name.ToLower()))));
+            m.FluentMappings.Conventions.Add(
+                ConventionBuilder.HasManyToMany.Always(x =&gt;
+                x.Table(string.Format(&quot;demo_{0}_to_{1}&quot;,
+                    x.EntityType.Name.ToLower(),
+                    x.ChildType.Name.ToLower()))));
+        });
+    }
+}
 </code></pre>
             
 

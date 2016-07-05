@@ -199,3 +199,27 @@ var query = context.Session.CreateSQLQuery("exec some_query_sp @arg");
 query.SetParameter("arg", 1);
 var result = query.Enumerable<ExampleTable>();
 ```
+
+### 全局修改表名
+
+ZKWeb允许在初始化数据库时调用注册的处理器。<br/>
+可以注册`IDatabaseInitializeHandler`实现全局修改表名。<br/>
+全局修改表名非常危险，推荐只在首次部署到服务器之前进行修改。<br/>
+修改示例<br/>
+```
+[ExportMany]
+public class DatabaseInitializeHandlerDemo : IDatabaseInitializeHandler {
+	public void OnInitialize(FluentConfiguration configuration) {
+		configuration.Mappings(m => {
+			m.FluentMappings.Conventions.Add(
+				ConventionBuilder.Class.Always(x =>
+				x.Table(string.Format("demo_{0}", x.EntityType.Name.ToLower()))));
+			m.FluentMappings.Conventions.Add(
+				ConventionBuilder.HasManyToMany.Always(x =>
+				x.Table(string.Format("demo_{0}_to_{1}",
+					x.EntityType.Name.ToLower(),
+					x.ChildType.Name.ToLower()))));
+		});
+	}
+}
+```
