@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="3f4a5b67-ba2a-4802-9f91-35fdc2b9c127" Title="ZKWeb" Url="html/N_ZKWeb.htm">
-    <HelpTOCNode Id="7fbded32-f584-496d-ba6f-df82cd114e00" Title="Application Class" Url="html/T_ZKWeb_Application.htm">
-      <HelpTOCNode Id="a833a983-caa2-4062-937c-e939ed3c7a64" Title="Application Properties" Url="html/Properties_T_ZKWeb_Application.htm">
+  <HelpTOCNode Id="b343c986-5c40-42c7-a118-884f4580d590" Title="ZKWeb" Url="html/N_ZKWeb.htm">
+    <HelpTOCNode Id="f0e12e46-a6ce-4675-882c-baadafd201b6" Title="Application Class" Url="html/T_ZKWeb_Application.htm">
+      <HelpTOCNode Id="f6f1fcb2-4a70-44e0-8a0d-86f40f311cdc" Title="Application Properties" Url="html/Properties_T_ZKWeb_Application.htm">
         <HelpTOCNode Title="FullVersion Property " Url="html/P_ZKWeb_Application_FullVersion.htm" />
         <HelpTOCNode Title="Ioc Property " Url="html/P_ZKWeb_Application_Ioc.htm" />
         <HelpTOCNode Title="Version Property " Url="html/P_ZKWeb_Application_Version.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="544f8dee-3ef0-4055-b09b-854273673724" Title="Application Methods" Url="html/Methods_T_ZKWeb_Application.htm">
+      <HelpTOCNode Id="855213bd-5861-4da1-85fd-834e557d7c4b" Title="Application Methods" Url="html/Methods_T_ZKWeb_Application.htm">
         <HelpTOCNode Title="Initialize Method " Url="html/M_ZKWeb_Application_Initialize.htm" />
         <HelpTOCNode Title="OnError Method " Url="html/M_ZKWeb_Application_OnError.htm" />
         <HelpTOCNode Title="OnRequest Method " Url="html/M_ZKWeb_Application_OnRequest.htm" />
@@ -16,28 +16,28 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="5f1fff0c-6fe0-4c90-a62b-c20460d9a6c7" Title="ZKWeb.Cache" Url="html/N_ZKWeb_Cache.htm">
-    <HelpTOCNode Id="f3c790e3-9320-4dd3-8317-62d9942ce933" Title="ICacheCleaner Interface" Url="html/T_ZKWeb_Cache_ICacheCleaner.htm">
-      <HelpTOCNode Id="84c2dcf5-e591-44e7-bd2f-b7b9eec8d8b0" Title="ICacheCleaner Methods" Url="html/Methods_T_ZKWeb_Cache_ICacheCleaner.htm">
+  <HelpTOCNode Id="552562af-c067-4984-9792-e0d519638680" Title="ZKWeb.Cache" Url="html/N_ZKWeb_Cache.htm">
+    <HelpTOCNode Id="77c9e85e-6bae-491f-afbd-3add81e9ff00" Title="ICacheCleaner Interface" Url="html/T_ZKWeb_Cache_ICacheCleaner.htm">
+      <HelpTOCNode Id="23880b08-91ef-4748-81a9-447817180d4c" Title="ICacheCleaner Methods" Url="html/Methods_T_ZKWeb_Cache_ICacheCleaner.htm">
         <HelpTOCNode Title="ClearCache Method " Url="html/M_ZKWeb_Cache_ICacheCleaner_ClearCache.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e5214d3a-0449-4e26-9cd9-a5555895033a" Title="ICacheIsolationPolicy Interface" Url="html/T_ZKWeb_Cache_ICacheIsolationPolicy.htm">
-      <HelpTOCNode Id="e9959078-63ac-4ce0-bfc8-fb8208a1b44e" Title="ICacheIsolationPolicy Methods" Url="html/Methods_T_ZKWeb_Cache_ICacheIsolationPolicy.htm">
+    <HelpTOCNode Id="2ee7a6ea-79c3-4f34-bd9a-d397adc48ca3" Title="ICacheIsolationPolicy Interface" Url="html/T_ZKWeb_Cache_ICacheIsolationPolicy.htm">
+      <HelpTOCNode Id="799190e0-155a-4bf5-805f-ed16ccfbb942" Title="ICacheIsolationPolicy Methods" Url="html/Methods_T_ZKWeb_Cache_ICacheIsolationPolicy.htm">
         <HelpTOCNode Title="GetIsolationKey Method " Url="html/M_ZKWeb_Cache_ICacheIsolationPolicy_GetIsolationKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ad4ad38f-2557-4b48-a128-198a1b4a8042" Title="IsolatedMemoryCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
-      <HelpTOCNode Id="f441b26d-d3e9-401d-a83c-a51c7fd930e1" Title="IsolatedMemoryCache(TKey, TValue) Constructor " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm">
+    <HelpTOCNode Id="1f3f1ff2-c509-4ebd-9ecb-8c8dfc1e14fd" Title="IsolatedMemoryCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
+      <HelpTOCNode Id="585d6156-bc47-4f19-aab0-3d11b150ef72" Title="IsolatedMemoryCache(TKey, TValue) Constructor " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm">
         <HelpTOCNode Title="IsolatedMemoryCache(TKey, TValue) Constructor (IEnumerable(String))" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
         <HelpTOCNode Title="IsolatedMemoryCache(TKey, TValue) Constructor (String[])" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2__ctor_2.htm" />
         <HelpTOCNode Title="IsolatedMemoryCache(TKey, TValue) Constructor (IList(ICacheIsolationPolicy))" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2__ctor_1.htm" />
         <HelpTOCNode Title="IsolatedMemoryCache(TKey, TValue) Constructor (ICacheIsolationPolicy[])" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2__ctor_3.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="13ac3d6c-f4d1-4612-8228-db86764ec658" Title="IsolatedMemoryCache(TKey, TValue) Properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
+      <HelpTOCNode Id="aad9ef7d-977f-410f-86ba-a7fe92bcdce8" Title="IsolatedMemoryCache(TKey, TValue) Properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
         <HelpTOCNode Title="IsolationPolicies Property " Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="f30f418e-343a-4e02-93d9-f6647d73fddc" Title="IsolatedMemoryCache(TKey, TValue) Methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
+      <HelpTOCNode Id="dcd2519e-2272-41f5-9a87-47040ddccea2" Title="IsolatedMemoryCache(TKey, TValue) Methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm">
         <HelpTOCNode Title="GenerateKey Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
         <HelpTOCNode Title="GetOrDefault Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
         <HelpTOCNode Title="Put Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Put.htm" />
@@ -45,14 +45,14 @@
         <HelpTOCNode Title="TryGetValue Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_TryGetValue.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="86b1e974-5551-4c52-aef9-a433771ab66c" Title="IsolatedMemoryCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
+    <HelpTOCNode Id="a6db1c31-7d1c-4bcd-8d1c-68bb9bd86784" Title="IsolatedMemoryCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
       <HelpTOCNode Title="IsolatedMemoryCacheKey(TKey) Constructor " Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1__ctor.htm" />
-      <HelpTOCNode Id="8a9a8956-9e55-4b2d-8d53-eb594b223f3d" Title="IsolatedMemoryCacheKey(TKey) Properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
+      <HelpTOCNode Id="6bcd3051-0e11-48c1-af49-2ea60bcbecf2" Title="IsolatedMemoryCacheKey(TKey) Properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
         <HelpTOCNode Title="IsolationKeys Property " Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_IsolationKeys.htm" />
         <HelpTOCNode Title="Key Property " Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Key.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c8971660-2900-4a37-8017-5c29ed559ff7" Title="IsolatedMemoryCacheKey(TKey) Methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
-        <HelpTOCNode Id="17173926-2b65-4f21-86ae-442f7dfb6473" Title="Equals Method " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm">
+      <HelpTOCNode Id="3401a853-3c12-48ea-9454-c6cad5901cd4" Title="IsolatedMemoryCacheKey(TKey) Methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm">
+        <HelpTOCNode Id="a53afa49-01ab-4a03-8191-3de63c23e3d6" Title="Equals Method " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm" />
           <HelpTOCNode Title="Equals Method (IsolatedMemoryCacheKey(TKey))" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals_1.htm" />
         </HelpTOCNode>
@@ -60,34 +60,34 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="d797f395-0148-4190-a372-bd7b390ed034" Title="ZKWeb.Cache.Policies" Url="html/N_ZKWeb_Cache_Policies.htm">
-    <HelpTOCNode Id="f87c33b0-761e-42ae-819e-72609b645663" Title="CacheIsolateByDevice Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm">
+  <HelpTOCNode Id="272f53c5-fb76-4c6e-b3c6-e3c8d99022b3" Title="ZKWeb.Cache.Policies" Url="html/N_ZKWeb_Cache_Policies.htm">
+    <HelpTOCNode Id="cbd3f453-819d-4d90-b0ee-b517ad1f9eed" Title="CacheIsolateByDevice Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm">
       <HelpTOCNode Title="CacheIsolateByDevice Constructor " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByDevice__ctor.htm" />
-      <HelpTOCNode Id="131009b1-d14f-485c-9840-9159cdca0098" Title="CacheIsolateByDevice Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm">
+      <HelpTOCNode Id="85527b92-4717-40fb-b236-4ceae68fd85a" Title="CacheIsolateByDevice Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm">
         <HelpTOCNode Title="GetIsolationKey Method " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByDevice_GetIsolationKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0205ce1b-ce36-42ba-897a-7f5e31849a7d" Title="CacheIsolateByLocale Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm">
+    <HelpTOCNode Id="52b5930d-21ae-447c-8a16-d7a892967279" Title="CacheIsolateByLocale Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm">
       <HelpTOCNode Title="CacheIsolateByLocale Constructor " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByLocale__ctor.htm" />
-      <HelpTOCNode Id="7105901a-c67a-401f-bf14-a790f11e972a" Title="CacheIsolateByLocale Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm">
+      <HelpTOCNode Id="2cec5eee-443c-4485-801a-1f3cf0c96fc9" Title="CacheIsolateByLocale Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm">
         <HelpTOCNode Title="GetIsolationKey Method " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByLocale_GetIsolationKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fe20c116-5bee-4442-9f32-e8c95fc38b82" Title="CacheIsolateByUrl Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByUrl.htm">
+    <HelpTOCNode Id="d829b2c1-8be1-40f8-8bd4-bdd932b118b6" Title="CacheIsolateByUrl Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByUrl.htm">
       <HelpTOCNode Title="CacheIsolateByUrl Constructor " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByUrl__ctor.htm" />
-      <HelpTOCNode Id="6a48718b-0f1a-4fa2-9f07-8fdc3008b388" Title="CacheIsolateByUrl Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByUrl.htm">
+      <HelpTOCNode Id="15165249-357b-48dd-a5ce-849dbb042576" Title="CacheIsolateByUrl Methods" Url="html/Methods_T_ZKWeb_Cache_Policies_CacheIsolateByUrl.htm">
         <HelpTOCNode Title="GetIsolationKey Method " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByUrl_GetIsolationKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="81d492a9-7f64-483d-8496-77f956168bb2" Title="ZKWeb.Database" Url="html/N_ZKWeb_Database.htm">
-    <HelpTOCNode Id="a630bfa3-20a2-4b76-89a0-6ab1779ea244" Title="DatabaseContext Class" Url="html/T_ZKWeb_Database_DatabaseContext.htm">
+  <HelpTOCNode Id="b9821815-5c59-495e-b91e-6c31ee36f8da" Title="ZKWeb.Database" Url="html/N_ZKWeb_Database.htm">
+    <HelpTOCNode Id="33bd26df-5382-42d8-bf4b-befb95c8e555" Title="DatabaseContext Class" Url="html/T_ZKWeb_Database_DatabaseContext.htm">
       <HelpTOCNode Title="DatabaseContext Constructor " Url="html/M_ZKWeb_Database_DatabaseContext__ctor.htm" />
-      <HelpTOCNode Id="43ec5e2c-bee8-431d-b30c-e4d570cb0c71" Title="DatabaseContext Properties" Url="html/Properties_T_ZKWeb_Database_DatabaseContext.htm">
+      <HelpTOCNode Id="9a34bcec-a204-479f-9a3d-188cdf783baf" Title="DatabaseContext Properties" Url="html/Properties_T_ZKWeb_Database_DatabaseContext.htm">
         <HelpTOCNode Title="Session Property " Url="html/P_ZKWeb_Database_DatabaseContext_Session.htm" />
         <HelpTOCNode Title="Transaction Property " Url="html/P_ZKWeb_Database_DatabaseContext_Transaction.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fefade61-9c56-47fd-88d0-028ad9b4543e" Title="DatabaseContext Methods" Url="html/Methods_T_ZKWeb_Database_DatabaseContext.htm">
+      <HelpTOCNode Id="c95a3d19-5799-45e3-8402-a4bfa4bb32da" Title="DatabaseContext Methods" Url="html/Methods_T_ZKWeb_Database_DatabaseContext.htm">
         <HelpTOCNode Title="Count(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_Count__1.htm" />
         <HelpTOCNode Title="Delete(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_Delete__1.htm" />
         <HelpTOCNode Title="DeleteWhere(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_DeleteWhere__1.htm" />
@@ -100,53 +100,53 @@
         <HelpTOCNode Title="UpdateWhere(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_UpdateWhere__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f23dd7f1-07a9-4433-9071-accaf900c991" Title="DatabaseManager Class" Url="html/T_ZKWeb_Database_DatabaseManager.htm">
+    <HelpTOCNode Id="26fd9ff7-963a-4dba-99d2-ede538c498a4" Title="DatabaseManager Class" Url="html/T_ZKWeb_Database_DatabaseManager.htm">
       <HelpTOCNode Title="DatabaseManager Constructor " Url="html/M_ZKWeb_Database_DatabaseManager__ctor.htm" />
-      <HelpTOCNode Id="892ab3b4-5cd4-4fd8-b3f0-86b7f7af37c6" Title="DatabaseManager Properties" Url="html/Properties_T_ZKWeb_Database_DatabaseManager.htm">
+      <HelpTOCNode Id="4f1a3e3b-9bcc-4cd7-82d8-ca84416f161e" Title="DatabaseManager Properties" Url="html/Properties_T_ZKWeb_Database_DatabaseManager.htm">
         <HelpTOCNode Title="SessionFactory Property " Url="html/P_ZKWeb_Database_DatabaseManager_SessionFactory.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="2fe783ee-63fa-44d5-8cfa-16c9afdfde81" Title="DatabaseManager Methods" Url="html/Methods_T_ZKWeb_Database_DatabaseManager.htm">
-        <HelpTOCNode Id="b7a6bcbf-354b-433e-8f67-ff215903c25f" Title="GetContext Method " Url="html/Overload_ZKWeb_Database_DatabaseManager_GetContext.htm">
+      <HelpTOCNode Id="06dafc89-eb0e-4174-8cb4-7b7a3fb5e0b0" Title="DatabaseManager Methods" Url="html/Methods_T_ZKWeb_Database_DatabaseManager.htm">
+        <HelpTOCNode Id="8816d11a-cf3d-4611-9425-6900d80fe7ad" Title="GetContext Method " Url="html/Overload_ZKWeb_Database_DatabaseManager_GetContext.htm">
           <HelpTOCNode Title="GetContext Method " Url="html/M_ZKWeb_Database_DatabaseManager_GetContext.htm" />
           <HelpTOCNode Title="GetContext Method (Nullable(IsolationLevel))" Url="html/M_ZKWeb_Database_DatabaseManager_GetContext_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="70770bd4-06bd-487f-8718-7047e9a1a1a1" Title="DatabaseTypes Class" Url="html/T_ZKWeb_Database_DatabaseTypes.htm">
-      <HelpTOCNode Id="2d5f7b01-a598-4fd2-8f8b-67676155db67" Title="DatabaseTypes Fields" Url="html/Fields_T_ZKWeb_Database_DatabaseTypes.htm">
+    <HelpTOCNode Id="474a6ec4-07a4-43f6-927b-fc0f3bbded1e" Title="DatabaseTypes Class" Url="html/T_ZKWeb_Database_DatabaseTypes.htm">
+      <HelpTOCNode Id="6b6fc5ad-3d0a-4298-a72e-82757d2415f4" Title="DatabaseTypes Fields" Url="html/Fields_T_ZKWeb_Database_DatabaseTypes.htm">
         <HelpTOCNode Title="MSSQL Field" Url="html/F_ZKWeb_Database_DatabaseTypes_MSSQL.htm" />
         <HelpTOCNode Title="MySQL Field" Url="html/F_ZKWeb_Database_DatabaseTypes_MySQL.htm" />
         <HelpTOCNode Title="PostgreSQL Field" Url="html/F_ZKWeb_Database_DatabaseTypes_PostgreSQL.htm" />
         <HelpTOCNode Title="SQLite Field" Url="html/F_ZKWeb_Database_DatabaseTypes_SQLite.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0f499315-f766-4521-939c-fd4805f7603a" Title="IDatabaseInitializeHandler Interface" Url="html/T_ZKWeb_Database_IDatabaseInitializeHandler.htm">
-      <HelpTOCNode Id="b86f6458-32b7-4b77-8da3-b50d217b6e03" Title="IDatabaseInitializeHandler Methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseInitializeHandler.htm">
+    <HelpTOCNode Id="60a51a8e-1be3-4db0-8027-0e4c957cba4b" Title="IDatabaseInitializeHandler Interface" Url="html/T_ZKWeb_Database_IDatabaseInitializeHandler.htm">
+      <HelpTOCNode Id="5e505c30-0efe-4a99-a1e0-202f9b035708" Title="IDatabaseInitializeHandler Methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseInitializeHandler.htm">
         <HelpTOCNode Title="OnInitialize Method " Url="html/M_ZKWeb_Database_IDatabaseInitializeHandler_OnInitialize.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="98e62e8d-25d4-4ca7-bfda-a133bfe8e55b" Title="IDataDeleteCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm">
-      <HelpTOCNode Id="a6066169-3797-41b6-8189-f8d344cc7090" Title="IDataDeleteCallback(T) Methods" Url="html/Methods_T_ZKWeb_Database_IDataDeleteCallback_1.htm">
+    <HelpTOCNode Id="70c699ea-0e60-485a-ac6a-4c86ece7a8a3" Title="IDataDeleteCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm">
+      <HelpTOCNode Id="f25a07ec-24e7-4401-b4b7-6fc7de9548f6" Title="IDataDeleteCallback(T) Methods" Url="html/Methods_T_ZKWeb_Database_IDataDeleteCallback_1.htm">
         <HelpTOCNode Title="AfterDelete Method " Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_AfterDelete.htm" />
         <HelpTOCNode Title="BeforeDelete Method " Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_BeforeDelete.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d0ced266-d6ab-410f-81e0-630d86e0e248" Title="IDataSaveCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm">
-      <HelpTOCNode Id="28da0bdb-b6a5-478a-91af-bb9dcffec701" Title="IDataSaveCallback(T) Methods" Url="html/Methods_T_ZKWeb_Database_IDataSaveCallback_1.htm">
+    <HelpTOCNode Id="c90e0b14-90ac-4bad-93a2-43245e0d8a79" Title="IDataSaveCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm">
+      <HelpTOCNode Id="648fa59a-3ecc-429d-9c03-17231bb7900f" Title="IDataSaveCallback(T) Methods" Url="html/Methods_T_ZKWeb_Database_IDataSaveCallback_1.htm">
         <HelpTOCNode Title="AfterSave Method " Url="html/M_ZKWeb_Database_IDataSaveCallback_1_AfterSave.htm" />
         <HelpTOCNode Title="BeforeSave Method " Url="html/M_ZKWeb_Database_IDataSaveCallback_1_BeforeSave.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="18d6a1b9-aae6-4264-9073-57c0fd71674a" Title="ZKWeb.Database.UserTypes" Url="html/N_ZKWeb_Database_UserTypes.htm">
-    <HelpTOCNode Id="33f9de4a-9b3c-4beb-8e51-4187df338203" Title="JsonSerializedType(T) Class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
+  <HelpTOCNode Id="c6f6b403-392a-411f-9d1e-b3afb8cd4c0e" Title="ZKWeb.Database.UserTypes" Url="html/N_ZKWeb_Database_UserTypes.htm">
+    <HelpTOCNode Id="a329d9a5-b785-4640-8c7c-1a6b164fc343" Title="JsonSerializedType(T) Class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
       <HelpTOCNode Title="JsonSerializedType(T) Constructor " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1__ctor.htm" />
-      <HelpTOCNode Id="231b90c6-2550-46b4-9dcf-9cf701ac9983" Title="JsonSerializedType(T) Properties" Url="html/Properties_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
+      <HelpTOCNode Id="e45973f2-e5de-4447-a4f0-9b17aa26e1b1" Title="JsonSerializedType(T) Properties" Url="html/Properties_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
         <HelpTOCNode Title="IsMutable Property " Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_IsMutable.htm" />
         <HelpTOCNode Title="ReturnedType Property " Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_ReturnedType.htm" />
         <HelpTOCNode Title="SqlTypes Property " Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_SqlTypes.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dfcb7cd7-faf7-4822-8bfd-41a55a891614" Title="JsonSerializedType(T) Methods" Url="html/Methods_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
+      <HelpTOCNode Id="6d642713-6bac-4a99-aa57-b96d21f5ec22" Title="JsonSerializedType(T) Methods" Url="html/Methods_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm">
         <HelpTOCNode Title="Assemble Method " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Assemble.htm" />
         <HelpTOCNode Title="DeepCopy Method " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_DeepCopy.htm" />
         <HelpTOCNode Title="Disassemble Method " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Disassemble.htm" />
@@ -158,58 +158,58 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="bb928a17-1c0f-472e-945c-1c9c781fb8df" Title="ZKWeb.Localize" Url="html/N_ZKWeb_Localize.htm">
-    <HelpTOCNode Id="6f5e6a76-a5c8-4dd0-ab0b-e7ec9003360d" Title="ILanguage Interface" Url="html/T_ZKWeb_Localize_ILanguage.htm">
-      <HelpTOCNode Id="2ac14969-185f-4d6c-90cd-3816cf48405b" Title="ILanguage Properties" Url="html/Properties_T_ZKWeb_Localize_ILanguage.htm">
+  <HelpTOCNode Id="4675ceaa-62ac-4243-9123-fc0f434d282a" Title="ZKWeb.Localize" Url="html/N_ZKWeb_Localize.htm">
+    <HelpTOCNode Id="b47e4a0a-252f-45e6-9f15-cc59710006fc" Title="ILanguage Interface" Url="html/T_ZKWeb_Localize_ILanguage.htm">
+      <HelpTOCNode Id="7739195b-1832-429d-a134-6bcfb0d6a7be" Title="ILanguage Properties" Url="html/Properties_T_ZKWeb_Localize_ILanguage.htm">
         <HelpTOCNode Title="Name Property " Url="html/P_ZKWeb_Localize_ILanguage_Name.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="721f07ad-58ab-4bf9-98b7-aed4e0823831" Title="ITranslateProvider Interface" Url="html/T_ZKWeb_Localize_ITranslateProvider.htm">
-      <HelpTOCNode Id="fb24c5e3-ba23-4e65-97be-454c2874740f" Title="ITranslateProvider Methods" Url="html/Methods_T_ZKWeb_Localize_ITranslateProvider.htm">
+    <HelpTOCNode Id="0619c871-0a8f-4a46-bf1e-f0ec33a3e545" Title="ITranslateProvider Interface" Url="html/T_ZKWeb_Localize_ITranslateProvider.htm">
+      <HelpTOCNode Id="326a59ee-716e-43de-a800-363f6893cbe7" Title="ITranslateProvider Methods" Url="html/Methods_T_ZKWeb_Localize_ITranslateProvider.htm">
         <HelpTOCNode Title="CanTranslate Method " Url="html/M_ZKWeb_Localize_ITranslateProvider_CanTranslate.htm" />
         <HelpTOCNode Title="Translate Method " Url="html/M_ZKWeb_Localize_ITranslateProvider_Translate.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="656a3a75-5b75-4c87-b0f4-2ec25ebe190a" Title="T Structure" Url="html/T_ZKWeb_Localize_T.htm">
+    <HelpTOCNode Id="0a5a8bb6-6e80-4489-851e-b1f6e8260e4c" Title="T Structure" Url="html/T_ZKWeb_Localize_T.htm">
       <HelpTOCNode Title="T Constructor " Url="html/M_ZKWeb_Localize_T__ctor.htm" />
-      <HelpTOCNode Id="1081556b-0b62-46e9-90de-ddbd2a158642" Title="T Methods" Url="html/Methods_T_ZKWeb_Localize_T.htm">
+      <HelpTOCNode Id="7a896470-57e8-439a-aa13-ddf929b2304a" Title="T Methods" Url="html/Methods_T_ZKWeb_Localize_T.htm">
         <HelpTOCNode Title="ToString Method " Url="html/M_ZKWeb_Localize_T_ToString.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="3b3744a8-0fea-42d6-865c-78a5e88f498c" Title="T Type Conversions" Url="html/Operators_T_ZKWeb_Localize_T.htm">
+      <HelpTOCNode Id="02bcc8c8-5a0a-4ff7-90ad-75812fca190f" Title="T Type Conversions" Url="html/Operators_T_ZKWeb_Localize_T.htm">
         <HelpTOCNode Title="Implicit Conversion (T to String)" Url="html/M_ZKWeb_Localize_T_op_Implicit.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d61c2049-31eb-440a-be69-7e04f7cfc8a1" Title="TranslateManager Class" Url="html/T_ZKWeb_Localize_TranslateManager.htm">
+    <HelpTOCNode Id="f093b7f3-c06e-480c-8807-6b0a17803693" Title="TranslateManager Class" Url="html/T_ZKWeb_Localize_TranslateManager.htm">
       <HelpTOCNode Title="TranslateManager Constructor " Url="html/M_ZKWeb_Localize_TranslateManager__ctor.htm" />
-      <HelpTOCNode Id="0fef0d46-1fd9-476c-bf55-e276485554cb" Title="TranslateManager Properties" Url="html/Properties_T_ZKWeb_Localize_TranslateManager.htm">
+      <HelpTOCNode Id="17ecfe5c-adec-4650-a634-8e932f63b2c8" Title="TranslateManager Properties" Url="html/Properties_T_ZKWeb_Localize_TranslateManager.htm">
         <HelpTOCNode Title="TranslateCache Property " Url="html/P_ZKWeb_Localize_TranslateManager_TranslateCache.htm" />
         <HelpTOCNode Title="TranslateCacheTime Property " Url="html/P_ZKWeb_Localize_TranslateManager_TranslateCacheTime.htm" />
         <HelpTOCNode Title="TranslateProvidersCache Property " Url="html/P_ZKWeb_Localize_TranslateManager_TranslateProvidersCache.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="700be642-573c-4d4f-8545-729779352498" Title="TranslateManager Methods" Url="html/Methods_T_ZKWeb_Localize_TranslateManager.htm">
+      <HelpTOCNode Id="a9039fee-387c-4ab1-92b9-aa4df759d237" Title="TranslateManager Methods" Url="html/Methods_T_ZKWeb_Localize_TranslateManager.htm">
         <HelpTOCNode Title="ClearCache Method " Url="html/M_ZKWeb_Localize_TranslateManager_ClearCache.htm" />
         <HelpTOCNode Title="GetTranslateProviders Method " Url="html/M_ZKWeb_Localize_TranslateManager_GetTranslateProviders.htm" />
-        <HelpTOCNode Id="2265a278-12c6-41d7-b84a-6ec1e15e7fdb" Title="Translate Method " Url="html/Overload_ZKWeb_Localize_TranslateManager_Translate.htm">
+        <HelpTOCNode Id="e2b17e2f-a5a8-4298-8a95-1ec8c09f1846" Title="Translate Method " Url="html/Overload_ZKWeb_Localize_TranslateManager_Translate.htm">
           <HelpTOCNode Title="Translate Method (String)" Url="html/M_ZKWeb_Localize_TranslateManager_Translate.htm" />
           <HelpTOCNode Title="Translate Method (String, String)" Url="html/M_ZKWeb_Localize_TranslateManager_Translate_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ff9a509f-9593-4309-a1c6-ccd74eb4c8d2" Title="ZKWeb.Localize.JsonConverters" Url="html/N_ZKWeb_Localize_JsonConverters.htm">
-    <HelpTOCNode Id="c904336a-009b-4fc3-9285-a897c28bef39" Title="TJsonConverter Class" Url="html/T_ZKWeb_Localize_JsonConverters_TJsonConverter.htm">
+  <HelpTOCNode Id="ba310d12-d597-4edf-a59f-8b6ce72b7977" Title="ZKWeb.Localize.JsonConverters" Url="html/N_ZKWeb_Localize_JsonConverters.htm">
+    <HelpTOCNode Id="25e1ad9e-8eb7-4fb6-888d-7da7ebbf41e4" Title="TJsonConverter Class" Url="html/T_ZKWeb_Localize_JsonConverters_TJsonConverter.htm">
       <HelpTOCNode Title="TJsonConverter Constructor " Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter__ctor.htm" />
-      <HelpTOCNode Id="ededae85-c2e0-4b2a-877d-66317778a7ce" Title="TJsonConverter Methods" Url="html/Methods_T_ZKWeb_Localize_JsonConverters_TJsonConverter.htm">
+      <HelpTOCNode Id="cba9efad-063f-436e-a00c-63d96af3bff6" Title="TJsonConverter Methods" Url="html/Methods_T_ZKWeb_Localize_JsonConverters_TJsonConverter.htm">
         <HelpTOCNode Title="CanConvert Method " Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_CanConvert.htm" />
         <HelpTOCNode Title="ReadJson Method " Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_ReadJson.htm" />
         <HelpTOCNode Title="WriteJson Method " Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_WriteJson.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="4861dfbf-7d8d-4b23-99f5-432dbd59b3a2" Title="ZKWeb.Logging" Url="html/N_ZKWeb_Logging.htm">
-    <HelpTOCNode Id="0ee4cfbe-d3ba-46c0-aca9-6b7d1adb2108" Title="LogManager Class" Url="html/T_ZKWeb_Logging_LogManager.htm">
+  <HelpTOCNode Id="a4594036-63e3-48ee-bacb-4939a9c5ebc2" Title="ZKWeb.Logging" Url="html/N_ZKWeb_Logging.htm">
+    <HelpTOCNode Id="1e1d73c2-d150-4057-bf67-a24a9fef147a" Title="LogManager Class" Url="html/T_ZKWeb_Logging_LogManager.htm">
       <HelpTOCNode Title="LogManager Constructor " Url="html/M_ZKWeb_Logging_LogManager__ctor.htm" />
-      <HelpTOCNode Id="850b49bc-60c4-4a12-ae20-9d8bf57f87e5" Title="LogManager Methods" Url="html/Methods_T_ZKWeb_Logging_LogManager.htm">
+      <HelpTOCNode Id="fa2d8a99-0f4a-4dbd-a82d-84703d02d8f1" Title="LogManager Methods" Url="html/Methods_T_ZKWeb_Logging_LogManager.htm">
         <HelpTOCNode Title="Log Method " Url="html/M_ZKWeb_Logging_LogManager_Log.htm" />
         <HelpTOCNode Title="LogDebug Method " Url="html/M_ZKWeb_Logging_LogManager_LogDebug.htm" />
         <HelpTOCNode Title="LogError Method " Url="html/M_ZKWeb_Logging_LogManager_LogError.htm" />
@@ -218,11 +218,11 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="811faf31-d679-4481-936f-5d13d4209990" Title="ZKWeb.Plugin" Url="html/N_ZKWeb_Plugin.htm">
+  <HelpTOCNode Id="dd45e6ba-bdbb-4db7-b2e2-cbc69248702a" Title="ZKWeb.Plugin" Url="html/N_ZKWeb_Plugin.htm">
     <HelpTOCNode Title="IPlugin Interface" Url="html/T_ZKWeb_Plugin_IPlugin.htm" />
-    <HelpTOCNode Id="c33e7d34-8879-4fa4-a737-2f20df7da5e0" Title="PluginInfo Class" Url="html/T_ZKWeb_Plugin_PluginInfo.htm">
+    <HelpTOCNode Id="319976d4-306a-468b-a366-5379138f2f6e" Title="PluginInfo Class" Url="html/T_ZKWeb_Plugin_PluginInfo.htm">
       <HelpTOCNode Title="PluginInfo Constructor " Url="html/M_ZKWeb_Plugin_PluginInfo__ctor.htm" />
-      <HelpTOCNode Id="b6c1ba66-fe60-4454-ab05-86ab9c30f3ea" Title="PluginInfo Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginInfo.htm">
+      <HelpTOCNode Id="04df6ebc-5715-487c-b6c1-4b1ce8c02997" Title="PluginInfo Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginInfo.htm">
         <HelpTOCNode Title="Dependencies Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Dependencies.htm" />
         <HelpTOCNode Title="Description Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Description.htm" />
         <HelpTOCNode Title="Directory Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Directory.htm" />
@@ -231,15 +231,15 @@
         <HelpTOCNode Title="References Property " Url="html/P_ZKWeb_Plugin_PluginInfo_References.htm" />
         <HelpTOCNode Title="Version Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Version.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="8737109c-fd6c-4644-8f1b-37d4555fa5a9" Title="PluginInfo Methods" Url="html/Methods_T_ZKWeb_Plugin_PluginInfo.htm">
+      <HelpTOCNode Id="ac70df50-09db-4c03-be1b-f83e560167c5" Title="PluginInfo Methods" Url="html/Methods_T_ZKWeb_Plugin_PluginInfo.htm">
         <HelpTOCNode Title="FromDirectory Method " Url="html/M_ZKWeb_Plugin_PluginInfo_FromDirectory.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="fcbd0499-3a9b-4a3a-b3c6-c4c656acbf78" Title="PluginInfoExtensions Class" Url="html/T_ZKWeb_Plugin_PluginInfoExtensions.htm">
-      <HelpTOCNode Id="063806c1-ceef-4d30-81b1-47f3b277c44a" Title="PluginInfoExtensions Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginInfoExtensions.htm">
+    <HelpTOCNode Id="4731cac9-bbff-43fd-b44f-b1aa7d2fb994" Title="PluginInfoExtensions Class" Url="html/T_ZKWeb_Plugin_PluginInfoExtensions.htm">
+      <HelpTOCNode Id="1fb78c06-1db5-496f-9649-23a884fa379d" Title="PluginInfoExtensions Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginInfoExtensions.htm">
         <HelpTOCNode Title="DefaultReferences Property " Url="html/P_ZKWeb_Plugin_PluginInfoExtensions_DefaultReferences.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5f07c964-b6c0-44e1-8d77-85169131c402" Title="PluginInfoExtensions Methods" Url="html/Methods_T_ZKWeb_Plugin_PluginInfoExtensions.htm">
+      <HelpTOCNode Id="f7512fc2-e94d-4af9-bb2d-4a6142040ede" Title="PluginInfoExtensions Methods" Url="html/Methods_T_ZKWeb_Plugin_PluginInfoExtensions.htm">
         <HelpTOCNode Title="AssemblyPath Method " Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPath.htm" />
         <HelpTOCNode Title="AssemblyPdbPath Method " Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPdbPath.htm" />
         <HelpTOCNode Title="BinDirectory Method " Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_BinDirectory.htm" />
@@ -252,26 +252,26 @@
         <HelpTOCNode Title="VersionObject Method " Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_VersionObject.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5167689d-5b0f-4dff-b777-21b78099e0c6" Title="PluginManager Class" Url="html/T_ZKWeb_Plugin_PluginManager.htm">
+    <HelpTOCNode Id="c8e5689a-5dbe-4325-a66a-91087cd61271" Title="PluginManager Class" Url="html/T_ZKWeb_Plugin_PluginManager.htm">
       <HelpTOCNode Title="PluginManager Constructor " Url="html/M_ZKWeb_Plugin_PluginManager__ctor.htm" />
-      <HelpTOCNode Id="b25dc108-636f-4253-a409-c463947ec287" Title="PluginManager Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginManager.htm">
+      <HelpTOCNode Id="6dda1e25-73b5-4223-aa9e-17ff45814b53" Title="PluginManager Properties" Url="html/Properties_T_ZKWeb_Plugin_PluginManager.htm">
         <HelpTOCNode Title="PluginAssemblies Property " Url="html/P_ZKWeb_Plugin_PluginManager_PluginAssemblies.htm" />
         <HelpTOCNode Title="Plugins Property " Url="html/P_ZKWeb_Plugin_PluginManager_Plugins.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="PluginManager Methods" Url="html/Methods_T_ZKWeb_Plugin_PluginManager.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="5cd91ad8-7c6e-474b-98a7-91efdee78d8f" Title="ZKWeb.Server" Url="html/N_ZKWeb_Server.htm">
-    <HelpTOCNode Id="80dce78d-b8d0-449b-9658-507f953beb60" Title="ConfigManager Class" Url="html/T_ZKWeb_Server_ConfigManager.htm">
+  <HelpTOCNode Id="4df9ae77-aedc-4201-ac41-7319b2a93c4c" Title="ZKWeb.Server" Url="html/N_ZKWeb_Server.htm">
+    <HelpTOCNode Id="9057d85a-45cb-4cc3-91da-98f63ec08fc8" Title="ConfigManager Class" Url="html/T_ZKWeb_Server_ConfigManager.htm">
       <HelpTOCNode Title="ConfigManager Constructor " Url="html/M_ZKWeb_Server_ConfigManager__ctor.htm" />
-      <HelpTOCNode Id="4cb6a6c3-9aa3-4927-8f29-fd471b657cc4" Title="ConfigManager Properties" Url="html/Properties_T_ZKWeb_Server_ConfigManager.htm">
+      <HelpTOCNode Id="ed5c40a1-3b69-427b-bf4d-6ca931a019f7" Title="ConfigManager Properties" Url="html/Properties_T_ZKWeb_Server_ConfigManager.htm">
         <HelpTOCNode Title="WebsiteConfig Property " Url="html/P_ZKWeb_Server_ConfigManager_WebsiteConfig.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="ConfigManager Methods" Url="html/Methods_T_ZKWeb_Server_ConfigManager.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c32ce740-94a2-4e72-8a3b-4de9721b03c7" Title="PathConfig Class" Url="html/T_ZKWeb_Server_PathConfig.htm">
+    <HelpTOCNode Id="b3daca61-fb08-4abf-99ba-e67a98202f80" Title="PathConfig Class" Url="html/T_ZKWeb_Server_PathConfig.htm">
       <HelpTOCNode Title="PathConfig Constructor " Url="html/M_ZKWeb_Server_PathConfig__ctor.htm" />
-      <HelpTOCNode Id="95b00d28-1250-4875-a4f4-c8865ab5fea0" Title="PathConfig Properties" Url="html/Properties_T_ZKWeb_Server_PathConfig.htm">
+      <HelpTOCNode Id="be7d5805-525d-4ed5-8705-027144bc562f" Title="PathConfig Properties" Url="html/Properties_T_ZKWeb_Server_PathConfig.htm">
         <HelpTOCNode Title="AppDataDirectory Property " Url="html/P_ZKWeb_Server_PathConfig_AppDataDirectory.htm" />
         <HelpTOCNode Title="DatabaseScriptPath Property " Url="html/P_ZKWeb_Server_PathConfig_DatabaseScriptPath.htm" />
         <HelpTOCNode Title="DeviceSpecializedTemplateDirectoryNameFormat Property " Url="html/P_ZKWeb_Server_PathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
@@ -281,19 +281,19 @@
         <HelpTOCNode Title="WebsiteConfigPath Property " Url="html/P_ZKWeb_Server_PathConfig_WebsiteConfigPath.htm" />
         <HelpTOCNode Title="WebsiteRootDirectory Property " Url="html/P_ZKWeb_Server_PathConfig_WebsiteRootDirectory.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a7586bbd-47b1-46cb-8dec-ed9c830a6bdd" Title="PathConfig Methods" Url="html/Methods_T_ZKWeb_Server_PathConfig.htm">
+      <HelpTOCNode Id="9c32059e-7e9a-4e39-a7ea-e883e5430989" Title="PathConfig Methods" Url="html/Methods_T_ZKWeb_Server_PathConfig.htm">
         <HelpTOCNode Title="Initialize Method " Url="html/M_ZKWeb_Server_PathConfig_Initialize.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9a161192-8041-4bdf-9ef2-f03fc61b990b" Title="PathManager Class" Url="html/T_ZKWeb_Server_PathManager.htm">
+    <HelpTOCNode Id="3752ae5f-528a-49b6-bb41-129b764dba1b" Title="PathManager Class" Url="html/T_ZKWeb_Server_PathManager.htm">
       <HelpTOCNode Title="PathManager Constructor " Url="html/M_ZKWeb_Server_PathManager__ctor.htm" />
-      <HelpTOCNode Id="44a6cd38-bdf2-4301-b86c-1c377770fba7" Title="PathManager Properties" Url="html/Properties_T_ZKWeb_Server_PathManager.htm">
+      <HelpTOCNode Id="292749b4-c510-4168-9712-03bab0eb4b39" Title="PathManager Properties" Url="html/Properties_T_ZKWeb_Server_PathManager.htm">
         <HelpTOCNode Title="ResourcePathCache Property " Url="html/P_ZKWeb_Server_PathManager_ResourcePathCache.htm" />
         <HelpTOCNode Title="ResourcePathCacheTime Property " Url="html/P_ZKWeb_Server_PathManager_ResourcePathCacheTime.htm" />
         <HelpTOCNode Title="TemplatePathCache Property " Url="html/P_ZKWeb_Server_PathManager_TemplatePathCache.htm" />
         <HelpTOCNode Title="TemplatePathCacheTime Property " Url="html/P_ZKWeb_Server_PathManager_TemplatePathCacheTime.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a01362cf-a14f-494c-b1c1-ecc8cf61a1dc" Title="PathManager Methods" Url="html/Methods_T_ZKWeb_Server_PathManager.htm">
+      <HelpTOCNode Id="55d76c5d-a263-4846-9287-28e9467f9224" Title="PathManager Methods" Url="html/Methods_T_ZKWeb_Server_PathManager.htm">
         <HelpTOCNode Title="ClearCache Method " Url="html/M_ZKWeb_Server_PathManager_ClearCache.htm" />
         <HelpTOCNode Title="GetPluginDirectories Method " Url="html/M_ZKWeb_Server_PathManager_GetPluginDirectories.htm" />
         <HelpTOCNode Title="GetResourceFullPath Method " Url="html/M_ZKWeb_Server_PathManager_GetResourceFullPath.htm" />
@@ -303,61 +303,61 @@
         <HelpTOCNode Title="GetTemplateFullPathCandidates Method " Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPathCandidates.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9eaafeb9-ff0a-4740-b81d-f0401cfa3070" Title="WebsiteConfig Class" Url="html/T_ZKWeb_Server_WebsiteConfig.htm">
+    <HelpTOCNode Id="51d2e090-b13d-4bc3-a843-3245bf29d79d" Title="WebsiteConfig Class" Url="html/T_ZKWeb_Server_WebsiteConfig.htm">
       <HelpTOCNode Title="WebsiteConfig Constructor " Url="html/M_ZKWeb_Server_WebsiteConfig__ctor.htm" />
-      <HelpTOCNode Id="c4923193-be9e-4e8d-8003-b5414f62bbf9" Title="WebsiteConfig Properties" Url="html/Properties_T_ZKWeb_Server_WebsiteConfig.htm">
+      <HelpTOCNode Id="42977c31-9bb2-4abb-a9f3-1d2cb715e059" Title="WebsiteConfig Properties" Url="html/Properties_T_ZKWeb_Server_WebsiteConfig.htm">
         <HelpTOCNode Title="ConnectionString Property " Url="html/P_ZKWeb_Server_WebsiteConfig_ConnectionString.htm" />
         <HelpTOCNode Title="Database Property " Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
         <HelpTOCNode Title="Extra Property " Url="html/P_ZKWeb_Server_WebsiteConfig_Extra.htm" />
         <HelpTOCNode Title="PluginDirectories Property " Url="html/P_ZKWeb_Server_WebsiteConfig_PluginDirectories.htm" />
         <HelpTOCNode Title="Plugins Property " Url="html/P_ZKWeb_Server_WebsiteConfig_Plugins.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="97ef91fb-88ff-4038-95c6-9a73dc2d0b08" Title="WebsiteConfig Methods" Url="html/Methods_T_ZKWeb_Server_WebsiteConfig.htm">
+      <HelpTOCNode Id="e3150a06-4ca8-41d5-8247-83d4cb1b1864" Title="WebsiteConfig Methods" Url="html/Methods_T_ZKWeb_Server_WebsiteConfig.htm">
         <HelpTOCNode Title="FromFile Method " Url="html/M_ZKWeb_Server_WebsiteConfig_FromFile.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="4c54d9c4-c375-47b6-8ab6-98239dedadcc" Title="ZKWeb.Templating" Url="html/N_ZKWeb_Templating.htm">
-    <HelpTOCNode Id="f5e31a07-ed1b-4761-9e48-81644a02dba2" Title="TemplateFileSystem Class" Url="html/T_ZKWeb_Templating_TemplateFileSystem.htm">
+  <HelpTOCNode Id="da5d2c6a-0e38-417d-ad95-7f01d7f99773" Title="ZKWeb.Templating" Url="html/N_ZKWeb_Templating.htm">
+    <HelpTOCNode Id="fa742df2-602f-42f6-a91b-b0db74f39957" Title="TemplateFileSystem Class" Url="html/T_ZKWeb_Templating_TemplateFileSystem.htm">
       <HelpTOCNode Title="TemplateFileSystem Constructor " Url="html/M_ZKWeb_Templating_TemplateFileSystem__ctor.htm" />
-      <HelpTOCNode Id="aad36f9d-8901-4fb8-8ef0-b110b970b425" Title="TemplateFileSystem Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateFileSystem.htm">
+      <HelpTOCNode Id="41bdc5f4-67ea-4ba5-a5be-ecc13630b461" Title="TemplateFileSystem Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateFileSystem.htm">
         <HelpTOCNode Title="TemplateCache Property " Url="html/P_ZKWeb_Templating_TemplateFileSystem_TemplateCache.htm" />
         <HelpTOCNode Title="TemplateCacheTime Property " Url="html/P_ZKWeb_Templating_TemplateFileSystem_TemplateCacheTime.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1684a6c3-b625-4b34-81c6-6167f01b048f" Title="TemplateFileSystem Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateFileSystem.htm">
+      <HelpTOCNode Id="8252ae01-6e0c-4726-93da-83453a09a9bc" Title="TemplateFileSystem Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateFileSystem.htm">
         <HelpTOCNode Title="ClearCache Method " Url="html/M_ZKWeb_Templating_TemplateFileSystem_ClearCache.htm" />
         <HelpTOCNode Title="ReadTemplateFile Method " Url="html/M_ZKWeb_Templating_TemplateFileSystem_ReadTemplateFile.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7eeedeb0-14b8-47e6-bac5-dd0039b7e834" Title="TemplateManager Class" Url="html/T_ZKWeb_Templating_TemplateManager.htm">
+    <HelpTOCNode Id="b330d3b3-2e8d-43ca-9b44-92ea89b4d6fe" Title="TemplateManager Class" Url="html/T_ZKWeb_Templating_TemplateManager.htm">
       <HelpTOCNode Title="TemplateManager Constructor " Url="html/M_ZKWeb_Templating_TemplateManager__ctor.htm" />
-      <HelpTOCNode Id="32a8d329-0cc4-40d4-88e2-f7bbb6739b74" Title="TemplateManager Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateManager.htm">
-        <HelpTOCNode Id="6be3ff93-7409-47bd-95d1-3bebe6e533fc" Title="RenderTemplate Method " Url="html/Overload_ZKWeb_Templating_TemplateManager_RenderTemplate.htm">
+      <HelpTOCNode Id="3ee52f3c-4a64-47eb-9655-260de9f7cd21" Title="TemplateManager Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateManager.htm">
+        <HelpTOCNode Id="67484d0d-06af-4e5a-96a8-86ec2a6dcbb3" Title="RenderTemplate Method " Url="html/Overload_ZKWeb_Templating_TemplateManager_RenderTemplate.htm">
           <HelpTOCNode Title="RenderTemplate Method (String, Object)" Url="html/M_ZKWeb_Templating_TemplateManager_RenderTemplate.htm" />
           <HelpTOCNode Title="RenderTemplate Method (String, Object, Stream)" Url="html/M_ZKWeb_Templating_TemplateManager_RenderTemplate_1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="2ad68865-2e18-4bf4-887f-df412969bf83" Title="ZKWeb.Templating.DynamicContents" Url="html/N_ZKWeb_Templating_DynamicContents.htm">
-    <HelpTOCNode Id="5b380b71-ff02-41aa-a6f4-ea3d4baae122" Title="TemplateArea Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateArea.htm">
+  <HelpTOCNode Id="c118423b-a7ab-470f-9c2a-11b23fefecfd" Title="ZKWeb.Templating.DynamicContents" Url="html/N_ZKWeb_Templating_DynamicContents.htm">
+    <HelpTOCNode Id="a4ad3ad9-0a5b-441d-9160-748ff47cd938" Title="TemplateArea Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateArea.htm">
       <HelpTOCNode Title="TemplateArea Constructor " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateArea__ctor.htm" />
-      <HelpTOCNode Id="16df27dc-87a6-4e81-a603-403dd0df9d22" Title="TemplateArea Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateArea.htm">
+      <HelpTOCNode Id="90bccb79-05cd-4395-b197-c581cdab2be5" Title="TemplateArea Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateArea.htm">
         <HelpTOCNode Title="DefaultWidgets Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_DefaultWidgets.htm" />
         <HelpTOCNode Title="Id Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_Id.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="TemplateArea Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateArea.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="2119cafe-b03e-4383-a29b-70eca6f27c77" Title="TemplateAreaExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions.htm">
-      <HelpTOCNode Id="c8dd7ea6-537a-4c58-ab28-57cae89477da" Title="TemplateAreaExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions.htm">
+    <HelpTOCNode Id="36cd6470-174b-4e59-92df-8b7ee8a224a0" Title="TemplateAreaExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions.htm">
+      <HelpTOCNode Id="a369d692-5b28-4f66-9b56-373ed9f9ef49" Title="TemplateAreaExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions.htm">
         <HelpTOCNode Title="Add Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions_Add.htm" />
         <HelpTOCNode Title="AddAfter Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions_AddAfter.htm" />
         <HelpTOCNode Title="AddBefore Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaExtensions_AddBefore.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a19f955e-8453-40b2-8c3c-06214556a8e1" Title="TemplateAreaManager Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
+    <HelpTOCNode Id="b0fb783d-2a52-45c9-9ea9-aa9791a11586" Title="TemplateAreaManager Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
       <HelpTOCNode Title="TemplateAreaManager Constructor " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager__ctor.htm" />
-      <HelpTOCNode Id="adae6158-c4c0-4077-9232-acfd3198faa6" Title="TemplateAreaManager Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
+      <HelpTOCNode Id="bd9a6b6c-66d9-4781-88eb-1a8a04fcf96c" Title="TemplateAreaManager Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
         <HelpTOCNode Title="Areas Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_Areas.htm" />
         <HelpTOCNode Title="CustomWidgetsCache Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCache.htm" />
         <HelpTOCNode Title="CustomWidgetsCacheTime Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCacheTime.htm" />
@@ -365,7 +365,7 @@
         <HelpTOCNode Title="WidgetInfoCacheTime Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetInfoCacheTime.htm" />
         <HelpTOCNode Title="WidgetRenderCache Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetRenderCache.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9f391308-fd05-4895-9f38-517a8d054187" Title="TemplateAreaManager Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
+      <HelpTOCNode Id="c89dedb2-654c-4097-ac95-37c1dce571ce" Title="TemplateAreaManager Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateAreaManager.htm">
         <HelpTOCNode Title="ClearCache Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_ClearCache.htm" />
         <HelpTOCNode Title="GetArea Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetArea.htm" />
         <HelpTOCNode Title="GetCustomWidgets Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgets.htm" />
@@ -375,94 +375,94 @@
         <HelpTOCNode Title="SetCustomWidgets Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_SetCustomWidgets.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="32989219-31ee-48ca-95b5-a175a4b36dc4" Title="TemplateWidget Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidget.htm">
+    <HelpTOCNode Id="79b8c92c-7e59-4d0d-a0c1-dc9b596d7a5a" Title="TemplateWidget Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidget.htm">
       <HelpTOCNode Title="TemplateWidget Constructor " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidget__ctor.htm" />
-      <HelpTOCNode Id="c0dceefd-0827-4d91-a90c-fc3218861b61" Title="TemplateWidget Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateWidget.htm">
+      <HelpTOCNode Id="93e4aced-ca97-4c25-bfd2-1de51e920f5d" Title="TemplateWidget Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateWidget.htm">
         <HelpTOCNode Title="Args Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidget_Args.htm" />
         <HelpTOCNode Title="Path Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidget_Path.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="TemplateWidget Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidget.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="1640f7d9-d470-430d-9e40-b88389b42b8d" Title="TemplateWidgetExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions.htm">
-      <HelpTOCNode Id="74babaa9-5337-4db0-9567-ca7920fd1c7b" Title="TemplateWidgetExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions.htm">
+    <HelpTOCNode Id="7d9947b9-adb2-4728-b35f-94a311ec97cd" Title="TemplateWidgetExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions.htm">
+      <HelpTOCNode Id="408d47fc-77c4-44ac-8c68-2fef306d7388" Title="TemplateWidgetExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions.htm">
         <HelpTOCNode Title="GetCacheKey Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions_GetCacheKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9ec3c40c-08c0-45db-97a2-6f031669fef7" Title="TemplateWidgetInfo Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
+    <HelpTOCNode Id="5b7e9aa3-0486-4ecc-a57b-0e7a7bf0b499" Title="TemplateWidgetInfo Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
       <HelpTOCNode Title="TemplateWidgetInfo Constructor " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo__ctor.htm" />
-      <HelpTOCNode Id="0380807b-5bd1-4773-a7c5-65cc2ed175af" Title="TemplateWidgetInfo Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
+      <HelpTOCNode Id="1066b57f-feea-4666-b741-f41e94411422" Title="TemplateWidgetInfo Properties" Url="html/Properties_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
         <HelpTOCNode Title="CacheBy Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_CacheBy.htm" />
         <HelpTOCNode Title="CacheTime Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_CacheTime.htm" />
         <HelpTOCNode Title="Name Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_Name.htm" />
         <HelpTOCNode Title="WidgetPath Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_WidgetPath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="5738d6e8-1795-4317-bff4-05af3faf00a6" Title="TemplateWidgetInfo Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
+      <HelpTOCNode Id="f31b0bc0-0b10-43e3-a90c-4c190dfd2e66" Title="TemplateWidgetInfo Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
         <HelpTOCNode Title="FromPath Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_FromPath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="cf320c86-36ea-461e-85b6-40d9f6b7df61" Title="TemplateWidgetInfo Fields" Url="html/Fields_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
+      <HelpTOCNode Id="5122a05c-81a0-4c3f-b1ce-a49c10cd1831" Title="TemplateWidgetInfo Fields" Url="html/Fields_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo.htm">
         <HelpTOCNode Title="HtmlExtension Field" Url="html/F_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_HtmlExtension.htm" />
         <HelpTOCNode Title="InfoExtension Field" Url="html/F_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_InfoExtension.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d9604a0e-a5fd-4385-8c69-25aa5bc51901" Title="TemplateWidgetInfoExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfoExtensions.htm">
-      <HelpTOCNode Id="141c7002-1a80-4d07-ba53-fc0768d1677a" Title="TemplateWidgetInfoExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfoExtensions.htm">
+    <HelpTOCNode Id="06af08a0-3373-4049-b16b-5d424cb4b872" Title="TemplateWidgetInfoExtensions Class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfoExtensions.htm">
+      <HelpTOCNode Id="dea4170a-d6b8-4c58-ab22-e876c9c6fe65" Title="TemplateWidgetInfoExtensions Methods" Url="html/Methods_T_ZKWeb_Templating_DynamicContents_TemplateWidgetInfoExtensions.htm">
         <HelpTOCNode Title="GetCacheIsolationPolicyNames Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetInfoExtensions_GetCacheIsolationPolicyNames.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="7c8dd4e5-7d84-424e-9e5e-f897f449a50b" Title="ZKWeb.Templating.TemplateFilters" Url="html/N_ZKWeb_Templating_TemplateFilters.htm">
-    <HelpTOCNode Id="c248d42f-f608-48f2-bf05-2842ad84fc58" Title="Filters Class" Url="html/T_ZKWeb_Templating_TemplateFilters_Filters.htm">
-      <HelpTOCNode Id="ca151354-2706-4e4b-bec1-91d212076f15" Title="Filters Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateFilters_Filters.htm">
+  <HelpTOCNode Id="f1400c19-d63b-40fa-b02e-d78480cfe2d5" Title="ZKWeb.Templating.TemplateFilters" Url="html/N_ZKWeb_Templating_TemplateFilters.htm">
+    <HelpTOCNode Id="2242c794-e460-4be9-afc6-db27891fa3c2" Title="Filters Class" Url="html/T_ZKWeb_Templating_TemplateFilters_Filters.htm">
+      <HelpTOCNode Id="a4aac4ea-47d4-44fd-94d8-3ab8d4d0b838" Title="Filters Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateFilters_Filters.htm">
         <HelpTOCNode Title="Format Method " Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_Format.htm" />
         <HelpTOCNode Title="RawHtml Method " Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_RawHtml.htm" />
         <HelpTOCNode Title="Trans Method " Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_Trans.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ac02a5a5-6644-4ab6-ba07-a43eda778092" Title="ZKWeb.Templating.TemplateTags" Url="html/N_ZKWeb_Templating_TemplateTags.htm">
-    <HelpTOCNode Id="935ec538-e21f-4700-9674-d35c83c8e264" Title="Area Class" Url="html/T_ZKWeb_Templating_TemplateTags_Area.htm">
+  <HelpTOCNode Id="882779dc-3997-4137-897b-1c42329aacb8" Title="ZKWeb.Templating.TemplateTags" Url="html/N_ZKWeb_Templating_TemplateTags.htm">
+    <HelpTOCNode Id="5ff0347a-66ed-4bdf-8033-9b785a6a6add" Title="Area Class" Url="html/T_ZKWeb_Templating_TemplateTags_Area.htm">
       <HelpTOCNode Title="Area Constructor " Url="html/M_ZKWeb_Templating_TemplateTags_Area__ctor.htm" />
-      <HelpTOCNode Id="612bea64-4a02-4cda-8263-9e9418b0a0d5" Title="Area Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateTags_Area.htm">
+      <HelpTOCNode Id="32041238-58fa-47c9-b3b3-4bbade15ea27" Title="Area Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateTags_Area.htm">
         <HelpTOCNode Title="AreaId Property " Url="html/P_ZKWeb_Templating_TemplateTags_Area_AreaId.htm" />
         <HelpTOCNode Title="CurrentAreaIdKey Property " Url="html/P_ZKWeb_Templating_TemplateTags_Area_CurrentAreaIdKey.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="cf5c7b45-274e-4d4a-8f3e-54ac0b6802e3" Title="Area Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_Area.htm">
+      <HelpTOCNode Id="d49c0210-cad2-4572-aed8-dd2ac46dbb76" Title="Area Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_Area.htm">
         <HelpTOCNode Title="Initialize Method " Url="html/M_ZKWeb_Templating_TemplateTags_Area_Initialize.htm" />
         <HelpTOCNode Title="Render Method " Url="html/M_ZKWeb_Templating_TemplateTags_Area_Render.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e79dc7ad-e462-4405-9c1d-e1e5977cf36c" Title="Fetch Class" Url="html/T_ZKWeb_Templating_TemplateTags_Fetch.htm">
+    <HelpTOCNode Id="c7e35d16-85a3-4f9a-b938-5b7093ef6b4f" Title="Fetch Class" Url="html/T_ZKWeb_Templating_TemplateTags_Fetch.htm">
       <HelpTOCNode Title="Fetch Constructor " Url="html/M_ZKWeb_Templating_TemplateTags_Fetch__ctor.htm" />
-      <HelpTOCNode Id="573f993f-3341-4ea7-b1b0-06ae9e7dd74e" Title="Fetch Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
+      <HelpTOCNode Id="a4bf1447-f527-44f3-ae49-d6d86ecee998" Title="Fetch Properties" Url="html/Properties_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
         <HelpTOCNode Title="PathAndQuery Property " Url="html/P_ZKWeb_Templating_TemplateTags_Fetch_PathAndQuery.htm" />
         <HelpTOCNode Title="Variable Property " Url="html/P_ZKWeb_Templating_TemplateTags_Fetch_Variable.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="3f14329c-2a48-4fd7-be26-ebfc71a21306" Title="Fetch Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
+      <HelpTOCNode Id="9c24a760-53b5-4e6e-947b-a4d21a0884c8" Title="Fetch Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
         <HelpTOCNode Title="Initialize Method " Url="html/M_ZKWeb_Templating_TemplateTags_Fetch_Initialize.htm" />
         <HelpTOCNode Title="Render Method " Url="html/M_ZKWeb_Templating_TemplateTags_Fetch_Render.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1d9d0066-1584-4165-85ca-fbb6b1017ac3" Title="Fetch Fields" Url="html/Fields_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
+      <HelpTOCNode Id="b3a74e18-2079-4adc-bd0f-91fc865150d5" Title="Fetch Fields" Url="html/Fields_T_ZKWeb_Templating_TemplateTags_Fetch.htm">
         <HelpTOCNode Title="VariableInUrlExpression Field" Url="html/F_ZKWeb_Templating_TemplateTags_Fetch_VariableInUrlExpression.htm" />
         <HelpTOCNode Title="VariableNameForAllQueryParameters Field" Url="html/F_ZKWeb_Templating_TemplateTags_Fetch_VariableNameForAllQueryParameters.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9e7b1179-0f89-4e2b-b547-a8c49e657cb6" Title="HtmlLang Class" Url="html/T_ZKWeb_Templating_TemplateTags_HtmlLang.htm">
+    <HelpTOCNode Id="6973fd16-d8d6-416a-a6d5-c8e8d90559a7" Title="HtmlLang Class" Url="html/T_ZKWeb_Templating_TemplateTags_HtmlLang.htm">
       <HelpTOCNode Title="HtmlLang Constructor " Url="html/M_ZKWeb_Templating_TemplateTags_HtmlLang__ctor.htm" />
-      <HelpTOCNode Id="29ef0c1b-4cbb-446f-982f-cc4ceb01691f" Title="HtmlLang Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_HtmlLang.htm">
+      <HelpTOCNode Id="1ef02543-2cb1-4e56-a40d-50b63eba746e" Title="HtmlLang Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_HtmlLang.htm">
         <HelpTOCNode Title="Render Method " Url="html/M_ZKWeb_Templating_TemplateTags_HtmlLang_Render.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="49dc128a-f3fe-4871-95fc-177d1b1f1c9b" Title="RawHtml Class" Url="html/T_ZKWeb_Templating_TemplateTags_RawHtml.htm">
+    <HelpTOCNode Id="b5770f7e-dc0b-442b-9c5f-54dac735f7fe" Title="RawHtml Class" Url="html/T_ZKWeb_Templating_TemplateTags_RawHtml.htm">
       <HelpTOCNode Title="RawHtml Constructor " Url="html/M_ZKWeb_Templating_TemplateTags_RawHtml__ctor.htm" />
-      <HelpTOCNode Id="47514d5e-8a58-4033-a04f-8c4ae3f0b2ba" Title="RawHtml Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_RawHtml.htm">
+      <HelpTOCNode Id="96f9495f-53a8-45fb-b811-a6ba8fc7dbff" Title="RawHtml Methods" Url="html/Methods_T_ZKWeb_Templating_TemplateTags_RawHtml.htm">
         <HelpTOCNode Title="Render Method " Url="html/M_ZKWeb_Templating_TemplateTags_RawHtml_Render.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="4fa8944a-3099-4890-8c42-128f247bd067" Title="ZKWeb.Testing" Url="html/N_ZKWeb_Testing.htm">
-    <HelpTOCNode Id="2cb76f83-d0a9-4a3e-8ee6-ea4694d6621b" Title="TestManager Class" Url="html/T_ZKWeb_Testing_TestManager.htm">
+  <HelpTOCNode Id="0f194060-71d7-458a-a993-50535fca9104" Title="ZKWeb.Testing" Url="html/N_ZKWeb_Testing.htm">
+    <HelpTOCNode Id="48b4e2e5-ef9b-4446-bdfc-90ec67534ee5" Title="TestManager Class" Url="html/T_ZKWeb_Testing_TestManager.htm">
       <HelpTOCNode Title="TestManager Constructor " Url="html/M_ZKWeb_Testing_TestManager__ctor.htm" />
-      <HelpTOCNode Id="6860f77e-70df-4eff-8ef8-674de1977c00" Title="TestManager Methods" Url="html/Methods_T_ZKWeb_Testing_TestManager.htm">
+      <HelpTOCNode Id="76329d0e-794b-4e07-afcf-d7d0b7055ca3" Title="TestManager Methods" Url="html/Methods_T_ZKWeb_Testing_TestManager.htm">
         <HelpTOCNode Title="GetAssembliesForTest Method " Url="html/M_ZKWeb_Testing_TestManager_GetAssembliesForTest.htm" />
         <HelpTOCNode Title="RunAllAssemblyTest Method " Url="html/M_ZKWeb_Testing_TestManager_RunAllAssemblyTest.htm" />
         <HelpTOCNode Title="RunAssemblyTest Method " Url="html/M_ZKWeb_Testing_TestManager_RunAssemblyTest.htm" />
@@ -470,10 +470,10 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="272d1c9c-2947-4790-b1bb-71e96ebbd2c1" Title="ZKWeb.Testing.TestEventHandlers" Url="html/N_ZKWeb_Testing_TestEventHandlers.htm">
-    <HelpTOCNode Id="467b91ca-83ec-46d6-9dca-b9d6e98da90f" Title="TestConsoleEventHandler Class" Url="html/T_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler.htm">
+  <HelpTOCNode Id="865e3dc7-00eb-44e2-9b99-ff2a09c1c30f" Title="ZKWeb.Testing.TestEventHandlers" Url="html/N_ZKWeb_Testing_TestEventHandlers.htm">
+    <HelpTOCNode Id="a8e2b368-b030-4155-9c10-66ef487c34db" Title="TestConsoleEventHandler Class" Url="html/T_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler.htm">
       <HelpTOCNode Title="TestConsoleEventHandler Constructor " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler__ctor.htm" />
-      <HelpTOCNode Id="a83e888b-a06f-44f0-95c0-8fd6add0fa8b" Title="TestConsoleEventHandler Methods" Url="html/Methods_T_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler.htm">
+      <HelpTOCNode Id="0530f456-faee-4088-ab02-eeca6c7894d5" Title="TestConsoleEventHandler Methods" Url="html/Methods_T_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler.htm">
         <HelpTOCNode Title="OnAllTestCompleted Method " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler_OnAllTestCompleted.htm" />
         <HelpTOCNode Title="OnAllTestStarting Method " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler_OnAllTestStarting.htm" />
         <HelpTOCNode Title="OnDebugMessage Method " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler_OnDebugMessage.htm" />
@@ -485,38 +485,38 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="10924456-d900-4d2b-ace6-d7f5ee21e7e8" Title="ZKWeb.Web" Url="html/N_ZKWeb_Web.htm">
-    <HelpTOCNode Id="ad78152c-d33e-4e8d-a6b1-9beb29c269a5" Title="ActionAttribute Class" Url="html/T_ZKWeb_Web_ActionAttribute.htm">
+  <HelpTOCNode Id="cfd86109-8d32-4f88-a7ee-4b06749d10e8" Title="ZKWeb.Web" Url="html/N_ZKWeb_Web.htm">
+    <HelpTOCNode Id="4389c83c-9695-4fd6-a1fd-8e2f0f2fd63b" Title="ActionAttribute Class" Url="html/T_ZKWeb_Web_ActionAttribute.htm">
       <HelpTOCNode Title="ActionAttribute Constructor " Url="html/M_ZKWeb_Web_ActionAttribute__ctor.htm" />
-      <HelpTOCNode Id="61af8460-cfdf-4abe-9eba-f40094441595" Title="ActionAttribute Properties" Url="html/Properties_T_ZKWeb_Web_ActionAttribute.htm">
+      <HelpTOCNode Id="08b767f5-a03f-4d3f-b474-7c321d637a6a" Title="ActionAttribute Properties" Url="html/Properties_T_ZKWeb_Web_ActionAttribute.htm">
         <HelpTOCNode Title="Method Property " Url="html/P_ZKWeb_Web_ActionAttribute_Method.htm" />
         <HelpTOCNode Title="OverrideExists Property " Url="html/P_ZKWeb_Web_ActionAttribute_OverrideExists.htm" />
         <HelpTOCNode Title="Path Property " Url="html/P_ZKWeb_Web_ActionAttribute_Path.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="ActionAttribute Methods" Url="html/Methods_T_ZKWeb_Web_ActionAttribute.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="6e176b59-8d2c-43a4-a834-4cce00d9b3b8" Title="ControllerManager Class" Url="html/T_ZKWeb_Web_ControllerManager.htm">
+    <HelpTOCNode Id="3657fff4-1fa0-47b9-a57e-ecb649e96c2e" Title="ControllerManager Class" Url="html/T_ZKWeb_Web_ControllerManager.htm">
       <HelpTOCNode Title="ControllerManager Constructor " Url="html/M_ZKWeb_Web_ControllerManager__ctor.htm" />
-      <HelpTOCNode Id="aa680070-ad54-4368-87c3-81400c73fbe5" Title="ControllerManager Properties" Url="html/Properties_T_ZKWeb_Web_ControllerManager.htm">
+      <HelpTOCNode Id="a63ee914-a606-4b07-aac1-2d085994f9d2" Title="ControllerManager Properties" Url="html/Properties_T_ZKWeb_Web_ControllerManager.htm">
         <HelpTOCNode Title="Actions Property " Url="html/P_ZKWeb_Web_ControllerManager_Actions.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e2f72266-908b-4bb9-baf1-98a55aa74e26" Title="ControllerManager Methods" Url="html/Methods_T_ZKWeb_Web_ControllerManager.htm">
+      <HelpTOCNode Id="0b1f20c2-738c-48e1-ab7c-a45a239520b0" Title="ControllerManager Methods" Url="html/Methods_T_ZKWeb_Web_ControllerManager.htm">
         <HelpTOCNode Title="GetAction Method " Url="html/M_ZKWeb_Web_ControllerManager_GetAction.htm" />
         <HelpTOCNode Title="NormalizePath Method " Url="html/M_ZKWeb_Web_ControllerManager_NormalizePath.htm" />
         <HelpTOCNode Title="OnRequest Method " Url="html/M_ZKWeb_Web_ControllerManager_OnRequest.htm" />
-        <HelpTOCNode Id="f19f3372-f752-41ff-a53f-7ff653a04343" Title="RegisterAction Method " Url="html/Overload_ZKWeb_Web_ControllerManager_RegisterAction.htm">
+        <HelpTOCNode Id="ece23ad3-4c68-4a02-852a-e79489e87f37" Title="RegisterAction Method " Url="html/Overload_ZKWeb_Web_ControllerManager_RegisterAction.htm">
           <HelpTOCNode Title="RegisterAction Method (String, String, Func(IActionResult))" Url="html/M_ZKWeb_Web_ControllerManager_RegisterAction.htm" />
           <HelpTOCNode Title="RegisterAction Method (String, String, Func(IActionResult), Boolean)" Url="html/M_ZKWeb_Web_ControllerManager_RegisterAction_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="0b14b23b-0cc5-4693-9fda-17ac44ef53b5" Title="RegisterController Method " Url="html/Overload_ZKWeb_Web_ControllerManager_RegisterController.htm">
+        <HelpTOCNode Id="a06e6b3f-4d94-4eff-8d5c-82b0641714fa" Title="RegisterController Method " Url="html/Overload_ZKWeb_Web_ControllerManager_RegisterController.htm">
           <HelpTOCNode Title="RegisterController(T) Method " Url="html/M_ZKWeb_Web_ControllerManager_RegisterController__1.htm" />
           <HelpTOCNode Title="RegisterController Method (Type)" Url="html/M_ZKWeb_Web_ControllerManager_RegisterController.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="UnregisterAction Method " Url="html/M_ZKWeb_Web_ControllerManager_UnregisterAction.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="cf755d50-002e-4355-9417-5de43ea92440" Title="HttpMethods Class" Url="html/T_ZKWeb_Web_HttpMethods.htm">
-      <HelpTOCNode Id="a9c5b453-2588-49a3-a63e-f0d34bb63342" Title="HttpMethods Fields" Url="html/Fields_T_ZKWeb_Web_HttpMethods.htm">
+    <HelpTOCNode Id="ebd6d04c-a7e3-42c6-9275-7355e86b0ea2" Title="HttpMethods Class" Url="html/T_ZKWeb_Web_HttpMethods.htm">
+      <HelpTOCNode Id="ab6fbd28-e4ef-41d3-a8de-7dd18b90f610" Title="HttpMethods Fields" Url="html/Fields_T_ZKWeb_Web_HttpMethods.htm">
         <HelpTOCNode Title="DELETE Field" Url="html/F_ZKWeb_Web_HttpMethods_DELETE.htm" />
         <HelpTOCNode Title="GET Field" Url="html/F_ZKWeb_Web_HttpMethods_GET.htm" />
         <HelpTOCNode Title="PATCH Field" Url="html/F_ZKWeb_Web_HttpMethods_PATCH.htm" />
@@ -524,161 +524,161 @@
         <HelpTOCNode Title="PUT Field" Url="html/F_ZKWeb_Web_HttpMethods_PUT.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9aa97565-1e0f-4905-bb1c-01823db2dcd3" Title="IActionResult Interface" Url="html/T_ZKWeb_Web_IActionResult.htm">
-      <HelpTOCNode Id="6250786c-bfee-46df-879c-3a5109ab79a1" Title="IActionResult Methods" Url="html/Methods_T_ZKWeb_Web_IActionResult.htm">
+    <HelpTOCNode Id="33415460-8466-4b57-8ecb-02c53dfb1aa9" Title="IActionResult Interface" Url="html/T_ZKWeb_Web_IActionResult.htm">
+      <HelpTOCNode Id="185ae15e-d3c0-41cc-a9a3-76be74ee81cf" Title="IActionResult Methods" Url="html/Methods_T_ZKWeb_Web_IActionResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_IActionResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="IController Interface" Url="html/T_ZKWeb_Web_IController.htm" />
-    <HelpTOCNode Id="3271e5da-aa5b-4fb9-97e4-22db2ab35c5f" Title="IHttpRequestErrorHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestErrorHandler.htm">
-      <HelpTOCNode Id="e0edf32a-5f7d-4ce1-ab80-6e571ce1c7c4" Title="IHttpRequestErrorHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestErrorHandler.htm">
+    <HelpTOCNode Id="2b5cfd7f-703d-4d53-bf57-d2c8a268c9d1" Title="IHttpRequestErrorHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestErrorHandler.htm">
+      <HelpTOCNode Id="f51dae2b-c990-4d0c-a8ef-ab4fdff66643" Title="IHttpRequestErrorHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestErrorHandler.htm">
         <HelpTOCNode Title="OnError Method " Url="html/M_ZKWeb_Web_IHttpRequestErrorHandler_OnError.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a83e8040-46d9-46e7-8138-9b1d2e0b38dc" Title="IHttpRequestHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestHandler.htm">
-      <HelpTOCNode Id="d6c74e4e-385d-4556-b231-250042d55fb4" Title="IHttpRequestHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestHandler.htm">
+    <HelpTOCNode Id="71b227e7-d9da-4636-954a-497bbd2e5e6f" Title="IHttpRequestHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestHandler.htm">
+      <HelpTOCNode Id="6ea89bc4-98c5-484d-9081-7607300f5f2c" Title="IHttpRequestHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestHandler.htm">
         <HelpTOCNode Title="OnRequest Method " Url="html/M_ZKWeb_Web_IHttpRequestHandler_OnRequest.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="6b6e77e1-3237-4a89-9f83-7c1cbcb7780d" Title="IHttpRequestPreHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestPreHandler.htm">
-      <HelpTOCNode Id="9de26af3-82a4-4b07-b96b-056101c7ce87" Title="IHttpRequestPreHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestPreHandler.htm">
+    <HelpTOCNode Id="d294bcf6-0569-47af-a331-8a8faa3b97cc" Title="IHttpRequestPreHandler Interface" Url="html/T_ZKWeb_Web_IHttpRequestPreHandler.htm">
+      <HelpTOCNode Id="efe801de-86fe-45a4-9661-67afb1b37a1c" Title="IHttpRequestPreHandler Methods" Url="html/Methods_T_ZKWeb_Web_IHttpRequestPreHandler.htm">
         <HelpTOCNode Title="OnRequest Method " Url="html/M_ZKWeb_Web_IHttpRequestPreHandler_OnRequest.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="85128b4d-a449-4670-9305-b265f311b1b8" Title="IWebsiteStartHandler Interface" Url="html/T_ZKWeb_Web_IWebsiteStartHandler.htm">
-      <HelpTOCNode Id="de3f04d5-4739-4840-bcd5-6dd3dcec4849" Title="IWebsiteStartHandler Methods" Url="html/Methods_T_ZKWeb_Web_IWebsiteStartHandler.htm">
+    <HelpTOCNode Id="d157c7ae-9f67-41f9-a0c6-e407c4bcc07a" Title="IWebsiteStartHandler Interface" Url="html/T_ZKWeb_Web_IWebsiteStartHandler.htm">
+      <HelpTOCNode Id="253f2b0b-54df-4ad8-a2b2-9f84ef33a69d" Title="IWebsiteStartHandler Methods" Url="html/Methods_T_ZKWeb_Web_IWebsiteStartHandler.htm">
         <HelpTOCNode Title="OnWebsiteStart Method " Url="html/M_ZKWeb_Web_IWebsiteStartHandler_OnWebsiteStart.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="78235168-2530-47cc-a2c9-2b3d56c7ff63" Title="IWebsiteStopper Interface" Url="html/T_ZKWeb_Web_IWebsiteStopper.htm">
-      <HelpTOCNode Id="b35a4f0f-0434-45df-8068-0a3cecd5014d" Title="IWebsiteStopper Methods" Url="html/Methods_T_ZKWeb_Web_IWebsiteStopper.htm">
+    <HelpTOCNode Id="f7545ef5-9dfe-452d-b5d5-342fb2d65e63" Title="IWebsiteStopper Interface" Url="html/T_ZKWeb_Web_IWebsiteStopper.htm">
+      <HelpTOCNode Id="36cb79bc-7e07-49ac-a04b-6a2ae6dc0ab8" Title="IWebsiteStopper Methods" Url="html/Methods_T_ZKWeb_Web_IWebsiteStopper.htm">
         <HelpTOCNode Title="StopWebsite Method " Url="html/M_ZKWeb_Web_IWebsiteStopper_StopWebsite.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ab9a6504-5247-4755-94db-1222d49f837a" Title="ZKWeb.Web.ActionResults" Url="html/N_ZKWeb_Web_ActionResults.htm">
-    <HelpTOCNode Id="1b590494-e725-4900-b1c3-e24c81217997" Title="FileResult Class" Url="html/T_ZKWeb_Web_ActionResults_FileResult.htm">
+  <HelpTOCNode Id="55ca6dc2-686d-461f-8360-02da773943d1" Title="ZKWeb.Web.ActionResults" Url="html/N_ZKWeb_Web_ActionResults.htm">
+    <HelpTOCNode Id="a23ba148-71d2-4eb0-94f9-784cb5fca5ba" Title="FileResult Class" Url="html/T_ZKWeb_Web_ActionResults_FileResult.htm">
       <HelpTOCNode Title="FileResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_FileResult__ctor.htm" />
-      <HelpTOCNode Id="850fedc4-7c53-4074-adfd-0991bc5ee080" Title="FileResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_FileResult.htm">
+      <HelpTOCNode Id="48796300-4194-4a0f-bf28-ba53e26d2ec4" Title="FileResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_FileResult.htm">
         <HelpTOCNode Title="FilePath Property " Url="html/P_ZKWeb_Web_ActionResults_FileResult_FilePath.htm" />
         <HelpTOCNode Title="IfModifiedSince Property " Url="html/P_ZKWeb_Web_ActionResults_FileResult_IfModifiedSince.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="982b5f81-4955-42b9-a2d9-016aec2fa337" Title="FileResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_FileResult.htm">
+      <HelpTOCNode Id="a42cb358-840c-4e58-99ea-dc1f110522f9" Title="FileResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_FileResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_FileResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0496ede3-450a-41bc-8fd5-38982bef7909" Title="ImageResult Class" Url="html/T_ZKWeb_Web_ActionResults_ImageResult.htm">
+    <HelpTOCNode Id="a3cd5f1e-0e9e-4e1a-97f0-ce50ade035c5" Title="ImageResult Class" Url="html/T_ZKWeb_Web_ActionResults_ImageResult.htm">
       <HelpTOCNode Title="ImageResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_ImageResult__ctor.htm" />
-      <HelpTOCNode Id="415684df-02e9-4d40-a3d3-5637b7863c1d" Title="ImageResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_ImageResult.htm">
+      <HelpTOCNode Id="db2fb093-4924-4634-81c0-062f8b5ae8e9" Title="ImageResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_ImageResult.htm">
         <HelpTOCNode Title="Format Property " Url="html/P_ZKWeb_Web_ActionResults_ImageResult_Format.htm" />
         <HelpTOCNode Title="Image Property " Url="html/P_ZKWeb_Web_ActionResults_ImageResult_Image.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7fd7c61b-16e1-4205-82cd-c54a59bec515" Title="ImageResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_ImageResult.htm">
+      <HelpTOCNode Id="d90e402e-0eeb-402c-b07d-3392b5d0de0c" Title="ImageResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_ImageResult.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_ZKWeb_Web_ActionResults_ImageResult_Dispose.htm" />
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_ImageResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9582bc66-5665-4818-880a-6532fb1bf544" Title="JsonResult Class" Url="html/T_ZKWeb_Web_ActionResults_JsonResult.htm">
+    <HelpTOCNode Id="411048d7-9219-4d3d-ab81-8f7f5e7d1a37" Title="JsonResult Class" Url="html/T_ZKWeb_Web_ActionResults_JsonResult.htm">
       <HelpTOCNode Title="JsonResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_JsonResult__ctor.htm" />
-      <HelpTOCNode Id="4cd7bc94-2424-4d4e-8a76-33915bb11ff8" Title="JsonResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_JsonResult.htm">
+      <HelpTOCNode Id="0b383928-9647-41fe-8b79-4be404078b02" Title="JsonResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_JsonResult.htm">
         <HelpTOCNode Title="Object Property " Url="html/P_ZKWeb_Web_ActionResults_JsonResult_Object.htm" />
         <HelpTOCNode Title="SerializeFormatting Property " Url="html/P_ZKWeb_Web_ActionResults_JsonResult_SerializeFormatting.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="04496bc0-ec92-4a9f-bd7d-73c88eb0d3f8" Title="JsonResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_JsonResult.htm">
+      <HelpTOCNode Id="d407b353-a471-4e97-9163-77cc6b4bb5c1" Title="JsonResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_JsonResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_JsonResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ff1b52dc-8621-48f9-a4ff-54b262bb2e5b" Title="PlainResult Class" Url="html/T_ZKWeb_Web_ActionResults_PlainResult.htm">
+    <HelpTOCNode Id="bce6f9f9-fcca-465d-b1df-08cbfaa45049" Title="PlainResult Class" Url="html/T_ZKWeb_Web_ActionResults_PlainResult.htm">
       <HelpTOCNode Title="PlainResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_PlainResult__ctor.htm" />
-      <HelpTOCNode Id="0d587260-0881-4a6a-9a06-6a06a6c0beb7" Title="PlainResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_PlainResult.htm">
+      <HelpTOCNode Id="b7a980de-ebea-4f69-9fcf-041943bae6f6" Title="PlainResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_PlainResult.htm">
         <HelpTOCNode Title="Text Property " Url="html/P_ZKWeb_Web_ActionResults_PlainResult_Text.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="cc826f13-e58b-413d-bef9-ee212d1b36d8" Title="PlainResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_PlainResult.htm">
+      <HelpTOCNode Id="5cf681f7-cc38-4f82-a847-b64f97410492" Title="PlainResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_PlainResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_PlainResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8a0cb285-5d13-442a-b2cb-b31d58ced1d3" Title="RedirectResult Class" Url="html/T_ZKWeb_Web_ActionResults_RedirectResult.htm">
+    <HelpTOCNode Id="93f852ef-b7c0-4d48-96f0-10e8b774903d" Title="RedirectResult Class" Url="html/T_ZKWeb_Web_ActionResults_RedirectResult.htm">
       <HelpTOCNode Title="RedirectResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_RedirectResult__ctor.htm" />
-      <HelpTOCNode Id="4a0bff13-fd3a-4ece-8795-d7b559791dbe" Title="RedirectResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_RedirectResult.htm">
+      <HelpTOCNode Id="adb892ca-64ed-4d39-9155-c5904bab1be0" Title="RedirectResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_RedirectResult.htm">
         <HelpTOCNode Title="Permanent Property " Url="html/P_ZKWeb_Web_ActionResults_RedirectResult_Permanent.htm" />
         <HelpTOCNode Title="Url Property " Url="html/P_ZKWeb_Web_ActionResults_RedirectResult_Url.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="e2357e00-66ce-4d5d-a3ec-16c462cc9e88" Title="RedirectResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_RedirectResult.htm">
+      <HelpTOCNode Id="cddacc5a-07fe-4246-bb5e-7abb1fa647d2" Title="RedirectResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_RedirectResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_RedirectResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="38f37d2c-0245-4eed-9409-fc0d8b7b0f79" Title="StreamResult Class" Url="html/T_ZKWeb_Web_ActionResults_StreamResult.htm">
+    <HelpTOCNode Id="baac7e65-bb7c-48ad-a724-693bd2137a55" Title="StreamResult Class" Url="html/T_ZKWeb_Web_ActionResults_StreamResult.htm">
       <HelpTOCNode Title="StreamResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_StreamResult__ctor.htm" />
-      <HelpTOCNode Id="76093372-a866-44ef-8688-74e5252601ca" Title="StreamResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_StreamResult.htm">
+      <HelpTOCNode Id="5f4532e3-a1d7-4c4f-9572-91eb79c79bb5" Title="StreamResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_StreamResult.htm">
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWeb_Web_ActionResults_StreamResult_ContentType.htm" />
         <HelpTOCNode Title="Stream Property " Url="html/P_ZKWeb_Web_ActionResults_StreamResult_Stream.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="880d63be-37aa-4df5-a391-e1016b38968b" Title="StreamResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_StreamResult.htm">
+      <HelpTOCNode Id="4ec175db-45b0-4a11-8113-627f184f9efd" Title="StreamResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_StreamResult.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_ZKWeb_Web_ActionResults_StreamResult_Dispose.htm" />
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_StreamResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="247f7db2-4ca2-4695-96aa-1479f89879da" Title="TemplateResult Class" Url="html/T_ZKWeb_Web_ActionResults_TemplateResult.htm">
+    <HelpTOCNode Id="9b9ba636-a4cd-4ac2-b3fb-f901be091168" Title="TemplateResult Class" Url="html/T_ZKWeb_Web_ActionResults_TemplateResult.htm">
       <HelpTOCNode Title="TemplateResult Constructor " Url="html/M_ZKWeb_Web_ActionResults_TemplateResult__ctor.htm" />
-      <HelpTOCNode Id="c0712904-d379-4896-8fa6-a09768e371f6" Title="TemplateResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_TemplateResult.htm">
+      <HelpTOCNode Id="36efab5d-41a7-45dc-8e96-0dd4a3e5db22" Title="TemplateResult Properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_TemplateResult.htm">
         <HelpTOCNode Title="TemplateArgument Property " Url="html/P_ZKWeb_Web_ActionResults_TemplateResult_TemplateArgument.htm" />
         <HelpTOCNode Title="TemplatePath Property " Url="html/P_ZKWeb_Web_ActionResults_TemplateResult_TemplatePath.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="4a9cac07-8e52-411c-b865-470b949a5912" Title="TemplateResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_TemplateResult.htm">
+      <HelpTOCNode Id="fbc9f30c-12de-4301-a667-c2e4109ca424" Title="TemplateResult Methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_TemplateResult.htm">
         <HelpTOCNode Title="WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_TemplateResult_WriteResponse.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="8fe2a211-ab66-4739-80c1-de112e948119" Title="ZKWeb.Web.HttpRequestHandlers" Url="html/N_ZKWeb_Web_HttpRequestHandlers.htm">
-    <HelpTOCNode Id="80026242-9f98-4240-a8ef-cfed6651ab99" Title="AddVersionHeaderHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm">
+  <HelpTOCNode Id="b78ac2d1-8257-4016-b927-323653edfcb6" Title="ZKWeb.Web.HttpRequestHandlers" Url="html/N_ZKWeb_Web_HttpRequestHandlers.htm">
+    <HelpTOCNode Id="12a722e7-26ad-4616-a800-302f1e5e2cf7" Title="AddVersionHeaderHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm">
       <HelpTOCNode Title="AddVersionHeaderHandler Constructor " Url="html/M_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler__ctor.htm" />
-      <HelpTOCNode Id="4b2e7ddf-5f0a-4722-bedf-f804674a01cf" Title="AddVersionHeaderHandler Methods" Url="html/Methods_T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm">
+      <HelpTOCNode Id="a0b3c139-f0d6-417e-8529-08b12640ca83" Title="AddVersionHeaderHandler Methods" Url="html/Methods_T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm">
         <HelpTOCNode Title="OnRequest Method " Url="html/M_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler_OnRequest.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5e7a5fb3-a17b-4ae8-8339-40774e34376a" Title="DefaultErrorHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm">
+    <HelpTOCNode Id="e578133b-ef9c-4ae6-a2a2-2bea7e2a2296" Title="DefaultErrorHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm">
       <HelpTOCNode Title="DefaultErrorHandler Constructor " Url="html/M_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler__ctor.htm" />
-      <HelpTOCNode Id="63903c36-2429-440f-b3ad-ec246513d1e1" Title="DefaultErrorHandler Methods" Url="html/Methods_T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm">
+      <HelpTOCNode Id="fd907f71-275d-4305-b568-a18ac0b818fe" Title="DefaultErrorHandler Methods" Url="html/Methods_T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm">
         <HelpTOCNode Title="OnError Method " Url="html/M_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler_OnError.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="fa9900ae-b4d3-4e83-ad15-c5757746a3e8" Title="ZKWebStandard.Collection" Url="html/N_ZKWebStandard_Collection.htm">
-    <HelpTOCNode Id="1d2a125f-6a4c-4c90-93ad-bbf8fdf548da" Title="HtmlString Class" Url="html/T_ZKWebStandard_Collection_HtmlString.htm">
+  <HelpTOCNode Id="ceab4188-e566-40f0-8ea2-f34a4f4c4262" Title="ZKWebStandard.Collection" Url="html/N_ZKWebStandard_Collection.htm">
+    <HelpTOCNode Id="bed0bf96-f813-42f9-ae70-c75502e2aee4" Title="HtmlString Class" Url="html/T_ZKWebStandard_Collection_HtmlString.htm">
       <HelpTOCNode Title="HtmlString Constructor " Url="html/M_ZKWebStandard_Collection_HtmlString__ctor.htm" />
-      <HelpTOCNode Id="5b654d98-ec48-4afc-b15e-9e7e1f689c3f" Title="HtmlString Properties" Url="html/Properties_T_ZKWebStandard_Collection_HtmlString.htm">
+      <HelpTOCNode Id="277784a0-b41a-419c-a464-7272f0053e62" Title="HtmlString Properties" Url="html/Properties_T_ZKWebStandard_Collection_HtmlString.htm">
         <HelpTOCNode Title="Value Property " Url="html/P_ZKWebStandard_Collection_HtmlString_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="9a3e2635-fa6b-4ada-a136-14c136741525" Title="HtmlString Methods" Url="html/Methods_T_ZKWebStandard_Collection_HtmlString.htm">
+      <HelpTOCNode Id="b48a4ce4-2848-4b72-922c-43d6b358608c" Title="HtmlString Methods" Url="html/Methods_T_ZKWebStandard_Collection_HtmlString.htm">
         <HelpTOCNode Title="ToString Method " Url="html/M_ZKWebStandard_Collection_HtmlString_ToString.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="cc908bd6-6e38-48b3-a6ad-6cded0451a80" Title="ZKWebStandard.Collections" Url="html/N_ZKWebStandard_Collections.htm">
-    <HelpTOCNode Id="25a977c5-3dc4-48b5-add9-8c802095cb8d" Title="LazyCache Class" Url="html/T_ZKWebStandard_Collections_LazyCache.htm">
-      <HelpTOCNode Id="601cccfe-aec0-433d-bd7c-7f8c15391e18" Title="LazyCache Methods" Url="html/Methods_T_ZKWebStandard_Collections_LazyCache.htm">
+  <HelpTOCNode Id="a5699703-b70a-4bfe-973b-498cefea0f3e" Title="ZKWebStandard.Collections" Url="html/N_ZKWebStandard_Collections.htm">
+    <HelpTOCNode Id="65130649-ff98-4f48-9cee-80e54ccb296f" Title="LazyCache Class" Url="html/T_ZKWebStandard_Collections_LazyCache.htm">
+      <HelpTOCNode Id="f0ef7cd8-13fd-407a-8b09-ea35fbb76dab" Title="LazyCache Methods" Url="html/Methods_T_ZKWebStandard_Collections_LazyCache.htm">
         <HelpTOCNode Title="Create(T) Method " Url="html/M_ZKWebStandard_Collections_LazyCache_Create__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1c6fa525-0bee-426b-add7-d27d9e06a66f" Title="LazyCache(T) Class" Url="html/T_ZKWebStandard_Collections_LazyCache_1.htm">
+    <HelpTOCNode Id="3d8d4a8b-5f22-4418-8472-3838192937fc" Title="LazyCache(T) Class" Url="html/T_ZKWebStandard_Collections_LazyCache_1.htm">
       <HelpTOCNode Title="LazyCache(T) Constructor " Url="html/M_ZKWebStandard_Collections_LazyCache_1__ctor.htm" />
-      <HelpTOCNode Id="20d4dcbb-aa87-41e0-9d93-fb1d2a56b889" Title="LazyCache(T) Properties" Url="html/Properties_T_ZKWebStandard_Collections_LazyCache_1.htm">
+      <HelpTOCNode Id="478f68a5-32ee-48c1-b418-b5dcb43e8754" Title="LazyCache(T) Properties" Url="html/Properties_T_ZKWebStandard_Collections_LazyCache_1.htm">
         <HelpTOCNode Title="IsValueCreated Property " Url="html/P_ZKWebStandard_Collections_LazyCache_1_IsValueCreated.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_ZKWebStandard_Collections_LazyCache_1_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="1bd9ee68-0b08-41cc-8da8-a193248cab18" Title="LazyCache(T) Methods" Url="html/Methods_T_ZKWebStandard_Collections_LazyCache_1.htm">
+      <HelpTOCNode Id="c3c82ddf-0636-4c22-9d18-1a8feea4586a" Title="LazyCache(T) Methods" Url="html/Methods_T_ZKWebStandard_Collections_LazyCache_1.htm">
         <HelpTOCNode Title="Reset Method " Url="html/M_ZKWebStandard_Collections_LazyCache_1_Reset.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="4c3ca586-e707-4a01-969e-2454c64bb6f1" Title="MemoryCache(TKey, TValue) Class" Url="html/T_ZKWebStandard_Collections_MemoryCache_2.htm">
+    <HelpTOCNode Id="dd514abf-2685-485f-b3ef-f54dbb9e9686" Title="MemoryCache(TKey, TValue) Class" Url="html/T_ZKWebStandard_Collections_MemoryCache_2.htm">
       <HelpTOCNode Title="MemoryCache(TKey, TValue) Constructor " Url="html/M_ZKWebStandard_Collections_MemoryCache_2__ctor.htm" />
-      <HelpTOCNode Id="d864d366-2a10-4e89-aad5-0ac2b5455c08" Title="MemoryCache(TKey, TValue) Properties" Url="html/Properties_T_ZKWebStandard_Collections_MemoryCache_2.htm">
+      <HelpTOCNode Id="221aa53a-2bb5-4298-88f1-3ee9093b3e88" Title="MemoryCache(TKey, TValue) Properties" Url="html/Properties_T_ZKWebStandard_Collections_MemoryCache_2.htm">
         <HelpTOCNode Title="Cache Property " Url="html/P_ZKWebStandard_Collections_MemoryCache_2_Cache.htm" />
         <HelpTOCNode Title="CacheLock Property " Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
         <HelpTOCNode Title="LastRevokeExpires Property " Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
         <HelpTOCNode Title="RevokeExpiresInterval Property " Url="html/P_ZKWebStandard_Collections_MemoryCache_2_RevokeExpiresInterval.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="7bbe86a3-2325-4789-9c9f-150189360739" Title="MemoryCache(TKey, TValue) Methods" Url="html/Methods_T_ZKWebStandard_Collections_MemoryCache_2.htm">
+      <HelpTOCNode Id="470aa9ed-bf7b-4fe7-a188-4f457aacf398" Title="MemoryCache(TKey, TValue) Methods" Url="html/Methods_T_ZKWebStandard_Collections_MemoryCache_2.htm">
         <HelpTOCNode Title="Clear Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
         <HelpTOCNode Title="Count Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
         <HelpTOCNode Title="GetOrDefault Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
@@ -688,47 +688,47 @@
         <HelpTOCNode Title="TryGetValue Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_TryGetValue.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="aea351fd-6a7a-4341-a642-1cc6869b5403" Title="Pair Class" Url="html/T_ZKWebStandard_Collections_Pair.htm">
-      <HelpTOCNode Id="7f900a3b-e5e5-41cd-922d-e8f5fa9800cb" Title="Pair Methods" Url="html/Methods_T_ZKWebStandard_Collections_Pair.htm">
+    <HelpTOCNode Id="e2cb948b-aa6f-4ba6-ab94-c19088749713" Title="Pair Class" Url="html/T_ZKWebStandard_Collections_Pair.htm">
+      <HelpTOCNode Id="89bfed07-6fab-4d82-8094-c1058cde8ca0" Title="Pair Methods" Url="html/Methods_T_ZKWebStandard_Collections_Pair.htm">
         <HelpTOCNode Title="Create(TFirst, TSecond) Method " Url="html/M_ZKWebStandard_Collections_Pair_Create__2.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="208a41a5-fe50-4c59-b0f9-5d0829b18320" Title="Pair(TFirst, TSecond) Structure" Url="html/T_ZKWebStandard_Collections_Pair_2.htm">
+    <HelpTOCNode Id="adf3491f-7ee8-4c43-81ab-b338741b7bf3" Title="Pair(TFirst, TSecond) Structure" Url="html/T_ZKWebStandard_Collections_Pair_2.htm">
       <HelpTOCNode Title="Pair(TFirst, TSecond) Constructor " Url="html/M_ZKWebStandard_Collections_Pair_2__ctor.htm" />
-      <HelpTOCNode Id="6cc4ce8e-65b1-43a6-b68b-e0ec780e5e76" Title="Pair(TFirst, TSecond) Properties" Url="html/Properties_T_ZKWebStandard_Collections_Pair_2.htm">
+      <HelpTOCNode Id="da2e83a9-a5e4-4adb-b8e1-d59c0751280f" Title="Pair(TFirst, TSecond) Properties" Url="html/Properties_T_ZKWebStandard_Collections_Pair_2.htm">
         <HelpTOCNode Title="First Property " Url="html/P_ZKWebStandard_Collections_Pair_2_First.htm" />
         <HelpTOCNode Title="Second Property " Url="html/P_ZKWebStandard_Collections_Pair_2_Second.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="049c821d-8d89-4e9c-b986-e8159a1d4742" Title="Pair(TFirst, TSecond) Methods" Url="html/Methods_T_ZKWebStandard_Collections_Pair_2.htm">
-        <HelpTOCNode Id="080f086f-5f58-441b-9401-7fe54aec1cca" Title="Equals Method " Url="html/Overload_ZKWebStandard_Collections_Pair_2_Equals.htm">
+      <HelpTOCNode Id="aa8627b9-04ad-4ae1-b73a-c48cccbd33eb" Title="Pair(TFirst, TSecond) Methods" Url="html/Methods_T_ZKWebStandard_Collections_Pair_2.htm">
+        <HelpTOCNode Id="3c51061a-caf7-4081-a22e-076e58f4d5f1" Title="Equals Method " Url="html/Overload_ZKWebStandard_Collections_Pair_2_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object)" Url="html/M_ZKWebStandard_Collections_Pair_2_Equals.htm" />
           <HelpTOCNode Title="Equals Method (Pair(TFirst, TSecond))" Url="html/M_ZKWebStandard_Collections_Pair_2_Equals_1.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="GetHashCode Method " Url="html/M_ZKWebStandard_Collections_Pair_2_GetHashCode.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0c2815f2-b854-4d2b-934b-a22896af8ff0" Title="SimpleDisposable Class" Url="html/T_ZKWebStandard_Collections_SimpleDisposable.htm">
+    <HelpTOCNode Id="c4737f24-77e1-4954-8163-7b7cb5ca48cd" Title="SimpleDisposable Class" Url="html/T_ZKWebStandard_Collections_SimpleDisposable.htm">
       <HelpTOCNode Title="SimpleDisposable Constructor " Url="html/M_ZKWebStandard_Collections_SimpleDisposable__ctor.htm" />
-      <HelpTOCNode Id="2f5ab9ae-d2be-46b6-b165-698ac7dda8c3" Title="SimpleDisposable Properties" Url="html/Properties_T_ZKWebStandard_Collections_SimpleDisposable.htm">
+      <HelpTOCNode Id="73348235-f808-4476-81d3-e9e4e138f0ef" Title="SimpleDisposable Properties" Url="html/Properties_T_ZKWebStandard_Collections_SimpleDisposable.htm">
         <HelpTOCNode Title="OnDispose Property " Url="html/P_ZKWebStandard_Collections_SimpleDisposable_OnDispose.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="00e7dba7-4bd0-43d7-a150-6d04578d92d4" Title="SimpleDisposable Methods" Url="html/Methods_T_ZKWebStandard_Collections_SimpleDisposable.htm">
+      <HelpTOCNode Id="cd423f35-1ffe-4e07-a1ee-061c743cc4c9" Title="SimpleDisposable Methods" Url="html/Methods_T_ZKWebStandard_Collections_SimpleDisposable.htm">
         <HelpTOCNode Title="Dispose Method " Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Dispose.htm" />
         <HelpTOCNode Title="Finalize Method " Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Finalize.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="77be7fdc-6308-41a6-9838-bb8ba3afc732" Title="SimpleDisposable Fields" Url="html/Fields_T_ZKWebStandard_Collections_SimpleDisposable.htm">
+      <HelpTOCNode Id="e00f6603-ad4c-44de-97de-bf06df9d166b" Title="SimpleDisposable Fields" Url="html/Fields_T_ZKWebStandard_Collections_SimpleDisposable.htm">
         <HelpTOCNode Title="Disposed Field" Url="html/F_ZKWebStandard_Collections_SimpleDisposable_Disposed.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="432c9632-c70e-4e25-af3b-8c2b7a2c8dca" Title="ZKWebStandard.Extensions" Url="html/N_ZKWebStandard_Extensions.htm">
-    <HelpTOCNode Id="2760da20-44a5-4853-9cd1-e09931fb9fff" Title="ByteArrayExtensions Class" Url="html/T_ZKWebStandard_Extensions_ByteArrayExtensions.htm">
-      <HelpTOCNode Id="c346304d-977a-4514-be75-6c5d3d5def44" Title="ByteArrayExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ByteArrayExtensions.htm">
+  <HelpTOCNode Id="0272e316-c262-4ed8-9bfa-fbd89d0ccb58" Title="ZKWebStandard.Extensions" Url="html/N_ZKWebStandard_Extensions.htm">
+    <HelpTOCNode Id="93ecc756-557c-4440-95a7-b23ac3a1cfb4" Title="ByteArrayExtensions Class" Url="html/T_ZKWebStandard_Extensions_ByteArrayExtensions.htm">
+      <HelpTOCNode Id="3e8c02de-5e3c-49dc-828d-801eddc85a59" Title="ByteArrayExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ByteArrayExtensions.htm">
         <HelpTOCNode Title="ToHex Method " Url="html/M_ZKWebStandard_Extensions_ByteArrayExtensions_ToHex.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5643a079-2491-4fc7-87ed-ea39c87b5169" Title="DateTimeExtensions Class" Url="html/T_ZKWebStandard_Extensions_DateTimeExtensions.htm">
-      <HelpTOCNode Id="47c67eac-172e-424a-baad-508c34df3eb2" Title="DateTimeExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_DateTimeExtensions.htm">
+    <HelpTOCNode Id="a3c2cb32-71cb-4386-9671-f974c44025cd" Title="DateTimeExtensions Class" Url="html/T_ZKWebStandard_Extensions_DateTimeExtensions.htm">
+      <HelpTOCNode Id="8fdd1c40-11d5-4bec-b1f9-7e48124e5a64" Title="DateTimeExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_DateTimeExtensions.htm">
         <HelpTOCNode Title="FromClientTime Method " Url="html/M_ZKWebStandard_Extensions_DateTimeExtensions_FromClientTime.htm" />
         <HelpTOCNode Title="ToClientTime Method " Url="html/M_ZKWebStandard_Extensions_DateTimeExtensions_ToClientTime.htm" />
         <HelpTOCNode Title="ToClientTimeString Method " Url="html/M_ZKWebStandard_Extensions_DateTimeExtensions_ToClientTimeString.htm" />
@@ -737,35 +737,35 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="DeviceTypes Enumeration" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
-    <HelpTOCNode Id="f8e8c5da-7655-4aab-ab46-45d99c5e2287" Title="EnumExtensions Class" Url="html/T_ZKWebStandard_Extensions_EnumExtensions.htm">
-      <HelpTOCNode Id="bbc0dc59-0893-4ef3-8f82-c8b3d0cfde8b" Title="EnumExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_EnumExtensions.htm">
+    <HelpTOCNode Id="a1371402-cda4-4eea-aa7e-fa03f5a4edc3" Title="EnumExtensions Class" Url="html/T_ZKWebStandard_Extensions_EnumExtensions.htm">
+      <HelpTOCNode Id="03a4ae0d-88f5-4270-8ed8-6ee33b8e4edc" Title="EnumExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_EnumExtensions.htm">
         <HelpTOCNode Title="GetAttribute(T) Method " Url="html/M_ZKWebStandard_Extensions_EnumExtensions_GetAttribute__1.htm" />
         <HelpTOCNode Title="GetDescription Method " Url="html/M_ZKWebStandard_Extensions_EnumExtensions_GetDescription.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="050e2b0d-ce6e-4c3e-912a-5fa695942b90" Title="ExpressionExtensions Class" Url="html/T_ZKWebStandard_Extensions_ExpressionExtensions.htm">
-      <HelpTOCNode Id="71e85888-f008-4ebe-9476-790985b9ee2c" Title="ExpressionExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ExpressionExtensions.htm">
+    <HelpTOCNode Id="9b511b6b-9051-4571-adf6-ec8b07b3cd19" Title="ExpressionExtensions Class" Url="html/T_ZKWebStandard_Extensions_ExpressionExtensions.htm">
+      <HelpTOCNode Id="038afcfd-6d4c-44eb-97cb-9255b7c1f78b" Title="ExpressionExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ExpressionExtensions.htm">
         <HelpTOCNode Title="GetMemberAttribute(TAttribute) Method " Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberAttribute__1.htm" />
         <HelpTOCNode Title="GetMemberInfo Method " Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberInfo.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="56144620-14f3-4cfe-8a62-ae2e39d55b9c" Title="IDictionaryExtensions Class" Url="html/T_ZKWebStandard_Extensions_IDictionaryExtensions.htm">
-      <HelpTOCNode Id="af325807-a9e4-47f1-89cb-d2fa0785adbd" Title="IDictionaryExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IDictionaryExtensions.htm">
+    <HelpTOCNode Id="f9b86583-d935-4d17-9938-dfc7fb1a9532" Title="IDictionaryExtensions Class" Url="html/T_ZKWebStandard_Extensions_IDictionaryExtensions.htm">
+      <HelpTOCNode Id="a762415f-def5-480d-acc6-1a81f96d9e98" Title="IDictionaryExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IDictionaryExtensions.htm">
         <HelpTOCNode Title="GetOrCreate(TKey, TValue) Method " Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
-        <HelpTOCNode Id="cbd79779-7718-498c-986b-5873bade6086" Title="GetOrDefault Method " Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm">
+        <HelpTOCNode Id="a6f94bea-9135-4bdd-a4a8-44c01cdafea3" Title="GetOrDefault Method " Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm">
           <HelpTOCNode Title="GetOrDefault(T) Method (IDictionary(String, Object), String, T)" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault__1.htm" />
           <HelpTOCNode Title="GetOrDefault(TKey, TValue) Method (IDictionary(TKey, TValue), TKey, TValue)" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault__2.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="cd030dca-de4e-4516-9388-517d272c54fb" Title="IEnumerableExtensions Class" Url="html/T_ZKWebStandard_Extensions_IEnumerableExtensions.htm">
-      <HelpTOCNode Id="e62ad1c2-7f7f-4c74-9fd0-9aed6d936d19" Title="IEnumerableExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IEnumerableExtensions.htm">
+    <HelpTOCNode Id="96db2a24-51d2-4224-a803-ff00b5d03c56" Title="IEnumerableExtensions Class" Url="html/T_ZKWebStandard_Extensions_IEnumerableExtensions.htm">
+      <HelpTOCNode Id="cc1cc1f9-cab4-4b57-9f25-25318993c48c" Title="IEnumerableExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IEnumerableExtensions.htm">
         <HelpTOCNode Title="ConcatIfNotNull(T) Method " Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
         <HelpTOCNode Title="ForEach(T) Method " Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ForEach__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5fa3161f-b84e-4f19-98d0-142a3aecc4a2" Title="IHttpContextExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
-      <HelpTOCNode Id="030de520-20c3-4f53-819f-20d2bdbee7b1" Title="IHttpContextExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
+    <HelpTOCNode Id="c6696297-b293-4d5c-9356-52ebf2765b44" Title="IHttpContextExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
+      <HelpTOCNode Id="33183f8e-f534-4d32-9955-04deceaca48c" Title="IHttpContextExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
         <HelpTOCNode Title="GetClientDevice Method " Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetClientDevice.htm" />
         <HelpTOCNode Title="GetCookie Method " Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetCookie.htm" />
         <HelpTOCNode Title="GetData(T) Method " Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetData__1.htm" />
@@ -776,13 +776,13 @@
         <HelpTOCNode Title="RemoveData Method " Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_RemoveData.htm" />
         <HelpTOCNode Title="SetClientDeviceToCookies Method " Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_SetClientDeviceToCookies.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="58bf6f36-bcde-43fe-8acb-cdc44d80ee1e" Title="IHttpContextExtensions Fields" Url="html/Fields_T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
+      <HelpTOCNode Id="22f3e636-2453-4175-8409-1e68ea203d16" Title="IHttpContextExtensions Fields" Url="html/Fields_T_ZKWebStandard_Extensions_IHttpContextExtensions.htm">
         <HelpTOCNode Title="DeviceKey Field" Url="html/F_ZKWebStandard_Extensions_IHttpContextExtensions_DeviceKey.htm" />
         <HelpTOCNode Title="SetCookieDataKeyPrefix Field" Url="html/F_ZKWebStandard_Extensions_IHttpContextExtensions_SetCookieDataKeyPrefix.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9098bc2e-7285-44bf-b537-b025fa93470a" Title="IHttpRequestExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpRequestExtensions.htm">
-      <HelpTOCNode Id="18fd79e5-456a-415f-85e3-434f33e8c36d" Title="IHttpRequestExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpRequestExtensions.htm">
+    <HelpTOCNode Id="d41cb977-4bce-4449-80be-dd4c41a35dd8" Title="IHttpRequestExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpRequestExtensions.htm">
+      <HelpTOCNode Id="2d55a001-3caa-4e04-925b-f2f556013217" Title="IHttpRequestExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpRequestExtensions.htm">
         <HelpTOCNode Title="Get(T) Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_Get__1.htm" />
         <HelpTOCNode Title="GetAcceptLanguages Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAcceptLanguages.htm" />
         <HelpTOCNode Title="GetAll Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAll.htm" />
@@ -793,30 +793,30 @@
         <HelpTOCNode Title="IsAjaxRequest Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_IsAjaxRequest.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="eb5d4538-ffaf-4d46-a7c2-7c0004d9cee5" Title="IHttpResponseExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">
-      <HelpTOCNode Id="867f596a-c67e-44e3-9f27-bd8e91fa24f0" Title="IHttpResponseExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">
+    <HelpTOCNode Id="70da241a-c07c-41b5-b9ca-1fe09d80e413" Title="IHttpResponseExtensions Class" Url="html/T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">
+      <HelpTOCNode Id="35cc5d00-e4c1-405b-bc27-d59c69cd2ba2" Title="IHttpResponseExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">
         <HelpTOCNode Title="RedirectByScript Method " Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_RedirectByScript.htm" />
         <HelpTOCNode Title="SetLastModified Method " Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_SetLastModified.htm" />
         <HelpTOCNode Title="Write Method " Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_Write.htm" />
         <HelpTOCNode Title="WriteFile Method " Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_WriteFile.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8e92eacd-bcad-4d94-99c7-53dfdcd56bcd" Title="IListExtensions Class" Url="html/T_ZKWebStandard_Extensions_IListExtensions.htm">
-      <HelpTOCNode Id="cad1fd28-b0b3-4dca-a3c8-369329ffffae" Title="IListExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IListExtensions.htm">
+    <HelpTOCNode Id="5cac8143-99a3-4144-9f8f-35612a8cbc2a" Title="IListExtensions Class" Url="html/T_ZKWebStandard_Extensions_IListExtensions.htm">
+      <HelpTOCNode Id="4c8a981d-c752-4ddb-af78-f2f12a714efb" Title="IListExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_IListExtensions.htm">
         <HelpTOCNode Title="AddAfter(T) Method " Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddAfter__1.htm" />
         <HelpTOCNode Title="AddBefore(T) Method " Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddBefore__1.htm" />
-        <HelpTOCNode Id="f402ecb0-54a0-48d5-bb83-1c7301ef722d" Title="FindIndex Method " Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindIndex.htm">
+        <HelpTOCNode Id="2b8ee4e5-efca-4e67-9b37-35b08775e8ff" Title="FindIndex Method " Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindIndex.htm">
           <HelpTOCNode Title="FindIndex(T) Method (IList(T), Predicate(T))" Url="html/M_ZKWebStandard_Extensions_IListExtensions_FindIndex__1_1.htm" />
           <HelpTOCNode Title="FindIndex(T) Method (IList(T), Int32, Predicate(T))" Url="html/M_ZKWebStandard_Extensions_IListExtensions_FindIndex__1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="caceb2a0-7685-4da7-8a33-bd9bc2fd5ace" Title="FindLastIndex Method " Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindLastIndex.htm">
+        <HelpTOCNode Id="71c6cb08-313d-4ccc-a0a3-c5fad54d2069" Title="FindLastIndex Method " Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindLastIndex.htm">
           <HelpTOCNode Title="FindLastIndex(T) Method (IList(T), Predicate(T))" Url="html/M_ZKWebStandard_Extensions_IListExtensions_FindLastIndex__1_1.htm" />
           <HelpTOCNode Title="FindLastIndex(T) Method (IList(T), Int32, Predicate(T))" Url="html/M_ZKWebStandard_Extensions_IListExtensions_FindLastIndex__1.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f378e5bd-802f-4631-b13c-c540f843d583" Title="ImageExtensions Class" Url="html/T_ZKWebStandard_Extensions_ImageExtensions.htm">
-      <HelpTOCNode Id="f828fba4-0468-4115-83b9-58dd160b58ca" Title="ImageExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ImageExtensions.htm">
+    <HelpTOCNode Id="9b664d5f-42a7-463c-baca-92d8ec0b9096" Title="ImageExtensions Class" Url="html/T_ZKWebStandard_Extensions_ImageExtensions.htm">
+      <HelpTOCNode Id="b068be4c-8db0-452c-9ddc-46eec0902240" Title="ImageExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ImageExtensions.htm">
         <HelpTOCNode Title="Resize Method " Url="html/M_ZKWebStandard_Extensions_ImageExtensions_Resize.htm" />
         <HelpTOCNode Title="SaveAuto Method " Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
         <HelpTOCNode Title="SaveIcon Method " Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveIcon.htm" />
@@ -824,33 +824,33 @@
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="ImageResizeMode Enumeration" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
-    <HelpTOCNode Id="95a78a13-7bf7-49c7-8b81-3685d422dc07" Title="ISetExtensions Class" Url="html/T_ZKWebStandard_Extensions_ISetExtensions.htm">
-      <HelpTOCNode Id="266363fa-fc5d-40c0-895b-352baabcaf71" Title="ISetExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ISetExtensions.htm">
+    <HelpTOCNode Id="406c2149-5b43-4b4e-a7af-82db3cd9ffe3" Title="ISetExtensions Class" Url="html/T_ZKWebStandard_Extensions_ISetExtensions.htm">
+      <HelpTOCNode Id="88845e1a-50ad-4d33-bc5b-3efd9d47ab87" Title="ISetExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ISetExtensions.htm">
         <HelpTOCNode Title="AddRange(T) Method " Url="html/M_ZKWebStandard_Extensions_ISetExtensions_AddRange__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ca0442a2-2a46-41ec-b81b-2aad8ae5ab6c" Title="ITreeNodeExtensions Class" Url="html/T_ZKWebStandard_Extensions_ITreeNodeExtensions.htm">
-      <HelpTOCNode Id="d512b5fe-c046-4983-a9a3-8a5584033843" Title="ITreeNodeExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ITreeNodeExtensions.htm">
+    <HelpTOCNode Id="1882e0c0-47c3-4724-bd6f-a6d2ea55feaf" Title="ITreeNodeExtensions Class" Url="html/T_ZKWebStandard_Extensions_ITreeNodeExtensions.htm">
+      <HelpTOCNode Id="b44cfaed-2b1e-464c-b239-96636f56916d" Title="ITreeNodeExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ITreeNodeExtensions.htm">
         <HelpTOCNode Title="EnumerateAllNodes(T) Method " Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_EnumerateAllNodes__1.htm" />
         <HelpTOCNode Title="GetParents(T) Method " Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_GetParents__1.htm" />
         <HelpTOCNode Title="VisitAllNodes(T) Method " Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_VisitAllNodes__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="1c2c8923-170f-4ba9-bfa4-ae2c565f8aa8" Title="MemberInfoExtensions Class" Url="html/T_ZKWebStandard_Extensions_MemberInfoExtensions.htm">
-      <HelpTOCNode Id="e0f9831e-fbb3-43bf-8cd5-d07f6acac444" Title="MemberInfoExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_MemberInfoExtensions.htm">
+    <HelpTOCNode Id="16b4a4ea-bfec-456b-a6c6-63b7fbcfb988" Title="MemberInfoExtensions Class" Url="html/T_ZKWebStandard_Extensions_MemberInfoExtensions.htm">
+      <HelpTOCNode Id="77ecc525-ee7b-4b91-a388-a70cba9e2faa" Title="MemberInfoExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_MemberInfoExtensions.htm">
         <HelpTOCNode Title="GetAttribute(TAttribute) Method " Url="html/M_ZKWebStandard_Extensions_MemberInfoExtensions_GetAttribute__1.htm" />
         <HelpTOCNode Title="GetAttributes(TAttribute) Method " Url="html/M_ZKWebStandard_Extensions_MemberInfoExtensions_GetAttributes__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c656678c-0df6-44ae-a19c-0d00df7ee184" Title="MethodInfoExtensions Class" Url="html/T_ZKWebStandard_Extensions_MethodInfoExtensions.htm">
-      <HelpTOCNode Id="1f17803b-1511-442b-9d1e-85e35334afad" Title="MethodInfoExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_MethodInfoExtensions.htm">
+    <HelpTOCNode Id="f8a37c93-aa32-43d3-aee3-beb6ad0b967e" Title="MethodInfoExtensions Class" Url="html/T_ZKWebStandard_Extensions_MethodInfoExtensions.htm">
+      <HelpTOCNode Id="7b81a945-978f-40c8-9a7b-0090ae22778c" Title="MethodInfoExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_MethodInfoExtensions.htm">
         <HelpTOCNode Title="GetFullName Method " Url="html/M_ZKWebStandard_Extensions_MethodInfoExtensions_GetFullName.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="c221ee9b-3f72-4a5e-9352-236ddb4d53ae" Title="ObjectExtensions Class" Url="html/T_ZKWebStandard_Extensions_ObjectExtensions.htm">
-      <HelpTOCNode Id="5de5ddfc-2d00-4bf9-915f-0c1aded30e66" Title="ObjectExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ObjectExtensions.htm">
+    <HelpTOCNode Id="ecc8e93c-d199-4245-a22a-63aa969b9e55" Title="ObjectExtensions Class" Url="html/T_ZKWebStandard_Extensions_ObjectExtensions.htm">
+      <HelpTOCNode Id="9312f7e0-e075-4002-8396-a2a319514d9f" Title="ObjectExtensions Methods" Url="html/Methods_T_ZKWebStandard_Extensions_ObjectExtensions.htm">
         <HelpTOCNode Title="CloneByJson(T) Method " Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_CloneByJson__1.htm" />
-        <HelpTOCNode Id="a38b763f-080f-4d92-9c77-45a27ac091f9" Title="ConvertOrDefault Method " Url="html/Overload_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault.htm">
+        <HelpTOCNode Id="a4c48e06-26f4-4f4a-aece-c04046853f24" Title="ConvertOrDefault Method " Url="html/Overload_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault.htm">
           <HelpTOCNode Title="ConvertOrDefault(T) Method (Object, T)" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault__1.htm" />
           <HelpTOCNode Title="ConvertOrDefault Method (Object, Type, Object)" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault.htm" />
         </HelpTOCNode>
@@ -858,15 +858,15 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="7317f830-9b51-4098-8e46-f37cdf74947d" Title="ZKWebStandard.Ioc" Url="html/N_ZKWebStandard_Ioc.htm">
-    <HelpTOCNode Id="a4e6300f-106c-4420-a2df-55a0ccd32978" Title="Container Class" Url="html/T_ZKWebStandard_Ioc_Container.htm">
+  <HelpTOCNode Id="6c8e2008-13c4-47ed-9aa7-1e6e42eb5b74" Title="ZKWebStandard.Ioc" Url="html/N_ZKWebStandard_Ioc.htm">
+    <HelpTOCNode Id="8c298c5e-f8cd-45df-b642-de0729b1a3a6" Title="Container Class" Url="html/T_ZKWebStandard_Ioc_Container.htm">
       <HelpTOCNode Title="Container Constructor " Url="html/M_ZKWebStandard_Ioc_Container__ctor.htm" />
-      <HelpTOCNode Id="192dd66d-f9de-46e6-b9e4-9dc09c293bd7" Title="Container Properties" Url="html/Properties_T_ZKWebStandard_Ioc_Container.htm">
+      <HelpTOCNode Id="98af3289-2801-4d4a-954d-1ac33df8e884" Title="Container Properties" Url="html/Properties_T_ZKWebStandard_Ioc_Container.htm">
         <HelpTOCNode Title="Factors Property " Url="html/P_ZKWebStandard_Ioc_Container_Factors.htm" />
         <HelpTOCNode Title="FactorsLock Property " Url="html/P_ZKWebStandard_Ioc_Container_FactorsLock.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="303ce772-9051-4799-8417-bb58b3d356f8" Title="Container Methods" Url="html/Methods_T_ZKWebStandard_Ioc_Container.htm">
-        <HelpTOCNode Id="90235f7a-43bd-4653-aaeb-428b4ccdfa99" Title="BuildFactor Method " Url="html/Overload_ZKWebStandard_Ioc_Container_BuildFactor.htm">
+      <HelpTOCNode Id="cd47b517-f751-4ff7-90b0-d0531d71c468" Title="Container Methods" Url="html/Methods_T_ZKWebStandard_Ioc_Container.htm">
+        <HelpTOCNode Id="6c542fef-4742-4468-97f2-43375c6e4b6e" Title="BuildFactor Method " Url="html/Overload_ZKWebStandard_Ioc_Container_BuildFactor.htm">
           <HelpTOCNode Title="BuildFactor Method (Func(Object), ReuseType)" Url="html/M_ZKWebStandard_Ioc_Container_BuildFactor.htm" />
           <HelpTOCNode Title="BuildFactor Method (Type, ReuseType)" Url="html/M_ZKWebStandard_Ioc_Container_BuildFactor_1.htm" />
         </HelpTOCNode>
@@ -874,47 +874,47 @@
         <HelpTOCNode Title="Dispose Method " Url="html/M_ZKWebStandard_Ioc_Container_Dispose.htm" />
         <HelpTOCNode Title="GetImplementedServiceTypes Method " Url="html/M_ZKWebStandard_Ioc_Container_GetImplementedServiceTypes.htm" />
         <HelpTOCNode Title="GetImplementedTypes Method " Url="html/M_ZKWebStandard_Ioc_Container_GetImplementedTypes.htm" />
-        <HelpTOCNode Id="8ec56673-8756-431e-a8a7-3216313b0cc7" Title="Register Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Register.htm">
+        <HelpTOCNode Id="a5fe5f62-4003-4b99-8bd8-1a860ca43d53" Title="Register Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Register.htm">
           <HelpTOCNode Title="Register(TService, TImplementation) Method (ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_Container_Register__2.htm" />
           <HelpTOCNode Title="Register Method (Type, Type, ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_Container_Register.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="20500aed-3c5e-4cc7-86ad-fa79f000a509" Title="RegisterDelegate Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterDelegate.htm">
+        <HelpTOCNode Id="9f499244-5570-4a1b-9be5-56fce084972e" Title="RegisterDelegate Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterDelegate.htm">
           <HelpTOCNode Title="RegisterDelegate(TService) Method (Func(TService), ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterDelegate__1.htm" />
           <HelpTOCNode Title="RegisterDelegate Method (Type, Func(Object), ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterDelegate.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="RegisterExports Method " Url="html/M_ZKWebStandard_Ioc_Container_RegisterExports.htm" />
         <HelpTOCNode Title="RegisterFactor Method " Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactor.htm" />
         <HelpTOCNode Title="RegisterFactorMany Method " Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactorMany.htm" />
-        <HelpTOCNode Id="7c882437-b9ce-4d8b-a666-8347301237c1" Title="RegisterInstance Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterInstance.htm">
+        <HelpTOCNode Id="1afe344b-cb1d-4963-8a43-b2bb57ff7e74" Title="RegisterInstance Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterInstance.htm">
           <HelpTOCNode Title="RegisterInstance(TService) Method (TService, Object)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterInstance__1.htm" />
           <HelpTOCNode Title="RegisterInstance Method (Type, Object, Object)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterInstance.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="6ac8bdaa-a302-47a5-a40e-b0dfb9b60230" Title="RegisterMany Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterMany.htm">
+        <HelpTOCNode Id="14a95385-4d37-44c9-873f-c40055fa470a" Title="RegisterMany Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterMany.htm">
           <HelpTOCNode Title="RegisterMany(TImplementation) Method (ReuseType, Object, Boolean)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterMany__1.htm" />
           <HelpTOCNode Title="RegisterMany Method (IList(Type), Type, ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterMany.htm" />
           <HelpTOCNode Title="RegisterMany Method (Type, ReuseType, Object, Boolean)" Url="html/M_ZKWebStandard_Ioc_Container_RegisterMany_1.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a74cea35-7306-4e78-b32f-7088e3bcd52e" Title="Resolve Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Resolve.htm">
+        <HelpTOCNode Id="7de189d9-275f-4667-8612-1ddb292b6c45" Title="Resolve Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Resolve.htm">
           <HelpTOCNode Title="Resolve(TService) Method (IfUnresolved, Object)" Url="html/M_ZKWebStandard_Ioc_Container_Resolve__1.htm" />
           <HelpTOCNode Title="Resolve Method (Type, IfUnresolved, Object)" Url="html/M_ZKWebStandard_Ioc_Container_Resolve.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="fc957f58-54c6-40a7-b0f8-4d1172209e93" Title="ResolveMany Method " Url="html/Overload_ZKWebStandard_Ioc_Container_ResolveMany.htm">
+        <HelpTOCNode Id="88f5f85b-1fc4-4555-9557-3c2c1bcb4e85" Title="ResolveMany Method " Url="html/Overload_ZKWebStandard_Ioc_Container_ResolveMany.htm">
           <HelpTOCNode Title="ResolveMany(TService) Method (Object)" Url="html/M_ZKWebStandard_Ioc_Container_ResolveMany__1.htm" />
           <HelpTOCNode Title="ResolveMany Method (Type, Object)" Url="html/M_ZKWebStandard_Ioc_Container_ResolveMany.htm" />
         </HelpTOCNode>
-        <HelpTOCNode Id="a87d898a-f12b-4f12-80b2-0f6963cc81b9" Title="Unregister Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Unregister.htm">
+        <HelpTOCNode Id="1f6a4604-6466-4571-ad58-d3f762fff010" Title="Unregister Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Unregister.htm">
           <HelpTOCNode Title="Unregister(TService) Method (Object)" Url="html/M_ZKWebStandard_Ioc_Container_Unregister__1.htm" />
           <HelpTOCNode Title="Unregister Method (Type, Object)" Url="html/M_ZKWebStandard_Ioc_Container_Unregister.htm" />
         </HelpTOCNode>
         <HelpTOCNode Title="UnregisterAll Method " Url="html/M_ZKWebStandard_Ioc_Container_UnregisterAll.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="dc6c96fe-1fca-4587-ba58-b5aae54f4db1" Title="Container Fields" Url="html/Fields_T_ZKWebStandard_Ioc_Container.htm">
+      <HelpTOCNode Id="cfd29d50-178e-4556-a84f-4fd5d8dd5917" Title="Container Fields" Url="html/Fields_T_ZKWebStandard_Ioc_Container.htm">
         <HelpTOCNode Title="TypeFactorsCache Field" Url="html/F_ZKWebStandard_Ioc_Container_TypeFactorsCache.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e1218bfe-7237-4a61-aefd-27ee2252d7ac" Title="ExportManyAttribute Class" Url="html/T_ZKWebStandard_Ioc_ExportManyAttribute.htm">
+    <HelpTOCNode Id="b43cdcd8-8e1f-4232-ba51-23c2b80448fc" Title="ExportManyAttribute Class" Url="html/T_ZKWebStandard_Ioc_ExportManyAttribute.htm">
       <HelpTOCNode Title="ExportManyAttribute Constructor " Url="html/M_ZKWebStandard_Ioc_ExportManyAttribute__ctor.htm" />
-      <HelpTOCNode Id="a849db39-d3a3-4d93-b9df-3c1edce377fd" Title="ExportManyAttribute Properties" Url="html/Properties_T_ZKWebStandard_Ioc_ExportManyAttribute.htm">
+      <HelpTOCNode Id="a7264399-d1c7-4d9a-b1ee-10916d7f495b" Title="ExportManyAttribute Properties" Url="html/Properties_T_ZKWebStandard_Ioc_ExportManyAttribute.htm">
         <HelpTOCNode Title="ContractKey Property " Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_ContractKey.htm" />
         <HelpTOCNode Title="Except Property " Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_Except.htm" />
         <HelpTOCNode Title="NonPublic Property " Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_NonPublic.htm" />
@@ -923,8 +923,8 @@
     </HelpTOCNode>
     <HelpTOCNode Title="IContainer Interface" Url="html/T_ZKWebStandard_Ioc_IContainer.htm" />
     <HelpTOCNode Title="IfUnresolved Enumeration" Url="html/T_ZKWebStandard_Ioc_IfUnresolved.htm" />
-    <HelpTOCNode Id="8ecd7e8c-3108-4781-9a6a-8e6d38046acc" Title="IGenericRegistrator Interface" Url="html/T_ZKWebStandard_Ioc_IGenericRegistrator.htm">
-      <HelpTOCNode Id="2cf60d7d-f9a9-4b3a-8f4f-600943448de1" Title="IGenericRegistrator Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IGenericRegistrator.htm">
+    <HelpTOCNode Id="52d686ee-2b13-4308-9bde-d9f8547697c4" Title="IGenericRegistrator Interface" Url="html/T_ZKWebStandard_Ioc_IGenericRegistrator.htm">
+      <HelpTOCNode Id="a4b33cb5-6a0a-4b0b-95d4-8785e3e7acf7" Title="IGenericRegistrator Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IGenericRegistrator.htm">
         <HelpTOCNode Title="Register(TService, TImplementation) Method " Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_Register__2.htm" />
         <HelpTOCNode Title="RegisterDelegate(TService) Method " Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_RegisterDelegate__1.htm" />
         <HelpTOCNode Title="RegisterInstance(TService) Method " Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_RegisterInstance__1.htm" />
@@ -932,19 +932,19 @@
         <HelpTOCNode Title="Unregister(TService) Method " Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_Unregister__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="7714bf6b-6b35-4252-9049-c34beb44e9f5" Title="IGenericResolver Interface" Url="html/T_ZKWebStandard_Ioc_IGenericResolver.htm">
-      <HelpTOCNode Id="87c3d0e7-2c1e-4eb6-a32d-d0d705cd3fd7" Title="IGenericResolver Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IGenericResolver.htm">
+    <HelpTOCNode Id="a31c731c-8ad7-47b3-821e-f849747e1909" Title="IGenericResolver Interface" Url="html/T_ZKWebStandard_Ioc_IGenericResolver.htm">
+      <HelpTOCNode Id="b1e19193-a9cf-4bd3-bb1b-5c3a85c93a20" Title="IGenericResolver Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IGenericResolver.htm">
         <HelpTOCNode Title="Resolve(TService) Method " Url="html/M_ZKWebStandard_Ioc_IGenericResolver_Resolve__1.htm" />
         <HelpTOCNode Title="ResolveMany(TService) Method " Url="html/M_ZKWebStandard_Ioc_IGenericResolver_ResolveMany__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a297ed46-faea-4cdc-8878-a8514a4bcce1" Title="IRegistrator Interface" Url="html/T_ZKWebStandard_Ioc_IRegistrator.htm">
-      <HelpTOCNode Id="8c85925b-dd5c-4c4f-905c-972d3b478299" Title="IRegistrator Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IRegistrator.htm">
+    <HelpTOCNode Id="a1b85218-870e-4242-98f9-184e8730b718" Title="IRegistrator Interface" Url="html/T_ZKWebStandard_Ioc_IRegistrator.htm">
+      <HelpTOCNode Id="d6818883-617f-410c-9450-dacdd018955a" Title="IRegistrator Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IRegistrator.htm">
         <HelpTOCNode Title="Register Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_Register.htm" />
         <HelpTOCNode Title="RegisterDelegate Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterDelegate.htm" />
         <HelpTOCNode Title="RegisterExports Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterExports.htm" />
         <HelpTOCNode Title="RegisterInstance Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterInstance.htm" />
-        <HelpTOCNode Id="e8105911-91eb-4a32-a1fb-53f22b51fdfa" Title="RegisterMany Method " Url="html/Overload_ZKWebStandard_Ioc_IRegistrator_RegisterMany.htm">
+        <HelpTOCNode Id="73503e26-37f1-4a08-bd72-00f00b6322eb" Title="RegisterMany Method " Url="html/Overload_ZKWebStandard_Ioc_IRegistrator_RegisterMany.htm">
           <HelpTOCNode Title="RegisterMany Method (IList(Type), Type, ReuseType, Object)" Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterMany.htm" />
           <HelpTOCNode Title="RegisterMany Method (Type, ReuseType, Object, Boolean)" Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterMany_1.htm" />
         </HelpTOCNode>
@@ -952,29 +952,29 @@
         <HelpTOCNode Title="UnregisterAll Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_UnregisterAll.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="9e3481f2-d127-4b9d-b3db-d1dcea7df3a9" Title="IResolver Interface" Url="html/T_ZKWebStandard_Ioc_IResolver.htm">
-      <HelpTOCNode Id="5a97acd1-f7a2-474c-8225-114472ad21d5" Title="IResolver Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IResolver.htm">
+    <HelpTOCNode Id="7e75f194-1715-43d2-8309-626554d8d6d9" Title="IResolver Interface" Url="html/T_ZKWebStandard_Ioc_IResolver.htm">
+      <HelpTOCNode Id="fef8afdf-5008-4d14-8400-a5083d5ce5f6" Title="IResolver Methods" Url="html/Methods_T_ZKWebStandard_Ioc_IResolver.htm">
         <HelpTOCNode Title="Resolve Method " Url="html/M_ZKWebStandard_Ioc_IResolver_Resolve.htm" />
         <HelpTOCNode Title="ResolveMany Method " Url="html/M_ZKWebStandard_Ioc_IResolver_ResolveMany.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="43f5a937-be84-48e6-8a07-b4a4cb168c9d" Title="ReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_ReuseAttribute.htm">
+    <HelpTOCNode Id="c62cbbea-8bcf-4b7b-a444-cfd3d26ff1e2" Title="ReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_ReuseAttribute.htm">
       <HelpTOCNode Title="ReuseAttribute Constructor " Url="html/M_ZKWebStandard_Ioc_ReuseAttribute__ctor.htm" />
-      <HelpTOCNode Id="79c97887-1ba9-43fb-bedc-93ccf693608f" Title="ReuseAttribute Properties" Url="html/Properties_T_ZKWebStandard_Ioc_ReuseAttribute.htm">
+      <HelpTOCNode Id="6a67581e-ec3b-4416-839d-cd16f703a7dc" Title="ReuseAttribute Properties" Url="html/Properties_T_ZKWebStandard_Ioc_ReuseAttribute.htm">
         <HelpTOCNode Title="ReuseType Property " Url="html/P_ZKWebStandard_Ioc_ReuseAttribute_ReuseType.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="ReuseAttribute Methods" Url="html/Methods_T_ZKWebStandard_Ioc_ReuseAttribute.htm" />
     </HelpTOCNode>
     <HelpTOCNode Title="ReuseType Enumeration" Url="html/T_ZKWebStandard_Ioc_ReuseType.htm" />
-    <HelpTOCNode Id="4c5de5f8-e830-4edc-9042-783f727f15ac" Title="SingletonReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_SingletonReuseAttribute.htm">
+    <HelpTOCNode Id="5603fa14-869e-4e3c-a4fd-269e37ad881d" Title="SingletonReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_SingletonReuseAttribute.htm">
       <HelpTOCNode Title="SingletonReuseAttribute Constructor " Url="html/M_ZKWebStandard_Ioc_SingletonReuseAttribute__ctor.htm" />
       <HelpTOCNode Title="SingletonReuseAttribute Methods" Url="html/Methods_T_ZKWebStandard_Ioc_SingletonReuseAttribute.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="9a7e70d7-ee0f-4d40-90c9-6a802d53428d" Title="ZKWebStandard.Testing" Url="html/N_ZKWebStandard_Testing.htm">
-    <HelpTOCNode Id="cf1df2e6-2f0c-41ff-80f2-d2c9f9496e8c" Title="Assert Class" Url="html/T_ZKWebStandard_Testing_Assert.htm">
-      <HelpTOCNode Id="0f323ccb-07ce-4571-b34a-ce0f28e3859c" Title="Assert Methods" Url="html/Methods_T_ZKWebStandard_Testing_Assert.htm">
-        <HelpTOCNode Id="57d235ac-ab1f-499d-9c90-bc79a23809f6" Title="Equals Method " Url="html/Overload_ZKWebStandard_Testing_Assert_Equals.htm">
+  <HelpTOCNode Id="e4f099d0-2ea9-40bb-86fb-994c9bb4b245" Title="ZKWebStandard.Testing" Url="html/N_ZKWebStandard_Testing.htm">
+    <HelpTOCNode Id="3e8943d3-5a28-4cc6-984e-9124a6434f9b" Title="Assert Class" Url="html/T_ZKWebStandard_Testing_Assert.htm">
+      <HelpTOCNode Id="e1f764d7-a709-41e6-985f-78cbed5fc5fa" Title="Assert Methods" Url="html/Methods_T_ZKWebStandard_Testing_Assert.htm">
+        <HelpTOCNode Id="3e396e3c-a01b-40e5-a0ee-ea368c00a9bf" Title="Equals Method " Url="html/Overload_ZKWebStandard_Testing_Assert_Equals.htm">
           <HelpTOCNode Title="Equals Method (Object, Object, String, String, Int32)" Url="html/M_ZKWebStandard_Testing_Assert_Equals.htm" />
           <HelpTOCNode Title="Equals(T) Method (T, T, String, String, Int32)" Url="html/M_ZKWebStandard_Testing_Assert_Equals__1.htm" />
         </HelpTOCNode>
@@ -985,35 +985,35 @@
         <HelpTOCNode Title="Throws(TException) Method " Url="html/M_ZKWebStandard_Testing_Assert_Throws__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d3e0fab7-828d-4971-970a-800dee7370e7" Title="AssertException Class" Url="html/T_ZKWebStandard_Testing_AssertException.htm">
+    <HelpTOCNode Id="d75161d2-65ba-4cc2-b59a-d332dc8969e0" Title="AssertException Class" Url="html/T_ZKWebStandard_Testing_AssertException.htm">
       <HelpTOCNode Title="AssertException Constructor " Url="html/M_ZKWebStandard_Testing_AssertException__ctor.htm" />
       <HelpTOCNode Title="AssertException Methods" Url="html/Methods_T_ZKWebStandard_Testing_AssertException.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c13b1084-a5e5-4024-8106-c9d78287f45b" Title="AssertPassedException Class" Url="html/T_ZKWebStandard_Testing_AssertPassedException.htm">
+    <HelpTOCNode Id="72f21bff-251e-4876-bc3c-8305bbc45b4f" Title="AssertPassedException Class" Url="html/T_ZKWebStandard_Testing_AssertPassedException.htm">
       <HelpTOCNode Title="AssertPassedException Constructor " Url="html/M_ZKWebStandard_Testing_AssertPassedException__ctor.htm" />
       <HelpTOCNode Title="AssertPassedException Methods" Url="html/Methods_T_ZKWebStandard_Testing_AssertPassedException.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="87df4536-17e1-4eeb-8486-60ca6ccb0b7b" Title="AssertSkipedException Class" Url="html/T_ZKWebStandard_Testing_AssertSkipedException.htm">
+    <HelpTOCNode Id="b357c1b6-1cd8-4855-a6bd-e2b15bc584ac" Title="AssertSkipedException Class" Url="html/T_ZKWebStandard_Testing_AssertSkipedException.htm">
       <HelpTOCNode Title="AssertSkipedException Constructor " Url="html/M_ZKWebStandard_Testing_AssertSkipedException__ctor.htm" />
       <HelpTOCNode Title="AssertSkipedException Methods" Url="html/Methods_T_ZKWebStandard_Testing_AssertSkipedException.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0a2afd1f-74bf-4bbb-b0ba-c5cf6bf184dc" Title="TestResultCounter Class" Url="html/T_ZKWebStandard_Testing_TestResultCounter.htm">
+    <HelpTOCNode Id="84d916b0-7785-4948-a299-8d5f13c80bce" Title="TestResultCounter Class" Url="html/T_ZKWebStandard_Testing_TestResultCounter.htm">
       <HelpTOCNode Title="TestResultCounter Constructor " Url="html/M_ZKWebStandard_Testing_TestResultCounter__ctor.htm" />
-      <HelpTOCNode Id="fc76c7df-e79f-488e-96c6-a67fc05bb7ab" Title="TestResultCounter Properties" Url="html/Properties_T_ZKWebStandard_Testing_TestResultCounter.htm">
+      <HelpTOCNode Id="47451c72-e504-4f99-a545-263d7756e096" Title="TestResultCounter Properties" Url="html/Properties_T_ZKWebStandard_Testing_TestResultCounter.htm">
         <HelpTOCNode Title="Failed Property " Url="html/P_ZKWebStandard_Testing_TestResultCounter_Failed.htm" />
         <HelpTOCNode Title="Passed Property " Url="html/P_ZKWebStandard_Testing_TestResultCounter_Passed.htm" />
         <HelpTOCNode Title="Skipped Property " Url="html/P_ZKWebStandard_Testing_TestResultCounter_Skipped.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="TestResultCounter Methods" Url="html/Methods_T_ZKWebStandard_Testing_TestResultCounter.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="3c1f99f8-fead-41db-a765-3e1f8381eb7f" Title="TestRunner Class" Url="html/T_ZKWebStandard_Testing_TestRunner.htm">
+    <HelpTOCNode Id="a6729621-4cb0-41c5-83d3-aeb0a5fa94df" Title="TestRunner Class" Url="html/T_ZKWebStandard_Testing_TestRunner.htm">
       <HelpTOCNode Title="TestRunner Constructor " Url="html/M_ZKWebStandard_Testing_TestRunner__ctor.htm" />
-      <HelpTOCNode Id="5a085dfa-3d9b-4d75-86ae-8a9efd035d30" Title="TestRunner Properties" Url="html/Properties_T_ZKWebStandard_Testing_TestRunner.htm">
+      <HelpTOCNode Id="a211e2cf-812f-4620-b242-600f4197e9de" Title="TestRunner Properties" Url="html/Properties_T_ZKWebStandard_Testing_TestRunner.htm">
         <HelpTOCNode Title="Assembly Property " Url="html/P_ZKWebStandard_Testing_TestRunner_Assembly.htm" />
         <HelpTOCNode Title="CurrentRunner Property " Url="html/P_ZKWebStandard_Testing_TestRunner_CurrentRunner.htm" />
         <HelpTOCNode Title="EventHandlers Property " Url="html/P_ZKWebStandard_Testing_TestRunner_EventHandlers.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="685e4327-cdbb-4393-8843-84a9e452efb0" Title="TestRunner Methods" Url="html/Methods_T_ZKWebStandard_Testing_TestRunner.htm">
+      <HelpTOCNode Id="b62de9d1-0d42-4ec9-ae2a-6e25e78fb80c" Title="TestRunner Methods" Url="html/Methods_T_ZKWebStandard_Testing_TestRunner.htm">
         <HelpTOCNode Title="Run Method " Url="html/M_ZKWebStandard_Testing_TestRunner_Run.htm" />
         <HelpTOCNode Title="RunMethod Method " Url="html/M_ZKWebStandard_Testing_TestRunner_RunMethod.htm" />
         <HelpTOCNode Title="TriggerEvent(T) Method " Url="html/M_ZKWebStandard_Testing_TestRunner_TriggerEvent__1.htm" />
@@ -1021,45 +1021,45 @@
         <HelpTOCNode Title="WriteErrorMessage Method " Url="html/M_ZKWebStandard_Testing_TestRunner_WriteErrorMessage.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="341e513b-52b2-41c3-8acc-496adcbd10b5" Title="TestsAttribute Class" Url="html/T_ZKWebStandard_Testing_TestsAttribute.htm">
+    <HelpTOCNode Id="796559a6-ba58-41f0-afa5-647a147f6edb" Title="TestsAttribute Class" Url="html/T_ZKWebStandard_Testing_TestsAttribute.htm">
       <HelpTOCNode Title="TestsAttribute Constructor " Url="html/M_ZKWebStandard_Testing_TestsAttribute__ctor.htm" />
       <HelpTOCNode Title="TestsAttribute Methods" Url="html/Methods_T_ZKWebStandard_Testing_TestsAttribute.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ed002a3c-9e08-45bc-a3cc-a2625c78c351" Title="ZKWebStandard.Testing.Events" Url="html/N_ZKWebStandard_Testing_Events.htm">
-    <HelpTOCNode Id="62d97fef-3c54-4d43-aa74-4c24799d3966" Title="AllTestCompletedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm">
+  <HelpTOCNode Id="6eb923ae-9b81-42c8-aa61-786158a15a4d" Title="ZKWebStandard.Testing.Events" Url="html/N_ZKWebStandard_Testing_Events.htm">
+    <HelpTOCNode Id="406c8519-06a6-4db2-9d13-ad1fd7995263" Title="AllTestCompletedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm">
       <HelpTOCNode Title="AllTestCompletedInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_AllTestCompletedInfo__ctor.htm" />
-      <HelpTOCNode Id="d54d8b0d-e85b-422a-9374-b16df8fcbae4" Title="AllTestCompletedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm">
+      <HelpTOCNode Id="95ae0df0-2c57-492c-8e55-27383018736d" Title="AllTestCompletedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm">
         <HelpTOCNode Title="Counter Property " Url="html/P_ZKWebStandard_Testing_Events_AllTestCompletedInfo_Counter.htm" />
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_AllTestCompletedInfo_Runner.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="AllTestCompletedInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="6cbb3050-295c-46d9-9d6e-d5144e15c72e" Title="AllTestStartingInfo Class" Url="html/T_ZKWebStandard_Testing_Events_AllTestStartingInfo.htm">
+    <HelpTOCNode Id="362b76b6-7439-4e4e-bd7a-9e71a37a2e4f" Title="AllTestStartingInfo Class" Url="html/T_ZKWebStandard_Testing_Events_AllTestStartingInfo.htm">
       <HelpTOCNode Title="AllTestStartingInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_AllTestStartingInfo__ctor.htm" />
-      <HelpTOCNode Id="974a919b-90e8-470d-b65e-70f63c6085b4" Title="AllTestStartingInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_AllTestStartingInfo.htm">
+      <HelpTOCNode Id="5abe6c23-ef57-4bec-9b0a-b70dcd9f7c60" Title="AllTestStartingInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_AllTestStartingInfo.htm">
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_AllTestStartingInfo_Runner.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="AllTestStartingInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_AllTestStartingInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="0fba4d28-6d41-4edb-9abc-6628f3b94a7b" Title="DebugMessageInfo Class" Url="html/T_ZKWebStandard_Testing_Events_DebugMessageInfo.htm">
+    <HelpTOCNode Id="4d508f85-4dee-40c9-ba7f-bdf105c17aea" Title="DebugMessageInfo Class" Url="html/T_ZKWebStandard_Testing_Events_DebugMessageInfo.htm">
       <HelpTOCNode Title="DebugMessageInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_DebugMessageInfo__ctor.htm" />
-      <HelpTOCNode Id="74eb4e88-1757-4969-8dcd-92498c0cac58" Title="DebugMessageInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_DebugMessageInfo.htm">
+      <HelpTOCNode Id="c8b9f77e-6f99-47af-a097-48edbcb4cce9" Title="DebugMessageInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_DebugMessageInfo.htm">
         <HelpTOCNode Title="Message Property " Url="html/P_ZKWebStandard_Testing_Events_DebugMessageInfo_Message.htm" />
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_DebugMessageInfo_Runner.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="DebugMessageInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_DebugMessageInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="9358ecbf-d736-4d14-bbeb-25671bc492fa" Title="ErrorMessageInfo Class" Url="html/T_ZKWebStandard_Testing_Events_ErrorMessageInfo.htm">
+    <HelpTOCNode Id="e6544139-8c83-4201-befc-5f7189318962" Title="ErrorMessageInfo Class" Url="html/T_ZKWebStandard_Testing_Events_ErrorMessageInfo.htm">
       <HelpTOCNode Title="ErrorMessageInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_ErrorMessageInfo__ctor.htm" />
-      <HelpTOCNode Id="276d50da-3572-47bf-94e0-d1646e743333" Title="ErrorMessageInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_ErrorMessageInfo.htm">
+      <HelpTOCNode Id="7a9c6fa5-b9ad-4a15-98c0-1aabb0f05e38" Title="ErrorMessageInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_ErrorMessageInfo.htm">
         <HelpTOCNode Title="Message Property " Url="html/P_ZKWebStandard_Testing_Events_ErrorMessageInfo_Message.htm" />
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_ErrorMessageInfo_Runner.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="ErrorMessageInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_ErrorMessageInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="e92a6fa7-64aa-4d34-aad6-4f01fab7e0bb" Title="ITestEventHandler Interface" Url="html/T_ZKWebStandard_Testing_Events_ITestEventHandler.htm">
-      <HelpTOCNode Id="4c479ab7-6c0f-40a5-bf7f-1cb3a3151252" Title="ITestEventHandler Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_ITestEventHandler.htm">
+    <HelpTOCNode Id="41f694ea-e953-4c29-9358-29c089d0fefe" Title="ITestEventHandler Interface" Url="html/T_ZKWebStandard_Testing_Events_ITestEventHandler.htm">
+      <HelpTOCNode Id="23453672-4b22-4de0-835f-8cc7d9e32c0f" Title="ITestEventHandler Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_ITestEventHandler.htm">
         <HelpTOCNode Title="OnAllTestCompleted Method " Url="html/M_ZKWebStandard_Testing_Events_ITestEventHandler_OnAllTestCompleted.htm" />
         <HelpTOCNode Title="OnAllTestStarting Method " Url="html/M_ZKWebStandard_Testing_Events_ITestEventHandler_OnAllTestStarting.htm" />
         <HelpTOCNode Title="OnDebugMessage Method " Url="html/M_ZKWebStandard_Testing_Events_ITestEventHandler_OnDebugMessage.htm" />
@@ -1070,9 +1070,9 @@
         <HelpTOCNode Title="OnTestStarting Method " Url="html/M_ZKWebStandard_Testing_Events_ITestEventHandler_OnTestStarting.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="2963924c-a57f-4b02-84c1-43412f05c048" Title="TestFailedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestFailedInfo.htm">
+    <HelpTOCNode Id="3f14919e-62fe-4aac-a388-69e70aba6703" Title="TestFailedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestFailedInfo.htm">
       <HelpTOCNode Title="TestFailedInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_TestFailedInfo__ctor.htm" />
-      <HelpTOCNode Id="8de3f7ca-3c35-40a7-a14d-11826f502c79" Title="TestFailedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestFailedInfo.htm">
+      <HelpTOCNode Id="972ff9b5-97de-4e09-8904-5417b76d38e8" Title="TestFailedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestFailedInfo.htm">
         <HelpTOCNode Title="Exception Property " Url="html/P_ZKWebStandard_Testing_Events_TestFailedInfo_Exception.htm" />
         <HelpTOCNode Title="Instance Property " Url="html/P_ZKWebStandard_Testing_Events_TestFailedInfo_Instance.htm" />
         <HelpTOCNode Title="Method Property " Url="html/P_ZKWebStandard_Testing_Events_TestFailedInfo_Method.htm" />
@@ -1080,18 +1080,18 @@
       </HelpTOCNode>
       <HelpTOCNode Title="TestFailedInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_TestFailedInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="461d8ae8-ebb5-4b5c-bf48-4f01e3b0287f" Title="TestPassedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestPassedInfo.htm">
+    <HelpTOCNode Id="c6f04d08-a709-47c7-b71d-1bd69f6a6270" Title="TestPassedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestPassedInfo.htm">
       <HelpTOCNode Title="TestPassedInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_TestPassedInfo__ctor.htm" />
-      <HelpTOCNode Id="d7a99a12-ba61-41bf-be64-3bfee63b4ea6" Title="TestPassedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestPassedInfo.htm">
+      <HelpTOCNode Id="e6925c94-f68c-4ed5-9070-a31032343e93" Title="TestPassedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestPassedInfo.htm">
         <HelpTOCNode Title="Instance Property " Url="html/P_ZKWebStandard_Testing_Events_TestPassedInfo_Instance.htm" />
         <HelpTOCNode Title="Method Property " Url="html/P_ZKWebStandard_Testing_Events_TestPassedInfo_Method.htm" />
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_TestPassedInfo_Runner.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="TestPassedInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_TestPassedInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="4fb3530d-4779-411d-9856-15196a69ebae" Title="TestSkippedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestSkippedInfo.htm">
+    <HelpTOCNode Id="6764427b-f63b-49c2-a16a-71e63afbc890" Title="TestSkippedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestSkippedInfo.htm">
       <HelpTOCNode Title="TestSkippedInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_TestSkippedInfo__ctor.htm" />
-      <HelpTOCNode Id="74e51a46-afa5-4e08-92ca-65c88c5fbe0c" Title="TestSkippedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestSkippedInfo.htm">
+      <HelpTOCNode Id="0decd605-b1bf-48f8-b2f8-79754badc73c" Title="TestSkippedInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestSkippedInfo.htm">
         <HelpTOCNode Title="Exception Property " Url="html/P_ZKWebStandard_Testing_Events_TestSkippedInfo_Exception.htm" />
         <HelpTOCNode Title="Instance Property " Url="html/P_ZKWebStandard_Testing_Events_TestSkippedInfo_Instance.htm" />
         <HelpTOCNode Title="Method Property " Url="html/P_ZKWebStandard_Testing_Events_TestSkippedInfo_Method.htm" />
@@ -1099,9 +1099,9 @@
       </HelpTOCNode>
       <HelpTOCNode Title="TestSkippedInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_TestSkippedInfo.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="ef15a0f7-46c4-460c-ac38-55397e2eff48" Title="TestStartingInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestStartingInfo.htm">
+    <HelpTOCNode Id="309e0d9d-e296-4d4b-9dae-067156585259" Title="TestStartingInfo Class" Url="html/T_ZKWebStandard_Testing_Events_TestStartingInfo.htm">
       <HelpTOCNode Title="TestStartingInfo Constructor " Url="html/M_ZKWebStandard_Testing_Events_TestStartingInfo__ctor.htm" />
-      <HelpTOCNode Id="927fb266-4765-43c5-9dec-81d8023e037a" Title="TestStartingInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestStartingInfo.htm">
+      <HelpTOCNode Id="fb019c93-b6e3-48a4-924b-4fd0ccbd41da" Title="TestStartingInfo Properties" Url="html/Properties_T_ZKWebStandard_Testing_Events_TestStartingInfo.htm">
         <HelpTOCNode Title="Instance Property " Url="html/P_ZKWebStandard_Testing_Events_TestStartingInfo_Instance.htm" />
         <HelpTOCNode Title="Method Property " Url="html/P_ZKWebStandard_Testing_Events_TestStartingInfo_Method.htm" />
         <HelpTOCNode Title="Runner Property " Url="html/P_ZKWebStandard_Testing_Events_TestStartingInfo_Runner.htm" />
@@ -1109,19 +1109,19 @@
       <HelpTOCNode Title="TestStartingInfo Methods" Url="html/Methods_T_ZKWebStandard_Testing_Events_TestStartingInfo.htm" />
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="6672fb4e-ecb7-4f44-ba4d-ec1709976cdc" Title="ZKWebStandard.Utils" Url="html/N_ZKWebStandard_Utils.htm">
-    <HelpTOCNode Id="f7516589-0749-41cc-abe9-45c5596c3988" Title="ExpressionUtils Class" Url="html/T_ZKWebStandard_Utils_ExpressionUtils.htm">
-      <HelpTOCNode Id="b99aa63b-7eca-4a9a-b38d-cd5c4cf4a2b6" Title="ExpressionUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_ExpressionUtils.htm">
+  <HelpTOCNode Id="89107802-79d2-42bf-87ba-5e66380a7633" Title="ZKWebStandard.Utils" Url="html/N_ZKWebStandard_Utils.htm">
+    <HelpTOCNode Id="c9536bd4-b4e8-441c-bc31-b343dc846b11" Title="ExpressionUtils Class" Url="html/T_ZKWebStandard_Utils_ExpressionUtils.htm">
+      <HelpTOCNode Id="13332135-0078-4fde-bf53-c7092281b0b9" Title="ExpressionUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_ExpressionUtils.htm">
         <HelpTOCNode Title="MakeMemberEqualiventExpression(TData) Method " Url="html/M_ZKWebStandard_Utils_ExpressionUtils_MakeMemberEqualiventExpression__1.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d9b67468-65a3-4c4e-a794-567ae105ebf1" Title="FileUtils Class" Url="html/T_ZKWebStandard_Utils_FileUtils.htm">
-      <HelpTOCNode Id="46fdc364-291c-48c7-b0a2-0fb9cbd53ab9" Title="FileUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_FileUtils.htm">
+    <HelpTOCNode Id="fe0129d0-d6c9-44dc-ac43-0e449cecada0" Title="FileUtils Class" Url="html/T_ZKWebStandard_Utils_FileUtils.htm">
+      <HelpTOCNode Id="239ec0b3-4a19-463c-87a3-2a6759b36468" Title="FileUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_FileUtils.htm">
         <HelpTOCNode Title="GetSizeDisplayName Method " Url="html/M_ZKWebStandard_Utils_FileUtils_GetSizeDisplayName.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="39a052af-4001-4934-ab4d-76984002b69c" Title="HttpUtils Class" Url="html/T_ZKWebStandard_Utils_HttpUtils.htm">
-      <HelpTOCNode Id="3484442c-6eee-4683-928d-3438cb5e39d5" Title="HttpUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_HttpUtils.htm">
+    <HelpTOCNode Id="d80349b5-3b8a-4073-a5df-54728d8bb17e" Title="HttpUtils Class" Url="html/T_ZKWebStandard_Utils_HttpUtils.htm">
+      <HelpTOCNode Id="794f5a48-d52e-42f9-a022-3cfbb94f43e7" Title="HttpUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_HttpUtils.htm">
         <HelpTOCNode Title="BuildQueryString Method " Url="html/M_ZKWebStandard_Utils_HttpUtils_BuildQueryString.htm" />
         <HelpTOCNode Title="HtmlDecode Method " Url="html/M_ZKWebStandard_Utils_HttpUtils_HtmlDecode.htm" />
         <HelpTOCNode Title="HtmlEncode Method " Url="html/M_ZKWebStandard_Utils_HttpUtils_HtmlEncode.htm" />
@@ -1131,65 +1131,65 @@
         <HelpTOCNode Title="UrlEncode Method " Url="html/M_ZKWebStandard_Utils_HttpUtils_UrlEncode.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="79de79bb-a539-4e4e-96ff-44c4f476e20c" Title="ITreeNode(T) Interface" Url="html/T_ZKWebStandard_Utils_ITreeNode_1.htm">
-      <HelpTOCNode Id="83a8e700-a459-4ec8-94bf-80f59c3bfc81" Title="ITreeNode(T) Properties" Url="html/Properties_T_ZKWebStandard_Utils_ITreeNode_1.htm">
+    <HelpTOCNode Id="79ff79ca-678c-4c9e-bef5-7bad4b6317a0" Title="ITreeNode(T) Interface" Url="html/T_ZKWebStandard_Utils_ITreeNode_1.htm">
+      <HelpTOCNode Id="f6178912-596c-429d-b256-36b52be2e511" Title="ITreeNode(T) Properties" Url="html/Properties_T_ZKWebStandard_Utils_ITreeNode_1.htm">
         <HelpTOCNode Title="Childs Property " Url="html/P_ZKWebStandard_Utils_ITreeNode_1_Childs.htm" />
         <HelpTOCNode Title="Parent Property " Url="html/P_ZKWebStandard_Utils_ITreeNode_1_Parent.htm" />
         <HelpTOCNode Title="Value Property " Url="html/P_ZKWebStandard_Utils_ITreeNode_1_Value.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="6d536846-fd5d-49a2-a592-49f22d0db5df" Title="ITreeNode(T) Methods" Url="html/Methods_T_ZKWebStandard_Utils_ITreeNode_1.htm">
+      <HelpTOCNode Id="ebd6f26d-4e6e-4cb8-a993-86992758cc34" Title="ITreeNode(T) Methods" Url="html/Methods_T_ZKWebStandard_Utils_ITreeNode_1.htm">
         <HelpTOCNode Title="AddChildNode Method " Url="html/M_ZKWebStandard_Utils_ITreeNode_1_AddChildNode.htm" />
         <HelpTOCNode Title="RemoveChildNode Method " Url="html/M_ZKWebStandard_Utils_ITreeNode_1_RemoveChildNode.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="e44e02b9-47f3-47a9-a904-c8ad6449cd5d" Title="LocaleUtils Class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm">
-      <HelpTOCNode Id="4f49143b-8fda-4948-a1ae-1df73c8ed7d5" Title="LocaleUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_LocaleUtils.htm">
+    <HelpTOCNode Id="f5065d17-e3ce-4bfe-a5d6-839b79018abe" Title="LocaleUtils Class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm">
+      <HelpTOCNode Id="028b03d0-faa9-4b3d-b797-48889be72d3d" Title="LocaleUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_LocaleUtils.htm">
         <HelpTOCNode Title="SetThreadLanguage Method " Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadLanguage.htm" />
         <HelpTOCNode Title="SetThreadLanguageAutomatic Method " Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadLanguageAutomatic.htm" />
         <HelpTOCNode Title="SetThreadTimezone Method " Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadTimezone.htm" />
         <HelpTOCNode Title="SetThreadTimezoneAutomatic Method " Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadTimezoneAutomatic.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="16a53889-a1c3-4230-a076-4757dffcb022" Title="LocaleUtils Fields" Url="html/Fields_T_ZKWebStandard_Utils_LocaleUtils.htm">
+      <HelpTOCNode Id="35805139-a24f-4789-a9fe-e6b07e10f19e" Title="LocaleUtils Fields" Url="html/Fields_T_ZKWebStandard_Utils_LocaleUtils.htm">
         <HelpTOCNode Title="LanguageKey Field" Url="html/F_ZKWebStandard_Utils_LocaleUtils_LanguageKey.htm" />
         <HelpTOCNode Title="TimeZoneKey Field" Url="html/F_ZKWebStandard_Utils_LocaleUtils_TimeZoneKey.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ae13f173-aabc-4e2c-9628-31dbbf3857b3" Title="MimeUtils Class" Url="html/T_ZKWebStandard_Utils_MimeUtils.htm">
-      <HelpTOCNode Id="14af3e9b-359a-4948-9ea8-9b318719ba18" Title="MimeUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_MimeUtils.htm">
+    <HelpTOCNode Id="bc9ccd18-9a85-4a28-b01c-941d51c6f3f5" Title="MimeUtils Class" Url="html/T_ZKWebStandard_Utils_MimeUtils.htm">
+      <HelpTOCNode Id="a7fcc512-66e3-46b4-a985-98e45cb7775a" Title="MimeUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_MimeUtils.htm">
         <HelpTOCNode Title="GetMimeType Method " Url="html/M_ZKWebStandard_Utils_MimeUtils_GetMimeType.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="PasswordHashType Enumeration" Url="html/T_ZKWebStandard_Utils_PasswordHashType.htm" />
-    <HelpTOCNode Id="0414b624-860c-432d-b42d-6864a9015623" Title="PasswordInfo Class" Url="html/T_ZKWebStandard_Utils_PasswordInfo.htm">
+    <HelpTOCNode Id="35624356-6a83-49f9-afa1-1749f454172a" Title="PasswordInfo Class" Url="html/T_ZKWebStandard_Utils_PasswordInfo.htm">
       <HelpTOCNode Title="PasswordInfo Constructor " Url="html/M_ZKWebStandard_Utils_PasswordInfo__ctor.htm" />
-      <HelpTOCNode Id="0f9087f5-36f7-47e1-ab3d-1385bc71f108" Title="PasswordInfo Properties" Url="html/Properties_T_ZKWebStandard_Utils_PasswordInfo.htm">
+      <HelpTOCNode Id="b36161b9-d25a-4111-9eb0-2739eb65f819" Title="PasswordInfo Properties" Url="html/Properties_T_ZKWebStandard_Utils_PasswordInfo.htm">
         <HelpTOCNode Title="Hash Property " Url="html/P_ZKWebStandard_Utils_PasswordInfo_Hash.htm" />
         <HelpTOCNode Title="Slat Property " Url="html/P_ZKWebStandard_Utils_PasswordInfo_Slat.htm" />
         <HelpTOCNode Title="Type Property " Url="html/P_ZKWebStandard_Utils_PasswordInfo_Type.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a9c54e8a-f8b2-45bb-9419-e0f9dc624c11" Title="PasswordInfo Methods" Url="html/Methods_T_ZKWebStandard_Utils_PasswordInfo.htm">
+      <HelpTOCNode Id="638562a1-117d-4eeb-abff-caee8d402a3e" Title="PasswordInfo Methods" Url="html/Methods_T_ZKWebStandard_Utils_PasswordInfo.htm">
         <HelpTOCNode Title="Check Method " Url="html/M_ZKWebStandard_Utils_PasswordInfo_Check.htm" />
         <HelpTOCNode Title="FromPassword Method " Url="html/M_ZKWebStandard_Utils_PasswordInfo_FromPassword.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="ab604a85-bb59-4cfb-9ffa-6c6706fd25b7" Title="PasswordUtils Class" Url="html/T_ZKWebStandard_Utils_PasswordUtils.htm">
-      <HelpTOCNode Id="900bd2af-cfae-4b31-a59e-127ef7bf362f" Title="PasswordUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_PasswordUtils.htm">
+    <HelpTOCNode Id="45013aed-8dc6-4231-b501-5137cabfa6c8" Title="PasswordUtils Class" Url="html/T_ZKWebStandard_Utils_PasswordUtils.htm">
+      <HelpTOCNode Id="a763ce57-8c77-4181-aa80-96d0a2ba9e64" Title="PasswordUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_PasswordUtils.htm">
         <HelpTOCNode Title="Md5Sum Method " Url="html/M_ZKWebStandard_Utils_PasswordUtils_Md5Sum.htm" />
         <HelpTOCNode Title="PBKDF2Sum Method " Url="html/M_ZKWebStandard_Utils_PasswordUtils_PBKDF2Sum.htm" />
         <HelpTOCNode Title="Sha1Sum Method " Url="html/M_ZKWebStandard_Utils_PasswordUtils_Sha1Sum.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="079f075d-8ea9-44ac-96c4-b122d1e5ada4" Title="PathUtils Class" Url="html/T_ZKWebStandard_Utils_PathUtils.htm">
-      <HelpTOCNode Id="f06b597f-b3fb-4a92-a673-c3923bec56e4" Title="PathUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_PathUtils.htm">
+    <HelpTOCNode Id="6b34dd92-4ae0-48ce-93a1-775a47fd214a" Title="PathUtils Class" Url="html/T_ZKWebStandard_Utils_PathUtils.htm">
+      <HelpTOCNode Id="07fd41ab-3390-4eee-9de4-ad6d7a14d521" Title="PathUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_PathUtils.htm">
         <HelpTOCNode Title="EnsureParentDirectory Method " Url="html/M_ZKWebStandard_Utils_PathUtils_EnsureParentDirectory.htm" />
         <HelpTOCNode Title="SecureCombine Method " Url="html/M_ZKWebStandard_Utils_PathUtils_SecureCombine.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0f346b24-b818-4a0e-80a5-31344ad277c7" Title="RandomUtils Class" Url="html/T_ZKWebStandard_Utils_RandomUtils.htm">
-      <HelpTOCNode Id="27cc7b94-e77e-46b8-8fbd-8dad618bb913" Title="RandomUtils Properties" Url="html/Properties_T_ZKWebStandard_Utils_RandomUtils.htm">
+    <HelpTOCNode Id="46c17356-80d5-4705-a568-68dcfd81538d" Title="RandomUtils Class" Url="html/T_ZKWebStandard_Utils_RandomUtils.htm">
+      <HelpTOCNode Id="678dc91a-8632-4f23-8c86-23fda38d6d20" Title="RandomUtils Properties" Url="html/Properties_T_ZKWebStandard_Utils_RandomUtils.htm">
         <HelpTOCNode Title="Generator Property " Url="html/P_ZKWebStandard_Utils_RandomUtils_Generator.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="210074c0-d7e3-463d-80d1-5b2b2357ded9" Title="RandomUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_RandomUtils.htm">
+      <HelpTOCNode Id="c65ca3e5-1cef-4595-9489-4b4975c716f0" Title="RandomUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_RandomUtils.htm">
         <HelpTOCNode Title="RandomEnum(TEnum) Method " Url="html/M_ZKWebStandard_Utils_RandomUtils_RandomEnum__1.htm" />
         <HelpTOCNode Title="RandomInt Method " Url="html/M_ZKWebStandard_Utils_RandomUtils_RandomInt.htm" />
         <HelpTOCNode Title="RandomSelection(T) Method " Url="html/M_ZKWebStandard_Utils_RandomUtils_RandomSelection__1.htm" />
@@ -1198,15 +1198,15 @@
         <HelpTOCNode Title="SystemRandomInt Method " Url="html/M_ZKWebStandard_Utils_RandomUtils_SystemRandomInt.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d930b314-9349-4b66-8265-76b8800bfbb8" Title="ReflectionUtils Class" Url="html/T_ZKWebStandard_Utils_ReflectionUtils.htm">
-      <HelpTOCNode Id="0ff9e542-774e-43cf-b274-dbc80f6d2355" Title="ReflectionUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_ReflectionUtils.htm">
+    <HelpTOCNode Id="1c71e99c-5b64-43fc-969c-f36dbc0380d6" Title="ReflectionUtils Class" Url="html/T_ZKWebStandard_Utils_ReflectionUtils.htm">
+      <HelpTOCNode Id="6a7626a8-235b-4350-bc8b-206a70c7a8f6" Title="ReflectionUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_ReflectionUtils.htm">
         <HelpTOCNode Title="MakeGetter(T, M) Method " Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeGetter__2.htm" />
         <HelpTOCNode Title="MakeSetter(T, M) Method " Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeSetter__2.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
     <HelpTOCNode Title="RegexUtils Class" Url="html/T_ZKWebStandard_Utils_RegexUtils.htm" />
-    <HelpTOCNode Id="db26e395-3e58-4e48-8f55-22f70b7142c2" Title="RegexUtils.Expressions Class" Url="html/T_ZKWebStandard_Utils_RegexUtils_Expressions.htm">
-      <HelpTOCNode Id="ab11a020-2a1e-474f-a2f9-90465bc32419" Title="Expressions Fields" Url="html/Fields_T_ZKWebStandard_Utils_RegexUtils_Expressions.htm">
+    <HelpTOCNode Id="6b93ddff-6e0b-4bf4-9f32-994b1afa0a77" Title="RegexUtils.Expressions Class" Url="html/T_ZKWebStandard_Utils_RegexUtils_Expressions.htm">
+      <HelpTOCNode Id="ef03bec7-21a9-41ea-965d-57d916410495" Title="Expressions Fields" Url="html/Fields_T_ZKWebStandard_Utils_RegexUtils_Expressions.htm">
         <HelpTOCNode Title="ChinaMobile Field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_ChinaMobile.htm" />
         <HelpTOCNode Title="Decimal Field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Decimal.htm" />
         <HelpTOCNode Title="Digits Field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Digits.htm" />
@@ -1214,8 +1214,8 @@
         <HelpTOCNode Title="Tel Field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Tel.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a92133dc-0e07-411b-8e9d-1b1c2ef9519b" Title="RegexUtils.Validators Class" Url="html/T_ZKWebStandard_Utils_RegexUtils_Validators.htm">
-      <HelpTOCNode Id="2a4009b2-0d80-4f3e-b437-ed6fc21c5df6" Title="Validators Properties" Url="html/Properties_T_ZKWebStandard_Utils_RegexUtils_Validators.htm">
+    <HelpTOCNode Id="e94014a6-8168-4e28-87d7-be29030cce02" Title="RegexUtils.Validators Class" Url="html/T_ZKWebStandard_Utils_RegexUtils_Validators.htm">
+      <HelpTOCNode Id="3ae046a4-bc01-456b-aa50-14168d0de164" Title="Validators Properties" Url="html/Properties_T_ZKWebStandard_Utils_RegexUtils_Validators.htm">
         <HelpTOCNode Title="ChinaMobile Property " Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_ChinaMobile.htm" />
         <HelpTOCNode Title="Decimal Property " Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Decimal.htm" />
         <HelpTOCNode Title="Digits Property " Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Digits.htm" />
@@ -1223,22 +1223,22 @@
         <HelpTOCNode Title="Tel Property " Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Tel.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="18239655-8dfb-4e4d-8c2c-f6d577be5ce5" Title="SystemUtils Class" Url="html/T_ZKWebStandard_Utils_SystemUtils.htm">
-      <HelpTOCNode Id="0120819d-b2c2-4d85-8c33-7c3e793338e1" Title="SystemUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_SystemUtils.htm">
+    <HelpTOCNode Id="c73f7816-9158-4dbb-a628-f97b9c577609" Title="SystemUtils Class" Url="html/T_ZKWebStandard_Utils_SystemUtils.htm">
+      <HelpTOCNode Id="74c7c93f-c0b3-4095-99e7-0e8d9e053605" Title="SystemUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_SystemUtils.htm">
         <HelpTOCNode Title="GetUsedMemoryBytes Method " Url="html/M_ZKWebStandard_Utils_SystemUtils_GetUsedMemoryBytes.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="8a1e0585-871f-42d0-b408-f2e65aaddb8a" Title="TreeUtils Class" Url="html/T_ZKWebStandard_Utils_TreeUtils.htm">
-      <HelpTOCNode Id="45c98ee6-fe91-4395-9955-3ccb9a986c69" Title="TreeUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_TreeUtils.htm">
+    <HelpTOCNode Id="ff700b0e-23e0-494b-a7a9-7d8fd60ddc83" Title="TreeUtils Class" Url="html/T_ZKWebStandard_Utils_TreeUtils.htm">
+      <HelpTOCNode Id="490b2fe1-fdbe-4b84-89ba-2aba8388ee72" Title="TreeUtils Methods" Url="html/Methods_T_ZKWebStandard_Utils_TreeUtils.htm">
         <HelpTOCNode Title="CreateTree(T, TValue) Method " Url="html/M_ZKWebStandard_Utils_TreeUtils_CreateTree__2.htm" />
         <HelpTOCNode Title="Transform(T, U) Method " Url="html/M_ZKWebStandard_Utils_TreeUtils_Transform__2.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="7b0984cb-04e2-405b-9fad-3b58569ba595" Title="ZKWebStandard.Web" Url="html/N_ZKWebStandard_Web.htm">
-    <HelpTOCNode Id="cd8ccd15-3bb5-446e-b178-e792dd4fad8a" Title="HttpCookieOptions Class" Url="html/T_ZKWebStandard_Web_HttpCookieOptions.htm">
+  <HelpTOCNode Id="57a527f9-4032-4104-92ce-3813ce9513e9" Title="ZKWebStandard.Web" Url="html/N_ZKWebStandard_Web.htm">
+    <HelpTOCNode Id="8310471a-a4ed-48de-b35b-59247f0ed54a" Title="HttpCookieOptions Class" Url="html/T_ZKWebStandard_Web_HttpCookieOptions.htm">
       <HelpTOCNode Title="HttpCookieOptions Constructor " Url="html/M_ZKWebStandard_Web_HttpCookieOptions__ctor.htm" />
-      <HelpTOCNode Id="4674793d-c866-45c4-87ef-3378dd49362b" Title="HttpCookieOptions Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpCookieOptions.htm">
+      <HelpTOCNode Id="0fb8a1c4-93f7-41e0-a47c-edbd48c934ea" Title="HttpCookieOptions Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpCookieOptions.htm">
         <HelpTOCNode Title="Domain Property " Url="html/P_ZKWebStandard_Web_HttpCookieOptions_Domain.htm" />
         <HelpTOCNode Title="Expires Property " Url="html/P_ZKWebStandard_Web_HttpCookieOptions_Expires.htm" />
         <HelpTOCNode Title="HttpOnly Property " Url="html/P_ZKWebStandard_Web_HttpCookieOptions_HttpOnly.htm" />
@@ -1247,45 +1247,45 @@
       </HelpTOCNode>
       <HelpTOCNode Title="HttpCookieOptions Methods" Url="html/Methods_T_ZKWebStandard_Web_HttpCookieOptions.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="eb556a76-567b-463c-9e25-73f6dd7b9b5d" Title="HttpException Class" Url="html/T_ZKWebStandard_Web_HttpException.htm">
+    <HelpTOCNode Id="8b20c30f-8a65-407a-9409-221ca9d6a535" Title="HttpException Class" Url="html/T_ZKWebStandard_Web_HttpException.htm">
       <HelpTOCNode Title="HttpException Constructor " Url="html/M_ZKWebStandard_Web_HttpException__ctor.htm" />
-      <HelpTOCNode Id="d668c6c1-567b-4c40-8c82-02ab2d12ebb7" Title="HttpException Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpException.htm">
+      <HelpTOCNode Id="68c1e1b6-667a-48ef-ac21-effde4473cc5" Title="HttpException Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpException.htm">
         <HelpTOCNode Title="StatusCode Property " Url="html/P_ZKWebStandard_Web_HttpException_StatusCode.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="HttpException Methods" Url="html/Methods_T_ZKWebStandard_Web_HttpException.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="180072fc-a3dd-40d2-bc8f-c9a869e658c5" Title="HttpManager Class" Url="html/T_ZKWebStandard_Web_HttpManager.htm">
-      <HelpTOCNode Id="face8055-dd64-4f1a-9558-fd50716ab865" Title="HttpManager Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpManager.htm">
+    <HelpTOCNode Id="efd53329-7531-478c-abd9-63f0c0b530fb" Title="HttpManager Class" Url="html/T_ZKWebStandard_Web_HttpManager.htm">
+      <HelpTOCNode Id="c0eb480b-448e-46ad-8ada-5e67bb9cd94a" Title="HttpManager Properties" Url="html/Properties_T_ZKWebStandard_Web_HttpManager.htm">
         <HelpTOCNode Title="CurrentContext Property " Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContext.htm" />
         <HelpTOCNode Title="CurrentContextExists Property " Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContextExists.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="a96bcc4c-6b83-4d37-b8ad-915fd16cafb5" Title="HttpManager Methods" Url="html/Methods_T_ZKWebStandard_Web_HttpManager.htm">
-        <HelpTOCNode Id="22d5737a-81ec-493d-be7b-4ea40a8a0872" Title="OverrideContext Method " Url="html/Overload_ZKWebStandard_Web_HttpManager_OverrideContext.htm">
+      <HelpTOCNode Id="f5e38cdc-b716-47fe-b6ea-3911a7dcaa03" Title="HttpManager Methods" Url="html/Methods_T_ZKWebStandard_Web_HttpManager.htm">
+        <HelpTOCNode Id="bd57351f-7fa3-4393-9c0b-7cb173d685cc" Title="OverrideContext Method " Url="html/Overload_ZKWebStandard_Web_HttpManager_OverrideContext.htm">
           <HelpTOCNode Title="OverrideContext Method (IHttpContext)" Url="html/M_ZKWebStandard_Web_HttpManager_OverrideContext_1.htm" />
           <HelpTOCNode Title="OverrideContext Method (String, String)" Url="html/M_ZKWebStandard_Web_HttpManager_OverrideContext.htm" />
         </HelpTOCNode>
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="20a06bea-1866-44cc-8e7b-428742592823" Title="IHttpContext Interface" Url="html/T_ZKWebStandard_Web_IHttpContext.htm">
-      <HelpTOCNode Id="830f92af-fe3e-4a6a-bbcd-f94907376884" Title="IHttpContext Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpContext.htm">
+    <HelpTOCNode Id="4954ff1d-38ee-42be-b2f3-d4c8c59feb83" Title="IHttpContext Interface" Url="html/T_ZKWebStandard_Web_IHttpContext.htm">
+      <HelpTOCNode Id="bcda1463-4a4a-4b34-bab4-f3a6c837466b" Title="IHttpContext Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpContext.htm">
         <HelpTOCNode Title="Items Property " Url="html/P_ZKWebStandard_Web_IHttpContext_Items.htm" />
         <HelpTOCNode Title="Request Property " Url="html/P_ZKWebStandard_Web_IHttpContext_Request.htm" />
         <HelpTOCNode Title="Response Property " Url="html/P_ZKWebStandard_Web_IHttpContext_Response.htm" />
       </HelpTOCNode>
       <HelpTOCNode Title="IHttpContext Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpContext.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="c57f8afd-68e5-47b2-9d55-65e2e3d57e63" Title="IHttpPostedFile Interface" Url="html/T_ZKWebStandard_Web_IHttpPostedFile.htm">
-      <HelpTOCNode Id="60febcd3-f2b2-4178-9d48-8cd80cbbb1db" Title="IHttpPostedFile Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpPostedFile.htm">
+    <HelpTOCNode Id="63777d53-f375-4378-acd7-a8e1a5751a7c" Title="IHttpPostedFile Interface" Url="html/T_ZKWebStandard_Web_IHttpPostedFile.htm">
+      <HelpTOCNode Id="6c9e5a4f-dc49-4059-93bc-7e25637f0d05" Title="IHttpPostedFile Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpPostedFile.htm">
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_ContentType.htm" />
         <HelpTOCNode Title="FileName Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_FileName.htm" />
         <HelpTOCNode Title="Length Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_Length.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fa1b63c6-cb94-4c75-9b8a-bcac8c1f8795" Title="IHttpPostedFile Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpPostedFile.htm">
+      <HelpTOCNode Id="bb514130-23ff-46e8-a402-23b29df4dbb9" Title="IHttpPostedFile Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpPostedFile.htm">
         <HelpTOCNode Title="OpenReadStream Method " Url="html/M_ZKWebStandard_Web_IHttpPostedFile_OpenReadStream.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="f5650c4a-08f5-421c-8325-a51b314bcdbf" Title="IHttpRequest Interface" Url="html/T_ZKWebStandard_Web_IHttpRequest.htm">
-      <HelpTOCNode Id="1c05519d-afc7-4249-9dff-644e8185a3c6" Title="IHttpRequest Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpRequest.htm">
+    <HelpTOCNode Id="b47b12aa-54c0-4f5d-90b1-65b8715cb8f9" Title="IHttpRequest Interface" Url="html/T_ZKWebStandard_Web_IHttpRequest.htm">
+      <HelpTOCNode Id="56266565-d60b-4b01-a7a4-9f578ece70af" Title="IHttpRequest Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpRequest.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_Body.htm" />
         <HelpTOCNode Title="ContentLength Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_ContentLength.htm" />
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_ContentType.htm" />
@@ -1300,7 +1300,7 @@
         <HelpTOCNode Title="RemotePort Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_RemotePort.htm" />
         <HelpTOCNode Title="Scheme Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_Scheme.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="fb720a61-0f96-426b-a452-aa8c430eedb3" Title="IHttpRequest Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpRequest.htm">
+      <HelpTOCNode Id="2d51f5b8-b001-463e-a09b-f04ab5c1f662" Title="IHttpRequest Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpRequest.htm">
         <HelpTOCNode Title="GetCookie Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetCookie.htm" />
         <HelpTOCNode Title="GetCookies Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetCookies.htm" />
         <HelpTOCNode Title="GetFormValue Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetFormValue.htm" />
@@ -1313,14 +1313,14 @@
         <HelpTOCNode Title="GetQueryValues Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetQueryValues.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="5d8f21ac-9be5-43e9-9e78-ed479675ad9f" Title="IHttpResponse Interface" Url="html/T_ZKWebStandard_Web_IHttpResponse.htm">
-      <HelpTOCNode Id="db309e75-9105-47ad-bfeb-1a28605fd8d2" Title="IHttpResponse Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpResponse.htm">
+    <HelpTOCNode Id="6fe4ffef-512c-49d7-ad6f-d669658b119b" Title="IHttpResponse Interface" Url="html/T_ZKWebStandard_Web_IHttpResponse.htm">
+      <HelpTOCNode Id="e3b5ce48-7eb5-4015-af09-64142dd945ec" Title="IHttpResponse Properties" Url="html/Properties_T_ZKWebStandard_Web_IHttpResponse.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_Body.htm" />
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_ContentType.htm" />
         <HelpTOCNode Title="HttpContext Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_HttpContext.htm" />
         <HelpTOCNode Title="StatusCode Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_StatusCode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="942c41f5-55bf-403c-b933-a84c0843cea9" Title="IHttpResponse Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpResponse.htm">
+      <HelpTOCNode Id="6402e7df-4bfd-4174-bce8-face16ab9c63" Title="IHttpResponse Methods" Url="html/Methods_T_ZKWebStandard_Web_IHttpResponse.htm">
         <HelpTOCNode Title="AddHeader Method " Url="html/M_ZKWebStandard_Web_IHttpResponse_AddHeader.htm" />
         <HelpTOCNode Title="End Method " Url="html/M_ZKWebStandard_Web_IHttpResponse_End.htm" />
         <HelpTOCNode Title="Redirect Method " Url="html/M_ZKWebStandard_Web_IHttpResponse_Redirect.htm" />
@@ -1328,13 +1328,13 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="ac83982b-d739-4b33-a59c-9d318df2ffaa" Title="ZKWebStandard.Web.Mock" Url="html/N_ZKWebStandard_Web_Mock.htm">
-    <HelpTOCNode Id="ec0fb5d3-4fcc-48f0-8a83-bd524c01eb53" Title="HttpContextMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpContextMock.htm">
-      <HelpTOCNode Id="096f4849-14f7-4f4c-ba9c-75f884b7cac3" Title="HttpContextMock Constructor " Url="html/Overload_ZKWebStandard_Web_Mock_HttpContextMock__ctor.htm">
+  <HelpTOCNode Id="a8970cf7-1cb6-4250-8814-badcaa796ba6" Title="ZKWebStandard.Web.Mock" Url="html/N_ZKWebStandard_Web_Mock.htm">
+    <HelpTOCNode Id="9210fe8d-d77b-4209-a838-1dc132530789" Title="HttpContextMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpContextMock.htm">
+      <HelpTOCNode Id="517bdf2a-34d6-4daa-8e77-3d288cc49030" Title="HttpContextMock Constructor " Url="html/Overload_ZKWebStandard_Web_Mock_HttpContextMock__ctor.htm">
         <HelpTOCNode Title="HttpContextMock Constructor " Url="html/M_ZKWebStandard_Web_Mock_HttpContextMock__ctor.htm" />
         <HelpTOCNode Title="HttpContextMock Constructor (String, String)" Url="html/M_ZKWebStandard_Web_Mock_HttpContextMock__ctor_1.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="afb00ab7-2c4e-430a-8bed-c1e40be519b6" Title="HttpContextMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpContextMock.htm">
+      <HelpTOCNode Id="d8e9fc22-af0f-4d6d-82ce-e69b2b7c0bc1" Title="HttpContextMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpContextMock.htm">
         <HelpTOCNode Title="Items Property " Url="html/P_ZKWebStandard_Web_Mock_HttpContextMock_items.htm" />
         <HelpTOCNode Title="P:ZKWebStandard.Web.Mock.HttpContextMock.Items" Url="" />
         <HelpTOCNode Title="Request Property " Url="html/P_ZKWebStandard_Web_Mock_HttpContextMock_request.htm" />
@@ -1344,9 +1344,9 @@
       </HelpTOCNode>
       <HelpTOCNode Title="HttpContextMock Methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpContextMock.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="ecf13513-0fc1-4ba0-8e3c-92bcb8140156" Title="HttpRequestMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
+    <HelpTOCNode Id="287841e5-7043-4ec9-8892-9e002e4c18f2" Title="HttpRequestMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
       <HelpTOCNode Title="HttpRequestMock Constructor " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock__ctor.htm" />
-      <HelpTOCNode Id="8fe59aa8-98eb-4dad-aada-504cb92fe41c" Title="HttpRequestMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
+      <HelpTOCNode Id="b99c234d-6068-4bff-a97f-95e8d56f70b5" Title="HttpRequestMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_body.htm" />
         <HelpTOCNode Title="P:ZKWebStandard.Web.Mock.HttpRequestMock.Body" Url="" />
         <HelpTOCNode Title="ContentLength Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_contentLength.htm" />
@@ -1379,7 +1379,7 @@
         <HelpTOCNode Title="Scheme Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_scheme.htm" />
         <HelpTOCNode Title="P:ZKWebStandard.Web.Mock.HttpRequestMock.Scheme" Url="" />
       </HelpTOCNode>
-      <HelpTOCNode Id="d7892445-2342-476c-ab63-70bf0ac34eb2" Title="HttpRequestMock Methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
+      <HelpTOCNode Id="decb1b4f-5e62-4877-bc24-524d7a4c23d0" Title="HttpRequestMock Methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpRequestMock.htm">
         <HelpTOCNode Title="GetCookie Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetCookie.htm" />
         <HelpTOCNode Title="GetCookies Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetCookies.htm" />
         <HelpTOCNode Title="GetFormValue Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetFormValue.htm" />
@@ -1392,9 +1392,9 @@
         <HelpTOCNode Title="GetQueryValues Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetQueryValues.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="0892801a-49eb-4912-8df6-7104c7047900" Title="HttpResponseMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
+    <HelpTOCNode Id="2c5bce20-a16c-41e6-a5ee-ccb3a87e38a4" Title="HttpResponseMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
       <HelpTOCNode Title="HttpResponseMock Constructor " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock__ctor.htm" />
-      <HelpTOCNode Id="a143062a-26a1-4f04-b456-d28d2c2abc0d" Title="HttpResponseMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
+      <HelpTOCNode Id="aef04676-3b4c-4cbe-a494-0123c0a6bcd0" Title="HttpResponseMock Properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_body.htm" />
         <HelpTOCNode Title="P:ZKWebStandard.Web.Mock.HttpResponseMock.Body" Url="" />
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_ContentType.htm" />
@@ -1407,7 +1407,7 @@
         <HelpTOCNode Title="lastRedirectIsPermanent Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_lastRedirectIsPermanent.htm" />
         <HelpTOCNode Title="StatusCode Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_StatusCode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="bee2ae65-1cd2-44f6-bda9-908bb212cd60" Title="HttpResponseMock Methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
+      <HelpTOCNode Id="fe3bd96f-43e8-467d-887a-330d08969486" Title="HttpResponseMock Methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">
         <HelpTOCNode Title="AddHeader Method " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_AddHeader.htm" />
         <HelpTOCNode Title="End Method " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_End.htm" />
         <HelpTOCNode Title="GetContentsFromBody Method " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_GetContentsFromBody.htm" />
@@ -1416,10 +1416,10 @@
       </HelpTOCNode>
     </HelpTOCNode>
   </HelpTOCNode>
-  <HelpTOCNode Id="c8d407f8-bcb1-4a10-bc58-7a6ccd1e4976" Title="ZKWebStandard.Web.Wrappers" Url="html/N_ZKWebStandard_Web_Wrappers.htm">
-    <HelpTOCNode Id="f2266933-df5f-425d-b1e9-a33b424eb916" Title="HttpContextWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpContextWrapper.htm">
+  <HelpTOCNode Id="565382bc-76d2-445e-8f8a-5c394db41996" Title="ZKWebStandard.Web.Wrappers" Url="html/N_ZKWebStandard_Web_Wrappers.htm">
+    <HelpTOCNode Id="a674b30b-3ccb-4cf9-b2b7-0fdce4680201" Title="HttpContextWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpContextWrapper.htm">
       <HelpTOCNode Title="HttpContextWrapper Constructor " Url="html/M_ZKWebStandard_Web_Wrappers_HttpContextWrapper__ctor.htm" />
-      <HelpTOCNode Id="85b9f714-59e5-4d4e-a9c4-d4b8d4bfeaeb" Title="HttpContextWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpContextWrapper.htm">
+      <HelpTOCNode Id="707b0088-7b56-4e5b-b461-f68ee78d4882" Title="HttpContextWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpContextWrapper.htm">
         <HelpTOCNode Title="Items Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_Items.htm" />
         <HelpTOCNode Title="OriginalContext Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_OriginalContext.htm" />
         <HelpTOCNode Title="Request Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_Request.htm" />
@@ -1427,9 +1427,9 @@
       </HelpTOCNode>
       <HelpTOCNode Title="HttpContextWrapper Methods" Url="html/Methods_T_ZKWebStandard_Web_Wrappers_HttpContextWrapper.htm" />
     </HelpTOCNode>
-    <HelpTOCNode Id="f8434d29-2762-43a9-a522-c274a1316416" Title="HttpRequestWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
+    <HelpTOCNode Id="0ac60466-78b8-4bc3-bf97-08cbfbea9004" Title="HttpRequestWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
       <HelpTOCNode Title="HttpRequestWrapper Constructor " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper__ctor.htm" />
-      <HelpTOCNode Id="942da8c0-8f31-4fa0-b7bc-e78b120948ce" Title="HttpRequestWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
+      <HelpTOCNode Id="0e501f34-9a2e-47c5-99dd-15fa8751ac6f" Title="HttpRequestWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_Body.htm" />
         <HelpTOCNode Title="ContentLength Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_ContentLength.htm" />
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_ContentType.htm" />
@@ -1445,7 +1445,7 @@
         <HelpTOCNode Title="RemotePort Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_RemotePort.htm" />
         <HelpTOCNode Title="Scheme Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_Scheme.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="07a81cf0-2bba-47c1-a13b-9a8d44ad8355" Title="HttpRequestWrapper Methods" Url="html/Methods_T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
+      <HelpTOCNode Id="574ef67d-7467-473b-86f0-1aa73dd75d94" Title="HttpRequestWrapper Methods" Url="html/Methods_T_ZKWebStandard_Web_Wrappers_HttpRequestWrapper.htm">
         <HelpTOCNode Title="GetCookie Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetCookie.htm" />
         <HelpTOCNode Title="GetCookies Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetCookies.htm" />
         <HelpTOCNode Title="GetFormValue Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetFormValue.htm" />
@@ -1458,16 +1458,16 @@
         <HelpTOCNode Title="GetQueryValues Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetQueryValues.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="d5aed0a7-c09c-4828-aeea-287e99850f2c" Title="HttpResponseWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
+    <HelpTOCNode Id="39ba9042-f133-435e-835c-bccffdbd7442" Title="HttpResponseWrapper Class" Url="html/T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
       <HelpTOCNode Title="HttpResponseWrapper Constructor " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper__ctor.htm" />
-      <HelpTOCNode Id="4dea1729-c5b6-4bc3-bd8f-01ff7da023ef" Title="HttpResponseWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
+      <HelpTOCNode Id="77a26c66-4ea5-4cd2-bd5e-cc081a781a93" Title="HttpResponseWrapper Properties" Url="html/Properties_T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
         <HelpTOCNode Title="Body Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_Body.htm" />
         <HelpTOCNode Title="ContentType Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_ContentType.htm" />
         <HelpTOCNode Title="HttpContext Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_HttpContext.htm" />
         <HelpTOCNode Title="OriginalResponse Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_OriginalResponse.htm" />
         <HelpTOCNode Title="StatusCode Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_StatusCode.htm" />
       </HelpTOCNode>
-      <HelpTOCNode Id="c9d60e44-0ade-401d-918a-8fa57434e8f7" Title="HttpResponseWrapper Methods" Url="html/Methods_T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
+      <HelpTOCNode Id="df36e757-a7e1-48a0-9a4b-f4b4003fddf9" Title="HttpResponseWrapper Methods" Url="html/Methods_T_ZKWebStandard_Web_Wrappers_HttpResponseWrapper.htm">
         <HelpTOCNode Title="AddHeader Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_AddHeader.htm" />
         <HelpTOCNode Title="End Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_End.htm" />
         <HelpTOCNode Title="Redirect Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_Redirect.htm" />
