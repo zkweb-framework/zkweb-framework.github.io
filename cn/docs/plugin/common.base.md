@@ -1,12 +1,3 @@
-
-### <h2>前台页模板</h2>
-
-这个插件提供了以下的前台页模板，如有需要可以根据路径在其他插件中重载。
-
-- common.base\footer.html (前台通用尾部)
-- common.base\header.html (前台通用头部)
-- common.base\index.html (首页)
-
 ### <h2>插件提供的标签和过滤器</h2>
 
 这个插件提供了以下的标签<br/>

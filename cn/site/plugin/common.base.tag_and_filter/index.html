@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">提供的标签</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">提供的过滤器</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">全局过滤网址</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,7 +544,156 @@
               
                 <h1>提供的标签和过滤器</h1><br/>
               
-              
+              <p>基础插件提供了一系列的模板标签和过滤器。<br/>
+关于模板标签和过滤器请查看<a href="../../core/template_engine">模板系统</a>。<br/></p>
+<h3 id="_1">提供的标签</h3>
+<ul>
+<li>copyright_text<ul>
+<li>显示版权信息文本</li>
+<li>例: <code>{% copyright_text %}</code></li>
+</ul>
+</li>
+<li>include_css_here<ul>
+<li>在当前位置引用css文件</li>
+<li>例: <code>{% include_css_here "/static/common.base.css/test.css" %}</code></li>
+<li>例: <code>{% include_css_here variable %}</code></li>
+</ul>
+</li>
+<li>include_css_later<ul>
+<li>延迟引用css文件，需要配合"render_included_css"标签使用</li>
+<li>这个标签会影响上下文内容，不应该在有缓存的模板模块中使用</li>
+<li>例: <code>{% include_css_later "/static/common.base.css/test.css" %}</code></li>
+<li>例: <code>{% include_css_later variable %}</code></li>
+</ul>
+</li>
+<li>include_js_here<ul>
+<li>在当前位置引用js文件</li>
+<li>例: <code>{% include_js_here "/static/common.base.js/test.js" %}</code></li>
+<li>例: <code>{% include_js_here variable %}</code></li>
+</ul>
+</li>
+<li>include_js_later<ul>
+<li>延迟引用javascript文件，需要配合"render_included_js"标签使用</li>
+<li>这个标签会影响上下文内容，不应该在有缓存的模板模块中使用</li>
+<li>例: <code>{% include_js_later "/static/common.base.js/test.js" %}</code></li>
+<li>例: <code>{% include_js_later variable %}</code></li>
+</ul>
+</li>
+<li>render_extra_metadata<ul>
+<li>描画额外的meta标签</li>
+<li>描画后会清空原有的内容，可以重复调用</li>
+<li>例: <code>{% render_extra_metadata %}</code></li>
+</ul>
+</li>
+<li>render_included_css<ul>
+<li>描画延迟引用的css资源</li>
+<li>描画后会清空原有的引用，可以重复调用</li>
+<li>例: <code>{% render_included_css %}</code></li>
+</ul>
+</li>
+<li>render_included_js<ul>
+<li>描画延迟引用的javascript资源</li>
+<li>描画后会清空原有的引用，可以重复调用</li>
+<li>例: <code>{% render_included_js %}</code></li>
+</ul>
+</li>
+<li>remder_meta_description<ul>
+<li>描画页面描述</li>
+<li>如果有指定关键词时使用指定的描述，否则使用网站设置中的描述</li>
+<li>例: <code>{% remder_meta_description %}</code></li>
+</ul>
+</li>
+<li>render_meta_keywords<ul>
+<li>描画页面关键词</li>
+<li>如果有指定关键词时使用指定的关键词，否则使用网站设置中的关键词</li>
+<li>例: <code>{% render_meta_keywords %}</code></li>
+</ul>
+</li>
+<li>render_title<ul>
+<li>描画当前网站标题</li>
+<li>例: <code>{% render_title %}</code></li>
+</ul>
+</li>
+<li>url_pagination<ul>
+<li>根据Url分页的控件，需要配合Model.Pagination使用</li>
+<li>例: <code>{% url_pagination response.Pagination %}</code></li>
+</ul>
+</li>
+<li>use_meta_description<ul>
+<li>设置页面描述，需要配合"remder_meta_description"标签使用</li>
+<li>例: <code>{% use_meta_description "description" %}</code></li>
+<li>例: <code>{% use_meta_description variable %}</code></li>
+</ul>
+</li>
+<li>use_meta_keywords<ul>
+<li>设置页面关键词，需要配合"render_meta_keywords"标签使用</li>
+<li>例: <code>{% use_meta_keywords "keywords" %}</code></li>
+<li>例: <code>{% use_meta_keywords variable %}</code></li>
+</ul>
+</li>
+<li>use_title<ul>
+<li>设置网站标题，需要配合标签"render_title"使用</li>
+<li>例: <code>{% use_title "Plain Text Title" %}</code></li>
+<li>例: <code>{% use_title variable_title %}</code></li>
+</ul>
+</li>
+<li>website_name<ul>
+<li>显示当前网站名称</li>
+<li>例: <code>{% website_name %}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">提供的过滤器</h3>
+<ul>
+<li>website_title<ul>
+<li>网站标题</li>
+<li>按WebsiteSettings.DocumentTitleFormat进行格式化</li>
+<li>例: <code>{{ "Website Title" | website_title }}</code></li>
+</ul>
+</li>
+<li>url<ul>
+<li>全局过滤网址</li>
+<li>请参考"全局过滤网址"的说明</li>
+<li>例: <code>{{ "/example" | url }}</code></li>
+</ul>
+</li>
+<li>url_get_param<ul>
+<li>获取Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_get_param: "key" }}</code></li>
+<li>例: <code>{{ test_url | url_get_param: variable }}</code></li>
+</ul>
+</li>
+<li>url_set_param<ul>
+<li>设置Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_set_param: "key", "value" | url }}</code></li>
+<li>例: <code>{{ test_url | url_set_param: "key", variable | url }}</code></li>
+</ul>
+</li>
+<li>url_remove_param<ul>
+<li>删除Url参数，传入的url是空值时使用当前请求的url</li>
+<li>例: <code>{{ "" | url_remove_param: "key" }}</code></li>
+<li>例: <code>{{ test_url | url_remove_param: variable }}</code></li>
+</ul>
+</li>
+<li>html_attributes<ul>
+<li>描画Html标签</li>
+<li>需要传入类型是<code>IDictionary&lt;string, string&gt;</code>的参数</li>
+<li>例: <code>{{ attribtues | html_attributes }}</code></li>
+</ul>
+</li>
+<li>json<ul>
+<li>使用Json序列化对象</li>
+<li>例: <code>{{ obj | json }}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">全局过滤网址</h3>
+<p>为了支持伪静态等高级功能，基础插件提供了全局过滤网址的功能。<br/>
+描画url(例如a标签的href)时应该添加<code>url</code>过滤器。<br/>
+需要全局过滤网址时可以注册<code>IUrlFilter</code>到容器。<br/></p>
+<p><strong>使用全局过滤网址的例子</strong></p>
+<pre><code class="html">&lt;a href=&quot;{{ &quot;/example/view?id=[0]&quot; | format: exampleId | url }}&quot;&gt;&lt;/a&gt;
+</code></pre>
             
 
           </div> <!--/span-->

@@ -517,6 +517,18 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_2">过期时间</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">关联用户</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -559,10 +571,16 @@ public class SessionExampleController : IController {
 }
 </code></pre>
 
-<p>会话有过期时间，需要延长过期时间时可以使用<code>SetExpiresAtLeast</code>函数。<br/>
+<h3 id="_2">过期时间</h3>
+<p>会话有过期时间，需要延长过期时间时请使用<code>SetExpiresAtLeast</code>函数。<br/>
+这个函数确保保存会话时，浏览器中的过期时间也会相应延长。<br/>
 以下代码设置会话最少有效一个小时<br/></p>
 <pre><code class="csharp">session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 </code></pre>
+
+<h3 id="_3">关联用户</h3>
+<p>会话可以关联用户，关联时需要设置用户Id到<code>ReleatedId</code>成员。<br/>
+基础插件不提供用户功能，所以只留了关联Id的成员，成员的类型是long。<br/></p>
             
 
           </div> <!--/span-->

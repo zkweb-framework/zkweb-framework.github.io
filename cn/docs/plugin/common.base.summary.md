@@ -37,5 +37,5 @@
 
 ### 层次结构
 
-目前默认插件集的层次结构如下<br/>
-![](img/architecture.jpg)
+目前默认插件集的层次结构如下，接近于传统的三层结构。<br/>
+![](../img/architecture.jpg)

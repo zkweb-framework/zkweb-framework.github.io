@@ -29,8 +29,16 @@ public class SessionExampleController : IController {
 }
 ```
 
-会话有过期时间，需要延长过期时间时可以使用`SetExpiresAtLeast`函数。<br/>
+### 过期时间
+
+会话有过期时间，需要延长过期时间时请使用`SetExpiresAtLeast`函数。<br/>
+这个函数确保保存会话时，浏览器中的过期时间也会相应延长。<br/>
 以下代码设置会话最少有效一个小时<br/>
 ``` csharp
 session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 ```
+
+### 关联用户
+
+会话可以关联用户，关联时需要设置用户Id到`ReleatedId`成员。<br/>
+基础插件不提供用户功能，所以只留了关联Id的成员，成员的类型是long。<br/>
