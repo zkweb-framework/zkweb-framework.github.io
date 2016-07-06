@@ -77,6 +77,10 @@ ZKWeb目前同时提供Asp.Net, Asp.Net Core, Owin版本。<br/>
 	- 首页 0.674ms, 0.688ms, 0.672ms
 	- 商品列表页 0.648ms, 0.770ms, 0.645ms
 	- 商品详情页 0.736ms, 0.756ms, 0.775ms
+- 2016-07-06 (i7 Q720 1.6Ghz x 4 core 8 threads, ab -n 8000 -c 16, real machine, asp.net)
+	- 首页 0.447ms, 0.430ms, 0.432ms
+	- 商品列表页 0.402ms, 0.408ms, 0.422ms
+	- 商品详情页 0.504ms, 0.506ms, 0.502ms
 
 ### 项目进度
 
