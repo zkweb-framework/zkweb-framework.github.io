@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>基础javascript脚本 - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="基础javascript脚本, 基础javascript脚本">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../common.base.font/">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../common.base.css/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
+            
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../..">框架介绍</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/create_project/">创建项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/start_project/">开发项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/publish_website/">发布网站</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../../core/website_struct/">网站结构</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/website_config/">配置文件</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/ioc_container/">IoC容器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/plugin/">插件系统</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/controller/">控制器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/http_handlers/">请求和错误处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/template_engine/">模板引擎</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/dynamic_contents/">动态内容</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/isolated_cache/">缓存隔离</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/database/">数据库</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_language/">多语言</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_timezone/">多时区</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/unit_test/">单元测试</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>基础插件 (Common.Base)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.base.summary/">关于基础插件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.generic_config/">通用配置</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.scheduled_task/">定时任务</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.session/">会话</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.css/">基础css样式</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">基础javascript脚本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.font/">基础图标字体</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.ajax_table/">动态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_table/">静态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.form_builder/">表单构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.repository_uow/">仓储和工作单元</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_handler/">静态文件处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.locale_handler/">语言时区处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.traits/">特征类</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.templates/">提供的模板文件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.tag_and_filter/">提供的标签和过滤器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.cache_policy/">提供的隔离策略</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.captcha/">验证码 (Common.Captcha)</a>
+</li>
+
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>管理员 (Common.Admin)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.admin.user_and_role/">用户和角色权限</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.admin_panel/">管理后台</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.traits/">特征类</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_simple_app/">添加后台功能</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_crud_app/">添加增删查改功能</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.menupage/">菜单页 (Common.MenuPage)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.adminsettings/">管理员设置 (Common.AdminSettings)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.userpanel/">用户中心 (Common.UserPanel)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.usercontact/">联系人 (Common.UserContact)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericclass/">通用分类 (Common.GenericClass)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.generictag/">通用标签 (Common.GenericTag)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericrecord/">通用记录 (Common.GenericRecord)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.languageswitcher/">语言切换器 (Common.LanguageSwitcher)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.currency/">货币 (Common.Currency)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.pesudostatic/">伪静态 (Common.PesudoStatic)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.region/">地区 (Common.Region)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.serialgenerate/">流水号 (Common.SerialGenerate)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment/">支付 (Finance.Payment)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.alipay/">支付宝 (Finance.Payment.Alipay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.tenpay/">财付通 (Finance.Payment.Tenpay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.wechat/">微信支付 (Finance.Payment.WeChat)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.ckeditor/">CKEditor (CMS.CKEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.imagebrowser/">图片管理器 (CMS.ImageBrowser)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.atricle/">文章 (CMS.Article)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.product/">商品 (Shopping.Product)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.logistics/">物流 (Shopping.Logistics)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.order/">订单 (Shopping.Order)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.aftersales/">售后 (Shopping.AfterSales)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../unittest.webtester/">网页测试运行器 (UnitTest.WebTester)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.customtranslate/">自定义翻译 (Common.CustomTranslate)</a>
+</li>
+
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
+
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
+
+                
+                  <li class="main">
+                    <a href="#_1">额外的脚本功能</a>
+                  </li>
+
+                  
+                
+
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
+
+            </div>
+          </div>
+
+          <div id="main-content" class="span9">
+            
+              
+                <h1>基础javascript脚本</h1><br/>
+              
+              <p>基础插件引用了以下的javascript脚本<br/></p>
+<ul>
+<li>jQuery 1.11.2<ul>
+<li>jquery-migrate</li>
+<li>jquery-form</li>
+<li>jquery-mobile</li>
+<li>jquery-toast</li>
+<li>jquery-validate</li>
+<li>jquery-validate-unobtrusive</li>
+</ul>
+</li>
+<li>Bootstrap 3.3.2<ul>
+<li>context-menu</li>
+<li>dialog</li>
+<li>hover-dropdown</li>
+</ul>
+</li>
+<li>Switchery 0.8.1</li>
+<li>jsUri 1.3.1</li>
+<li>Underscore 1.8.3</li>
+</ul>
+<p>基础插件的javascript脚本已整合到一个文件，引用时可以使用</p>
+<pre><code class="html">{% include_js_here &quot;/static/common.base.js/components.min.js&quot; %}
+</code></pre>
+
+<h3 id="_1">额外的脚本功能</h3>
+<p>基础插件的脚本还提供了一些额外的功能，这些功能大多数已经过代码的包装，不需要全部了解。</p>
+<p><strong> 弹出对话框显示远程内容</strong><br/></p>
+<pre><code class="javascript">BootstrapDialog.showRemote(&quot;title&quot;, &quot;/example/contents&quot;);
+</code></pre>
+
+<p><strong>初始化动态表格</strong><br/>
+详见<a href="../common.base.ajax_table">动态表格构建器</a></p>
+<pre><code class="javascript">$(&quot;#Table&quot;).ajaxTable({ target: &quot;/example/search_table&quot; });
+</code></pre>
+
+<p><strong>多选框组，支持全选/取消全选</strong><br/></p>
+<pre><code class="html">&lt;div data-toggle=&quot;checkbox-group&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; class=&quot;select-all&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+    &lt;input type=&quot;checkbox&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>储存多个多选框的值到一个控件中</strong><br/></p>
+<pre><code class="html">&lt;input type=&quot;checkbox&quot; value=&quot;A&quot; merge-to=&quot;input[name=ExampleList]&quot;&gt;
+&lt;input type=&quot;checkbox&quot; value=&quot;B&quot; merge-to=&quot;input[name=ExampleList]&quot;&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;ExampleList&quot; value=&quot;[]&quot; /&gt;
+</code></pre>
+
+<p><strong>设置通用的Ajax表单</strong><br/>
+在提交期间为表单添加loading类，并触发<code>beforeSubmit</code>, <code>success</code>, <code>error</code>事件。<br/></p>
+<pre><code class="javascript">$(&quot;#Form&quot;).commonAjaxForm();
+</code></pre>
+
+<p><strong>处理ajax提交的结果</strong><br/>
+支持显示消息和执行结果中的脚本。<br/></p>
+<pre><code class="javascript">$.handleAjaxResult(data);
+// data: { message: &quot;example message&quot;, allowHtmlText: false, script: &quot;alert(1)&quot; }
+</code></pre>
+
+<p><strong>自动显示ajax提交错误的信息</strong><br/>
+服务器对于ajax请求返回了错误时，会自动弹出错误的信息。<br/>
+需要禁用这个功能请设置<code>$.toast.extra.showAjaxError = false;</code><br/></p>
+<p><strong>可编辑的表格</strong><br/>
+支持添加和删除行，定义收集和绑定事件等功能。</p>
+<pre><code class="javascript">var $table = $(&quot;#Editor&quot;).editableTable({
+    columns: [ &quot;A&quot;, &quot;B&quot;, $(&quot;&lt;div&gt;&quot;) ],
+    tableClass: &quot;table table-bordered table-hover&quot;,
+    tableHeaderClass: &quot;heading&quot;
+});
+$table.on(&quot;addRow.editableTable&quot;, function (e, data) { ... });
+$table.on(&quot;collect.editableTable&quot;, function () { ... });
+$table.on(&quot;bind.editableTable&quot;, function () { ... });
+</code></pre>
+
+<p><strong>全屏portlet的内容</strong><br/>
+在以下html结构中点击<code>.fullscreen</code>时可以全屏<code>portlet</code>的内容。</p>
+<pre><code class="html">&lt;div class=&quot;portlet&quot;&gt;
+    &lt;a class=&quot;fullscreen&quot;&gt;FullScreen&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>数字文本框</strong><br/>
+点击上下按钮时改变文本框中的数值，文本框中只能填写指定类型的数值。<br/></p>
+<pre><code class="html">&lt;div data-toggle='number-input'
+    data-allow-decimal='false' data-allow-negative='false' data-delta='1'&gt;
+    &lt;input type='text' class='number' /&gt;
+    &lt;span class='up'&gt;&lt;/span&gt;
+    &lt;span class='down'&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>支持post数据的链接</strong><br/>
+跳转post到指定的地址或通过ajax post到指定的地址，<br/>
+通过ajax post时返回结果会使用$.handleAjaxResult处理。<br/></p>
+<pre><code class="html">&lt;a post-href=&quot;/user/logout&quot;&gt;&lt;/a&gt;
+&lt;a post-href=&quot;/api/example_api&quot; ajax=&quot;true&quot;&gt;&lt;/a&gt;
+</code></pre>
+
+<p><strong>刷新图片内容</strong><br/>
+会在参数中添加timestamp来跳过浏览器缓存，获取最新的图片内容。</p>
+<pre><code class="javascript">$(&quot;#Img&quot;).refreshImage();
+</code></pre>
+
+<p><strong>延迟加载脚本</strong><br/>
+常用于模板模块中引用脚本，同一路径只会引用一次。</p>
+<pre><code class="html">&lt;div require-script=&quot;/static/demo/demo.js&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p><strong>延迟加载样式</strong><br/>
+常用于模板模块中引用样式，同一路径只会引用一次。</p>
+<pre><code class="html">&lt;div require-style=&quot;/statis/demo/demo.css&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p><strong>可搜索的下拉框</strong><br/>
+可以在选项列表中搜索，不支持远程搜索。<br/></p>
+<pre><code class="html">&lt;div class=&quot;advance-select&quot; data-toggle=&quot;advance-select&quot;&gt;
+    &lt;button class=&quot;btn btn-default form-control dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;span class=&quot;option-text&quot;&gt;&lt;/span&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control keyword&quot; placeholder=&quot;&quot; /&gt;
+        &lt;select&gt;&lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p><strong>可编辑文本的下拉框</strong><br/>
+可以选中选项列表中的值或填写自定义值，注意提交时应该把文本框中的内容也提交到服务器。<br/></p>
+<pre><code class="html">&lt;div class=&quot;advance-select&quot; data-toggle=&quot;advance-select&quot;&gt;
+    &lt;div class=&quot;input-group dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+        &lt;input class=&quot;form-control option-text-editable&quot; type=&quot;text&quot; /&gt;
+        &lt;span class=&quot;input-group-btn&quot;&gt;
+            &lt;button class=&quot;btn btn-default&quot;&gt;&lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;dropdown-menu&quot;&gt;
+        &lt;select&gt;&lt;/select&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            
+
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
+</html>

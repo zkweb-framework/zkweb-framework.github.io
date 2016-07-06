@@ -17,3 +17,12 @@ Owin请修改Console项目并把`项目名.Console.exe`复制到发布文件夹�
 ```
 ZKWeb\Tools\WebsitePublisher.Cmd.exe -r "项目路径" -n "发布名称" -o "发布路径"
 ```
+
+### 部署Asp.Net Core版到IIS时需要的设置
+
+部署Asp.Net Core版到IIS时需要进行以下设置才可以正常运行<br/>
+
+- 设置进程池的.NET版本到"无托管代码(No Managed Code)"
+- 安装IIS模块
+	- 下载安装[.NET Core Windows Server Hosting bundle](https://go.microsoft.com/fwlink/?LinkId=817246)
+	- 安装后需要重启

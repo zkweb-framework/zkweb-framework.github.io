@@ -20,31 +20,35 @@ pages:
   - 动态内容: core/dynamic_contents.md
   - 缓存隔离: core/isolated_cache.md
   - 数据库: core/database.md
-  - 多语言: core/multi_language.mds
+  - 多语言: core/multi_language.md
   - 多时区: core/multi_timezone.md
   - 单元测试: core/unit_test.md
 - 插件:
   - 基础插件 (Common.Base):
-    - 内容概览: plugin/common.base.md
-    - 通用配置: plugin/common.base.md
-    - 定时任务: plugin/common.base.md
-    - 会话: plugin/common.base.md
-    - 动态表格构建器: plugin/common.base.md
-    - 静态表格构建器: plugin/common.base.md
-    - 表单构建器: plugin/common.base.md
-    - 仓储和工作单元: plugin/common.base.md
-    - 静态文件处理器: plugin/common.base.md
-    - 语言时区处理器: plugin/common.base.md
-    - 特征类: plugin/common.base.md
-    - 提供的标签和过滤器: plugin/common.base.md
-    - 提供的隔离策略: plugin/common.base.md
+    - 关于基础插件: plugin/common.base.summary.md
+    - 通用配置: plugin/common.base.generic_config.md
+    - 定时任务: plugin/common.base.scheduled_task.md
+    - 会话: plugin/common.base.session.md
+    - 基础css样式: plugin/common.base.css.md
+    - 基础javascript脚本: plugin/common.base.javascript.md
+    - 基础图标字体: plugin/common.base.font.md
+    - 动态表格构建器: plugin/common.base.ajax_table.md
+    - 静态表格构建器: plugin/common.base.static_table.md
+    - 表单构建器: plugin/common.base.form_builder.md
+    - 仓储和工作单元: plugin/common.base.repository_uow.md
+    - 静态文件处理器: plugin/common.base.static_handler.md
+    - 语言时区处理器: plugin/common.base.locale_handler.md
+    - 特征类: plugin/common.base.traits.md
+    - 提供的模板文件: plugin/common.base.templates.md
+    - 提供的标签和过滤器: plugin/common.base.tag_and_filter.md
+    - 提供的隔离策略: plugin/common.base.cache_policy.md
   - 验证码 (Common.Captcha): plugin/common.captcha.md
   - 管理员 (Common.Admin):
-    - 用户和权限: plugin/common.admin.md
-    - 管理后台: plugin/common.admin.md
-    - 特征类: plugin/common.base.md
-    - 添加后台功能: plugin/common.admin.md
-    - 添加增删查改功能: plugin/common.admin.md
+    - 用户和角色权限: plugin/common.admin.user_and_role.md
+    - 管理后台: plugin/common.admin.admin_panel.md
+    - 特征类: plugin/common.admin.traits.md
+    - 添加后台功能: plugin/common.admin.add_simple_app.md
+    - 添加增删查改功能: plugin/common.admin.add_crud_app.md
   - 菜单页 (Common.MenuPage): plugin/common.menupage.md
   - 管理员设置 (Common.AdminSettings): plugin/common.adminsettings.md
   - 用户中心 (Common.UserPanel): plugin/common.userpanel.md

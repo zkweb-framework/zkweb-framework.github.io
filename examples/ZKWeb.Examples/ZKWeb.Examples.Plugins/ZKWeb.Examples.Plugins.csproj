@@ -64,6 +64,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
@@ -73,22 +74,36 @@
       <HintPath>..\packages\ZKWeb.1.0.0-beta-3c\lib\net461\ZKWeb.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ZKWeb.Plugins, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZKWeb.Plugins.0.9.0\lib\net461\ZKWeb.Plugins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ZKWebStandard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\ZKWeb.1.0.0-beta-3c\lib\net461\ZKWebStandard.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ZKWeb.Examples\src\AjaxTableCallbacks\ExampleAjaxTableCallback.cs" />
+    <Compile Include="ZKWeb.Examples\src\Config\ExampleConfig.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\AjaxTableExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\ConfigExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\DatabaseExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\ExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\FormExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\PostExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\SessionExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\StaticTableExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Database\ExampleTable.cs" />
     <Compile Include="ZKWeb.Examples\src\DataCallbacks\ExampleDataDeleteCallback.cs" />
     <Compile Include="ZKWeb.Examples\src\DataCallbacks\ExampleDataSaveCallback.cs" />
+    <Compile Include="ZKWeb.Examples\src\Forms\ExampleForm.cs" />
     <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpErrorHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpRequestHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZKWeb.Examples\src\ScheduledTasks\ExampleTask.cs" />
+    <Compile Include="ZKWeb.Examples\src\StaticTableCallbacks\ExampleStaticTableCallback.cs" />
     <Compile Include="ZKWeb.Examples\src\Tests\ExampleTest.cs" />
     <Compile Include="ZKWeb.Examples\src\Translates\zh_CN.cs" />
   </ItemGroup>
@@ -101,6 +116,9 @@
     <Content Include="ZKWeb.Examples\static\zkweb.examples.css\hello.css" />
     <Content Include="ZKWeb.Examples\static\zkweb.examples.js\hello.js" />
     <Content Include="ZKWeb.Examples\templates\example.widgets\example_nav.html" />
+    <Content Include="ZKWeb.Examples\templates\zkweb.examples\form.html" />
+    <Content Include="ZKWeb.Examples\templates\zkweb.examples\static_table.html" />
+    <Content Include="ZKWeb.Examples\templates\zkweb.examples\ajax_table.html" />
     <Content Include="ZKWeb.Examples\templates\zkweb.examples\hello.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
