@@ -94,6 +94,7 @@
     <Compile Include="ZKWeb.Examples\src\Controllers\PostExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\SessionExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Controllers\StaticTableExampleController.cs" />
+    <Compile Include="ZKWeb.Examples\src\Controllers\UowExampleController.cs" />
     <Compile Include="ZKWeb.Examples\src\Database\ExampleTable.cs" />
     <Compile Include="ZKWeb.Examples\src\DataCallbacks\ExampleDataDeleteCallback.cs" />
     <Compile Include="ZKWeb.Examples\src\DataCallbacks\ExampleDataSaveCallback.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="ZKWeb.Examples\src\HttpHandlers\HttpRequestHandlerExample.cs" />
     <Compile Include="ZKWeb.Examples\src\Plugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZKWeb.Examples\src\Repositories\ExampleRepository.cs" />
     <Compile Include="ZKWeb.Examples\src\ScheduledTasks\ExampleTask.cs" />
     <Compile Include="ZKWeb.Examples\src\StaticTableCallbacks\ExampleStaticTableCallback.cs" />
     <Compile Include="ZKWeb.Examples\src\Tests\ExampleTest.cs" />
