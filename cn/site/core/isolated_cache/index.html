@@ -523,6 +523,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_3">提供的缓存隔离策略</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -559,6 +565,23 @@ public class CustomPolicy : ICacheIsolationPolicy {
     }
 }
 </code></pre>
+
+<h3 id="_3">提供的缓存隔离策略</h3>
+<p>框架默认提供了以下的缓存隔离策略<br/></p>
+<ul>
+<li><code>Device</code><ul>
+<li>按当前请求的设备(电脑或手机)隔离缓存</li>
+</ul>
+</li>
+<li><code>Locale</code><ul>
+<li>按当前的语言和时区隔离缓存</li>
+</ul>
+</li>
+<li><code>Url</code><ul>
+<li>按当前请求的地址，参数和表单参数隔离缓存</li>
+</ul>
+</li>
+</ul>
             
 
           </div> <!--/span-->
