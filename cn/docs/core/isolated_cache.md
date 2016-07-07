@@ -24,3 +24,14 @@ public class CustomPolicy : ICacheIsolationPolicy {
 	}
 }
 ```
+
+### 提供的缓存隔离策略
+
+框架默认提供了以下的缓存隔离策略<br/>
+
+- `Device`
+	- 按当前请求的设备(电脑或手机)隔离缓存
+- `Locale`
+	- 按当前的语言和时区隔离缓存
+- `Url`
+	- 按当前请求的地址，参数和表单参数隔离缓存
