@@ -6,6 +6,10 @@ ZKWeb目前同时提供Asp.Net, Asp.Net Core, Owin版本。<br/>
 所有版本都兼容相同的插件。<br/>
 编写插件应该使用ZKWebStandard提供的抽象层而不去依赖Asp.Net或Asp.Net Core。<br/>
 
+ZKWeb目前提供了基本的.Net Core支持，<br/>
+创建项目时选择Asp.Net Core并且不使用默认的插件集即可运行在.Net Core上。<br/>
+因为NHibernate和Substitute尚未支持.Net Core，数据库功能目前还无法在.Net Core上使用。<br/>
+
 ### 项目地址
 
 <a href="https://github.com/zkweb-framework/ZKWeb" target="_blank">https://github.com/zkweb-framework/ZKWeb</a></br>
@@ -26,7 +30,7 @@ ZKWeb目前同时提供Asp.Net, Asp.Net Core, Owin版本。<br/>
 ### 主要功能
 
 - 支持动态载入和编辑的插件系统
-	- 使用Csscript + Codedom
+	- 使用Roslyn
 	- 编辑后自动重新编译
 - 支持从代码自动更新数据库
 	- 使用FluentNHibernate
