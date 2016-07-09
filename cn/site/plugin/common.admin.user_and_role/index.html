@@ -511,6 +511,30 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">用户和权限的数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">用户类型</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">权限</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">用户的注册和登陆</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,7 +550,49 @@
               
                 <h1>用户和角色权限</h1><br/>
               
-              
+              <p>管理员插件包含了用户和权限管理。
+用户和管理员都保存在同一个数据表中。</p>
+<h3 id="_1">用户和权限的数据结构</h3>
+<p><img alt="用户和权限的ER图" src="../../img/er_user_role.jpg" /></p>
+<p>用户可以对应多个角色，每个角色有不同的权限。<br/>
+用户的密码以json保存，默认使用PBKDF2生成密码校验值。<br/></p>
+<h3 id="_2">用户类型</h3>
+<p>管理员插件提供了以下的用户类型</p>
+<ul>
+<li>普通用户<ul>
+<li>普通的用户，不能登陆到后台</li>
+</ul>
+</li>
+<li>管理员<ul>
+<li>普通的管理员</li>
+</ul>
+</li>
+<li>超级管理员<ul>
+<li>默认拥有所有的权限的管理员</li>
+</ul>
+</li>
+<li>合作伙伴<ul>
+<li>可以登录到后台，但只能使用非常有限的功能</li>
+<li>代理商或进驻商家应该使用这个用户类型</li>
+</ul>
+</li>
+</ul>
+<h3 id="_3">权限</h3>
+<p>管理员插件支持权限管理，网站中的权限由<code>IPrivilegesProvider</code>提供。<br/>
+权限是一个字符串，格式推荐是<code>Group:Name</code>，例如<code>AdminManage:View</code>。<br/>
+很多插件支持自动生成权限，例如构建后台CRUD页面时会自动生成增删查改权限。<br/></p>
+<p>需要检查权限时可以使用<code>PrivilegeManager</code></p>
+<pre><code class="csharp">var privilegeManager = Application.Ioc.Resolve&lt;PrivilegeManager&gt;();
+privilegeManager.Check(UserTypesGroup.Admin, &quot;AdminManage:Edit&quot;);
+</code></pre>
+
+<h3 id="_4">用户的注册和登陆</h3>
+<p>管理员插件提供了用户的注册和登陆页面，地址是</p>
+<ul>
+<li>注册页面 /user/reg</li>
+<li>登陆页面 /user/login</li>
+</ul>
+<p>需要修改样式时可以重载相关的模板文件。</p>
             
 
           </div> <!--/span-->

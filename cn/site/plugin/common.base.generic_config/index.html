@@ -512,13 +512,19 @@
 
                 
                   <li class="main">
-                    <a href="#_1">添加配置类型</a>
+                    <a href="#_1">通用配置的数据结构</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_2">获取和保存配置</a>
+                    <a href="#_2">添加配置类型</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">获取和保存配置</a>
                   </li>
 
                   
@@ -539,7 +545,9 @@
                 <h1>通用配置</h1><br/>
               
               <p>通用配置可以保存网站全局使用的参数，例如网站名称和默认语言等。<br/></p>
-<h3 id="_1">添加配置类型</h3>
+<h3 id="_1">通用配置的数据结构</h3>
+<p><img alt="通用配置的ER图" src="../../img/er_generic_config.jpg" /></p>
+<h3 id="_2">添加配置类型</h3>
 <p>配置类型需要添加<code>GenericConfig</code>属性，<br/>
 第一个参数是保存到数据库时使用的键名，<code>CacheTime</code>可以指定缓存时间（秒）。<br/>
 缓存时间不会影响到网站部署到单个进程时的读取，单个进程时读取配置总能读到最新的配置。<br/>
@@ -553,7 +561,7 @@ public class ExampleConfig {
 }
 </code></pre>
 
-<h3 id="_2">获取和保存配置</h3>
+<h3 id="_3">获取和保存配置</h3>
 <p>首次获取<code>ExampleConfig</code>时会返回一个新的实例，<code>GetData</code>函数不会返回null。<br/></p>
 <p><strong>获取和保存配置的例子</strong><br/>
 添加<code>src\Controllers\ConfigExampleController.cs</code><br/></p>

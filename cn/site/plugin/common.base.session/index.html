@@ -512,19 +512,25 @@
 
                 
                   <li class="main">
-                    <a href="#_1">获取和保存会话</a>
+                    <a href="#_1">会话的数据结构</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_2">过期时间</a>
+                    <a href="#_2">获取和保存会话</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_3">关联用户</a>
+                    <a href="#_3">过期时间</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">关联用户</a>
                   </li>
 
                   
@@ -546,7 +552,10 @@
               
               <p>基础插件提供的提供了独自编写的会话管理功能，不依赖于Asp.Net和Asp.Net Core。<br/>
 考虑到网站可能会部署到多个服务器，会话保存在数据库。<br/></p>
-<h3 id="_1">获取和保存会话</h3>
+<h3 id="_1">会话的数据结构</h3>
+<p><img alt="会话的ER图" src="../../img/er_session.jpg" />
+会话中可以保存自定义的数据，自定义的数据使用json存储。</p>
+<h3 id="_2">获取和保存会话</h3>
 <p>获取和保存会话需要使用<code>SessionManager</code>。<br/>
 调用<code>SaveSession</code>可以保存之前使用<code>GetSession</code>获取的会话。<br/></p>
 <p><strong>获取和保存会话的例子</strong><br/>
@@ -571,14 +580,14 @@ public class SessionExampleController : IController {
 }
 </code></pre>
 
-<h3 id="_2">过期时间</h3>
+<h3 id="_3">过期时间</h3>
 <p>会话有过期时间，需要延长过期时间时请使用<code>SetExpiresAtLeast</code>函数。<br/>
 这个函数确保保存会话时，浏览器中的过期时间也会相应延长。<br/>
 以下代码设置会话最少有效一个小时<br/></p>
 <pre><code class="csharp">session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 </code></pre>
 
-<h3 id="_3">关联用户</h3>
+<h3 id="_4">关联用户</h3>
 <p>会话可以关联用户，关联时需要设置用户Id到<code>ReleatedId</code>成员。<br/>
 基础插件不提供用户功能，所以只留了关联Id的成员，成员的类型是long。<br/></p>
             
