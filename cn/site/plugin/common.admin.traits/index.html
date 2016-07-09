@@ -511,6 +511,12 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">类型是否有所属用户的特征</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,7 +532,25 @@
               
                 <h1>特征类</h1><br/>
               
-              
+              <p>管理员插件使用了以下的特征类</p>
+<ul>
+<li><code>UserOwnedTrait</code><ul>
+<li>类型是否有所属用户的特征</li>
+</ul>
+</li>
+</ul>
+<h3 id="_1">类型是否有所属用户的特征</h3>
+<p>使用特征</p>
+<pre><code>var trait = UserOwnedTrait.For&lt;TypeName&gt;();
+if (trait.IsUserOwned) {
+    var property = trait.PropertyName;
+}
+</code></pre>
+
+<p>这个特征用于标记数据是否有所属的用户，<br/>
+例如每个用户只能看到自己的短信息，不能看到别人的短信息。<br/>
+特征默认会检测类型是否有<code>Owner</code>或<code>User</code>属性，如果有则标记这个类型有所属的用户。<br/>
+特征可以通过容器修改，请参考基础插件的<a href="../common.base.traits">特征类</a></p>
             
 
           </div> <!--/span-->

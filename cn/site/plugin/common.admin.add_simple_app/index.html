@@ -526,7 +526,48 @@
               
                 <h1>添加后台功能</h1><br/>
               
-              
+              <p>添加后台功能可以继承<code>SimpleAdminAppBuilder</code>实现。<br/></p>
+<p>添加<code>src\AdminApps\ExampleApp.cs</code></p>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 示例的后台应用
+/// &lt;/summary&gt;
+[ExportMany]
+public class ExampleApp : SimpleAdminAppBuilder {
+    // Name和Url必须提供
+    public override string Name { get { return &quot;ExampleApp&quot;; } }
+    public override string Url { get { return &quot;/admin/example_app&quot;; } }
+    // 可选，如果需要指定图标颜色和内容
+    public override string TileClass { get { return &quot;tile bg-navy&quot;; } }
+    public override string IconClass { get { return &quot;fa fa-rocket&quot;; } }
+    // 可选，默认只要求管理员不要求指定权限
+    public override UserTypes[] AllowedUserTypes { get { return UserTypesGroup.Admin; } }
+    public override string[] RequiredPrivileges { get { return new[] { &quot;ExampleApp:View&quot; }; } }
+
+    protected override IActionResult Action() {
+        return new TemplateResult(&quot;example/example_admin_app.html&quot;);
+    }
+}
+</code></pre>
+
+<p>添加<code>templates\example\example_admin_app.html</code></p>
+<pre><code class="html">{% use_title &quot;Example Admin App&quot; -%}
+{% include common.admin/header.html %}
+&lt;div class=&quot;portlet-title&quot;&gt;
+    &lt;div class=&quot;caption&quot;&gt;
+        &lt;i class=&quot;fa fa-rocket&quot;&gt;&lt;/i&gt;
+        &lt;span class=&quot;caption-subject&quot;&gt;{{ &quot;Example Admin App&quot; | trans }}&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;portlet-body&quot;&gt;
+    hello admin app
+&lt;/div&gt;
+{% include common.admin/footer.html %}
+</code></pre>
+
+<p>刷新后台可以看到多出了<code>ExampleApp</code>的图标<br/>
+<img alt="" src="../../img/example_admin_app.jpg" /></p>
+<p>进入后会显示<code>Action</code>返回的内容<br/>
+<img alt="" src="../../img/example_admin_app_page.jpg" /></p>
             
 
           </div> <!--/span-->

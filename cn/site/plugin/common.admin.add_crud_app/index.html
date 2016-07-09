@@ -526,7 +526,93 @@
               
                 <h1>添加增删查改功能</h1><br/>
               
-              
+              <p>插件提供了根据数据库中的数据快速构建后台CRUD页面的功能，构建时需要使用<code>AdminAppBuilder</code>。<br/></p>
+<p>添加<code>src\AdminApps\ExampleCRUDApp.cs</code></p>
+<pre><code class="csharp">[ExportMany]
+public class ExampleCrudApp : AdminAppBuilder&lt;ExampleTable&gt; {
+    // Name和Url必须提供
+    public override string Name { get { return &quot;ExampleCRUDApp&quot;; } }
+    public override string Url { get { return &quot;/admin/example_crud_app&quot;; } }
+    // 可选，如果需要指定图标颜色和内容
+    public override string TileClass { get { return &quot;tile bg-navy&quot;; } }
+    public override string IconClass { get { return &quot;fa fa-rocket&quot;; } }
+    // 权限一般不需要手动指定，会根据名称生成&quot;查看&quot;,&quot;修改&quot;,&quot;删除&quot;,&quot;永久删除&quot;权限
+
+    // 获取添加和编辑使用的表单
+    protected override IModelFormBuilder GetAddForm() { return new Form(); }
+    protected override IModelFormBuilder GetEditForm() { return new Form(); }
+
+    // 获取搜索列表使用的回调
+    protected override IAjaxTableCallback&lt;ExampleTable&gt; GetTableCallback() { return new TableCallback(); }
+
+    public class TableCallback : IAjaxTableCallback&lt;ExampleTable&gt; {
+        public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
+            table.StandardSetupForCrudPage&lt;ExampleCrudApp&gt;(); // 设置表格
+            searchBar.StandardSetupForCrudPage&lt;ExampleCrudApp&gt;(&quot;Name&quot;); // 设置搜索栏
+        }
+
+        public void OnQuery(
+            AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+            query = query.FilterByRecycleBin(request); // 按回收站过滤
+            if (!string.IsNullOrEmpty(request.Keyword)) {
+                query = query.Where(q =&gt; q.Name.Contains(request.Keyword)); // 按关键词过滤
+            }
+        }
+
+        public void OnSort(
+            AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;ExampleTable&gt; query) {
+            query = query.OrderByDescending(q =&gt; q.Id); // 按Id倒序排列
+        }
+
+        public void OnSelect(
+            AjaxTableSearchRequest request, List&lt;EntityToTableRow&lt;ExampleTable&gt;&gt; pairs) {
+            foreach (var pair in pairs) {
+                pair.Row[&quot;Id&quot;] = pair.Entity.Id; // 选择Id
+                pair.Row[&quot;Name&quot;] = pair.Entity.Name; // 选择名称
+                pair.Row[&quot;CreateTime&quot;] = pair.Entity.CreateTime.ToClientTimeString(); // 选择创建时间
+                pair.Row[&quot;Deleted&quot;] = pair.Entity.Deleted ? EnumDeleted.Deleted : EnumDeleted.None; // 选择删除状态
+            }
+        }
+
+        public void OnResponse(
+            AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+            response.Columns.AddIdColumn(&quot;Id&quot;).StandardSetupForCrudPage&lt;ExampleCrudApp&gt;(request); // Id列
+            response.Columns.AddNoColumn(); // 序号列，页序号*页数量+数据位置(从1开始)
+            response.Columns.AddMemberColumn(&quot;Name&quot;, &quot;45%&quot;); // 名称列
+            response.Columns.AddMemberColumn(&quot;CreateTime&quot;); // 添加时间列
+            response.Columns.AddEnumLabelColumn(&quot;Deleted&quot;, typeof(EnumDeleted)); // 删除状态列
+            response.Columns.AddActionColumn().StandardSetupForCrudPage&lt;ExampleCrudApp&gt;(request); // 操作列
+        }
+    }
+
+    public class Form : DataEditFormBuilder&lt;ExampleTable, Form&gt; {
+        [Required]
+        [StringLength(100)]
+        [TextBoxField(&quot;Name&quot;, &quot;Please enter name&quot;)]
+        public string Name { get; set; }
+
+        protected override void OnBind(DatabaseContext context, ExampleTable bindFrom) {
+            Name = bindFrom.Name; // 绑定名称
+        }
+
+        protected override object OnSubmit(DatabaseContext context, ExampleTable saveTo) {
+            saveTo.Name = Name; // 设置名称
+            if (saveTo.Id &lt;= 0) {
+                saveTo.CreateTime = DateTime.UtcNow; // 设置创建时间
+            }
+            return new {
+                message = new T(&quot;Saved successfully&quot;), // 显示消息
+                script = ScriptStrings.AjaxtableUpdatedAndCloseModal // 关闭模态框并刷新列表
+            };
+        }
+    }
+}
+</code></pre>
+
+<p>效果如图<br/>
+<img alt="" src="../../img/example_crud_app_list.jpg" /></p>
+<p>自动生成的权限如图<br/>
+<img alt="" src="../../img/example_crud_app_privileges.jpg" /></p>
             
 
           </div> <!--/span-->
