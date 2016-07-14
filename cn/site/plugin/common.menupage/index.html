@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">菜单页的效果</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">菜单页的结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">如何构建新的菜单页类型</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -527,7 +545,73 @@
                 <h1>菜单页 (Common.MenuPage)</h1><br/>
               
               <p>插件提供了带菜单的页面的基础模板。<br/></p>
-<p>以下待编写</p>
+<h3 id="_1">菜单页的效果</h3>
+<p><img alt="菜单页的效果" src="../../img/menu_page_example.jpg" /></p>
+<h3 id="_2">菜单页的结构</h3>
+<p>菜单页分为菜单和页面内容，<br/>
+其中各个菜单项的文本和图标和Url由继承了<code>IMenuProvider</code>的类提供，<br/>
+页面内容则由继承了<code>SimpleMenuPageBuilder</code>或<code>FormMenuPageBuilder</code>等的类提供。</p>
+<h3 id="_3">如何构建新的菜单页类型</h3>
+<p>这个插件仅提供了菜单页的基础类型，<br/>
+当创建一个新的菜单页类型（例如后台设置或会员中心）时需要再次封装。<br/>
+这里以管理后台的后台设置页为例</p>
+<pre><code class="csharp">public interface IAdminSettingsMenuProvider : IMenuProvider { }
+public abstract class AdminSettingsCrudPageBuilder&lt;TData&gt; : CrudMenuPageBuilder&lt;TData&gt;, IAdminSettingsMenuProvider { }
+public abstract class AdminSettingsFormPageBuilder : FormMenuPageBuilder, IAdminSettingsMenuProvider { }
+public abstract class AdminSettingsSimplePageBuilder : SimpleMenuPageBuilder, IAdminSettingsMenuProvider { }
+</code></pre>
+
+<p>在继承了<code>PageBuilder</code>的类中可以重载<code>TemplatePath</code>成员实现提供该菜单页默认的模板文件。<br/>
+模板文件中需要对菜单内容和页面内容进行描画，这里以<code>AdminSettingsFormPageBuilder</code>为例。<br/></p>
+<p><code>common.admin_settings/header.html</code>的内容</p>
+<pre><code class="html">{% include common.admin/header.html %}
+{% fetch /api/admin/settings/menu_groups &gt; menu_groups %}
+&lt;div class=&quot;page-content&quot;&gt;
+    &lt;div class=&quot;panel-sidebar&quot;&gt;
+        &lt;div class=&quot;portlet&quot;&gt;
+            &lt;div class=&quot;portlet-title&quot;&gt;
+                &lt;div class=&quot;caption&quot;&gt;
+                    &lt;i class=&quot;fa fa-wrench&quot;&gt;&lt;/i&gt;
+                    &lt;span class=&quot;caption-subject bold uppercase&quot;&gt;{{ &quot;Settings&quot; | trans }}&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            {% include common.menu_page/menu_groups_nav.html %}
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-content&quot;&gt;
+</code></pre>
+
+<p><code>common.admin_settings/generic_form.html</code>的内容</p>
+<pre><code class="html">{% use_title title -%}
+{% include common.admin_settings/header.html %}
+&lt;div class=&quot;portlet&quot;&gt;
+    &lt;div class=&quot;portlet-title&quot;&gt;
+        &lt;div class=&quot;caption&quot;&gt;
+            &lt;i class=&quot;{{ iconClass }}&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;caption-subject&quot;&gt;{{ title | trans }}&lt;/span&gt;
+            &lt;span class=&quot;caption-helper&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;portlet-body&quot;&gt;
+        {{ form }}
+    &lt;/div&gt;
+&lt;/div&gt;
+{% include common.admin_settings/footer.html %}
+</code></pre>
+
+<p>在<code>header.html</code>模板中，菜单内容通过了<code>/api/admin/settings/menu_groups</code>获取，这个函数的内容如下</p>
+<pre><code class="csharp">[Action(&quot;api/admin/settings/menu_groups&quot;)]
+public IActionResult AdminSettingsMenuGroups() {
+    var privilegeManager = Application.Ioc.Resolve&lt;PrivilegeManager&gt;();
+    privilegeManager.Check(UserTypesGroup.AdminOrParter);
+    var groups = new List&lt;MenuItemGroup&gt;();
+    var handlers = Application.Ioc.ResolveMany&lt;IAdminSettingsMenuProvider&gt;();
+    handlers.ForEach(h =&gt; h.Setup(groups));
+    return new JsonResult(groups);
+}
+</code></pre>
+
+<p>在完成这些工作后，需要添加新的后台设置页时只要继承<code>AdminSettingsFormPageBuilder</code>就可以提供一个完整的页面。</p>
             
 
           </div> <!--/span-->
