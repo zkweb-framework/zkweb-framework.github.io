@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">后台设置页的效果</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">如何添加后台设置页（表单）</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">如何添加后台设置页（列表）</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +544,292 @@
               
                 <h1>管理员设置 (Common.AdminSettings)</h1><br/>
               
-              <p>插件提供了后台设置功能，整个网站的设置都可以在同一个界面中修改。<br/></p>
-<p>以下待编写</p>
+              <p>后台设置插件基于菜单页插件实现，提供在同一个页面修改整个网站设置的功能。</p>
+<h3 id="_1">后台设置页的效果</h3>
+<p><img alt="后台设置页的效果" src="../../img/menu_page_example.jpg" /></p>
+<h3 id="_2">如何添加后台设置页（表单）</h3>
+<p>添加后台设置页需要继承<code>AdminSettingsFormPageBuilder</code>。<br/>
+以下是语言设置的源代码，可以参考实现自己的设置页面。<br/></p>
+<p><img alt="语言设置页" src="../../img/locale_settings.jpg" /></p>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 语言设置
+/// &lt;/summary&gt;
+[ExportMany]
+public class LocaleSettingsForm : AdminSettingsFormPageBuilder {
+    public override string Group { get { return &quot;BaseSettings&quot;; } }
+    public override string GroupIconClass { get { return &quot;fa fa-wrench&quot;; } }
+    public override string Name { get { return &quot;LocaleSettings&quot;; } }
+    public override string IconClass { get { return &quot;fa fa-language&quot;; } }
+    public override string Url { get { return &quot;/admin/settings/locale_settings&quot;; } }
+    public override string Privilege { get { return &quot;AdminSettings:LocaleSettings&quot;; } }
+    protected override IModelFormBuilder GetForm() { return new Form(); }
+
+    /// &lt;summary&gt;
+    /// 表单
+    /// &lt;/summary&gt;
+    public class Form : ModelFormBuilder {
+        /// &lt;summary&gt;
+        /// 默认语言
+        /// &lt;/summary&gt;
+        [Required]
+        [DropdownListField(&quot;DefaultLanguage&quot;, typeof(LanguageListItemProvider))]
+        public string DefaultLanguage { get; set; }
+        /// &lt;summary&gt;
+        /// 默认时区
+        /// &lt;/summary&gt;
+        [Required]
+        [DropdownListField(&quot;DefaultTimezone&quot;, typeof(TimezoneListItemProvider))]
+        public string DefaultTimezone { get; set; }
+        /// &lt;summary&gt;
+        /// 是否允许自动检测浏览器语言
+        /// &lt;/summary&gt;
+        [CheckBoxField(&quot;AllowDetectLanguageFromBrowser&quot;)]
+        public bool AllowDetectLanguageFromBrowser { get; set; }
+
+        /// &lt;summary&gt;
+        /// 绑定表单
+        /// &lt;/summary&gt;
+        protected override void OnBind() {
+            var configManager = Application.Ioc.Resolve&lt;GenericConfigManager&gt;();
+            var settings = configManager.GetData&lt;LocaleSettings&gt;();
+            DefaultLanguage = settings.DefaultLanguage;
+            DefaultTimezone = settings.DefaultTimezone;
+            AllowDetectLanguageFromBrowser = settings.AllowDetectLanguageFromBrowser;
+        }
+
+        /// &lt;summary&gt;
+        /// 提交表单
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        protected override object OnSubmit() {
+            var configManager = Application.Ioc.Resolve&lt;GenericConfigManager&gt;();
+            var settings = configManager.GetData&lt;LocaleSettings&gt;();
+            settings.DefaultLanguage = DefaultLanguage;
+            settings.DefaultTimezone = DefaultTimezone;
+            settings.AllowDetectLanguageFromBrowser = AllowDetectLanguageFromBrowser;
+            configManager.PutData(settings);
+            return new { message = new T(&quot;Saved Successfully&quot;) };
+        }
+    }
+}
+</code></pre>
+
+<h3 id="_3">如何添加后台设置页（列表）</h3>
+<p>这个插件不仅提供了添加表单形式页面的接口，还提供了添加列表形式页面的接口。<br/>
+以下是通用标签的源代码（需要再次继承使用），可以参考实现自己的列表页面。<br/></p>
+<p><img alt="语言设置页" src="../../img/generic_tag.jpg" /></p>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 通用标签构建器
+/// &lt;/summary&gt;
+/// &lt;example&gt;
+/// [ExportMany]
+/// public class ExampleTag : GenericTagBuilder {
+///     public override string Name { get { return &quot;ExampleTag&quot;; } }
+/// }
+/// &lt;/example&gt;
+public abstract class GenericTagBuilder :
+    AdminSettingsCrudPageBuilder&lt;Database.GenericTag&gt; {
+    public virtual string Type { get { return Name.Replace(&quot; &quot;, &quot;&quot;); } }
+    public override string Group { get { return &quot;TagManage&quot;; } }
+    public override string GroupIconClass { get { return &quot;fa fa-tags&quot;; } }
+    public override string IconClass { get { return &quot;fa fa-tags&quot;; } }
+    public override string Url { get { return &quot;/admin/settings/generic_tag/&quot; + Type.ToLower(); } }
+    public override string[] ViewPrivileges { get { return new[] { &quot;TagManage:&quot; + Type }; } }
+    public override string[] EditPrivileges { get { return ViewPrivileges; } }
+    public override string[] DeletePrivileges { get { return ViewPrivileges; } }
+    public override string[] DeleteForeverPrivilege { get { return ViewPrivileges; } }
+    protected override IAjaxTableCallback&lt;Database.GenericTag&gt; GetTableCallback() {
+        return new TableCallback(this);
+    }
+    protected override IModelFormBuilder GetAddForm() { return new Form(Type); }
+    protected override IModelFormBuilder GetEditForm() { return new Form(Type); }
+
+    /// &lt;summary&gt;
+    /// 获取批量操作的数据Id列表
+    /// &lt;/summary&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    protected override IList&lt;object&gt; GetBatchActionIds() {
+        // 检查是否所有Id都属于指定的类型，防止越权操作
+        var request = HttpManager.CurrentContext.Request;
+        var actionName = request.Get&lt;string&gt;(&quot;action&quot;);
+        var json = HttpManager.CurrentContext.Request.Get&lt;string&gt;(&quot;json&quot;);
+        var ids = JsonConvert.DeserializeObject&lt;IList&lt;object&gt;&gt;(json);
+        var isAllTagTypeMatched = UnitOfWork.ReadRepository&lt;GenericTagRepository, bool&gt;(r =&gt; {
+            return r.IsAllTagsTypeEqualTo(ids, Type);
+        });
+        if (!isAllTagTypeMatched) {
+            throw new ForbiddenException(new T(&quot;Try to access tag that type not matched&quot;));
+        }
+        return ids;
+    }
+
+    /// &lt;summary&gt;
+    /// 表格回调
+    /// &lt;/summary&gt;
+    public class TableCallback : IAjaxTableCallback&lt;Database.GenericTag&gt; {
+        /// &lt;summary&gt;
+        /// 标签构建器
+        /// &lt;/summary&gt;
+        public GenericTagBuilder Builder { get; set; }
+
+        /// &lt;summary&gt;
+        /// 初始化
+        /// &lt;/summary&gt;
+        public TableCallback(GenericTagBuilder builder) {
+            Builder = builder;
+        }
+
+        /// &lt;summary&gt;
+        /// 构建表格时的处理
+        /// &lt;/summary&gt;
+        public void OnBuildTable(
+            AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
+            table.MenuItems.AddDivider();
+            table.MenuItems.AddEditAction(
+                Builder.Type, Builder.EditUrl, dialogParameters: new { size = &quot;size-wide&quot; });
+            table.MenuItems.AddAddAction(
+                Builder.Type, Builder.AddUrl, dialogParameters: new { size = &quot;size-wide&quot; });
+            searchBar.KeywordPlaceHolder = &quot;Name/Remark&quot;;
+            searchBar.MenuItems.AddDivider();
+            searchBar.MenuItems.AddRecycleBin();
+            searchBar.MenuItems.AddAddAction(
+                Builder.Type, Builder.AddUrl, dialogParameters: new { size = &quot;size-wide&quot; });
+            searchBar.BeforeItems.AddAddAction(
+                Builder.Type, Builder.AddUrl, dialogParameters: new { size = &quot;size-wide&quot; });
+        }
+
+        /// &lt;summary&gt;
+        /// 查询数据
+        /// &lt;/summary&gt;
+        public void OnQuery(
+            AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;Database.GenericTag&gt; query) {
+            // 在第一页显示所有分类
+            request.PageNo = 0;
+            request.PageSize = 0x7ffffffe;
+            // 提供类型给其他回调
+            request.Conditions[&quot;Type&quot;] = Builder.Type;
+            // 按类型
+            query = query.Where(q =&gt; q.Type == Builder.Type);
+            // 按回收站
+            query = query.FilterByRecycleBin(request);
+            // 按关键词
+            if (!string.IsNullOrEmpty(request.Keyword)) {
+                query = query.Where(q =&gt; q.Name.Contains(request.Keyword) || q.Remark.Contains(request.Keyword));
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 排序数据
+        /// &lt;/summary&gt;
+        public void OnSort(
+            AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable&lt;Database.GenericTag&gt; query) {
+            // 默认按显示顺序排列
+            query = query.OrderBy(q =&gt; q.DisplayOrder).ThenByDescending(q =&gt; q.Id);
+        }
+
+        /// &lt;summary&gt;
+        /// 选择字段
+        /// &lt;/summary&gt;
+        public void OnSelect(
+            AjaxTableSearchRequest request, List&lt;EntityToTableRow&lt;Database.GenericTag&gt;&gt; pairs) {
+            foreach (var pair in pairs) {
+                pair.Row[&quot;Id&quot;] = pair.Entity.Id;
+                pair.Row[&quot;Name&quot;] = pair.Entity.Name;
+                pair.Row[&quot;CreateTime&quot;] = pair.Entity.CreateTime.ToClientTimeString();
+                pair.Row[&quot;DisplayOrder&quot;] = pair.Entity.DisplayOrder;
+                pair.Row[&quot;Deleted&quot;] = pair.Entity.Deleted ? EnumDeleted.Deleted : EnumDeleted.None;
+            }
+        }
+
+        /// &lt;summary&gt;
+        /// 添加列和操作
+        /// &lt;/summary&gt;
+        public void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+            var idColumn = response.Columns.AddIdColumn(&quot;Id&quot;);
+            response.Columns.AddNoColumn();
+            response.Columns.AddMemberColumn(&quot;Name&quot;, &quot;45%&quot;);
+            response.Columns.AddMemberColumn(&quot;CreateTime&quot;);
+            response.Columns.AddMemberColumn(&quot;DisplayOrder&quot;);
+            response.Columns.AddEnumLabelColumn(&quot;Deleted&quot;, typeof(EnumDeleted));
+            var actionColumn = response.Columns.AddActionColumn();
+            actionColumn.AddEditAction(
+                Builder.Type, Builder.EditUrl, dialogParameters: new { size = &quot;size-wide&quot; });
+            idColumn.AddDivider();
+            idColumn.AddDeleteActions(
+                request, typeof(Database.GenericTag), Builder.Type, Builder.BatchUrl);
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// 添加和编辑使用的表单
+    /// &lt;/summary&gt;
+    public class Form : TabDataEditFormBuilder&lt;Database.GenericTag, Form&gt; {
+        /// &lt;summary&gt;
+        /// 标签类型
+        /// &lt;/summary&gt;
+        public string Type { get; set; }
+        /// &lt;summary&gt;
+        /// 名称
+        /// &lt;/summary&gt;
+        [Required]
+        [StringLength(100)]
+        [TextBoxField(&quot;Name&quot;, &quot;Name&quot;)]
+        public string Name { get; set; }
+        /// &lt;summary&gt;
+        /// 显示顺序
+        /// &lt;/summary&gt;
+        [Required]
+        [TextBoxField(&quot;DisplayOrder&quot;, &quot;Order from small to large&quot;)]
+        public long DisplayOrder { get; set; }
+        /// &lt;summary&gt;
+        /// 备注
+        /// &lt;/summary&gt;
+        [TextAreaField(&quot;Remark&quot;, 5, &quot;Remark&quot;)]
+        public string Remark { get; set; }
+
+        /// &lt;summary&gt;
+        /// 初始化
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;type&quot;&gt;标签类型&lt;/param&gt;
+        public Form(string type) {
+            Type = type;
+        }
+
+        /// &lt;summary&gt;
+        /// 绑定数据到表单
+        /// &lt;/summary&gt;
+        protected override void OnBind(DatabaseContext context, Database.GenericTag bindFrom) {
+            if (bindFrom.Id &gt; 0 &amp;&amp; bindFrom.Type != Type) {
+                // 检查类型，防止越权操作
+                throw new ForbiddenException(new T(&quot;Try to access tag that type not matched&quot;));
+            }
+            Name = bindFrom.Name;
+            DisplayOrder = bindFrom.DisplayOrder;
+            Remark = bindFrom.Remark;
+        }
+
+        /// &lt;summary&gt;
+        /// 保存表单到数据
+        /// &lt;/summary&gt;
+        protected override object OnSubmit(DatabaseContext context, Database.GenericTag saveTo) {
+            if (saveTo.Id &lt;= 0) {
+                // 添加时
+                saveTo.Type = Type;
+                saveTo.CreateTime = DateTime.UtcNow;
+            } else if (saveTo.Id &gt; 0 &amp;&amp; saveTo.Type != Type) {
+                // 编辑时检查类型，防止越权操作
+                throw new ForbiddenException(new T(&quot;Try to access tag that type not matched&quot;));
+            }
+            saveTo.Name = Name;
+            saveTo.DisplayOrder = DisplayOrder;
+            saveTo.Remark = Remark;
+            return new {
+                message = new T(&quot;Saved Successfully&quot;),
+                script = ScriptStrings.AjaxtableUpdatedAndCloseModal
+            };
+        }
+    }
+</code></pre>
             
 
           </div> <!--/span-->
