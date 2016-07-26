@@ -511,6 +511,18 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">通用记录的数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">通用日志的操作</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +538,20 @@
               
                 <h1>通用记录 (Common.GenericRecord)</h1><br/>
               
-              <p>插件提供了通用记录的功能。<br/></p>
-<p>以下待编写</p>
+              <p>通用记录用于记录流水日志，不推荐记录有业务关联的数据。<br/>
+通用记录支持指定关联的数据Id和有效时间，在失效后会自动删除。<br/></p>
+<h3 id="_1">通用记录的数据结构</h3>
+<p>TODO</p>
+<h3 id="_2">通用日志的操作</h3>
+<p><strong>添加日志</strong></p>
+<pre><code class="csharp">var recordRepository = RepositoryResolver.ResolveRepository&lt;GenericRecordRepository&gt;(Context);
+recordRepository.AddRecord(&quot;日志类型&quot;, 关联Id, 创建人Id, 日志内容, 有效时间, 额外数据);
+</code></pre>
+
+<p><strong>获取日志</strong></p>
+<pre><code class="csharp">var recordRepository = RepositoryResolver.ResolveRepository&lt;GenericRecordRepository&gt;(Context);
+var records = recordRepository.FindRecords(&quot;日志类型&quot;, 关联Id);
+</code></pre>
             
 
           </div> <!--/span-->

@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">添加新的货币</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">设置默认货币</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">货币相关的操作</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +544,35 @@
               
                 <h1>货币 (Common.Currency)</h1><br/>
               
-              <p>插件提供了多货币支持。<br/></p>
-<p>以下待编写</p>
+              <p>这个插件提供了货币的统一接口和常用的默认货币，用于支持多货币功能。<br/></p>
+<h3 id="_1">添加新的货币</h3>
+<p>添加货币类型需要继承<code>ICurrency</code>。<br/>
+以下是人民币的源代码，可以参考添加新的货币，货币可以是实际的货币也可以是虚拟货币。<br/></p>
+<pre><code class="csharp">[ExportMany]
+public class CNY : ICurrency {
+    public string Type { get { return &quot;CNY&quot;; } }
+    public string Prefix { get { return &quot;¥&quot;; } }
+    public string Suffix { get { return null; } }
+}
+</code></pre>
+
+<h3 id="_2">设置默认货币</h3>
+<p>后台可以设置网站默认的货币<br/></p>
+<p><img alt="货币设置" src="../../img/currency_settings.jpg" /></p>
+<h3 id="_3">货币相关的操作</h3>
+<p><strong>获取所有货币</strong></p>
+<pre><code class="csharp">var currencies = Application.Ioc.ResolveMany&lt;ICurrency&gt;();
+</code></pre>
+
+<p><strong>获取指定货币</strong></p>
+<pre><code class="csharp">var currencyManager = Application.Ioc.Resolve&lt;CurrencyManager&gt;();
+var currency = currencyManager.GetCurrency(&quot;CNY&quot;);
+</code></pre>
+
+<p><strong>获取默认货币</strong></p>
+<pre><code class="csharp">var currencyManager = Application.Ioc.Resolve&lt;CurrencyManager&gt;();
+var currency = currencyManager.GetDefaultCurrency();
+</code></pre>
             
 
           </div> <!--/span-->

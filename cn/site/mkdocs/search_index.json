@@ -797,33 +797,123 @@
         }, 
         {
             "location": "/plugin/common.usercontact/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u7528\u6237\u8054\u7cfb\u4fe1\u606f\u7684\u7ba1\u7406\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u8054\u7cfb\u4eba\u63d2\u4ef6\u63d0\u4f9b\u4e86\u9488\u5bf9\u7528\u6237\u8bbe\u7f6e\u624b\u673a\u7535\u8bdd\u548c\u5730\u5740\u7b49\u529f\u80fd\u3002\n\n\n\u8054\u7cfb\u4eba\u7684\u6570\u636e\u7ed3\u6784\n\n\nTODO\n\n\n\u8054\u7cfb\u4eba\u7684\u524d\u53f0\u8bbe\u7f6e\n\n\n\n\n\u8054\u7cfb\u4eba\u7684\u540e\u53f0\u8bbe\u7f6e", 
             "title": "\u8054\u7cfb\u4eba (Common.UserContact)"
         }, 
         {
+            "location": "/plugin/common.usercontact/#_1", 
+            "text": "TODO", 
+            "title": "\u8054\u7cfb\u4eba\u7684\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/plugin/common.usercontact/#_2", 
+            "text": "", 
+            "title": "\u8054\u7cfb\u4eba\u7684\u524d\u53f0\u8bbe\u7f6e"
+        }, 
+        {
+            "location": "/plugin/common.usercontact/#_3", 
+            "text": "", 
+            "title": "\u8054\u7cfb\u4eba\u7684\u540e\u53f0\u8bbe\u7f6e"
+        }, 
+        {
             "location": "/plugin/common.genericclass/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u901a\u7528\u591a\u7ea7\u5206\u7c7b\u7684\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u901a\u7528\u5206\u7c7b\u652f\u6301\u901a\u7528\u7684\u65e0\u9650\u7ea7\u5206\u7c7b\u529f\u80fd\uff0c\n\n\u5e38\u7528\u4e8e\u5546\u54c1\u5206\u7c7b\u548c\u6587\u7ae0\u5206\u7c7b\u7b49\u9700\u8981\u591a\u7ea7\u5206\u7c7b\u7684\u529f\u80fd\u3002\n\n\n\u901a\u7528\u5206\u7c7b\u7684\u6570\u636e\u7ed3\u6784\n\n\nTODO\n\n\n\u901a\u7528\u5206\u7c7b\u7684\u7ba1\u7406\u754c\u9762\n\n\n\n\n\u5982\u4f55\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u5206\u7c7b\u7c7b\u578b\n\n\n\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u5206\u7c7b\u7c7b\u578b\u9700\u8981\u7ee7\u627f\nGenericClassBuilder\n\u3002\n\n\u4ee5\u4e0b\u662f\u5546\u54c1\u5206\u7c7b\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u5b9e\u73b0\u81ea\u5df1\u7684\u5206\u7c7b\u7c7b\u578b\u3002\n\n\n[ExportMany]\npublic class ProductClass : GenericClassBuilder {\n        public override string Name { get { return \nProductClass\n; } }\n}\n\n\n\n\n\u901a\u7528\u5206\u7c7b\u7684\u64cd\u4f5c\n\n\n\u83b7\u53d6\u5206\u7c7b\u6811\n\n\nvar classManager = Application.Ioc.Resolve\nGenericClassManager\n();\nvar classTree = classManager.GetClassTree(\n\u5206\u7c7b\u7c7b\u578b\n);\n\n\n\n\n\u83b7\u53d6\u5206\u7c7b\u5217\u8868\n\n\nvar classManager = Application.Ioc.Resolve\nGenericClassManager\n();\nvar classList = classManager.GetClasses(\n\u5206\u7c7b\u7c7b\u578b');", 
             "title": "\u901a\u7528\u5206\u7c7b (Common.GenericClass)"
         }, 
         {
+            "location": "/plugin/common.genericclass/#_1", 
+            "text": "TODO", 
+            "title": "\u901a\u7528\u5206\u7c7b\u7684\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/plugin/common.genericclass/#_2", 
+            "text": "", 
+            "title": "\u901a\u7528\u5206\u7c7b\u7684\u7ba1\u7406\u754c\u9762"
+        }, 
+        {
+            "location": "/plugin/common.genericclass/#_3", 
+            "text": "\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u5206\u7c7b\u7c7b\u578b\u9700\u8981\u7ee7\u627f GenericClassBuilder \u3002 \n\u4ee5\u4e0b\u662f\u5546\u54c1\u5206\u7c7b\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u5b9e\u73b0\u81ea\u5df1\u7684\u5206\u7c7b\u7c7b\u578b\u3002  [ExportMany]\npublic class ProductClass : GenericClassBuilder {\n        public override string Name { get { return  ProductClass ; } }\n}", 
+            "title": "\u5982\u4f55\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u5206\u7c7b\u7c7b\u578b"
+        }, 
+        {
+            "location": "/plugin/common.genericclass/#_4", 
+            "text": "\u83b7\u53d6\u5206\u7c7b\u6811  var classManager = Application.Ioc.Resolve GenericClassManager ();\nvar classTree = classManager.GetClassTree( \u5206\u7c7b\u7c7b\u578b );  \u83b7\u53d6\u5206\u7c7b\u5217\u8868  var classManager = Application.Ioc.Resolve GenericClassManager ();\nvar classList = classManager.GetClasses( \u5206\u7c7b\u7c7b\u578b');", 
+            "title": "\u901a\u7528\u5206\u7c7b\u7684\u64cd\u4f5c"
+        }, 
+        {
             "location": "/plugin/common.generictag/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u901a\u7528\u6807\u7b7e\u7684\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u901a\u7528\u6807\u7b7e\u652f\u6301\u7ed9\u7ed9\u6570\u636e\u6807\u8bb0\u5173\u8054\u7684\u6807\u7b7e\uff0c\u548c\u5206\u7c7b\u4e0d\u540c\u7684\u662f\u6807\u7b7e\u6ca1\u6709\u5c42\u7ea7\u5173\u7cfb\u3002\n\n\u5e38\u7528\u4e8e\u6587\u7ae0\u6807\u7b7e\u548c\u5546\u54c1\u6807\u7b7e\u7b49\u9700\u8981\u6309\u6807\u7b7e\u7d22\u5f15\u7684\u529f\u80fd\u3002\n\n\n\u901a\u7528\u6807\u7b7e\u7684\u6570\u636e\u7ed3\u6784\n\n\nTODO\n\n\n\u901a\u7528\u6807\u7b7e\u7684\u7ba1\u7406\u754c\u9762\n\n\n\n\n\u5982\u4f55\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u6807\u7b7e\u7c7b\u578b\n\n\n\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u6807\u7b7e\u7c7b\u578b\u9700\u8981\u7ee7\u627f\nGenericTagBuilder\n\u3002\n\n\u4ee5\u4e0b\u662f\u5546\u54c1\u6807\u7b7e\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u5b9e\u73b0\u81ea\u5df1\u7684\u6807\u7b7e\u7c7b\u578b\u3002\n\n\n[ExportMany]\npublic class ProductTag : GenericTagBuilder {\n        public override string Name { get { return \nProductTag\n; } }\n}\n\n\n\n\n\u901a\u7528\u6807\u7b7e\u7684\u64cd\u4f5c\n\n\n\u83b7\u53d6\u6807\u7b7e\u5217\u8868\n\n\nvar tagManager = Application.Ioc.Resolve\nGenericTagManager\n();\nvar tags = tagManager.GetTags(\n\u6807\u7b7e\u7c7b\u578b\n)", 
             "title": "\u901a\u7528\u6807\u7b7e (Common.GenericTag)"
         }, 
         {
+            "location": "/plugin/common.generictag/#_1", 
+            "text": "TODO", 
+            "title": "\u901a\u7528\u6807\u7b7e\u7684\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/plugin/common.generictag/#_2", 
+            "text": "", 
+            "title": "\u901a\u7528\u6807\u7b7e\u7684\u7ba1\u7406\u754c\u9762"
+        }, 
+        {
+            "location": "/plugin/common.generictag/#_3", 
+            "text": "\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u6807\u7b7e\u7c7b\u578b\u9700\u8981\u7ee7\u627f GenericTagBuilder \u3002 \n\u4ee5\u4e0b\u662f\u5546\u54c1\u6807\u7b7e\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u5b9e\u73b0\u81ea\u5df1\u7684\u6807\u7b7e\u7c7b\u578b\u3002  [ExportMany]\npublic class ProductTag : GenericTagBuilder {\n        public override string Name { get { return  ProductTag ; } }\n}", 
+            "title": "\u5982\u4f55\u5b9a\u4e49\u4e00\u4e2a\u65b0\u7684\u6807\u7b7e\u7c7b\u578b"
+        }, 
+        {
+            "location": "/plugin/common.generictag/#_4", 
+            "text": "\u83b7\u53d6\u6807\u7b7e\u5217\u8868  var tagManager = Application.Ioc.Resolve GenericTagManager ();\nvar tags = tagManager.GetTags( \u6807\u7b7e\u7c7b\u578b )", 
+            "title": "\u901a\u7528\u6807\u7b7e\u7684\u64cd\u4f5c"
+        }, 
+        {
             "location": "/plugin/common.genericrecord/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u901a\u7528\u8bb0\u5f55\u7684\u529f\u80fd\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u901a\u7528\u8bb0\u5f55\u7528\u4e8e\u8bb0\u5f55\u6d41\u6c34\u65e5\u5fd7\uff0c\u4e0d\u63a8\u8350\u8bb0\u5f55\u6709\u4e1a\u52a1\u5173\u8054\u7684\u6570\u636e\u3002\n\n\u901a\u7528\u8bb0\u5f55\u652f\u6301\u6307\u5b9a\u5173\u8054\u7684\u6570\u636eId\u548c\u6709\u6548\u65f6\u95f4\uff0c\u5728\u5931\u6548\u540e\u4f1a\u81ea\u52a8\u5220\u9664\u3002\n\n\n\u901a\u7528\u8bb0\u5f55\u7684\u6570\u636e\u7ed3\u6784\n\n\nTODO\n\n\n\u901a\u7528\u65e5\u5fd7\u7684\u64cd\u4f5c\n\n\n\u6dfb\u52a0\u65e5\u5fd7\n\n\nvar recordRepository = RepositoryResolver.ResolveRepository\nGenericRecordRepository\n(Context);\nrecordRepository.AddRecord(\n\u65e5\u5fd7\u7c7b\u578b\n, \u5173\u8054Id, \u521b\u5efa\u4ebaId, \u65e5\u5fd7\u5185\u5bb9, \u6709\u6548\u65f6\u95f4, \u989d\u5916\u6570\u636e);\n\n\n\n\n\u83b7\u53d6\u65e5\u5fd7\n\n\nvar recordRepository = RepositoryResolver.ResolveRepository\nGenericRecordRepository\n(Context);\nvar records = recordRepository.FindRecords(\n\u65e5\u5fd7\u7c7b\u578b\n, \u5173\u8054Id);", 
             "title": "\u901a\u7528\u8bb0\u5f55 (Common.GenericRecord)"
         }, 
         {
+            "location": "/plugin/common.genericrecord/#_1", 
+            "text": "TODO", 
+            "title": "\u901a\u7528\u8bb0\u5f55\u7684\u6570\u636e\u7ed3\u6784"
+        }, 
+        {
+            "location": "/plugin/common.genericrecord/#_2", 
+            "text": "\u6dfb\u52a0\u65e5\u5fd7  var recordRepository = RepositoryResolver.ResolveRepository GenericRecordRepository (Context);\nrecordRepository.AddRecord( \u65e5\u5fd7\u7c7b\u578b , \u5173\u8054Id, \u521b\u5efa\u4ebaId, \u65e5\u5fd7\u5185\u5bb9, \u6709\u6548\u65f6\u95f4, \u989d\u5916\u6570\u636e);  \u83b7\u53d6\u65e5\u5fd7  var recordRepository = RepositoryResolver.ResolveRepository GenericRecordRepository (Context);\nvar records = recordRepository.FindRecords( \u65e5\u5fd7\u7c7b\u578b , \u5173\u8054Id);", 
+            "title": "\u901a\u7528\u65e5\u5fd7\u7684\u64cd\u4f5c"
+        }, 
+        {
             "location": "/plugin/common.languageswitcher/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u8bed\u8a00\u5207\u6362\u5668\uff0c\u53ef\u4ee5\u63d0\u4f9b\u7ed9\u7528\u6237\u624b\u52a8\u5207\u6362\u663e\u793a\u8bed\u8a00\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u8fd9\u4e2a\u63d2\u4ef6\u63d0\u4f9b\u4e86\u5728\u524d\u540e\u53f0\u5207\u6362\u663e\u793a\u8bed\u8a00\u7684\u4e0b\u62c9\u83dc\u5355\uff0c\u5207\u6362\u7ed3\u679c\u4f1a\u4fdd\u5b58\u5728cookies\u4e2d\u3002\n\n\n\u5207\u6362\u83dc\u5355\u7684\u6837\u5f0f\n\n\n\n\n\u5728\u540e\u53f0\u8bbe\u7f6e\u4e2d\u4fee\u6539\u53ef\u4ee5\u5207\u6362\u7684\u8bed\u8a00", 
             "title": "\u8bed\u8a00\u5207\u6362\u5668 (Common.LanguageSwitcher)"
         }, 
         {
+            "location": "/plugin/common.languageswitcher/#_1", 
+            "text": "", 
+            "title": "\u5207\u6362\u83dc\u5355\u7684\u6837\u5f0f"
+        }, 
+        {
+            "location": "/plugin/common.languageswitcher/#_2", 
+            "text": "", 
+            "title": "\u5728\u540e\u53f0\u8bbe\u7f6e\u4e2d\u4fee\u6539\u53ef\u4ee5\u5207\u6362\u7684\u8bed\u8a00"
+        }, 
+        {
             "location": "/plugin/common.currency/", 
-            "text": "\u63d2\u4ef6\u63d0\u4f9b\u4e86\u591a\u8d27\u5e01\u652f\u6301\u3002\n\n\n\u4ee5\u4e0b\u5f85\u7f16\u5199", 
+            "text": "\u8fd9\u4e2a\u63d2\u4ef6\u63d0\u4f9b\u4e86\u8d27\u5e01\u7684\u7edf\u4e00\u63a5\u53e3\u548c\u5e38\u7528\u7684\u9ed8\u8ba4\u8d27\u5e01\uff0c\u7528\u4e8e\u652f\u6301\u591a\u8d27\u5e01\u529f\u80fd\u3002\n\n\n\u6dfb\u52a0\u65b0\u7684\u8d27\u5e01\n\n\n\u6dfb\u52a0\u8d27\u5e01\u7c7b\u578b\u9700\u8981\u7ee7\u627f\nICurrency\n\u3002\n\n\u4ee5\u4e0b\u662f\u4eba\u6c11\u5e01\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u6dfb\u52a0\u65b0\u7684\u8d27\u5e01\uff0c\u8d27\u5e01\u53ef\u4ee5\u662f\u5b9e\u9645\u7684\u8d27\u5e01\u4e5f\u53ef\u4ee5\u662f\u865a\u62df\u8d27\u5e01\u3002\n\n\n[ExportMany]\npublic class CNY : ICurrency {\n    public string Type { get { return \nCNY\n; } }\n    public string Prefix { get { return \n\u00a5\n; } }\n    public string Suffix { get { return null; } }\n}\n\n\n\n\n\u8bbe\u7f6e\u9ed8\u8ba4\u8d27\u5e01\n\n\n\u540e\u53f0\u53ef\u4ee5\u8bbe\u7f6e\u7f51\u7ad9\u9ed8\u8ba4\u7684\u8d27\u5e01\n\n\n\n\n\u8d27\u5e01\u76f8\u5173\u7684\u64cd\u4f5c\n\n\n\u83b7\u53d6\u6240\u6709\u8d27\u5e01\n\n\nvar currencies = Application.Ioc.ResolveMany\nICurrency\n();\n\n\n\n\n\u83b7\u53d6\u6307\u5b9a\u8d27\u5e01\n\n\nvar currencyManager = Application.Ioc.Resolve\nCurrencyManager\n();\nvar currency = currencyManager.GetCurrency(\nCNY\n);\n\n\n\n\n\u83b7\u53d6\u9ed8\u8ba4\u8d27\u5e01\n\n\nvar currencyManager = Application.Ioc.Resolve\nCurrencyManager\n();\nvar currency = currencyManager.GetDefaultCurrency();", 
             "title": "\u8d27\u5e01 (Common.Currency)"
+        }, 
+        {
+            "location": "/plugin/common.currency/#_1", 
+            "text": "\u6dfb\u52a0\u8d27\u5e01\u7c7b\u578b\u9700\u8981\u7ee7\u627f ICurrency \u3002 \n\u4ee5\u4e0b\u662f\u4eba\u6c11\u5e01\u7684\u6e90\u4ee3\u7801\uff0c\u53ef\u4ee5\u53c2\u8003\u6dfb\u52a0\u65b0\u7684\u8d27\u5e01\uff0c\u8d27\u5e01\u53ef\u4ee5\u662f\u5b9e\u9645\u7684\u8d27\u5e01\u4e5f\u53ef\u4ee5\u662f\u865a\u62df\u8d27\u5e01\u3002  [ExportMany]\npublic class CNY : ICurrency {\n    public string Type { get { return  CNY ; } }\n    public string Prefix { get { return  \u00a5 ; } }\n    public string Suffix { get { return null; } }\n}", 
+            "title": "\u6dfb\u52a0\u65b0\u7684\u8d27\u5e01"
+        }, 
+        {
+            "location": "/plugin/common.currency/#_2", 
+            "text": "\u540e\u53f0\u53ef\u4ee5\u8bbe\u7f6e\u7f51\u7ad9\u9ed8\u8ba4\u7684\u8d27\u5e01", 
+            "title": "\u8bbe\u7f6e\u9ed8\u8ba4\u8d27\u5e01"
+        }, 
+        {
+            "location": "/plugin/common.currency/#_3", 
+            "text": "\u83b7\u53d6\u6240\u6709\u8d27\u5e01  var currencies = Application.Ioc.ResolveMany ICurrency ();  \u83b7\u53d6\u6307\u5b9a\u8d27\u5e01  var currencyManager = Application.Ioc.Resolve CurrencyManager ();\nvar currency = currencyManager.GetCurrency( CNY );  \u83b7\u53d6\u9ed8\u8ba4\u8d27\u5e01  var currencyManager = Application.Ioc.Resolve CurrencyManager ();\nvar currency = currencyManager.GetDefaultCurrency();", 
+            "title": "\u8d27\u5e01\u76f8\u5173\u7684\u64cd\u4f5c"
         }, 
         {
             "location": "/plugin/common.pesudostatic/", 
