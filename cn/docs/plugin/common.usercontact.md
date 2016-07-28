@@ -2,7 +2,7 @@
 
 ### 联系人的数据结构
 
-TODO
+![联系人的ER图](../img/er_user_contact.jpg)
 
 ### 联系人的前台设置
 

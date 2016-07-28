@@ -3,7 +3,7 @@
 
 ### 通用分类的数据结构
 
-TODO
+![通用分类的ER图](../img/er_generic_class.jpg)
 
 ### 通用分类的管理界面
 

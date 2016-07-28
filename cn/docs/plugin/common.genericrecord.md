@@ -3,7 +3,7 @@
 
 ### 通用记录的数据结构
 
-TODO
+![通用记录的ER图](../img/er_generic_record.jpg)
 
 ### 通用日志的操作
 

@@ -5,41 +5,25 @@
         
     <url>
      <loc>None/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/create_project/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/start_project/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/publish_website/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -49,131 +33,79 @@
         
     <url>
      <loc>None/core/website_struct/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/website_config/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/ioc_container/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/plugin/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/controller/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/http_handlers/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/template_engine/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/dynamic_contents/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/isolated_cache/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/database/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/multi_language/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/multi_timezone/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/unit_test/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -189,11 +121,7 @@
         
     <url>
      <loc>None/plugin/common.captcha/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -205,251 +133,151 @@
         
     <url>
      <loc>None/plugin/common.menupage/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.adminsettings/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.userpanel/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.usercontact/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.genericclass/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.generictag/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.genericrecord/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.languageswitcher/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.currency/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.pesudostatic/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.region/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.serialgenerate/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.payment/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.payment.alipay/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.payment.tenpay/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.payment.wechat/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/cms.ckeditor/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/cms.imagebrowser/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/cms.atricle/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/shopping.product/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/shopping.logistics/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/shopping.order/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/shopping.aftersales/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/unittest.webtester/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/plugin/common.customtranslate/</loc>
-<<<<<<< HEAD
-     <lastmod>2016-07-23</lastmod>
-=======
-     <lastmod>2016-07-25</lastmod>
->>>>>>> 3e371da64be1fa949efd1232baf5d987cde835f7
+     <lastmod>2016-07-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
