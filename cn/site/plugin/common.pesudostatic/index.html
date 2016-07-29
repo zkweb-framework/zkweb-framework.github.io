@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">伪静态设置</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#url">伪静态的url替换规则</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">伪静态的替换例子</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +544,45 @@
               
                 <h1>伪静态 (Common.PesudoStatic)</h1><br/>
               
-              <p>插件提供了全局伪静态功能。<br/></p>
-<p>以下待编写</p>
+              <p>伪静态插件支持全局转换url到伪静态url的功能。<br/>
+伪静态插件主要分两部分实现，第一部分通过基础插件提供的全局url过滤器替换url，第二部分在处理请求时解析替换的url并返回原始url的结果。<br/></p>
+<h3 id="_1">伪静态设置</h3>
+<p><img alt="伪静态设置" src="../../img/pesudo_static_settings.jpg" /></p>
+<h3 id="url">伪静态的url替换规则</h3>
+<ul>
+<li>如果路径是空，跳过</li>
+<li>如果路径是"/"，跳过</li>
+<li>如果路径以"#"开始，跳过</li>
+<li>如果路径包含"://"，跳过</li>
+<li>如果路径已经有后缀名，跳过</li>
+<li>如果路径的最后一段是空，跳过（以"/"结束时）</li>
+<li>如果伪静态未启用，跳过</li>
+<li>如果路径的最后一段包含分隔符，跳过</li>
+<li>判断伪静态策略<ul>
+<li>黑名单策略: 如果路径在排除路径中，跳过</li>
+<li>白名单策略: 如果路径不在包括路径中，跳过</li>
+</ul>
+</li>
+<li>路径规则<ul>
+<li>无参数时: {原始路径}{后缀名}</li>
+<li>只有id参数时: {原始路径}{分隔符}{id}{后缀名}</li>
+<li>包含其他参数时: {原始路径}{分隔符}({参数名称}{分隔符}{参数值}...){后缀名}</li>
+<li>如果路径中的参数或它的值包含分隔符，该参数不参与到伪静态路径中</li>
+<li>如果路径中的参数或它的值经过url编码后和原值不一致，该参数不参与到伪静态路径中<ul>
+<li>这样做的原因是服务器会允许参数中有经过编码后的特殊字符</li>
+<li>但不允许路径中有经过编码后的特殊字符，或双重编码</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">伪静态的替换例子</h3>
+<pre><code>/ =&gt; /
+/user/login =&gt; /user/login.html
+/example/view?id=1 =&gt; /example/view-1.html
+/example/list?tag=123＆class=158 =&gt; /example/list-tag-123-class-158.html
+/example/list?key=1-1＆class=123 =&gt; /example/list-class-123.html?key=1-1
+</code></pre>
             
 
           </div> <!--/span-->

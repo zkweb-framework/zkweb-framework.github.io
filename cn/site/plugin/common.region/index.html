@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#_1">地区设置</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">在表单中使用地区选择器</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">地区的操作</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +544,53 @@
               
                 <h1>地区 (Common.Region)</h1><br/>
               
-              <p>插件提供了地区管理和选择地区使用的表单控件。<br/></p>
-<p>以下待编写</p>
+              <p>地区插件提供了地区管理和选择地区使用的表单控件。<br/>
+地区插件默认带了多个国家下的地区列表，地区列表使用json保存，也可以自己扩展修改。<br/></p>
+<h3 id="_1">地区设置</h3>
+<p><img alt="地区设置" src="../../img/region_settings.jpg" /></p>
+<h3 id="_2">在表单中使用地区选择器</h3>
+<p><img alt="地区选择器的效果" src="../../img/region_editor.jpg" /></p>
+<p>在表单中添加地区编辑器的字段<br/>
+地区设置中可以全局控制是否显示国家下拉框，RegionEditor中可以单独控制。<br/>
+不显示国家下拉框时，将显示绑定的国家或默认国家的地区列表。<br/></p>
+<pre><code class="csharp">[Required]
+[RegionEditor(&quot;Region&quot;)]
+public CountryAndRegion Region { get; set; }
+</code></pre>
+
+<p>提交后保存字段中的国家和地区Id<br/></p>
+<pre><code class="csharp">saveTo.Country = Region.Country;
+saveTo.RegionId = Region.RegionId;
+</code></pre>
+
+<h3 id="_3">地区的操作</h3>
+<p><strong>根据名称获取国家</strong></p>
+<pre><code class="csharp">var regionManager = Application.Ioc.Resolve&lt;RegionManager&gt;();
+var country = regionManager.GetCountry(&quot;CN&quot;);
+</code></pre>
+
+<p><strong>获取默认国家</strong></p>
+<pre><code class="csharp">var regionManager = Application.Ioc.Resolve&lt;RegionManager&gt;();
+var country = regionManager.GetDefaultCountry();
+</code></pre>
+
+<p><strong>获取地区列表</strong></p>
+<pre><code class="csharp">var regionManager = Application.Ioc.Resolve&lt;RegionManager&gt;();
+var country = regionManager.GetDefaultCountry();
+var regions = country.GetRegions();
+</code></pre>
+
+<p><strong>获取地区树</strong></p>
+<pre><code class="csharp">var regionManager = Application.Ioc.Resolve&lt;RegionManager&gt;();
+var country = regionManager.GetDefaultCountry();
+var tree = country.GetRegionsTree();
+</code></pre>
+
+<p><strong>根据地区Id获取地区节点</strong></p>
+<pre><code class="csharp">var regionManager = Application.Ioc.Resolve&lt;RegionManager&gt;();
+var country = regionManager.GetDefaultCountry();
+var node = country.GetRegionsTreeNode(regionId);
+</code></pre>
             
 
           </div> <!--/span-->
