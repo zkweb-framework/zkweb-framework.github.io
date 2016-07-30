@@ -511,6 +511,24 @@
                 
 
                 
+                  <li class="main">
+                    <a href="#ckeditor">CKEditor字段的效果</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#ckeditor_1">如何使用CKEditor字段</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#ckeditor_2">使用CKEditor需要注意的点</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -526,8 +544,21 @@
               
                 <h1>CKEditor (CMS.CKEditor)</h1><br/>
               
-              <p>插件提供了CKEditor表单控件。<br/></p>
-<p>以下待编写</p>
+              <p>CKEditor插件提供了基础插件中的<code>RichTextEditor</code>表单字段的实现。<br/></p>
+<h3 id="ckeditor">CKEditor字段的效果</h3>
+<p><img alt="CKEditor字段的效果" src="../../img/ckeditor.jpg" /></p>
+<h3 id="ckeditor_1">如何使用CKEditor字段</h3>
+<p>并添加<code>CMS.CKEditor</code>到插件列表，并在表单的成员上添加<code>RichTextEditor</code>属性即可。<br/></p>
+<pre><code class="csharp">[RichTextEditor(&quot;Remark&quot;)]
+public string Remark { get; set; }
+</code></pre>
+
+<h3 id="ckeditor_2">使用CKEditor需要注意的点</h3>
+<ul>
+<li>CKEditor保存到数据库时，会使用经过html编码后的值</li>
+<li>提交后会对标签进行白名单过滤，不在白名单中的标签和属性将被过滤掉</li>
+<li>CKEditor允许在内容中嵌入图片(base64)，但是为了更快的加载速度推荐使用<a href="../cms.imagebrowser">图片管理器</a>插件。</li>
+</ul>
             
 
           </div> <!--/span-->
