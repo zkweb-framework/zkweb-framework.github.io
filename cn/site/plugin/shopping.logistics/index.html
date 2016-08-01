@@ -555,8 +555,21 @@
 <h3 id="_1">物流的数据结构</h3>
 <p><img alt="物流的ER图" src="../../img/er_logistics.jpg" /></p>
 <h3 id="_2">物流的管理界面</h3>
+<p><img alt="物流的管理界面" src="../../img/logistics_manage.jpg" />
+<img alt="运费规则" src="../../img/logistics_price_rules.jpg" /></p>
 <h3 id="_3">获取物流列表</h3>
+<p>获取物流列表需要传入所属用户的Id，传入null时获取系统的物流列表。<br/></p>
+<pre><code class="csharp">var logisticsManager = Application.Ioc.Resolve&lt;LogisticsManager&gt;();
+var logistics in logisticsManager.GetLogisticsList(ownerId);
+</code></pre>
+
 <h3 id="_4">计算运费价格</h3>
+<p>计算运费价格需要传入物流，国家，地区Id和总重量(克)，<br/>
+计算完成后返回((运费, 货币), 错误信息)，类型是<code>Pair&lt;Pair&lt;decimal, string&gt;, string&gt;</code>。<br/>
+如果运费规则不能在传入的地区中使用，会返回一个错误信息。<br/></p>
+<pre><code class="csharp">var logisticsManager = Application.Ioc.Resolve&lt;LogisticsManager&gt;();
+var result = logisticsManager.CalculateCost(logisticsId, country, regionId, totalWeight);
+</code></pre>
             
 
           </div> <!--/span-->
