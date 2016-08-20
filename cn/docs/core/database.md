@@ -1,76 +1,68 @@
-ZKWeb使用了NHibernate来管理数据库和查询数据。<br/>
-目前支持的数据库服务器有PostgreSQL, SQLite, MSSQL, MySQL。<br/>
+ZKWeb支持多ORM和多数据库。<br/>
+支持的ORM有NHibernate, EFCore, Dapper, NHibernate。<br/>
+支持的数据库有MSSQL, MySQL, SQLite, PostgreSQL, InMemory, MongoDB。<br/>
+所有ORM都提供了统一的接口，但因为数据结构差异很大，除非数据结构很简单，否则难以实现同一份代码兼容多个ORM。
 
-### 使用NHibernate的理由
-
-- 不保存数据库状态和更新历史，不会像EF一样容易出现metadata相关的错误
-- 可以实现自动更新数据库，添加字段后不需要任何额外操作就可以应用到数据表
-- 更好的支持MySQL等非微软的数据库
-
-ZKWeb同时使用了FluentNHibernate来定义数据结构，避免使用繁杂的xml配置。
-
-### 添加数据表
+### 添加数据实体
 
 添加`src\Database\ExampleTable.cs`，内容如下
 ``` csharp
-public class ExampleTable {
+[ExportMany]
+public class ExampleTable : IEntity<long>, IEntityMappingProvider<ExampleTable> {
 	public virtual long Id { get; set; }
 	public virtual string Name { get; set; }
 	public virtual DateTime CreateTime { get; set; }
-}
 
-[ExportMany]
-public class ExampleTableMap : ClassMap<ExampleTable> {
-	public ExampleTableMap() {
-		Id(e => e.Id);
-		Map(e => e.Name).Length(0xffff); // 0xffff `== no limit, you can confirm later
-		Map(e => e.CreateTime).Not.Nullable();
+	public virtual void Configure(IEntityMappingBuilder<ExampleTable> builder) {
+		builder.Id(e => e.Id);
+		builder.Map(e => e.Name);
+		builder.Map(e => e.CreateTime);
 	}
 }
 ```
 
-添加以后刷新浏览器即可看到数据库多出了这个表，更多用法推荐参考
-[FluentNHibernte的文档](https://github.com/jagregory/fluent-nhibernate/wiki/Getting-started)。<br/>
+数据实体需要继承`IEntity<T>`，并且还需要注册`IEntityMappingProvider<TEntity>`到容器。<br/>
 ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/>
-![添加数据表的例子](../img/create_table_example.jpg)
+注意EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持。<br/>
 
 ### 升级数据表
 
-在ZKWeb中升级数据库只需要修改类并且刷新浏览器即可。<br/>
+NHibernate支持自动更新数据表结构，直接修改代码并刷新浏览器即可。<br/>
+EFCore支持自动更新数据表结构，也是修改后刷新浏览器即可，但注意重命名字段有可能导致数据丢失。<br/>
+MongoDB不需要更新数据表结构，也是修改后刷新浏览器即可。<br/>
+Dapper不支持自动更新数据表结构，需要手动同时修改数据库，也可以借助EFCore进行迁移。<br/>
+
 在ExampleTable中添加以下成员<br/>
 ``` csharp
 public virtual bool Deleted { get; set; }
 ```
 
-在ExampleTableMap的构造函数中添加以下行<br/>
+在`Configure`函数中添加以下行<br/>
 ``` csharp
-Map(e => e.Deleted);
+builder.Map(e => e.Deleted);
 ```
 
 保存后刷新浏览器即可看到效果。<br/>
-注意ZKWeb中可以自动添加新增的字段，但是不能修改或删除原有字段。<br/>
-![](../img/example_table.jpg)
+![](../img/create_table_example.jpg)
 
 ### 增删查改
 
-通过`DatabaseManager`获取数据库上下文可以进行增删查改等操作<br/>
-默认的程序集中提供了仓储和工作单元来规范数据库操作，详细可以查看`Common.Base`插件的文档。<br/>
+通过`DatabaseManager.CreateContext`获取数据库上下文可以进行增删查改等操作。s<br/>
+数据库上下文没有`SaveChanges`，如果需要更好的性能请使用`Batch`开头的函数。<br/>
+数据库上下文默认不开启事务，需要时可以调用`BeginTransaction`和`FinishTransaction`，这两个函数支持嵌套使用。<br/>
 
 **新增数据的例子**<br/>
-使用`ref data`的原因是因为NHibernate插入数据时会返回另外一个对象。<br/>
-操作完毕后需要使用`SaveChanges`提交事务，为了保证数据一致性ZKWeb中的操作都会默认开启事务。<br/>
 ``` csharp
 [Action("example/add_data")]
 public string AddData() {
 	var databaseManager = Application.Ioc.Resolve<DatabaseManager>();
-	using (var context = databaseManager.GetContext()) {
+	using (var context = databaseManager.CreateContext()) {
 		var data = new ExampleTable() {
 			Name = "test",
 			CreateTime = DateTime.UtcNow,
 			Deleted = false
 		};
 		context.Save(ref data);
-		context.SaveChanges(); // don't forget this
 	}
 	return "success";
 }
@@ -84,12 +76,11 @@ public string AddData() {
 [Action("example/update_data")]
 public string UpdateData() {
 	var databaseManager = Application.Ioc.Resolve<DatabaseManager>();
-	using (var context = databaseManager.GetContext()) {
+	using (var context = databaseManager.CreateContext()) {
 		foreach (var data in context.Query<ExampleTable>()) {
 			var localData = data;
 			context.Save(ref localData, d => d.Name = "updated");
 		}
-		context.SaveChanges(); // don't forget this
 	}
 	return "success";
 }
@@ -97,12 +88,11 @@ public string UpdateData() {
 
 **查询数据的例子**<br/>
 这里返回没有更新的数据内容。<br/>
-查询时不需要调用`SaveChanges`函数。<br/>
 ``` csharp
 [Action("example/query_data")]
 public string QueryData() {
 	var databaseManager = Application.Ioc.Resolve<DatabaseManager>();
-	using (var context = databaseManager.GetContext()) {
+	using (var context = databaseManager.CreateContext()) {
 		var notUpdated = context.Query<ExampleTable>()
 			.Where(t => t.Name != "updated").ToList();
 		return string.Format("these objects are not updated:\r\n{0}",
@@ -116,36 +106,33 @@ public string QueryData() {
 [Action("example/remove_data")]
 public string RemoveData() {
 	var databaseManager = Application.Ioc.Resolve<DatabaseManager>();
-	using (var context = databaseManager.GetContext()) {
-		long deleted = context.DeleteWhere<ExampleTable>(d => d.Name == "updated");
-		context.SaveChanges(); // don't forget this
+	using (var context = databaseManager.CreateContext()) {
+		long deleted = context.BatchDelete<ExampleTable>(d => d.Name == "updated");
 		return string.Format("{0} objects are removed", deleted);
 	}
 }
 ```
 
-### 数据事件
+### 实体事件
 
-ZKWeb支持定义事件监听数据的增删查改<br/>
-其中增加和修改使用`IDataSaveCallback`，删除使用`IDataDeleteCallback`。<br/>
-在Before或After函数中可以通过传入的`context`参数修改关联的数据，<br/>
-在Before或After函数中抛出例外可以阻止事务提交。<br/>
+ZKWeb支持定义事件监听实体的增删查改，继承`IEntityOperationHandler<TEntity>`并注册到容器即可。<br/>
+在Before函数中抛出例外可以阻止操作，如果使用了事务，在After函数中抛出例外也可以阻止操作。<br/>
 
-**保存事件的示例**<br/>
-添加`src\DataCallbacks\ExampleDataSaveCallback.cs`，内容如下<br/>
-这个处理器会在数据插入或名称改变时记录到日志。<br/>
+**实体事件的示例**<br/>
+添加`src\EntityOperationHandlers\ExampleEntityOperationHandler.cs`，内容如下<br/>
+添加或更新或删除数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
 ``` csharp
 [ExportMany]
-public class ExampleDataSaveCallback : IDataSaveCallback<ExampleTable> {
+public class ExampleEntityOperationHandler : IEntityOperationHandler<ExampleTable> {
 	private long IdBeforeSave { get; set; }
 	private string NameBeforeSave { get; set; }
 
-	public void BeforeSave(DatabaseContext context, ExampleTable data) {
+	public void BeforeSave(IDatabaseContext context, ExampleTable data) {
 		IdBeforeSave = data.Id;
 		NameBeforeSave = data.Name;
 	}
 
-	public void AfterSave(DatabaseContext context, ExampleTable data) {
+	public void AfterSave(IDatabaseContext context, ExampleTable data) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		if (IdBeforeSave <= 0) {
 			logManager.LogDebug(string.Format("example data inserted, id is {0}", data.Id));
@@ -153,73 +140,43 @@ public class ExampleDataSaveCallback : IDataSaveCallback<ExampleTable> {
 			logManager.LogDebug(string.Format("example data name changed, id is {0}", data.Id));
 		}
 	}
-}
-```
 
-添加或更新数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
-
-**删除事件的示例**<br/>
-添加`src\DataCallbacks\ExampleDataDeleteCallback.cs`，内容如下<br/>
-这个处理器会在数据删除时记录到日志。<br/>
-``` csharp
-[ExportMany]
-public class ExampleDataDeleteCallback : IDataDeleteCallback<ExampleTable> {
-	public void BeforeDelete(DatabaseContext context, ExampleTable data) {
+	public void BeforeDelete(IDatabaseContext context, ExampleTable data) {
 	}
 
-	public void AfterDelete(DatabaseContext context, ExampleTable data) {
+	public void AfterDelete(IDatabaseContext context, ExampleTable data) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogDebug(string.Format("example data deleted, id is {0}", data.Id));
 	}
 }
 ```
 
-删除数据后可以查看`ZKWeb\App_Data\Logs`下的日志是否记录成功。<br/>
-
 ### 原生查询
 
-ZKWeb在支持数据事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
-但可以使用原生查询实现，使用原生查询时将不能支持数据事件等高级功能。<br/>
-
-NHibernate的会话可以通过`context.Session`获取到。
-``` csharp
-context.Session.Save(new ExampleTable());
-```
+ZKWeb在支持实体事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
+但可以使用原生查询实现，使用原生查询时将不能支持实体事件等高级功能。<br/>
+各个ORM的原生查询格式都不一样，这里以Dapper为例。<br/>
 
 执行储存过程（添加、更新或删除）
 ``` csharp
-var query = context.Session.CreateSQLQuery("exec some_update_sp @arg");
-query.SetParameter("arg", 1);
-int affected = query.ExecuteUpdate();
+long affected = context.RawUpdate("exec some_update_sp @arg", new { arg = 1 });
 ```
 
 执行储存过程（查询）
 ``` csharp
-var query = context.Session.CreateSQLQuery("exec some_query_sp @arg");
-query.SetParameter("arg", 1);
-var result = query.Enumerable<ExampleTable>();
+var result = context.RawQuery<ExampleTable>("exec some_query_sp @arg", new { arg = 1 }).ToList();
 ```
 
-### 全局修改表名
+### 全局处理表名
 
-ZKWeb允许在初始化数据库时调用注册的处理器。<br/>
-可以注册`IDatabaseInitializeHandler`实现全局修改表名。<br/>
-全局修改表名非常危险，推荐只在首次部署到服务器之前进行修改。<br/>
-修改示例<br/>
+ZKWeb允许全局处理表名，继承`IDatabaseInitializeHandler`并注册到容器即可。<br/>
+注意这里更改了表名以后，原来创建的数据都不会自动迁移过去，有需要请手动进行迁移。<br/>
+示例代码<br/>
 ```
 [ExportMany]
-public class DatabaseInitializeHandlerDemo : IDatabaseInitializeHandler {
-	public void OnInitialize(FluentConfiguration configuration) {
-		configuration.Mappings(m => {
-			m.FluentMappings.Conventions.Add(
-				ConventionBuilder.Class.Always(x =>
-				x.Table(string.Format("demo_{0}", x.EntityType.Name.ToLower()))));
-			m.FluentMappings.Conventions.Add(
-				ConventionBuilder.HasManyToMany.Always(x =>
-				x.Table(string.Format("demo_{0}_to_{1}",
-					x.EntityType.Name.ToLower(),
-					x.ChildType.Name.ToLower()))));
-		});
+public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
+	public void ConvertTableName(ref string tableName) {
+		tableName = "ZKWeb_" + tableName;
 	}
 }
 ```

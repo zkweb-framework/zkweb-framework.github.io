@@ -6,11 +6,9 @@ ZKWeb提供了对Http的抽象封装，不依赖于Asp.Net和Asp.Net Core。<br/
 
 ZKWeb的控制器不拥有状态，不像Mvc的控制器会带当前Http上下文和路由信息。<br/>
 ZKweb的控制器不决定路径，路径需要通过各个函数的Action属性指定，Action属性可以指定完整的Url。<br/>
-ZKWeb的Action函数不带参数，获取传入的表单参数等时需要通过`HttpManager.CurrentContext`。<br/>
 
 ### 控制器的示例
 
-Action函数可以返回IActionResult或string。</br>
 Action属性需要指定完整的Url，Url前如果没有"/"会自动补上。</br>
 `[ExportMany]`属性在[IoC容器](ioc_container)提到过，用于注册组件到全局的容器。<br/>
 ``` csharp
@@ -18,21 +16,32 @@ Action属性需要指定完整的Url，Url前如果没有"/"会自动补上。</
 public class ExampleController : IController {
 	[Action("example/plain_text")]
 	public IActionResult PlainText() {
+		// 返回文本
 		return new PlainResult("some plain text");
 	}
 
 	[Action("example/plain_string")]
 	public string PlainString() {
+		// 返回文本，返回类型是string时会自动使用PlainResult包装
 		return "some plain string";
+	}
+	
+	[Action("example/json")]
+	public object Json(string name, int age) {
+		// 有参数时会自动获取传入参数
+		// 返回json，返回类型不是IActionResult或string时会自动使用JsonResult包装
+		return new { name, age };
 	}
 
 	[Action("example/template")]
 	public IActionResult Template() {
+		// 返回模板
 		return new TemplateResult("zkweb.examples/hello.html", new { text = "World" });
 	}
 
 	[Action("example/file")]
 	public IActionResult File() {
+		// 返回文件
 		return new FileResult("D:\\1.txt");
 	}
 }
@@ -61,9 +70,9 @@ ZKWeb提供了以下的返回类型，</br>
 
 ### 获取传入参数
 
-获取传入参数需要通过`HttpManager.CurrentContext`。<br/>
-推荐使用扩展函数`Get<T>`来获取参数。<br/>
-想知道如何在测试时模拟这里的参数，请参考[单元测试](unit_test)。<br/>
+如果action函数带有参数，会自动按参数的名称进行获取。<br/>
+需要手动获取时可以使用`HttpManager.CurrentContext.Request.Get<T>`。
+
 ``` csharp
 [ExportMany]
 public class PostExampleController : IController {

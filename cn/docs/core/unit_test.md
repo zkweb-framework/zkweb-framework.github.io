@@ -51,11 +51,11 @@ public void MethodB() {
 ``` csharp
 public void MethodC() {
 	using (Application.OverrideIoc()) {
-		Application.Ioc.Unregister<IDataDeleteCallback<ExampleTable>>();
-		Assert.IsTrue(!Application.Ioc.ResolveMany<IDataDeleteCallback<ExampleTable>>().Any());
+		Application.Ioc.Unregister<IEntityOperationHandler<ExampleTable>>();
+		Assert.IsTrue(!Application.Ioc.ResolveMany<IEntityOperationHandler<ExampleTable>>().Any());
 	}
 	// override is finished
-	Assert.IsTrue(Application.Ioc.ResolveMany<IDataDeleteCallback<ExampleTable>>().Any());
+	Assert.IsTrue(Application.Ioc.ResolveMany<IEntityOperationHandler<ExampleTable>>().Any());
 }
 ```
 
@@ -63,15 +63,14 @@ public void MethodC() {
 
 在测试时，有时需要做涉及到数据库的测试，<br/>
 可以使用`TestManager.UseTemporaryDatabase`来让指定范围内的代码使用临时数据库。<br/>
-临时数据库使用了sqlite + 临时文件，结束后会自动删除该文件。<br/>
-如果需要查看临时数据库的内容，可以在using结束之前下一个断点，然后用数据库浏览器打开临时文件夹下的数据库文件。<br/>
+临时数据库默认使用内存数据库，也可以通过修改网站配置使用指定的数据库。<br/>
 在`ExampleTest`类中添加以下函数<br/>
 ``` csharp
 public void MethodD() {
 	var testManager = Application.Ioc.Resolve<TestManager>();
 	using (testManager.UseTemporaryDatabase()) {
 		var databaseManager = Application.Ioc.Resolve<DatabaseManager>();
-		using (var context = databaseManager.GetContext()) {
+		using (var context = databaseManager.CreateContext()) {
 			var obj = new ExampleTable() { Name = "obj in temporary database" };
 			context.Save(ref obj);
 		}
