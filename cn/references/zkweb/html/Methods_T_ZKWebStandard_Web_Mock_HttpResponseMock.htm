@@ -3,23 +3,26 @@
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWebStandard_Web_Mock_HttpResponseMock_AddHeader.htm">AddHeader</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWebStandard_Web_Mock_HttpResponseMock_End.htm">End</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWebStandard_Web_Mock_HttpResponseMock_GetContentsFromBody.htm">GetContentsFromBody</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWebStandard_Web_Mock_HttpResponseMock_Redirect.htm">Redirect</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWebStandard_Web_Mock_HttpResponseMock_SetCookie.htm">SetCookie</a></td><td /></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Extension Methods</span></div><div id="ID1RBSection" class="collapsibleSection"><table id="memberList" class="members"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault.htm">ConvertOrDefault(Type, Object)</a></td><td>Overloaded.  <div class="summary">
-            转换对象到指定类型，失败时返回默认值
-            转换过程
-            	类型是枚举类型时先把值转换到int再转换到枚举类型
-            	使用Convert.ChangeType转换
-            	使用JsonConvert转换
+            Convert object to specified type
+            Return default value if failed
+            Flow
+            - If object is Enum and type is int, use Convert.ToInt32
+            - If object is string and type is Enum, use Enum.Parse
+            - Use Convert.ChangeType
+            - If object is string, use json deserialize(obj, type)
+            - Use json deserialize(serialize(obj), type)
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_ObjectExtensions.htm">ObjectExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault__1.htm">ConvertOrDefault<span id="LST8CD46FDB_0"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST8CD46FDB_0?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>T<span id="LST8CD46FDB_1"></span><script type="text/javascript">AddLanguageSpecificTextSet("LST8CD46FDB_1?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>(T)</a></td><td>Overloaded.  <div class="summary">
-            转换对象到指定类型，失败时返回默认值
+            Convert object to specified type
+            Return default value if failed
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_ObjectExtensions.htm">ObjectExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_ObjectExtensions_EqualsSupportsNull.htm">EqualsSupportsNull</a></td><td><div class="summary">
-            对比对象是否相等
-            对象等于null也可以进行比较
+            Compare objects, won't throw exception if any object is null
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_ObjectExtensions.htm">ObjectExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_IHttpResponseExtensions_RedirectByScript.htm">RedirectByScript</a></td><td><div class="summary">
-            通过脚本跳转到指定url
-            用这个代替301跳转可以保留referer
+            Redirect to url by javascript
+            Use it instead of 301 redirect can make browser send the referer header
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">IHttpResponseExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_IHttpResponseExtensions_SetLastModified.htm">SetLastModified</a></td><td><div class="summary">
-            设置最后修改的时间
+            Set last modified time to http response
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">IHttpResponseExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_IHttpResponseExtensions_Write.htm">Write</a></td><td><div class="summary">
-            写入字符串到回应
+            Write string to http response
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">IHttpResponseExtensions</a>.)</td></tr><tr data="public;inherited;notNetfw;"><td><img src="../icons/pubextension.gif" alt="Public Extension Method" title="Public Extension Method" /></td><td><a href="M_ZKWebStandard_Extensions_IHttpResponseExtensions_WriteFile.htm">WriteFile</a></td><td><div class="summary">
-            写入文件到回应
+            Write file to http response
             </div> (Defined by <a href="T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm">IHttpResponseExtensions</a>.)</td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID2RB')" onkeypress="SectionExpandCollapse_CheckKey('ID2RB', event)" tabindex="0"><img id="ID2RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID2RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="T_ZKWebStandard_Web_Mock_HttpResponseMock.htm">HttpResponseMock Class</a></div><div class="seeAlsoStyle"><a href="N_ZKWebStandard_Web_Mock.htm">ZKWebStandard.Web.Mock Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter"> </div></body></html>

@@ -40,10 +40,10 @@
     <IncludeFavorites>False</IncludeFavorites>
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-beta-1a\lib\NET45\ZKWeb.dll" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-beta-1a\lib\NET45\ZKWeb.xml" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-beta-1a\lib\NET45\ZKWebStandard.dll" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-beta-1a\lib\NET45\ZKWebStandard.xml" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWeb.dll" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWeb.xml" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWebStandard.dll" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWebStandard.xml" />
     </DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
@@ -78,26 +78,26 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CSScriptLibrary">
-      <HintPath>C:\Users\admin\.nuget\packages\CS-Script.bin\3.12.2.1\lib\net45\CSScriptLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="DotLiquid">
-      <HintPath>C:\Users\admin\.nuget\packages\DotLiquidForkForZKWeb\1.0.0\lib\NET45\DotLiquid.dll</HintPath>
+      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb.Fork.DotLiquid\2.0.0\lib\net45\DotLiquid.dll</HintPath>
     </Reference>
-    <Reference Include="FluentNHibernate">
-      <HintPath>C:\Users\admin\.nuget\packages\FluentNHibernate\2.0.3\lib\net40\FluentNHibernate.dll</HintPath>
+    <Reference Include="FastReflection">
+      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb.Fork.FastReflection\2.0.0\lib\net45\FastReflection.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.CSharp">
-      <HintPath>C:\Users\admin\.nuget\packages\CS-Script.bin\3.12.2.1\lib\net45\Mono.CSharp.dll</HintPath>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>C:\Users\admin\.nuget\packages\Microsoft.CodeAnalysis.Common\1.3.2\lib\net45\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>C:\Users\admin\.nuget\packages\Microsoft.CodeAnalysis.CSharp\1.3.2\lib\net45\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>C:\Users\admin\.nuget\packages\Newtonsoft.Json\9.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>C:\Users\admin\.nuget\packages\NHibernate\4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
-    </Reference>
     <Reference Include="NSubstitute">
-      <HintPath>C:\Users\admin\.nuget\packages\NSubstitute\1.10.0\lib\net40\NSubstitute.dll</HintPath>
+      <HintPath>C:\Users\admin\.nuget\packages\NSubstitute\2.0.0-rc\lib\net45\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWeb.System.Drawing">
+      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb.System.Drawing\1.0.1\lib\net45\ZKWeb.System.Drawing.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

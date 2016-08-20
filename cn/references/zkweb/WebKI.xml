@@ -25,8 +25,14 @@
     <HelpKINode Title="HttpResponseWrapper.AddHeader Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_AddHeader.htm" />
     <HelpKINode Title="IHttpResponse.AddHeader Method " Url="html/M_ZKWebStandard_Web_IHttpResponse_AddHeader.htm" />
   </HelpKINode>
-  <HelpKINode Title="AddRange(Of T) method" Url="html/M_ZKWebStandard_Extensions_ISetExtensions_AddRange__1.htm" />
-  <HelpKINode Title="AddRange&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_ISetExtensions_AddRange__1.htm" />
+  <HelpKINode Title="AddRange(Of T) method">
+    <HelpKINode Title="IListExtensions.AddRange(T) Method " Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddRange__1.htm" />
+    <HelpKINode Title="ISetExtensions.AddRange(T) Method " Url="html/M_ZKWebStandard_Extensions_ISetExtensions_AddRange__1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AddRange&lt;T&gt; method">
+    <HelpKINode Title="IListExtensions.AddRange(T) Method " Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddRange__1.htm" />
+    <HelpKINode Title="ISetExtensions.AddRange(T) Method " Url="html/M_ZKWebStandard_Extensions_ISetExtensions_AddRange__1.htm" />
+  </HelpKINode>
   <HelpKINode Title="AddVersionHeaderHandler class">
     <HelpKINode Title="AddVersionHeaderHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm" />
     <HelpKINode Title="about AddVersionHeaderHandler class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler.htm" />
@@ -35,8 +41,8 @@
   </HelpKINode>
   <HelpKINode Title="AddVersionHeaderHandler.AddVersionHeaderHandler constructor" Url="html/M_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler__ctor.htm" />
   <HelpKINode Title="AddVersionHeaderHandler.OnRequest method" Url="html/M_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler_OnRequest.htm" />
-  <HelpKINode Title="AfterDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_AfterDelete.htm" />
-  <HelpKINode Title="AfterSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_AfterSave.htm" />
+  <HelpKINode Title="AfterDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterDelete.htm" />
+  <HelpKINode Title="AfterSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterSave.htm" />
   <HelpKINode Title="AllTestCompletedInfo class">
     <HelpKINode Title="AllTestCompletedInfo Class" Url="html/T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm" />
     <HelpKINode Title="about AllTestCompletedInfo class" Url="html/T_ZKWebStandard_Testing_Events_AllTestCompletedInfo.htm" />
@@ -85,7 +91,6 @@
   <HelpKINode Title="AreaId property" Url="html/P_ZKWeb_Templating_TemplateTags_Area_AreaId.htm" />
   <HelpKINode Title="Areas property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_Areas.htm" />
   <HelpKINode Title="Args property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidget_Args.htm" />
-  <HelpKINode Title="Assemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Assemble.htm" />
   <HelpKINode Title="Assembly property" Url="html/P_ZKWebStandard_Testing_TestRunner_Assembly.htm" />
   <HelpKINode Title="AssemblyPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPath.htm" />
   <HelpKINode Title="AssemblyPdbPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPdbPath.htm" />
@@ -122,8 +127,15 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Testing_AssertSkipedException.htm" />
   </HelpKINode>
   <HelpKINode Title="AssertSkipedException.AssertSkipedException constructor" Url="html/M_ZKWebStandard_Testing_AssertSkipedException__ctor.htm" />
-  <HelpKINode Title="BeforeDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_BeforeDelete.htm" />
-  <HelpKINode Title="BeforeSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_BeforeSave.htm" />
+  <HelpKINode Title="BatchDelete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
+  <HelpKINode Title="BatchDelete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
+  <HelpKINode Title="BatchSave(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchSave__1.htm" />
+  <HelpKINode Title="BatchSave&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchSave__1.htm" />
+  <HelpKINode Title="BatchUpdate(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchUpdate__1.htm" />
+  <HelpKINode Title="BatchUpdate&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchUpdate__1.htm" />
+  <HelpKINode Title="BeforeDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeDelete.htm" />
+  <HelpKINode Title="BeforeSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeSave.htm" />
+  <HelpKINode Title="BeginTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_BeginTransaction.htm" />
   <HelpKINode Title="BinDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_BinDirectory.htm" />
   <HelpKINode Title="Body property">
     <HelpKINode Title="HttpRequestMock.Body Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_body.htm" />
@@ -133,7 +145,8 @@
     <HelpKINode Title="IHttpRequest.Body Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_Body.htm" />
     <HelpKINode Title="IHttpResponse.Body Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_Body.htm" />
   </HelpKINode>
-  <HelpKINode Title="BuildFactor method" Url="html/Overload_ZKWebStandard_Ioc_Container_BuildFactor.htm" />
+  <HelpKINode Title="BuildActionDelegate method" Url="html/M_ZKWeb_Web_IControllerExtensions_BuildActionDelegate.htm" />
+  <HelpKINode Title="BuildFactory method" Url="html/Overload_ZKWebStandard_Extensions_IContainerExtensions_BuildFactory.htm" />
   <HelpKINode Title="BuildQueryString method" Url="html/M_ZKWebStandard_Utils_HttpUtils_BuildQueryString.htm" />
   <HelpKINode Title="ByHeight enumeration member" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
   <HelpKINode Title="ByteArrayExtensions class">
@@ -173,6 +186,7 @@
   <HelpKINode Title="CacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_CacheTime.htm" />
   <HelpKINode Title="CanConvert method" Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_CanConvert.htm" />
   <HelpKINode Title="CanTranslate method" Url="html/M_ZKWeb_Localize_ITranslateProvider_CanTranslate.htm" />
+  <HelpKINode Title="CascadeDelete property" Url="html/P_ZKWeb_Database_EntityMappingOptions_CascadeDelete.htm" />
   <HelpKINode Title="Check method" Url="html/M_ZKWebStandard_Utils_PasswordInfo_Check.htm" />
   <HelpKINode Title="Childs property" Url="html/P_ZKWebStandard_Utils_ITreeNode_1_Childs.htm" />
   <HelpKINode Title="ChinaMobile field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_ChinaMobile.htm" />
@@ -185,10 +199,34 @@
     <HelpKINode Title="TemplateFileSystem.ClearCache Method " Url="html/M_ZKWeb_Templating_TemplateFileSystem_ClearCache.htm" />
     <HelpKINode Title="TranslateManager.ClearCache Method " Url="html/M_ZKWeb_Localize_TranslateManager_ClearCache.htm" />
   </HelpKINode>
-  <HelpKINode Title="Clone method" Url="html/M_ZKWebStandard_Ioc_Container_Clone.htm" />
+  <HelpKINode Title="Clone method">
+    <HelpKINode Title="Container.Clone Method " Url="html/M_ZKWebStandard_Ioc_Container_Clone.htm" />
+    <HelpKINode Title="IContainer.Clone Method " Url="html/M_ZKWebStandard_Ioc_IContainer_Clone.htm" />
+  </HelpKINode>
   <HelpKINode Title="CloneByJson(Of T) method" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_CloneByJson__1.htm" />
   <HelpKINode Title="CloneByJson&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_CloneByJson__1.htm" />
-  <HelpKINode Title="Compile method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_Compile.htm" />
+  <HelpKINode Title="Column property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Column.htm" />
+  <HelpKINode Title="CompilationException class">
+    <HelpKINode Title="CompilationException Class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationException.htm" />
+    <HelpKINode Title="about CompilationException class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationException.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Plugin_CompilerServices_CompilationException__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Plugin_CompilerServices_CompilationException.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompilationException.CompilationException constructor" Url="html/M_ZKWeb_Plugin_CompilerServices_CompilationException__ctor.htm" />
+  <HelpKINode Title="CompilationOptions class">
+    <HelpKINode Title="CompilationOptions Class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationOptions.htm" />
+    <HelpKINode Title="about CompilationOptions class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationOptions.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Plugin_CompilerServices_CompilationOptions__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Plugin_CompilerServices_CompilationOptions.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Plugin_CompilerServices_CompilationOptions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CompilationOptions.CompilationOptions constructor" Url="html/M_ZKWeb_Plugin_CompilerServices_CompilationOptions__ctor.htm" />
+  <HelpKINode Title="CompilationOptions.GeneratePdbFile property" Url="html/P_ZKWeb_Plugin_CompilerServices_CompilationOptions_GeneratePdbFile.htm" />
+  <HelpKINode Title="CompilationOptions.Release property" Url="html/P_ZKWeb_Plugin_CompilerServices_CompilationOptions_Release.htm" />
+  <HelpKINode Title="Compile method">
+    <HelpKINode Title="ICompilerService.Compile Method " Url="html/M_ZKWeb_Plugin_CompilerServices_ICompilerService_Compile.htm" />
+    <HelpKINode Title="PluginInfoExtensions.Compile Method " Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_Compile.htm" />
+  </HelpKINode>
   <HelpKINode Title="CompileInfoPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_CompileInfoPath.htm" />
   <HelpKINode Title="ConcatIfNotNull(Of T) method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
   <HelpKINode Title="ConcatIfNotNull&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
@@ -201,33 +239,32 @@
   </HelpKINode>
   <HelpKINode Title="ConfigManager.ConfigManager constructor" Url="html/M_ZKWeb_Server_ConfigManager__ctor.htm" />
   <HelpKINode Title="ConfigManager.WebsiteConfig property" Url="html/P_ZKWeb_Server_ConfigManager_WebsiteConfig.htm" />
+  <HelpKINode Title="Configure method" Url="html/M_ZKWeb_Database_IEntityMappingProvider_1_Configure.htm" />
   <HelpKINode Title="ConnectionString property" Url="html/P_ZKWeb_Server_WebsiteConfig_ConnectionString.htm" />
   <HelpKINode Title="Container class">
     <HelpKINode Title="Container Class" Url="html/T_ZKWebStandard_Ioc_Container.htm" />
     <HelpKINode Title="about Container class" Url="html/T_ZKWebStandard_Ioc_Container.htm" />
     <HelpKINode Title="constructor" Url="html/M_ZKWebStandard_Ioc_Container__ctor.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_ZKWebStandard_Ioc_Container.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Ioc_Container.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Ioc_Container.htm" />
   </HelpKINode>
-  <HelpKINode Title="Container.BuildFactor method" Url="html/Overload_ZKWebStandard_Ioc_Container_BuildFactor.htm" />
   <HelpKINode Title="Container.Clone method" Url="html/M_ZKWebStandard_Ioc_Container_Clone.htm" />
   <HelpKINode Title="Container.Container constructor" Url="html/M_ZKWebStandard_Ioc_Container__ctor.htm" />
   <HelpKINode Title="Container.Dispose method" Url="html/M_ZKWebStandard_Ioc_Container_Dispose.htm" />
-  <HelpKINode Title="Container.Factors property" Url="html/P_ZKWebStandard_Ioc_Container_Factors.htm" />
-  <HelpKINode Title="Container.FactorsLock property" Url="html/P_ZKWebStandard_Ioc_Container_FactorsLock.htm" />
+  <HelpKINode Title="Container.Factories property" Url="html/P_ZKWebStandard_Ioc_Container_Factories.htm" />
+  <HelpKINode Title="Container.FactoriesLock property" Url="html/P_ZKWebStandard_Ioc_Container_FactoriesLock.htm" />
   <HelpKINode Title="Container.GetImplementedServiceTypes method" Url="html/M_ZKWebStandard_Ioc_Container_GetImplementedServiceTypes.htm" />
   <HelpKINode Title="Container.GetImplementedTypes method" Url="html/M_ZKWebStandard_Ioc_Container_GetImplementedTypes.htm" />
   <HelpKINode Title="Container.Register method" Url="html/Overload_ZKWebStandard_Ioc_Container_Register.htm" />
   <HelpKINode Title="Container.RegisterDelegate method" Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterDelegate.htm" />
   <HelpKINode Title="Container.RegisterExports method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterExports.htm" />
-  <HelpKINode Title="Container.RegisterFactor method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactor.htm" />
-  <HelpKINode Title="Container.RegisterFactorMany method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactorMany.htm" />
+  <HelpKINode Title="Container.RegisterFactory method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactory.htm" />
+  <HelpKINode Title="Container.RegisterFactoryMany method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactoryMany.htm" />
   <HelpKINode Title="Container.RegisterInstance method" Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterInstance.htm" />
   <HelpKINode Title="Container.RegisterMany method" Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterMany.htm" />
+  <HelpKINode Title="Container.RegisterSelf method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterSelf.htm" />
   <HelpKINode Title="Container.Resolve method" Url="html/Overload_ZKWebStandard_Ioc_Container_Resolve.htm" />
   <HelpKINode Title="Container.ResolveMany method" Url="html/Overload_ZKWebStandard_Ioc_Container_ResolveMany.htm" />
-  <HelpKINode Title="Container.TypeFactorsCache field" Url="html/F_ZKWebStandard_Ioc_Container_TypeFactorsCache.htm" />
   <HelpKINode Title="Container.Unregister method" Url="html/Overload_ZKWebStandard_Ioc_Container_Unregister.htm" />
   <HelpKINode Title="Container.UnregisterAll method" Url="html/M_ZKWebStandard_Ioc_Container_UnregisterAll.htm" />
   <HelpKINode Title="ContentLength property">
@@ -262,55 +299,35 @@
   <HelpKINode Title="ControllerManager.RegisterController method" Url="html/Overload_ZKWeb_Web_ControllerManager_RegisterController.htm" />
   <HelpKINode Title="ControllerManager.UnregisterAction method" Url="html/M_ZKWeb_Web_ControllerManager_UnregisterAction.htm" />
   <HelpKINode Title="ConvertOrDefault method" Url="html/Overload_ZKWebStandard_Extensions_ObjectExtensions_ConvertOrDefault.htm" />
+  <HelpKINode Title="ConvertTableName method" Url="html/M_ZKWeb_Database_IDatabaseInitializeHandler_ConvertTableName.htm" />
   <HelpKINode Title="cookies property">
     <HelpKINode Title="HttpRequestMock.cookies Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_cookies.htm" />
     <HelpKINode Title="HttpResponseMock.cookies Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_cookies.htm" />
   </HelpKINode>
   <HelpKINode Title="Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
-  <HelpKINode Title="Count(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Count__1.htm" />
-  <HelpKINode Title="Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Count__1.htm" />
+  <HelpKINode Title="Count(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
+  <HelpKINode Title="Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
   <HelpKINode Title="Counter property" Url="html/P_ZKWebStandard_Testing_Events_AllTestCompletedInfo_Counter.htm" />
   <HelpKINode Title="Create(Of T) method" Url="html/M_ZKWebStandard_Collections_LazyCache_Create__1.htm" />
   <HelpKINode Title="Create(Of TFirst, TSecond) method" Url="html/M_ZKWebStandard_Collections_Pair_Create__2.htm" />
   <HelpKINode Title="Create&lt;T&gt; method" Url="html/M_ZKWebStandard_Collections_LazyCache_Create__1.htm" />
   <HelpKINode Title="Create&lt;TFirst, TSecond&gt; method" Url="html/M_ZKWebStandard_Collections_Pair_Create__2.htm" />
+  <HelpKINode Title="CreateContext method">
+    <HelpKINode Title="DatabaseManager.CreateContext Method " Url="html/M_ZKWeb_Database_DatabaseManager_CreateContext.htm" />
+    <HelpKINode Title="IDatabaseContextFactory.CreateContext Method " Url="html/M_ZKWeb_Database_IDatabaseContextFactory_CreateContext.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CreateContextFactor method" Url="html/M_ZKWeb_Database_DatabaseManager_CreateContextFactor.htm" />
   <HelpKINode Title="CreateTree(Of T, TValue) method" Url="html/M_ZKWebStandard_Utils_TreeUtils_CreateTree__2.htm" />
   <HelpKINode Title="CreateTree&lt;T, TValue&gt; method" Url="html/M_ZKWebStandard_Utils_TreeUtils_CreateTree__2.htm" />
   <HelpKINode Title="CurrentAreaIdKey property" Url="html/P_ZKWeb_Templating_TemplateTags_Area_CurrentAreaIdKey.htm" />
   <HelpKINode Title="CurrentContext property" Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContext.htm" />
   <HelpKINode Title="CurrentContextExists property" Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContextExists.htm" />
   <HelpKINode Title="CurrentRunner property" Url="html/P_ZKWebStandard_Testing_TestRunner_CurrentRunner.htm" />
+  <HelpKINode Title="CustomSqlType property" Url="html/P_ZKWeb_Database_EntityMappingOptions_CustomSqlType.htm" />
   <HelpKINode Title="CustomWidgetsCache property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCache.htm" />
   <HelpKINode Title="CustomWidgetsCacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCacheTime.htm" />
   <HelpKINode Title="Cut enumeration member" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
   <HelpKINode Title="Database property" Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
-  <HelpKINode Title="DatabaseContext class">
-    <HelpKINode Title="DatabaseContext Class" Url="html/T_ZKWeb_Database_DatabaseContext.htm" />
-    <HelpKINode Title="about DatabaseContext class" Url="html/T_ZKWeb_Database_DatabaseContext.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Database_DatabaseContext__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_DatabaseContext.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_DatabaseContext.htm" />
-  </HelpKINode>
-  <HelpKINode Title="DatabaseContext.Count(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Count__1.htm" />
-  <HelpKINode Title="DatabaseContext.Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Count__1.htm" />
-  <HelpKINode Title="DatabaseContext.DatabaseContext constructor" Url="html/M_ZKWeb_Database_DatabaseContext__ctor.htm" />
-  <HelpKINode Title="DatabaseContext.Delete(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Delete__1.htm" />
-  <HelpKINode Title="DatabaseContext.Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Delete__1.htm" />
-  <HelpKINode Title="DatabaseContext.DeleteWhere(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_DeleteWhere__1.htm" />
-  <HelpKINode Title="DatabaseContext.DeleteWhere&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_DeleteWhere__1.htm" />
-  <HelpKINode Title="DatabaseContext.Dispose method" Url="html/M_ZKWeb_Database_DatabaseContext_Dispose.htm" />
-  <HelpKINode Title="DatabaseContext.Finalize method" Url="html/M_ZKWeb_Database_DatabaseContext_Finalize.htm" />
-  <HelpKINode Title="DatabaseContext.Get(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Get__1.htm" />
-  <HelpKINode Title="DatabaseContext.Get&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Get__1.htm" />
-  <HelpKINode Title="DatabaseContext.Query(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Query__1.htm" />
-  <HelpKINode Title="DatabaseContext.Query&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Query__1.htm" />
-  <HelpKINode Title="DatabaseContext.Save(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Save__1.htm" />
-  <HelpKINode Title="DatabaseContext.Save&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Save__1.htm" />
-  <HelpKINode Title="DatabaseContext.SaveChanges method" Url="html/M_ZKWeb_Database_DatabaseContext_SaveChanges.htm" />
-  <HelpKINode Title="DatabaseContext.Session property" Url="html/P_ZKWeb_Database_DatabaseContext_Session.htm" />
-  <HelpKINode Title="DatabaseContext.Transaction property" Url="html/P_ZKWeb_Database_DatabaseContext_Transaction.htm" />
-  <HelpKINode Title="DatabaseContext.UpdateWhere(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_UpdateWhere__1.htm" />
-  <HelpKINode Title="DatabaseContext.UpdateWhere&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_UpdateWhere__1.htm" />
   <HelpKINode Title="DatabaseManager class">
     <HelpKINode Title="DatabaseManager Class" Url="html/T_ZKWeb_Database_DatabaseManager.htm" />
     <HelpKINode Title="about DatabaseManager class" Url="html/T_ZKWeb_Database_DatabaseManager.htm" />
@@ -318,19 +335,10 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_DatabaseManager.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_DatabaseManager.htm" />
   </HelpKINode>
+  <HelpKINode Title="DatabaseManager.CreateContext method" Url="html/M_ZKWeb_Database_DatabaseManager_CreateContext.htm" />
+  <HelpKINode Title="DatabaseManager.CreateContextFactor method" Url="html/M_ZKWeb_Database_DatabaseManager_CreateContextFactor.htm" />
   <HelpKINode Title="DatabaseManager.DatabaseManager constructor" Url="html/M_ZKWeb_Database_DatabaseManager__ctor.htm" />
-  <HelpKINode Title="DatabaseManager.GetContext method" Url="html/Overload_ZKWeb_Database_DatabaseManager_GetContext.htm" />
-  <HelpKINode Title="DatabaseManager.SessionFactory property" Url="html/P_ZKWeb_Database_DatabaseManager_SessionFactory.htm" />
-  <HelpKINode Title="DatabaseScriptPath property" Url="html/P_ZKWeb_Server_PathConfig_DatabaseScriptPath.htm" />
-  <HelpKINode Title="DatabaseTypes class">
-    <HelpKINode Title="DatabaseTypes Class" Url="html/T_ZKWeb_Database_DatabaseTypes.htm" />
-    <HelpKINode Title="about DatabaseTypes class" Url="html/T_ZKWeb_Database_DatabaseTypes.htm" />
-    <HelpKINode Title="fields" Url="html/Fields_T_ZKWeb_Database_DatabaseTypes.htm" />
-  </HelpKINode>
-  <HelpKINode Title="DatabaseTypes.MSSQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_MSSQL.htm" />
-  <HelpKINode Title="DatabaseTypes.MySQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_MySQL.htm" />
-  <HelpKINode Title="DatabaseTypes.PostgreSQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_PostgreSQL.htm" />
-  <HelpKINode Title="DatabaseTypes.SQLite field" Url="html/F_ZKWeb_Database_DatabaseTypes_SQLite.htm" />
+  <HelpKINode Title="DatabaseManager.DefaultContextFactory property" Url="html/P_ZKWeb_Database_DatabaseManager_DefaultContextFactory.htm" />
   <HelpKINode Title="DateTimeExtensions class">
     <HelpKINode Title="DateTimeExtensions Class" Url="html/T_ZKWebStandard_Extensions_DateTimeExtensions.htm" />
     <HelpKINode Title="about DateTimeExtensions class" Url="html/T_ZKWebStandard_Extensions_DateTimeExtensions.htm" />
@@ -353,7 +361,13 @@
   <HelpKINode Title="DebugMessageInfo.Runner property" Url="html/P_ZKWebStandard_Testing_Events_DebugMessageInfo_Runner.htm" />
   <HelpKINode Title="Decimal field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Decimal.htm" />
   <HelpKINode Title="Decimal property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Decimal.htm" />
-  <HelpKINode Title="DeepCopy method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_DeepCopy.htm" />
+  <HelpKINode Title="DecimalExtensions class">
+    <HelpKINode Title="DecimalExtensions Class" Url="html/T_ZKWebStandard_Extensions_DecimalExtensions.htm" />
+    <HelpKINode Title="about DecimalExtensions class" Url="html/T_ZKWebStandard_Extensions_DecimalExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Extensions_DecimalExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="DecimalExtensions.Normalize method" Url="html/M_ZKWebStandard_Extensions_DecimalExtensions_Normalize.htm" />
+  <HelpKINode Title="DefaultContextFactory property" Url="html/P_ZKWeb_Database_DatabaseManager_DefaultContextFactory.htm" />
   <HelpKINode Title="DefaultErrorHandler class">
     <HelpKINode Title="DefaultErrorHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm" />
     <HelpKINode Title="about DefaultErrorHandler class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm" />
@@ -362,13 +376,10 @@
   </HelpKINode>
   <HelpKINode Title="DefaultErrorHandler.DefaultErrorHandler constructor" Url="html/M_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler__ctor.htm" />
   <HelpKINode Title="DefaultErrorHandler.OnError method" Url="html/M_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler_OnError.htm" />
-  <HelpKINode Title="DefaultReferences property" Url="html/P_ZKWeb_Plugin_PluginInfoExtensions_DefaultReferences.htm" />
   <HelpKINode Title="DefaultWidgets property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_DefaultWidgets.htm" />
   <HelpKINode Title="DELETE field" Url="html/F_ZKWeb_Web_HttpMethods_DELETE.htm" />
-  <HelpKINode Title="Delete(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Delete__1.htm" />
-  <HelpKINode Title="Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Delete__1.htm" />
-  <HelpKINode Title="DeleteWhere(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_DeleteWhere__1.htm" />
-  <HelpKINode Title="DeleteWhere&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_DeleteWhere__1.htm" />
+  <HelpKINode Title="Delete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
+  <HelpKINode Title="Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
   <HelpKINode Title="Dependencies property" Url="html/P_ZKWeb_Plugin_PluginInfo_Dependencies.htm" />
   <HelpKINode Title="Description property" Url="html/P_ZKWeb_Plugin_PluginInfo_Description.htm" />
   <HelpKINode Title="Desktop enumeration member" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
@@ -379,10 +390,8 @@
   <HelpKINode Title="Digits property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Digits.htm" />
   <HelpKINode Title="Directory property" Url="html/P_ZKWeb_Plugin_PluginInfo_Directory.htm" />
   <HelpKINode Title="DirectoryName method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_DirectoryName.htm" />
-  <HelpKINode Title="Disassemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Disassemble.htm" />
   <HelpKINode Title="Dispose method">
     <HelpKINode Title="Container.Dispose Method " Url="html/M_ZKWebStandard_Ioc_Container_Dispose.htm" />
-    <HelpKINode Title="DatabaseContext.Dispose Method " Url="html/M_ZKWeb_Database_DatabaseContext_Dispose.htm" />
     <HelpKINode Title="ImageResult.Dispose Method " Url="html/M_ZKWeb_Web_ActionResults_ImageResult_Dispose.htm" />
     <HelpKINode Title="SimpleDisposable.Dispose Method " Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Dispose.htm" />
     <HelpKINode Title="StreamResult.Dispose Method " Url="html/M_ZKWeb_Web_ActionResults_StreamResult_Dispose.htm" />
@@ -397,6 +406,22 @@
     <HelpKINode Title="IHttpResponse.End Method " Url="html/M_ZKWebStandard_Web_IHttpResponse_End.htm" />
   </HelpKINode>
   <HelpKINode Title="EnsureParentDirectory method" Url="html/M_ZKWebStandard_Utils_PathUtils_EnsureParentDirectory.htm" />
+  <HelpKINode Title="EntityMappingOptions class">
+    <HelpKINode Title="EntityMappingOptions Class" Url="html/T_ZKWeb_Database_EntityMappingOptions.htm" />
+    <HelpKINode Title="about EntityMappingOptions class" Url="html/T_ZKWeb_Database_EntityMappingOptions.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Database_EntityMappingOptions__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_EntityMappingOptions.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_EntityMappingOptions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EntityMappingOptions.CascadeDelete property" Url="html/P_ZKWeb_Database_EntityMappingOptions_CascadeDelete.htm" />
+  <HelpKINode Title="EntityMappingOptions.Column property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Column.htm" />
+  <HelpKINode Title="EntityMappingOptions.CustomSqlType property" Url="html/P_ZKWeb_Database_EntityMappingOptions_CustomSqlType.htm" />
+  <HelpKINode Title="EntityMappingOptions.EntityMappingOptions constructor" Url="html/M_ZKWeb_Database_EntityMappingOptions__ctor.htm" />
+  <HelpKINode Title="EntityMappingOptions.Index property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Index.htm" />
+  <HelpKINode Title="EntityMappingOptions.Length property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Length.htm" />
+  <HelpKINode Title="EntityMappingOptions.Nullable property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Nullable.htm" />
+  <HelpKINode Title="EntityMappingOptions.Unique property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Unique.htm" />
+  <HelpKINode Title="EntityMappingOptions.WithSerialization property" Url="html/P_ZKWeb_Database_EntityMappingOptions_WithSerialization.htm" />
   <HelpKINode Title="EnumerateAllNodes(Of T) method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_EnumerateAllNodes__1.htm" />
   <HelpKINode Title="EnumerateAllNodes&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_EnumerateAllNodes__1.htm" />
   <HelpKINode Title="EnumExtensions class">
@@ -410,7 +435,6 @@
   <HelpKINode Title="Equals method">
     <HelpKINode Title="Assert.Equals Method " Url="html/Overload_ZKWebStandard_Testing_Assert_Equals.htm" />
     <HelpKINode Title="IsolatedMemoryCacheKey(TKey).Equals Method " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm" />
-    <HelpKINode Title="JsonSerializedType(T).Equals Method " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Equals.htm" />
     <HelpKINode Title="Pair(TFirst, TSecond).Equals Method " Url="html/Overload_ZKWebStandard_Collections_Pair_2_Equals.htm" />
   </HelpKINode>
   <HelpKINode Title="EqualsSupportsNull method" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_EqualsSupportsNull.htm" />
@@ -464,8 +488,8 @@
     <HelpKINode Title="PluginInfo.Extra Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Extra.htm" />
     <HelpKINode Title="WebsiteConfig.Extra Property " Url="html/P_ZKWeb_Server_WebsiteConfig_Extra.htm" />
   </HelpKINode>
-  <HelpKINode Title="Factors property" Url="html/P_ZKWebStandard_Ioc_Container_Factors.htm" />
-  <HelpKINode Title="FactorsLock property" Url="html/P_ZKWebStandard_Ioc_Container_FactorsLock.htm" />
+  <HelpKINode Title="Factories property" Url="html/P_ZKWebStandard_Ioc_Container_Factories.htm" />
+  <HelpKINode Title="FactoriesLock property" Url="html/P_ZKWebStandard_Ioc_Container_FactoriesLock.htm" />
   <HelpKINode Title="Failed property" Url="html/P_ZKWebStandard_Testing_TestResultCounter_Failed.htm" />
   <HelpKINode Title="Fetch class">
     <HelpKINode Title="Fetch Class" Url="html/T_ZKWeb_Templating_TemplateTags_Fetch.htm" />
@@ -509,12 +533,10 @@
   <HelpKINode Title="Filters.Format method" Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_Format.htm" />
   <HelpKINode Title="Filters.RawHtml method" Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_RawHtml.htm" />
   <HelpKINode Title="Filters.Trans method" Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_Trans.htm" />
-  <HelpKINode Title="Finalize method">
-    <HelpKINode Title="DatabaseContext.Finalize Method " Url="html/M_ZKWeb_Database_DatabaseContext_Finalize.htm" />
-    <HelpKINode Title="SimpleDisposable.Finalize Method " Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Finalize.htm" />
-  </HelpKINode>
+  <HelpKINode Title="Finalize method" Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Finalize.htm" />
   <HelpKINode Title="FindIndex method" Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindIndex.htm" />
   <HelpKINode Title="FindLastIndex method" Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindLastIndex.htm" />
+  <HelpKINode Title="FinishTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_FinishTransaction.htm" />
   <HelpKINode Title="First property" Url="html/P_ZKWebStandard_Collections_Pair_2_First.htm" />
   <HelpKINode Title="Fixed enumeration member" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
   <HelpKINode Title="ForEach(Of T) method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ForEach__1.htm" />
@@ -529,14 +551,15 @@
   <HelpKINode Title="FromPath method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_FromPath.htm" />
   <HelpKINode Title="FullVersion property" Url="html/P_ZKWeb_Application_FullVersion.htm" />
   <HelpKINode Title="GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
+  <HelpKINode Title="GeneratePdbFile property" Url="html/P_ZKWeb_Plugin_CompilerServices_CompilationOptions_GeneratePdbFile.htm" />
   <HelpKINode Title="Generator property" Url="html/P_ZKWebStandard_Utils_RandomUtils_Generator.htm" />
   <HelpKINode Title="GET field" Url="html/F_ZKWeb_Web_HttpMethods_GET.htm" />
   <HelpKINode Title="Get(Of T) method">
-    <HelpKINode Title="DatabaseContext.Get(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_Get__1.htm" />
+    <HelpKINode Title="IDatabaseContext.Get(T) Method " Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
     <HelpKINode Title="IHttpRequestExtensions.Get(T) Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_Get__1.htm" />
   </HelpKINode>
   <HelpKINode Title="Get&lt;T&gt; method">
-    <HelpKINode Title="DatabaseContext.Get(T) Method " Url="html/M_ZKWeb_Database_DatabaseContext_Get__1.htm" />
+    <HelpKINode Title="IDatabaseContext.Get(T) Method " Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
     <HelpKINode Title="IHttpRequestExtensions.Get(T) Method " Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_Get__1.htm" />
   </HelpKINode>
   <HelpKINode Title="GetAcceptLanguages method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAcceptLanguages.htm" />
@@ -555,7 +578,6 @@
   <HelpKINode Title="GetCacheKey method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetExtensions_GetCacheKey.htm" />
   <HelpKINode Title="GetClientDevice method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetClientDevice.htm" />
   <HelpKINode Title="GetContentsFromBody method" Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_GetContentsFromBody.htm" />
-  <HelpKINode Title="GetContext method" Url="html/Overload_ZKWeb_Database_DatabaseManager_GetContext.htm" />
   <HelpKINode Title="GetCookie method">
     <HelpKINode Title="HttpRequestMock.GetCookie Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetCookie.htm" />
     <HelpKINode Title="HttpRequestWrapper.GetCookie Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetCookie.htm" />
@@ -583,9 +605,9 @@
     <HelpKINode Title="IHttpRequest.GetFormValues Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetFormValues.htm" />
   </HelpKINode>
   <HelpKINode Title="GetFullName method" Url="html/M_ZKWebStandard_Extensions_MethodInfoExtensions_GetFullName.htm" />
+  <HelpKINode Title="GetGenericArguments method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_GetGenericArguments.htm" />
   <HelpKINode Title="GetHashCode method">
     <HelpKINode Title="IsolatedMemoryCacheKey(TKey).GetHashCode Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_GetHashCode.htm" />
-    <HelpKINode Title="JsonSerializedType(T).GetHashCode Method " Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_GetHashCode.htm" />
     <HelpKINode Title="Pair(TFirst, TSecond).GetHashCode Method " Url="html/M_ZKWebStandard_Collections_Pair_2_GetHashCode.htm" />
   </HelpKINode>
   <HelpKINode Title="GetHeader method">
@@ -607,10 +629,15 @@
     <HelpKINode Title="CacheIsolateByUrl.GetIsolationKey Method " Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByUrl_GetIsolationKey.htm" />
     <HelpKINode Title="ICacheIsolationPolicy.GetIsolationKey Method " Url="html/M_ZKWeb_Cache_ICacheIsolationPolicy_GetIsolationKey.htm" />
   </HelpKINode>
+  <HelpKINode Title="GetLoadedAssemblies method" Url="html/M_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_GetLoadedAssemblies.htm" />
   <HelpKINode Title="GetMemberAttribute(Of TAttribute) method" Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberAttribute__1.htm" />
   <HelpKINode Title="GetMemberAttribute&lt;TAttribute&gt; method" Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberAttribute__1.htm" />
   <HelpKINode Title="GetMemberInfo method" Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberInfo.htm" />
   <HelpKINode Title="GetMimeType method" Url="html/M_ZKWebStandard_Utils_MimeUtils_GetMimeType.htm" />
+  <HelpKINode Title="GetOrCreate method">
+    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).GetOrCreate Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
+    <HelpKINode Title="MemoryCache(TKey, TValue).GetOrCreate Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetOrCreate(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="GetOrCreate&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="GetOrCreateData(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetOrCreateData__1.htm" />
@@ -654,7 +681,18 @@
   <HelpKINode Title="GetUsedMemoryBytes method" Url="html/M_ZKWebStandard_Utils_SystemUtils_GetUsedMemoryBytes.htm" />
   <HelpKINode Title="GetUserAgent method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetUserAgent.htm" />
   <HelpKINode Title="GetWidgetInfo method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetWidgetInfo.htm" />
+  <HelpKINode Title="GuidUtils class">
+    <HelpKINode Title="GuidUtils Class" Url="html/T_ZKWebStandard_Utils_GuidUtils.htm" />
+    <HelpKINode Title="about GuidUtils class" Url="html/T_ZKWebStandard_Utils_GuidUtils.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Utils_GuidUtils.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GuidUtils.SecureSequentialGuid method" Url="html/M_ZKWebStandard_Utils_GuidUtils_SecureSequentialGuid.htm" />
+  <HelpKINode Title="GuidUtils.SequentialGuid method" Url="html/M_ZKWebStandard_Utils_GuidUtils_SequentialGuid.htm" />
   <HelpKINode Title="Hash property" Url="html/P_ZKWebStandard_Utils_PasswordInfo_Hash.htm" />
+  <HelpKINode Title="HasMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
+  <HelpKINode Title="HasMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
+  <HelpKINode Title="HasManyToMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
+  <HelpKINode Title="HasManyToMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
   <HelpKINode Title="headers property">
     <HelpKINode Title="HttpRequestMock.headers Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_headers.htm" />
     <HelpKINode Title="HttpResponseMock.headers Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_headers.htm" />
@@ -883,6 +921,14 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Web_IActionResult.htm" />
   </HelpKINode>
   <HelpKINode Title="IActionResult.WriteResponse method" Url="html/M_ZKWeb_Web_IActionResult_WriteResponse.htm" />
+  <HelpKINode Title="IAssemblyLoader interface">
+    <HelpKINode Title="IAssemblyLoader Interface" Url="html/T_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader.htm" />
+    <HelpKINode Title="about IAssemblyLoader interface" Url="html/T_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IAssemblyLoader.GetLoadedAssemblies method" Url="html/M_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_GetLoadedAssemblies.htm" />
+  <HelpKINode Title="IAssemblyLoader.Load method" Url="html/Overload_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_Load.htm" />
+  <HelpKINode Title="IAssemblyLoader.LoadFile method" Url="html/M_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_LoadFile.htm" />
   <HelpKINode Title="ICacheCleaner interface">
     <HelpKINode Title="ICacheCleaner Interface" Url="html/T_ZKWeb_Cache_ICacheCleaner.htm" />
     <HelpKINode Title="about ICacheCleaner interface" Url="html/T_ZKWeb_Cache_ICacheCleaner.htm" />
@@ -895,49 +941,80 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_ICacheIsolationPolicy.htm" />
   </HelpKINode>
   <HelpKINode Title="ICacheIsolationPolicy.GetIsolationKey method" Url="html/M_ZKWeb_Cache_ICacheIsolationPolicy_GetIsolationKey.htm" />
+  <HelpKINode Title="ICompilerService interface">
+    <HelpKINode Title="ICompilerService Interface" Url="html/T_ZKWeb_Plugin_CompilerServices_ICompilerService.htm" />
+    <HelpKINode Title="about ICompilerService interface" Url="html/T_ZKWeb_Plugin_CompilerServices_ICompilerService.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Plugin_CompilerServices_ICompilerService.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Plugin_CompilerServices_ICompilerService.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICompilerService.Compile method" Url="html/M_ZKWeb_Plugin_CompilerServices_ICompilerService_Compile.htm" />
+  <HelpKINode Title="ICompilerService.TargetPlatform property" Url="html/P_ZKWeb_Plugin_CompilerServices_ICompilerService_TargetPlatform.htm" />
   <HelpKINode Title="IContainer interface">
     <HelpKINode Title="IContainer Interface" Url="html/T_ZKWebStandard_Ioc_IContainer.htm" />
     <HelpKINode Title="about IContainer interface" Url="html/T_ZKWebStandard_Ioc_IContainer.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Ioc_IContainer.htm" />
   </HelpKINode>
+  <HelpKINode Title="IContainer.Clone method" Url="html/M_ZKWebStandard_Ioc_IContainer_Clone.htm" />
+  <HelpKINode Title="IContainerExtensions class">
+    <HelpKINode Title="IContainerExtensions Class" Url="html/T_ZKWebStandard_Extensions_IContainerExtensions.htm" />
+    <HelpKINode Title="about IContainerExtensions class" Url="html/T_ZKWebStandard_Extensions_IContainerExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Extensions_IContainerExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IContainerExtensions.BuildFactory method" Url="html/Overload_ZKWebStandard_Extensions_IContainerExtensions_BuildFactory.htm" />
   <HelpKINode Title="IController interface">
     <HelpKINode Title="IController Interface" Url="html/T_ZKWeb_Web_IController.htm" />
     <HelpKINode Title="about IController interface" Url="html/T_ZKWeb_Web_IController.htm" />
   </HelpKINode>
-  <HelpKINode Title="Id property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_Id.htm" />
+  <HelpKINode Title="IControllerExtensions class">
+    <HelpKINode Title="IControllerExtensions Class" Url="html/T_ZKWeb_Web_IControllerExtensions.htm" />
+    <HelpKINode Title="about IControllerExtensions class" Url="html/T_ZKWeb_Web_IControllerExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Web_IControllerExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IControllerExtensions.BuildActionDelegate method" Url="html/M_ZKWeb_Web_IControllerExtensions_BuildActionDelegate.htm" />
+  <HelpKINode Title="Id property">
+    <HelpKINode Title="IEntity(TPrimaryKey).Id Property " Url="html/P_ZKWeb_Database_IEntity_1_Id.htm" />
+    <HelpKINode Title="TemplateArea.Id Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_Id.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Id(Of TPrimaryKey) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
+  <HelpKINode Title="Id&lt;TPrimaryKey&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
+  <HelpKINode Title="IDatabaseContext interface">
+    <HelpKINode Title="IDatabaseContext Interface" Url="html/T_ZKWeb_Database_IDatabaseContext.htm" />
+    <HelpKINode Title="about IDatabaseContext interface" Url="html/T_ZKWeb_Database_IDatabaseContext.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseContext.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDatabaseContext.BatchDelete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BatchDelete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BatchSave(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchSave__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BatchSave&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchSave__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BatchUpdate(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchUpdate__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BatchUpdate&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchUpdate__1.htm" />
+  <HelpKINode Title="IDatabaseContext.BeginTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_BeginTransaction.htm" />
+  <HelpKINode Title="IDatabaseContext.Count(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Delete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
+  <HelpKINode Title="IDatabaseContext.FinishTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_FinishTransaction.htm" />
+  <HelpKINode Title="IDatabaseContext.Get(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Get&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Query(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Query&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
+  <HelpKINode Title="IDatabaseContext.RawQuery(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
+  <HelpKINode Title="IDatabaseContext.RawQuery&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
+  <HelpKINode Title="IDatabaseContext.RawUpdate method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawUpdate.htm" />
+  <HelpKINode Title="IDatabaseContext.Save(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Save&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
+  <HelpKINode Title="IDatabaseContextFactory interface">
+    <HelpKINode Title="IDatabaseContextFactory Interface" Url="html/T_ZKWeb_Database_IDatabaseContextFactory.htm" />
+    <HelpKINode Title="about IDatabaseContextFactory interface" Url="html/T_ZKWeb_Database_IDatabaseContextFactory.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseContextFactory.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDatabaseContextFactory.CreateContext method" Url="html/M_ZKWeb_Database_IDatabaseContextFactory_CreateContext.htm" />
   <HelpKINode Title="IDatabaseInitializeHandler interface">
     <HelpKINode Title="IDatabaseInitializeHandler Interface" Url="html/T_ZKWeb_Database_IDatabaseInitializeHandler.htm" />
     <HelpKINode Title="about IDatabaseInitializeHandler interface" Url="html/T_ZKWeb_Database_IDatabaseInitializeHandler.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseInitializeHandler.htm" />
   </HelpKINode>
-  <HelpKINode Title="IDatabaseInitializeHandler.OnInitialize method" Url="html/M_ZKWeb_Database_IDatabaseInitializeHandler_OnInitialize.htm" />
-  <HelpKINode Title="IDataDeleteCallback(Of T) interface">
-    <HelpKINode Title="IDataDeleteCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-    <HelpKINode Title="about IDataDeleteCallback(Of T) interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IDataDeleteCallback(Of T).AfterDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_AfterDelete.htm" />
-  <HelpKINode Title="IDataDeleteCallback(Of T).BeforeDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_BeforeDelete.htm" />
-  <HelpKINode Title="IDataDeleteCallback&lt;T&gt; interface">
-    <HelpKINode Title="IDataDeleteCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-    <HelpKINode Title="about IDataDeleteCallback&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IDataDeleteCallback&lt;T&gt;.AfterDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_AfterDelete.htm" />
-  <HelpKINode Title="IDataDeleteCallback&lt;T&gt;.BeforeDelete method" Url="html/M_ZKWeb_Database_IDataDeleteCallback_1_BeforeDelete.htm" />
-  <HelpKINode Title="IDataSaveCallback(Of T) interface">
-    <HelpKINode Title="IDataSaveCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-    <HelpKINode Title="about IDataSaveCallback(Of T) interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IDataSaveCallback(Of T).AfterSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_AfterSave.htm" />
-  <HelpKINode Title="IDataSaveCallback(Of T).BeforeSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_BeforeSave.htm" />
-  <HelpKINode Title="IDataSaveCallback&lt;T&gt; interface">
-    <HelpKINode Title="IDataSaveCallback(T) Interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-    <HelpKINode Title="about IDataSaveCallback&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IDataSaveCallback&lt;T&gt;.AfterSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_AfterSave.htm" />
-  <HelpKINode Title="IDataSaveCallback&lt;T&gt;.BeforeSave method" Url="html/M_ZKWeb_Database_IDataSaveCallback_1_BeforeSave.htm" />
+  <HelpKINode Title="IDatabaseInitializeHandler.ConvertTableName method" Url="html/M_ZKWeb_Database_IDatabaseInitializeHandler_ConvertTableName.htm" />
   <HelpKINode Title="IDictionaryExtensions class">
     <HelpKINode Title="IDictionaryExtensions Class" Url="html/T_ZKWebStandard_Extensions_IDictionaryExtensions.htm" />
     <HelpKINode Title="about IDictionaryExtensions class" Url="html/T_ZKWebStandard_Extensions_IDictionaryExtensions.htm" />
@@ -946,6 +1023,76 @@
   <HelpKINode Title="IDictionaryExtensions.GetOrCreate(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="IDictionaryExtensions.GetOrCreate&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="IDictionaryExtensions.GetOrDefault method" Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm" />
+  <HelpKINode Title="IEntity interface">
+    <HelpKINode Title="IEntity Interface" Url="html/T_ZKWeb_Database_IEntity.htm" />
+    <HelpKINode Title="about IEntity interface" Url="html/T_ZKWeb_Database_IEntity.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntity(Of TPrimaryKey) interface">
+    <HelpKINode Title="IEntity(TPrimaryKey) Interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+    <HelpKINode Title="about IEntity(Of TPrimaryKey) interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_IEntity_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntity(Of TPrimaryKey).Id property" Url="html/P_ZKWeb_Database_IEntity_1_Id.htm" />
+  <HelpKINode Title="IEntity&lt;TPrimaryKey&gt; interface">
+    <HelpKINode Title="IEntity(TPrimaryKey) Interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+    <HelpKINode Title="about IEntity&lt;TPrimaryKey&gt; interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_IEntity_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntity&lt;TPrimaryKey&gt;.Id property" Url="html/P_ZKWeb_Database_IEntity_1_Id.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T) interface">
+    <HelpKINode Title="IEntityMappingBuilder(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="about IEntityMappingBuilder(Of T) interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityMappingBuilder(Of T).HasMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T).HasManyToMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T).Id(Of TPrimaryKey) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T).Map(Of TMember) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T).References(Of TOther) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt; interface">
+    <HelpKINode Title="IEntityMappingBuilder(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="about IEntityMappingBuilder&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.HasMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.HasManyToMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.Id&lt;TPrimaryKey&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.Map&lt;TMember&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.References&lt;TOther&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
+  <HelpKINode Title="IEntityMappingProvider interface">
+    <HelpKINode Title="IEntityMappingProvider Interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider.htm" />
+    <HelpKINode Title="about IEntityMappingProvider interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityMappingProvider(Of T) interface">
+    <HelpKINode Title="IEntityMappingProvider(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+    <HelpKINode Title="about IEntityMappingProvider(Of T) interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityMappingProvider(Of T).Configure method" Url="html/M_ZKWeb_Database_IEntityMappingProvider_1_Configure.htm" />
+  <HelpKINode Title="IEntityMappingProvider&lt;T&gt; interface">
+    <HelpKINode Title="IEntityMappingProvider(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+    <HelpKINode Title="about IEntityMappingProvider&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityMappingProvider&lt;T&gt;.Configure method" Url="html/M_ZKWeb_Database_IEntityMappingProvider_1_Configure.htm" />
+  <HelpKINode Title="IEntityOperationHandler(Of T) interface">
+    <HelpKINode Title="IEntityOperationHandler(T) Interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+    <HelpKINode Title="about IEntityOperationHandler(Of T) interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityOperationHandler(Of T).AfterDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterDelete.htm" />
+  <HelpKINode Title="IEntityOperationHandler(Of T).AfterSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterSave.htm" />
+  <HelpKINode Title="IEntityOperationHandler(Of T).BeforeDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeDelete.htm" />
+  <HelpKINode Title="IEntityOperationHandler(Of T).BeforeSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeSave.htm" />
+  <HelpKINode Title="IEntityOperationHandler&lt;T&gt; interface">
+    <HelpKINode Title="IEntityOperationHandler(T) Interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+    <HelpKINode Title="about IEntityOperationHandler&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEntityOperationHandler&lt;T&gt;.AfterDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterDelete.htm" />
+  <HelpKINode Title="IEntityOperationHandler&lt;T&gt;.AfterSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_AfterSave.htm" />
+  <HelpKINode Title="IEntityOperationHandler&lt;T&gt;.BeforeDelete method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeDelete.htm" />
+  <HelpKINode Title="IEntityOperationHandler&lt;T&gt;.BeforeSave method" Url="html/M_ZKWeb_Database_IEntityOperationHandler_1_BeforeSave.htm" />
   <HelpKINode Title="IEnumerableExtensions class">
     <HelpKINode Title="IEnumerableExtensions Class" Url="html/T_ZKWebStandard_Extensions_IEnumerableExtensions.htm" />
     <HelpKINode Title="about IEnumerableExtensions class" Url="html/T_ZKWebStandard_Extensions_IEnumerableExtensions.htm" />
@@ -1119,6 +1266,8 @@
   <HelpKINode Title="IListExtensions.AddAfter&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddAfter__1.htm" />
   <HelpKINode Title="IListExtensions.AddBefore(Of T) method" Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddBefore__1.htm" />
   <HelpKINode Title="IListExtensions.AddBefore&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddBefore__1.htm" />
+  <HelpKINode Title="IListExtensions.AddRange(Of T) method" Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddRange__1.htm" />
+  <HelpKINode Title="IListExtensions.AddRange&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IListExtensions_AddRange__1.htm" />
   <HelpKINode Title="IListExtensions.FindIndex method" Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindIndex.htm" />
   <HelpKINode Title="IListExtensions.FindLastIndex method" Url="html/Overload_ZKWebStandard_Extensions_IListExtensions_FindLastIndex.htm" />
   <HelpKINode Title="Image property" Url="html/P_ZKWeb_Web_ActionResults_ImageResult_Image.htm" />
@@ -1144,6 +1293,7 @@
   <HelpKINode Title="ImageResult.Image property" Url="html/P_ZKWeb_Web_ActionResults_ImageResult_Image.htm" />
   <HelpKINode Title="ImageResult.ImageResult constructor" Url="html/M_ZKWeb_Web_ActionResults_ImageResult__ctor.htm" />
   <HelpKINode Title="ImageResult.WriteResponse method" Url="html/M_ZKWeb_Web_ActionResults_ImageResult_WriteResponse.htm" />
+  <HelpKINode Title="Index property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Index.htm" />
   <HelpKINode Title="InfoExtension field" Url="html/F_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_InfoExtension.htm" />
   <HelpKINode Title="Initialize method">
     <HelpKINode Title="Application.Initialize Method " Url="html/M_ZKWeb_Application_Initialize.htm" />
@@ -1195,7 +1345,6 @@
     <HelpKINode Title="HttpRequestWrapper.IsHttps Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_IsHttps.htm" />
     <HelpKINode Title="IHttpRequest.IsHttps Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_IsHttps.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsMutable property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_IsMutable.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue) class">
     <HelpKINode Title="IsolatedMemoryCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
     <HelpKINode Title="about IsolatedMemoryCache(Of TKey, TValue) class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
@@ -1204,6 +1353,7 @@
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
   </HelpKINode>
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
+  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GetOrCreate method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GetOrDefault method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).IsolatedMemoryCache constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
@@ -1218,6 +1368,7 @@
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
   </HelpKINode>
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
+  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GetOrCreate method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GetOrDefault method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.IsolatedMemoryCache constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
@@ -1334,44 +1485,6 @@
   <HelpKINode Title="JsonResult.Object property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_Object.htm" />
   <HelpKINode Title="JsonResult.SerializeFormatting property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_SerializeFormatting.htm" />
   <HelpKINode Title="JsonResult.WriteResponse method" Url="html/M_ZKWeb_Web_ActionResults_JsonResult_WriteResponse.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T) class">
-    <HelpKINode Title="JsonSerializedType(T) Class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="about JsonSerializedType(Of T) class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="JsonSerializedType(Of T).Assemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Assemble.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).DeepCopy method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_DeepCopy.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).Disassemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Disassemble.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).Equals method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Equals.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).GetHashCode method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_GetHashCode.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).IsMutable property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_IsMutable.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).JsonSerializedType constructor" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1__ctor.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).NullSafeGet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeGet.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).NullSafeSet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeSet.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).Replace method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Replace.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).ReturnedType property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_ReturnedType.htm" />
-  <HelpKINode Title="JsonSerializedType(Of T).SqlTypes property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_SqlTypes.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt; class">
-    <HelpKINode Title="JsonSerializedType(T) Class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="about JsonSerializedType&lt;T&gt; class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.Assemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Assemble.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.DeepCopy method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_DeepCopy.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.Disassemble method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Disassemble.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.Equals method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Equals.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.GetHashCode method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_GetHashCode.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.IsMutable property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_IsMutable.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.JsonSerializedType constructor" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1__ctor.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.NullSafeGet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeGet.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.NullSafeSet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeSet.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.Replace method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Replace.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.ReturnedType property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_ReturnedType.htm" />
-  <HelpKINode Title="JsonSerializedType&lt;T&gt;.SqlTypes property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_SqlTypes.htm" />
   <HelpKINode Title="Key property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Key.htm" />
   <HelpKINode Title="LanguageKey field" Url="html/F_ZKWebStandard_Utils_LocaleUtils_LanguageKey.htm" />
   <HelpKINode Title="lastRedirect property" Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_lastRedirect.htm" />
@@ -1406,7 +1519,12 @@
   <HelpKINode Title="LazyCache&lt;T&gt;.LazyCache constructor" Url="html/M_ZKWebStandard_Collections_LazyCache_1__ctor.htm" />
   <HelpKINode Title="LazyCache&lt;T&gt;.Reset method" Url="html/M_ZKWebStandard_Collections_LazyCache_1_Reset.htm" />
   <HelpKINode Title="LazyCache&lt;T&gt;.Value property" Url="html/P_ZKWebStandard_Collections_LazyCache_1_Value.htm" />
-  <HelpKINode Title="Length property" Url="html/P_ZKWebStandard_Web_IHttpPostedFile_Length.htm" />
+  <HelpKINode Title="Length property">
+    <HelpKINode Title="EntityMappingOptions.Length Property " Url="html/P_ZKWeb_Database_EntityMappingOptions_Length.htm" />
+    <HelpKINode Title="IHttpPostedFile.Length Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_Length.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Load method" Url="html/Overload_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_Load.htm" />
+  <HelpKINode Title="LoadFile method" Url="html/M_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_LoadFile.htm" />
   <HelpKINode Title="LocaleUtils class">
     <HelpKINode Title="LocaleUtils Class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm" />
     <HelpKINode Title="about LocaleUtils class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm" />
@@ -1443,6 +1561,8 @@
   <HelpKINode Title="MakeMemberEqualiventExpression&lt;TData&gt; method" Url="html/M_ZKWebStandard_Utils_ExpressionUtils_MakeMemberEqualiventExpression__1.htm" />
   <HelpKINode Title="MakeSetter(Of T, M) method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeSetter__2.htm" />
   <HelpKINode Title="MakeSetter&lt;T, M&gt; method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeSetter__2.htm" />
+  <HelpKINode Title="Map(Of TMember) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
+  <HelpKINode Title="Map&lt;TMember&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
   <HelpKINode Title="Md5 enumeration member" Url="html/T_ZKWebStandard_Utils_PasswordHashType.htm" />
   <HelpKINode Title="Md5Sum method" Url="html/M_ZKWebStandard_Utils_PasswordUtils_Md5Sum.htm" />
   <HelpKINode Title="MemberInfoExtensions class">
@@ -1465,6 +1585,7 @@
   <HelpKINode Title="MemoryCache(Of TKey, TValue).CacheLock property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).Clear method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
+  <HelpKINode Title="MemoryCache(Of TKey, TValue).GetOrCreate method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).GetOrDefault method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).LastRevokeExpires property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).MemoryCache constructor" Url="html/M_ZKWebStandard_Collections_MemoryCache_2__ctor.htm" />
@@ -1484,6 +1605,7 @@
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.CacheLock property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.Clear method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
+  <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.GetOrCreate method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.GetOrDefault method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.LastRevokeExpires property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.MemoryCache constructor" Url="html/M_ZKWebStandard_Collections_MemoryCache_2__ctor.htm" />
@@ -1519,17 +1641,15 @@
   </HelpKINode>
   <HelpKINode Title="MimeUtils.GetMimeType method" Url="html/M_ZKWebStandard_Utils_MimeUtils_GetMimeType.htm" />
   <HelpKINode Title="Mobile enumeration member" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
-  <HelpKINode Title="MSSQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_MSSQL.htm" />
-  <HelpKINode Title="MySQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_MySQL.htm" />
   <HelpKINode Title="Name property">
     <HelpKINode Title="ILanguage.Name Property " Url="html/P_ZKWeb_Localize_ILanguage_Name.htm" />
     <HelpKINode Title="PluginInfo.Name Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Name.htm" />
     <HelpKINode Title="TemplateWidgetInfo.Name Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_Name.htm" />
   </HelpKINode>
   <HelpKINode Title="NonPublic property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_NonPublic.htm" />
+  <HelpKINode Title="Normalize method" Url="html/M_ZKWebStandard_Extensions_DecimalExtensions_Normalize.htm" />
   <HelpKINode Title="NormalizePath method" Url="html/M_ZKWeb_Web_ControllerManager_NormalizePath.htm" />
-  <HelpKINode Title="NullSafeGet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeGet.htm" />
-  <HelpKINode Title="NullSafeSet method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_NullSafeSet.htm" />
+  <HelpKINode Title="Nullable property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Nullable.htm" />
   <HelpKINode Title="Object property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_Object.htm" />
   <HelpKINode Title="ObjectExtensions class">
     <HelpKINode Title="ObjectExtensions Class" Url="html/T_ZKWebStandard_Extensions_ObjectExtensions.htm" />
@@ -1562,7 +1682,6 @@
     <HelpKINode Title="ITestEventHandler.OnErrorMessage Method " Url="html/M_ZKWebStandard_Testing_Events_ITestEventHandler_OnErrorMessage.htm" />
     <HelpKINode Title="TestConsoleEventHandler.OnErrorMessage Method " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler_OnErrorMessage.htm" />
   </HelpKINode>
-  <HelpKINode Title="OnInitialize method" Url="html/M_ZKWeb_Database_IDatabaseInitializeHandler_OnInitialize.htm" />
   <HelpKINode Title="OnRequest method">
     <HelpKINode Title="AddVersionHeaderHandler.OnRequest Method " Url="html/M_ZKWeb_Web_HttpRequestHandlers_AddVersionHeaderHandler_OnRequest.htm" />
     <HelpKINode Title="Application.OnRequest Method " Url="html/M_ZKWeb_Application_OnRequest.htm" />
@@ -1591,6 +1710,7 @@
   <HelpKINode Title="OriginalContext property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_OriginalContext.htm" />
   <HelpKINode Title="OriginalRequest property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_OriginalRequest.htm" />
   <HelpKINode Title="OriginalResponse property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_OriginalResponse.htm" />
+  <HelpKINode Title="ORM property" Url="html/P_ZKWeb_Server_WebsiteConfig_ORM.htm" />
   <HelpKINode Title="OverrideContext method" Url="html/Overload_ZKWebStandard_Web_HttpManager_OverrideContext.htm" />
   <HelpKINode Title="OverrideExists property" Url="html/P_ZKWeb_Web_ActionAttribute_OverrideExists.htm" />
   <HelpKINode Title="OverrideIoc method" Url="html/M_ZKWeb_Application_OverrideIoc.htm" />
@@ -1670,7 +1790,6 @@
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Server_PathConfig.htm" />
   </HelpKINode>
   <HelpKINode Title="PathConfig.AppDataDirectory property" Url="html/P_ZKWeb_Server_PathConfig_AppDataDirectory.htm" />
-  <HelpKINode Title="PathConfig.DatabaseScriptPath property" Url="html/P_ZKWeb_Server_PathConfig_DatabaseScriptPath.htm" />
   <HelpKINode Title="PathConfig.DeviceSpecializedTemplateDirectoryNameFormat property" Url="html/P_ZKWeb_Server_PathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
   <HelpKINode Title="PathConfig.Initialize method" Url="html/M_ZKWeb_Server_PathConfig_Initialize.htm" />
   <HelpKINode Title="PathConfig.LogsDirectory property" Url="html/P_ZKWeb_Server_PathConfig_LogsDirectory.htm" />
@@ -1740,16 +1859,14 @@
     <HelpKINode Title="PluginInfoExtensions Class" Url="html/T_ZKWeb_Plugin_PluginInfoExtensions.htm" />
     <HelpKINode Title="about PluginInfoExtensions class" Url="html/T_ZKWeb_Plugin_PluginInfoExtensions.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Plugin_PluginInfoExtensions.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Plugin_PluginInfoExtensions.htm" />
   </HelpKINode>
   <HelpKINode Title="PluginInfoExtensions.AssemblyPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPath.htm" />
   <HelpKINode Title="PluginInfoExtensions.AssemblyPdbPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_AssemblyPdbPath.htm" />
   <HelpKINode Title="PluginInfoExtensions.BinDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_BinDirectory.htm" />
   <HelpKINode Title="PluginInfoExtensions.Compile method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_Compile.htm" />
   <HelpKINode Title="PluginInfoExtensions.CompileInfoPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_CompileInfoPath.htm" />
-  <HelpKINode Title="PluginInfoExtensions.DefaultReferences property" Url="html/P_ZKWeb_Plugin_PluginInfoExtensions_DefaultReferences.htm" />
   <HelpKINode Title="PluginInfoExtensions.DirectoryName method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_DirectoryName.htm" />
-  <HelpKINode Title="PluginInfoExtensions.ReferencesDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_ReferencesDirectory.htm" />
+  <HelpKINode Title="PluginInfoExtensions.ReferenceAssemblyPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_ReferenceAssemblyPath.htm" />
   <HelpKINode Title="PluginInfoExtensions.SourceDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceDirectory.htm" />
   <HelpKINode Title="PluginInfoExtensions.SourceFiles method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceFiles.htm" />
   <HelpKINode Title="PluginInfoExtensions.VersionObject method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_VersionObject.htm" />
@@ -1770,7 +1887,6 @@
   </HelpKINode>
   <HelpKINode Title="POST field" Url="html/F_ZKWeb_Web_HttpMethods_POST.htm" />
   <HelpKINode Title="postedFiles property" Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_postedFiles.htm" />
-  <HelpKINode Title="PostgreSQL field" Url="html/F_ZKWeb_Database_DatabaseTypes_PostgreSQL.htm" />
   <HelpKINode Title="Protocol property">
     <HelpKINode Title="HttpRequestMock.Protocol Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_protocol.htm" />
     <HelpKINode Title="HttpRequestWrapper.Protocol Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_Protocol.htm" />
@@ -1785,8 +1901,8 @@
   <HelpKINode Title="PutData(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_PutData__1.htm" />
   <HelpKINode Title="PutData&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_PutData__1.htm" />
   <HelpKINode Title="query property" Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_query.htm" />
-  <HelpKINode Title="Query(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Query__1.htm" />
-  <HelpKINode Title="Query&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Query__1.htm" />
+  <HelpKINode Title="Query(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
+  <HelpKINode Title="Query&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
   <HelpKINode Title="QueryString property">
     <HelpKINode Title="HttpRequestMock.QueryString Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_queryString.htm" />
     <HelpKINode Title="HttpRequestWrapper.QueryString Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_QueryString.htm" />
@@ -1822,6 +1938,9 @@
   <HelpKINode Title="RawHtml method" Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_RawHtml.htm" />
   <HelpKINode Title="RawHtml.RawHtml constructor" Url="html/M_ZKWeb_Templating_TemplateTags_RawHtml__ctor.htm" />
   <HelpKINode Title="RawHtml.Render method" Url="html/M_ZKWeb_Templating_TemplateTags_RawHtml_Render.htm" />
+  <HelpKINode Title="RawQuery(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
+  <HelpKINode Title="RawQuery&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
+  <HelpKINode Title="RawUpdate method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawUpdate.htm" />
   <HelpKINode Title="ReadJson method" Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_ReadJson.htm" />
   <HelpKINode Title="ReadTemplateFile method" Url="html/M_ZKWeb_Templating_TemplateFileSystem_ReadTemplateFile.htm" />
   <HelpKINode Title="Redirect method">
@@ -1841,13 +1960,16 @@
   <HelpKINode Title="RedirectResult.RedirectResult constructor" Url="html/M_ZKWeb_Web_ActionResults_RedirectResult__ctor.htm" />
   <HelpKINode Title="RedirectResult.Url property" Url="html/P_ZKWeb_Web_ActionResults_RedirectResult_Url.htm" />
   <HelpKINode Title="RedirectResult.WriteResponse method" Url="html/M_ZKWeb_Web_ActionResults_RedirectResult_WriteResponse.htm" />
+  <HelpKINode Title="ReferenceAssemblyPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_ReferenceAssemblyPath.htm" />
   <HelpKINode Title="References property" Url="html/P_ZKWeb_Plugin_PluginInfo_References.htm" />
-  <HelpKINode Title="ReferencesDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_ReferencesDirectory.htm" />
+  <HelpKINode Title="References(Of TOther) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
+  <HelpKINode Title="References&lt;TOther&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
   <HelpKINode Title="ReflectionUtils class">
     <HelpKINode Title="ReflectionUtils Class" Url="html/T_ZKWebStandard_Utils_ReflectionUtils.htm" />
     <HelpKINode Title="about ReflectionUtils class" Url="html/T_ZKWebStandard_Utils_ReflectionUtils.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Utils_ReflectionUtils.htm" />
   </HelpKINode>
+  <HelpKINode Title="ReflectionUtils.GetGenericArguments method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_GetGenericArguments.htm" />
   <HelpKINode Title="ReflectionUtils.MakeGetter(Of T, M) method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeGetter__2.htm" />
   <HelpKINode Title="ReflectionUtils.MakeGetter&lt;T, M&gt; method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeGetter__2.htm" />
   <HelpKINode Title="ReflectionUtils.MakeSetter(Of T, M) method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_MakeSetter__2.htm" />
@@ -1892,8 +2014,8 @@
     <HelpKINode Title="Container.RegisterExports Method " Url="html/M_ZKWebStandard_Ioc_Container_RegisterExports.htm" />
     <HelpKINode Title="IRegistrator.RegisterExports Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterExports.htm" />
   </HelpKINode>
-  <HelpKINode Title="RegisterFactor method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactor.htm" />
-  <HelpKINode Title="RegisterFactorMany method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactorMany.htm" />
+  <HelpKINode Title="RegisterFactory method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactory.htm" />
+  <HelpKINode Title="RegisterFactoryMany method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterFactoryMany.htm" />
   <HelpKINode Title="RegisterInstance method">
     <HelpKINode Title="Container.RegisterInstance Method " Url="html/Overload_ZKWebStandard_Ioc_Container_RegisterInstance.htm" />
     <HelpKINode Title="IRegistrator.RegisterInstance Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_RegisterInstance.htm" />
@@ -1906,6 +2028,8 @@
   </HelpKINode>
   <HelpKINode Title="RegisterMany(Of TImplementation) method" Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_RegisterMany__1.htm" />
   <HelpKINode Title="RegisterMany&lt;TImplementation&gt; method" Url="html/M_ZKWebStandard_Ioc_IGenericRegistrator_RegisterMany__1.htm" />
+  <HelpKINode Title="RegisterSelf method" Url="html/M_ZKWebStandard_Ioc_Container_RegisterSelf.htm" />
+  <HelpKINode Title="Release property" Url="html/P_ZKWeb_Plugin_CompilerServices_CompilationOptions_Release.htm" />
   <HelpKINode Title="RemoteIpAddress property">
     <HelpKINode Title="HttpRequestMock.RemoteIpAddress Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_remoteIpAddress.htm" />
     <HelpKINode Title="HttpRequestWrapper.RemoteIpAddress Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_RemoteIpAddress.htm" />
@@ -1931,7 +2055,6 @@
   </HelpKINode>
   <HelpKINode Title="RenderTemplate method" Url="html/Overload_ZKWeb_Templating_TemplateManager_RenderTemplate.htm" />
   <HelpKINode Title="RenderWidget method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_RenderWidget.htm" />
-  <HelpKINode Title="Replace method" Url="html/M_ZKWeb_Database_UserTypes_JsonSerializedType_1_Replace.htm" />
   <HelpKINode Title="Request property">
     <HelpKINode Title="HttpContextMock.Request Property " Url="html/P_ZKWebStandard_Web_Mock_HttpContextMock_request.htm" />
     <HelpKINode Title="HttpContextWrapper.Request Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_Request.htm" />
@@ -1959,7 +2082,6 @@
     <HelpKINode Title="IHttpContext.Response Property " Url="html/P_ZKWebStandard_Web_IHttpContext_Response.htm" />
   </HelpKINode>
   <HelpKINode Title="ReturnDefault enumeration member" Url="html/T_ZKWebStandard_Ioc_IfUnresolved.htm" />
-  <HelpKINode Title="ReturnedType property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_ReturnedType.htm" />
   <HelpKINode Title="ReuseAttribute class">
     <HelpKINode Title="ReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_ReuseAttribute.htm" />
     <HelpKINode Title="about ReuseAttribute class" Url="html/T_ZKWebStandard_Ioc_ReuseAttribute.htm" />
@@ -1987,10 +2109,9 @@
     <HelpKINode Title="TestSkippedInfo.Runner Property " Url="html/P_ZKWebStandard_Testing_Events_TestSkippedInfo_Runner.htm" />
     <HelpKINode Title="TestStartingInfo.Runner Property " Url="html/P_ZKWebStandard_Testing_Events_TestStartingInfo_Runner.htm" />
   </HelpKINode>
-  <HelpKINode Title="Save(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_Save__1.htm" />
-  <HelpKINode Title="Save&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_Save__1.htm" />
+  <HelpKINode Title="Save(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
+  <HelpKINode Title="Save&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
   <HelpKINode Title="SaveAuto method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
-  <HelpKINode Title="SaveChanges method" Url="html/M_ZKWeb_Database_DatabaseContext_SaveChanges.htm" />
   <HelpKINode Title="SaveIcon method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveIcon.htm" />
   <HelpKINode Title="SaveJpeg method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveJpeg.htm" />
   <HelpKINode Title="Scheme property">
@@ -2001,9 +2122,9 @@
   <HelpKINode Title="Second property" Url="html/P_ZKWebStandard_Collections_Pair_2_Second.htm" />
   <HelpKINode Title="Secure property" Url="html/P_ZKWebStandard_Web_HttpCookieOptions_Secure.htm" />
   <HelpKINode Title="SecureCombine method" Url="html/M_ZKWebStandard_Utils_PathUtils_SecureCombine.htm" />
+  <HelpKINode Title="SecureSequentialGuid method" Url="html/M_ZKWebStandard_Utils_GuidUtils_SecureSequentialGuid.htm" />
+  <HelpKINode Title="SequentialGuid method" Url="html/M_ZKWebStandard_Utils_GuidUtils_SequentialGuid.htm" />
   <HelpKINode Title="SerializeFormatting property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_SerializeFormatting.htm" />
-  <HelpKINode Title="Session property" Url="html/P_ZKWeb_Database_DatabaseContext_Session.htm" />
-  <HelpKINode Title="SessionFactory property" Url="html/P_ZKWeb_Database_DatabaseManager_SessionFactory.htm" />
   <HelpKINode Title="SetClientDeviceToCookies method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_SetClientDeviceToCookies.htm" />
   <HelpKINode Title="SetCookie method">
     <HelpKINode Title="HttpResponseMock.SetCookie Method " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_SetCookie.htm" />
@@ -2046,8 +2167,6 @@
   <HelpKINode Title="SourceDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceDirectory.htm" />
   <HelpKINode Title="SourceFiles method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceFiles.htm" />
   <HelpKINode Title="SplitPathAndQuery method" Url="html/M_ZKWebStandard_Utils_HttpUtils_SplitPathAndQuery.htm" />
-  <HelpKINode Title="SQLite field" Url="html/F_ZKWeb_Database_DatabaseTypes_SQLite.htm" />
-  <HelpKINode Title="SqlTypes property" Url="html/P_ZKWeb_Database_UserTypes_JsonSerializedType_1_SqlTypes.htm" />
   <HelpKINode Title="StatusCode property">
     <HelpKINode Title="HttpException.StatusCode Property " Url="html/P_ZKWebStandard_Web_HttpException_StatusCode.htm" />
     <HelpKINode Title="HttpResponseMock.StatusCode Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_StatusCode.htm" />
@@ -2086,6 +2205,7 @@
   <HelpKINode Title="T to String conversion" Url="html/M_ZKWeb_Localize_T_op_Implicit.htm" />
   <HelpKINode Title="T.T constructor" Url="html/M_ZKWeb_Localize_T__ctor.htm" />
   <HelpKINode Title="T.ToString method" Url="html/M_ZKWeb_Localize_T_ToString.htm" />
+  <HelpKINode Title="TargetPlatform property" Url="html/P_ZKWeb_Plugin_CompilerServices_ICompilerService_TargetPlatform.htm" />
   <HelpKINode Title="Tel field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Tel.htm" />
   <HelpKINode Title="Tel property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Tel.htm" />
   <HelpKINode Title="TemplateArea class">
@@ -2334,7 +2454,6 @@
   </HelpKINode>
   <HelpKINode Title="ToTimestamp method" Url="html/M_ZKWebStandard_Extensions_DateTimeExtensions_ToTimestamp.htm" />
   <HelpKINode Title="Trans method" Url="html/M_ZKWeb_Templating_TemplateFilters_Filters_Trans.htm" />
-  <HelpKINode Title="Transaction property" Url="html/P_ZKWeb_Database_DatabaseContext_Transaction.htm" />
   <HelpKINode Title="Transform(Of T, U) method" Url="html/M_ZKWebStandard_Utils_TreeUtils_Transform__2.htm" />
   <HelpKINode Title="Transform&lt;T, U&gt; method" Url="html/M_ZKWebStandard_Utils_TreeUtils_Transform__2.htm" />
   <HelpKINode Title="Transient enumeration member" Url="html/T_ZKWebStandard_Ioc_ReuseType.htm" />
@@ -2376,7 +2495,7 @@
     <HelpKINode Title="MemoryCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_TryGetValue.htm" />
   </HelpKINode>
   <HelpKINode Title="Type property" Url="html/P_ZKWebStandard_Utils_PasswordInfo_Type.htm" />
-  <HelpKINode Title="TypeFactorsCache field" Url="html/F_ZKWebStandard_Ioc_Container_TypeFactorsCache.htm" />
+  <HelpKINode Title="Unique property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Unique.htm" />
   <HelpKINode Title="Unregister method">
     <HelpKINode Title="Container.Unregister Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Unregister.htm" />
     <HelpKINode Title="IRegistrator.Unregister Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_Unregister.htm" />
@@ -2388,8 +2507,6 @@
     <HelpKINode Title="Container.UnregisterAll Method " Url="html/M_ZKWebStandard_Ioc_Container_UnregisterAll.htm" />
     <HelpKINode Title="IRegistrator.UnregisterAll Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_UnregisterAll.htm" />
   </HelpKINode>
-  <HelpKINode Title="UpdateWhere(Of T) method" Url="html/M_ZKWeb_Database_DatabaseContext_UpdateWhere__1.htm" />
-  <HelpKINode Title="UpdateWhere&lt;T&gt; method" Url="html/M_ZKWeb_Database_DatabaseContext_UpdateWhere__1.htm" />
   <HelpKINode Title="Url property" Url="html/P_ZKWeb_Web_ActionResults_RedirectResult_Url.htm" />
   <HelpKINode Title="UrlDecode method" Url="html/M_ZKWebStandard_Utils_HttpUtils_UrlDecode.htm" />
   <HelpKINode Title="UrlEncode method" Url="html/M_ZKWebStandard_Utils_HttpUtils_UrlEncode.htm" />
@@ -2424,6 +2541,7 @@
   <HelpKINode Title="WebsiteConfig.Database property" Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
   <HelpKINode Title="WebsiteConfig.Extra property" Url="html/P_ZKWeb_Server_WebsiteConfig_Extra.htm" />
   <HelpKINode Title="WebsiteConfig.FromFile method" Url="html/M_ZKWeb_Server_WebsiteConfig_FromFile.htm" />
+  <HelpKINode Title="WebsiteConfig.ORM property" Url="html/P_ZKWeb_Server_WebsiteConfig_ORM.htm" />
   <HelpKINode Title="WebsiteConfig.PluginDirectories property" Url="html/P_ZKWeb_Server_WebsiteConfig_PluginDirectories.htm" />
   <HelpKINode Title="WebsiteConfig.Plugins property" Url="html/P_ZKWeb_Server_WebsiteConfig_Plugins.htm" />
   <HelpKINode Title="WebsiteConfig.WebsiteConfig constructor" Url="html/M_ZKWeb_Server_WebsiteConfig__ctor.htm" />
@@ -2433,6 +2551,7 @@
   <HelpKINode Title="WidgetInfoCacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetInfoCacheTime.htm" />
   <HelpKINode Title="WidgetPath property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_WidgetPath.htm" />
   <HelpKINode Title="WidgetRenderCache property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetRenderCache.htm" />
+  <HelpKINode Title="WithSerialization property" Url="html/P_ZKWeb_Database_EntityMappingOptions_WithSerialization.htm" />
   <HelpKINode Title="Write method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_Write.htm" />
   <HelpKINode Title="WriteDebugMessage method" Url="html/M_ZKWebStandard_Testing_TestRunner_WriteDebugMessage.htm" />
   <HelpKINode Title="WriteErrorMessage method" Url="html/M_ZKWebStandard_Testing_TestRunner_WriteErrorMessage.htm" />
@@ -2462,17 +2581,21 @@
   <HelpKINode Title="ZKWeb.Cache.Policies.CacheIsolateByLocale class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm" />
   <HelpKINode Title="ZKWeb.Cache.Policies.CacheIsolateByUrl class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByUrl.htm" />
   <HelpKINode Title="ZKWeb.Database namespace" Url="html/N_ZKWeb_Database.htm" />
-  <HelpKINode Title="ZKWeb.Database.DatabaseContext class" Url="html/T_ZKWeb_Database_DatabaseContext.htm" />
   <HelpKINode Title="ZKWeb.Database.DatabaseManager class" Url="html/T_ZKWeb_Database_DatabaseManager.htm" />
-  <HelpKINode Title="ZKWeb.Database.DatabaseTypes class" Url="html/T_ZKWeb_Database_DatabaseTypes.htm" />
+  <HelpKINode Title="ZKWeb.Database.EntityMappingOptions class" Url="html/T_ZKWeb_Database_EntityMappingOptions.htm" />
+  <HelpKINode Title="ZKWeb.Database.IDatabaseContext interface" Url="html/T_ZKWeb_Database_IDatabaseContext.htm" />
+  <HelpKINode Title="ZKWeb.Database.IDatabaseContextFactory interface" Url="html/T_ZKWeb_Database_IDatabaseContextFactory.htm" />
   <HelpKINode Title="ZKWeb.Database.IDatabaseInitializeHandler interface" Url="html/T_ZKWeb_Database_IDatabaseInitializeHandler.htm" />
-  <HelpKINode Title="ZKWeb.Database.IDataDeleteCallback(Of T) interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-  <HelpKINode Title="ZKWeb.Database.IDataDeleteCallback&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IDataDeleteCallback_1.htm" />
-  <HelpKINode Title="ZKWeb.Database.IDataSaveCallback(Of T) interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-  <HelpKINode Title="ZKWeb.Database.IDataSaveCallback&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IDataSaveCallback_1.htm" />
-  <HelpKINode Title="ZKWeb.Database.UserTypes namespace" Url="html/N_ZKWeb_Database_UserTypes.htm" />
-  <HelpKINode Title="ZKWeb.Database.UserTypes.JsonSerializedType(Of T) class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
-  <HelpKINode Title="ZKWeb.Database.UserTypes.JsonSerializedType&lt;T&gt; class" Url="html/T_ZKWeb_Database_UserTypes_JsonSerializedType_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntity interface" Url="html/T_ZKWeb_Database_IEntity.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntity(Of TPrimaryKey) interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntity&lt;TPrimaryKey&gt; interface" Url="html/T_ZKWeb_Database_IEntity_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityMappingBuilder(Of T) interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityMappingBuilder&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityMappingProvider interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityMappingProvider(Of T) interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityMappingProvider&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityOperationHandler(Of T) interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
+  <HelpKINode Title="ZKWeb.Database.IEntityOperationHandler&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityOperationHandler_1.htm" />
   <HelpKINode Title="ZKWeb.Localize namespace" Url="html/N_ZKWeb_Localize.htm" />
   <HelpKINode Title="ZKWeb.Localize.ILanguage interface" Url="html/T_ZKWeb_Localize_ILanguage.htm" />
   <HelpKINode Title="ZKWeb.Localize.ITranslateProvider interface" Url="html/T_ZKWeb_Localize_ITranslateProvider.htm" />
@@ -2483,6 +2606,12 @@
   <HelpKINode Title="ZKWeb.Logging namespace" Url="html/N_ZKWeb_Logging.htm" />
   <HelpKINode Title="ZKWeb.Logging.LogManager class" Url="html/T_ZKWeb_Logging_LogManager.htm" />
   <HelpKINode Title="ZKWeb.Plugin namespace" Url="html/N_ZKWeb_Plugin.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.AssemblyLoaders namespace" Url="html/N_ZKWeb_Plugin_AssemblyLoaders.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.AssemblyLoaders.IAssemblyLoader interface" Url="html/T_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.CompilerServices namespace" Url="html/N_ZKWeb_Plugin_CompilerServices.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.CompilerServices.CompilationException class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationException.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.CompilerServices.CompilationOptions class" Url="html/T_ZKWeb_Plugin_CompilerServices_CompilationOptions.htm" />
+  <HelpKINode Title="ZKWeb.Plugin.CompilerServices.ICompilerService interface" Url="html/T_ZKWeb_Plugin_CompilerServices_ICompilerService.htm" />
   <HelpKINode Title="ZKWeb.Plugin.IPlugin interface" Url="html/T_ZKWeb_Plugin_IPlugin.htm" />
   <HelpKINode Title="ZKWeb.Plugin.PluginInfo class" Url="html/T_ZKWeb_Plugin_PluginInfo.htm" />
   <HelpKINode Title="ZKWeb.Plugin.PluginInfoExtensions class" Url="html/T_ZKWeb_Plugin_PluginInfoExtensions.htm" />
@@ -2531,6 +2660,7 @@
   <HelpKINode Title="ZKWeb.Web.HttpRequestHandlers.DefaultErrorHandler class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm" />
   <HelpKINode Title="ZKWeb.Web.IActionResult interface" Url="html/T_ZKWeb_Web_IActionResult.htm" />
   <HelpKINode Title="ZKWeb.Web.IController interface" Url="html/T_ZKWeb_Web_IController.htm" />
+  <HelpKINode Title="ZKWeb.Web.IControllerExtensions class" Url="html/T_ZKWeb_Web_IControllerExtensions.htm" />
   <HelpKINode Title="ZKWeb.Web.IHttpRequestErrorHandler interface" Url="html/T_ZKWeb_Web_IHttpRequestErrorHandler.htm" />
   <HelpKINode Title="ZKWeb.Web.IHttpRequestHandler interface" Url="html/T_ZKWeb_Web_IHttpRequestHandler.htm" />
   <HelpKINode Title="ZKWeb.Web.IHttpRequestPreHandler interface" Url="html/T_ZKWeb_Web_IHttpRequestPreHandler.htm" />
@@ -2551,9 +2681,11 @@
   <HelpKINode Title="ZKWebStandard.Extensions namespace" Url="html/N_ZKWebStandard_Extensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.ByteArrayExtensions class" Url="html/T_ZKWebStandard_Extensions_ByteArrayExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.DateTimeExtensions class" Url="html/T_ZKWebStandard_Extensions_DateTimeExtensions.htm" />
+  <HelpKINode Title="ZKWebStandard.Extensions.DecimalExtensions class" Url="html/T_ZKWebStandard_Extensions_DecimalExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.DeviceTypes enumeration" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.EnumExtensions class" Url="html/T_ZKWebStandard_Extensions_EnumExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.ExpressionExtensions class" Url="html/T_ZKWebStandard_Extensions_ExpressionExtensions.htm" />
+  <HelpKINode Title="ZKWebStandard.Extensions.IContainerExtensions class" Url="html/T_ZKWebStandard_Extensions_IContainerExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IDictionaryExtensions class" Url="html/T_ZKWebStandard_Extensions_IDictionaryExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IEnumerableExtensions class" Url="html/T_ZKWebStandard_Extensions_IEnumerableExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IHttpContextExtensions class" Url="html/T_ZKWebStandard_Extensions_IHttpContextExtensions.htm" />
@@ -2600,6 +2732,7 @@
   <HelpKINode Title="ZKWebStandard.Utils namespace" Url="html/N_ZKWebStandard_Utils.htm" />
   <HelpKINode Title="ZKWebStandard.Utils.ExpressionUtils class" Url="html/T_ZKWebStandard_Utils_ExpressionUtils.htm" />
   <HelpKINode Title="ZKWebStandard.Utils.FileUtils class" Url="html/T_ZKWebStandard_Utils_FileUtils.htm" />
+  <HelpKINode Title="ZKWebStandard.Utils.GuidUtils class" Url="html/T_ZKWebStandard_Utils_GuidUtils.htm" />
   <HelpKINode Title="ZKWebStandard.Utils.HttpUtils class" Url="html/T_ZKWebStandard_Utils_HttpUtils.htm" />
   <HelpKINode Title="ZKWebStandard.Utils.ITreeNode(Of T) interface" Url="html/T_ZKWebStandard_Utils_ITreeNode_1.htm" />
   <HelpKINode Title="ZKWebStandard.Utils.ITreeNode&lt;T&gt; interface" Url="html/T_ZKWebStandard_Utils_ITreeNode_1.htm" />
