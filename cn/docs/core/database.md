@@ -23,7 +23,6 @@ public class ExampleTable : IEntity<long>, IEntityMappingProvider<ExampleTable> 
 
 数据实体需要继承`IEntity<T>`，并且还需要注册`IEntityMappingProvider<TEntity>`到容器。<br/>
 ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/>
-注意EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持。<br/>
 
 ### 升级数据表
 
@@ -180,3 +179,9 @@ public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
 	}
 }
 ```
+
+### 不支持的功能列表
+
+- EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持
+- EFCore目前还不支持懒加载，嵌入关联表时需要引入EF依赖并使用Include函数
+- NHibernate + Microsoft.Data.Sqlite不支持自动建表，可以手动执行生成出来的ddl文件

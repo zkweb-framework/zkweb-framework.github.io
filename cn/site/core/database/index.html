@@ -247,6 +247,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_7">不支持的功能列表</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -283,8 +289,7 @@ public class ExampleTable : IEntity&lt;long&gt;, IEntityMappingProvider&lt;Examp
 </code></pre>
 
 <p>数据实体需要继承<code>IEntity&lt;T&gt;</code>，并且还需要注册<code>IEntityMappingProvider&lt;TEntity&gt;</code>到容器。<br/>
-ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/>
-注意EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持。<br/></p>
+ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系。<br/></p>
 <h3 id="_2">升级数据表</h3>
 <p>NHibernate支持自动更新数据表结构，直接修改代码并刷新浏览器即可。<br/>
 EFCore支持自动更新数据表结构，也是修改后刷新浏览器即可，但注意重命名字段有可能导致数据丢失。<br/>
@@ -420,6 +425,13 @@ public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
     }
 }
 </code></pre>
+
+<h3 id="_7">不支持的功能列表</h3>
+<ul>
+<li>EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持</li>
+<li>EFCore目前还不支持懒加载，嵌入关联表时需要引入EF依赖并使用Include函数</li>
+<li>NHibernate + Microsoft.Data.Sqlite不支持自动建表，可以手动执行生成出来的ddl文件</li>
+</ul>
             
 
           </div> <!--/span-->
