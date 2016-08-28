@@ -258,7 +258,12 @@
 
 <p>默认的插件集中包含了比较多的功能，但不一定适合所有人的需要。<br/>
 如果不想使用默认的插件集，可以在创建项目时把<code>Use Default Plugins</code>留空。<br/>
-不使用默认的程序集需要自己编写静态文件处理器和表单处理等功能，可以参考<code>Common.Base</code>插件进行编写。</p>
+如果只想使用一部分，可以通过修改<code>App_Data\config.json</code>实现，详见<a href="../website_config">网站配置</a>。</p>
+<h4>创建时没有选择默认的插件集，打开首页是404，怎么办？</h4>
+
+<p>项目模板没有定义首页的内容（因为首页有可能已在插件集中定义），<br/>
+找到HelloController，把<code>[Action("hello")]</code>改为<code>[Action("/")]</code>即可看到首页的内容。<br/>
+同时访问静态文件也需要一个处理器，可以参考<code>Common.Base</code>插件中的实现。</p>
 <h4>使用了默认的插件集后，怎么进入管理后台？</h4>
 
 <p>后台地址是<code>/admin</code>，首次运行网站时应该先注册一个用户并用这个用户登录到后台。<br/>
