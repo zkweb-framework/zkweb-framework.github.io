@@ -5,25 +5,25 @@
         
     <url>
      <loc>None/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/create_project/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/start_project/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/publish_website/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -33,79 +33,79 @@
         
     <url>
      <loc>None/core/website_struct/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/website_config/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/ioc_container/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/plugin/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/controller/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/http_handlers/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/template_engine/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/dynamic_contents/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/isolated_cache/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/database/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/multi_language/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/multi_timezone/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>None/core/unit_test/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -115,7 +115,7 @@
         
     <url>
      <loc>None/plugin/on_working/</loc>
-     <lastmod>2016-08-28</lastmod>
+     <lastmod>2016-09-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
