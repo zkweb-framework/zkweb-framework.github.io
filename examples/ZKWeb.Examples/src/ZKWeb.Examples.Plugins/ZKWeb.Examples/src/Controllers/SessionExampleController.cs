@@ -1,14 +1,14 @@
-﻿#if TODO
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
-using ZKWeb.Plugins.Common.Base.src.Managers;
+using ZKWeb.Plugins.Common.Base.src.Controllers.Bases;
+using ZKWeb.Plugins.Common.Base.src.Domain.Services;
 using ZKWeb.Web;
 using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
 
 namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
-	public class SessionExampleController : IController {
+	public class SessionExampleController : ControllerBase {
 		[Action("example/get_session")]
 		public IActionResult GetSession() {
 			var sessionManager = Application.Ioc.Resolve<SessionManager>();
@@ -26,4 +26,3 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 		}
 	}
 }
-#endif

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>动态表格构建器 - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="动态表格构建器, 动态表格构建器">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small disabled" rel="prev" >
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../common.base.traits/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
+            
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../..">框架介绍</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/create_project/">创建项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/start_project/">开发项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/publish_website/">发布网站</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../../core/website_struct/">网站结构</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/website_config/">配置文件</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/ioc_container/">IoC容器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/plugin/">插件系统</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/controller/">控制器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/http_handlers/">请求和错误处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/template_engine/">模板引擎</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/dynamic_contents/">动态内容</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/isolated_cache/">缓存隔离</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/database/">数据库</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_language/">多语言</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_timezone/">多时区</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/unit_test/">单元测试</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>基础插件 (Common.Base)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.base.summary/">关于基础插件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.generic_config/">通用配置</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.scheduled_task/">定时任务</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.session/">会话</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.css/">基础css样式</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.javascript/">基础javascript脚本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.font/">基础图标字体</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.repository_uow/">仓储和工作单元</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.traits/">特征接口</a>
+</li>
+
+        
+            
+<li class="active">
+    <a href="./">动态表格构建器</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
+
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
+
+                
+                  <li class="main">
+                    <a href="#ajax">创建Ajax表格</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#ajax_1">创建Ajax表格的例子</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#faq">FAQ</a>
+                  </li>
+
+                  
+                
+
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
+
+            </div>
+          </div>
+
+          <div id="main-content" class="span9">
+            
+              
+                <h1>动态表格构建器</h1><br/>
+              
+              <p>Ajax表格构建器可以用于构建从远程载入内容的Ajax表格，并带分页等支持。<br/></p>
+<h3 id="ajax">创建Ajax表格</h3>
+<p>创建Ajax表格分为以下步骤</p>
+<ul>
+<li>创建<code>AjaxTableBuilder</code>，并描画到模板</li>
+<li>提供搜索地址，搜索地址返回<code>AjaxTableSearchResponse</code>的json<ul>
+<li>搜索可以使用<code>IAjaxTableCallback</code>处理</li>
+</ul>
+</li>
+</ul>
+<h3 id="ajax_1">创建Ajax表格的例子</h3>
+<p><strong>添加控制器，提供表格页面和搜索接口。</strong><br/>
+添加<code>src\Controllers\AjaxTableExampleController.cs</code><br/></p>
+<pre><code class="csharp">[ExportMany]
+public class AjaxTableExampleController : ControllerBase {
+    [Action(&quot;example/ajax_table&quot;)]
+    public IActionResult AjaxTable() {
+        var table = new AjaxTableBuilder();
+        table.Id = &quot;ExampleTable&quot;;
+        table.Target = &quot;/example/ajax_table_search&quot;;
+        var searchBar = new AjaxTableSearchBarBuilder();
+        searchBar.TableId = table.Id;
+        searchBar.Conditions.Add(new FormField(new CheckBoxFieldAttribute(&quot;Deleted&quot;)));
+        return new TemplateResult(&quot;zkweb.examples/ajax_table.html&quot;, new { table, searchBar });
+    }
+
+    [Action(&quot;example/ajax_table_search&quot;, HttpMethods.POST)]
+    public IActionResult AjaxTableSearch() {
+        var json = Request.Get&lt;string&gt;(&quot;json&quot;);
+        var request = AjaxTableSearchRequest.FromJson(json);
+        var callbacks = new ExampleAjaxTableHandler().WithExtraHandlers();
+        var response = request.BuildResponse(callbacks);
+        return new JsonResult(response);
+    }
+}
+</code></pre>
+
+<p><strong>添加表格处理器</strong><br/>
+添加<code>src\UIComponents\AjaxTableCallbacks\ExampleAjaxTableHandler.cs</code><br/></p>
+<pre><code class="csharp">public class ExampleAjaxTableHandler : AjaxTableHandlerBase&lt;ExampleTable, long&gt; {
+    public override void OnQuery(
+        AjaxTableSearchRequest request, ref IQueryable&lt;ExampleTable&gt; query) {
+        if (!string.IsNullOrEmpty(request.Keyword)) {
+            query = query.Where(q =&gt; q.Name.Contains(request.Keyword));
+        }
+    }
+
+    public override void OnSort(
+        AjaxTableSearchRequest request, ref IQueryable&lt;ExampleTable&gt; query) {
+        query = query.OrderByDescending(q =&gt; q.Id);
+    }
+
+    public override void OnSelect(
+        AjaxTableSearchRequest request, IList&lt;EntityToTableRow&lt;ExampleTable&gt;&gt; pairs) {
+        foreach (var pair in pairs) {
+            pair.Row[&quot;Id&quot;] = pair.Entity.Id;
+            pair.Row[&quot;Name&quot;] = pair.Entity.Name;
+            pair.Row[&quot;CreateTime&quot;] = pair.Entity.CreateTime.ToClientTimeString();
+            pair.Row[&quot;UpdateTime&quot;] = pair.Entity.UpdateTime.ToClientTimeString();
+        }
+    }
+
+    public override void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+        response.Columns.AddIdColumn(&quot;Id&quot;);
+        response.Columns.AddMemberColumn(&quot;Name&quot;);
+        response.Columns.AddMemberColumn(&quot;CreateTime&quot;);
+        response.Columns.AddMemberColumn(&quot;UpdateTime&quot;);
+    }
+}
+</code></pre>
+
+<p><strong>添加模板文件</strong><br/>
+添加<code>templates\zkweb.examples\ajax_table.html</code></p>
+<pre><code class="html">{% use_title &quot;Example Ajax Table&quot; %}
+{% include common.base/header.html %}
+
+&lt;div class=&quot;portlet&quot;&gt;
+    &lt;div class=&quot;portlet-title&quot;&gt;
+        &lt;div class=&quot;caption&quot;&gt;
+            &lt;i class=&quot;fa fa-table&quot;&gt;&lt;/i&gt;
+            &lt;span class=&quot;caption-subject&quot;&gt;Example Ajax Table&lt;/span&gt;
+            &lt;span class=&quot;caption-helper&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        {{ searchBar }}
+    &lt;/div&gt;
+    &lt;div class=&quot;portlet-body&quot;&gt;
+        {{ table }}
+    &lt;/div&gt;
+&lt;/div&gt;
+
+{% include common.base/footer.html %}
+</code></pre>
+
+<p>效果如图
+<img alt="Ajax表格的效果" src="../../img/ajax_table_example.jpg" /></p>
+<h3 id="faq">FAQ</h3>
+<p><strong>表格构建器<code>AjaxTableBuilder</code>必须和<code>AjaxTableSearchBarBuilder</code>一起使用吗？</strong><br/>
+如果不需要使用搜索功能，<code>AjaxTableBuilder</code>可以单独使用。<br/></p>
+<p><strong>怎样构建<code>AjaxTableSearchResponse</code>，例子中的<code>BuildResponse</code>的作用是？</strong><br/>
+<code>AjaxTableSearchResponse</code>包含了当前页序号(从1开始)和每行的数据等信息，可以自己构建，<br/>
+也可以使用<code>BuildResponse</code>函数构建，这个函数提供了从数据库获取数据并分页的功能，<u>需要注册对应的领域服务</u>。</p>
+<p><strong>为什么需要使用表格处理器，例子中的<code>WithExtraHandlers</code>的意思是？<br/></strong>
+表格处理器主要用于支持在其他插件中扩展表格的内容，使用<code>WithExtraHandlers</code>函数可以获取到所有关联的处理器。<br/>
+提供关联处理器可以继承<code>IAjaxTableExtraHander&lt;TEntity, TPrimaryKey, THandler&gt;</code>并注册到容器。<br/></p>
+<p><strong>怎样自定义表格的样式？</strong><br/>
+需要指定自定义的表格样式时请修改<code>AjaxTableBuilder.Template</code>，<br/>
+并参考<code>static/common.base.tmpl/ajaxTable.tmpl</code>的内容。<br/></p>
+<p><strong>怎样添加自定义样式的列，例子中的<code>AddMemberColumn</code>的作用是？</strong><br/>
+表格中的每个列都是一个<code>AjaxTableColumn</code>对象，可以添加这个对象到<code>response.Columns</code>中实现自定义样式。<br/>
+<code>AddMemberColumn</code>的源代码如下，其中的<code>&lt;%-%&gt;</code>是通过underscore.js绑定对象时使用的模板格式。<br/></p>
+<pre><code class="csharp">public static AjaxTableColumn AddMemberColumn(
+    this IList&lt;AjaxTableColumn&gt; columns, string member, string width = null) {
+    var column = new AjaxTableColumn() {
+        Key = member,
+        Width = width,
+        HeadTemplate = HttpUtils.HtmlEncode(new T(member)),
+        CellTemplate = string.Format(&quot;&lt;%-row.{0}%&gt;&quot;, HttpUtils.HtmlEncode(member))
+    };
+    columns.Add(column);
+    return column;
+}
+</code></pre>
+
+<p><strong>Ajax表格通信时的数据结构是？</strong>
+<img alt="搜索请求的格式" src="../../img/ajax_table_search_request.jpg" />
+<img alt="搜索回应的格式" src="../../img/ajax_table_search_response.jpg" /></p>
+            
+
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
+</html>

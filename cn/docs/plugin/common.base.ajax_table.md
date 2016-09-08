@@ -14,7 +14,7 @@ Ajax表格构建器可以用于构建从远程载入内容的Ajax表格，并带
 添加`src\Controllers\AjaxTableExampleController.cs`<br/>
 ``` csharp
 [ExportMany]
-public class AjaxTableExampleController : IController {
+public class AjaxTableExampleController : ControllerBase {
 	[Action("example/ajax_table")]
 	public IActionResult AjaxTable() {
 		var table = new AjaxTableBuilder();
@@ -28,48 +28,46 @@ public class AjaxTableExampleController : IController {
 
 	[Action("example/ajax_table_search", HttpMethods.POST)]
 	public IActionResult AjaxTableSearch() {
-		var json = HttpManager.CurrentContext.Request.Get<string>("json");
+		var json = Request.Get<string>("json");
 		var request = AjaxTableSearchRequest.FromJson(json);
-		var callbacks = new ExampleAjaxTableCallback().WithExtensions();
-		var response = request.BuildResponseFromDatabase(callbacks);
+		var callbacks = new ExampleAjaxTableHandler().WithExtraHandlers();
+		var response = request.BuildResponse(callbacks);
 		return new JsonResult(response);
 	}
 }
 ```
 
-**添加表格回调**<br/>
-添加`src\AjaxTableCallbacks\ExampleAjaxTableCallback.cs`<br/>
+**添加表格处理器**<br/>
+添加`src\UIComponents\AjaxTableCallbacks\ExampleAjaxTableHandler.cs`<br/>
 ``` csharp
-public class ExampleAjaxTableCallback : IAjaxTableCallback<ExampleTable> {
-	public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) { }
-
-	public void OnQuery(
-		AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+public class ExampleAjaxTableHandler : AjaxTableHandlerBase<ExampleTable, long> {
+	public override void OnQuery(
+		AjaxTableSearchRequest request, ref IQueryable<ExampleTable> query) {
 		if (!string.IsNullOrEmpty(request.Keyword)) {
 			query = query.Where(q => q.Name.Contains(request.Keyword));
 		}
-		bool deleted = request.Conditions.GetOrDefault<string>("Deleted") == "on";
-		query = query.Where(q => q.Deleted == deleted);
 	}
 
-	public void OnSort(
-		AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+	public override void OnSort(
+		AjaxTableSearchRequest request, ref IQueryable<ExampleTable> query) {
 		query = query.OrderByDescending(q => q.Id);
 	}
 
-	public void OnSelect(
-		AjaxTableSearchRequest request, List<EntityToTableRow<ExampleTable>> pairs) {
+	public override void OnSelect(
+		AjaxTableSearchRequest request, IList<EntityToTableRow<ExampleTable>> pairs) {
 		foreach (var pair in pairs) {
 			pair.Row["Id"] = pair.Entity.Id;
 			pair.Row["Name"] = pair.Entity.Name;
 			pair.Row["CreateTime"] = pair.Entity.CreateTime.ToClientTimeString();
+			pair.Row["UpdateTime"] = pair.Entity.UpdateTime.ToClientTimeString();
 		}
 	}
 
-	public void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+	public override void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
 		response.Columns.AddIdColumn("Id");
 		response.Columns.AddMemberColumn("Name");
 		response.Columns.AddMemberColumn("CreateTime");
+		response.Columns.AddMemberColumn("UpdateTime");
 	}
 }
 ```
@@ -105,13 +103,13 @@ public class ExampleAjaxTableCallback : IAjaxTableCallback<ExampleTable> {
 **表格构建器`AjaxTableBuilder`必须和`AjaxTableSearchBarBuilder`一起使用吗？**<br/>
 如果不需要使用搜索功能，`AjaxTableBuilder`可以单独使用。<br/>
 
-**怎样构建`AjaxTableSearchResponse`，例子中的`BuildResponseFromDatabase`的作用是？**<br/>
-`AjaxTableSearchResponse`包含了当前页序号(从1开始)和每行的数据等信息，可以自己构建，
-也可以使用`BuildResponseFromDatabase`函数构建，这个函数提供了从数据库获取数据并分页的功能。
+**怎样构建`AjaxTableSearchResponse`，例子中的`BuildResponse`的作用是？**<br/>
+`AjaxTableSearchResponse`包含了当前页序号(从1开始)和每行的数据等信息，可以自己构建，<br/>
+也可以使用`BuildResponse`函数构建，这个函数提供了从数据库获取数据并分页的功能，<u>需要注册对应的领域服务</u>。
 
-**为什么需要使用表格回调，例子中的`WithExtensions`的意思是？<br/>**
-表格回调主要用于支持在其他插件中扩展表格的内容，使用`WithExtensions`函数可以获取到所有关联的回调。<br/>
-提供关联回调可以继承`IAjaxTableCallbackExtension<TData, TCallback>`并注册到容器。<br/>
+**为什么需要使用表格处理器，例子中的`WithExtraHandlers`的意思是？<br/>**
+表格处理器主要用于支持在其他插件中扩展表格的内容，使用`WithExtraHandlers`函数可以获取到所有关联的处理器。<br/>
+提供关联处理器可以继承`IAjaxTableExtraHander<TEntity, TPrimaryKey, THandler>`并注册到容器。<br/>
 
 **怎样自定义表格的样式？**<br/>
 需要指定自定义的表格样式时请修改`AjaxTableBuilder.Template`，<br/>
@@ -122,7 +120,7 @@ public class ExampleAjaxTableCallback : IAjaxTableCallback<ExampleTable> {
 `AddMemberColumn`的源代码如下，其中的`<%-%>`是通过underscore.js绑定对象时使用的模板格式。<br/>
 ``` csharp
 public static AjaxTableColumn AddMemberColumn(
-	this List<AjaxTableColumn> columns, string member, string width = null) {
+	this IList<AjaxTableColumn> columns, string member, string width = null) {
 	var column = new AjaxTableColumn() {
 		Key = member,
 		Width = width,

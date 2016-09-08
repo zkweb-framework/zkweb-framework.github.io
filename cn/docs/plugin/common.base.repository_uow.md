@@ -1,81 +1,113 @@
-为了简化和规范数据库操作，基础插件提供了通用仓储`GenericRepository`和工作单元`UnitOfWork`。<br/>
-`GenericRepository`提供了通用的操作函数，`UnitOfWork`负责管理数据库上下文和事务的提交。<br/>
+为了简化和规范数据库操作，基础插件提供了工作单元,仓储和领域服务的基础类。<br/>
+工作单元负责数据库上下文的管理和事务的提交，支持嵌套使用。<br/>
+仓储负责数据的查询和修改，领域服务负责提供各种业务功能。<br/>
 
-### 实现自定义的仓储
+### 添加仓储
 
-通用仓储已经实现增删查改等最通用的功能，如果还需要其他功能则需要添加自定义的仓储类型。<br/>
-自定义仓储推荐继承`GenericRepository`，直接继承`IRepository`虽然可以使用但是不能重载增删查改等操作。
+仓储需要继承`IRepository<TEntity, TPrimaryKey>`，<br/>
+一般情况推荐继承`RepositoryBase`，这个基础类提供了增删查改函数和对工作单元过滤器的支持。<br/>
 
-**添加自定义仓储的例子**<br/>
-添加`src\Repositories\ExampleRepository.cs`<br/>
+添加`src\Domain\Repositories\ExampleRepository.cs`<br/>
 ``` csharp
 [ExportMany]
-public class ExampleRepository : GenericRepository<ExampleTable> {
-	public virtual long CountNotDeleted() {
-		return Count(t => !t.Deleted);
+public class ExampleRepository : RepositoryBase<ExampleTable, long> {
+}
+```
+
+### 添加领域服务
+
+领域服务需要继承`IDomainService<TEntity, TPrimaryKey>`，<br/>
+一般情况推荐继承`DomainServiceBase`，这个基础类提供了基础的增删查改函数。<br/>
+
+添加`src\Domain\Services\ExampleService.cs`<br/>
+```csharp
+[ExportMany]
+public class ExampleService : DomainServiceBase<ExampleTable, long> {
+}
+```
+
+### 工作单元的使用
+
+先使用Scope创建工作单元，然后在using的范围内使用仓储或领域服务即可。<br/>
+工作单元可以嵌套使用，事务默认不开启，开启可以使用`Context.BeginTransaction`和`Context.FinishTransaction`。<br/>
+工作单元还支持全局的查询和操作过滤器，请参考下面的说明。<br/>
+
+``` csharp
+/// <summary>
+/// 工作单元的接口
+/// </summary>
+public interface IUnitOfWork {
+	/// <summary>
+	/// 当前的数据库上下文
+	/// 不存在时抛出错误
+	/// </summary>
+	IDatabaseContext Context { get; }
+
+	/// <summary>
+	/// 当前的查询过滤器列表
+	/// 不存在时抛出错误
+	/// </summary>
+	IList<IEntityQueryFilter> QueryFilters { get; set; }
+
+	/// <summary>
+	/// 当前的操作过滤器列表
+	/// 不存在时抛出错误
+	/// </summary>
+	IList<IEntityOperationFilter> OperationFilters { get; set; }
+
+	/// <summary>
+	/// 在指定的范围内使用工作单元
+	/// 工作单元中可以使用相同的上下文和过滤器，并且和其他工作单元隔离
+	/// 这个函数可以嵌套使用，嵌套使用时都使用最上层的数据库上下文
+	/// </summary>
+	/// <returns></returns>
+	IDisposable Scope();
+}
+```
+
+### 在工作单元中调用领域服务
+
+添加`src\Controllers\UowExampleController.cs`<br/>
+``` csharp
+[ExportMany]
+public class UowExampleController : ControllerBase {
+	[Action("example/uow")]
+	public string Uow() {
+		// insert data
+		var uow = Application.Ioc.Resolve<IUnitOfWork>();
+		var service = Application.Ioc.Resolve<IDomainService<ExampleTable, long>>();
+		string name = RandomUtils.RandomString(5);
+		using (uow.Scope()) {
+			var data = new ExampleTable() { Name = name };
+			service.Save(ref data);
+		}
+		// read inserted data
+		using (uow.Scope()) {
+			var readData = service.Get(t => t.Name == name);
+			return JsonConvert.SerializeObject(new { readData });
+		}
 	}
 }
 ```
 
-### 使用工作单元和仓储
+### 工作单元过滤器
 
-工作单元的职责是负责管理数据库上下文和提交事务，仓储的职责是负责操作数据，<br/>
-仓储使用的数据库上下文应该由工作单元传入。<br/>
-为了保证数据一致性，工作单元总是会获取包含事务的数据库上下文。<br/>
+工作单元支持全局和局部指定过滤器。<br/>
+过滤器分查询过滤器`IEntityQueryFilter`和操作过滤器`IEntityOperationFilter`。<br/>
+需要提供全局过滤器时可以继承过滤器的接口并使用`[ExportMany]`注册到容器。
 
-工作单元`UnitOfWork`类提供了以下的函数
-
-- `void Read(Action<DatabaseContext> func)`
-	- 读取数据，数据库上下文在函数执行完毕后自动注销
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult Read<TResult>(Func<DatabaseContext, TResult> func)`
-- `void Write(Action<DatabaseContext> func)`
-	- 写入数据，数据库上下文在函数执行完毕后自动保存修改，提交事务和注销
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult Write<TResult>(Func<DatabaseContext, TResult> func)`
-- `void ReadData<TData>(Action<GenericRepository<TData>> func)`
-	- 自动获取`TData`类型对应的仓储对象并读取数据
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult ReadData<TData, TResult>(Func<GenericRepository<TData>, TResult> func)`
-- `void WriteData<TData>(Action<GenericRepository<TData>> func)`
-	- 自动获取`TData`类型对应的仓储对象写入数据
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult WriteData<TData, TResult>(Func<GenericRepository<TData>, TResult> func)`
-- `void ReadRepository<TRepository>(Action<TRepository> func)`
-	- 自动获取`TRepository`类型的仓储并读取数据
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult ReadRepository<TRepository, TResult>(Func<TRepository, TResult> func)`
-- `void WriteRepository<TRepository>(Action<TRepository> func)`
-	- 自动获取`TRepository`类型的仓储并写入数据
-	- 要求函数返回指定类型的对象时可以使用以下版本
-	- `TResult WriteRepository<TRepository, TResult>(Func<TRepository, TResult> func)`
-
-在同一个工作单元中使用多个仓储时需要手动使用`RepositoryResolver`。
-``` csharp
-UnitOfWork.Read(context => {
-	var repository = RepositoryResolver.Resolve<ExampleTable>(context);
-	var otherRepository = RepositoryResolver.Resolve<OtherTable>(context);
-});
+局部启用和禁用过滤器的例子
 ```
-
-### 使用仓储和工作单元的例子
-
-这个例子在控制器中添加了工作单元的操作函数是为了演示功能，<br/>
-实际推荐建立`Manager`或`Service`类来存放业务代码，不推荐在控制器中写业务处理。<br/>
-
-添加`src\Controllers\UowExampleController.cs`<br/>
-``` csharp
-[Action("example/uow")]
-public string Uow() {
-	// insert data
-	string name = RandomUtils.RandomString(5);
-	UnitOfWork.WriteData<ExampleTable>(r => {
-		var data = new ExampleTable() { Name = name };
-		r.Save(ref data);
-	});
-	// read inserted data
-	var readData = UnitOfWork.ReadData<ExampleTable, ExampleTable>(
-		r => r.Get(t => t.Name == name));
-	return JsonConvert.SerializeObject(readData);
+using (uow.Scope())
+using (uow.DisableQueryFilter(typeof(DeletedFilter)))
+using (uow.EnableQueryFilter(new DeletedFilter(true))) {
+	// 在这里只能查询到Deleted为true的数据
 }
 ```
+
+基础插件默认提供了以下的过滤器，以下的过滤器默认全局有效
+
+- CreateTimeFilter: 继承了`IHaveCreateTime`的实体创建时自动设置创建时间
+- UpdateTimeFilter: 继承了`IHaveUpdateTime`的实体保存时自动设置更新时间
+- DeletedFilter: 继承了`IHaveDeleted`的实体查询时只能查到`Deleted`等于`false`的数据
+- GuidEntityFilter: 继承了`IEnity<Guid>`的实体创建时自动调用`GuidUtils.SequentialGuid`设置主键

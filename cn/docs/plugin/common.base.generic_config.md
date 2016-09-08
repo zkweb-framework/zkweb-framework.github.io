@@ -2,6 +2,7 @@
 
 ### 通用配置的数据结构
 
+TODO: 更新这张图
 ![通用配置的ER图](../img/er_generic_config.jpg)
 
 ### 添加配置类型
@@ -12,7 +13,7 @@
 但会影响网站部署到多个进程或服务器时的读取，缓存时间不应该指定太长。<br/>
 
 **添加配置类型的例子**<br/>
-添加`src\Config\ExampleConfig.cs`<br/>
+添加`src\Components\GenericConfigs\ExampleConfig.cs`<br/>
 ``` csharp
 [GenericConfig("ZKWeb.Example.ExampleConfig", CacheTime = 15)]
 public class ExampleConfig {
@@ -29,7 +30,7 @@ public class ExampleConfig {
 添加`src\Controllers\ConfigExampleController.cs`<br/>
 ``` csharp
 [ExportMany]
-public class ConfigExampleController : IController {
+public class ConfigExampleController : ControllerBase {
 	[Action("example/read_config")]
 	public IActionResult ReadConfig() {
 		var configManager = Application.Ioc.Resolve<GenericConfigManager>();

@@ -23,8 +23,18 @@ pages:
   - 多语言: core/multi_language.md
   - 多时区: core/multi_timezone.md
   - 单元测试: core/unit_test.md
-- 插件改版中:
-  - 插件改版中，完成后会重写文档: plugin/on_working.md
+- 插件:
+  - 基础插件 (Common.Base):
+    - 关于基础插件: plugin/common.base.summary.md
+    - 通用配置: plugin/common.base.generic_config.md
+    - 定时任务: plugin/common.base.scheduled_task.md
+    - 会话: plugin/common.base.session.md
+    - 基础css样式: plugin/common.base.css.md
+    - 基础javascript脚本: plugin/common.base.javascript.md
+    - 基础图标字体: plugin/common.base.font.md
+    - 仓储和工作单元: plugin/common.base.repository_uow.md
+    - 特征接口: plugin/common.base.traits.md
+    - 动态表格构建器: plugin/common.base.ajax_table.md
 
 extra:
     font:

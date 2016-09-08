@@ -1,13 +1,13 @@
-﻿#if TODO
-using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Config;
-using ZKWeb.Plugins.Common.Base.src.Managers;
+﻿using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Components.GenericConfigs;
+using ZKWeb.Plugins.Common.Base.src.Controllers.Bases;
+using ZKWeb.Plugins.Common.Base.src.Domain.Services;
 using ZKWeb.Web;
 using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
 
 namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
-	public class ConfigExampleController : IController {
+	public class ConfigExampleController : ControllerBase {
 		[Action("example/read_config")]
 		public IActionResult ReadConfig() {
 			var configManager = Application.Ioc.Resolve<GenericConfigManager>();
@@ -26,4 +26,3 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 		}
 	}
 }
-#endif

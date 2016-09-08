@@ -3,6 +3,7 @@
 
 ### 会话的数据结构
 
+TODO: 更新这张图
 ![会话的ER图](../img/er_session.jpg)
 会话中可以保存自定义的数据，自定义的数据使用json存储。
 
@@ -15,7 +16,7 @@
 添加`src\Controllers\SessionExampleController.cs`<br/>
 ``` csharp
 [ExportMany]
-public class SessionExampleController : IController {
+public class SessionExampleController : ControllerBase {
 	[Action("example/get_session")]
 	public IActionResult GetSession() {
 		var sessionManager = Application.Ioc.Resolve<SessionManager>();
@@ -46,4 +47,8 @@ session.SetExpiresAtLeast(TimeSpan.FromHours(1));
 ### 关联用户
 
 会话可以关联用户，关联时需要设置用户Id到`ReleatedId`成员。<br/>
-基础插件不提供用户功能，所以只留了关联Id的成员，成员的类型是long。<br/>
+基础插件不提供用户功能，所以只留了关联`Id`的成员，成员的类型是`Guid`。<br/>
+
+### 会话Id的储存
+
+会话Id默认保存在Cookies中，如果有需要请注册自定义的`ISessionIdStore`。

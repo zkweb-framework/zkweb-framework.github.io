@@ -1,9 +1,8 @@
-﻿#if TODO
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Database;
-using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Repositories;
-using ZKWeb.Plugins.Common.Base.src.Repositories;
+using ZKWeb.Plugins.Common.Base.src.Domain.Services.Interfaces;
+using ZKWeb.Plugins.Common.Base.src.Domain.Uow.Interfaces;
 using ZKWeb.Web;
 using ZKWebStandard.Ioc;
 using ZKWebStandard.Utils;
@@ -14,18 +13,18 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 		[Action("example/uow")]
 		public string Uow() {
 			// insert data
+			var uow = Application.Ioc.Resolve<IUnitOfWork>();
+			var service = Application.Ioc.Resolve<IDomainService<ExampleTable, long>>();
 			string name = RandomUtils.RandomString(5);
-			UnitOfWork.WriteData<ExampleTable>(r => {
+			using (uow.Scope()) {
 				var data = new ExampleTable() { Name = name };
-				r.Save(ref data);
-			});
+				service.Save(ref data);
+			}
 			// read inserted data
-			var readData = UnitOfWork.ReadData<ExampleTable, ExampleTable>(
-				r => r.Get(t => t.Name == name));
-			var notDeleted = UnitOfWork.ReadRepository<ExampleRepository, long>(
-				r => r.CountNotDeleted());
-			return JsonConvert.SerializeObject(new { readData, notDeleted });
+			using (uow.Scope()) {
+				var readData = service.Get(t => t.Name == name);
+				return JsonConvert.SerializeObject(new { readData });
+			}
 		}
 	}
 }
-#endif

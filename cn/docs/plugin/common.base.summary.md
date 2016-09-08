@@ -28,8 +28,8 @@
 	- 提供返回静态文件的功能，静态文件保存在`static`目录下
 - [语言时区处理器](common.base.locale_handler)
 	- 提供自动设置当前请求的语言和时区的功能
-- [特征类](common.base.traits)
-	- 提供数据库实体的特征适配，例如主键类型和名称
+- [实体特征](common.base.traits)
+	- 提供数据库实体的特征接口，例如是否可以软删除
 - [提供的标签和过滤器](common.base.tag_and_filter)
 	- 提供了一系列模板使用的标签和过滤器
 - [提供的隔离策略](common.base.cache_policy)
@@ -37,5 +37,16 @@
 
 ### 层次结构
 
-目前默认插件集的层次结构如下，接近于传统的三层结构。<br/>
-![](../img/architecture.jpg)
+默认插件的层次结构如下，主要按业务组件,控制器,领域层,测试和界面组件区分
+
+- `src` 源代码
+	- `Components` 各种业务组件
+	- `Controllers` 控制器
+	- `Domain` 领域层
+		- `Entities` 数据库实体
+		- `Filters` 查询或操作过滤器
+		- `Repositories` 仓储
+		- `Services` 服务
+		- `Structs` 实体或服务使用的结构类
+	- `Tests` 测试
+	- `UIComponents` 各种界面组件

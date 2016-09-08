@@ -18,7 +18,7 @@ LocaleUtils.SetThreadLanguageAutomatic(true, "en-US");
 ### 添加翻译
 
 翻译需要实现`ITranslateProvider`接口并使用`[ExportMany]`注册到容器中。<br/>
-添加`src\Translates\zh_CN.cs`，内容如下
+添加`src\Components\Translates\zh_CN.cs`，内容如下
 
 ``` csharp
 [ExportMany, SingletonReuse]

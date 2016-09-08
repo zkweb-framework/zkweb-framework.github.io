@@ -1,9 +1,10 @@
-﻿#if TODO
-using System;
-using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.AjaxTableCallbacks;
-using ZKWeb.Plugins.Common.Base.src.Extensions;
-using ZKWeb.Plugins.Common.Base.src.Model;
-using ZKWeb.Plugins.Common.Base.src.Scaffolding;
+﻿using System;
+using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.UIComponents.AjaxTableHandlers;
+using ZKWeb.Plugins.Common.Base.src.Controllers.Bases;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.AjaxTable;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.AjaxTable.Extensions;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.Forms;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.Forms.Attributes;
 using ZKWeb.Web;
 using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Extensions;
@@ -12,7 +13,7 @@ using ZKWebStandard.Web;
 
 namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
-	public class AjaxTableExampleController : IController {
+	public class AjaxTableExampleController : ControllerBase {
 		[Action("example/ajax_table")]
 		public IActionResult AjaxTable() {
 			var table = new AjaxTableBuilder();
@@ -26,12 +27,11 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 
 		[Action("example/ajax_table_search", HttpMethods.POST)]
 		public IActionResult AjaxTableSearch() {
-			var json = HttpManager.CurrentContext.Request.Get<string>("json");
+			var json = Request.Get<string>("json");
 			var request = AjaxTableSearchRequest.FromJson(json);
-			var callbacks = new ExampleAjaxTableCallback().WithExtensions();
-			var response = request.BuildResponseFromDatabase(callbacks);
+			var callbacks = new ExampleAjaxTableHandler().WithExtraHandlers();
+			var response = request.BuildResponse(callbacks);
 			return new JsonResult(response);
 		}
 	}
 }
-#endif

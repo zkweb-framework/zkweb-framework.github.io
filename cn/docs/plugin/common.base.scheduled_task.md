@@ -5,6 +5,7 @@
 
 ### 定时任务的数据结构
 
+TODO: 更新这张图
 ![定时任务的ER图](../img/er_scheduled_task.jpg)
 
 ### 添加定时任务
@@ -12,7 +13,7 @@
 定时任务需要继承`IScheduledTaskExecutor`并注册到容器，`Key`返回在数据库中保存的任务名称。<br/>
 
 **定时任务的例子**<br/>
-添加`src\ScheduledTasks\ExampleTask.cs`<br/>
+添加`src\Components\ScheduledTasks\ExampleTask.cs`<br/>
 这个任务每15分钟写入一次日志<br/>
 ``` csharp
 [ExportMany, SingletonReuse]

@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>05d1e017-9eb1-4953-878e-380e8b372f5f</ProjectGuid>
+    <ProjectGuid>4da4ddf3-cd07-4601-95ff-ebd5934034b6</ProjectGuid>
     <RootNamespace>ZKWeb.Examples.Plugins</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>

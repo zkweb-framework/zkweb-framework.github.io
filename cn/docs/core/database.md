@@ -5,7 +5,7 @@ ZKWeb支持多ORM和多数据库。<br/>
 
 ### 添加数据实体
 
-添加`src\Database\ExampleTable.cs`，内容如下
+添加`src\Domain\Entities\ExampleTable.cs`，内容如下
 ``` csharp
 [ExportMany]
 public class ExampleTable : IEntity<long>, IEntityMappingProvider<ExampleTable> {

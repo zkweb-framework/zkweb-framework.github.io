@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:64885/",
+      "applicationUrl": "http://localhost:53140/",
       "sslPort": 0
     }
   },
@@ -18,7 +18,7 @@
     "ZKWeb.Examples.AspNetCore": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:41943",
+      "launchUrl": "http://localhost:43372",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	{% include_css_here "/static/zkweb.examples.css/hello.css" %}
+</head>
+<body>
+	<h1>Hello {{ text | upcase }}!</h1>
+	{% include_js_here "/static/zkweb.examples.js/hello.js" %}
+</body>
+</html>
