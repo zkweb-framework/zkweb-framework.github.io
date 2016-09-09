@@ -13,17 +13,17 @@
 	- 支持从类型和成员的属性构建表单
 	- 绑定使用`Bind`，类型同时需要提供`OnBind`函数
 	- 提交使用`Submit`，类型同时需要提供`OnSubmit`函数
-- `DataEditFormBuilder`
+- `EntityFormBuilder`
 	- 基于`ModelFormBuilder`，可以根据url请求中的id函数获取和保存对象
-	- 注意这个构建器自身不会进行权限的检查，使用前需要自己检查
+	- 注意这个构建器自身不会进行权限的检查，使用前需要自己检查或通过过滤器检查
 	- 绑定使用`Bind`，类型同时需要提供`OnBind`函数
 	- 提交使用`Submit`，类型同时需要提供`OnSubmit`函数
 - `TabFormBuilder`
 	- `FormBuilder`的多标签版本，根据字段属性的`Group`划分标签
 - `TabModelFormBuilder`
 	- `ModelFormBuilder`的多标签版本，根据字段属性的`Group`划分标签
-- `TabDataEditFormBuilder`
-	- `DataEditFormBuilder`的多标签版本，根据字段属性的`Group`划分标签
+- `TabEntityFormBuilder`
+	- `EntityFormBuilder`的多标签版本，根据字段属性的`Group`划分标签
 - `FieldsOnlyFormBuilder`
 	- 只描画字段，不提供绑定和提交功能的构建器，可以用于嵌入字段到现有的表单
 - `FieldsOnlyModelFormBuilder`
@@ -36,12 +36,12 @@
 添加`src\Controllers\FormExampleController.cs`<br/>
 ``` csharp
 [ExportMany]
-public class FormExampleController : IController {
+public class FormExampleController : ControllerBase {
 	[Action("example/form")]
 	[Action("example/form", HttpMethods.POST)]
 	public IActionResult Form() {
 		var form = new ExampleForm();
-		if (HttpManager.CurrentContext.Request.Method == HttpMethods.POST) {
+		if (Request.Method == HttpMethods.POST) {
 			return new JsonResult(form.Submit());
 		} else {
 			form.Bind();
@@ -52,7 +52,7 @@ public class FormExampleController : IController {
 ```
 
 **添加表单**<br/>
-添加`src\Forms\ExampleForm.cs`<br/>
+添加`src\UIComponents\Forms\ExampleForm.cs`<br/>
 `Required`和`StringLength`属性需要引用`System.ComponentModel.DataAnnotations`程序集。<br/>
 ``` csharp
 public class ExampleForm : ModelFormBuilder {

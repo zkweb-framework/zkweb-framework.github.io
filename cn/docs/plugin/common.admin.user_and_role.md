@@ -2,6 +2,7 @@
 用户和管理员都保存在同一个数据表中。
 
 ### 用户和权限的数据结构
+TODO: 更新这张图片
 ![用户和权限的ER图](../img/er_user_role.jpg)
 
 用户可以对应多个角色，每个角色有不同的权限。<br/>
@@ -21,6 +22,9 @@
 	- 可以登录到后台，但只能使用非常有限的功能
 	- 代理商或进驻商家应该使用这个用户类型
 
+用户类型可以扩展，添加一个继承`IUserType`的类型并注册到容器即可。<br/>
+类型还可以同时继承`IAmAdmin`, `IAmSuperAdmin`等现有的接口。<br/>
+
 ### 权限
 
 管理员插件支持权限管理，网站中的权限由`IPrivilegesProvider`提供。<br/>
@@ -30,7 +34,7 @@
 需要检查权限时可以使用`PrivilegeManager`
 ``` csharp
 var privilegeManager = Application.Ioc.Resolve<PrivilegeManager>();
-privilegeManager.Check(UserTypesGroup.Admin, "AdminManage:Edit");
+privilegeManager.Check(typeof(IAmAdmin), "AdminManage:Edit");
 ```
 
 ### 用户的注册和登陆

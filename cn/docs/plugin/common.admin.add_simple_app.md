@@ -1,12 +1,12 @@
-添加后台功能可以继承`SimpleAdminAppBuilder`实现。<br/>
+添加后台功能可以继承`SimpleAdminAppControllerBase`实现。<br/>
 
-添加`src\AdminApps\ExampleApp.cs`
+添加`src\Controllers\ExampleAdminController.cs`
 ``` csharp
 /// <summary>
 /// 示例的后台应用
 /// </summary>
 [ExportMany]
-public class ExampleApp : SimpleAdminAppBuilder {
+public class ExampleAdminController : SimpleAdminAppControllerBase {
 	// Name和Url必须提供
 	public override string Name { get { return "ExampleApp"; } }
 	public override string Url { get { return "/admin/example_app"; } }
@@ -14,7 +14,7 @@ public class ExampleApp : SimpleAdminAppBuilder {
 	public override string TileClass { get { return "tile bg-navy"; } }
 	public override string IconClass { get { return "fa fa-rocket"; } }
 	// 可选，默认只要求管理员不要求指定权限
-	public override UserTypes[] AllowedUserTypes { get { return UserTypesGroup.Admin; } }
+	public override Type RequiredUserType { get { return typeof(IAmAdmin); } }
 	public override string[] RequiredPrivileges { get { return new[] { "ExampleApp:View" }; } }
 
 	protected override IActionResult Action() {

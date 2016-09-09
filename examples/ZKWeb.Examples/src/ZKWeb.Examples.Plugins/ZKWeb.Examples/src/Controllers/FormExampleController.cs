@@ -1,19 +1,18 @@
-﻿#if TODO
-using System;
-using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Forms;
+﻿using System;
+using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.UIComponents.Forms;
+using ZKWeb.Plugins.Common.Base.src.Controllers.Bases;
 using ZKWeb.Web;
 using ZKWeb.Web.ActionResults;
 using ZKWebStandard.Ioc;
-using ZKWebStandard.Web;
 
 namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 	[ExportMany]
-	public class FormExampleController : IController {
+	public class FormExampleController : ControllerBase {
 		[Action("example/form")]
 		[Action("example/form", HttpMethods.POST)]
 		public IActionResult Form() {
 			var form = new ExampleForm();
-			if (HttpManager.CurrentContext.Request.Method == HttpMethods.POST) {
+			if (Request.Method == HttpMethods.POST) {
 				return new JsonResult(form.Submit());
 			} else {
 				form.Bind();
@@ -22,4 +21,3 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Controllers {
 		}
 	}
 }
-#endif

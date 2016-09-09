@@ -6,7 +6,7 @@
 创建静态表格分为以下步骤
 
 - 获取参数并建搜索结果`StaticTableSearchResnponse`
-	- 搜索可以使用`IStaticTableCallback`处理
+	- 搜索可以使用`IStaticTableHandler`处理
 - 描画`StaticTableSearchResnponse`到模板
 
 ### 创建静态表格的例子
@@ -15,35 +15,35 @@
 添加`src\Controllers\StaticTableExampleController.cs`
 ``` csharp
 [ExportMany]
-public class StaticTableExampleController : IController {
+public class StaticTableExampleController : ControllerBase {
 	[Action("example/static_table")]
 	public IActionResult StaticTable() {
 		var request = StaticTableSearchRequest.FromHttpRequest();
-		var response = request.BuildResponseFromDatabase(new[] { new ExampleStaticTableCallback() });
+		var handlers = new ExampleStaticTableHandler().WithExtraHandlers();
+		var response = request.BuildResponse(handlers);
 		return new TemplateResult("zkweb.examples/static_table.html", new { response });
 	}
 }
 ```
 
 **添加静态表格回调**<br/>
-添加`src\StaticTableCallbacks\ExampleStaticTableCallback.cs`<br/>
+添加`src\UIComponents\StaticTableHandlers\ExampleStaticTableHandlers.cs`<br/>
 ``` csharp
-public class ExampleStaticTableCallback : IStaticTableCallback<ExampleTable> {
-	public void OnQuery(
-		StaticTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+public class ExampleStaticTableCallback : StaticTableHandlerBase<ExampleTable, long> {
+	public override void OnQuery(
+		StaticTableSearchRequest request, ref IQueryable<ExampleTable> query) {
 		if (!string.IsNullOrEmpty(request.Keyword)) {
 			query = query.Where(q => q.Name.Contains(request.Keyword));
 		}
-		query = query.Where(q => !q.Deleted);
 	}
 
-	public void OnSort(
-		StaticTableSearchRequest request, DatabaseContext context, ref IQueryable<ExampleTable> query) {
+	public override void OnSort(
+		StaticTableSearchRequest request, ref IQueryable<ExampleTable> query) {
 		query = query.OrderByDescending(q => q.Id);
 	}
 
-	public void OnSelect(
-		StaticTableSearchRequest request, List<EntityToTableRow<ExampleTable>> pairs) {
+	public override void OnSelect(
+		StaticTableSearchRequest request, IList<EntityToTableRow<ExampleTable>> pairs) {
 		foreach (var pair in pairs) {
 			pair.Row["Id"] = pair.Entity.Id;
 			pair.Row["Name"] = pair.Entity.Name;

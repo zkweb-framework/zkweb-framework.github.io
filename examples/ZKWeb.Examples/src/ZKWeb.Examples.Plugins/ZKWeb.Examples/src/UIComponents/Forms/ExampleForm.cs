@@ -1,10 +1,9 @@
-﻿#if TODO
-using System.ComponentModel.DataAnnotations;
-using ZKWeb.Plugins.Common.Base.src.Model;
-using ZKWeb.Plugins.Common.Base.src.Scaffolding;
+﻿using System.ComponentModel.DataAnnotations;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.Forms;
+using ZKWeb.Plugins.Common.Base.src.UIComponents.Forms.Attributes;
 
-namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Forms {
-	public class ExampleForm : ModelFormBuilder {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.UIComponents.Forms {
+    public class ExampleForm : ModelFormBuilder {
 		[Required]
 		[StringLength(100)]
 		[TextBoxField("Name", "Please enter name")]
@@ -24,4 +23,3 @@ namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Forms {
 		}
 	}
 }
-#endif
