@@ -3,7 +3,7 @@ using ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Database;
 using ZKWeb.Logging;
 using ZKWebStandard.Ioc;
 
-namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.DataCallbacks {
+namespace ZKWeb.Examples.Plugins.ZKWeb.Examples.src.Components.EntityOperationHandlers {
 	[ExportMany]
 	public class ExampleEntityOperationHandler : IEntityOperationHandler<ExampleTable> {
 		private long IdBeforeSave { get; set; }
