@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>订单 (Shopping.Order) - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="订单 (Shopping.Order), 订单 (Shopping.Order)">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../shopping.aftersales/">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../shopping.logistics/">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../..">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
+            
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../..">框架介绍</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/create_project/">创建项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/start_project/">开发项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/publish_website/">发布网站</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../../core/website_struct/">网站结构</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/website_config/">配置文件</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/ioc_container/">IoC容器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/plugin/">插件系统</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/controller/">控制器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/http_handlers/">请求和错误处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/template_engine/">模板引擎</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/dynamic_contents/">动态内容</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/isolated_cache/">缓存隔离</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/database/">数据库</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_language/">多语言</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_timezone/">多时区</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/unit_test/">单元测试</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>基础插件 (Common.Base)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.base.summary/">关于基础插件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.generic_config/">通用配置</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.scheduled_task/">定时任务</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.session/">会话</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.css/">基础css样式</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.javascript/">基础javascript脚本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.font/">基础图标字体</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.repository_uow/">仓储和工作单元</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.traits/">特征接口</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.ajax_table/">动态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_table/">静态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.form_builder/">表单构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_handler/">静态文件处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.locale_handler/">语言时区处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.templates/">提供的模板文件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.tag_and_filter/">提供的标签和过滤器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.cache_policy/">提供的隔离策略</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.captcha/">验证码 (Common.Captcha)</a>
+</li>
+
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>管理员 (Common.Admin)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.admin.user_and_role/">用户和角色权限</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.admin_panel/">管理后台</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.traits/">特征接口</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_simple_app/">添加后台功能</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_crud_app/">添加增删查改功能</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.menupage/">菜单页 (Common.MenuPage)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.adminsettings/">管理员设置 (Common.AdminSettings)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.userpanel/">用户中心 (Common.UserPanel)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.usercontact/">联系人 (Common.UserContact)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericclass/">通用分类 (Common.GenericClass)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.generictag/">通用标签 (Common.GenericTag)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericrecord/">通用记录 (Common.GenericRecord)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.languageswitcher/">语言切换器 (Common.LanguageSwitcher)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.currency/">货币 (Common.Currency)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.pesudostatic/">伪静态 (Common.PesudoStatic)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.region/">地区 (Common.Region)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.serialgenerate/">流水号 (Common.SerialGenerate)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment/">支付 (Finance.Payment)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.alipay/">支付宝 (Finance.Payment.Alipay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.tenpay/">财付通 (Finance.Payment.Tenpay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.payment.wechat/">微信支付 (Finance.Payment.WeChat)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.ckeditor/">CKEditor (CMS.CKEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.imagebrowser/">图片管理器 (CMS.ImageBrowser)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.atricle/">文章 (CMS.Article)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.product/">商品 (Shopping.Product)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.logistics/">物流 (Shopping.Logistics)</a>
+</li>
+
+                  
+                      
+<li class="active">
+    <a href="./">订单 (Shopping.Order)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.aftersales/">售后 (Shopping.AfterSales)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../unittest.webtester/">网页测试运行器 (UnitTest.WebTester)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.customtranslate/">自定义翻译 (Common.CustomTranslate)</a>
+</li>
+
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
+
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
+
+                
+                  <li class="main">
+                    <a href="#_1">购物车的数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">订单的数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">发货单的数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">购物车页面</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_5">前台订单页面</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_6">后台订单页面</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_7">订单数据的详细解释</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_8">完整的订单流程</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#faq">FAQ</a>
+                  </li>
+
+                  
+                
+
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
+
+            </div>
+          </div>
+
+          <div id="main-content" class="span9">
+            
+              
+                <h1>订单 (Shopping.Order)</h1><br/>
+              
+              <p>订单插件提供了购买商品相关功能，包括<br/></p>
+<ul>
+<li>购物车</li>
+<li>订单支付</li>
+<li>订单管理</li>
+<li>发货管理</li>
+<li>收货地址管理</li>
+</ul>
+<h3 id="_1">购物车的数据结构</h3>
+<p>购物车商品可以关联用户，也可以关联会话，如果开启了非会员下单，则不需要登陆也可以添加商品到购物车。<br/></p>
+<p>TODO: 更新这张图
+<img alt="购物车的ER图" src="../../img/er_cart_product.jpg" /></p>
+<h3 id="_2">订单的数据结构</h3>
+<p>一个订单对应多个订单商品，订单商品保存了下单时的商品价格等信息。<br/>
+订单可以关联买家和卖家，但不能关联多个卖家，如果购物车中有多个卖家的商品时会分别下单。<br/></p>
+<p>TODO: 更新这张图
+<img alt="订单的ER图" src="../../img/er_order.jpg" /></p>
+<h3 id="_3">发货单的数据结构</h3>
+<p>一个订单可以分多次发货，发货单关联了订单商品和发货数量。<br/>
+如果发货商品中包含了实体商品，应该选择物流和填写物流编号。<br/>
+订单和发货单会把用户填写的收货地址复制一份保存在内部，不会关联收货地址表中的数据。<br/></p>
+<p><img alt="发货单和收货地址的ER图" src="../../img/er_delivery.jpg" /></p>
+<h3 id="_4">购物车页面</h3>
+<p><img alt="购物车页面" src="../../img/cart.jpg" /></p>
+<h3 id="_5">前台订单页面</h3>
+<p>TODO</p>
+<h3 id="_6">后台订单页面</h3>
+<p>TODO</p>
+<h3 id="_7">订单数据的详细解释</h3>
+<p>每个订单都会分一个买家订单和卖家订单，买家订单属于买家，卖家订单属于卖家。<br/>
+订单的数据主要在卖家订单中，交易关联的也是卖家订单。<br/></p>
+<ul>
+<li>BuyerOrder 买家订单<ul>
+<li>SellerOrder 对应的卖家订单</li>
+<li>BuyerSessionId 买家的会话Id，仅用于非会员下单</li>
+<li>Owner 买家用户，没有时等于null</li>
+<li>CreateTime 创建时间</li>
+<li>UpdateTime 更新时间</li>
+<li>Deleted 是否已删除</li>
+<li>Remark 买家备注</li>
+</ul>
+</li>
+<li>SellerOrder 卖家订单<ul>
+<li>Serial 订单编号，唯一键</li>
+<li>Buyer 买家用户，没有时等于null</li>
+<li>Owner 卖家用户，没有时等于null</li>
+<li>State 订单状态，一个枚举值</li>
+<li>OrderParameters 订单参数，类型是Dictionary<string, object><ul>
+<li>ShippingAddress 收货地址，格式是{ Country: 国家Id, RegionId: 地区Id, ... }</li>
+<li>SellerToLogistics 卖家分别选择的物流，格式是{ SellerId: LogisticsId, ... }</li>
+<li>PaymentApiId 支付接口Id</li>
+<li>CartProducts 商品列表，格式是{ 购物车商品Id: 数量, ... }</li>
+<li>支持更多的参数</li>
+</ul>
+</li>
+<li>TotalCost 当前的订单总金额</li>
+<li>Currency 货币单位</li>
+<li>TotalCostCalcResult 当前的订单总金额的计算结果，类型是OrderPriceCalcResult</li>
+<li>OriginalTotalCostCalcResult 原始的订单总金额的计算结果，类型同上，创建订单时的价格</li>
+<li>CreateTime 创建时间</li>
+<li>UpdateTime 更新时间</li>
+<li>StateTimes 各个状态的切换时间</li>
+<li>Deleted 是否已删除</li>
+<li>Remark 卖家备注</li>
+<li>OrderProducts 订单商品的集合，一对多<ul>
+<li>Product 对应的商品，多对一</li>
+<li>MatchParameters 商品匹配参数，包含规格等信息</li>
+<li>Count 购买数量</li>
+<li>UnitPrice 单价</li>
+<li>Currency 单价的货币</li>
+<li>UnitPriceCalcResult 单价的计算结果，类型是OrderPriceCalcResult</li>
+<li>OriginalUnitPriceCalcResult 原始单价的计算结果，类型同上，创建订单时的价格</li>
+<li>CreateTime 创建时间</li>
+<li>LastUpdated 更新时间</li>
+<li>PropertyValues 关联的属性值集合，多对多，类型是OrderProductToPropertyValue</li>
+</ul>
+</li>
+<li>OrderComments 订单留言的集合，一对多<ul>
+<li>Creator 留言人</li>
+<li>Side 买家或卖家留言，枚举类型</li>
+<li>Content 留言内容</li>
+<li>CreateTime 创建时间
+<br/><br/></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OrderDelivery 发货单<ul>
+<li>Serial 发货单编号，唯一键</li>
+<li>Order 属于的订单，多对一</li>
+<li>Logistics 物流，多对一</li>
+<li>LogisticsSerial 物流给出的发货编号（快递单编号），虚拟发货时不需要</li>
+<li>Operator 发货人</li>
+<li>CreateTime 创建时间</li>
+<li>LastUpdated 更新时间</li>
+<li>Remark 备注</li>
+<li>OrderProducts 包含的商品集合，一对多，类型是ISet<OrderDeliveryToOrderProduct><ul>
+<li>OrderProduct 订单商品，多对一</li>
+<li>Count 发货件数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">完整的订单流程</h3>
+<ul>
+<li>买家添加商品到购物车</li>
+<li>买家跳转到购物车页面</li>
+<li>买家提交订单<ul>
+<li>提交商品和数量，收货地址，物流和支付接口等信息</li>
+<li>如果提交了包含多个卖家的商品，应该每个卖家创建一个单独的订单</li>
+<li>运费每个卖家分别计算</li>
+</ul>
+</li>
+<li>买家跳转到结算页面<ul>
+<li>结算页面会显示金额和跳转到支付平台的按钮</li>
+</ul>
+</li>
+<li>卖家有需要时可以修改收货地址或金额</li>
+<li>买家跳转到支付平台</li>
+<li>买家在支付平台上完成付款<ul>
+<li>即时到账或担保交易</li>
+</ul>
+</li>
+<li>卖家在后台进行发货操作<ul>
+<li>可以分几次发货完毕</li>
+</ul>
+</li>
+<li>买家确认收货，确认后订单交易完成<ul>
+<li>可以在会员中心确认收货</li>
+<li>也可以在支付平台上确认收货</li>
+</ul>
+</li>
+</ul>
+<h3 id="faq">FAQ</h3>
+<p><strong>买家可以对订单进行哪些操作？</strong></p>
+<p>买家可以取消订单和确认收货。</p>
+<p><strong>卖家可以对订单进行哪些操作？</strong></p>
+<p>卖家可以代付款，修改地址，修改价格和数量，发货和作废订单。</p>
+<p><strong>取消订单和作废订单有什么区别？</strong></p>
+<p>取消订单是买家操作的，作废订单是卖家或后台操作的，<br/>
+取消订单只能在付款前操作，作废订单可以在订单交易之前操作。<br/></p>
+<p><strong>多卖家下单时是怎样处理的？</strong></p>
+<p>多卖家下单时会根据每个卖家分别创建订单和交易，所有交易创建完成后会创建一笔合并交易。<br/>
+这个插件没有提供卖家发货的管理界面，只能在后台中发货，需要这个功能应该使用关联的其他插件。<br/></p>
+<p><strong>各个操作的条件是什么</strong></p>
+<ul>
+<li>买家取消订单: 买家付款之前</li>
+<li>买家确认收货: 卖家全部发货之后，订单交易成功之前</li>
+<li>卖家代付款: 买家付款之前，和担保交易开始付款前</li>
+<li>卖家修改地址: 卖家全部发货之前</li>
+<li>卖家修改价格: 买家付款之前，和担保交易开始付款前</li>
+<li>卖家发货: 卖家全部发货之前</li>
+<li>卖家作废订单: 订单交易成功之前</li>
+</ul>
+            
+
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
+</html>

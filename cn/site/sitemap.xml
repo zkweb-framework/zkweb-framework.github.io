@@ -131,6 +131,156 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>None/plugin/common.menupage/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.adminsettings/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.userpanel/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.usercontact/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.genericclass/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.generictag/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.genericrecord/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.languageswitcher/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.currency/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.pesudostatic/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.region/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.serialgenerate/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.payment/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.payment.alipay/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.payment.tenpay/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.payment.wechat/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/cms.ckeditor/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/cms.imagebrowser/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/cms.atricle/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/shopping.product/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/shopping.logistics/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/shopping.order/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/shopping.aftersales/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/unittest.webtester/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>None/plugin/common.customtranslate/</loc>
+     <lastmod>2016-09-09</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

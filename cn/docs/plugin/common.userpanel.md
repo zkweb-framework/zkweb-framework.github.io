@@ -6,7 +6,7 @@
 
 ### 如何添加前台会员中心页（表单）
 
-添加前台会员中心页需要继承`UserPanelFormPageBuilder`。<br/>
+添加前台会员中心页需要继承`FormUserPanelControllerBase`。<br/>
 以下是修改密码的源代码，可以参考实现自己的设置页面。<br/>
 
 ![修改密码](../img/change_password.jpg)
@@ -16,7 +16,7 @@
 /// 修改自身密码的表单
 /// </summary>
 [ExportMany]
-public class ChangePasswordForm : UserPanelFormPageBuilder {
+public class ChangePasswordForm : FormUserPanelControllerBase {
 	public override string Group { get { return "Account Manage"; } }
 	public override string GroupIconClass { get { return "fa fa-user"; } }
 	public override string Name { get { return "Change Password"; } }
@@ -65,9 +65,10 @@ public class ChangePasswordForm : UserPanelFormPageBuilder {
 			}
 			var sessionManager = Application.Ioc.Resolve<SessionManager>();
 			var session = sessionManager.GetSession();
+			var userId = session.ReleatedId.Value;
 			var userManager = Application.Ioc.Resolve<UserManager>();
-			userManager.ChangePassword(session.ReleatedId, OldPassword, Password);
-			return new { message = new T("Saved Successfully") };
+			userManager.ChangePassword(userId, OldPassword, Password);
+			return this.SaveSuccess();
 		}
 	}
 }
@@ -75,78 +76,61 @@ public class ChangePasswordForm : UserPanelFormPageBuilder {
 
 ### 如何添加前台会员中心页（列表）
 
-前台会员中心页也可以添加列表形式的页面，需要继承`UserPanelCrudPageBuilder`。<br/>
+前台会员中心页也可以添加列表形式的页面，需要继承`CrudUserPanelControllerBase`。<br/>
 以下是收货地址的源代码，可以参考实现自己的设置页面。<br/>
-注意因为前台会员需要区分数据所有者，和其他的页面有两处不同（只有这两处）:
-
-- 过滤数据时需要使用`query.FilterByOwnerUser()`
-- 表单需要继承`UserOwnedDataEditFormBuilder`
+这里的数据会自动按所属人过滤，保存时也会自动做出安全检查（参考`ConcernEntityOwnership`属性）<br/>
 
 ![收货地址](../img/shipping_address.jpg)
 
 ``` csharp
 /// <summary>
-/// 收货地址管理
+/// 前台的收货地址管理的控制器
 /// </summary>
 [ExportMany]
-public class UserShippingAddressManage : UserPanelCrudPageBuilder<UserShippingAddress> {
+public class ShippingAddressCrudController : CrudUserPanelControllerBase<ShippingAddress, Guid> {
 	public override string Group { get { return "OrderManage"; } }
 	public override string GroupIconClass { get { return "fa fa-cart-arrow-down"; } }
 	public override string Name { get { return "ShippingAddress"; } }
 	public override string Url { get { return "/user/shipping_address"; } }
 	public override string IconClass { get { return "fa fa-location-arrow"; } }
-	public override string DataTypeName { get { return Name; } }
-	protected override IAjaxTableCallback<Database.UserShippingAddress> GetTableCallback() {
-		return new TableCallback();
-	}
+	public override string EntityTypeName { get { return Name; } }
+	protected override IAjaxTableHandler<ShippingAddress, Guid> GetTableHandler() { return new TableCallback(); }
 	protected override IModelFormBuilder GetAddForm() { return new Form(); }
 	protected override IModelFormBuilder GetEditForm() { return new Form(); }
 
 	/// <summary>
 	/// 表单回调
 	/// </summary>
-	public class TableCallback : IAjaxTableCallback<UserShippingAddress> {
+	public class TableCallback : AjaxTableHandlerBase<ShippingAddress, Guid> {
 		/// <summary>
 		/// 构建表格
 		/// </summary>
-		public void OnBuildTable(AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
-			table.StandardSetupForCrudPage<UserShippingAddressManage>();
-			searchBar.StandardSetupForCrudPage<UserShippingAddressManage>("Address/Name/Tel");
+		public override void BuildTable(
+			AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
+			table.StandardSetupFor<ShippingAddressCrudController>();
+			searchBar.StandardSetupFor<ShippingAddressCrudController>("Address/Name/Tel");
 		}
 
 		/// <summary>
 		/// 过滤数据
 		/// </summary>
-		public void OnQuery(
-			AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<UserShippingAddress> query) {
-			// 按所属用户
-			query = query.FilterByOwnedUser();
-			// 按回收站
-			query = query.FilterByRecycleBin(request);
-			// 按关键字
+		public override void OnQuery(
+			AjaxTableSearchRequest request, ref IQueryable<ShippingAddress> query) {
 			if (!string.IsNullOrEmpty(request.Keyword)) {
 				query = query.Where(q => q.Summary.Contains(request.Keyword));
 			}
 		}
 
 		/// <summary>
-		/// 排序数据
-		/// </summary>
-		public void OnSort(
-			AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<UserShippingAddress> query) {
-			query = query.OrderByDescending(q => q.Id);
-		}
-
-		/// <summary>
 		/// 选择数据
 		/// </summary>
-		public void OnSelect(
-			AjaxTableSearchRequest request, List<EntityToTableRow<UserShippingAddress>> pairs) {
+		public override void OnSelect(
+			AjaxTableSearchRequest request, IList<EntityToTableRow<ShippingAddress>> pairs) {
 			foreach (var pair in pairs) {
 				pair.Row["Id"] = pair.Entity.Id;
 				pair.Row["ShippingAddress"] = pair.Entity.Summary;
 				pair.Row["CreateTime"] = pair.Entity.CreateTime.ToClientTimeString();
-				pair.Row["LastUpdated"] = pair.Entity.LastUpdated.ToClientTimeString();
+				pair.Row["UpdateTime"] = pair.Entity.UpdateTime.ToClientTimeString();
 				pair.Row["DisplayOrder"] = pair.Entity.DisplayOrder;
 			}
 		}
@@ -154,23 +138,23 @@ public class UserShippingAddressManage : UserPanelCrudPageBuilder<UserShippingAd
 		/// <summary>
 		/// 添加列和操作
 		/// </summary>
-		public void OnResponse(
+		public override void OnResponse(
 			AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
-			response.Columns.AddIdColumn("Id").StandardSetupForCrudPage<UserShippingAddressManage>(request);
+			response.Columns.AddIdColumn("Id").StandardSetupFor<ShippingAddressCrudController>(request);
 			response.Columns.AddNoColumn();
 			response.Columns.AddMemberColumn("ShippingAddress", "40%");
 			response.Columns.AddMemberColumn("CreateTime");
-			response.Columns.AddMemberColumn("LastUpdated");
+			response.Columns.AddMemberColumn("UpdateTime");
 			response.Columns.AddMemberColumn("DisplayOrder");
 			response.Columns.AddEnumLabelColumn("Deleted", typeof(EnumDeleted));
-			response.Columns.AddActionColumn().StandardSetupForCrudPage<UserShippingAddressManage>(request);
+			response.Columns.AddActionColumn().StandardSetupFor<ShippingAddressCrudController>(request);
 		}
 	}
 
 	/// <summary>
 	/// 添加和编辑收货地址使用的表单
 	/// </summary>
-	public class Form : TabUserOwnedDataEditFormBuilder<UserShippingAddress, Form> {
+	public class Form : TabEntityFormBuilder<ShippingAddress, Guid, Form> {
 		/// <summary>
 		/// 地区
 		/// </summary>
@@ -217,7 +201,7 @@ public class UserShippingAddressManage : UserPanelCrudPageBuilder<UserShippingAd
 		/// <summary>
 		/// 绑定表单
 		/// </summary>
-		protected override void OnBind(DatabaseContext context, UserShippingAddress bindFrom) {
+		protected override void OnBind(ShippingAddress bindFrom) {
 			Region = new CountryAndRegion(bindFrom.Country, bindFrom.RegionId);
 			ZipCode = bindFrom.ZipCode;
 			DetailedAddress = bindFrom.DetailedAddress;
@@ -230,11 +214,7 @@ public class UserShippingAddressManage : UserPanelCrudPageBuilder<UserShippingAd
 		/// <summary>
 		/// 提交表单
 		/// </summary>
-		protected override object OnSubmit(DatabaseContext context, UserShippingAddress saveTo) {
-			if (saveTo.Id <= 0) {
-				saveTo.CreateTime = DateTime.UtcNow;
-				AssignOwnedUser(context, saveTo);
-			}
+		protected override object OnSubmit(ShippingAddress saveTo) {
 			saveTo.Country = Region.Country;
 			saveTo.RegionId = Region.RegionId;
 			saveTo.ZipCode = ZipCode;
@@ -244,11 +224,7 @@ public class UserShippingAddressManage : UserPanelCrudPageBuilder<UserShippingAd
 			saveTo.Summary = saveTo.GenerateSummary();
 			saveTo.DisplayOrder = DisplayOrder;
 			saveTo.Remark = Remark;
-			saveTo.LastUpdated = DateTime.UtcNow;
-			return new {
-				message = "Saved Successfully",
-				script = ScriptStrings.AjaxtableUpdatedAndCloseModal
-			};
+			return this.SaveSuccessAndCloseModal();
 		}
 	}
 }

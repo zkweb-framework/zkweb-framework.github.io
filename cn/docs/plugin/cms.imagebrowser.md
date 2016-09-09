@@ -30,12 +30,12 @@
 ### 如何让插件支持图片管理器
 
 图片管理器支持分类进行管理，不会把整个网站所有图片都一起显示在管理器中。<br/>
-在自己的插件中使用图片管理器需要先添加添加一个继承`ImageBrowserBuilder`的类，<br/>
+在自己的插件中使用图片管理器需要先添加添加一个继承`ImageBrowserControllerBase`的类，<br/>
 以下是文章使用的图片管理器的源代码，可以参考实现自己的图片管理器。<br/>
 
 ``` csharp
 [ExportMany]
-public class ArticleImageBrowser : ImageBrowserBuilder {
+public class ArticleImageBrowserController : ImageBrowserControllerBase {
 	public override string Category { get { return "Article"; } }
 }
 ```

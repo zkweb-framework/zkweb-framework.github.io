@@ -10,4 +10,4 @@ transaction.Serial = SerialGenerator.GenerateFor(transaction);
 ### 流水号的生成规则
 
 默认流水号的格式是"yyyyMMdd + 8位随机数字"<br/>
-如果需要指定自定义的格式可以继承`ISerialGenerateCallback`，在这个回调中判断对象类型并生成自定义的流水号。<br/>
+如果需要指定自定义的格式可以继承`ISerialGenerateHandler`，在这个处理器中判断对象类型并生成自定义的流水号。<br/>

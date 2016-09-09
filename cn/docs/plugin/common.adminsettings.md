@@ -6,7 +6,7 @@
 
 ### 如何添加后台设置页（表单）
 
-添加后台设置页需要继承`AdminSettingsFormPageBuilder`。<br/>
+添加后台设置页需要继承`FormAdminSettingsControllerBase`。<br/>
 以下是语言设置的源代码，可以参考实现自己的设置页面。<br/>
 
 ![语言设置页](../img/locale_settings.jpg)
@@ -16,7 +16,7 @@
 /// 语言设置
 /// </summary>
 [ExportMany]
-public class LocaleSettingsForm : AdminSettingsFormPageBuilder {
+public class LocaleSettingsController : FormAdminSettingsControllerBase {
 	public override string Group { get { return "BaseSettings"; } }
 	public override string GroupIconClass { get { return "fa fa-wrench"; } }
 	public override string Name { get { return "LocaleSettings"; } }
@@ -69,7 +69,7 @@ public class LocaleSettingsForm : AdminSettingsFormPageBuilder {
 			settings.DefaultTimezone = DefaultTimezone;
 			settings.AllowDetectLanguageFromBrowser = AllowDetectLanguageFromBrowser;
 			configManager.PutData(settings);
-			return new { message = new T("Saved Successfully") };
+			return this.SaveSuccessAndCloseModal();
 		}
 	}
 }
@@ -84,16 +84,12 @@ public class LocaleSettingsForm : AdminSettingsFormPageBuilder {
 
 ``` csharp
 /// <summary>
-/// 通用标签构建器
+/// 通用标签控制器的基础类
 /// </summary>
-/// <example>
-/// [ExportMany]
-/// public class ExampleTag : GenericTagBuilder {
-///		public override string Name { get { return "ExampleTag"; } }
-/// }
-/// </example>
-public abstract class GenericTagBuilder :
-	AdminSettingsCrudPageBuilder<Database.GenericTag> {
+/// <typeparam name="TController">继承这个类的类型</typeparam>
+public abstract class GenericTagControllerBase<TController> :
+	CrudAdminSettingsControllerBase<GenericTag, Guid>
+	where TController : GenericTagControllerBase<TController>, new() {
 	public virtual string Type { get { return Name.Replace(" ", ""); } }
 	public override string Group { get { return "TagManage"; } }
 	public override string GroupIconClass { get { return "fa fa-tags"; } }
@@ -102,10 +98,9 @@ public abstract class GenericTagBuilder :
 	public override string[] ViewPrivileges { get { return new[] { "TagManage:" + Type }; } }
 	public override string[] EditPrivileges { get { return ViewPrivileges; } }
 	public override string[] DeletePrivileges { get { return ViewPrivileges; } }
-	public override string[] DeleteForeverPrivilege { get { return ViewPrivileges; } }
-	protected override IAjaxTableCallback<Database.GenericTag> GetTableCallback() {
-		return new TableCallback(this);
-	}
+	public override string[] DeleteForeverPrivileges { get { return ViewPrivileges; } }
+	public override string EntityTypeName { get { return Type; } }
+	protected override IAjaxTableHandler<GenericTag, Guid> GetTableHandler() { return new TableHandler(); }
 	protected override IModelFormBuilder GetAddForm() { return new Form(Type); }
 	protected override IModelFormBuilder GetEditForm() { return new Form(Type); }
 
@@ -113,70 +108,50 @@ public abstract class GenericTagBuilder :
 	/// 获取批量操作的数据Id列表
 	/// </summary>
 	/// <returns></returns>
-	protected override IList<object> GetBatchActionIds() {
+	protected override IList<Guid> GetBatchActionIds() {
 		// 检查是否所有Id都属于指定的类型，防止越权操作
-		var request = HttpManager.CurrentContext.Request;
-		var actionName = request.Get<string>("action");
-		var json = HttpManager.CurrentContext.Request.Get<string>("json");
-		var ids = JsonConvert.DeserializeObject<IList<object>>(json);
-		var isAllTagTypeMatched = UnitOfWork.ReadRepository<GenericTagRepository, bool>(r => {
-			return r.IsAllTagsTypeEqualTo(ids, Type);
-		});
-		if (!isAllTagTypeMatched) {
+		var ids = base.GetBatchActionIds();
+		var genericTagManager = Application.Ioc.Resolve<GenericTagManager>();
+		if (!genericTagManager.IsAllTagsTypeEqualTo(ids, Type)) {
 			throw new ForbiddenException(new T("Try to access tag that type not matched"));
 		}
 		return ids;
 	}
 
 	/// <summary>
-	/// 表格回调
+	/// 表格处理器
 	/// </summary>
-	public class TableCallback : IAjaxTableCallback<Database.GenericTag> {
-		/// <summary>
-		/// 标签构建器
-		/// </summary>
-		public GenericTagBuilder Builder { get; set; }
-
-		/// <summary>
-		/// 初始化
-		/// </summary>
-		public TableCallback(GenericTagBuilder builder) {
-			Builder = builder;
-		}
-
+	public class TableHandler : AjaxTableHandlerBase<GenericTag, Guid> {
 		/// <summary>
 		/// 构建表格时的处理
 		/// </summary>
-		public void OnBuildTable(
+		public override void BuildTable(
 			AjaxTableBuilder table, AjaxTableSearchBarBuilder searchBar) {
+			var app = new TController();
+			var dialogParameters = new { size = "size-wide" };
 			table.MenuItems.AddDivider();
-			table.MenuItems.AddEditAction(
-				Builder.Type, Builder.EditUrl, dialogParameters: new { size = "size-wide" });
-			table.MenuItems.AddAddAction(
-				Builder.Type, Builder.AddUrl, dialogParameters: new { size = "size-wide" });
+			table.MenuItems.AddEditAction(app.Type, app.EditUrl, dialogParameters: dialogParameters);
+			table.MenuItems.AddAddAction(app.Type, app.AddUrl, dialogParameters: dialogParameters);
 			searchBar.KeywordPlaceHolder = "Name/Remark";
 			searchBar.MenuItems.AddDivider();
 			searchBar.MenuItems.AddRecycleBin();
-			searchBar.MenuItems.AddAddAction(
-				Builder.Type, Builder.AddUrl, dialogParameters: new { size = "size-wide" });
-			searchBar.BeforeItems.AddAddAction(
-				Builder.Type, Builder.AddUrl, dialogParameters: new { size = "size-wide" });
+			searchBar.MenuItems.AddAddAction(app.Type, app.AddUrl, dialogParameters: dialogParameters);
+			searchBar.BeforeItems.AddAddAction(app.Type, app.AddUrl, dialogParameters: dialogParameters);
 		}
 
 		/// <summary>
 		/// 查询数据
 		/// </summary>
-		public void OnQuery(
-			AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<Database.GenericTag> query) {
+		public override void OnQuery(
+			AjaxTableSearchRequest request, ref IQueryable<GenericTag> query) {
 			// 在第一页显示所有分类
 			request.PageNo = 0;
 			request.PageSize = 0x7ffffffe;
 			// 提供类型给其他回调
-			request.Conditions["Type"] = Builder.Type;
+			var app = new TController();
+			request.Conditions["Type"] = app.Type;
 			// 按类型
-			query = query.Where(q => q.Type == Builder.Type);
-			// 按回收站
-			query = query.FilterByRecycleBin(request);
+			query = query.Where(q => q.Type == app.Type);
 			// 按关键词
 			if (!string.IsNullOrEmpty(request.Keyword)) {
 				query = query.Where(q => q.Name.Contains(request.Keyword) || q.Remark.Contains(request.Keyword));
@@ -186,8 +161,8 @@ public abstract class GenericTagBuilder :
 		/// <summary>
 		/// 排序数据
 		/// </summary>
-		public void OnSort(
-			AjaxTableSearchRequest request, DatabaseContext context, ref IQueryable<Database.GenericTag> query) {
+		public override void OnSort(
+			AjaxTableSearchRequest request, ref IQueryable<GenericTag> query) {
 			// 默认按显示顺序排列
 			query = query.OrderBy(q => q.DisplayOrder).ThenByDescending(q => q.Id);
 		}
@@ -195,8 +170,8 @@ public abstract class GenericTagBuilder :
 		/// <summary>
 		/// 选择字段
 		/// </summary>
-		public void OnSelect(
-			AjaxTableSearchRequest request, List<EntityToTableRow<Database.GenericTag>> pairs) {
+		public override void OnSelect(
+			AjaxTableSearchRequest request, IList<EntityToTableRow<GenericTag>> pairs) {
 			foreach (var pair in pairs) {
 				pair.Row["Id"] = pair.Entity.Id;
 				pair.Row["Name"] = pair.Entity.Name;
@@ -209,26 +184,31 @@ public abstract class GenericTagBuilder :
 		/// <summary>
 		/// 添加列和操作
 		/// </summary>
-		public void OnResponse(AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
-			var idColumn = response.Columns.AddIdColumn("Id");
+		public override void OnResponse(
+			AjaxTableSearchRequest request, AjaxTableSearchResponse response) {
+			response.Columns.AddIdColumn("Id").StandardSetupFor<TController>(request);
 			response.Columns.AddNoColumn();
 			response.Columns.AddMemberColumn("Name", "45%");
 			response.Columns.AddMemberColumn("CreateTime");
 			response.Columns.AddMemberColumn("DisplayOrder");
 			response.Columns.AddEnumLabelColumn("Deleted", typeof(EnumDeleted));
 			var actionColumn = response.Columns.AddActionColumn();
-			actionColumn.AddEditAction(
-				Builder.Type, Builder.EditUrl, dialogParameters: new { size = "size-wide" });
-			idColumn.AddDivider();
-			idColumn.AddDeleteActions(
-				request, typeof(Database.GenericTag), Builder.Type, Builder.BatchUrl);
+			var deleted = request.Conditions.GetOrDefault<bool>("Deleted");
+			var dialogParameters = new { size = "size-wide" };
+			if (!deleted) {
+				actionColumn.AddEditActionFor<TController>(dialogParameters: dialogParameters);
+				actionColumn.AddDeleteActionFor<TController>();
+			} else {
+				actionColumn.AddRecoverActionFor<TController>();
+				actionColumn.AddDeleteForeverActionFor<TController>();
+			}
 		}
 	}
 
 	/// <summary>
 	/// 添加和编辑使用的表单
 	/// </summary>
-	public class Form : TabDataEditFormBuilder<Database.GenericTag, Form> {
+	public class Form : EntityFormBuilder<GenericTag, Guid, Form> {
 		/// <summary>
 		/// 标签类型
 		/// </summary>
@@ -263,8 +243,8 @@ public abstract class GenericTagBuilder :
 		/// <summary>
 		/// 绑定数据到表单
 		/// </summary>
-		protected override void OnBind(DatabaseContext context, Database.GenericTag bindFrom) {
-			if (bindFrom.Id > 0 && bindFrom.Type != Type) {
+		protected override void OnBind(GenericTag bindFrom) {
+			if (bindFrom.Type != null && bindFrom.Type != Type) {
 				// 检查类型，防止越权操作
 				throw new ForbiddenException(new T("Try to access tag that type not matched"));
 			}
@@ -276,22 +256,19 @@ public abstract class GenericTagBuilder :
 		/// <summary>
 		/// 保存表单到数据
 		/// </summary>
-		protected override object OnSubmit(DatabaseContext context, Database.GenericTag saveTo) {
-			if (saveTo.Id <= 0) {
+		protected override object OnSubmit(GenericTag saveTo) {
+			if (saveTo.Type == null) {
 				// 添加时
 				saveTo.Type = Type;
-				saveTo.CreateTime = DateTime.UtcNow;
-			} else if (saveTo.Id > 0 && saveTo.Type != Type) {
+			} else if (saveTo.Type != null && saveTo.Type != Type) {
 				// 编辑时检查类型，防止越权操作
 				throw new ForbiddenException(new T("Try to access tag that type not matched"));
 			}
 			saveTo.Name = Name;
 			saveTo.DisplayOrder = DisplayOrder;
 			saveTo.Remark = Remark;
-			return new {
-				message = new T("Saved Successfully"),
-				script = ScriptStrings.AjaxtableUpdatedAndCloseModal
-			};
+			return this.SaveSuccessAndCloseModal();
 		}
 	}
+}
 ```

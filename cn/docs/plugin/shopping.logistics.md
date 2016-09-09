@@ -3,6 +3,7 @@
 
 ### 物流的数据结构
 
+TODO: 更新这张图
 ![物流的ER图](../img/er_logistics.jpg)
 
 ### 物流的管理界面
@@ -16,7 +17,7 @@
 
 ```csharp
 var logisticsManager = Application.Ioc.Resolve<LogisticsManager>();
-var logistics in logisticsManager.GetLogisticsList(ownerId);
+var logistics in logisticsManager.GetManyWithCache(ownerId);
 ```
 
 ### 计算运费价格

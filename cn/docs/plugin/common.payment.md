@@ -3,6 +3,7 @@
 
 ### 支付接口和交易的数据结构
 
+TODO: 更新这张图
 ![支付接口和交易的ER图](../img/er_payment.jpg)
 
 ### 在后台管理支付接口
@@ -28,6 +29,9 @@
 	- 收到交易开始，付款成功等通知后，应该调用交易管理器通知指定的交易处理
 
 ``` csharp
+/// <summary>
+/// 测试接口的处理器
+/// </summary>
 [ExportMany]
 public class TestApiHandler : IPaymentApiHandler {
 	/// <summary>
@@ -49,7 +53,7 @@ public class TestApiHandler : IPaymentApiHandler {
 	/// <summary>
 	/// 后台编辑表单绑定时的处理
 	/// </summary>
-	public void OnFormBind(PaymentApiEditForm form, DatabaseContext context, PaymentApi bindFrom) {
+	public void OnFormBind(PaymentApiEditForm form, PaymentApi bindFrom) {
 		var apiData = bindFrom.ExtraData.GetOrDefault<ApiData>("ApiData") ?? new ApiData();
 		ApiDataEditing.PaymentPassword = apiData.PaymentPassword;
 	}
@@ -57,7 +61,7 @@ public class TestApiHandler : IPaymentApiHandler {
 	/// <summary>
 	/// 后台编辑表单保存时的处理
 	/// </summary>
-	public void OnFormSubmit(PaymentApiEditForm form, DatabaseContext context, PaymentApi saveTo) {
+	public void OnFormSubmit(PaymentApiEditForm form, PaymentApi saveTo) {
 		saveTo.ExtraData["ApiData"] = ApiDataEditing;
 	}
 
@@ -80,13 +84,16 @@ public class TestApiHandler : IPaymentApiHandler {
 
 	/// <summary>
 	/// 调用发货接口
+	/// 发货后自动确认收货
 	/// </summary>
 	public void SendGoods(
-		DatabaseContext context, PaymentTransaction transaction, string logisticsName, string invoiceNo) {
+		PaymentTransaction transaction, string logisticsName, string invoiceNo) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format(
 			"PaymentApi send goods: transaction {0} logisticsName {1} invoiceNo {2}",
 			transaction.Serial, logisticsName, invoiceNo));
+		var transactionManager = Application.Ioc.Resolve<PaymentTransactionManager>();
+		transactionManager.Process(transaction.Id, null, PaymentTransactionState.Success);
 	}
 
 	/// <summary>
@@ -100,6 +107,15 @@ public class TestApiHandler : IPaymentApiHandler {
 		[StringLength(100, MinimumLength = 5)]
 		[PasswordField("PaymentPassword", "Password required to pay transactions")]
 		public string PaymentPassword { get; set; }
+
+		/// <summary>
+		/// 检查支付密码是否和设置的密码一致
+		/// </summary>
+		public void CheckPaymentPassword(string paymentPassword) {
+			if (string.IsNullOrEmpty(PaymentPassword) || paymentPassword != PaymentPassword) {
+				throw new ForbiddenException(new T("Incorrect payment password"));
+			}
+		}
 	}
 }
 ```
@@ -120,6 +136,9 @@ public class TestApiHandler : IPaymentApiHandler {
 - 获取显示交易结果的Html: 显示当前的交易状态，并在一定时间后跳转到订单详情页
 
 ``` csharp
+/// <summary>
+/// 测试交易的处理器
+/// </summary>
 [ExportMany]
 public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// <summary>
@@ -130,8 +149,7 @@ public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// <summary>
 	/// 交易创建后
 	/// </summary>
-	public void OnCreated(
-		DatabaseContext context, PaymentTransaction transaction) {
+	public void OnCreated(PaymentTransaction transaction) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format("TestTransaction Created: {0}", transaction.Serial));
 	}
@@ -140,7 +158,7 @@ public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// 等待付款时
 	/// </summary>
 	public void OnWaitingPaying(
-		DatabaseContext context, PaymentTransaction transaction, PaymentTransactionState previousState) {
+		PaymentTransaction transaction, PaymentTransactionState previousState) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format("TestTransaction Waiting Paying: {0}", transaction.Serial));
 	}
@@ -149,19 +167,18 @@ public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// 担保交易付款后
 	/// 付款后自动发货
 	/// </summary>
-	public void OnSecuredPaid(
-		DatabaseContext context, PaymentTransaction transaction,
-		PaymentTransactionState previousState, ref AutoSendGoodsParameters parameters) {
+	public void OnSecuredPaid(PaymentTransaction transaction,
+		PaymentTransactionState previousState, IList<AutoSendGoodsParameters> parameters) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format("TestTransaction Secured Paid: {0}", transaction.Serial));
-		parameters = new AutoSendGoodsParameters() { LogisticsName = "TestLogistics", InvoiceNo = "00000000" };
+		parameters.Add(new AutoSendGoodsParameters() { LogisticsName = "TestLogistics", InvoiceNo = "00000000" });
 	}
 
 	/// <summary>
 	/// 交易成功时
 	/// </summary>
 	public void OnSuccess(
-		DatabaseContext context, PaymentTransaction transaction, PaymentTransactionState previousState) {
+		PaymentTransaction transaction, PaymentTransactionState previousState) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format("TestTransaction Success: {0}", transaction.Serial));
 	}
@@ -170,7 +187,7 @@ public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// 交易终止时
 	/// </summary>
 	public void OnAbort(
-		DatabaseContext context, PaymentTransaction transaction, PaymentTransactionState previousState) {
+		PaymentTransaction transaction, PaymentTransactionState previousState) {
 		var logManager = Application.Ioc.Resolve<LogManager>();
 		logManager.LogTransaction(string.Format("TestTransaction Aborted: {0}", transaction.Serial));
 	}
@@ -178,33 +195,33 @@ public class TestTransactionHandler : IPaymentTransactionHandler {
 	/// <summary>
 	/// 获取显示交易结果的Html
 	/// </summary>
-	public void GetResultHtml(PaymentTransaction transaction, ref HtmlString html) {
+	public void GetResultHtml(PaymentTransaction transaction, IList<HtmlString> html) {
 		var templateManager = Application.Ioc.Resolve<TemplateManager>();
 		var args = new { serial = transaction.Serial, state = transaction.State.GetDescription() };
-		html = new HtmlString(templateManager.RenderTemplate("finance.payment/test_transaction_result.html", args));
+		html.Add(new HtmlString(
+			templateManager.RenderTemplate("finance.payment/test_transaction_result.html", args)));
 	}
 }
 ```
 
 ### 创建交易
 
-一般应使用交易仓储创建交易，因为交易一般需要和其他数据在同一个事务中创建。<br/>
+使用交易管理器可以创建交易。<br/>
 创建交易前应该调用支付接口管理器计算好交易手续费（但一般都不会从付款人收取手续费）。<br/>
 
 ``` csharp
+var transactionManager = Application.Ioc.Resolve<PaymentTransactionManager>();
 var apiManager = Application.Ioc.Resolve<PaymentApiManager>();
-var paymentFee = apiManager.CalculatePaymentFee(apiId, amount);
-var transaction = UnitOfWork.WriteRepository<PaymentTransactionRepository, PaymentTransaction>(r => {
-	return r.CreateTransaction(
-		"TestTransaction", apiId, amount, paymentFee,
-		currency, payerId, payeeId, payerId, description);
-});
+var paymentFee = apiManager.CalculatePaymentFee(api.Id, Amount);
+var transaction = transactionManager.CreateTransaction(
+	"TestTransaction", api.Id, Amount, paymentFee,
+	Currency, payerId, payeeId, payerId, Description);
 ```
 
 ### 完整交易流程（即时到账）
 
 - 创建交易
-	- 调用`PaymentTransactionRepository.CreateTransaction`
+	- 调用`PaymentTransactionManager.CreateTransaction`
 - 跳转到支付页面
 	- 调用`PaymentTransactionManager.GetPaymentUrl`
 	- 支付接口可以跳转到支付平台上，也可以提供一个表单在网站内部处理支付
@@ -218,7 +235,7 @@ var transaction = UnitOfWork.WriteRepository<PaymentTransactionRepository, Payme
 ### 完整交易流程（担保交易）
 
 - 创建交易
-	- 调用`PaymentTransactionRepository.CreateTransaction`
+	- 调用`PaymentTransactionManager.CreateTransaction`
 - 跳转到支付页面
 	- 调用`PaymentTransactionManager.GetPaymentUrl`
 	- 支付接口可以跳转到支付平台上，也可以提供一个表单在网站内部处理支付

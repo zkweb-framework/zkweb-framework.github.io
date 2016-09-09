@@ -10,6 +10,7 @@
 
 购物车商品可以关联用户，也可以关联会话，如果开启了非会员下单，则不需要登陆也可以添加商品到购物车。<br/>
 
+TODO: 更新这张图
 ![购物车的ER图](../img/er_cart_product.jpg)
 
 ### 订单的数据结构
@@ -17,6 +18,7 @@
 一个订单对应多个订单商品，订单商品保存了下单时的商品价格等信息。<br/>
 订单可以关联买家和卖家，但不能关联多个卖家，如果购物车中有多个卖家的商品时会分别下单。<br/>
 
+TODO: 更新这张图
 ![订单的ER图](../img/er_order.jpg)
 
 ### 发货单的数据结构
@@ -41,11 +43,21 @@ TODO
 
 ### 订单数据的详细解释
 
-- Order 订单
+每个订单都会分一个买家订单和卖家订单，买家订单属于买家，卖家订单属于卖家。<br/>
+订单的数据主要在卖家订单中，交易关联的也是卖家订单。<br/>
+
+- BuyerOrder 买家订单
+	- SellerOrder 对应的卖家订单
+	- BuyerSessionId 买家的会话Id，仅用于非会员下单
+	- Owner 买家用户，没有时等于null
+	- CreateTime 创建时间
+	- UpdateTime 更新时间
+	- Deleted 是否已删除
+	- Remark 买家备注
+- SellerOrder 卖家订单
 	- Serial 订单编号，唯一键
 	- Buyer 买家用户，没有时等于null
-	- BuyerSessionId 买家会话，已有买家用户时等于null
-	- Seller 卖家用户，没有时等于null
+	- Owner 卖家用户，没有时等于null
 	- State 订单状态，一个枚举值
 	- OrderParameters 订单参数，类型是Dictionary<string, object>
 		- ShippingAddress 收货地址，格式是{ Country: 国家Id, RegionId: 地区Id, ... }
@@ -58,10 +70,10 @@ TODO
 	- TotalCostCalcResult 当前的订单总金额的计算结果，类型是OrderPriceCalcResult
 	- OriginalTotalCostCalcResult 原始的订单总金额的计算结果，类型同上，创建订单时的价格
 	- CreateTime 创建时间
-	- LastUpdated 更新时间
+	- UpdateTime 更新时间
 	- StateTimes 各个状态的切换时间
-	- BuyerRemark 买家备注
-	- SellerRemark 卖家备注
+	- Deleted 是否已删除
+	- Remark 卖家备注
 	- OrderProducts 订单商品的集合，一对多
 		- Product 对应的商品，多对一
 		- MatchParameters 商品匹配参数，包含规格等信息

@@ -8,7 +8,7 @@
 
 菜单页分为菜单和页面内容，<br/>
 其中各个菜单项的文本和图标和Url由继承了`IMenuProvider`的类提供，<br/>
-页面内容则由继承了`SimpleMenuPageBuilder`或`FormMenuPageBuilder`等的类提供。
+页面内容则由继承了`SimpleMenuPageControllerBase`或`FormMenuPageControllerBase`或`CrudMenuPageControllerBase`的类提供。
 
 ### 如何构建新的菜单页类型
 
@@ -18,13 +18,20 @@
 
 ``` csharp
 public interface IAdminSettingsMenuProvider : IMenuProvider { }
-public abstract class AdminSettingsCrudPageBuilder<TData> : CrudMenuPageBuilder<TData>, IAdminSettingsMenuProvider { }
-public abstract class AdminSettingsFormPageBuilder : FormMenuPageBuilder, IAdminSettingsMenuProvider { }
-public abstract class AdminSettingsSimplePageBuilder : SimpleMenuPageBuilder, IAdminSettingsMenuProvider { }
+
+public abstract class CrudAdminSettingsControllerBase<TEntity, TPrimaryKey> :
+	CrudMenuPageControllerBase<TEntity, TPrimaryKey>, IAdminSettingsMenuProvider
+	where TEntity : class, IEntity<TPrimaryKey> { }
+
+public abstract class FormAdminSettingsControllerBase :
+	FormMenuPageControllerBase, IAdminSettingsMenuProvider { }
+
+public abstract class SimpleAdminSettingsControllerBase :
+	SimpleMenuPageControllerBase, IAdminSettingsMenuProvider { }
 ```
 
-在继承了`PageBuilder`的类中可以重载`TemplatePath`成员实现提供该菜单页默认的模板文件。<br/>
-模板文件中需要对菜单内容和页面内容进行描画，这里以`AdminSettingsFormPageBuilder`为例。<br/>
+在继承类中可以重载`TemplatePath`成员实现提供该菜单页默认的模板文件。<br/>
+模板文件中需要对菜单内容和页面内容进行描画，这里以`FormAdminSettingsControllerBase`为例。<br/>
 
 `common.admin_settings/header.html`的内容
 ``` html
@@ -70,7 +77,7 @@ public abstract class AdminSettingsSimplePageBuilder : SimpleMenuPageBuilder, IA
 [Action("api/admin/settings/menu_groups")]
 public IActionResult AdminSettingsMenuGroups() {
 	var privilegeManager = Application.Ioc.Resolve<PrivilegeManager>();
-	privilegeManager.Check(UserTypesGroup.AdminOrParter);
+	privilegeManager.Check(typeof(ICanUseAdminPanel));
 	var groups = new List<MenuItemGroup>();
 	var handlers = Application.Ioc.ResolveMany<IAdminSettingsMenuProvider>();
 	handlers.ForEach(h => h.Setup(groups));
@@ -78,4 +85,4 @@ public IActionResult AdminSettingsMenuGroups() {
 }
 ```
 
-在完成这些工作后，需要添加新的后台设置页时只要继承`AdminSettingsFormPageBuilder`就可以提供一个完整的页面。
+在完成这些工作后，需要添加新的后台设置页时只要继承`FormAdminSettingsControllerBase`就可以提供一个完整的页面。

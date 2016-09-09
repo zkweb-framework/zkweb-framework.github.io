@@ -3,6 +3,7 @@
 
 ### 通用分类的数据结构
 
+TODO: 更新这张图
 ![通用分类的ER图](../img/er_generic_class.jpg)
 
 ### 通用分类的管理界面
@@ -11,13 +12,13 @@
 
 ### 如何定义一个新的分类类型
 
-定义一个新的分类类型需要继承`GenericClassBuilder`。<br/>
+定义一个新的分类类型需要继承`GenericClassControllerBase`。<br/>
 以下是商品分类的源代码，可以参考实现自己的分类类型。<br/>
 
 ```csharp
 [ExportMany]
-public class ProductClass : GenericClassBuilder {
-		public override string Name { get { return "ProductClass"; } }
+public class ProductClassController : GenericClassControllerBase<ProductClassController> {
+	public override string Name { get { return "ProductClass"; } }
 }
 ```
 
@@ -27,12 +28,12 @@ public class ProductClass : GenericClassBuilder {
 
 ```csharp
 var classManager = Application.Ioc.Resolve<GenericClassManager>();
-var classTree = classManager.GetClassTree("分类类型");
+var classTree = classManager.GetTreeWithCache("分类类型");
 ```
 
 **获取分类列表**
 
 ```csharp
 var classManager = Application.Ioc.Resolve<GenericClassManager>();
-var classList = classManager.GetClasses("分类类型');
+var classList = classManager.GetManyWithCache("分类类型');
 ```
