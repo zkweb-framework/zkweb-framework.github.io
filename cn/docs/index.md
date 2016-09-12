@@ -70,6 +70,11 @@ ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
 用户名: demo<br/>
 密码: 123456<br/>
 
+### 示例项目
+
+这里的文档使用的代码都可以在示例项目中找到，<br/>
+地址是<a href="https://github.com/zkweb-framework/zkweb-framework.github.io/tree/master/examples/ZKWeb.Examples" target="_blank">https://github.com/zkweb-framework/zkweb-framework.github.io/tree/master/examples/ZKWeb.Examples</a>
+
 ### 索引文档
 
 最终更新: 2016-08-20<br/>
