@@ -730,9 +730,7 @@ public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
 <ul>
 <li>EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持</li>
 <li>EFCore目前还不支持懒加载，嵌入关联表时需要引入EF依赖并使用Include函数</li>
-<li>NHibernate + Microsoft.Data.Sqlite不支持自动建表，可以手动执行生成出来的ddl文件</li>
-<li>Asp.Net上使用Sqlite需要手动进<code>bin\x86</code>文件夹复制dll到<code>bin</code>下，这是因为微软的Sqlite包不支持旧的项目</li>
-<li>Owin上使用Sqlite需要手动进<code>bin\x86</code>文件夹复制dll到<code>bin</code>下，同上</li>
+<li>Asp.Net和Owin上使用Microsoft.Data.Sqlite需要手动进<code>bin\x86</code>文件夹复制dll到<code>bin</code>下，这是因为微软的Sqlite包不支持旧的项目</li>
 </ul>
             
 
