@@ -43,3 +43,8 @@ ZKWeb使用了一个全局变量储存IoC容器，这个全局变量在`Applicat
 插件可以标记`[ExportMany]`属性注册组件，同时标记`[SingletonReuse]`属性可以注册成单例。<br/>
 请注意标记该属性的类需要是公开类，私有类不会被扫描。<br/>
 如果不想使用属性注册组件，可以实现`IPlugin`接口在插件载入时手动注册到`Application.Ioc`
+
+### 替换现有的组件
+
+替换现有的组件可以手动调用`Application.Ioc.Unregister`再注册，<br/>
+也可以使用`[ExportMany]`属性中的`ClearExists`属性自动替换现有的实现

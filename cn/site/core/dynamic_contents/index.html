@@ -24,7 +24,7 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../isolated_cache/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../cache/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
           <a class="repo-link btn btn-inverse btn-small " rel="next" href="../template_engine/">
@@ -127,7 +127,13 @@
                   
                       
 <li >
-    <a href="../isolated_cache/">缓存隔离</a>
+    <a href="../cache/">缓存处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../file_storage/">文件储存</a>
 </li>
 
                   
@@ -602,7 +608,7 @@ areaManager.GetArea(&quot;header_menubar&quot;).DefaultWidgets.Add(&quot;example
 </code></pre>
 
 <p>这里的<code>CacheTime</code>表示该模块的描画结果会缓存15秒，<code>CacheBy</code>表示缓存的隔离策略。<br/>
-缓存策略请参考<a href="../isolated_cache">缓存隔离</a>，这里缓存会按当前的语言和时区来隔离。<br/>
+缓存策略请参考<a href="../cache">缓存处理</a>，这里缓存会按当前的语言和时区来隔离。<br/>
 有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。<br/></p>
             
 

@@ -18,7 +18,8 @@ pages:
   - 请求和错误处理: core/http_handlers.md
   - 模板引擎: core/template_engine.md
   - 动态内容: core/dynamic_contents.md
-  - 缓存隔离: core/isolated_cache.md
+  - 缓存处理: core/cache.md
+  - 文件储存: core/file_storage.md
   - 数据库: core/database.md
   - 多语言: core/multi_language.md
   - 多时区: core/multi_timezone.md

@@ -64,5 +64,5 @@ areaManager.GetArea("header_menubar").DefaultWidgets.Add("example.widgets/exampl
 ```
 
 这里的`CacheTime`表示该模块的描画结果会缓存15秒，`CacheBy`表示缓存的隔离策略。<br/>
-缓存策略请参考[缓存隔离](isolated_cache)，这里缓存会按当前的语言和时区来隔离。<br/>
+缓存策略请参考[缓存处理](cache)，这里缓存会按当前的语言和时区来隔离。<br/>
 有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。<br/>

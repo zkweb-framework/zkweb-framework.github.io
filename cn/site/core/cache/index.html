@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>配置文件 - ZKWeb框架文档</title>
+  <title>缓存处理 - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="配置文件, 配置文件">
+  <meta name="description" content="缓存处理, 缓存处理">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,10 +24,10 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../ioc_container/">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../file_storage/">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../website_struct/">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../dynamic_contents/">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -84,8 +84,8 @@
 
                   
                       
-<li class="active">
-    <a href="./">配置文件</a>
+<li >
+    <a href="../website_config/">配置文件</a>
 </li>
 
                   
@@ -126,8 +126,8 @@
 
                   
                       
-<li >
-    <a href="../cache/">缓存处理</a>
+<li class="active">
+    <a href="./">缓存处理</a>
 </li>
 
                   
@@ -518,25 +518,31 @@
 
                 
                   <li class="main">
-                    <a href="#_1">配置内容</a>
+                    <a href="#_1">创建缓存</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_2">各配置的说明</a>
+                    <a href="#_2">缓存的隔离</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_3">获取配置</a>
+                    <a href="#_3">创建带隔离功能的缓存</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_4">附加配置</a>
+                    <a href="#_4">自定义隔离策略</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_5">提供的缓存隔离策略</a>
                   </li>
 
                   
@@ -554,73 +560,67 @@
           <div id="main-content" class="span9">
             
               
-                <h1>配置文件</h1><br/>
+                <h1>缓存处理</h1><br/>
               
-              <p>ZKWeb的网站配置内容都保存在<code>App_Data\config.json</code>中。<br/></p>
-<h3 id="_1">配置内容</h3>
-<pre><code class="json">{
-    &quot;ORM&quot;: ORM名称,
-    &quot;Database&quot;: 数据库名称,
-    &quot;ConnectionString&quot;: 数据库连接字符串,
-    &quot;PluginDirectories&quot;: [ 用于查找插件的目录列表 ],
-    &quot;Plugins&quot;: [ 插件列表 ],
-    &quot;Extra&quot;: { 附加配置 }
+              <p>ZKWeb提供了标准的缓存接口，可以统一缓存的操作。<br/>
+默认缓存对象都保存在内存中，可以自己实现<code>ICacheFactory</code>来支持分布式的缓存。<br/>
+缓存接口的类型是<code>IKeyValueCache&lt;TKey, TValue&gt;</code>，通过<code>ICacheFactory</code>可以创建一个新的缓存对象。</p>
+<pre><code class="csharp">public interface IKeyValueCache&lt;TKey, TValue&gt; {
+    void Put(TKey key, TValue value, TimeSpan keepTime);
+    bool TryGetValue(TKey key, out TValue value);
+    void Remove(TKey key);
+    int Count();
+    void Clear();
 }
 </code></pre>
 
-<h3 id="_2">各配置的说明</h3>
-<ul>
-<li>ORM ORM名称<ul>
-<li>可以是"NHibernate", "EFCore", "Dapper", "MongoDB"</li>
-</ul>
-</li>
-<li>Database 数据库名称<ul>
-<li>可以是"MSSQL", "MySQL", "SQLite", "PostgreSQL", "InMemory", "MongoDB"</li>
-</ul>
-</li>
-<li>ConnectionString 数据库连接字符串<ul>
-<li>填写标准的连接字符串即可</li>
-<li>选择InMemory时可以随便填</li>
-</ul>
-</li>
-<li>PluginDirectories 用于查找插件的目录列表<ul>
-<li>会从这些目录中查找插件</li>
-<li>应该填写相对于网站程序的路径，不填写时使用<code>["App_Data/Plugins"]</code></li>
-</ul>
-</li>
-<li>PluginDirectories 插件列表<ul>
-<li>插件文件夹的名称</li>
-<li>这里的顺序会影响到插件的加载顺序，加载顺序会影响到组件注册的顺序和资源文件的读取顺序等</li>
-</ul>
-</li>
-<li>Extra 附加配置<ul>
-<li>附加配置可以用来修改高级的配置，例如各项缓存时间等</li>
-</ul>
-</li>
-</ul>
-<h3 id="_3">获取配置</h3>
-<p>获取网站配置可以使用<code>ConfigManager</code>。</p>
-<pre><code class="csharp">var configManager = Application.Ioc.Resolve&lt;ConfigManager&gt;();
-var value = configManager.WebsiteConfig.Extra.GetOrDefault&lt;bool&gt;(&quot;SomeExtraConfiguration&quot;);
+<h3 id="_1">创建缓存</h3>
+<p>创建缓存需要调用<code>ICacheFactory.CreateCache</code>，可以指定创建的参数<code>CacheFactoryOptions</code><br/>
+<code>CacheFactoryOptions.Lifetime</code>为缓存的生命周期，有持久和跟随Http请求销毁。<br/>
+<code>CacheFactoryOptions.IsolationPolicies</code>为隔离策略，请参考下面的说明。</p>
+<pre><code class="csharp">var cacheFactory = Application.Ioc.Resolve&lt;ICacheFactory&gt;();
+var cache = cacheFactory.CreateCache&lt;int, string&gt;();
 </code></pre>
 
-<h3 id="_4">附加配置</h3>
-<p>核心框架提供了以下的附加配置，部分插件中也会有这样的附加配置。</p>
+<h3 id="_2">缓存的隔离</h3>
+<p>ZKWeb提供了一套隔离缓存的机制，可以按当前的上下文隔离缓存。<br/>
+例如缓存翻译结果时，一般应该使用<code>cache[当前语言][原文] = [译文]</code>，<br/>
+但使用缓存隔离功能后，可以直接使用<code>cache[原文] = [译文]</code>。<br/></p>
+<h3 id="_3">创建带隔离功能的缓存</h3>
+<p>以下创建了根据当前请求的语言和Url进行隔离的缓存。<br/></p>
+<pre><code class="csharp">var cacheFactory = Application.Ioc.Resolve&lt;ICacheFactory&gt;();
+var cache = cacheFactory.CreateCache&lt;string, string&gt;(
+    CacheFactoryOptions.Default.WithIsolationPolicies(&quot;Url&quot;, &quot;Locale&quot;));
+cache.Put(path, renderResult, TimeSpan.FromSeconds(100));
+</code></pre>
+
+<h3 id="_4">自定义隔离策略</h3>
+<p>继承<code>ICacheIsolationPolicy</code>并且注册到容器可以实现自定义的缓存策略。<br/>
+缓存策略类似于Http协议中的<code>Vary</code>，可以根据不同的请求参数区分缓存的内容。<br/>
+这里根据Http头中的Accept隔离。<br/></p>
+<pre><code class="csharp">[ExportMany(ContractKey = &quot;Custom&quot;)]
+public class CustomPolicy : ICacheIsolationPolicy {
+    public object GetIsolationKey() {
+        return HttpManager.CurrentContext.Request.GetHeader(&quot;Accept&quot;);
+    }
+}
+</code></pre>
+
+<h3 id="_5">提供的缓存隔离策略</h3>
+<p>框架默认提供了以下的缓存隔离策略<br/></p>
 <ul>
-<li>ZKWeb.TemporaryDatabaseORM 临时数据库使用的ORM，默认是InMemory</li>
-<li>ZKWeb.TemporaryDatabaseType 临时数据库使用的数据库类型</li>
-<li>ZKWeb.TemporaryDatabaseConnectionString 临时数据库试用的连接字符串</li>
-<li>ZKWeb.TranslateCacheTime 翻译的缓存时间，单位是秒</li>
-<li>ZKWeb.TemplatePathCacheTime 模板路径缓存时间，单位是秒</li>
-<li>ZKWeb.ResourcePathCacheTime 资源路径的缓存时间，单位是秒</li>
-<li>ZKWeb.WidgetInfoCacheTime 模块信息的缓存时间，单位是秒</li>
-<li>ZKWeb.CustomWidgetsCacheTime 自定义模块列表的缓存时间，单位是秒</li>
-<li>ZKWeb.TemplateCacheTime 模板的缓存时间，单位是秒</li>
-<li>ZKWeb.DisplayFullExceptionForTemplate 是否在描画模板发生例外时显示完整信息</li>
-<li>ZKWeb.DisplayFullExceptionForRequest 是否在请求发生例外时显示完整信息</li>
-<li>ZKWeb.ClearCacheAfterUsedMemoryMoreThan 内存占用超过此数值时自动清理缓存，单位是MB</li>
-<li>ZKWeb.CleanCacheCheckInterval 缓存自动清理器的检查间隔，单位是秒</li>
-<li>ZKWeb.CompilePluginsWithReleaseConfiguration 是否使用Release配置编译插件，默认是false</li>
+<li><code>Device</code><ul>
+<li>按当前请求的设备(电脑或手机)隔离缓存</li>
+</ul>
+</li>
+<li><code>Locale</code><ul>
+<li>按当前的语言和时区隔离缓存</li>
+</ul>
+</li>
+<li><code>Url</code><ul>
+<li>按当前请求的地址，参数和表单参数隔离缓存</li>
+</ul>
+</li>
 </ul>
             
 

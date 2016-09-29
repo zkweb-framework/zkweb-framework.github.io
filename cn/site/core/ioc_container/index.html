@@ -127,7 +127,13 @@
                   
                       
 <li >
-    <a href="../isolated_cache/">缓存隔离</a>
+    <a href="../cache/">缓存处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../file_storage/">文件储存</a>
 </li>
 
                   
@@ -529,6 +535,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_3">替换现有的组件</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -583,6 +595,9 @@ public class AnimalManager : IAnimalManager {
 <p>插件可以标记<code>[ExportMany]</code>属性注册组件，同时标记<code>[SingletonReuse]</code>属性可以注册成单例。<br/>
 请注意标记该属性的类需要是公开类，私有类不会被扫描。<br/>
 如果不想使用属性注册组件，可以实现<code>IPlugin</code>接口在插件载入时手动注册到<code>Application.Ioc</code></p>
+<h3 id="_3">替换现有的组件</h3>
+<p>替换现有的组件可以手动调用<code>Application.Ioc.Unregister</code>再注册，<br/>
+也可以使用<code>[ExportMany]</code>属性中的<code>ClearExists</code>属性自动替换现有的实现</p>
             
 
           </div> <!--/span-->
