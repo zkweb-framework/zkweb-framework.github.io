@@ -40,10 +40,10 @@
     <IncludeFavorites>False</IncludeFavorites>
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWeb.dll" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWeb.xml" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWebStandard.dll" />
-      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.0.0-rc-3\lib\NET461\ZKWebStandard.xml" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET461\ZKWeb.dll" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET461\ZKWeb.xml" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET461\ZKWebStandard.dll" />
+      <DocumentationSource sourceFile="C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET461\ZKWebStandard.xml" />
     </DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />

@@ -62,7 +62,11 @@
   </HelpKINode>
   <HelpKINode Title="AllTestStartingInfo.AllTestStartingInfo constructor" Url="html/M_ZKWebStandard_Testing_Events_AllTestStartingInfo__ctor.htm" />
   <HelpKINode Title="AllTestStartingInfo.Runner property" Url="html/P_ZKWebStandard_Testing_Events_AllTestStartingInfo_Runner.htm" />
-  <HelpKINode Title="AppDataDirectory property" Url="html/P_ZKWeb_Server_PathConfig_AppDataDirectory.htm" />
+  <HelpKINode Title="AppDataDirectory property">
+    <HelpKINode Title="LocalPathConfig.AppDataDirectory Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_AppDataDirectory.htm" />
+    <HelpKINode Title="PathConfig.AppDataDirectory Property " Url="html/P_ZKWeb_Server_PathConfig_AppDataDirectory.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AppendAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_AppendAllText.htm" />
   <HelpKINode Title="Application class">
     <HelpKINode Title="Application Class" Url="html/T_ZKWeb_Application.htm" />
     <HelpKINode Title="about Application class" Url="html/T_ZKWeb_Application.htm" />
@@ -158,6 +162,19 @@
   <HelpKINode Title="ByWidth enumeration member" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
   <HelpKINode Title="Cache property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_Cache.htm" />
   <HelpKINode Title="CacheBy property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_CacheBy.htm" />
+  <HelpKINode Title="CacheFactoryOptions class">
+    <HelpKINode Title="CacheFactoryOptions Class" Url="html/T_ZKWeb_Cache_CacheFactoryOptions.htm" />
+    <HelpKINode Title="about CacheFactoryOptions class" Url="html/T_ZKWeb_Cache_CacheFactoryOptions.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_CacheFactoryOptions__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_CacheFactoryOptions.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_CacheFactoryOptions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CacheFactoryOptions.CacheFactoryOptions constructor" Url="html/M_ZKWeb_Cache_CacheFactoryOptions__ctor.htm" />
+  <HelpKINode Title="CacheFactoryOptions.Default property" Url="html/P_ZKWeb_Cache_CacheFactoryOptions_Default.htm" />
+  <HelpKINode Title="CacheFactoryOptions.IsolationPolicies property" Url="html/P_ZKWeb_Cache_CacheFactoryOptions_IsolationPolicies.htm" />
+  <HelpKINode Title="CacheFactoryOptions.Lifetime property" Url="html/P_ZKWeb_Cache_CacheFactoryOptions_Lifetime.htm" />
+  <HelpKINode Title="CacheFactoryOptions.WithIsolationPolicies method" Url="html/Overload_ZKWeb_Cache_CacheFactoryOptions_WithIsolationPolicies.htm" />
+  <HelpKINode Title="CacheFactoryOptions.WithLifetime method" Url="html/M_ZKWeb_Cache_CacheFactoryOptions_WithLifetime.htm" />
   <HelpKINode Title="CacheIsolateByDevice class">
     <HelpKINode Title="CacheIsolateByDevice Class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm" />
     <HelpKINode Title="about CacheIsolateByDevice class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm" />
@@ -182,6 +199,7 @@
   </HelpKINode>
   <HelpKINode Title="CacheIsolateByUrl.CacheIsolateByUrl constructor" Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByUrl__ctor.htm" />
   <HelpKINode Title="CacheIsolateByUrl.GetIsolationKey method" Url="html/M_ZKWeb_Cache_Policies_CacheIsolateByUrl_GetIsolationKey.htm" />
+  <HelpKINode Title="CacheLifetime enumeration" Url="html/T_ZKWeb_Cache_CacheLifetime.htm" />
   <HelpKINode Title="CacheLock property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
   <HelpKINode Title="CacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_CacheTime.htm" />
   <HelpKINode Title="CanConvert method" Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_CanConvert.htm" />
@@ -191,14 +209,21 @@
   <HelpKINode Title="Childs property" Url="html/P_ZKWebStandard_Utils_ITreeNode_1_Childs.htm" />
   <HelpKINode Title="ChinaMobile field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_ChinaMobile.htm" />
   <HelpKINode Title="ChinaMobile property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_ChinaMobile.htm" />
-  <HelpKINode Title="Clear method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
+  <HelpKINode Title="Clear method">
+    <HelpKINode Title="HttpContextCache(TKey, TValue).Clear Method " Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Clear.htm" />
+    <HelpKINode Title="IKeyValueCache(TKey, TValue).Clear Method " Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Clear.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).Clear Method " Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Clear.htm" />
+    <HelpKINode Title="MemoryCache(TKey, TValue).Clear Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
+  </HelpKINode>
   <HelpKINode Title="ClearCache method">
     <HelpKINode Title="ICacheCleaner.ClearCache Method " Url="html/M_ZKWeb_Cache_ICacheCleaner_ClearCache.htm" />
+    <HelpKINode Title="LocalPathManager.ClearCache Method " Url="html/M_ZKWeb_Storage_LocalPathManager_ClearCache.htm" />
     <HelpKINode Title="PathManager.ClearCache Method " Url="html/M_ZKWeb_Server_PathManager_ClearCache.htm" />
     <HelpKINode Title="TemplateAreaManager.ClearCache Method " Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_ClearCache.htm" />
     <HelpKINode Title="TemplateFileSystem.ClearCache Method " Url="html/M_ZKWeb_Templating_TemplateFileSystem_ClearCache.htm" />
     <HelpKINode Title="TranslateManager.ClearCache Method " Url="html/M_ZKWeb_Localize_TranslateManager_ClearCache.htm" />
   </HelpKINode>
+  <HelpKINode Title="ClearExists property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_ClearExists.htm" />
   <HelpKINode Title="Clone method">
     <HelpKINode Title="Container.Clone Method " Url="html/M_ZKWebStandard_Ioc_Container_Clone.htm" />
     <HelpKINode Title="IContainer.Clone Method " Url="html/M_ZKWebStandard_Ioc_IContainer_Clone.htm" />
@@ -230,6 +255,7 @@
   <HelpKINode Title="CompileInfoPath method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_CompileInfoPath.htm" />
   <HelpKINode Title="ConcatIfNotNull(Of T) method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
   <HelpKINode Title="ConcatIfNotNull&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
+  <HelpKINode Title="Config property" Url="html/P_ZKWeb_Server_PathConfig_Config.htm" />
   <HelpKINode Title="ConfigManager class">
     <HelpKINode Title="ConfigManager Class" Url="html/T_ZKWeb_Server_ConfigManager.htm" />
     <HelpKINode Title="about ConfigManager class" Url="html/T_ZKWeb_Server_ConfigManager.htm" />
@@ -273,6 +299,7 @@
     <HelpKINode Title="IHttpRequest.ContentLength Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_ContentLength.htm" />
   </HelpKINode>
   <HelpKINode Title="ContentType property">
+    <HelpKINode Title="HttpPostFileMock.ContentType Property " Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_contentType.htm" />
     <HelpKINode Title="HttpRequestMock.ContentType Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_contentType.htm" />
     <HelpKINode Title="HttpRequestWrapper.ContentType Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_ContentType.htm" />
     <HelpKINode Title="HttpResponseMock.ContentType Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_ContentType.htm" />
@@ -282,6 +309,7 @@
     <HelpKINode Title="IHttpResponse.ContentType Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_ContentType.htm" />
     <HelpKINode Title="StreamResult.ContentType Property " Url="html/P_ZKWeb_Web_ActionResults_StreamResult_ContentType.htm" />
   </HelpKINode>
+  <HelpKINode Title="ContextKey property" Url="html/P_ZKWebStandard_Collections_HttpContextCache_2_ContextKey.htm" />
   <HelpKINode Title="ContractKey property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_ContractKey.htm" />
   <HelpKINode Title="ControllerManager class">
     <HelpKINode Title="ControllerManager Class" Url="html/T_ZKWeb_Web_ControllerManager.htm" />
@@ -304,7 +332,12 @@
     <HelpKINode Title="HttpRequestMock.cookies Property " Url="html/P_ZKWebStandard_Web_Mock_HttpRequestMock_cookies.htm" />
     <HelpKINode Title="HttpResponseMock.cookies Property " Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_cookies.htm" />
   </HelpKINode>
-  <HelpKINode Title="Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
+  <HelpKINode Title="Count method">
+    <HelpKINode Title="HttpContextCache(TKey, TValue).Count Method " Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Count.htm" />
+    <HelpKINode Title="IKeyValueCache(TKey, TValue).Count Method " Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Count.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).Count Method " Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Count.htm" />
+    <HelpKINode Title="MemoryCache(TKey, TValue).Count Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
+  </HelpKINode>
   <HelpKINode Title="Count(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
   <HelpKINode Title="Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
   <HelpKINode Title="Counter property" Url="html/P_ZKWebStandard_Testing_Events_AllTestCompletedInfo_Counter.htm" />
@@ -312,6 +345,8 @@
   <HelpKINode Title="Create(Of TFirst, TSecond) method" Url="html/M_ZKWebStandard_Collections_Pair_Create__2.htm" />
   <HelpKINode Title="Create&lt;T&gt; method" Url="html/M_ZKWebStandard_Collections_LazyCache_Create__1.htm" />
   <HelpKINode Title="Create&lt;TFirst, TSecond&gt; method" Url="html/M_ZKWebStandard_Collections_Pair_Create__2.htm" />
+  <HelpKINode Title="CreateCache(Of TKey, TValue) method" Url="html/M_ZKWeb_Cache_ICacheFactory_CreateCache__2.htm" />
+  <HelpKINode Title="CreateCache&lt;TKey, TValue&gt; method" Url="html/M_ZKWeb_Cache_ICacheFactory_CreateCache__2.htm" />
   <HelpKINode Title="CreateContext method">
     <HelpKINode Title="DatabaseManager.CreateContext Method " Url="html/M_ZKWeb_Database_DatabaseManager_CreateContext.htm" />
     <HelpKINode Title="IDatabaseContextFactory.CreateContext Method " Url="html/M_ZKWeb_Database_IDatabaseContextFactory_CreateContext.htm" />
@@ -319,6 +354,10 @@
   <HelpKINode Title="CreateContextFactor method" Url="html/M_ZKWeb_Database_DatabaseManager_CreateContextFactor.htm" />
   <HelpKINode Title="CreateTree(Of T, TValue) method" Url="html/M_ZKWebStandard_Utils_TreeUtils_CreateTree__2.htm" />
   <HelpKINode Title="CreateTree&lt;T, TValue&gt; method" Url="html/M_ZKWebStandard_Utils_TreeUtils_CreateTree__2.htm" />
+  <HelpKINode Title="CreationTimeUtc property">
+    <HelpKINode Title="IFileEntry.CreationTimeUtc Property " Url="html/P_ZKWeb_Storage_IFileEntry_CreationTimeUtc.htm" />
+    <HelpKINode Title="LocalFileEntry.CreationTimeUtc Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_CreationTimeUtc.htm" />
+  </HelpKINode>
   <HelpKINode Title="CurrentAreaIdKey property" Url="html/P_ZKWeb_Templating_TemplateTags_Area_CurrentAreaIdKey.htm" />
   <HelpKINode Title="CurrentContext property" Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContext.htm" />
   <HelpKINode Title="CurrentContextExists property" Url="html/P_ZKWebStandard_Web_HttpManager_CurrentContextExists.htm" />
@@ -327,7 +366,10 @@
   <HelpKINode Title="CustomWidgetsCache property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCache.htm" />
   <HelpKINode Title="CustomWidgetsCacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCacheTime.htm" />
   <HelpKINode Title="Cut enumeration member" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
-  <HelpKINode Title="Database property" Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
+  <HelpKINode Title="Database property">
+    <HelpKINode Title="IDatabaseContext.Database Property " Url="html/P_ZKWeb_Database_IDatabaseContext_Database.htm" />
+    <HelpKINode Title="WebsiteConfig.Database Property " Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
+  </HelpKINode>
   <HelpKINode Title="DatabaseManager class">
     <HelpKINode Title="DatabaseManager Class" Url="html/T_ZKWeb_Database_DatabaseManager.htm" />
     <HelpKINode Title="about DatabaseManager class" Url="html/T_ZKWeb_Database_DatabaseManager.htm" />
@@ -367,6 +409,8 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Extensions_DecimalExtensions.htm" />
   </HelpKINode>
   <HelpKINode Title="DecimalExtensions.Normalize method" Url="html/M_ZKWebStandard_Extensions_DecimalExtensions_Normalize.htm" />
+  <HelpKINode Title="Decode method" Url="html/M_ZKWebStandard_Collection_HtmlString_Decode.htm" />
+  <HelpKINode Title="Default property" Url="html/P_ZKWeb_Cache_CacheFactoryOptions_Default.htm" />
   <HelpKINode Title="DefaultContextFactory property" Url="html/P_ZKWeb_Database_DatabaseManager_DefaultContextFactory.htm" />
   <HelpKINode Title="DefaultErrorHandler class">
     <HelpKINode Title="DefaultErrorHandler Class" Url="html/T_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler.htm" />
@@ -378,18 +422,31 @@
   <HelpKINode Title="DefaultErrorHandler.OnError method" Url="html/M_ZKWeb_Web_HttpRequestHandlers_DefaultErrorHandler_OnError.htm" />
   <HelpKINode Title="DefaultWidgets property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateArea_DefaultWidgets.htm" />
   <HelpKINode Title="DELETE field" Url="html/F_ZKWeb_Web_HttpMethods_DELETE.htm" />
+  <HelpKINode Title="Delete method">
+    <HelpKINode Title="IDirectoryEntry.Delete Method " Url="html/M_ZKWeb_Storage_IDirectoryEntry_Delete.htm" />
+    <HelpKINode Title="IFileEntry.Delete Method " Url="html/M_ZKWeb_Storage_IFileEntry_Delete.htm" />
+    <HelpKINode Title="LocalDirectoryEntry.Delete Method " Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_Delete.htm" />
+    <HelpKINode Title="LocalFileEntry.Delete Method " Url="html/M_ZKWeb_Storage_LocalFileEntry_Delete.htm" />
+  </HelpKINode>
   <HelpKINode Title="Delete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
   <HelpKINode Title="Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
   <HelpKINode Title="Dependencies property" Url="html/P_ZKWeb_Plugin_PluginInfo_Dependencies.htm" />
   <HelpKINode Title="Description property" Url="html/P_ZKWeb_Plugin_PluginInfo_Description.htm" />
   <HelpKINode Title="Desktop enumeration member" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
   <HelpKINode Title="DeviceKey field" Url="html/F_ZKWebStandard_Extensions_IHttpContextExtensions_DeviceKey.htm" />
-  <HelpKINode Title="DeviceSpecializedTemplateDirectoryNameFormat property" Url="html/P_ZKWeb_Server_PathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
+  <HelpKINode Title="DeviceSpecializedTemplateDirectoryNameFormat property">
+    <HelpKINode Title="LocalPathConfig.DeviceSpecializedTemplateDirectoryNameFormat Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
+    <HelpKINode Title="PathConfig.DeviceSpecializedTemplateDirectoryNameFormat Property " Url="html/P_ZKWeb_Server_PathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
+  </HelpKINode>
   <HelpKINode Title="DeviceTypes enumeration" Url="html/T_ZKWebStandard_Extensions_DeviceTypes.htm" />
   <HelpKINode Title="Digits field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Digits.htm" />
   <HelpKINode Title="Digits property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Digits.htm" />
   <HelpKINode Title="Directory property" Url="html/P_ZKWeb_Plugin_PluginInfo_Directory.htm" />
   <HelpKINode Title="DirectoryName method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_DirectoryName.htm" />
+  <HelpKINode Title="DirectoryName property">
+    <HelpKINode Title="IDirectoryEntry.DirectoryName Property " Url="html/P_ZKWeb_Storage_IDirectoryEntry_DirectoryName.htm" />
+    <HelpKINode Title="LocalDirectoryEntry.DirectoryName Property " Url="html/P_ZKWeb_Storage_LocalDirectoryEntry_DirectoryName.htm" />
+  </HelpKINode>
   <HelpKINode Title="Dispose method">
     <HelpKINode Title="Container.Dispose Method " Url="html/M_ZKWebStandard_Ioc_Container_Dispose.htm" />
     <HelpKINode Title="ImageResult.Dispose Method " Url="html/M_ZKWeb_Web_ActionResults_ImageResult_Dispose.htm" />
@@ -400,6 +457,7 @@
   <HelpKINode Title="Domain property" Url="html/P_ZKWebStandard_Web_HttpCookieOptions_Domain.htm" />
   <HelpKINode Title="Email field" Url="html/F_ZKWebStandard_Utils_RegexUtils_Expressions_Email.htm" />
   <HelpKINode Title="Email property" Url="html/P_ZKWebStandard_Utils_RegexUtils_Validators_Email.htm" />
+  <HelpKINode Title="Encode method" Url="html/M_ZKWebStandard_Collection_HtmlString_Encode.htm" />
   <HelpKINode Title="End method">
     <HelpKINode Title="HttpResponseMock.End Method " Url="html/M_ZKWebStandard_Web_Mock_HttpResponseMock_End.htm" />
     <HelpKINode Title="HttpResponseWrapper.End Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_End.htm" />
@@ -419,11 +477,20 @@
   <HelpKINode Title="EntityMappingOptions.EntityMappingOptions constructor" Url="html/M_ZKWeb_Database_EntityMappingOptions__ctor.htm" />
   <HelpKINode Title="EntityMappingOptions.Index property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Index.htm" />
   <HelpKINode Title="EntityMappingOptions.Length property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Length.htm" />
+  <HelpKINode Title="EntityMappingOptions.Navigation property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Navigation.htm" />
   <HelpKINode Title="EntityMappingOptions.Nullable property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Nullable.htm" />
   <HelpKINode Title="EntityMappingOptions.Unique property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Unique.htm" />
   <HelpKINode Title="EntityMappingOptions.WithSerialization property" Url="html/P_ZKWeb_Database_EntityMappingOptions_WithSerialization.htm" />
   <HelpKINode Title="EnumerateAllNodes(Of T) method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_EnumerateAllNodes__1.htm" />
   <HelpKINode Title="EnumerateAllNodes&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_EnumerateAllNodes__1.htm" />
+  <HelpKINode Title="EnumerateDirectories method">
+    <HelpKINode Title="IDirectoryEntry.EnumerateDirectories Method " Url="html/M_ZKWeb_Storage_IDirectoryEntry_EnumerateDirectories.htm" />
+    <HelpKINode Title="LocalDirectoryEntry.EnumerateDirectories Method " Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_EnumerateDirectories.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EnumerateFiles method">
+    <HelpKINode Title="IDirectoryEntry.EnumerateFiles Method " Url="html/M_ZKWeb_Storage_IDirectoryEntry_EnumerateFiles.htm" />
+    <HelpKINode Title="LocalDirectoryEntry.EnumerateFiles Method " Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_EnumerateFiles.htm" />
+  </HelpKINode>
   <HelpKINode Title="EnumExtensions class">
     <HelpKINode Title="EnumExtensions Class" Url="html/T_ZKWebStandard_Extensions_EnumExtensions.htm" />
     <HelpKINode Title="about EnumExtensions class" Url="html/T_ZKWebStandard_Extensions_EnumExtensions.htm" />
@@ -434,7 +501,7 @@
   <HelpKINode Title="EnumExtensions.GetDescription method" Url="html/M_ZKWebStandard_Extensions_EnumExtensions_GetDescription.htm" />
   <HelpKINode Title="Equals method">
     <HelpKINode Title="Assert.Equals Method " Url="html/Overload_ZKWebStandard_Testing_Assert_Equals.htm" />
-    <HelpKINode Title="IsolatedMemoryCacheKey(TKey).Equals Method " Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm" />
+    <HelpKINode Title="IsolatedCacheKey(TKey).Equals Method " Url="html/Overload_ZKWeb_Cache_IsolatedCacheKey_1_Equals.htm" />
     <HelpKINode Title="Pair(TFirst, TSecond).Equals Method " Url="html/Overload_ZKWebStandard_Collections_Pair_2_Equals.htm" />
   </HelpKINode>
   <HelpKINode Title="EqualsSupportsNull method" Url="html/M_ZKWebStandard_Extensions_ObjectExtensions_EqualsSupportsNull.htm" />
@@ -454,6 +521,12 @@
     <HelpKINode Title="TestFailedInfo.Exception Property " Url="html/P_ZKWebStandard_Testing_Events_TestFailedInfo_Exception.htm" />
     <HelpKINode Title="TestSkippedInfo.Exception Property " Url="html/P_ZKWebStandard_Testing_Events_TestSkippedInfo_Exception.htm" />
   </HelpKINode>
+  <HelpKINode Title="Exists property">
+    <HelpKINode Title="IDirectoryEntry.Exists Property " Url="html/P_ZKWeb_Storage_IDirectoryEntry_Exists.htm" />
+    <HelpKINode Title="IFileEntry.Exists Property " Url="html/P_ZKWeb_Storage_IFileEntry_Exists.htm" />
+    <HelpKINode Title="LocalDirectoryEntry.Exists Property " Url="html/P_ZKWeb_Storage_LocalDirectoryEntry_Exists.htm" />
+    <HelpKINode Title="LocalFileEntry.Exists Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_Exists.htm" />
+  </HelpKINode>
   <HelpKINode Title="Expires property" Url="html/P_ZKWebStandard_Web_HttpCookieOptions_Expires.htm" />
   <HelpKINode Title="ExportManyAttribute class">
     <HelpKINode Title="ExportManyAttribute Class" Url="html/T_ZKWebStandard_Ioc_ExportManyAttribute.htm" />
@@ -462,6 +535,7 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Ioc_ExportManyAttribute.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Ioc_ExportManyAttribute.htm" />
   </HelpKINode>
+  <HelpKINode Title="ExportManyAttribute.ClearExists property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_ClearExists.htm" />
   <HelpKINode Title="ExportManyAttribute.ContractKey property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_ContractKey.htm" />
   <HelpKINode Title="ExportManyAttribute.Except property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_Except.htm" />
   <HelpKINode Title="ExportManyAttribute.ExportManyAttribute constructor" Url="html/M_ZKWebStandard_Ioc_ExportManyAttribute__ctor.htm" />
@@ -506,7 +580,26 @@
   <HelpKINode Title="Fetch.Variable property" Url="html/P_ZKWeb_Templating_TemplateTags_Fetch_Variable.htm" />
   <HelpKINode Title="Fetch.VariableInUrlExpression field" Url="html/F_ZKWeb_Templating_TemplateTags_Fetch_VariableInUrlExpression.htm" />
   <HelpKINode Title="Fetch.VariableNameForAllQueryParameters field" Url="html/F_ZKWeb_Templating_TemplateTags_Fetch_VariableNameForAllQueryParameters.htm" />
-  <HelpKINode Title="FileName property" Url="html/P_ZKWebStandard_Web_IHttpPostedFile_FileName.htm" />
+  <HelpKINode Title="FileEntry property" Url="html/P_ZKWeb_Web_ActionResults_FileEntryResult_FileEntry.htm" />
+  <HelpKINode Title="FileEntryResult class">
+    <HelpKINode Title="FileEntryResult Class" Url="html/T_ZKWeb_Web_ActionResults_FileEntryResult.htm" />
+    <HelpKINode Title="about FileEntryResult class" Url="html/T_ZKWeb_Web_ActionResults_FileEntryResult.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Web_ActionResults_FileEntryResult__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Web_ActionResults_FileEntryResult.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Web_ActionResults_FileEntryResult.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FileEntryResult.FileEntry property" Url="html/P_ZKWeb_Web_ActionResults_FileEntryResult_FileEntry.htm" />
+  <HelpKINode Title="FileEntryResult.FileEntryResult constructor" Url="html/M_ZKWeb_Web_ActionResults_FileEntryResult__ctor.htm" />
+  <HelpKINode Title="FileEntryResult.IfModifiedSince property" Url="html/P_ZKWeb_Web_ActionResults_FileEntryResult_IfModifiedSince.htm" />
+  <HelpKINode Title="FileEntryResult.WriteResponse method" Url="html/M_ZKWeb_Web_ActionResults_FileEntryResult_WriteResponse.htm" />
+  <HelpKINode Title="FileName property">
+    <HelpKINode Title="HttpPostFileMock.FileName Property " Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_filename.htm" />
+    <HelpKINode Title="IHttpPostedFile.FileName Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_FileName.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Filename property">
+    <HelpKINode Title="IFileEntry.Filename Property " Url="html/P_ZKWeb_Storage_IFileEntry_Filename.htm" />
+    <HelpKINode Title="LocalFileEntry.Filename Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_Filename.htm" />
+  </HelpKINode>
   <HelpKINode Title="FilePath property" Url="html/P_ZKWeb_Web_ActionResults_FileResult_FilePath.htm" />
   <HelpKINode Title="FileResult class">
     <HelpKINode Title="FileResult Class" Url="html/T_ZKWeb_Web_ActionResults_FileResult.htm" />
@@ -550,7 +643,7 @@
   <HelpKINode Title="FromPassword method" Url="html/M_ZKWebStandard_Utils_PasswordInfo_FromPassword.htm" />
   <HelpKINode Title="FromPath method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_FromPath.htm" />
   <HelpKINode Title="FullVersion property" Url="html/P_ZKWeb_Application_FullVersion.htm" />
-  <HelpKINode Title="GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
+  <HelpKINode Title="GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_GenerateKey.htm" />
   <HelpKINode Title="GeneratePdbFile property" Url="html/P_ZKWeb_Plugin_CompilerServices_CompilationOptions_GeneratePdbFile.htm" />
   <HelpKINode Title="Generator property" Url="html/P_ZKWebStandard_Utils_RandomUtils_Generator.htm" />
   <HelpKINode Title="GET field" Url="html/F_ZKWeb_Web_HttpMethods_GET.htm" />
@@ -565,6 +658,8 @@
   <HelpKINode Title="GetAcceptLanguages method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAcceptLanguages.htm" />
   <HelpKINode Title="GetAction method" Url="html/M_ZKWeb_Web_ControllerManager_GetAction.htm" />
   <HelpKINode Title="GetAll method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAll.htm" />
+  <HelpKINode Title="GetAllAs(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllAs__1.htm" />
+  <HelpKINode Title="GetAllAs&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllAs__1.htm" />
   <HelpKINode Title="GetAllDictionary method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllDictionary.htm" />
   <HelpKINode Title="GetArea method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetArea.htm" />
   <HelpKINode Title="GetAssembliesForTest method" Url="html/M_ZKWeb_Testing_TestManager_GetAssembliesForTest.htm" />
@@ -590,7 +685,7 @@
     <HelpKINode Title="IHttpRequest.GetCookies Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetCookies.htm" />
   </HelpKINode>
   <HelpKINode Title="GetCustomWidgets method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgets.htm" />
-  <HelpKINode Title="GetCustomWidgetsJsonPath method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgetsJsonPath.htm" />
+  <HelpKINode Title="GetCustomWidgetsFile method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgetsFile.htm" />
   <HelpKINode Title="GetData(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetData__1.htm" />
   <HelpKINode Title="GetData&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetData__1.htm" />
   <HelpKINode Title="GetDescription method" Url="html/M_ZKWebStandard_Extensions_EnumExtensions_GetDescription.htm" />
@@ -607,7 +702,7 @@
   <HelpKINode Title="GetFullName method" Url="html/M_ZKWebStandard_Extensions_MethodInfoExtensions_GetFullName.htm" />
   <HelpKINode Title="GetGenericArguments method" Url="html/M_ZKWebStandard_Utils_ReflectionUtils_GetGenericArguments.htm" />
   <HelpKINode Title="GetHashCode method">
-    <HelpKINode Title="IsolatedMemoryCacheKey(TKey).GetHashCode Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_GetHashCode.htm" />
+    <HelpKINode Title="IsolatedCacheKey(TKey).GetHashCode Method " Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1_GetHashCode.htm" />
     <HelpKINode Title="Pair(TFirst, TSecond).GetHashCode Method " Url="html/M_ZKWebStandard_Collections_Pair_2_GetHashCode.htm" />
   </HelpKINode>
   <HelpKINode Title="GetHeader method">
@@ -634,22 +729,25 @@
   <HelpKINode Title="GetMemberAttribute&lt;TAttribute&gt; method" Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberAttribute__1.htm" />
   <HelpKINode Title="GetMemberInfo method" Url="html/M_ZKWebStandard_Extensions_ExpressionExtensions_GetMemberInfo.htm" />
   <HelpKINode Title="GetMimeType method" Url="html/M_ZKWebStandard_Utils_MimeUtils_GetMimeType.htm" />
-  <HelpKINode Title="GetOrCreate method">
-    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).GetOrCreate Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
-    <HelpKINode Title="MemoryCache(TKey, TValue).GetOrCreate Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
+  <HelpKINode Title="GetOrCreate(Of TKey, TValue) method">
+    <HelpKINode Title="IDictionaryExtensions.GetOrCreate(TKey, TValue) Method " Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
+    <HelpKINode Title="IKeyValueCacheExtensions.GetOrCreate(TKey, TValue) Method " Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrCreate__2.htm" />
   </HelpKINode>
-  <HelpKINode Title="GetOrCreate(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
-  <HelpKINode Title="GetOrCreate&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
+  <HelpKINode Title="GetOrCreate&lt;TKey, TValue&gt; method">
+    <HelpKINode Title="IDictionaryExtensions.GetOrCreate(TKey, TValue) Method " Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
+    <HelpKINode Title="IKeyValueCacheExtensions.GetOrCreate(TKey, TValue) Method " Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrCreate__2.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetOrCreateData(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetOrCreateData__1.htm" />
   <HelpKINode Title="GetOrCreateData&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_GetOrCreateData__1.htm" />
-  <HelpKINode Title="GetOrDefault method">
-    <HelpKINode Title="IDictionaryExtensions.GetOrDefault Method " Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm" />
-    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).GetOrDefault Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
-    <HelpKINode Title="MemoryCache(TKey, TValue).GetOrDefault Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
-  </HelpKINode>
+  <HelpKINode Title="GetOrDefault method" Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm" />
+  <HelpKINode Title="GetOrDefault(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrDefault__2.htm" />
+  <HelpKINode Title="GetOrDefault&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrDefault__2.htm" />
   <HelpKINode Title="GetParents(Of T) method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_GetParents__1.htm" />
   <HelpKINode Title="GetParents&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_ITreeNodeExtensions_GetParents__1.htm" />
-  <HelpKINode Title="GetPluginDirectories method" Url="html/M_ZKWeb_Server_PathManager_GetPluginDirectories.htm" />
+  <HelpKINode Title="GetPluginDirectories method">
+    <HelpKINode Title="LocalPathManager.GetPluginDirectories Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetPluginDirectories.htm" />
+    <HelpKINode Title="PathManager.GetPluginDirectories Method " Url="html/M_ZKWeb_Server_PathManager_GetPluginDirectories.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetPostedFile method">
     <HelpKINode Title="HttpRequestMock.GetPostedFile Method " Url="html/M_ZKWebStandard_Web_Mock_HttpRequestMock_GetPostedFile.htm" />
     <HelpKINode Title="HttpRequestWrapper.GetPostedFile Method " Url="html/M_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_GetPostedFile.htm" />
@@ -671,12 +769,32 @@
     <HelpKINode Title="IHttpRequest.GetQueryValues Method " Url="html/M_ZKWebStandard_Web_IHttpRequest_GetQueryValues.htm" />
   </HelpKINode>
   <HelpKINode Title="GetReferer method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetReferer.htm" />
-  <HelpKINode Title="GetResourceFullPath method" Url="html/M_ZKWeb_Server_PathManager_GetResourceFullPath.htm" />
-  <HelpKINode Title="GetResourceFullPathCandidates method" Url="html/M_ZKWeb_Server_PathManager_GetResourceFullPathCandidates.htm" />
+  <HelpKINode Title="GetResourceFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetResourceFile.htm" />
+  <HelpKINode Title="GetResourceFullPath method">
+    <HelpKINode Title="LocalPathManager.GetResourceFullPath Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetResourceFullPath.htm" />
+    <HelpKINode Title="PathManager.GetResourceFullPath Method " Url="html/M_ZKWeb_Server_PathManager_GetResourceFullPath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetResourceFullPathCandidates method">
+    <HelpKINode Title="LocalPathManager.GetResourceFullPathCandidates Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetResourceFullPathCandidates.htm" />
+    <HelpKINode Title="PathManager.GetResourceFullPathCandidates Method " Url="html/M_ZKWeb_Server_PathManager_GetResourceFullPathCandidates.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetSizeDisplayName method" Url="html/M_ZKWebStandard_Utils_FileUtils_GetSizeDisplayName.htm" />
-  <HelpKINode Title="GetStorageFullPath method" Url="html/M_ZKWeb_Server_PathManager_GetStorageFullPath.htm" />
-  <HelpKINode Title="GetTemplateFullPath method" Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPath.htm" />
-  <HelpKINode Title="GetTemplateFullPathCandidates method" Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPathCandidates.htm" />
+  <HelpKINode Title="GetStorage method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_GetStorage.htm" />
+  <HelpKINode Title="GetStorageDirectory method" Url="html/M_ZKWeb_Storage_IFileStorage_GetStorageDirectory.htm" />
+  <HelpKINode Title="GetStorageFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetStorageFile.htm" />
+  <HelpKINode Title="GetStorageFullPath method">
+    <HelpKINode Title="LocalPathManager.GetStorageFullPath Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetStorageFullPath.htm" />
+    <HelpKINode Title="PathManager.GetStorageFullPath Method " Url="html/M_ZKWeb_Server_PathManager_GetStorageFullPath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTemplateFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetTemplateFile.htm" />
+  <HelpKINode Title="GetTemplateFullPath method">
+    <HelpKINode Title="LocalPathManager.GetTemplateFullPath Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetTemplateFullPath.htm" />
+    <HelpKINode Title="PathManager.GetTemplateFullPath Method " Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTemplateFullPathCandidates method">
+    <HelpKINode Title="LocalPathManager.GetTemplateFullPathCandidates Method " Url="html/M_ZKWeb_Storage_LocalPathManager_GetTemplateFullPathCandidates.htm" />
+    <HelpKINode Title="PathManager.GetTemplateFullPathCandidates Method " Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPathCandidates.htm" />
+  </HelpKINode>
   <HelpKINode Title="GetTranslateProviders method" Url="html/M_ZKWeb_Localize_TranslateManager_GetTranslateProviders.htm" />
   <HelpKINode Title="GetUsedMemoryBytes method" Url="html/M_ZKWebStandard_Utils_SystemUtils_GetUsedMemoryBytes.htm" />
   <HelpKINode Title="GetUserAgent method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetUserAgent.htm" />
@@ -720,6 +838,8 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Collection_HtmlString.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Collection_HtmlString.htm" />
   </HelpKINode>
+  <HelpKINode Title="HtmlString.Decode method" Url="html/M_ZKWebStandard_Collection_HtmlString_Decode.htm" />
+  <HelpKINode Title="HtmlString.Encode method" Url="html/M_ZKWebStandard_Collection_HtmlString_Encode.htm" />
   <HelpKINode Title="HtmlString.HtmlString constructor" Url="html/M_ZKWebStandard_Collection_HtmlString__ctor.htm" />
   <HelpKINode Title="HtmlString.ToString method" Url="html/M_ZKWebStandard_Collection_HtmlString_ToString.htm" />
   <HelpKINode Title="HtmlString.Value property" Url="html/P_ZKWebStandard_Collection_HtmlString_Value.htm" />
@@ -731,6 +851,36 @@
     <HelpKINode Title="IHttpRequest.HttpContext Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_HttpContext.htm" />
     <HelpKINode Title="IHttpResponse.HttpContext Property " Url="html/P_ZKWebStandard_Web_IHttpResponse_HttpContext.htm" />
   </HelpKINode>
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue) class">
+    <HelpKINode Title="HttpContextCache(TKey, TValue) Class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="about HttpContextCache(Of TKey, TValue) class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).Clear method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Clear.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).ContextKey property" Url="html/P_ZKWebStandard_Collections_HttpContextCache_2_ContextKey.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).Count method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Count.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).GetStorage method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_GetStorage.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).HttpContextCache constructor" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2__ctor.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).Put method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Put.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).Remove method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Remove.htm" />
+  <HelpKINode Title="HttpContextCache(Of TKey, TValue).TryGetValue method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_TryGetValue.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt; class">
+    <HelpKINode Title="HttpContextCache(TKey, TValue) Class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="about HttpContextCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.Clear method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Clear.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.ContextKey property" Url="html/P_ZKWebStandard_Collections_HttpContextCache_2_ContextKey.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.Count method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Count.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.GetStorage method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_GetStorage.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.HttpContextCache constructor" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2__ctor.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.Put method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Put.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.Remove method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Remove.htm" />
+  <HelpKINode Title="HttpContextCache&lt;TKey, TValue&gt;.TryGetValue method" Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_TryGetValue.htm" />
   <HelpKINode Title="HttpContextMock class">
     <HelpKINode Title="HttpContextMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpContextMock.htm" />
     <HelpKINode Title="about HttpContextMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpContextMock.htm" />
@@ -796,6 +946,19 @@
   <HelpKINode Title="HttpMethods.POST field" Url="html/F_ZKWeb_Web_HttpMethods_POST.htm" />
   <HelpKINode Title="HttpMethods.PUT field" Url="html/F_ZKWeb_Web_HttpMethods_PUT.htm" />
   <HelpKINode Title="HttpOnly property" Url="html/P_ZKWebStandard_Web_HttpCookieOptions_HttpOnly.htm" />
+  <HelpKINode Title="HttpPostFileMock class">
+    <HelpKINode Title="HttpPostFileMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpPostFileMock.htm" />
+    <HelpKINode Title="about HttpPostFileMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpPostFileMock.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWebStandard_Web_Mock_HttpPostFileMock__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Web_Mock_HttpPostFileMock.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWebStandard_Web_Mock_HttpPostFileMock.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HttpPostFileMock.ContentType property" Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_contentType.htm" />
+  <HelpKINode Title="HttpPostFileMock.FileName property" Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_filename.htm" />
+  <HelpKINode Title="HttpPostFileMock.HttpPostFileMock constructor" Url="html/M_ZKWebStandard_Web_Mock_HttpPostFileMock__ctor.htm" />
+  <HelpKINode Title="HttpPostFileMock.Length property" Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_length.htm" />
+  <HelpKINode Title="HttpPostFileMock.OpenReadStream method" Url="html/M_ZKWebStandard_Web_Mock_HttpPostFileMock_OpenReadStream.htm" />
+  <HelpKINode Title="HttpPostFileMock.stream property" Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_stream.htm" />
   <HelpKINode Title="HttpRequestMock class">
     <HelpKINode Title="HttpRequestMock Class" Url="html/T_ZKWebStandard_Web_Mock_HttpRequestMock.htm" />
     <HelpKINode Title="about HttpRequestMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpRequestMock.htm" />
@@ -935,6 +1098,13 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_ICacheCleaner.htm" />
   </HelpKINode>
   <HelpKINode Title="ICacheCleaner.ClearCache method" Url="html/M_ZKWeb_Cache_ICacheCleaner_ClearCache.htm" />
+  <HelpKINode Title="ICacheFactory interface">
+    <HelpKINode Title="ICacheFactory Interface" Url="html/T_ZKWeb_Cache_ICacheFactory.htm" />
+    <HelpKINode Title="about ICacheFactory interface" Url="html/T_ZKWeb_Cache_ICacheFactory.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_ICacheFactory.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICacheFactory.CreateCache(Of TKey, TValue) method" Url="html/M_ZKWeb_Cache_ICacheFactory_CreateCache__2.htm" />
+  <HelpKINode Title="ICacheFactory.CreateCache&lt;TKey, TValue&gt; method" Url="html/M_ZKWeb_Cache_ICacheFactory_CreateCache__2.htm" />
   <HelpKINode Title="ICacheIsolationPolicy interface">
     <HelpKINode Title="ICacheIsolationPolicy Interface" Url="html/T_ZKWeb_Cache_ICacheIsolationPolicy.htm" />
     <HelpKINode Title="about ICacheIsolationPolicy interface" Url="html/T_ZKWeb_Cache_ICacheIsolationPolicy.htm" />
@@ -981,6 +1151,7 @@
     <HelpKINode Title="IDatabaseContext Interface" Url="html/T_ZKWeb_Database_IDatabaseContext.htm" />
     <HelpKINode Title="about IDatabaseContext interface" Url="html/T_ZKWeb_Database_IDatabaseContext.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IDatabaseContext.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_IDatabaseContext.htm" />
   </HelpKINode>
   <HelpKINode Title="IDatabaseContext.BatchDelete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
   <HelpKINode Title="IDatabaseContext.BatchDelete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_BatchDelete__1.htm" />
@@ -991,11 +1162,13 @@
   <HelpKINode Title="IDatabaseContext.BeginTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_BeginTransaction.htm" />
   <HelpKINode Title="IDatabaseContext.Count(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
   <HelpKINode Title="IDatabaseContext.Count&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Count__1.htm" />
+  <HelpKINode Title="IDatabaseContext.Database property" Url="html/P_ZKWeb_Database_IDatabaseContext_Database.htm" />
   <HelpKINode Title="IDatabaseContext.Delete(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
   <HelpKINode Title="IDatabaseContext.Delete&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Delete__1.htm" />
   <HelpKINode Title="IDatabaseContext.FinishTransaction method" Url="html/M_ZKWeb_Database_IDatabaseContext_FinishTransaction.htm" />
   <HelpKINode Title="IDatabaseContext.Get(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
   <HelpKINode Title="IDatabaseContext.Get&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Get__1.htm" />
+  <HelpKINode Title="IDatabaseContext.ORM property" Url="html/P_ZKWeb_Database_IDatabaseContext_ORM.htm" />
   <HelpKINode Title="IDatabaseContext.Query(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
   <HelpKINode Title="IDatabaseContext.Query&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Query__1.htm" />
   <HelpKINode Title="IDatabaseContext.RawQuery(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
@@ -1023,6 +1196,17 @@
   <HelpKINode Title="IDictionaryExtensions.GetOrCreate(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="IDictionaryExtensions.GetOrCreate&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrCreate__2.htm" />
   <HelpKINode Title="IDictionaryExtensions.GetOrDefault method" Url="html/Overload_ZKWebStandard_Extensions_IDictionaryExtensions_GetOrDefault.htm" />
+  <HelpKINode Title="IDirectoryEntry interface">
+    <HelpKINode Title="IDirectoryEntry Interface" Url="html/T_ZKWeb_Storage_IDirectoryEntry.htm" />
+    <HelpKINode Title="about IDirectoryEntry interface" Url="html/T_ZKWeb_Storage_IDirectoryEntry.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_IDirectoryEntry.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_IDirectoryEntry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IDirectoryEntry.Delete method" Url="html/M_ZKWeb_Storage_IDirectoryEntry_Delete.htm" />
+  <HelpKINode Title="IDirectoryEntry.DirectoryName property" Url="html/P_ZKWeb_Storage_IDirectoryEntry_DirectoryName.htm" />
+  <HelpKINode Title="IDirectoryEntry.EnumerateDirectories method" Url="html/M_ZKWeb_Storage_IDirectoryEntry_EnumerateDirectories.htm" />
+  <HelpKINode Title="IDirectoryEntry.EnumerateFiles method" Url="html/M_ZKWeb_Storage_IDirectoryEntry_EnumerateFiles.htm" />
+  <HelpKINode Title="IDirectoryEntry.Exists property" Url="html/P_ZKWeb_Storage_IDirectoryEntry_Exists.htm" />
   <HelpKINode Title="IEntity interface">
     <HelpKINode Title="IEntity Interface" Url="html/T_ZKWeb_Database_IEntity.htm" />
     <HelpKINode Title="about IEntity interface" Url="html/T_ZKWeb_Database_IEntity.htm" />
@@ -1043,21 +1227,25 @@
     <HelpKINode Title="IEntityMappingBuilder(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
     <HelpKINode Title="about IEntityMappingBuilder(Of T) interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
   </HelpKINode>
   <HelpKINode Title="IEntityMappingBuilder(Of T).HasMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder(Of T).HasManyToMany(Of TChild) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder(Of T).Id(Of TPrimaryKey) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder(Of T).Map(Of TMember) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder(Of T).ORM property" Url="html/P_ZKWeb_Database_IEntityMappingBuilder_1_ORM.htm" />
   <HelpKINode Title="IEntityMappingBuilder(Of T).References(Of TOther) method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt; interface">
     <HelpKINode Title="IEntityMappingBuilder(T) Interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
     <HelpKINode Title="about IEntityMappingBuilder&lt;T&gt; interface" Url="html/T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Database_IEntityMappingBuilder_1.htm" />
   </HelpKINode>
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.HasMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasMany__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.HasManyToMany&lt;TChild&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_HasManyToMany__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.Id&lt;TPrimaryKey&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Id__1.htm" />
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.Map&lt;TMember&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_Map__1.htm" />
+  <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.ORM property" Url="html/P_ZKWeb_Database_IEntityMappingBuilder_1_ORM.htm" />
   <HelpKINode Title="IEntityMappingBuilder&lt;T&gt;.References&lt;TOther&gt; method" Url="html/M_ZKWeb_Database_IEntityMappingBuilder_1_References__1.htm" />
   <HelpKINode Title="IEntityMappingProvider interface">
     <HelpKINode Title="IEntityMappingProvider Interface" Url="html/T_ZKWeb_Database_IEntityMappingProvider.htm" />
@@ -1102,7 +1290,46 @@
   <HelpKINode Title="IEnumerableExtensions.ConcatIfNotNull&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ConcatIfNotNull__1.htm" />
   <HelpKINode Title="IEnumerableExtensions.ForEach(Of T) method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ForEach__1.htm" />
   <HelpKINode Title="IEnumerableExtensions.ForEach&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IEnumerableExtensions_ForEach__1.htm" />
-  <HelpKINode Title="IfModifiedSince property" Url="html/P_ZKWeb_Web_ActionResults_FileResult_IfModifiedSince.htm" />
+  <HelpKINode Title="IFileEntry interface">
+    <HelpKINode Title="IFileEntry Interface" Url="html/T_ZKWeb_Storage_IFileEntry.htm" />
+    <HelpKINode Title="about IFileEntry interface" Url="html/T_ZKWeb_Storage_IFileEntry.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_IFileEntry.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_IFileEntry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IFileEntry.CreationTimeUtc property" Url="html/P_ZKWeb_Storage_IFileEntry_CreationTimeUtc.htm" />
+  <HelpKINode Title="IFileEntry.Delete method" Url="html/M_ZKWeb_Storage_IFileEntry_Delete.htm" />
+  <HelpKINode Title="IFileEntry.Exists property" Url="html/P_ZKWeb_Storage_IFileEntry_Exists.htm" />
+  <HelpKINode Title="IFileEntry.Filename property" Url="html/P_ZKWeb_Storage_IFileEntry_Filename.htm" />
+  <HelpKINode Title="IFileEntry.LastAccessTimeUtc property" Url="html/P_ZKWeb_Storage_IFileEntry_LastAccessTimeUtc.htm" />
+  <HelpKINode Title="IFileEntry.LastWriteTimeUtc property" Url="html/P_ZKWeb_Storage_IFileEntry_LastWriteTimeUtc.htm" />
+  <HelpKINode Title="IFileEntry.Length property" Url="html/P_ZKWeb_Storage_IFileEntry_Length.htm" />
+  <HelpKINode Title="IFileEntry.OpenAppend method" Url="html/M_ZKWeb_Storage_IFileEntry_OpenAppend.htm" />
+  <HelpKINode Title="IFileEntry.OpenRead method" Url="html/M_ZKWeb_Storage_IFileEntry_OpenRead.htm" />
+  <HelpKINode Title="IFileEntry.OpenWrite method" Url="html/M_ZKWeb_Storage_IFileEntry_OpenWrite.htm" />
+  <HelpKINode Title="IFileEntry.UniqueIdentifier property" Url="html/P_ZKWeb_Storage_IFileEntry_UniqueIdentifier.htm" />
+  <HelpKINode Title="IFileEntryExtensions class">
+    <HelpKINode Title="IFileEntryExtensions Class" Url="html/T_ZKWeb_Storage_IFileEntryExtensions.htm" />
+    <HelpKINode Title="about IFileEntryExtensions class" Url="html/T_ZKWeb_Storage_IFileEntryExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_IFileEntryExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IFileEntryExtensions.AppendAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_AppendAllText.htm" />
+  <HelpKINode Title="IFileEntryExtensions.ReadAllBytes method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_ReadAllBytes.htm" />
+  <HelpKINode Title="IFileEntryExtensions.ReadAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_ReadAllText.htm" />
+  <HelpKINode Title="IFileEntryExtensions.WriteAllBytes method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_WriteAllBytes.htm" />
+  <HelpKINode Title="IFileEntryExtensions.WriteAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_WriteAllText.htm" />
+  <HelpKINode Title="IFileStorage interface">
+    <HelpKINode Title="IFileStorage Interface" Url="html/T_ZKWeb_Storage_IFileStorage.htm" />
+    <HelpKINode Title="about IFileStorage interface" Url="html/T_ZKWeb_Storage_IFileStorage.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_IFileStorage.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IFileStorage.GetResourceFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetResourceFile.htm" />
+  <HelpKINode Title="IFileStorage.GetStorageDirectory method" Url="html/M_ZKWeb_Storage_IFileStorage_GetStorageDirectory.htm" />
+  <HelpKINode Title="IFileStorage.GetStorageFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetStorageFile.htm" />
+  <HelpKINode Title="IFileStorage.GetTemplateFile method" Url="html/M_ZKWeb_Storage_IFileStorage_GetTemplateFile.htm" />
+  <HelpKINode Title="IfModifiedSince property">
+    <HelpKINode Title="FileEntryResult.IfModifiedSince Property " Url="html/P_ZKWeb_Web_ActionResults_FileEntryResult_IfModifiedSince.htm" />
+    <HelpKINode Title="FileResult.IfModifiedSince Property " Url="html/P_ZKWeb_Web_ActionResults_FileResult_IfModifiedSince.htm" />
+  </HelpKINode>
   <HelpKINode Title="IfUnresolved enumeration" Url="html/T_ZKWebStandard_Ioc_IfUnresolved.htm" />
   <HelpKINode Title="IGenericRegistrator interface">
     <HelpKINode Title="IGenericRegistrator Interface" Url="html/T_ZKWebStandard_Ioc_IGenericRegistrator.htm" />
@@ -1211,6 +1438,8 @@
   <HelpKINode Title="IHttpRequestExtensions.Get&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_Get__1.htm" />
   <HelpKINode Title="IHttpRequestExtensions.GetAcceptLanguages method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAcceptLanguages.htm" />
   <HelpKINode Title="IHttpRequestExtensions.GetAll method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAll.htm" />
+  <HelpKINode Title="IHttpRequestExtensions.GetAllAs(Of T) method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllAs__1.htm" />
+  <HelpKINode Title="IHttpRequestExtensions.GetAllAs&lt;T&gt; method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllAs__1.htm" />
   <HelpKINode Title="IHttpRequestExtensions.GetAllDictionary method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetAllDictionary.htm" />
   <HelpKINode Title="IHttpRequestExtensions.GetIfModifiedSince method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetIfModifiedSince.htm" />
   <HelpKINode Title="IHttpRequestExtensions.GetReferer method" Url="html/M_ZKWebStandard_Extensions_IHttpRequestExtensions_GetReferer.htm" />
@@ -1251,6 +1480,35 @@
   <HelpKINode Title="IHttpResponseExtensions.SetLastModified method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_SetLastModified.htm" />
   <HelpKINode Title="IHttpResponseExtensions.Write method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_Write.htm" />
   <HelpKINode Title="IHttpResponseExtensions.WriteFile method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_WriteFile.htm" />
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue) interface">
+    <HelpKINode Title="IKeyValueCache(TKey, TValue) Interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+    <HelpKINode Title="about IKeyValueCache(Of TKey, TValue) interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue).Clear method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Clear.htm" />
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue).Count method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Count.htm" />
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue).Put method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Put.htm" />
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue).Remove method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Remove.htm" />
+  <HelpKINode Title="IKeyValueCache(Of TKey, TValue).TryGetValue method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_TryGetValue.htm" />
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt; interface">
+    <HelpKINode Title="IKeyValueCache(TKey, TValue) Interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+    <HelpKINode Title="about IKeyValueCache&lt;TKey, TValue&gt; interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt;.Clear method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Clear.htm" />
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt;.Count method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Count.htm" />
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt;.Put method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Put.htm" />
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt;.Remove method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Remove.htm" />
+  <HelpKINode Title="IKeyValueCache&lt;TKey, TValue&gt;.TryGetValue method" Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_TryGetValue.htm" />
+  <HelpKINode Title="IKeyValueCacheExtensions class">
+    <HelpKINode Title="IKeyValueCacheExtensions Class" Url="html/T_ZKWebStandard_Extensions_IKeyValueCacheExtensions.htm" />
+    <HelpKINode Title="about IKeyValueCacheExtensions class" Url="html/T_ZKWebStandard_Extensions_IKeyValueCacheExtensions.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Extensions_IKeyValueCacheExtensions.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IKeyValueCacheExtensions.GetOrCreate(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrCreate__2.htm" />
+  <HelpKINode Title="IKeyValueCacheExtensions.GetOrCreate&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrCreate__2.htm" />
+  <HelpKINode Title="IKeyValueCacheExtensions.GetOrDefault(Of TKey, TValue) method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrDefault__2.htm" />
+  <HelpKINode Title="IKeyValueCacheExtensions.GetOrDefault&lt;TKey, TValue&gt; method" Url="html/M_ZKWebStandard_Extensions_IKeyValueCacheExtensions_GetOrDefault__2.htm" />
   <HelpKINode Title="ILanguage interface">
     <HelpKINode Title="ILanguage Interface" Url="html/T_ZKWeb_Localize_ILanguage.htm" />
     <HelpKINode Title="about ILanguage interface" Url="html/T_ZKWeb_Localize_ILanguage.htm" />
@@ -1277,7 +1535,7 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWebStandard_Extensions_ImageExtensions.htm" />
   </HelpKINode>
   <HelpKINode Title="ImageExtensions.Resize method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_Resize.htm" />
-  <HelpKINode Title="ImageExtensions.SaveAuto method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
+  <HelpKINode Title="ImageExtensions.SaveAuto method" Url="html/Overload_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
   <HelpKINode Title="ImageExtensions.SaveIcon method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveIcon.htm" />
   <HelpKINode Title="ImageExtensions.SaveJpeg method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveJpeg.htm" />
   <HelpKINode Title="ImageResizeMode enumeration" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
@@ -1299,7 +1557,7 @@
     <HelpKINode Title="Application.Initialize Method " Url="html/M_ZKWeb_Application_Initialize.htm" />
     <HelpKINode Title="Area.Initialize Method " Url="html/M_ZKWeb_Templating_TemplateTags_Area_Initialize.htm" />
     <HelpKINode Title="Fetch.Initialize Method " Url="html/M_ZKWeb_Templating_TemplateTags_Fetch_Initialize.htm" />
-    <HelpKINode Title="PathConfig.Initialize Method " Url="html/M_ZKWeb_Server_PathConfig_Initialize.htm" />
+    <HelpKINode Title="LocalPathConfig.Initialize Method " Url="html/M_ZKWeb_Storage_LocalPathConfig_Initialize.htm" />
   </HelpKINode>
   <HelpKINode Title="Instance property">
     <HelpKINode Title="TestFailedInfo.Instance Property " Url="html/P_ZKWebStandard_Testing_Events_TestFailedInfo_Instance.htm" />
@@ -1345,62 +1603,81 @@
     <HelpKINode Title="HttpRequestWrapper.IsHttps Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_IsHttps.htm" />
     <HelpKINode Title="IHttpRequest.IsHttps Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_IsHttps.htm" />
   </HelpKINode>
+  <HelpKINode Title="IsolatedCacheKey(Of TKey) structure">
+    <HelpKINode Title="IsolatedCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="about IsolatedCacheKey(Of TKey) structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsolatedCacheKey(Of TKey).Equals method" Url="html/Overload_ZKWeb_Cache_IsolatedCacheKey_1_Equals.htm" />
+  <HelpKINode Title="IsolatedCacheKey(Of TKey).GetHashCode method" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1_GetHashCode.htm" />
+  <HelpKINode Title="IsolatedCacheKey(Of TKey).IsolatedCacheKey constructor" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1__ctor.htm" />
+  <HelpKINode Title="IsolatedCacheKey(Of TKey).IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_IsolationKeys.htm" />
+  <HelpKINode Title="IsolatedCacheKey(Of TKey).Key property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_Key.htm" />
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt; structure">
+    <HelpKINode Title="IsolatedCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="about IsolatedCacheKey&lt;TKey&gt; structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt;.Equals method" Url="html/Overload_ZKWeb_Cache_IsolatedCacheKey_1_Equals.htm" />
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt;.GetHashCode method" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1_GetHashCode.htm" />
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt;.IsolatedCacheKey constructor" Url="html/M_ZKWeb_Cache_IsolatedCacheKey_1__ctor.htm" />
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt;.IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_IsolationKeys.htm" />
+  <HelpKINode Title="IsolatedCacheKey&lt;TKey&gt;.Key property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_Key.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue) class">
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="about IsolatedKeyValueCache(Of TKey, TValue) class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).Clear method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Clear.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).Count method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Count.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_GenerateKey.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).IsolatedKeyValueCache constructor" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2__ctor.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_IsolationPolicies.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).Put method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Put.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).Remove method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Remove.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).TryGetValue method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_TryGetValue.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache(Of TKey, TValue).UnderlyingCache property" Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_UnderlyingCache.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt; class">
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="about IsolatedKeyValueCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.Clear method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Clear.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.Count method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Count.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_GenerateKey.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.IsolatedKeyValueCache constructor" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2__ctor.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_IsolationPolicies.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.Put method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Put.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.Remove method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Remove.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.TryGetValue method" Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_TryGetValue.htm" />
+  <HelpKINode Title="IsolatedKeyValueCache&lt;TKey, TValue&gt;.UnderlyingCache property" Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_UnderlyingCache.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue) class">
     <HelpKINode Title="IsolatedMemoryCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
     <HelpKINode Title="about IsolatedMemoryCache(Of TKey, TValue) class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GetOrCreate method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).GetOrDefault method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).IsolatedMemoryCache constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).Put method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Put.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).Remove method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Remove.htm" />
-  <HelpKINode Title="IsolatedMemoryCache(Of TKey, TValue).TryGetValue method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_TryGetValue.htm" />
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt; class">
     <HelpKINode Title="IsolatedMemoryCache(TKey, TValue) Class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
     <HelpKINode Title="about IsolatedMemoryCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
     <HelpKINode Title="constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GenerateKey method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GenerateKey.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GetOrCreate method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrCreate.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.GetOrDefault method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.IsolatedMemoryCache constructor" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCache_2__ctor.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.Put method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Put.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.Remove method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Remove.htm" />
-  <HelpKINode Title="IsolatedMemoryCache&lt;TKey, TValue&gt;.TryGetValue method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_TryGetValue.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey) structure">
-    <HelpKINode Title="IsolatedMemoryCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="about IsolatedMemoryCacheKey(Of TKey) structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
+  <HelpKINode Title="IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_IsolationKeys.htm" />
+  <HelpKINode Title="IsolationPolicies property">
+    <HelpKINode Title="CacheFactoryOptions.IsolationPolicies Property " Url="html/P_ZKWeb_Cache_CacheFactoryOptions_IsolationPolicies.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).IsolationPolicies Property " Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_IsolationPolicies.htm" />
   </HelpKINode>
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey).Equals method" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey).GetHashCode method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_GetHashCode.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey).IsolatedMemoryCacheKey constructor" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1__ctor.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey).IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_IsolationKeys.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey(Of TKey).Key property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Key.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt; structure">
-    <HelpKINode Title="IsolatedMemoryCacheKey(TKey) Structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="about IsolatedMemoryCacheKey&lt;TKey&gt; structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1__ctor.htm" />
-    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-  </HelpKINode>
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt;.Equals method" Url="html/Overload_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Equals.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt;.GetHashCode method" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1_GetHashCode.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt;.IsolatedMemoryCacheKey constructor" Url="html/M_ZKWeb_Cache_IsolatedMemoryCacheKey_1__ctor.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt;.IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_IsolationKeys.htm" />
-  <HelpKINode Title="IsolatedMemoryCacheKey&lt;TKey&gt;.Key property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Key.htm" />
-  <HelpKINode Title="IsolationKeys property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_IsolationKeys.htm" />
-  <HelpKINode Title="IsolationPolicies property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCache_2_IsolationPolicies.htm" />
   <HelpKINode Title="IsTrue method" Url="html/M_ZKWebStandard_Testing_Assert_IsTrue.htm" />
   <HelpKINode Title="IsTrueWith method" Url="html/M_ZKWebStandard_Testing_Assert_IsTrueWith.htm" />
   <HelpKINode Title="IsValueCreated property" Url="html/P_ZKWebStandard_Collections_LazyCache_1_IsValueCreated.htm" />
@@ -1485,11 +1762,19 @@
   <HelpKINode Title="JsonResult.Object property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_Object.htm" />
   <HelpKINode Title="JsonResult.SerializeFormatting property" Url="html/P_ZKWeb_Web_ActionResults_JsonResult_SerializeFormatting.htm" />
   <HelpKINode Title="JsonResult.WriteResponse method" Url="html/M_ZKWeb_Web_ActionResults_JsonResult_WriteResponse.htm" />
-  <HelpKINode Title="Key property" Url="html/P_ZKWeb_Cache_IsolatedMemoryCacheKey_1_Key.htm" />
+  <HelpKINode Title="Key property" Url="html/P_ZKWeb_Cache_IsolatedCacheKey_1_Key.htm" />
   <HelpKINode Title="LanguageKey field" Url="html/F_ZKWebStandard_Utils_LocaleUtils_LanguageKey.htm" />
+  <HelpKINode Title="LastAccessTimeUtc property">
+    <HelpKINode Title="IFileEntry.LastAccessTimeUtc Property " Url="html/P_ZKWeb_Storage_IFileEntry_LastAccessTimeUtc.htm" />
+    <HelpKINode Title="LocalFileEntry.LastAccessTimeUtc Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_LastAccessTimeUtc.htm" />
+  </HelpKINode>
   <HelpKINode Title="lastRedirect property" Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_lastRedirect.htm" />
   <HelpKINode Title="lastRedirectIsPermanent property" Url="html/P_ZKWebStandard_Web_Mock_HttpResponseMock_lastRedirectIsPermanent.htm" />
   <HelpKINode Title="LastRevokeExpires property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
+  <HelpKINode Title="LastWriteTimeUtc property">
+    <HelpKINode Title="IFileEntry.LastWriteTimeUtc Property " Url="html/P_ZKWeb_Storage_IFileEntry_LastWriteTimeUtc.htm" />
+    <HelpKINode Title="LocalFileEntry.LastWriteTimeUtc Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_LastWriteTimeUtc.htm" />
+  </HelpKINode>
   <HelpKINode Title="LazyCache class">
     <HelpKINode Title="LazyCache Class" Url="html/T_ZKWebStandard_Collections_LazyCache.htm" />
     <HelpKINode Title="about LazyCache class" Url="html/T_ZKWebStandard_Collections_LazyCache.htm" />
@@ -1521,10 +1806,27 @@
   <HelpKINode Title="LazyCache&lt;T&gt;.Value property" Url="html/P_ZKWebStandard_Collections_LazyCache_1_Value.htm" />
   <HelpKINode Title="Length property">
     <HelpKINode Title="EntityMappingOptions.Length Property " Url="html/P_ZKWeb_Database_EntityMappingOptions_Length.htm" />
+    <HelpKINode Title="HttpPostFileMock.Length Property " Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_length.htm" />
+    <HelpKINode Title="IFileEntry.Length Property " Url="html/P_ZKWeb_Storage_IFileEntry_Length.htm" />
     <HelpKINode Title="IHttpPostedFile.Length Property " Url="html/P_ZKWebStandard_Web_IHttpPostedFile_Length.htm" />
+    <HelpKINode Title="LocalFileEntry.Length Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_Length.htm" />
   </HelpKINode>
+  <HelpKINode Title="Lifetime property" Url="html/P_ZKWeb_Cache_CacheFactoryOptions_Lifetime.htm" />
   <HelpKINode Title="Load method" Url="html/Overload_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_Load.htm" />
   <HelpKINode Title="LoadFile method" Url="html/M_ZKWeb_Plugin_AssemblyLoaders_IAssemblyLoader_LoadFile.htm" />
+  <HelpKINode Title="LocalDirectoryEntry class">
+    <HelpKINode Title="LocalDirectoryEntry Class" Url="html/T_ZKWeb_Storage_LocalDirectoryEntry.htm" />
+    <HelpKINode Title="about LocalDirectoryEntry class" Url="html/T_ZKWeb_Storage_LocalDirectoryEntry.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Storage_LocalDirectoryEntry__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_LocalDirectoryEntry.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_LocalDirectoryEntry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalDirectoryEntry.Delete method" Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_Delete.htm" />
+  <HelpKINode Title="LocalDirectoryEntry.DirectoryName property" Url="html/P_ZKWeb_Storage_LocalDirectoryEntry_DirectoryName.htm" />
+  <HelpKINode Title="LocalDirectoryEntry.EnumerateDirectories method" Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_EnumerateDirectories.htm" />
+  <HelpKINode Title="LocalDirectoryEntry.EnumerateFiles method" Url="html/M_ZKWeb_Storage_LocalDirectoryEntry_EnumerateFiles.htm" />
+  <HelpKINode Title="LocalDirectoryEntry.Exists property" Url="html/P_ZKWeb_Storage_LocalDirectoryEntry_Exists.htm" />
+  <HelpKINode Title="LocalDirectoryEntry.LocalDirectoryEntry constructor" Url="html/M_ZKWeb_Storage_LocalDirectoryEntry__ctor.htm" />
   <HelpKINode Title="LocaleUtils class">
     <HelpKINode Title="LocaleUtils Class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm" />
     <HelpKINode Title="about LocaleUtils class" Url="html/T_ZKWebStandard_Utils_LocaleUtils.htm" />
@@ -1537,6 +1839,59 @@
   <HelpKINode Title="LocaleUtils.SetThreadTimezone method" Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadTimezone.htm" />
   <HelpKINode Title="LocaleUtils.SetThreadTimezoneAutomatic method" Url="html/M_ZKWebStandard_Utils_LocaleUtils_SetThreadTimezoneAutomatic.htm" />
   <HelpKINode Title="LocaleUtils.TimeZoneKey field" Url="html/F_ZKWebStandard_Utils_LocaleUtils_TimeZoneKey.htm" />
+  <HelpKINode Title="LocalFileEntry class">
+    <HelpKINode Title="LocalFileEntry Class" Url="html/T_ZKWeb_Storage_LocalFileEntry.htm" />
+    <HelpKINode Title="about LocalFileEntry class" Url="html/T_ZKWeb_Storage_LocalFileEntry.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Storage_LocalFileEntry__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_LocalFileEntry.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_LocalFileEntry.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalFileEntry.CreationTimeUtc property" Url="html/P_ZKWeb_Storage_LocalFileEntry_CreationTimeUtc.htm" />
+  <HelpKINode Title="LocalFileEntry.Delete method" Url="html/M_ZKWeb_Storage_LocalFileEntry_Delete.htm" />
+  <HelpKINode Title="LocalFileEntry.Exists property" Url="html/P_ZKWeb_Storage_LocalFileEntry_Exists.htm" />
+  <HelpKINode Title="LocalFileEntry.Filename property" Url="html/P_ZKWeb_Storage_LocalFileEntry_Filename.htm" />
+  <HelpKINode Title="LocalFileEntry.LastAccessTimeUtc property" Url="html/P_ZKWeb_Storage_LocalFileEntry_LastAccessTimeUtc.htm" />
+  <HelpKINode Title="LocalFileEntry.LastWriteTimeUtc property" Url="html/P_ZKWeb_Storage_LocalFileEntry_LastWriteTimeUtc.htm" />
+  <HelpKINode Title="LocalFileEntry.Length property" Url="html/P_ZKWeb_Storage_LocalFileEntry_Length.htm" />
+  <HelpKINode Title="LocalFileEntry.LocalFileEntry constructor" Url="html/M_ZKWeb_Storage_LocalFileEntry__ctor.htm" />
+  <HelpKINode Title="LocalFileEntry.OpenAppend method" Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenAppend.htm" />
+  <HelpKINode Title="LocalFileEntry.OpenRead method" Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenRead.htm" />
+  <HelpKINode Title="LocalFileEntry.OpenWrite method" Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenWrite.htm" />
+  <HelpKINode Title="LocalFileEntry.UniqueIdentifier property" Url="html/P_ZKWeb_Storage_LocalFileEntry_UniqueIdentifier.htm" />
+  <HelpKINode Title="LocalPathConfig class">
+    <HelpKINode Title="LocalPathConfig Class" Url="html/T_ZKWeb_Storage_LocalPathConfig.htm" />
+    <HelpKINode Title="about LocalPathConfig class" Url="html/T_ZKWeb_Storage_LocalPathConfig.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Storage_LocalPathConfig__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_LocalPathConfig.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_LocalPathConfig.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalPathConfig.AppDataDirectory property" Url="html/P_ZKWeb_Storage_LocalPathConfig_AppDataDirectory.htm" />
+  <HelpKINode Title="LocalPathConfig.DeviceSpecializedTemplateDirectoryNameFormat property" Url="html/P_ZKWeb_Storage_LocalPathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
+  <HelpKINode Title="LocalPathConfig.Initialize method" Url="html/M_ZKWeb_Storage_LocalPathConfig_Initialize.htm" />
+  <HelpKINode Title="LocalPathConfig.LocalPathConfig constructor" Url="html/M_ZKWeb_Storage_LocalPathConfig__ctor.htm" />
+  <HelpKINode Title="LocalPathConfig.PluginInfoFilename property" Url="html/P_ZKWeb_Storage_LocalPathConfig_PluginInfoFilename.htm" />
+  <HelpKINode Title="LocalPathConfig.TemplateDirectoryName property" Url="html/P_ZKWeb_Storage_LocalPathConfig_TemplateDirectoryName.htm" />
+  <HelpKINode Title="LocalPathConfig.WebsiteConfigPath property" Url="html/P_ZKWeb_Storage_LocalPathConfig_WebsiteConfigPath.htm" />
+  <HelpKINode Title="LocalPathConfig.WebsiteRootDirectory property" Url="html/P_ZKWeb_Storage_LocalPathConfig_WebsiteRootDirectory.htm" />
+  <HelpKINode Title="LocalPathManager class">
+    <HelpKINode Title="LocalPathManager Class" Url="html/T_ZKWeb_Storage_LocalPathManager.htm" />
+    <HelpKINode Title="about LocalPathManager class" Url="html/T_ZKWeb_Storage_LocalPathManager.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Storage_LocalPathManager__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Storage_LocalPathManager.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Storage_LocalPathManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="LocalPathManager.ClearCache method" Url="html/M_ZKWeb_Storage_LocalPathManager_ClearCache.htm" />
+  <HelpKINode Title="LocalPathManager.GetPluginDirectories method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetPluginDirectories.htm" />
+  <HelpKINode Title="LocalPathManager.GetResourceFullPath method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetResourceFullPath.htm" />
+  <HelpKINode Title="LocalPathManager.GetResourceFullPathCandidates method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetResourceFullPathCandidates.htm" />
+  <HelpKINode Title="LocalPathManager.GetStorageFullPath method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetStorageFullPath.htm" />
+  <HelpKINode Title="LocalPathManager.GetTemplateFullPath method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetTemplateFullPath.htm" />
+  <HelpKINode Title="LocalPathManager.GetTemplateFullPathCandidates method" Url="html/M_ZKWeb_Storage_LocalPathManager_GetTemplateFullPathCandidates.htm" />
+  <HelpKINode Title="LocalPathManager.LocalPathManager constructor" Url="html/M_ZKWeb_Storage_LocalPathManager__ctor.htm" />
+  <HelpKINode Title="LocalPathManager.ResourcePathCache property" Url="html/P_ZKWeb_Storage_LocalPathManager_ResourcePathCache.htm" />
+  <HelpKINode Title="LocalPathManager.ResourcePathCacheTime property" Url="html/P_ZKWeb_Storage_LocalPathManager_ResourcePathCacheTime.htm" />
+  <HelpKINode Title="LocalPathManager.TemplatePathCache property" Url="html/P_ZKWeb_Storage_LocalPathManager_TemplatePathCache.htm" />
+  <HelpKINode Title="LocalPathManager.TemplatePathCacheTime property" Url="html/P_ZKWeb_Storage_LocalPathManager_TemplatePathCacheTime.htm" />
   <HelpKINode Title="Log method" Url="html/M_ZKWeb_Logging_LogManager_Log.htm" />
   <HelpKINode Title="LogDebug method" Url="html/M_ZKWeb_Logging_LogManager_LogDebug.htm" />
   <HelpKINode Title="LogError method" Url="html/M_ZKWeb_Logging_LogManager_LogError.htm" />
@@ -1585,8 +1940,6 @@
   <HelpKINode Title="MemoryCache(Of TKey, TValue).CacheLock property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).Clear method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
-  <HelpKINode Title="MemoryCache(Of TKey, TValue).GetOrCreate method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
-  <HelpKINode Title="MemoryCache(Of TKey, TValue).GetOrDefault method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).LastRevokeExpires property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).MemoryCache constructor" Url="html/M_ZKWebStandard_Collections_MemoryCache_2__ctor.htm" />
   <HelpKINode Title="MemoryCache(Of TKey, TValue).Put method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Put.htm" />
@@ -1605,8 +1958,6 @@
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.CacheLock property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_CacheLock.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.Clear method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Clear.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.Count method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Count.htm" />
-  <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.GetOrCreate method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrCreate.htm" />
-  <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.GetOrDefault method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_GetOrDefault.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.LastRevokeExpires property" Url="html/P_ZKWebStandard_Collections_MemoryCache_2_LastRevokeExpires.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.MemoryCache constructor" Url="html/M_ZKWebStandard_Collections_MemoryCache_2__ctor.htm" />
   <HelpKINode Title="MemoryCache&lt;TKey, TValue&gt;.Put method" Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Put.htm" />
@@ -1646,6 +1997,7 @@
     <HelpKINode Title="PluginInfo.Name Property " Url="html/P_ZKWeb_Plugin_PluginInfo_Name.htm" />
     <HelpKINode Title="TemplateWidgetInfo.Name Property " Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_Name.htm" />
   </HelpKINode>
+  <HelpKINode Title="Navigation property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Navigation.htm" />
   <HelpKINode Title="NonPublic property" Url="html/P_ZKWebStandard_Ioc_ExportManyAttribute_NonPublic.htm" />
   <HelpKINode Title="Normalize method" Url="html/M_ZKWebStandard_Extensions_DecimalExtensions_Normalize.htm" />
   <HelpKINode Title="NormalizePath method" Url="html/M_ZKWeb_Web_ControllerManager_NormalizePath.htm" />
@@ -1706,11 +2058,30 @@
     <HelpKINode Title="TestConsoleEventHandler.OnTestStarting Method " Url="html/M_ZKWeb_Testing_TestEventHandlers_TestConsoleEventHandler_OnTestStarting.htm" />
   </HelpKINode>
   <HelpKINode Title="OnWebsiteStart method" Url="html/M_ZKWeb_Web_IWebsiteStartHandler_OnWebsiteStart.htm" />
-  <HelpKINode Title="OpenReadStream method" Url="html/M_ZKWebStandard_Web_IHttpPostedFile_OpenReadStream.htm" />
+  <HelpKINode Title="OpenAppend method">
+    <HelpKINode Title="IFileEntry.OpenAppend Method " Url="html/M_ZKWeb_Storage_IFileEntry_OpenAppend.htm" />
+    <HelpKINode Title="LocalFileEntry.OpenAppend Method " Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenAppend.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OpenRead method">
+    <HelpKINode Title="IFileEntry.OpenRead Method " Url="html/M_ZKWeb_Storage_IFileEntry_OpenRead.htm" />
+    <HelpKINode Title="LocalFileEntry.OpenRead Method " Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenRead.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OpenReadStream method">
+    <HelpKINode Title="HttpPostFileMock.OpenReadStream Method " Url="html/M_ZKWebStandard_Web_Mock_HttpPostFileMock_OpenReadStream.htm" />
+    <HelpKINode Title="IHttpPostedFile.OpenReadStream Method " Url="html/M_ZKWebStandard_Web_IHttpPostedFile_OpenReadStream.htm" />
+  </HelpKINode>
+  <HelpKINode Title="OpenWrite method">
+    <HelpKINode Title="IFileEntry.OpenWrite Method " Url="html/M_ZKWeb_Storage_IFileEntry_OpenWrite.htm" />
+    <HelpKINode Title="LocalFileEntry.OpenWrite Method " Url="html/M_ZKWeb_Storage_LocalFileEntry_OpenWrite.htm" />
+  </HelpKINode>
   <HelpKINode Title="OriginalContext property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_OriginalContext.htm" />
   <HelpKINode Title="OriginalRequest property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpRequestWrapper_OriginalRequest.htm" />
   <HelpKINode Title="OriginalResponse property" Url="html/P_ZKWebStandard_Web_Wrappers_HttpResponseWrapper_OriginalResponse.htm" />
-  <HelpKINode Title="ORM property" Url="html/P_ZKWeb_Server_WebsiteConfig_ORM.htm" />
+  <HelpKINode Title="ORM property">
+    <HelpKINode Title="IDatabaseContext.ORM Property " Url="html/P_ZKWeb_Database_IDatabaseContext_ORM.htm" />
+    <HelpKINode Title="IEntityMappingBuilder(T).ORM Property " Url="html/P_ZKWeb_Database_IEntityMappingBuilder_1_ORM.htm" />
+    <HelpKINode Title="WebsiteConfig.ORM Property " Url="html/P_ZKWeb_Server_WebsiteConfig_ORM.htm" />
+  </HelpKINode>
   <HelpKINode Title="OverrideContext method" Url="html/Overload_ZKWebStandard_Web_HttpManager_OverrideContext.htm" />
   <HelpKINode Title="OverrideExists property" Url="html/P_ZKWeb_Web_ActionAttribute_OverrideExists.htm" />
   <HelpKINode Title="OverrideIoc method" Url="html/M_ZKWeb_Application_OverrideIoc.htm" />
@@ -1790,8 +2161,8 @@
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Server_PathConfig.htm" />
   </HelpKINode>
   <HelpKINode Title="PathConfig.AppDataDirectory property" Url="html/P_ZKWeb_Server_PathConfig_AppDataDirectory.htm" />
+  <HelpKINode Title="PathConfig.Config property" Url="html/P_ZKWeb_Server_PathConfig_Config.htm" />
   <HelpKINode Title="PathConfig.DeviceSpecializedTemplateDirectoryNameFormat property" Url="html/P_ZKWeb_Server_PathConfig_DeviceSpecializedTemplateDirectoryNameFormat.htm" />
-  <HelpKINode Title="PathConfig.Initialize method" Url="html/M_ZKWeb_Server_PathConfig_Initialize.htm" />
   <HelpKINode Title="PathConfig.LogsDirectory property" Url="html/P_ZKWeb_Server_PathConfig_LogsDirectory.htm" />
   <HelpKINode Title="PathConfig.PathConfig constructor" Url="html/M_ZKWeb_Server_PathConfig__ctor.htm" />
   <HelpKINode Title="PathConfig.PluginInfoFilename property" Url="html/P_ZKWeb_Server_PathConfig_PluginInfoFilename.htm" />
@@ -1813,9 +2184,7 @@
   <HelpKINode Title="PathManager.GetTemplateFullPath method" Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPath.htm" />
   <HelpKINode Title="PathManager.GetTemplateFullPathCandidates method" Url="html/M_ZKWeb_Server_PathManager_GetTemplateFullPathCandidates.htm" />
   <HelpKINode Title="PathManager.PathManager constructor" Url="html/M_ZKWeb_Server_PathManager__ctor.htm" />
-  <HelpKINode Title="PathManager.ResourcePathCache property" Url="html/P_ZKWeb_Server_PathManager_ResourcePathCache.htm" />
   <HelpKINode Title="PathManager.ResourcePathCacheTime property" Url="html/P_ZKWeb_Server_PathManager_ResourcePathCacheTime.htm" />
-  <HelpKINode Title="PathManager.TemplatePathCache property" Url="html/P_ZKWeb_Server_PathManager_TemplatePathCache.htm" />
   <HelpKINode Title="PathManager.TemplatePathCacheTime property" Url="html/P_ZKWeb_Server_PathManager_TemplatePathCacheTime.htm" />
   <HelpKINode Title="PathUtils class">
     <HelpKINode Title="PathUtils Class" Url="html/T_ZKWebStandard_Utils_PathUtils.htm" />
@@ -1826,6 +2195,7 @@
   <HelpKINode Title="PathUtils.SecureCombine method" Url="html/M_ZKWebStandard_Utils_PathUtils_SecureCombine.htm" />
   <HelpKINode Title="PBKDF2 enumeration member" Url="html/T_ZKWebStandard_Utils_PasswordHashType.htm" />
   <HelpKINode Title="PBKDF2Sum method" Url="html/M_ZKWebStandard_Utils_PasswordUtils_PBKDF2Sum.htm" />
+  <HelpKINode Title="PerHttpContext enumeration member" Url="html/T_ZKWeb_Cache_CacheLifetime.htm" />
   <HelpKINode Title="Permanent property" Url="html/P_ZKWeb_Web_ActionResults_RedirectResult_Permanent.htm" />
   <HelpKINode Title="PlainResult class">
     <HelpKINode Title="PlainResult Class" Url="html/T_ZKWeb_Web_ActionResults_PlainResult.htm" />
@@ -1870,7 +2240,10 @@
   <HelpKINode Title="PluginInfoExtensions.SourceDirectory method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceDirectory.htm" />
   <HelpKINode Title="PluginInfoExtensions.SourceFiles method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_SourceFiles.htm" />
   <HelpKINode Title="PluginInfoExtensions.VersionObject method" Url="html/M_ZKWeb_Plugin_PluginInfoExtensions_VersionObject.htm" />
-  <HelpKINode Title="PluginInfoFilename property" Url="html/P_ZKWeb_Server_PathConfig_PluginInfoFilename.htm" />
+  <HelpKINode Title="PluginInfoFilename property">
+    <HelpKINode Title="LocalPathConfig.PluginInfoFilename Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_PluginInfoFilename.htm" />
+    <HelpKINode Title="PathConfig.PluginInfoFilename Property " Url="html/P_ZKWeb_Server_PathConfig_PluginInfoFilename.htm" />
+  </HelpKINode>
   <HelpKINode Title="PluginManager class">
     <HelpKINode Title="PluginManager Class" Url="html/T_ZKWeb_Plugin_PluginManager.htm" />
     <HelpKINode Title="about PluginManager class" Url="html/T_ZKWeb_Plugin_PluginManager.htm" />
@@ -1894,7 +2267,9 @@
   </HelpKINode>
   <HelpKINode Title="PUT field" Url="html/F_ZKWeb_Web_HttpMethods_PUT.htm" />
   <HelpKINode Title="Put method">
-    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).Put Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Put.htm" />
+    <HelpKINode Title="HttpContextCache(TKey, TValue).Put Method " Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Put.htm" />
+    <HelpKINode Title="IKeyValueCache(TKey, TValue).Put Method " Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Put.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).Put Method " Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Put.htm" />
     <HelpKINode Title="MemoryCache(TKey, TValue).Put Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Put.htm" />
   </HelpKINode>
   <HelpKINode Title="PutCookie method" Url="html/M_ZKWebStandard_Extensions_IHttpContextExtensions_PutCookie.htm" />
@@ -1941,6 +2316,8 @@
   <HelpKINode Title="RawQuery(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
   <HelpKINode Title="RawQuery&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawQuery__1.htm" />
   <HelpKINode Title="RawUpdate method" Url="html/M_ZKWeb_Database_IDatabaseContext_RawUpdate.htm" />
+  <HelpKINode Title="ReadAllBytes method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_ReadAllBytes.htm" />
+  <HelpKINode Title="ReadAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_ReadAllText.htm" />
   <HelpKINode Title="ReadJson method" Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_ReadJson.htm" />
   <HelpKINode Title="ReadTemplateFile method" Url="html/M_ZKWeb_Templating_TemplateFileSystem_ReadTemplateFile.htm" />
   <HelpKINode Title="Redirect method">
@@ -2041,7 +2418,9 @@
     <HelpKINode Title="IHttpRequest.RemotePort Property " Url="html/P_ZKWebStandard_Web_IHttpRequest_RemotePort.htm" />
   </HelpKINode>
   <HelpKINode Title="Remove method">
-    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).Remove Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_Remove.htm" />
+    <HelpKINode Title="HttpContextCache(TKey, TValue).Remove Method " Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_Remove.htm" />
+    <HelpKINode Title="IKeyValueCache(TKey, TValue).Remove Method " Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_Remove.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).Remove Method " Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_Remove.htm" />
     <HelpKINode Title="MemoryCache(TKey, TValue).Remove Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_Remove.htm" />
   </HelpKINode>
   <HelpKINode Title="RemoveChildNode method" Url="html/M_ZKWebStandard_Utils_ITreeNode_1_RemoveChildNode.htm" />
@@ -2074,8 +2453,11 @@
   </HelpKINode>
   <HelpKINode Title="ResolveMany(Of TService) method" Url="html/M_ZKWebStandard_Ioc_IGenericResolver_ResolveMany__1.htm" />
   <HelpKINode Title="ResolveMany&lt;TService&gt; method" Url="html/M_ZKWebStandard_Ioc_IGenericResolver_ResolveMany__1.htm" />
-  <HelpKINode Title="ResourcePathCache property" Url="html/P_ZKWeb_Server_PathManager_ResourcePathCache.htm" />
-  <HelpKINode Title="ResourcePathCacheTime property" Url="html/P_ZKWeb_Server_PathManager_ResourcePathCacheTime.htm" />
+  <HelpKINode Title="ResourcePathCache property" Url="html/P_ZKWeb_Storage_LocalPathManager_ResourcePathCache.htm" />
+  <HelpKINode Title="ResourcePathCacheTime property">
+    <HelpKINode Title="LocalPathManager.ResourcePathCacheTime Property " Url="html/P_ZKWeb_Storage_LocalPathManager_ResourcePathCacheTime.htm" />
+    <HelpKINode Title="PathManager.ResourcePathCacheTime Property " Url="html/P_ZKWeb_Server_PathManager_ResourcePathCacheTime.htm" />
+  </HelpKINode>
   <HelpKINode Title="Response property">
     <HelpKINode Title="HttpContextMock.Response Property " Url="html/P_ZKWebStandard_Web_Mock_HttpContextMock_response.htm" />
     <HelpKINode Title="HttpContextWrapper.Response Property " Url="html/P_ZKWebStandard_Web_Wrappers_HttpContextWrapper_Response.htm" />
@@ -2111,7 +2493,7 @@
   </HelpKINode>
   <HelpKINode Title="Save(Of T) method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
   <HelpKINode Title="Save&lt;T&gt; method" Url="html/M_ZKWeb_Database_IDatabaseContext_Save__1.htm" />
-  <HelpKINode Title="SaveAuto method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
+  <HelpKINode Title="SaveAuto method" Url="html/Overload_ZKWebStandard_Extensions_ImageExtensions_SaveAuto.htm" />
   <HelpKINode Title="SaveIcon method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveIcon.htm" />
   <HelpKINode Title="SaveJpeg method" Url="html/M_ZKWebStandard_Extensions_ImageExtensions_SaveJpeg.htm" />
   <HelpKINode Title="Scheme property">
@@ -2153,7 +2535,10 @@
   <HelpKINode Title="SimpleDisposable.Finalize method" Url="html/M_ZKWebStandard_Collections_SimpleDisposable_Finalize.htm" />
   <HelpKINode Title="SimpleDisposable.OnDispose property" Url="html/P_ZKWebStandard_Collections_SimpleDisposable_OnDispose.htm" />
   <HelpKINode Title="SimpleDisposable.SimpleDisposable constructor" Url="html/M_ZKWebStandard_Collections_SimpleDisposable__ctor.htm" />
-  <HelpKINode Title="Singleton enumeration member" Url="html/T_ZKWebStandard_Ioc_ReuseType.htm" />
+  <HelpKINode Title="Singleton enumeration member">
+    <HelpKINode Title="CacheLifetime Enumeration" Url="html/T_ZKWeb_Cache_CacheLifetime.htm" />
+    <HelpKINode Title="ReuseType Enumeration" Url="html/T_ZKWebStandard_Ioc_ReuseType.htm" />
+  </HelpKINode>
   <HelpKINode Title="SingletonReuseAttribute class">
     <HelpKINode Title="SingletonReuseAttribute Class" Url="html/T_ZKWebStandard_Ioc_SingletonReuseAttribute.htm" />
     <HelpKINode Title="about SingletonReuseAttribute class" Url="html/T_ZKWebStandard_Ioc_SingletonReuseAttribute.htm" />
@@ -2175,6 +2560,7 @@
   </HelpKINode>
   <HelpKINode Title="StopWebsite method" Url="html/M_ZKWeb_Web_IWebsiteStopper_StopWebsite.htm" />
   <HelpKINode Title="Stream property" Url="html/P_ZKWeb_Web_ActionResults_StreamResult_Stream.htm" />
+  <HelpKINode Title="stream property" Url="html/P_ZKWebStandard_Web_Mock_HttpPostFileMock_stream.htm" />
   <HelpKINode Title="StreamResult class">
     <HelpKINode Title="StreamResult Class" Url="html/T_ZKWeb_Web_ActionResults_StreamResult.htm" />
     <HelpKINode Title="about StreamResult class" Url="html/T_ZKWeb_Web_ActionResults_StreamResult.htm" />
@@ -2239,7 +2625,7 @@
   <HelpKINode Title="TemplateAreaManager.CustomWidgetsCacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_CustomWidgetsCacheTime.htm" />
   <HelpKINode Title="TemplateAreaManager.GetArea method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetArea.htm" />
   <HelpKINode Title="TemplateAreaManager.GetCustomWidgets method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgets.htm" />
-  <HelpKINode Title="TemplateAreaManager.GetCustomWidgetsJsonPath method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgetsJsonPath.htm" />
+  <HelpKINode Title="TemplateAreaManager.GetCustomWidgetsFile method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetCustomWidgetsFile.htm" />
   <HelpKINode Title="TemplateAreaManager.GetWidgetInfo method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_GetWidgetInfo.htm" />
   <HelpKINode Title="TemplateAreaManager.RenderWidget method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_RenderWidget.htm" />
   <HelpKINode Title="TemplateAreaManager.SetCustomWidgets method" Url="html/M_ZKWeb_Templating_DynamicContents_TemplateAreaManager_SetCustomWidgets.htm" />
@@ -2250,7 +2636,10 @@
   <HelpKINode Title="TemplateArgument property" Url="html/P_ZKWeb_Web_ActionResults_TemplateResult_TemplateArgument.htm" />
   <HelpKINode Title="TemplateCache property" Url="html/P_ZKWeb_Templating_TemplateFileSystem_TemplateCache.htm" />
   <HelpKINode Title="TemplateCacheTime property" Url="html/P_ZKWeb_Templating_TemplateFileSystem_TemplateCacheTime.htm" />
-  <HelpKINode Title="TemplateDirectoryName property" Url="html/P_ZKWeb_Server_PathConfig_TemplateDirectoryName.htm" />
+  <HelpKINode Title="TemplateDirectoryName property">
+    <HelpKINode Title="LocalPathConfig.TemplateDirectoryName Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_TemplateDirectoryName.htm" />
+    <HelpKINode Title="PathConfig.TemplateDirectoryName Property " Url="html/P_ZKWeb_Server_PathConfig_TemplateDirectoryName.htm" />
+  </HelpKINode>
   <HelpKINode Title="TemplateFileSystem class">
     <HelpKINode Title="TemplateFileSystem Class" Url="html/T_ZKWeb_Templating_TemplateFileSystem.htm" />
     <HelpKINode Title="about TemplateFileSystem class" Url="html/T_ZKWeb_Templating_TemplateFileSystem.htm" />
@@ -2272,8 +2661,11 @@
   <HelpKINode Title="TemplateManager.RenderTemplate method" Url="html/Overload_ZKWeb_Templating_TemplateManager_RenderTemplate.htm" />
   <HelpKINode Title="TemplateManager.TemplateManager constructor" Url="html/M_ZKWeb_Templating_TemplateManager__ctor.htm" />
   <HelpKINode Title="TemplatePath property" Url="html/P_ZKWeb_Web_ActionResults_TemplateResult_TemplatePath.htm" />
-  <HelpKINode Title="TemplatePathCache property" Url="html/P_ZKWeb_Server_PathManager_TemplatePathCache.htm" />
-  <HelpKINode Title="TemplatePathCacheTime property" Url="html/P_ZKWeb_Server_PathManager_TemplatePathCacheTime.htm" />
+  <HelpKINode Title="TemplatePathCache property" Url="html/P_ZKWeb_Storage_LocalPathManager_TemplatePathCache.htm" />
+  <HelpKINode Title="TemplatePathCacheTime property">
+    <HelpKINode Title="LocalPathManager.TemplatePathCacheTime Property " Url="html/P_ZKWeb_Storage_LocalPathManager_TemplatePathCacheTime.htm" />
+    <HelpKINode Title="PathManager.TemplatePathCacheTime Property " Url="html/P_ZKWeb_Server_PathManager_TemplatePathCacheTime.htm" />
+  </HelpKINode>
   <HelpKINode Title="TemplateResult class">
     <HelpKINode Title="TemplateResult Class" Url="html/T_ZKWeb_Web_ActionResults_TemplateResult.htm" />
     <HelpKINode Title="about TemplateResult class" Url="html/T_ZKWeb_Web_ActionResults_TemplateResult.htm" />
@@ -2491,11 +2883,18 @@
   <HelpKINode Title="TriggerEvent&lt;T&gt; method" Url="html/M_ZKWebStandard_Testing_TestRunner_TriggerEvent__1.htm" />
   <HelpKINode Title="Truncate method" Url="html/M_ZKWebStandard_Extensions_DateTimeExtensions_Truncate.htm" />
   <HelpKINode Title="TryGetValue method">
-    <HelpKINode Title="IsolatedMemoryCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWeb_Cache_IsolatedMemoryCache_2_TryGetValue.htm" />
+    <HelpKINode Title="HttpContextCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWebStandard_Collections_HttpContextCache_2_TryGetValue.htm" />
+    <HelpKINode Title="IKeyValueCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWebStandard_Collections_IKeyValueCache_2_TryGetValue.htm" />
+    <HelpKINode Title="IsolatedKeyValueCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWeb_Cache_IsolatedKeyValueCache_2_TryGetValue.htm" />
     <HelpKINode Title="MemoryCache(TKey, TValue).TryGetValue Method " Url="html/M_ZKWebStandard_Collections_MemoryCache_2_TryGetValue.htm" />
   </HelpKINode>
   <HelpKINode Title="Type property" Url="html/P_ZKWebStandard_Utils_PasswordInfo_Type.htm" />
+  <HelpKINode Title="UnderlyingCache property" Url="html/P_ZKWeb_Cache_IsolatedKeyValueCache_2_UnderlyingCache.htm" />
   <HelpKINode Title="Unique property" Url="html/P_ZKWeb_Database_EntityMappingOptions_Unique.htm" />
+  <HelpKINode Title="UniqueIdentifier property">
+    <HelpKINode Title="IFileEntry.UniqueIdentifier Property " Url="html/P_ZKWeb_Storage_IFileEntry_UniqueIdentifier.htm" />
+    <HelpKINode Title="LocalFileEntry.UniqueIdentifier Property " Url="html/P_ZKWeb_Storage_LocalFileEntry_UniqueIdentifier.htm" />
+  </HelpKINode>
   <HelpKINode Title="Unregister method">
     <HelpKINode Title="Container.Unregister Method " Url="html/Overload_ZKWebStandard_Ioc_Container_Unregister.htm" />
     <HelpKINode Title="IRegistrator.Unregister Method " Url="html/M_ZKWebStandard_Ioc_IRegistrator_Unregister.htm" />
@@ -2536,7 +2935,10 @@
     <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Server_WebsiteConfig.htm" />
     <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Server_WebsiteConfig.htm" />
   </HelpKINode>
-  <HelpKINode Title="WebsiteConfig property" Url="html/P_ZKWeb_Server_ConfigManager_WebsiteConfig.htm" />
+  <HelpKINode Title="WebsiteConfig property">
+    <HelpKINode Title="ConfigManager.WebsiteConfig Property " Url="html/P_ZKWeb_Server_ConfigManager_WebsiteConfig.htm" />
+    <HelpKINode Title="WebsiteConfigManager.WebsiteConfig Property " Url="html/P_ZKWeb_Server_WebsiteConfigManager_WebsiteConfig.htm" />
+  </HelpKINode>
   <HelpKINode Title="WebsiteConfig.ConnectionString property" Url="html/P_ZKWeb_Server_WebsiteConfig_ConnectionString.htm" />
   <HelpKINode Title="WebsiteConfig.Database property" Url="html/P_ZKWeb_Server_WebsiteConfig_Database.htm" />
   <HelpKINode Title="WebsiteConfig.Extra property" Url="html/P_ZKWeb_Server_WebsiteConfig_Extra.htm" />
@@ -2545,19 +2947,39 @@
   <HelpKINode Title="WebsiteConfig.PluginDirectories property" Url="html/P_ZKWeb_Server_WebsiteConfig_PluginDirectories.htm" />
   <HelpKINode Title="WebsiteConfig.Plugins property" Url="html/P_ZKWeb_Server_WebsiteConfig_Plugins.htm" />
   <HelpKINode Title="WebsiteConfig.WebsiteConfig constructor" Url="html/M_ZKWeb_Server_WebsiteConfig__ctor.htm" />
-  <HelpKINode Title="WebsiteConfigPath property" Url="html/P_ZKWeb_Server_PathConfig_WebsiteConfigPath.htm" />
-  <HelpKINode Title="WebsiteRootDirectory property" Url="html/P_ZKWeb_Server_PathConfig_WebsiteRootDirectory.htm" />
+  <HelpKINode Title="WebsiteConfigManager class">
+    <HelpKINode Title="WebsiteConfigManager Class" Url="html/T_ZKWeb_Server_WebsiteConfigManager.htm" />
+    <HelpKINode Title="about WebsiteConfigManager class" Url="html/T_ZKWeb_Server_WebsiteConfigManager.htm" />
+    <HelpKINode Title="constructor" Url="html/M_ZKWeb_Server_WebsiteConfigManager__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_ZKWeb_Server_WebsiteConfigManager.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_ZKWeb_Server_WebsiteConfigManager.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebsiteConfigManager.WebsiteConfig property" Url="html/P_ZKWeb_Server_WebsiteConfigManager_WebsiteConfig.htm" />
+  <HelpKINode Title="WebsiteConfigManager.WebsiteConfigManager constructor" Url="html/M_ZKWeb_Server_WebsiteConfigManager__ctor.htm" />
+  <HelpKINode Title="WebsiteConfigPath property">
+    <HelpKINode Title="LocalPathConfig.WebsiteConfigPath Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_WebsiteConfigPath.htm" />
+    <HelpKINode Title="PathConfig.WebsiteConfigPath Property " Url="html/P_ZKWeb_Server_PathConfig_WebsiteConfigPath.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WebsiteRootDirectory property">
+    <HelpKINode Title="LocalPathConfig.WebsiteRootDirectory Property " Url="html/P_ZKWeb_Storage_LocalPathConfig_WebsiteRootDirectory.htm" />
+    <HelpKINode Title="PathConfig.WebsiteRootDirectory Property " Url="html/P_ZKWeb_Server_PathConfig_WebsiteRootDirectory.htm" />
+  </HelpKINode>
   <HelpKINode Title="WidgetInfoCache property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetInfoCache.htm" />
   <HelpKINode Title="WidgetInfoCacheTime property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetInfoCacheTime.htm" />
   <HelpKINode Title="WidgetPath property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateWidgetInfo_WidgetPath.htm" />
   <HelpKINode Title="WidgetRenderCache property" Url="html/P_ZKWeb_Templating_DynamicContents_TemplateAreaManager_WidgetRenderCache.htm" />
+  <HelpKINode Title="WithIsolationPolicies method" Url="html/Overload_ZKWeb_Cache_CacheFactoryOptions_WithIsolationPolicies.htm" />
+  <HelpKINode Title="WithLifetime method" Url="html/M_ZKWeb_Cache_CacheFactoryOptions_WithLifetime.htm" />
   <HelpKINode Title="WithSerialization property" Url="html/P_ZKWeb_Database_EntityMappingOptions_WithSerialization.htm" />
   <HelpKINode Title="Write method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_Write.htm" />
+  <HelpKINode Title="WriteAllBytes method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_WriteAllBytes.htm" />
+  <HelpKINode Title="WriteAllText method" Url="html/M_ZKWeb_Storage_IFileEntryExtensions_WriteAllText.htm" />
   <HelpKINode Title="WriteDebugMessage method" Url="html/M_ZKWebStandard_Testing_TestRunner_WriteDebugMessage.htm" />
   <HelpKINode Title="WriteErrorMessage method" Url="html/M_ZKWebStandard_Testing_TestRunner_WriteErrorMessage.htm" />
   <HelpKINode Title="WriteFile method" Url="html/M_ZKWebStandard_Extensions_IHttpResponseExtensions_WriteFile.htm" />
   <HelpKINode Title="WriteJson method" Url="html/M_ZKWeb_Localize_JsonConverters_TJsonConverter_WriteJson.htm" />
   <HelpKINode Title="WriteResponse method">
+    <HelpKINode Title="FileEntryResult.WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_FileEntryResult_WriteResponse.htm" />
     <HelpKINode Title="FileResult.WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_FileResult_WriteResponse.htm" />
     <HelpKINode Title="IActionResult.WriteResponse Method " Url="html/M_ZKWeb_Web_IActionResult_WriteResponse.htm" />
     <HelpKINode Title="ImageResult.WriteResponse Method " Url="html/M_ZKWeb_Web_ActionResults_ImageResult_WriteResponse.htm" />
@@ -2570,12 +2992,17 @@
   <HelpKINode Title="ZKWeb namespace" Url="html/N_ZKWeb.htm" />
   <HelpKINode Title="ZKWeb.Application class" Url="html/T_ZKWeb_Application.htm" />
   <HelpKINode Title="ZKWeb.Cache namespace" Url="html/N_ZKWeb_Cache.htm" />
+  <HelpKINode Title="ZKWeb.Cache.CacheFactoryOptions class" Url="html/T_ZKWeb_Cache_CacheFactoryOptions.htm" />
+  <HelpKINode Title="ZKWeb.Cache.CacheLifetime enumeration" Url="html/T_ZKWeb_Cache_CacheLifetime.htm" />
   <HelpKINode Title="ZKWeb.Cache.ICacheCleaner interface" Url="html/T_ZKWeb_Cache_ICacheCleaner.htm" />
+  <HelpKINode Title="ZKWeb.Cache.ICacheFactory interface" Url="html/T_ZKWeb_Cache_ICacheFactory.htm" />
   <HelpKINode Title="ZKWeb.Cache.ICacheIsolationPolicy interface" Url="html/T_ZKWeb_Cache_ICacheIsolationPolicy.htm" />
+  <HelpKINode Title="ZKWeb.Cache.IsolatedCacheKey(Of TKey) structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+  <HelpKINode Title="ZKWeb.Cache.IsolatedCacheKey&lt;TKey&gt; structure" Url="html/T_ZKWeb_Cache_IsolatedCacheKey_1.htm" />
+  <HelpKINode Title="ZKWeb.Cache.IsolatedKeyValueCache(Of TKey, TValue) class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
+  <HelpKINode Title="ZKWeb.Cache.IsolatedKeyValueCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWeb_Cache_IsolatedKeyValueCache_2.htm" />
   <HelpKINode Title="ZKWeb.Cache.IsolatedMemoryCache(Of TKey, TValue) class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
   <HelpKINode Title="ZKWeb.Cache.IsolatedMemoryCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWeb_Cache_IsolatedMemoryCache_2.htm" />
-  <HelpKINode Title="ZKWeb.Cache.IsolatedMemoryCacheKey(Of TKey) structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
-  <HelpKINode Title="ZKWeb.Cache.IsolatedMemoryCacheKey&lt;TKey&gt; structure" Url="html/T_ZKWeb_Cache_IsolatedMemoryCacheKey_1.htm" />
   <HelpKINode Title="ZKWeb.Cache.Policies namespace" Url="html/N_ZKWeb_Cache_Policies.htm" />
   <HelpKINode Title="ZKWeb.Cache.Policies.CacheIsolateByDevice class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByDevice.htm" />
   <HelpKINode Title="ZKWeb.Cache.Policies.CacheIsolateByLocale class" Url="html/T_ZKWeb_Cache_Policies_CacheIsolateByLocale.htm" />
@@ -2621,6 +3048,16 @@
   <HelpKINode Title="ZKWeb.Server.PathConfig class" Url="html/T_ZKWeb_Server_PathConfig.htm" />
   <HelpKINode Title="ZKWeb.Server.PathManager class" Url="html/T_ZKWeb_Server_PathManager.htm" />
   <HelpKINode Title="ZKWeb.Server.WebsiteConfig class" Url="html/T_ZKWeb_Server_WebsiteConfig.htm" />
+  <HelpKINode Title="ZKWeb.Server.WebsiteConfigManager class" Url="html/T_ZKWeb_Server_WebsiteConfigManager.htm" />
+  <HelpKINode Title="ZKWeb.Storage namespace" Url="html/N_ZKWeb_Storage.htm" />
+  <HelpKINode Title="ZKWeb.Storage.IDirectoryEntry interface" Url="html/T_ZKWeb_Storage_IDirectoryEntry.htm" />
+  <HelpKINode Title="ZKWeb.Storage.IFileEntry interface" Url="html/T_ZKWeb_Storage_IFileEntry.htm" />
+  <HelpKINode Title="ZKWeb.Storage.IFileEntryExtensions class" Url="html/T_ZKWeb_Storage_IFileEntryExtensions.htm" />
+  <HelpKINode Title="ZKWeb.Storage.IFileStorage interface" Url="html/T_ZKWeb_Storage_IFileStorage.htm" />
+  <HelpKINode Title="ZKWeb.Storage.LocalDirectoryEntry class" Url="html/T_ZKWeb_Storage_LocalDirectoryEntry.htm" />
+  <HelpKINode Title="ZKWeb.Storage.LocalFileEntry class" Url="html/T_ZKWeb_Storage_LocalFileEntry.htm" />
+  <HelpKINode Title="ZKWeb.Storage.LocalPathConfig class" Url="html/T_ZKWeb_Storage_LocalPathConfig.htm" />
+  <HelpKINode Title="ZKWeb.Storage.LocalPathManager class" Url="html/T_ZKWeb_Storage_LocalPathManager.htm" />
   <HelpKINode Title="ZKWeb.Templating namespace" Url="html/N_ZKWeb_Templating.htm" />
   <HelpKINode Title="ZKWeb.Templating.DynamicContents namespace" Url="html/N_ZKWeb_Templating_DynamicContents.htm" />
   <HelpKINode Title="ZKWeb.Templating.DynamicContents.TemplateArea class" Url="html/T_ZKWeb_Templating_DynamicContents_TemplateArea.htm" />
@@ -2646,6 +3083,7 @@
   <HelpKINode Title="ZKWeb.Web namespace" Url="html/N_ZKWeb_Web.htm" />
   <HelpKINode Title="ZKWeb.Web.ActionAttribute class" Url="html/T_ZKWeb_Web_ActionAttribute.htm" />
   <HelpKINode Title="ZKWeb.Web.ActionResults namespace" Url="html/N_ZKWeb_Web_ActionResults.htm" />
+  <HelpKINode Title="ZKWeb.Web.ActionResults.FileEntryResult class" Url="html/T_ZKWeb_Web_ActionResults_FileEntryResult.htm" />
   <HelpKINode Title="ZKWeb.Web.ActionResults.FileResult class" Url="html/T_ZKWeb_Web_ActionResults_FileResult.htm" />
   <HelpKINode Title="ZKWeb.Web.ActionResults.ImageResult class" Url="html/T_ZKWeb_Web_ActionResults_ImageResult.htm" />
   <HelpKINode Title="ZKWeb.Web.ActionResults.JsonResult class" Url="html/T_ZKWeb_Web_ActionResults_JsonResult.htm" />
@@ -2669,6 +3107,10 @@
   <HelpKINode Title="ZKWebStandard.Collection namespace" Url="html/N_ZKWebStandard_Collection.htm" />
   <HelpKINode Title="ZKWebStandard.Collection.HtmlString class" Url="html/T_ZKWebStandard_Collection_HtmlString.htm" />
   <HelpKINode Title="ZKWebStandard.Collections namespace" Url="html/N_ZKWebStandard_Collections.htm" />
+  <HelpKINode Title="ZKWebStandard.Collections.HttpContextCache(Of TKey, TValue) class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+  <HelpKINode Title="ZKWebStandard.Collections.HttpContextCache&lt;TKey, TValue&gt; class" Url="html/T_ZKWebStandard_Collections_HttpContextCache_2.htm" />
+  <HelpKINode Title="ZKWebStandard.Collections.IKeyValueCache(Of TKey, TValue) interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
+  <HelpKINode Title="ZKWebStandard.Collections.IKeyValueCache&lt;TKey, TValue&gt; interface" Url="html/T_ZKWebStandard_Collections_IKeyValueCache_2.htm" />
   <HelpKINode Title="ZKWebStandard.Collections.LazyCache class" Url="html/T_ZKWebStandard_Collections_LazyCache.htm" />
   <HelpKINode Title="ZKWebStandard.Collections.LazyCache(Of T) class" Url="html/T_ZKWebStandard_Collections_LazyCache_1.htm" />
   <HelpKINode Title="ZKWebStandard.Collections.LazyCache&lt;T&gt; class" Url="html/T_ZKWebStandard_Collections_LazyCache_1.htm" />
@@ -2691,6 +3133,7 @@
   <HelpKINode Title="ZKWebStandard.Extensions.IHttpContextExtensions class" Url="html/T_ZKWebStandard_Extensions_IHttpContextExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IHttpRequestExtensions class" Url="html/T_ZKWebStandard_Extensions_IHttpRequestExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IHttpResponseExtensions class" Url="html/T_ZKWebStandard_Extensions_IHttpResponseExtensions.htm" />
+  <HelpKINode Title="ZKWebStandard.Extensions.IKeyValueCacheExtensions class" Url="html/T_ZKWebStandard_Extensions_IKeyValueCacheExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.IListExtensions class" Url="html/T_ZKWebStandard_Extensions_IListExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.ImageExtensions class" Url="html/T_ZKWebStandard_Extensions_ImageExtensions.htm" />
   <HelpKINode Title="ZKWebStandard.Extensions.ImageResizeMode enumeration" Url="html/T_ZKWebStandard_Extensions_ImageResizeMode.htm" />
@@ -2759,6 +3202,7 @@
   <HelpKINode Title="ZKWebStandard.Web.IHttpResponse interface" Url="html/T_ZKWebStandard_Web_IHttpResponse.htm" />
   <HelpKINode Title="ZKWebStandard.Web.Mock namespace" Url="html/N_ZKWebStandard_Web_Mock.htm" />
   <HelpKINode Title="ZKWebStandard.Web.Mock.HttpContextMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpContextMock.htm" />
+  <HelpKINode Title="ZKWebStandard.Web.Mock.HttpPostFileMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpPostFileMock.htm" />
   <HelpKINode Title="ZKWebStandard.Web.Mock.HttpRequestMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpRequestMock.htm" />
   <HelpKINode Title="ZKWebStandard.Web.Mock.HttpResponseMock class" Url="html/T_ZKWebStandard_Web_Mock_HttpResponseMock.htm" />
   <HelpKINode Title="ZKWebStandard.Web.Wrappers namespace" Url="html/N_ZKWebStandard_Web_Wrappers.htm" />
