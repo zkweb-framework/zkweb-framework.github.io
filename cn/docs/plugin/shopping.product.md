@@ -74,6 +74,8 @@ TODO: 更新这张图
 		- PriceCurrency 价格的货币，跟随价格匹配
 		- Weight 重量，等于null时继续匹配下一项
 		- Stock 库存，等于null时继续匹配下一项
+		- ItemNo 货号，等于null时继续匹配下一项
+		- BarCode 条形码，等于null时继续匹配下一项
 		- MatchOrder 匹配顺序，从小到大
 		- Remark 备注，纯文本
 	- PropertyValues 关联的属性值，一对多，选中的规格和属性的值
