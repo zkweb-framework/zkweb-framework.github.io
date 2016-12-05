@@ -4,25 +4,25 @@
     
         
     <url>
-     <loc>None/</loc>
+     <loc>None/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/create_project/</loc>
+     <loc>None/core/create_project/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/start_project/</loc>
+     <loc>None/core/start_project/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/publish_website/</loc>
+     <loc>None/core/publish_website/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -32,85 +32,85 @@
     
         
     <url>
-     <loc>None/core/website_struct/</loc>
+     <loc>None/core/website_struct/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/website_config/</loc>
+     <loc>None/core/website_config/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/ioc_container/</loc>
+     <loc>None/core/ioc_container/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/plugin/</loc>
+     <loc>None/core/plugin/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/controller/</loc>
+     <loc>None/core/controller/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/http_handlers/</loc>
+     <loc>None/core/http_handlers/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/template_engine/</loc>
+     <loc>None/core/template_engine/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/dynamic_contents/</loc>
+     <loc>None/core/dynamic_contents/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/cache/</loc>
+     <loc>None/core/cache/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/file_storage/</loc>
+     <loc>None/core/file_storage/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/database/</loc>
+     <loc>None/core/database/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/multi_language/</loc>
+     <loc>None/core/multi_language/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/multi_timezone/</loc>
+     <loc>None/core/multi_timezone/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/core/unit_test/</loc>
+     <loc>None/core/unit_test/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -126,7 +126,7 @@
     </url>
         
     <url>
-     <loc>None/plugin/common.captcha/</loc>
+     <loc>None/plugin/common.captcha/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -138,223 +138,223 @@
     </url>
         
     <url>
-     <loc>None/plugin/common.menupage/</loc>
+     <loc>None/plugin/common.menupage/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.adminsettings/</loc>
+     <loc>None/plugin/common.adminsettings/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.userpanel/</loc>
+     <loc>None/plugin/common.userpanel/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.usercontact/</loc>
+     <loc>None/plugin/common.usercontact/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.genericclass/</loc>
+     <loc>None/plugin/common.genericclass/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.generictag/</loc>
+     <loc>None/plugin/common.generictag/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.genericrecord/</loc>
+     <loc>None/plugin/common.genericrecord/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.languageswitcher/</loc>
+     <loc>None/plugin/common.languageswitcher/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.currency/</loc>
+     <loc>None/plugin/common.currency/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.pesudostatic/</loc>
+     <loc>None/plugin/common.pesudostatic/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.region/</loc>
+     <loc>None/plugin/common.region/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.serialgenerate/</loc>
+     <loc>None/plugin/common.serialgenerate/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.payment/</loc>
+     <loc>None/plugin/common.payment/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.payment.alipay/</loc>
+     <loc>None/plugin/common.payment.alipay/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.payment.tenpay/</loc>
+     <loc>None/plugin/common.payment.tenpay/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.payment.wechat/</loc>
+     <loc>None/plugin/common.payment.wechat/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/cms.ckeditor/</loc>
+     <loc>None/plugin/cms.ckeditor/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/cms.imagebrowser/</loc>
+     <loc>None/plugin/cms.imagebrowser/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/cms.atricle/</loc>
+     <loc>None/plugin/cms.atricle/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/shopping.product/</loc>
+     <loc>None/plugin/shopping.product/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/shopping.logistics/</loc>
+     <loc>None/plugin/shopping.logistics/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/shopping.order/</loc>
+     <loc>None/plugin/shopping.order/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/shopping.aftersales/</loc>
+     <loc>None/plugin/shopping.aftersales/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/unittest.webtester/</loc>
+     <loc>None/plugin/unittest.webtester/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/on_working/</loc>
+     <loc>None/plugin/on_working/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>None/plugin/common.customtranslate/</loc>
+     <loc>None/plugin/common.customtranslate/index.html</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>

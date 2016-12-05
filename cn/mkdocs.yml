@@ -2,6 +2,7 @@ site_name: ZKWeb框架文档
 repo_url: https://github.com/zkweb-framework
 copyright: Copyright © 2016 303248153@github
 theme_dir: docs_theme
+use_directory_urls: false
 
 pages:
 - 框架入门:
