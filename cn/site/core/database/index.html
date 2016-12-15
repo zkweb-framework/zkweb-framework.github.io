@@ -614,19 +614,25 @@
                   
                 
                   <li class="main">
-                    <a href="#_5">原生查询</a>
+                    <a href="#_5">批量操作</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_6">全局处理表名</a>
+                    <a href="#_6">原生查询</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_7">已知问题</a>
+                    <a href="#_7">全局处理表名</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_8">已知问题</a>
                   </li>
 
                   
@@ -685,7 +691,6 @@ Dapper不支持自动更新数据表结构，需要手动同时修改数据库�
 <img alt="" src="../../img/create_table_example.jpg" /></p>
 <h3 id="_3">增删查改</h3>
 <p>通过<code>DatabaseManager.CreateContext</code>获取数据库上下文可以进行增删查改等操作。s<br/>
-数据库上下文没有<code>SaveChanges</code>，如果需要更好的性能请使用<code>Batch</code>开头的函数。<br/>
 数据库上下文默认不开启事务，需要时可以调用<code>BeginTransaction</code>和<code>FinishTransaction</code>，这两个函数支持嵌套使用。<br/></p>
 <p><strong>新增数据的例子</strong><br/></p>
 <pre><code class="csharp">[Action(&quot;example/add_data&quot;)]
@@ -780,9 +785,17 @@ public class ExampleEntityOperationHandler : IEntityOperationHandler&lt;ExampleT
 }
 </code></pre>
 
-<h3 id="_5">原生查询</h3>
-<p>ZKWeb在支持实体事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
-但可以使用原生查询实现，使用原生查询时将不能支持实体事件等高级功能。<br/>
+<h3 id="_5">批量操作</h3>
+<p>批量操作可以带来更好的性能，ZKWeb提供了以下批量操作的函数</p>
+<ul>
+<li>BatchSave 批量保存</li>
+<li>BatchUpdate 批量更新</li>
+<li>BatchDelete 批量删除</li>
+<li>FastBatchSave 更快的批量保存，不会触发数据事件</li>
+<li>FastBatchDelete 更快的批量删除，不会触发数据事件</li>
+</ul>
+<h3 id="_6">原生查询</h3>
+<p>如果上面的函数仍不满足性能要求时，可以使用原生查询。<br/>
 各个ORM的原生查询格式都不一样，这里以Dapper为例。<br/></p>
 <p>执行储存过程（添加、更新或删除）</p>
 <pre><code class="csharp">long affected = context.RawUpdate(&quot;exec some_update_sp @arg&quot;, new { arg = 1 });
@@ -792,7 +805,7 @@ public class ExampleEntityOperationHandler : IEntityOperationHandler&lt;ExampleT
 <pre><code class="csharp">var result = context.RawQuery&lt;ExampleTable&gt;(&quot;exec some_query_sp @arg&quot;, new { arg = 1 }).ToList();
 </code></pre>
 
-<h3 id="_6">全局处理表名</h3>
+<h3 id="_7">全局处理表名</h3>
 <p>ZKWeb允许全局处理表名，继承<code>IDatabaseInitializeHandler</code>并注册到容器即可。<br/>
 注意这里更改了表名以后，原来创建的数据都不会自动迁移过去，有需要请手动进行迁移。<br/>
 示例代码<br/></p>
@@ -804,7 +817,7 @@ public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
 }
 </code></pre>
 
-<h3 id="_7">已知问题</h3>
+<h3 id="_8">已知问题</h3>
 <ul>
 <li>EFCore目前还不支持定义多对多的关系，可以手动创建一个中间表支持</li>
 <li>EFCore目前还不支持懒加载，嵌入关联表时需要引入EF依赖并使用Include函数</li>

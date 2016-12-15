@@ -47,7 +47,6 @@ builder.Map(e => e.Deleted);
 ### 增删查改
 
 通过`DatabaseManager.CreateContext`获取数据库上下文可以进行增删查改等操作。s<br/>
-数据库上下文没有`SaveChanges`，如果需要更好的性能请使用`Batch`开头的函数。<br/>
 数据库上下文默认不开启事务，需要时可以调用`BeginTransaction`和`FinishTransaction`，这两个函数支持嵌套使用。<br/>
 
 **新增数据的例子**<br/>
@@ -150,10 +149,19 @@ public class ExampleEntityOperationHandler : IEntityOperationHandler<ExampleTabl
 }
 ```
 
+### 批量操作
+
+批量操作可以带来更好的性能，ZKWeb提供了以下批量操作的函数
+
+- BatchSave 批量保存
+- BatchUpdate 批量更新
+- BatchDelete 批量删除
+- FastBatchSave 更快的批量保存，不会触发数据事件
+- FastBatchDelete 更快的批量删除，不会触发数据事件
+
 ### 原生查询
 
-ZKWeb在支持实体事件时牺牲了一定的性能，包括不能实现真正的批量操作。<br/>
-但可以使用原生查询实现，使用原生查询时将不能支持实体事件等高级功能。<br/>
+如果上面的函数仍不满足性能要求时，可以使用原生查询。<br/>
 各个ORM的原生查询格式都不一样，这里以Dapper为例。<br/>
 
 执行储存过程（添加、更新或删除）

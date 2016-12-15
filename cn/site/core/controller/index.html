@@ -619,6 +619,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#action_1">Action过滤器</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -739,6 +745,19 @@ public IActionResult CustomIndexPage() {
     return new PlainResult(&quot;hello overridden action&quot;);
 }
 </code></pre>
+
+<h3 id="action_1">Action过滤器</h3>
+<p>Action过滤器的接口的定义如下</p>
+<pre><code class="csharp">public interface IActionFilter {
+    Func&lt;IActionResult&gt; Filter(Func&lt;IActionResult&gt; action);
+}
+</code></pre>
+
+<p>过滤器可以分为全局过滤器和属性过滤器，<br/>
+全局过滤器对所有Action有效，<br/>
+属性过滤器只对标记的Action有效。<br/></p>
+<p>添加全局过滤器可以继承IActionFilter并标记[ExportMany]注册到容器中。<br/>
+添加属性过滤器可以继承ActionFilterAttribute并标记继承的属性到Action上。<br/></p>
             
 
           </div> <!--/span-->

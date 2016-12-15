@@ -100,3 +100,18 @@ public IActionResult CustomIndexPage() {
 	return new PlainResult("hello overridden action");
 }
 ```
+
+### Action过滤器
+
+Action过滤器的接口的定义如下
+``` csharp
+public interface IActionFilter {
+	Func<IActionResult> Filter(Func<IActionResult> action);
+}
+```
+过滤器可以分为全局过滤器和属性过滤器，<br/>
+全局过滤器对所有Action有效，<br/>
+属性过滤器只对标记的Action有效。<br/>
+
+添加全局过滤器可以继承IActionFilter并标记[ExportMany]注册到容器中。<br/>
+添加属性过滤器可以继承ActionFilterAttribute并标记继承的属性到Action上。<br/>
