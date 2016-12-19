@@ -63,12 +63,13 @@ pages:
   - 伪静态 (Common.PesudoStatic): plugin/common.pesudostatic.md
   - 地区 (Common.Region): plugin/common.region.md
   - 流水号 (Common.SerialGenerate): plugin/common.serialgenerate.md
-  - 支付 (Finance.Payment): plugin/common.payment.md
-  - 支付宝 (Finance.Payment.Alipay): plugin/common.payment.alipay.md
+  - 支付 (Finance.Payment): plugin/finance.payment.md
+  - 支付宝 (Finance.Payment.Alipay): plugin/finance.payment.alipay.md
   - 现金支付 (Finance.Payment.Cash): plugin/on_working.md
   - 货到付款 (Finance.Payment.OnArrive): plugin/on_working.md
-  - 财付通 (Finance.Payment.Tenpay): plugin/common.payment.tenpay.md
-  - 微信支付 (Finance.Payment.WeChat): plugin/common.payment.wechat.md
+  - 财付通 (Finance.Payment.Tenpay): plugin/finance.payment.tenpay.md
+  - 微信支付 (Finance.Payment.WeChat): plugin/finance.payment.wechat.md
+  - Ping++支付 (Finance.Payment.Pingpp): plugin/finance.payment.pingpp.md
   - CKEditor (CMS.CKEditor): plugin/cms.ckeditor.md
   - 图片管理器 (CMS.ImageBrowser): plugin/cms.imagebrowser.md
   - 文章 (CMS.Article): plugin/cms.atricle.md
@@ -84,7 +85,7 @@ pages:
   - 多商城订单 (Multishop.Order): plugin/on_working.md
   - 多商城售后 (Multishop.AfterSales): plugin/on_working.md
   - 网页测试运行器 (UnitTest.WebTester): plugin/unittest.webtester.md
-  - 手机版布局 (Theme.Mobile.Frame): plugin/on_working.md
+  - 手机版布局 (Theme.Mobile.Frame): plugin/theme.mobile.frame.md
   - 商品模板模块 (Theme.Widgets.Product): plugin/on_working.md
   - 轮播图模板模块 (Theme.Widgets.Slideshow): plugin/on_working.md
   - 自定义翻译 (Common.CustomTranslate): plugin/common.customtranslate.md
