@@ -2,7 +2,6 @@
 
 ### 通用配置的数据结构
 
-TODO: 更新这张图
 ![通用配置的ER图](../img/er_generic_config.jpg)
 
 ### 添加配置类型

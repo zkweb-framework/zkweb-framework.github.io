@@ -627,8 +627,7 @@
 如果需要定时任务必须在指定的时间运行，请设置IIS程序池常驻或使用独立的进程处理。<br/>
 定时任务已考虑到部署到多个服务器时的情况，部署到多个服务器仍可以保证任务不被重复执行。<br/></p>
 <h3 id="_1">定时任务的数据结构</h3>
-<p>TODO: 更新这张图
-<img alt="定时任务的ER图" src="../../img/er_scheduled_task.jpg" /></p>
+<p><img alt="定时任务的ER图" src="../../img/er_scheduled_task.jpg" /></p>
 <h3 id="_2">添加定时任务</h3>
 <p>定时任务需要继承<code>IScheduledTaskExecutor</code>并注册到容器，<code>Key</code>返回在数据库中保存的任务名称。<br/></p>
 <p><strong>定时任务的例子</strong><br/>

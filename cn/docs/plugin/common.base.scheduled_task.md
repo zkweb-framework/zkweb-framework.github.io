@@ -5,7 +5,6 @@
 
 ### 定时任务的数据结构
 
-TODO: 更新这张图
 ![定时任务的ER图](../img/er_scheduled_task.jpg)
 
 ### 添加定时任务
