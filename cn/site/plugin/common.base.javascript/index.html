@@ -398,6 +398,12 @@
                   
                       
 <li >
+    <a href="../common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
     <a href="../finance.payment/index.html">支付 (Finance.Payment)</a>
 </li>
 
@@ -410,13 +416,19 @@
                   
                       
 <li >
-    <a href="../on_working/index.html">现金支付 (Finance.Payment.Cash)</a>
+    <a href="../finance.payment.cash/index.html">现金支付 (Finance.Payment.Cash)</a>
 </li>
 
                   
                       
 <li >
-    <a href="../on_working/index.html">货到付款 (Finance.Payment.OnArrive)</a>
+    <a href="../finance.payment.onarrive/index.html">货到付款 (Finance.Payment.OnArrive)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.pingpp/index.html">Ping++(Finance.Payment.Pingpp)</a>
 </li>
 
                   
@@ -482,13 +494,13 @@
                   
                       
 <li >
-    <a href="../on_working/index.html">商品收藏 (Shopping.ProductBookmark)</a>
+    <a href="../shopping.productbookmark/index.html">商品收藏 (Shopping.ProductBookmark)</a>
 </li>
 
                   
                       
 <li >
-    <a href="../on_working/index.html">商品评论 (Shopping.ProductRating)</a>
+    <a href="../shopping.productrating/index.html">商品评价 (Shopping.ProductRating)</a>
 </li>
 
                   
@@ -524,13 +536,25 @@
                   
                       
 <li >
-    <a href="../unittest.webtester/index.html">网页测试运行器 (UnitTest.WebTester)</a>
+    <a href="../testing.webtester/index.html">网页测试运行器 (Testing.WebTester)</a>
 </li>
 
                   
                       
 <li >
     <a href="../theme.mobile.frame/index.html">手机版布局 (Theme.Mobile.Frame)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../theme.visualeditor/index.html">可视化编辑 (Theme.VisualEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">基础模板模块 (Theme.Widgets.Base)</a>
 </li>
 
                   
@@ -758,6 +782,24 @@ $table.on(&quot;bind.editableTable&quot;, function () { ... });
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<p><strong>延迟添加标签</strong><br/>
+把内容合并移动到data-target对应的元素下<br/>
+注意: 如果标签组下已经有相同的标签，则原相同的标签会被移除<br/></p>
+<pre><code class="html">&lt;div data-toggle=&quot;append-tabs&quot; data-target=&quot;.target-tabs&quot;&gt;
+    &lt;ul class=&quot;nav nav-tabs&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#target_tab_contents&quot; data-toggle=&quot;tab&quot;&gt;TabName&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+        &lt;div id=&quot;target_tab_contents&quot; class=&quot;tab-pane&quot;&gt;
+            &lt;div class=&quot;contents&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
             
 
           </div> <!--/span-->
@@ -769,7 +811,7 @@ $table.on(&quot;bind.editableTable&quot;, function () { ... });
 
   <footer class="span12">
     <p>
-		Copyright © 2016 303248153@github<br/>
+		Copyright © 2016~2017 303248153@github<br/>
 		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
     </p>
   </footer>

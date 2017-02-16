@@ -1,6 +1,6 @@
 site_name: ZKWeb框架文档
 repo_url: https://github.com/zkweb-framework
-copyright: Copyright © 2016 303248153@github
+copyright: Copyright © 2016~2017 303248153@github
 theme_dir: docs_theme
 use_directory_urls: false
 
@@ -63,10 +63,12 @@ pages:
   - 伪静态 (Common.PesudoStatic): plugin/common.pesudostatic.md
   - 地区 (Common.Region): plugin/common.region.md
   - 流水号 (Common.SerialGenerate): plugin/common.serialgenerate.md
+  - 日期选择控件 (Common.Datepicker): plugin/common.datepicker.md
   - 支付 (Finance.Payment): plugin/finance.payment.md
   - 支付宝 (Finance.Payment.Alipay): plugin/finance.payment.alipay.md
-  - 现金支付 (Finance.Payment.Cash): plugin/on_working.md
-  - 货到付款 (Finance.Payment.OnArrive): plugin/on_working.md
+  - 现金支付 (Finance.Payment.Cash): plugin/finance.payment.cash.md
+  - 货到付款 (Finance.Payment.OnArrive): plugin/finance.payment.onarrive.md
+  - Ping++(Finance.Payment.Pingpp): plugin/finance.payment.pingpp.md
   - 财付通 (Finance.Payment.Tenpay): plugin/finance.payment.tenpay.md
   - 微信支付 (Finance.Payment.WeChat): plugin/finance.payment.wechat.md
   - Ping++支付 (Finance.Payment.Pingpp): plugin/finance.payment.pingpp.md
@@ -77,15 +79,17 @@ pages:
   - 物流 (Shopping.Logistics): plugin/shopping.logistics.md
   - 订单 (Shopping.Order): plugin/shopping.order.md
   - 售后 (Shopping.AfterSales): plugin/shopping.aftersales.md
-  - 商品收藏 (Shopping.ProductBookmark): plugin/on_working.md
-  - 商品评论 (Shopping.ProductRating): plugin/on_working.md
+  - 商品收藏 (Shopping.ProductBookmark): plugin/shopping.productbookmark.md
+  - 商品评价 (Shopping.ProductRating): plugin/shopping.productrating.md
   - 多商城 (Multishop.Base): plugin/on_working.md
   - 多商城商品 (Multishop.Product): plugin/on_working.md
   - 多商城物流 (Multishop.Logistics): plugin/on_working.md
   - 多商城订单 (Multishop.Order): plugin/on_working.md
   - 多商城售后 (Multishop.AfterSales): plugin/on_working.md
-  - 网页测试运行器 (UnitTest.WebTester): plugin/unittest.webtester.md
+  - 网页测试运行器 (Testing.WebTester): plugin/testing.webtester.md
   - 手机版布局 (Theme.Mobile.Frame): plugin/theme.mobile.frame.md
+  - 可视化编辑 (Theme.VisualEditor): plugin/theme.visualeditor.md
+  - 基础模板模块 (Theme.Widgets.Base): plugin/on_working.md
   - 商品模板模块 (Theme.Widgets.Product): plugin/on_working.md
   - 轮播图模板模块 (Theme.Widgets.Slideshow): plugin/on_working.md
   - 自定义翻译 (Common.CustomTranslate): plugin/common.customtranslate.md

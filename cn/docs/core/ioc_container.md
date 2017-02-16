@@ -38,6 +38,26 @@ ZKWeb使用了一个全局变量储存IoC容器，这个全局变量在`Applicat
 虽然使用了全局变量，但这个全局变量可以在线程范围内使用`Application.OverrideIoc`进行重载，以便测试。<br/>
 如果不想使用全局的容器可以使用构造函数注入，但注意注入的组件必须已经注册，否则会抛出例外。<br/>
 
+### 构造函数注入
+
+ZKWeb的IoC容器支持构造函数注入，在选择构造函数的时候会选参数最多的函数
+
+``` csharp
+public interface IXmlWriter { }
+public interface IAttributeProvider { }
+
+public class XmlBuilder {
+	// IoC容器会使用第二个构造函数
+	public XmlBuilder() { }
+	public XmlBuilder(IXmlWriter writer, IEnumerable<IAttributeProvider> providers) { }
+}
+
+void Example() {
+	// 创建XmlBuilder的实例，自动注入依赖项
+	var xmlBuilder = Application.Ioc.Resolve<XmlBuilder>();
+}
+```
+
 ### 在插件中注册组件
 
 插件可以标记`[ExportMany]`属性注册组件，同时标记`[SingletonReuse]`属性可以注册成单例。<br/>

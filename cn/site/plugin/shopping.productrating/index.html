@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>商品评价 (Shopping.ProductRating) - ZKWeb框架文档</title>
+  <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
+  <link rel="canonical" href="None" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="商品评价 (Shopping.ProductRating), 商品评价 (Shopping.ProductRating)">
+  <meta name="author" content="Tom Christie">
+
+  <!-- Le styles -->
+  <link href="../../css/prettify.css" rel="stylesheet">
+  <link href="../../css/bootstrap.css" rel="stylesheet">
+  <link href="../../css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../../css/default.css" rel="stylesheet">
+</head>
+<body onload="prettyPrint()" class="-page">
+
+  <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../on_working/index.html">
+            下一页 <i class="icon-arrow-right icon-white"></i>
+          </a>
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../shopping.productbookmark/index.html">
+            <i class="icon-arrow-left icon-white"></i> 上一页
+          </a>
+          <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="../../index.html">ZKWeb框架文档</a>
+          <div class="nav-collapse collapse">
+            
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+               
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">框架入门 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../../index.html">框架介绍</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/create_project/index.html">创建项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/start_project/index.html">开发项目</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/publish_website/index.html">发布网站</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">核心功能 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+<li >
+    <a href="../../core/website_struct/index.html">网站结构</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/website_config/index.html">配置文件</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/ioc_container/index.html">IoC容器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/plugin/index.html">插件系统</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/controller/index.html">控制器</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/http_handlers/index.html">请求和错误处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/template_engine/index.html">模板引擎</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/dynamic_contents/index.html">动态内容</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/cache/index.html">缓存处理</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/file_storage/index.html">文件储存</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/database/index.html">数据库</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_language/index.html">多语言</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/multi_timezone/index.html">多时区</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../core/unit_test/index.html">单元测试</a>
+</li>
+
+                  
+                </ul>
+              </li>
+                
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">插件 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>基础插件 (Common.Base)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.base.summary/index.html">关于基础插件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.generic_config/index.html">通用配置</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.scheduled_task/index.html">定时任务</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.session/index.html">会话</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.css/index.html">基础css样式</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.javascript/index.html">基础javascript脚本</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.font/index.html">基础图标字体</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.repository_uow/index.html">仓储和工作单元</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.traits/index.html">特征接口</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.ajax_table/index.html">动态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_table/index.html">静态表格构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.form_builder/index.html">表单构建器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.static_handler/index.html">静态文件处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.locale_handler/index.html">语言时区处理器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.templates/index.html">提供的模板文件</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.tag_and_filter/index.html">提供的标签和过滤器</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.base.cache_policy/index.html">提供的隔离策略</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.captcha/index.html">验证码 (Common.Captcha)</a>
+</li>
+
+                  
+                      
+  <li class="dropdown-submenu">
+    <a>管理员 (Common.Admin)</a>
+    <ul>
+        
+            
+<li >
+    <a href="../common.admin.user_and_role/index.html">用户和角色权限</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.admin_panel/index.html">管理后台</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.traits/index.html">特征接口</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_simple_app/index.html">添加后台功能</a>
+</li>
+
+        
+            
+<li >
+    <a href="../common.admin.add_crud_app/index.html">添加增删查改功能</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                  
+                      
+<li >
+    <a href="../common.menupage/index.html">菜单页 (Common.MenuPage)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.adminsettings/index.html">管理员设置 (Common.AdminSettings)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.userpanel/index.html">用户中心 (Common.UserPanel)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.usercontact/index.html">联系人 (Common.UserContact)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericclass/index.html">通用分类 (Common.GenericClass)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.generictag/index.html">通用标签 (Common.GenericTag)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.genericrecord/index.html">通用记录 (Common.GenericRecord)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.languageswitcher/index.html">语言切换器 (Common.LanguageSwitcher)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.currency/index.html">货币 (Common.Currency)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.pesudostatic/index.html">伪静态 (Common.PesudoStatic)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.region/index.html">地区 (Common.Region)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.serialgenerate/index.html">流水号 (Common.SerialGenerate)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment/index.html">支付 (Finance.Payment)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.alipay/index.html">支付宝 (Finance.Payment.Alipay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.cash/index.html">现金支付 (Finance.Payment.Cash)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.onarrive/index.html">货到付款 (Finance.Payment.OnArrive)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.pingpp/index.html">Ping++(Finance.Payment.Pingpp)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.tenpay/index.html">财付通 (Finance.Payment.Tenpay)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.wechat/index.html">微信支付 (Finance.Payment.WeChat)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.pingpp/index.html">Ping++支付 (Finance.Payment.Pingpp)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.ckeditor/index.html">CKEditor (CMS.CKEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.imagebrowser/index.html">图片管理器 (CMS.ImageBrowser)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../cms.atricle/index.html">文章 (CMS.Article)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.product/index.html">商品 (Shopping.Product)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.logistics/index.html">物流 (Shopping.Logistics)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.order/index.html">订单 (Shopping.Order)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.aftersales/index.html">售后 (Shopping.AfterSales)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../shopping.productbookmark/index.html">商品收藏 (Shopping.ProductBookmark)</a>
+</li>
+
+                  
+                      
+<li class="active">
+    <a href="index.html">商品评价 (Shopping.ProductRating)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">多商城 (Multishop.Base)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">多商城商品 (Multishop.Product)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">多商城物流 (Multishop.Logistics)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">多商城订单 (Multishop.Order)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">多商城售后 (Multishop.AfterSales)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../testing.webtester/index.html">网页测试运行器 (Testing.WebTester)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../theme.mobile.frame/index.html">手机版布局 (Theme.Mobile.Frame)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../theme.visualeditor/index.html">可视化编辑 (Theme.VisualEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">基础模板模块 (Theme.Widgets.Base)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">商品模板模块 (Theme.Widgets.Product)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">轮播图模板模块 (Theme.Widgets.Slideshow)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.customtranslate/index.html">自定义翻译 (Common.CustomTranslate)</a>
+</li>
+
+                  
+                </ul>
+              </li>
+               
+
+            </ul>
+            
+          </div>
+          <!--/.nav-collapse -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="body-content">
+      <div class="container-fluid">
+        <!-- Search Modal -->
+        <div id="mkdocs_search_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 id="myModalLabel">搜索文档</h3>
+          </div>
+
+          <div class="modal-body">
+            <form role="form" autocomplete="off">
+              <div class="form-group">
+                <input type="text" name="q" class="form-control" placeholder="关键词" id="mkdocs-search-query">
+              </div>
+            </form>
+            <div id="mkdocs-search-results"></div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+          </div>
+        </div>
+
+        <div class="row-fluid">
+          <div class="span3 hide">
+            <div id="table-of-contents">
+              <ul class="nav nav-list side-nav well sidebar-nav-fixed">
+                
+
+                
+                  <li class="main">
+                    <a href="#_1">如何评价商品</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">如何查看商品的评价</a>
+                  </li>
+
+                  
+                
+
+                  <div class="promo">
+                    <hr/>
+                    <div id="sidebarInclude">
+                  </div>
+              </ul>
+
+            </div>
+          </div>
+
+          <div id="main-content" class="span9">
+            
+              
+                <h1>商品评价 (Shopping.ProductRating)</h1><br/>
+              
+              <p>商品评价插件支持对已确认收货的订单进行评价和展示商品的评价</p>
+<h3 id="_1">如何评价商品</h3>
+<p>在订单确认收货后可以在用户中心的订单列表页看见评价按钮
+<img alt="订单列表页" src="../../img/product_rating_order_list.jpg" /></p>
+<p>点击评价按钮后可以对订单中的商品进行评价
+<img alt="评价页" src="../../img/product_rating_rate.jpg" /></p>
+<h3 id="_2">如何查看商品的评价</h3>
+<p>商品详情页中可以查看该商品的历史评价
+<img alt="商品详情页的评价列表" src="../../img/product_rating_rate_list.jpg" /></p>
+<p>上传图片和对评价进行管理的功能尚未完成，将会在后面补充</p>
+            
+
+          </div> <!--/span-->
+        </div> <!--/row-->
+      </div> <!--/.fluid-container-->
+    </div> <!--/.body content-->
+    <div id="push"></div>
+  </div> <!--/.wrapper -->
+
+  <footer class="span12">
+    <p>
+		Copyright © 2016~2017 303248153@github<br/>
+		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
+    </p>
+  </footer>
+
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="../../js/jquery-1.8.1-min.js"></script>
+  <script src="../../js/prettify-1.0.js"></script>
+  <script src="../../js/bootstrap-2.1.1-min.js"></script>
+  <script>var base_url = '../..';</script>
+  <script src="../../mkdocs/js/require.js"></script>
+  <script src="../../js/theme.js"></script>
+
+  <script>
+    var shiftWindow = function() {
+      scrollBy(0, -50)
+    };
+
+    if (location.hash) shiftWindow();
+    window.addEventListener("hashchange", shiftWindow);
+
+    $('.dropdown-menu').on('click touchstart', function(event) {
+      event.stopPropagation();
+    });
+
+    // Dynamically force sidenav/dropdown to no higher than browser window
+    $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+
+    $(function() {
+      $(window).resize(function() {
+        $('.side-nav, .dropdown-menu').css('max-height', window.innerHeight - 130);
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -47,6 +47,9 @@ public class HttpErrorHandlerExample : IHttpRequestErrorHandler {
 - IHttpRequestHandler
 	- Http请求的处理器
 	- 这类处理器在请求的路径匹配时可以直接返回结果
+- IHttpRequestHandlerWrapper
+	- 包装Http请求的函数
+	- 适用于在里面重载Http上下文，例如实现伪静态
 - IHttpRequestPostHandler
 	- Http请求的后处理器
 	- 一般用于清理预处理器中留下的东西
@@ -58,22 +61,28 @@ ZKWeb处理Http请求的流程如下<br/>
 ``` csharp
 try {
 	try {
-		foreach (按插件注册顺序调用预处理器) {
-			调用IHttpRequestPreHandler.OnRequest
+		按插件注册顺序枚举注册的IHttpRequestPreHandler {
+			调用OnRequest函数
 		}
-		foreach (按插件注册顺序反序调用处理器) {
-			调用IHttpRequestHandler.OnRequest
+		处理函数 = {
+			按插件注册相反顺序枚举注册的IHttpRequestHandler {
+				调用OnRequest函数
+			}
+			抛出404错误
 		}
-		throw new HttpException(404, "Not Found");
+		按插件注册顺序枚举注册的IHttpRequestHandlerWrapper {
+			处理函数 = WrapHandlerAction(处理函数)
+		}
+		调用处理函数
 	} finally {
-		foreach (按插件注册顺序调用预处理器) {
-			调用IHttpRequestPostHandler.OnRequest
+		按插件注册顺序枚举注册的IHttpRequestPostHandler {
+			调用OnRequest函数
 		}
 	}
 } catch (代表请求结束的例外) {
 } catch (Exception ex) {
-	foreach (按插件注册顺序反序调用错误处理器) {
-		调用IHttpRequestErrorHandler.OnError
+	按插件注册顺序枚举注册的IHttpRequestErrorHandler {
+		调用OnError函数
 	}
 }
 ```

@@ -156,3 +156,22 @@ $("#Img").refreshImage();
 	</div>
 </div>
 ```
+
+**延迟添加标签**<br/>
+把内容合并移动到data-target对应的元素下<br/>
+注意: 如果标签组下已经有相同的标签，则原相同的标签会被移除<br/>
+``` html
+<div data-toggle="append-tabs" data-target=".target-tabs">
+	<ul class="nav nav-tabs">
+		<li>
+			<a href="#target_tab_contents" data-toggle="tab">TabName</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="target_tab_contents" class="tab-pane">
+			<div class="contents">
+			</div>
+		</div>
+	</div>
+</div>
+```

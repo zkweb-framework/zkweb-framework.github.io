@@ -34,7 +34,7 @@ ZKWeb的网站配置内容都保存在`App_Data\config.json`中。<br/>
 
 获取网站配置可以使用`ConfigManager`。
 ``` csharp
-var configManager = Application.Ioc.Resolve<ConfigManager>();
+var configManager = Application.Ioc.Resolve<WebsiteConfigManager>();
 var value = configManager.WebsiteConfig.Extra.GetOrDefault<bool>("SomeExtraConfiguration");
 ```
 
