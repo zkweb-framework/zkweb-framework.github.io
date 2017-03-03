@@ -63,7 +63,11 @@ pages:
   - 伪静态 (Common.PesudoStatic): plugin/common.pesudostatic.md
   - 地区 (Common.Region): plugin/common.region.md
   - 流水号 (Common.SerialGenerate): plugin/common.serialgenerate.md
-  - 日期选择控件 (Common.Datepicker): plugin/common.datepicker.md
+  - 代码编辑器 (Common.CodeEditor): plugin/common.codeeditor.md
+  - 日期选择器 (Common.Datepicker): plugin/common.datepicker.md
+  - 动态表单 (Common.DynamicForm): plugin/common.dynamicform.md
+  - 动态代码编辑器字段 (Common.DynamicForm.CodeEditor): plugin/common.dynamicform.codeeditor.md
+  - 动态日期选择器字段 (Common.DynamicForm.DatePicker): plugin/common.dynamicform.datepicker.md
   - 支付 (Finance.Payment): plugin/finance.payment.md
   - 支付宝 (Finance.Payment.Alipay): plugin/finance.payment.alipay.md
   - 现金支付 (Finance.Payment.Cash): plugin/finance.payment.cash.md

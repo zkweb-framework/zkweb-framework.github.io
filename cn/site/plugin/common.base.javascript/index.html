@@ -398,7 +398,31 @@
                   
                       
 <li >
-    <a href="../common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+    <a href="../common.codeeditor/index.html">代码编辑器 (Common.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.datepicker/index.html">日期选择器 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.dynamicform/index.html">动态表单 (Common.DynamicForm)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.dynamicform.codeeditor/index.html">动态代码编辑器字段 (Common.DynamicForm.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.dynamicform.datepicker/index.html">动态日期选择器字段 (Common.DynamicForm.DatePicker)</a>
 </li>
 
                   
@@ -800,6 +824,26 @@ $table.on(&quot;bind.editableTable&quot;, function () { ... });
     &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
+
+<p><strong>客户端翻译</strong><br/>
+支持客户端翻译文本，翻译来源需要在html中提供<br/></p>
+<p>调用翻译的例子</p>
+<pre><code class="javascript">var title = $.translate(&quot;Title&quot;);
+</code></pre>
+
+<p>提供翻译来源的例子</p>
+<pre><code class="html">&lt;span class=&quot;translation hide&quot; data-original=&quot;Title&quot; data-translated=&quot;标题&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;translation hide&quot; data-translations=&quot;{ \&quot;Title\&quot;: \&quot;标题\&quot; }&quot;&gt;&lt;/span&gt;
+</code></pre>
+
+<p><strong>触发动态加载内容的事件</strong><br/>
+有时候部分html内容需要通过ajax加载到页面，<br/>
+例如远程获取一个表单的html并添加到页面，如果不调用这个事件像ajax表单这样的功能将不能自动初始化<br/></p>
+<pre><code class="javascript">$.dynamicLoaded($contents);
+</code></pre>
+
+<p>这个函数会在内部等待元素添加到DOM以后再调用<code>$(document).trigger("dynamicLoaded", $contents);</code><br/>
+监听这个事件可以使用<code>$(document).on("dynamicLoaded", function (e, $contents) { });</code><br/></p>
             
 
           </div> <!--/span-->

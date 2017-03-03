@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>网页测试运行器 (UnitTest.WebTester) - ZKWeb框架文档</title>
+  <title>动态表单 (Common.DynamicForm) - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="网页测试运行器 (UnitTest.WebTester), 网页测试运行器 (UnitTest.WebTester)">
+  <meta name="description" content="动态表单 (Common.DynamicForm), 动态表单 (Common.DynamicForm)">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,10 +24,10 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../theme.mobile.frame/index.html">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../common.dynamicform.codeeditor/index.html">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../on_working/index.html">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../common.datepicker/index.html">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -398,6 +398,36 @@
                   
                       
 <li >
+    <a href="../common.codeeditor/index.html">代码编辑器 (Common.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.datepicker/index.html">日期选择器 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li class="active">
+    <a href="index.html">动态表单 (Common.DynamicForm)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.dynamicform.codeeditor/index.html">动态代码编辑器字段 (Common.DynamicForm.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../common.dynamicform.datepicker/index.html">动态日期选择器字段 (Common.DynamicForm.DatePicker)</a>
+</li>
+
+                  
+                      
+<li >
     <a href="../finance.payment/index.html">支付 (Finance.Payment)</a>
 </li>
 
@@ -410,13 +440,19 @@
                   
                       
 <li >
-    <a href="../on_working/index.html">现金支付 (Finance.Payment.Cash)</a>
+    <a href="../finance.payment.cash/index.html">现金支付 (Finance.Payment.Cash)</a>
 </li>
 
                   
                       
 <li >
-    <a href="../on_working/index.html">货到付款 (Finance.Payment.OnArrive)</a>
+    <a href="../finance.payment.onarrive/index.html">货到付款 (Finance.Payment.OnArrive)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../finance.payment.pingpp/index.html">Ping++(Finance.Payment.Pingpp)</a>
 </li>
 
                   
@@ -482,13 +518,13 @@
                   
                       
 <li >
-    <a href="../on_working/index.html">商品收藏 (Shopping.ProductBookmark)</a>
+    <a href="../shopping.productbookmark/index.html">商品收藏 (Shopping.ProductBookmark)</a>
 </li>
 
                   
                       
 <li >
-    <a href="../on_working/index.html">商品评论 (Shopping.ProductRating)</a>
+    <a href="../shopping.productrating/index.html">商品评价 (Shopping.ProductRating)</a>
 </li>
 
                   
@@ -523,14 +559,26 @@
 
                   
                       
-<li class="active">
-    <a href="index.html">网页测试运行器 (UnitTest.WebTester)</a>
+<li >
+    <a href="../testing.webtester/index.html">网页测试运行器 (Testing.WebTester)</a>
 </li>
 
                   
                       
 <li >
     <a href="../theme.mobile.frame/index.html">手机版布局 (Theme.Mobile.Frame)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../theme.visualeditor/index.html">可视化编辑 (Theme.VisualEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../on_working/index.html">基础模板模块 (Theme.Widgets.Base)</a>
 </li>
 
                   
@@ -596,7 +644,37 @@
 
                 
                   <li class="main">
-                    <a href="#_1">网页测试运行器的后台界面</a>
+                    <a href="#json">构建动态表单的json数据结构</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_1">如何构建动态表单</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_2">支持在动态表单中使用现成的表单字段属性</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_3">支持在动态表单中使用现成的表单字段验证属性</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_4">各个动态表单字段和它们的参数</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#_5">各个动态表单验证属性和它们的参数</a>
                   </li>
 
                   
@@ -614,12 +692,195 @@
           <div id="main-content" class="span9">
             
               
-                <h1>网页测试运行器 (UnitTest.WebTester)</h1><br/>
+                <h1>动态表单 (Common.DynamicForm)</h1><br/>
               
-              <p>网页测试运行器插件提供了在后台运行测试并查看测试结果的功能。<br/>
-这个插件不推荐在生产环境中引用。<br/></p>
-<h3 id="_1">网页测试运行器的后台界面</h3>
-<p><img alt="网页测试运行器的后台界面" src="../../img/web_tester.jpg" /></p>
+              <p>动态表单支持从json数据构建表单内容，可以用于实现可视化表单<br/></p>
+<h3 id="json">构建动态表单的json数据结构</h3>
+<pre><code class="json">[
+    {
+        &quot;Type&quot;: &quot;TextBox&quot;,
+        &quot;Name&quot;: &quot;Width&quot;,
+        &quot;PlaceHolder&quot;: &quot;Example: 100px&quot;,
+        &quot;Validators&quot;: [
+            {
+                &quot;Type&quot;: &quot;RegularExpression&quot;,
+                &quot;Pattern&quot;: &quot;^(\\d+px)?$&quot;
+            }
+        ]
+    },
+    {
+        &quot;Type&quot;: &quot;TextBox&quot;,
+        &quot;Name&quot;: &quot;Height&quot;,
+        &quot;PlaceHolder&quot;: &quot;Example: 100px&quot;,
+        &quot;Validators&quot;: [
+            {
+                &quot;Type&quot;: &quot;RegularExpression&quot;,
+                &quot;Pattern&quot;: &quot;^(\\d+px)?$&quot;
+            }
+        ]
+    }
+]
+</code></pre>
+
+<h3 id="_1">如何构建动态表单</h3>
+<pre><code class="csharp">var fields = JsonConvert.Deserialize&lt;IList&lt;IDictionary&lt;string, object&gt;&gt;&gt;(json);
+var dynamicFormBuilder = new DynamicFormBuilder();
+dynamicFormBuilder.AddFields(fields);
+var form = dynamicFormBuilder.ToForm&lt;TabFormBuilder&gt;();
+// 接下来可以调用BindValues绑定表单或ParseValues解析提交的参数
+</code></pre>
+
+<h3 id="_2">支持在动态表单中使用现成的表单字段属性</h3>
+<p>这里以<code>TextBoxFieldAttribute</code>为例</p>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 文本框生成器
+/// &lt;/summary&gt;
+[ExportMany(ContractKey = &quot;TextBox&quot;)]
+public class TextBoxFieldFactory : IDynamicFormFieldFactory {
+    /// &lt;summary&gt;
+    /// 创建表单字段属性
+    /// &lt;/summary&gt;
+    public FormFieldAttribute Create(IDictionary&lt;string, object&gt; fieldData) {
+        var name = fieldData.GetOrDefault&lt;string&gt;(&quot;Name&quot;);
+        var placeHolder = fieldData.GetOrDefault&lt;string&gt;(&quot;PlaceHolder&quot;);
+        var group = fieldData.GetOrDefault&lt;string&gt;(&quot;Group&quot;);
+        return new TextBoxFieldAttribute(name, placeHolder) { Group = group };
+    }
+}
+</code></pre>
+
+<h3 id="_3">支持在动态表单中使用现成的表单字段验证属性</h3>
+<p>这里以<code>StringLengthAttribute</code>为例</p>
+<pre><code class="csharp">/// &lt;summary&gt;
+/// 生成长度验证属性
+/// &lt;/summary&gt;
+[ExportMany(ContractKey = &quot;StringLength&quot;)]
+public class StringLengthValidatorFactory : IDynamicFormFieldValidatorFactory {
+    /// &lt;summary&gt;
+    /// 生成长度验证属性
+    /// &lt;/summary&gt;
+    public Attribute Create(IDictionary&lt;string, object&gt; validatorData) {
+        var maximumLength = validatorData.GetOrDefault&lt;int&gt;(&quot;MaximumLength&quot;);
+        var minimumLength = validatorData.GetOrDefault&lt;int&gt;(&quot;MinimumLength&quot;);
+        return new StringLengthAttribute(maximumLength) { MinimumLength = minimumLength };
+    }
+}
+</code></pre>
+
+<h3 id="_4">各个动态表单字段和它们的参数</h3>
+<p><strong>AlertHtml: 提示Html生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"alert-info"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>CheckBox: 勾选框生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>CheckBoxGroup: 勾选框组生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>CheckBoxGroups: 勾选框组列表生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>CheckBoxTree: 勾选框树生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>DropdownList: 下拉框生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>FileUploader: 文件上传生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Extensions: 扩展名, 例如"png,jpg,jpeg,gif"</li>
+<li>MaxContentsLength: 允许上传的最大长度, 单位是字节, 例如1MB是"1048576"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>Hidden: 隐藏字段生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>Html: Html内容生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>Json: Json字段生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>Password: 密码框生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>RadioButtons: 单选按钮组生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>RichTextEditor: 富文本编辑器生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Config: 自定义配置，格式是Json</li>
+<li>ImageBrowserUrl: 图片管理器地址，指定时可以启用图片上传功能</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>SearchableDropdownList: 可搜索的下拉框生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Type: 类型, 例如"全名, 程序集名称"</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>TemplateHtml: 模板Html生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Path: 模板路径</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>TextArea: 文本区域生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>Rows: 行数</li>
+<li>PlaceHolder: 预置文本</li>
+<li>Group: 分组</li>
+</ul>
+<p><strong>TextBox: 文本框生成器</strong></p>
+<ul>
+<li>Name: 字段名称</li>
+<li>PlaceHolder: 预置文本</li>
+<li>Group: 分组</li>
+</ul>
+<h3 id="_5">各个动态表单验证属性和它们的参数</h3>
+<p><strong>RegularExpression: 生成表达式验证属性</strong></p>
+<ul>
+<li>Pattern: 正则表达式</li>
+</ul>
+<p><strong>Required: 生成必填项属性</strong></p>
+<p>无参数</p>
+<p><strong>StringLength: 生成长度验证属性</strong></p>
+<ul>
+<li>MaximumLength: 最大长度</li>
+<li>MinimumLength: 最小长度</li>
+</ul>
             
 
           </div> <!--/span-->
@@ -631,7 +892,7 @@
 
   <footer class="span12">
     <p>
-		Copyright © 2016 303248153@github<br/>
+		Copyright © 2016~2017 303248153@github<br/>
 		Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.
     </p>
   </footer>

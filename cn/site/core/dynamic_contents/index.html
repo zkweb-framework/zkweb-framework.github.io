@@ -398,7 +398,31 @@
                   
                       
 <li >
-    <a href="../../plugin/common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+    <a href="../../plugin/common.codeeditor/index.html">代码编辑器 (Common.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.datepicker/index.html">日期选择器 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform/index.html">动态表单 (Common.DynamicForm)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.codeeditor/index.html">动态代码编辑器字段 (Common.DynamicForm.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.datepicker/index.html">动态日期选择器字段 (Common.DynamicForm.DatePicker)</a>
 </li>
 
                   
@@ -643,6 +667,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_5">自定义模块的描绘器</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -712,6 +742,10 @@ areaManager.GetArea(&quot;header_menubar&quot;).DefaultWidgets.Add(&quot;example
 <p>这里的<code>CacheTime</code>表示该模块的描画结果会缓存15秒，<code>CacheBy</code>表示缓存的隔离策略。<br/>
 缓存策略请参考<a href="../cache">缓存处理</a>，这里缓存会按当前的语言和时区来隔离。<br/>
 有多个缓存策略时可以用逗号分隔，为了兼容设备专用模板，默认会自动添加"Device"策略。<br/></p>
+<h3 id="_5">自定义模块的描绘器</h3>
+<p>描绘模板模块的逻辑可以通过继承"ITemplateWidgetRenderer"并注册到容器改变，<br/>
+默认的描绘器实现在<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb/ZKWeb/Templating/DynamicContents/TemplateWidgetRenderer.cs">这个文件中</a><br/>
+通过修改描绘器的逻辑可以实现更多的功能，例如描画模块时指定边框或者css规则</p>
             
 
           </div> <!--/span-->

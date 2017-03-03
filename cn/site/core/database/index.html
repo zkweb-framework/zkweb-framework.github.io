@@ -398,7 +398,31 @@
                   
                       
 <li >
-    <a href="../../plugin/common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+    <a href="../../plugin/common.codeeditor/index.html">代码编辑器 (Common.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.datepicker/index.html">日期选择器 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform/index.html">动态表单 (Common.DynamicForm)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.codeeditor/index.html">动态代码编辑器字段 (Common.DynamicForm.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.datepicker/index.html">动态日期选择器字段 (Common.DynamicForm.DatePicker)</a>
 </li>
 
                   
@@ -667,6 +691,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_9">默认插件集的兼容性</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -685,7 +715,7 @@
               <p>ZKWeb支持多ORM和多数据库。<br/>
 支持的ORM有NHibernate, EFCore, Dapper, NHibernate。<br/>
 支持的数据库有MSSQL, MySQL, SQLite, PostgreSQL, InMemory, MongoDB。<br/>
-所有ORM都提供了统一的接口，但因为数据结构差异很大，除非数据结构很简单，否则难以实现同一份代码兼容多个ORM。</p>
+ORM提供了统一的接口，但因为支持的功能有差异同一份代码兼容多个ORM比较困难，最底部可以看到当前默认插件集的兼容情况。<br/></p>
 <h3 id="_1">添加数据实体</h3>
 <p>添加<code>src\Domain\Entities\ExampleTable.cs</code>，内容如下</p>
 <pre><code class="csharp">[ExportMany]
@@ -708,7 +738,7 @@ ZKWeb支持定义一对多(Reference, HasMany)，多对多(ManyToMany)等关系�
 <p>NHibernate支持自动更新数据表结构，直接修改代码并刷新浏览器即可。<br/>
 EFCore支持自动更新数据表结构，也是修改后刷新浏览器即可，但注意重命名字段有可能导致数据丢失。<br/>
 MongoDB不需要更新数据表结构，也是修改后刷新浏览器即可。<br/>
-Dapper不支持自动更新数据表结构，需要手动同时修改数据库，也可以借助EFCore进行迁移。<br/></p>
+Dapper不支持自动更新数据表结构，需要手动同时修改数据库，也可以借助NHibernate或者EFCore进行迁移。<br/></p>
 <p>在ExampleTable中添加以下成员<br/></p>
 <pre><code class="csharp">public virtual bool Deleted { get; set; }
 </code></pre>
@@ -853,6 +883,14 @@ public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
 <li>EFCore目前还不支持懒加载，嵌入关联表时需要引入EF依赖并使用Include函数</li>
 <li>Asp.Net和Owin上使用Microsoft.Data.Sqlite需要手动进<code>bin\x86</code>文件夹复制dll到<code>bin</code>下，这是因为微软的Sqlite包不支持旧的项目</li>
 </ul>
+<h3 id="_9">默认插件集的兼容性</h3>
+<ul>
+<li>Common.Base: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>Common.Captcha: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>Common.Admin: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>其他: 仅NHibernate</li>
+</ul>
+<p>EFCore因为功能上的问题目前不兼容任何官方的插件，但是可以开发自己的插件集</p>
             
 
           </div> <!--/span-->

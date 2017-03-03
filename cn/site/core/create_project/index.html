@@ -398,7 +398,31 @@
                   
                       
 <li >
-    <a href="../../plugin/common.datepicker/index.html">日期选择控件 (Common.Datepicker)</a>
+    <a href="../../plugin/common.codeeditor/index.html">代码编辑器 (Common.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.datepicker/index.html">日期选择器 (Common.Datepicker)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform/index.html">动态表单 (Common.DynamicForm)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.codeeditor/index.html">动态代码编辑器字段 (Common.DynamicForm.CodeEditor)</a>
+</li>
+
+                  
+                      
+<li >
+    <a href="../../plugin/common.dynamicform.datepicker/index.html">动态日期选择器字段 (Common.DynamicForm.DatePicker)</a>
 </li>
 
                   
@@ -658,13 +682,18 @@
 如果使用的是SQLite以外的数据库，请先创建好一个空的数据库，并点击<code>Test</code>测试数据库连接。<br/>
 如果需要支持.Net Core请选择Asp.Net Core和NHibernate以外的ORM。<br/>
 <img alt="项目创建器" src="../../img/project_creator.jpg" /></p>
-<p>创建项目时，如果需要下图的效果，需要选择"默认的插件集"。<br/>
-点击"Use Default Plugins"右边的"Browse"，然后选中"ZKWeb.Plugins\src\ZKWeb.Plugins\plugin.collection.json"即可。<br/>
-注意默认的插件集目前只支持NHibernate，因为EF Core还没有多对多和懒加载的功能，将在以后版本支持。</p>
+<p>创建项目时，如果需要下图的效果，需要选择"默认的插件集"<br/>
+点击"Use Default Plugins"右边的"Browse"，然后根据使用的ORM选中以下的文件<br/>
+目前NHibernate支持的插件最多，其他的仅支持最基本的几个插件<br/></p>
+<ul>
+<li>NHibernate: "ZKWeb.Plugins\src\ZKWeb.Plugins\plugin.collection.json"</li>
+<li>EFCore: "ZKWeb.Plugins\src\ZKWeb.Plugins\plugin.collection.ef.json"</li>
+<li>Dapper: "ZKWeb.Plugins\src\ZKWeb.Plugins\plugin.collection.dapper.json"</li>
+<li>MongoDB: "ZKWeb.Plugins\src\ZKWeb.Plugins\plugin.collection.mongodb.json"</li>
+</ul>
 <p>创建好项目以后，使用Visual Studio打开并运行。<br/>
 第一次打开需要编译所有插件，可能会耗时几分钟，请耐心等待。<br/>
 <img alt="首次运行" src="../../img/first_running.jpg" /></p>
-<p>部分ORM或数据库支持不完善，如果碰到运行错误请先查看<a href="../database">数据库</a>中的<strong>已知问题</strong>。</p>
 <h3 id="faq">FAQ</h3>
 <h4>我不想使用默认的插件集，怎么办？</h4>
 
