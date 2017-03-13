@@ -70,6 +70,7 @@ pages:
   - 动态日期选择器字段 (Common.DynamicForm.DatePicker): plugin/common.dynamicform.datepicker.md
   - 支付 (Finance.Payment): plugin/finance.payment.md
   - 支付宝 (Finance.Payment.Alipay): plugin/finance.payment.alipay.md
+  - 支付宝移动端 (Finance.Payment.AlipayMobile): plugin/finance.payment.alipaymobile.md
   - 现金支付 (Finance.Payment.Cash): plugin/finance.payment.cash.md
   - 货到付款 (Finance.Payment.OnArrive): plugin/finance.payment.onarrive.md
   - Ping++(Finance.Payment.Pingpp): plugin/finance.payment.pingpp.md

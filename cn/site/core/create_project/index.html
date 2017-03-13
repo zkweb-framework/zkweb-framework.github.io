@@ -440,6 +440,12 @@
                   
                       
 <li >
+    <a href="../../plugin/finance.payment.alipaymobile/index.html">支付宝移动端 (Finance.Payment.AlipayMobile)</a>
+</li>
+
+                  
+                      
+<li >
     <a href="../../plugin/finance.payment.cash/index.html">现金支付 (Finance.Payment.Cash)</a>
 </li>
 
@@ -666,10 +672,10 @@
               
               <p>在创建项目前，请准备好以下的工具</p>
 <ul>
-<li>Visual Studio 2015 update 3</li>
-<li>如果你需要运行在Asp.Net Core上，请安装<ul>
-<li>DotNetCore 1.0.0 Runtime</li>
-<li>DotNetCore 1.0.0 VS2015 Tooling Preview 2</li>
+<li>Visual Studio 2017<ul>
+<li>在安装时请勾选Asp.Net Core支持</li>
+<li>选择Asp.net Core项目必须VS2017</li>
+<li>选择Asp.Net或Owin项目也可以使用VS2015</li>
 </ul>
 </li>
 <li>下载ZKWeb和ZKWeb.Plugins项目<ul>
@@ -704,6 +710,13 @@
 
 <p>后台地址是<code>/admin</code>，首次运行网站时应该先注册一个用户并用这个用户登录到后台。<br/>
 网站创建后第一个登陆到后台的用户会成为超级管理员。</p>
+<h4>选择Dapper创建项目后显示找不到表，怎么解决？</h4>
+
+<p>Dapper不支持自动创建表，你需要手动创建表或者先使用其他ORM例如NHibernate创建表。</p>
+<h4>VS2017提示ZKWeb.System.Drawing和System.Drawing冲突怎么办？</h4>
+
+<p>使用旧版本创建的Asp.Net Core项目升级到VS2017时会出现这个错误, 解决办法可以右键点击项目编辑csproj<br/>
+然后在<code>PropertyGroup</code>下添加<code>&lt;DisableImplicitFrameworkReferences&gt;true&lt;/DisableImplicitFrameworkReferences&gt;</code><br/></p>
             
 
           </div> <!--/span-->

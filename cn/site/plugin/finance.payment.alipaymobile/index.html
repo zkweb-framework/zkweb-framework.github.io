@@ -4,11 +4,11 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>商品收藏 (Shopping.ProductBookmark) - ZKWeb框架文档</title>
+  <title>支付宝移动端 (Finance.Payment.AlipayMobile) - ZKWeb框架文档</title>
   <link href="../../img/favicon.ico" rel="icon" type="image/x-icon">
   <link rel="canonical" href="None" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="商品收藏 (Shopping.ProductBookmark), 商品收藏 (Shopping.ProductBookmark)">
+  <meta name="description" content="支付宝移动端 (Finance.Payment.AlipayMobile), 支付宝移动端 (Finance.Payment.AlipayMobile)">
   <meta name="author" content="Tom Christie">
 
   <!-- Le styles -->
@@ -24,10 +24,10 @@
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="repo-link btn btn-primary btn-small" href="https://github.com/zkweb-framework" target="_blank">GitHub</a>
-          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../shopping.productrating/index.html">
+          <a class="repo-link btn btn-inverse btn-small " rel="prev" href="../finance.payment.cash/index.html">
             下一页 <i class="icon-arrow-right icon-white"></i>
           </a>
-          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../shopping.aftersales/index.html">
+          <a class="repo-link btn btn-inverse btn-small " rel="next" href="../finance.payment.alipay/index.html">
             <i class="icon-arrow-left icon-white"></i> 上一页
           </a>
           <a id="search_modal_show" class="repo-link btn btn-inverse btn-small" href="#mkdocs_search_modal" data-toggle="modal" data-target="#mkdocs_search_modal"><i class="icon-search icon-white"></i> 搜索</a>
@@ -439,8 +439,8 @@
 
                   
                       
-<li >
-    <a href="../finance.payment.alipaymobile/index.html">支付宝移动端 (Finance.Payment.AlipayMobile)</a>
+<li class="active">
+    <a href="index.html">支付宝移动端 (Finance.Payment.AlipayMobile)</a>
 </li>
 
                   
@@ -523,8 +523,8 @@
 
                   
                       
-<li class="active">
-    <a href="index.html">商品收藏 (Shopping.ProductBookmark)</a>
+<li >
+    <a href="../shopping.productbookmark/index.html">商品收藏 (Shopping.ProductBookmark)</a>
 </li>
 
                   
@@ -650,13 +650,19 @@
 
                 
                   <li class="main">
-                    <a href="#_1">如何收藏商品</a>
+                    <a href="#_1">如何设置支付宝支付接口</a>
                   </li>
 
                   
                 
                   <li class="main">
-                    <a href="#_2">如何管理已收藏的商品</a>
+                    <a href="#_2">扫码支付效果</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
+                    <a href="#faq">FAQ</a>
                   </li>
 
                   
@@ -674,15 +680,44 @@
           <div id="main-content" class="span9">
             
               
-                <h1>商品收藏 (Shopping.ProductBookmark)</h1><br/>
+                <h1>支付宝移动端 (Finance.Payment.AlipayMobile)</h1><br/>
               
-              <p>商品收藏插件提供了收藏和管理收藏商品的功能</p>
-<h3 id="_1">如何收藏商品</h3>
-<p>启用此插件后，在商品主图的下面会出现"收藏本商品"的按钮，点击即可收藏商品
-<img alt="如何收藏商品" src="../../img/product_bookmark.jpg" /></p>
-<h3 id="_2">如何管理已收藏的商品</h3>
-<p>用户中心可以查看或删除已收藏的商品
-<img alt="如何管理已收藏的商品" src="../../img/product_bookmark_list.jpg" /></p>
+              <p>支付宝移动端插件提供了使用支付宝手机版付款的功能，基于支付插件的标准接口实现。<br/>
+这个插件具体支持了以下类型的支付宝支付</p>
+<ul>
+<li>扫码支付</li>
+</ul>
+<h3 id="_1">如何设置支付宝支付接口</h3>
+<ul>
+<li>设置商家Id和收款商家Id<ul>
+<li>一般都以2088开始, 而且这两个Id一般都会一样</li>
+</ul>
+</li>
+<li>设置AppID<ul>
+<li>一般都以日期开始, 例如20170306</li>
+</ul>
+</li>
+<li>设置RSA私钥<ul>
+<li>请使用支付宝提供的键对生成器或者openssl生成RSA键对</li>
+<li>地址: <a href="https://doc.open.alipay.com/docs/doc.htm?spm=a219a.7386797.0.0.KNNc1L&amp;treeId=291&amp;articleId=106097&amp;docType=1">打开这个链接</a></li>
+<li>生成时请选"非JAVA适用", 然后把私钥填到支付接口的设置中</li>
+</ul>
+</li>
+<li>设置RSA公钥<ul>
+<li>把上面生成的公钥设置到支付宝中</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">扫码支付效果</h3>
+<p><img alt="扫码支付效果" src="../../img/alipay_qrcode_pay.jpg" /></p>
+<h3 id="faq">FAQ</h3>
+<ul>
+<li>扫码支付是如何确认支付成功的<ul>
+<li>扫码支付会在扫码页面定期查询支付结果, 并且接受异步通知</li>
+<li>即使买家扫完码立刻关闭页面也可以通过异步通知使得交易支付成功</li>
+</ul>
+</li>
+</ul>
             
 
           </div> <!--/span-->
