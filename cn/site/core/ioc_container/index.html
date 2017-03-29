@@ -746,6 +746,24 @@ void Example() {
 }
 </code></pre>
 
+<p>也可以使用<code>InjectAttribute</code>手动指定应该选择的构造函数</p>
+<pre><code class="csharp">public interface IXmlWriter { }
+public interface IAttributeProvider { }
+
+public class XmlBuilder {
+    public XmlBuilder() { }
+    public XmlBuilder(IXmlWriter writer, IEnumerable&lt;string&gt; providers) { }
+    // IoC容器会使用标有[Inject]的构造函数
+    [Inject]
+    public XmlBuilder(IXmlWriter writer, IEnumerable&lt;IAttributeProvider&gt; providers) { }
+}
+
+void Example() {
+    // 创建XmlBuilder的实例，自动注入依赖项
+    var xmlBuilder = Application.Ioc.Resolve&lt;XmlBuilder&gt;();
+}
+</code></pre>
+
 <h3 id="_3">在插件中注册组件</h3>
 <p>插件可以标记<code>[ExportMany]</code>属性注册组件，同时标记<code>[SingletonReuse]</code>属性可以注册成单例。<br/>
 请注意标记该属性的类需要是公开类，私有类不会被扫描。<br/>

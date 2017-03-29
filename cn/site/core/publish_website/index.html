@@ -673,6 +673,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_3">如何自动编译 + 发布</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -714,6 +720,23 @@ Owin请修改Console项目并把<code>项目名.Console.exe</code>复制到发�
 </ul>
 </li>
 </ul>
+<h3 id="_3">如何自动编译 + 发布</h3>
+<p>可以自行编写批处理实现自动编译主项目 + 所有插件项目 + 发布，以我的实例项目为例:</p>
+<pre><code>@echo off
+
+cd src\ZKWeb.Demo.AspNetCore
+dotnet build -c Release -f net461
+cd ..\..
+
+cd src\ZKWeb.Demo.Console
+dotnet run -c Release -f net461
+cd ..\..
+
+..\ZKWeb\Tools\WebsitePublisher.Cmd.exe -r src\ZKWeb.Demo.AspNetCore -n &quot;zkweb&quot; -o &quot;..\..\publish&quot;
+pause
+</code></pre>
+
+<p>这里运行Console项目用于编译所有插件到最新版本并且运行一次测试，然后再用命令行的发布工具<code>WebsitePublisher.Cmd.exe</code>发布网站即可</p>
             
 
           </div> <!--/span-->
