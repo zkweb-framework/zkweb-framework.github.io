@@ -1,17 +1,18 @@
 ZKWeb支持多时区功能。<br/>
-时区依赖于当前系统中的时区列表，而不同平台上的时区列表有不同的名称，跨平台时需要注意这点。<br/>
 
 ### 设置当前线程的时区
 
 设置指定时区
 ``` csharp
-LocaleUtils.SetThreadTimezone("China Standard Time");
+LocaleUtils.SetThreadTimezone("Asia/Shanghai");
 ```
 
 自动设置时区（Cookies => 默认时区）
 ``` csharp
-LocaleUtils.SetThreadTimezoneAutomatic("GMT Standard Time");
+LocaleUtils.SetThreadTimezoneAutomatic("America/New_York");
 ```
+
+更多支持的时区可以[查看源代码](https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb/ZKWebStandard/Utils/LocaleUtils.cs)
 
 ### 根据时区转换时间
 
