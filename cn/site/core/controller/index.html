@@ -674,6 +674,12 @@
                   
                 
                   <li class="main">
+                    <a href="#_4">全局处理传入参数</a>
+                  </li>
+
+                  
+                
+                  <li class="main">
                     <a href="#action">重载Action</a>
                   </li>
 
@@ -750,7 +756,7 @@ public class ExampleController : IController {
 如果需要返回其他类型的结果，可以自己编写继承<code>IActionResult</code>的类。</br></p>
 <ul>
 <li>返回文件<ul>
-<li><code>FileResult(string path, DateTime? ifModifiedSince = null)</code></li>
+<li><code>FileEntryResult(IFileEntry fileEntry, DateTime? ifModifiedSince = null)</code></li>
 </ul>
 </li>
 <li>返回图片<ul>
@@ -780,11 +786,17 @@ public class ExampleController : IController {
 </ul>
 <h3 id="_3">获取传入参数</h3>
 <p>如果action函数带有参数，会自动按参数的名称进行获取。<br/>
-需要手动获取时可以使用<code>HttpManager.CurrentContext.Request.Get&lt;T&gt;</code>。</p>
+需要手动获取时可以使用<code>HttpManager.CurrentContext.Request.Get&lt;T&gt;</code><br/>
+下面两种写法可以获取到一样的参数<br/></p>
 <pre><code class="csharp">[ExportMany]
 public class PostExampleController : IController {
-    [Action(&quot;example/post&quot;, HttpMethods.POST)]
-    public IActionResult Post() {
+    [Action(&quot;example/post_a&quot;, HttpMethods.POST)]
+    public IActionResult PostA(string paramInUrl, string paramInBody, string name, int age) {
+        return new JsonResult(new { name, age });
+    }
+
+    [Action(&quot;example/post_b&quot;, HttpMethods.POST)]
+    public IActionResult PostB() {
         var request = HttpManager.CurrentContext.Request;
         var paramInUrl = request.GetQueryValue(&quot;paramInUrl&quot;);
         var paramInBody = request.GetFormValue(&quot;paramInBody&quot;);
@@ -796,6 +808,10 @@ public class PostExampleController : IController {
 </code></pre>
 
 <p><img alt="获取传入参数的示例" src="../../img/post_controller_example.jpg" /></p>
+<h3 id="_4">全局处理传入参数</h3>
+<p>上面<code>PostA</code>函数中的<code>name</code>和<code>age</code>参数会自动从Http上下文获取，<br/>
+需要定义不同的获取逻辑可以注册并替换<code>IActionParameterProvider</code><br/>
+ZKWeb MVVM Demo中使用这个接口实现了自动的参数验证，可以查看<a href="https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/src/ZKWeb.MVVMPlugins/MVVM.Common.Base/src/Components/ActionParameterProviders/ValidatedActionParameterProvider.cs">这里的源代码</a></p>
 <h3 id="action">重载Action</h3>
 <p>ZKWeb支持替换现有的Action，例如添加一个插件把原有的页面处理全部重写。<br/>
 替换Action时需要指定Action属性的OverrideExists参数。<br/>
