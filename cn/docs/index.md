@@ -73,7 +73,7 @@ ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
 
 ### DEMO
 
-地址: <a href="http://www.zkwebsite.com" target="_blank">http://www.zkwebsite.com</a><br/>
+地址: <a href="http://www.zkweb.org" target="_blank">http://www.zkweb.org</a><br/>
 用户名: demo<br/>
 密码: 123456<br/>
 
