@@ -18,21 +18,21 @@
     <HtmlHelpName>ZKWebReferences</HtmlHelpName>
     <Language>zh-CHS</Language>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
-    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
     <IndentHtml>True</IndentHtml>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
-    <MaximumGroupParts>2</MaximumGroupParts>
+    <MaximumGroupParts>99</MaximumGroupParts>
     <NamespaceGrouping>True</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>MemberName</NamingMethod>
+    <NamingMethod>Guid</NamingMethod>
     <HelpTitle>ZKWeb索引</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <WebsiteSdkLinkType>Msdn</WebsiteSdkLinkType>
@@ -41,9 +41,10 @@
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWeb.dll" />
-<DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWeb.xml" />
-<DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.dll" />
-<DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.xml" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWeb.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.xml" />
+    </DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
   </PropertyGroup>

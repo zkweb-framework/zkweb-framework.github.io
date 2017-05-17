@@ -86,7 +86,7 @@ ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
 
 最终更新: 2017-05-17<br/>
 <a href="../references/zkweb/ZKWebReferences.chm">ZKWeb索引文档</a></br>
-<!--<a href="../references/zkweb.plugins/index.html">ZKWeb.Plugins索引文档</a>-->
+<a href="../references/zkweb.plugins/ZKWebPluginsReferences.chm">ZKWeb.Plugins索引文档</a>
 
 ### 性能数据
 

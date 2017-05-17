@@ -20,19 +20,19 @@
     <SaveComponentCacheCapacity>9999</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
-    <IndentHtml>False</IndentHtml>
+    <IndentHtml>True</IndentHtml>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
-    <MaximumGroupParts>2</MaximumGroupParts>
-    <NamespaceGrouping>False</NamespaceGrouping>
+    <MaximumGroupParts>99</MaximumGroupParts>
+    <NamespaceGrouping>True</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>False</Preliminary>
-    <NamingMethod>MemberName</NamingMethod>
+    <NamingMethod>Guid</NamingMethod>
     <HelpTitle>ZKWeb.Plugins索引</HelpTitle>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <WebsiteSdkLinkType>Msdn</WebsiteSdkLinkType>
@@ -41,7 +41,8 @@
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.dll" />
-<DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.xml" /></DocumentationSources>
+      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.xml" />
+    </DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
   </PropertyGroup>
