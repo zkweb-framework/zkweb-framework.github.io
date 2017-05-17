@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Generate" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- Sandcastle Tools MSBuild Tasks.  https://GitHub.com/EWSoftware/SHFB -->
+  <UsingTask TaskName="Microsoft.Ddue.Tools.MSBuild.MRefBuilder" AssemblyFile="E:\Program Files\EWSoftware\Sandcastle Help File Builder\\MRefBuilder.exe" />
+  <UsingTask TaskName="Microsoft.Ddue.Tools.MSBuild.XslTransform" AssemblyFile="E:\Program Files\EWSoftware\Sandcastle Help File Builder\\XslTransform.exe" />
+  <!-- Task properties -->
+  <PropertyGroup>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AddXamlSyntaxData>
+    </AddXamlSyntaxData>
+    <WorkingFolder>C:\ProgramData\Git\zkweb-framework.github.io\cn\references\zkweb.plugins\Working\</WorkingFolder>
+    <ReferencePath Condition=" '$(ReferencePath)' == '' ">
+    </ReferencePath>
+    <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+    <UseTargetPlatformAsNuGetTargetMoniker>false</UseTargetPlatformAsNuGetTargetMoniker>
+  </PropertyGroup>
+  <!-- The common targets require OutputPath to be valid -->
+  <PropertyGroup>
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <!-- Import the common targets -->
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <!-- This defines the dependencies for the Generate target -->
+  <PropertyGroup>
+    <GenerateDependsOn>
+			ResolveReferences;
+			BeforeGenerateRefInfo;
+			GenerateRefInfo;
+			AfterGenerateRefInfo
+		</GenerateDependsOn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CsQuery">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\CsQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="DotLiquid">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\DotLiquid.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReflection">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\FastReflection.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizer">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\HtmlSanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XPath.XDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWeb">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWeb.System.Drawing">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWebStandard">
+      <HintPath>C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWebStandard.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Assembly Include="C:\ProgramData\Git\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\netstandard1.6\ZKWeb.Plugins.dll" />
+  </ItemGroup>
+  <Target Name="Generate" DependsOnTargets="$(GenerateDependsOn)" />
+  <!-- The Generate Ref Info target -->
+  <Target Name="GenerateRefInfo">
+    <!-- Run MRefBuilder.  Reference build items are added to this template by the build process.  The
+				 ResolveReferences dependency target will resolve them to absolute paths that can be passed to
+				 MRefBuilder using the /dep command line option.  Assembly build items are added by the build
+				 process to define the assemblies to reflect. -->
+    <Microsoft.Ddue.Tools.MSBuild.MRefBuilder WorkingFolder="$(WorkingFolder)" ConfigurationFile="MRefBuilder.config" ReflectionFilename="reflection.org" Assemblies="@(Assembly)" References="@(ReferencePath)" />
+    <!-- Merge duplicate topics (if any) and add XAML syntax data if needed -->
+    <Copy SourceFiles="reflection.org" DestinationFiles="reflection.all" />
+    <Microsoft.Ddue.Tools.MSBuild.XslTransform WorkingFolder="$(WorkingFolder)" Transformations="~\ProductionTransforms\MergeDuplicates.xsl$(AddXamlSyntaxData)" InputFile="reflection.all" OutputFile="reflection.org" />
+  </Target>
+  <!-- The following targets may be overridden or replaced to perform additional processing. -->
+  <Target Name="BeforeGenerateRefInfo" />
+  <Target Name="AfterGenerateRefInfo" />
+</Project>

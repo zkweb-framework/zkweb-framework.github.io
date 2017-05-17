@@ -1,4 +1,4 @@
-<small>最终更新: 2017-05-05</small>
+<small>最终更新: 2017-05-17</small>
 
 ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
 实现了独自的Mvc系统，同时提供动态插件和全自动更新数据库结构等功能。<br/>
@@ -84,9 +84,9 @@ ZKWeb是一个着重快速开发和模块开发的网站框架。<br/>
 
 ### 索引文档
 
-最终更新: 2016-10-01<br/>
-<a href="../references/zkweb/index.html" target="_blank">ZKWeb索引文档</a></br>
-<a href="../references/zkweb.plugins/index.html" target="_blank">ZKWeb.Plugins索引文档</a>
+最终更新: 2017-05-17<br/>
+<a href="../references/zkweb/ZKWebReferences.chm">ZKWeb索引文档</a></br>
+<!--<a href="../references/zkweb.plugins/index.html">ZKWeb.Plugins索引文档</a>-->
 
 ### 性能数据
 

@@ -1,0 +1,92 @@
+﻿<html xmlns:msxsl="urn:schemas-microsoft-com:xslt" xmlns:ddue="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:MSHelp="http://msdn.microsoft.com/mshelp">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <link rel="shortcut icon" href="../icons/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding-zh-CHS.css" />
+    <script type="text/javascript" src="../scripts/branding.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>PaymentTransactionManager Methods</title>
+    <meta name="Language" content="zh-chs" />
+    <meta name="System.Keywords" content="PaymentTransactionManager class, methods" />
+    <meta name="Microsoft.Help.Id" content="Methods.T:ZKWeb.Plugins.Finance.Payment.src.Domain.Services.PaymentTransactionManager" />
+    <meta name="Microsoft.Help.ContentType" content="Reference" />
+    <meta name="BrandingAware" content="true" />
+    <xml>
+      <MSHelp:Attr Name="AssetID" Value="Methods.T:ZKWeb.Plugins.Finance.Payment.src.Domain.Services.PaymentTransactionManager" />
+      <MSHelp:TOCTitle Title="PaymentTransactionManager Methods" />
+      <MSHelp:RLTitle Title="PaymentTransactionManager Methods (ZKWeb.Plugins.Finance.Payment.src.Domain.Services)" />
+      <MSHelp:Keyword Index="A" Term="Methods.T:ZKWeb.Plugins.Finance.Payment.src.Domain.Services.PaymentTransactionManager" />
+      <MSHelp:Keyword Index="A" Term="frlrfZKWebPluginsFinancePaymentsrcDomainServicesPaymentTransactionManagerPaymentTransactionManagerMethodsTopic" />
+      <MSHelp:Keyword Index="K" Term="PaymentTransactionManager class, methods" />
+      <MSHelp:Attr Name="DevLang" Value="CSharp" />
+      <MSHelp:Attr Name="DevLang" Value="VB" />
+      <MSHelp:Attr Name="DevLang" Value="C++" />
+      <MSHelp:Attr Name="DevLang" Value="FSharp" />
+      <MSHelp:Attr Name="Locale" Value="zh-chs" />
+      <MSHelp:Attr Name="TopicType" Value="kbSyntax" />
+      <MSHelp:Attr Name="TopicType" Value="apiref" />
+      <MSHelp:Attr Name="AssemblyVersion" Value="1.0.0" />
+    </xml>
+    <meta name="container" content="ZKWeb.Plugins.Finance.Payment.src.Domain.Services" />
+    <meta name="file" content="Methods_T_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager" />
+    <meta name="guid" content="Methods_T_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager" />
+    <link type="text/css" rel="stylesheet" href="ms-help://Hx/HxRuntime/HxLink.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/branding-Help1.css" />
+  </head>
+  <body onload="OnLoad('cs')">
+    <input type="hidden" id="userDataCache" class="userDataStyle" />
+    <div class="pageHeader" id="PageHeader">ZKWeb.Plugins索引</div>
+    <div class="pageBody">
+      <div class="topicContent" id="TopicContent">
+        <table class="titleTable">
+          <tr>
+            <td class="titleColumn">
+              <h1>PaymentTransactionManager Methods</h1>
+            </td>
+          </tr>
+        </table>
+        <span class="introStyle"></span> <p>The <a href="T_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager.htm">PaymentTransactionManager</a> type exposes the following members.</p><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID0RB')" onkeypress="SectionExpandCollapse_CheckKey('ID0RB', event)" tabindex="0"><img id="ID0RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID0RBSection" class="collapsibleSection"><table class="members" id="methodList"><tr><th class="iconColumn">
+								 
+							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_AddDetailRecord.htm">AddDetailRecord</a></td><td><div class="summary">
+            添加交易明细记录
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_CreateMergedTransaction.htm">CreateMergedTransaction</a></td><td><div class="summary">
+            创建合并交易，合并金额和重新计算手续费
+            要求所有交易可支付，并且所有交易的货币，支付接口，收款人，付款人等一致
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_CreateTransaction.htm">CreateTransaction</a></td><td><div class="summary">
+            创建交易
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_EnsureParentTransactionAborted.htm">EnsureParentTransactionAborted</a></td><td><div class="summary">
+            确保终止关联了指定交易的交易
+            一般用于子交易有变化时终止合并交易
+            如果合并交易不存在或已终止，这个函数什么都不做
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_EnsureParentTransactionAbortedIfProcessNotFromParent.htm">EnsureParentTransactionAbortedIfProcessNotFromParent</a></td><td><div class="summary">
+            如果处理交易的来源不是合并交易，则确保合并交易中止
+            一般用于子交易单独支付后自动终止合并交易
+            如果处理交易的来源是合并交易，或合并交易不存在或已终止，这个函数什么都不做
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_GetDetailRecords.htm">GetDetailRecords</a></td><td><div class="summary">
+            获取指定交易的所有明细记录
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_GetMany.htm">GetMany</a></td><td><div class="summary">
+            根据交易类型和关联Id获取交易列表
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_GetPaymentUrl.htm">GetPaymentUrl</a></td><td><div class="summary">
+            获取支付Url，创建交易后可以跳转到这个Url进行支付
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_GetResultUrl.htm">GetResultUrl</a></td><td><div class="summary">
+            获取查看结果的Url，支付成功或失败后可以跳转到这个Url显示结果
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_NotifyAllGoodsShippedBackground.htm">NotifyAllGoodsShippedBackground</a></td><td><div class="summary">
+            通知支付平台已发货
+            仅在状态是担保交易已付款时通知，否则不做处理
+            通知会在后台进行，出错时会记录到日志
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_Process.htm">Process</a></td><td><div class="summary">
+            尝试把交易切换到指定的交易状态
+            失败时记录错误并抛出例外
+            </div></td></tr><tr data="protected;declared;notNetfw;"><td><img src="../icons/protmethod.gif" alt="Protected method" title="Protected method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_ProcessInternal.htm">ProcessInternal</a></td><td><div class="summary">
+            尝试把交易切换到指定的交易状态
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_SelectOneVisibleTransactionId.htm">SelectOneVisibleTransactionId</a></td><td><div class="summary">
+            获取一个指定用户可见的交易Id
+            返回的Id不固定，也可能返回Guid.Empty
+            </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager_SetLastError.htm">SetLastError</a></td><td><div class="summary">
+            设置交易最后发生的错误
+            </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID1RB')" onkeypress="SectionExpandCollapse_CheckKey('ID1RB', event)" tabindex="0"><img id="ID1RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID1RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="T_ZKWeb_Plugins_Finance_Payment_src_Domain_Services_PaymentTransactionManager.htm">PaymentTransactionManager Class</a></div><div class="seeAlsoStyle"><a href="N_ZKWeb_Plugins_Finance_Payment_src_Domain_Services.htm">ZKWeb.Plugins.Finance.Payment.src.Domain.Services Namespace</a></div></div></div>
+    </div>
+    <div id="pageFooter" class="pageFooter"> </div>
+  </body>
+</html>

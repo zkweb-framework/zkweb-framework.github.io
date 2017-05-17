@@ -13,20 +13,20 @@
     <RootNamespace>Documentation</RootNamespace>
     <Name>Documentation</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.5</FrameworkVersion>
+    <FrameworkVersion>.NET Framework 4.6.1</FrameworkVersion>
     <OutputPath>zkweb.plugins\</OutputPath>
-    <HtmlHelpName>ZKWeb.Plugins索引</HtmlHelpName>
+    <HtmlHelpName>ZKWebPluginsReferences</HtmlHelpName>
     <Language>zh-CHS</Language>
     <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
     <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
-    <HelpFileFormat>Website</HelpFileFormat>
-    <IndentHtml>False</IndentHtml>
+    <HelpFileFormat>HtmlHelp1</HelpFileFormat>
+    <IndentHtml>True</IndentHtml>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
-    <NamespaceGrouping>False</NamespaceGrouping>
+    <NamespaceGrouping>True</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
@@ -40,8 +40,8 @@
     <IncludeFavorites>False</IncludeFavorites>
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\..\ZKWeb.Plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.dll" />
-      <DocumentationSource sourceFile="..\..\..\ZKWeb.Plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\netstandard1.6\ZKWeb.Plugins.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\netstandard1.6\ZKWeb.Plugins.xml" />
     </DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
@@ -76,23 +76,110 @@
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AopSdk">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\AopSdk.dll</HintPath>
+    </Reference>
+    <Reference Include="CsQuery">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\CsQuery.dll</HintPath>
+    </Reference>
     <Reference Include="DotLiquid">
-      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb.Fork.DotLiquid\2.0.0\lib\NET45\DotLiquid.dll</HintPath>
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\DotLiquid.dll</HintPath>
+    </Reference>
+    <Reference Include="FastReflection">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\FastReflection.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizer">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\HtmlSanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Microsoft.CodeAnalysis.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeAnalysis.CSharp">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>C:\Users\admin\.nuget\packages\Newtonsoft.Json\9.0.1-beta1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>C:\Users\admin\.nuget\packages\NHibernate\4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NSubstitute">
-      <HintPath>C:\Users\admin\.nuget\packages\NSubstitute\1.10.0\lib\net40\NSubstitute.dll</HintPath>
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System.AppContext">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Annotations">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Common">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Data.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.FileVersionInfo">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Diagnostics.FileVersionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.StackTrace">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Diagnostics.StackTrace.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Metadata">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Thread">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Threading.Thread.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.ReaderWriter">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XmlDocument">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XmlDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XPath.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.XPath.XDocument">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
     <Reference Include="ZKWeb">
-      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET45\ZKWeb.dll</HintPath>
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="ZKWeb.System.Drawing">
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="ZKWebStandard">
-      <HintPath>C:\Users\admin\.nuget\packages\ZKWeb\1.1.0-final\lib\NET45\ZKWebStandard.dll</HintPath>
+      <HintPath>..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWebStandard.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>

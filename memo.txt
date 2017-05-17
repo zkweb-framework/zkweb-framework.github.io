@@ -9,4 +9,5 @@
 
 生成索引需要使用shfb
 	https://shfb.codeplex.com/
+	https://github.com/EWSoftware/SHFB
 	使用shfb打开cn\references\zkweb.shfbproj和zkweb.plugins.shfbproj并运行即可
