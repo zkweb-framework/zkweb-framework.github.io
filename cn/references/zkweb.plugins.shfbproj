@@ -17,16 +17,16 @@
     <OutputPath>zkweb.plugins\</OutputPath>
     <HtmlHelpName>ZKWebPluginsReferences</HtmlHelpName>
     <Language>zh-CHS</Language>
-    <SaveComponentCacheCapacity>100</SaveComponentCacheCapacity>
-    <BuildAssemblerVerbosity>OnlyWarningsAndErrors</BuildAssemblerVerbosity>
+    <SaveComponentCacheCapacity>9999</SaveComponentCacheCapacity>
+    <BuildAssemblerVerbosity>AllMessages</BuildAssemblerVerbosity>
     <HelpFileFormat>HtmlHelp1</HelpFileFormat>
-    <IndentHtml>True</IndentHtml>
+    <IndentHtml>False</IndentHtml>
     <KeepLogFile>False</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
     <HelpFileVersion>1.0.0.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
-    <NamespaceGrouping>True</NamespaceGrouping>
+    <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
     <SdkLinkTarget>Blank</SdkLinkTarget>
     <RootNamespaceContainer>False</RootNamespaceContainer>
@@ -40,9 +40,8 @@
     <IncludeFavorites>False</IncludeFavorites>
     <BinaryTOC>True</BinaryTOC>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\netstandard1.6\ZKWeb.Plugins.dll" />
-      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\netstandard1.6\ZKWeb.Plugins.xml" />
-    </DocumentationSources>
+      <DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.dll" />
+<DocumentationSource sourceFile="..\..\..\zkweb.plugins\src\ZKWeb.Plugins\bin\Debug\net461\ZKWeb.Plugins.xml" /></DocumentationSources>
     <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
   </PropertyGroup>
