@@ -44,8 +44,24 @@
       <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWeb.xml" />
       <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.dll" />
       <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb\bin\Release\net461\ZKWebStandard.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.AspNet\bin\Release\net461\ZKWeb.Hosting.AspNet.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.AspNet\bin\Release\net461\ZKWeb.Hosting.AspNet.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.AspNetCore\bin\Release\net461\ZKWeb.Hosting.AspNetCore.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.AspNetCore\bin\Release\net461\ZKWeb.Hosting.AspNetCore.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.Owin\bin\Release\net461\ZKWeb.Hosting.Owin.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.Hosting.Owin\bin\Release\net461\ZKWeb.Hosting.Owin.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.Dapper\bin\Release\net461\ZKWeb.ORM.Dapper.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.Dapper\bin\Release\net461\ZKWeb.ORM.Dapper.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.EFCore\bin\Release\net461\ZKWeb.ORM.EFCore.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.EFCore\bin\Release\net461\ZKWeb.ORM.EFCore.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.InMemory\bin\Release\net461\ZKWeb.ORM.InMemory.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.InMemory\bin\Release\net461\ZKWeb.ORM.InMemory.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.MongoDB\bin\Release\net461\ZKWeb.ORM.MongoDB.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.MongoDB\bin\Release\net461\ZKWeb.ORM.MongoDB.xml" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.NHibernate\bin\Release\net461\ZKWeb.ORM.NHibernate.dll" />
+      <DocumentationSource sourceFile="..\..\..\zkweb\ZKWeb\ZKWeb.ORM.NHibernate\bin\Release\net461\ZKWeb.ORM.NHibernate.xml" />
     </DocumentationSources>
-    <VisibleItems>Protected, ProtectedInternalAsProtected</VisibleItems>
+    <VisibleItems>Internals, Protected, ProtectedInternalAsProtected</VisibleItems>
     <ComponentConfigurations />
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
