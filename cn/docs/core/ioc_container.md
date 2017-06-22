@@ -88,3 +88,7 @@ void Example() {
 
 替换现有的组件可以手动调用`Application.Ioc.Unregister`再注册，<br/>
 也可以使用`[ExportMany]`属性中的`ClearExists`属性自动替换现有的实现
+
+### 提供自定义的注册属性
+
+如果你觉得`[ExportMany]`无法满足你的要求, 可以创建一个类继承`ExportAttributeBase`, 然后在里面编写你的注册逻辑

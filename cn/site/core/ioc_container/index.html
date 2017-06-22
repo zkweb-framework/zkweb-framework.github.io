@@ -679,6 +679,12 @@
 
                   
                 
+                  <li class="main">
+                    <a href="#_5">提供自定义的注册属性</a>
+                  </li>
+
+                  
+                
 
                   <div class="promo">
                     <hr/>
@@ -771,6 +777,8 @@ void Example() {
 <h3 id="_4">替换现有的组件</h3>
 <p>替换现有的组件可以手动调用<code>Application.Ioc.Unregister</code>再注册，<br/>
 也可以使用<code>[ExportMany]</code>属性中的<code>ClearExists</code>属性自动替换现有的实现</p>
+<h3 id="_5">提供自定义的注册属性</h3>
+<p>如果你觉得<code>[ExportMany]</code>无法满足你的要求, 可以创建一个类继承<code>ExportAttributeBase</code>, 然后在里面编写你的注册逻辑</p>
             
 
           </div> <!--/span-->

@@ -1,5 +1,5 @@
 ZKWeb支持多ORM和多数据库。<br/>
-支持的ORM有NHibernate, EFCore, Dapper, NHibernate。<br/>
+支持的ORM有NHibernate, EFCore, Dapper, MongoDB。<br/>
 支持的数据库有MSSQL, MySQL, SQLite, PostgreSQL, InMemory, MongoDB。<br/>
 ORM提供了统一的接口，但因为支持的功能有差异同一份代码兼容多个ORM比较困难，最底部可以看到当前默认插件集的兼容情况。<br/>
 
@@ -174,6 +174,26 @@ long affected = context.RawUpdate("exec some_update_sp @arg", new { arg = 1 });
 var result = context.RawQuery<ExampleTable>("exec some_query_sp @arg", new { arg = 1 }).ToList();
 ```
 
+### 局部指定表名
+
+使用`builder.TableName`可以指定当前实体的表名, 代码如下<br/>
+
+``` csharp
+[ExportMany]
+public class ExampleTable : IEntity<long>, IEntityMappingProvider<ExampleTable> {
+	public virtual long Id { get; set; }
+	public virtual string Name { get; set; }
+	public virtual DateTime CreateTime { get; set; }
+
+	public virtual void Configure(IEntityMappingBuilder<ExampleTable> builder) {
+		builder.TableName("myExampleTable");
+		builder.Id(e => e.Id);
+		builder.Map(e => e.Name);
+		builder.Map(e => e.CreateTime);
+	}
+}
+```
+
 ### 全局处理表名
 
 ZKWeb允许全局处理表名，继承`IDatabaseInitializeHandler`并注册到容器即可。<br/>
@@ -184,6 +204,26 @@ ZKWeb允许全局处理表名，继承`IDatabaseInitializeHandler`并注册到�
 public class DatabaseInitializeHandler : IDatabaseInitializeHandler {
 	public void ConvertTableName(ref string tableName) {
 		tableName = "ZKWeb_" + tableName;
+	}
+}
+```
+
+全局处理表名和局部指定表名可以同时使用, 上面的例子中`Example`实体的表名会变为`ZKWeb_myExampleTable`
+
+### 禁用自动升级数据表
+
+部分情况下你可能想禁用NHibernate或者EFCore组件提供的数据库自动迁移功能, 禁用这项功能可以修改`App_Data\config.json`下的选项, 例如
+
+``` json
+{
+	"ORM": "EFCore",
+	"Database": "SQLite",
+	"ConnectionString": "Data Source={{App_Data}}/test.db;",
+	"PluginDirectories": [ "App_Data" ],
+	"Plugins": [],
+	"Extra": {
+		"ZKWeb.DisableEFCoreDatabaseAutoMigration": true,
+		"ZKWeb.DisableNHibernateDatabaseAutoMigration": true
 	}
 }
 ```

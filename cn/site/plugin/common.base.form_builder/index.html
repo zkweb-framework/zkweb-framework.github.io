@@ -846,7 +846,12 @@ public class ExampleForm : ModelFormBuilder { }
 </ul>
 </li>
 <li><code>FileUploaderFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)</code><ul>
-<li>文件上传控件</li>
+<li>文件上传控件, 要求字段是 IHttpPostedFile</li>
+<li>需要自己处理上传后的文件</li>
+</ul>
+</li>
+<li><code>FileUploaderAsUrlFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)</code><ul>
+<li>文件上传控件, 要求字段是 string, 会存放上传后的文件Url</li>
 </ul>
 </li>
 <li><code>HiddenFieldAttribute(string name)</code><ul>

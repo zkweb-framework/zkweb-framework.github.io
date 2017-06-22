@@ -128,7 +128,10 @@ public class ExampleForm : ModelFormBuilder { }
 - `RadioButtonsFieldAttribute(string name, Type sources)`
 	- 单选按钮组
 - `FileUploaderFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)`
-	- 文件上传控件
+	- 文件上传控件, 要求字段是 IHttpPostedFile
+	- 需要自己处理上传后的文件
+- `FileUploaderAsUrlFieldAttribute(string name, string extensions = null, int maxContentsLength = 0)`
+	- 文件上传控件, 要求字段是 string, 会存放上传后的文件Url
 - `HiddenFieldAttribute(string name)`
 	- 隐藏字段
 - `JsonFieldAttribute(string name, Type fieldType)`
