@@ -54,16 +54,20 @@ ZKWeb目前有两个Demo项目, 一个是多页面的商城系统, 另一个是�
 
 ### 项目和文档链接
 
-##### ZKWeb的项目地址:<br/>
-[https://github.com/zkweb-framework/ZKWeb](https://github.com/zkweb-framework/ZKWeb)<br/>
-这个项目中仅包含类库, 不包含启动网站的项目, 请参考[创建新项目](core/create_new_project).
+##### ZKWeb的项目首页:<br/>
+[http://www.zkweb.org](http://www.zkweb.org)<br/>
+包含了ZKWeb的项目介绍.
 
-##### 多页面商城系统的项目地址:<br/>
+##### ZKWeb的源代码:<br/>
+[https://github.com/zkweb-framework/ZKWeb](https://github.com/zkweb-framework/ZKWeb)<br/>
+这个项目仅包含类库, 如何创建一个ZKWeb项目并启动请参考[创建项目](core/create_project/index.html).
+
+##### 多页面商城系统的源代码:<br/>
 启动项目: [http://github.com/zkweb-framework/ZKWeb.Demo](http://github.com/zkweb-framework/ZKWeb.Demo)<br/>
 插件项目: [http://github.com/zkweb-framework/ZKWeb.Plugins](http://github.com/zkweb-framework/ZKWeb.Plugins)<br/>
-启动项目仅包含网站项目, 插件项目仅包含业务插件.
+启动项目仅用于启动网站, 插件项目包含业务代码, 您可以创建自己的项目然后引用插件项目.
 
-##### 单页面管理系统的项目地址:<br/>
+##### 单页面管理系统的源代码:<br/>
 [http://github.com/zkweb-framework/ZKWeb.MVVMDemo](http://github.com/zkweb-framework/ZKWeb.MVVMDemo)<br/>
 这个项目同时包含了网站项目和插件, 启动前需要使用NodeJS编译前端页面.
 
@@ -73,11 +77,11 @@ ZKWeb目前有两个Demo项目, 一个是多页面的商城系统, 另一个是�
 
 ##### ZKWeb 1.0的文档地址:<br/>
 [http://zkweb-framework.github.io/cn_v1.0/site/index.html](http://zkweb-framework.github.io/cn_v1.0/site/index.html)<br/>
-这是ZKWeb 1.x系列的文档.
+ZKWeb 1.0~1.9的文档.
 
 ##### 单页面管理系统的文档:<br/>
 [https://github.com/zkweb-framework/ZKWeb.MVVMDemo/tree/master/docs/cn](https://github.com/zkweb-framework/ZKWeb.MVVMDemo/tree/master/docs/cn)<br/>
-MVVMDemo的文档是分开编写的, 请参考Github上的文档内容.
+单页面管理系统(MVVMDemo)的文档不在这里, 请参考上面的地址.<br/>
 
 ##### ZKWeb的索引文档:<br/>
 TODO, 针对2.0的索引文档尚未生成.

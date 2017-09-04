@@ -21,3 +21,24 @@ markdown_extensions:
 
 pages:
   - ZKWeb是什么: index.md
+  - 创建项目: core/create_project.md
+  - 发布项目: core/publish_project.md
+  - 核心文档:
+    - 网站结构: core/website_struct.md
+    - 配置文件: core/website_config.md
+    - IoC容器: core/ioc_container.md
+    - 插件系统: core/plugin.md
+    - 控制器: core/controller.md
+    - 请求和错误处理: core/http_handlers.md
+    - 模板引擎: core/template_engine.md
+    - 动态内容: core/dynamic_contents.md
+    - 缓存处理: core/cache.md
+    - 文件储存: core/file_storage.md
+    - 数据库: core/database.md
+    - 多语言: core/multi_language.md
+    - 多时区: core/multi_timezone.md
+    - 单元测试: core/unit_test.md
+  - 插件文档:
+    - 基础插件(Common.Base): plugin/common.base.md
+    - 验证码(Common.Captcha): plugin/common.captcha.md
+    - 管理员(Common.Admin): plugin/common.admin.md
