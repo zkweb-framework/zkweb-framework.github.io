@@ -1,0 +1,23 @@
+site_name: ZKWeb 2.0 核心和插件文档
+repo_url: https://github.com/zkweb-framework
+copyright: Copyright © 2016~2017 303248153@github
+theme: 'material'
+theme_dir: 'docs_theme'
+use_directory_urls: false
+edit_uri: ''
+
+extra:
+  palette:
+    primary: 'blue grey'
+    accent: 'light blue'
+  logo: 'images/logo.png'
+  font: false
+
+extra_css:
+  - 'styles/MaterialIcons.css'
+
+markdown_extensions:
+  - codehilite
+
+pages:
+  - ZKWeb是什么: index.md
