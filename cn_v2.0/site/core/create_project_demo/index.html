@@ -681,6 +681,9 @@
 推荐选择 Asp.Net Core + NHibernate + SQLite,</p>
 <p>然后选择"使用默认插件", 使用和上图一样的路径,</p>
 <p>再选择输出文件夹后点击"创建项目"即可.</p>
+<p>注意如果您选择了Dapper,<br/>
+运行的时候会报找不到表的错误, 这是因为Dapper不支持自动建表.<br/>
+您可以使用其他ORM先建好数据库再让Dapper使用.<br/></p>
 <h3 id="_2">运行项目</h3>
 <p>打开项目运行后可以看到以下的界面:</p>
 <p><img alt="运行项目" src="../../images/core/create_project_demo_3.png" /></p>

@@ -264,9 +264,62 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        发布项目
+      </label>
+    
     <a href="index.html" title="发布项目" class="md-nav__link md-nav__link--active">
       发布项目
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">内容表格</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aspnetowin" title="发布Asp.Net或Owin项目的步骤" class="md-nav__link">
+    发布Asp.Net或Owin项目的步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspnet-core" title="发布Asp.Net Core项目的步骤" class="md-nav__link">
+    发布Asp.Net Core项目的步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="批处理发布网站" class="md-nav__link">
+    批处理发布网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="在Linux上发布网站" class="md-nav__link">
+    在Linux上发布网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="发布到Docker" class="md-nav__link">
+    发布到Docker
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -538,6 +591,48 @@
   
   
   
+    <label class="md-nav__title" for="toc">内容表格</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aspnetowin" title="发布Asp.Net或Owin项目的步骤" class="md-nav__link">
+    发布Asp.Net或Owin项目的步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aspnet-core" title="发布Asp.Net Core项目的步骤" class="md-nav__link">
+    发布Asp.Net Core项目的步骤
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="批处理发布网站" class="md-nav__link">
+    批处理发布网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" title="在Linux上发布网站" class="md-nav__link">
+    在Linux上发布网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" title="发布到Docker" class="md-nav__link">
+    发布到Docker
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -551,7 +646,96 @@
                 
                   <h1>发布项目</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>使用ZKWeb的项目通常会带有不同路径的插件, 发布时除了要发布网站文件还要同时复制插件.</p>
+<p>为了简化这个流程, ZKWeb提供了一个专门的发布工具.</p>
+<p><img alt="发布工具" src="../../images/core/publish_tool.png" /></p>
+<h3 id="aspnetowin">发布Asp.Net或Owin项目的步骤</h3>
+<p>首先使用Visual Studio打开项目, 切换配置到<strong>Release</strong>并编辑网站项目.</p>
+<p>然后运行一次网站以确保所有插件均已编译到最新版本.</p>
+<p>最后打开网站发布工具<br/>
+"ZKWeb\Tools\WebsitePublisher.Gui.Windows\ZKWeb.Toolkits.WebsitePublisher.Gui.exe"</p>
+<p>选择网站根目录和输出文件夹后, 点击"发布网站"即可.</p>
+<p>托管到IIS时使用默认的设置(4.0+集成)即可, 不需要做其他修改.</p>
+<h3 id="aspnet-core">发布Asp.Net Core项目的步骤</h3>
+<p>首先使用Visual Studio打开项目, 切换配置到<strong>Release</strong>并编辑网站项目.</p>
+<p>然后运行一次网站以确保所有插件均已编译到最新版本.</p>
+<p>再执行以下的命令发布网站程序本身, 您可能需要把"netcoreapp2.0"替换为"net461".</p>
+<div class="codehilite"><pre><span></span>dotnet publish -f netcoreapp2.0 -c Release -r win10-x64
+</pre></div>
+
+
+<p>最后打开网站发布工具<br/>
+"ZKWeb\Tools\WebsitePublisher.Gui.Windows\ZKWeb.Toolkits.WebsitePublisher.Gui.exe"</p>
+<p>选择网站根目录和输出文件夹后, 点击"发布网站"即可.</p>
+<p>发布出来的网站可以直接点击exe执行(自宿主), 也可以托管到IIS.</p>
+<p>托管到IIS需要在服务器安装"Windows Server Hosting", 请到官网<a href="https://www.microsoft.com/net/download/core#/runtime">下载安装</a>.</p>
+<h3 id="_1">批处理发布网站</h3>
+<p>如果您需要频繁的发布网站, 可以选择批处理发布减轻工作量.</p>
+<p>以"ZKWeb.Demo"为例:</p>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+<span class="k">echo</span> this script is for build and publish demo site
+<span class="k">echo</span> please ensure you have this directory layout
+<span class="k">echo</span> - zkweb
+<span class="k">echo</span>   - tools
+<span class="k">echo</span> - zkweb.demo
+<span class="k">echo</span>   - publish.bat
+<span class="k">echo</span>.
+
+<span class="k">echo</span> building project...
+<span class="k">cd</span> src\ZKWeb.Demo.AspNetCore
+dotnet restore
+dotnet build -c Release -f net461
+<span class="k">cd</span> ..\..
+
+<span class="k">echo</span> building plugins...
+<span class="k">cd</span> src\ZKWeb.Demo.Console
+dotnet restore
+dotnet run -c Release -f net461
+<span class="k">cd</span> ..\..
+
+<span class="k">echo</span> publishing website...
+..\ZKWeb\Tools\WebsitePublisher.Cmd.Windows\ZKWeb.Toolkits.WebsitePublisher.Cmd.exe -r src\ZKWeb.Demo.AspNetCore -n <span class="s2">&quot;zkweb.demo&quot;</span> -o <span class="s2">&quot;..\..\publish&quot;</span>
+<span class="k">pause</span>
+</pre></div>
+
+
+<p>以"ZKWeb.MVVMDemo"为例</p>
+<div class="codehilite"><pre><span></span><span class="p">@</span><span class="k">echo</span> off
+<span class="k">echo</span> this script is for build and publish mvvm demo site
+<span class="k">echo</span> please ensure you have this directory layout
+<span class="k">echo</span> - zkweb
+<span class="k">echo</span>   - tools
+<span class="k">echo</span> - zkweb.mvvmdemo
+<span class="k">echo</span>   - publish.bat
+<span class="k">echo</span>.
+
+<span class="k">echo</span> building project...
+<span class="k">cd</span> src\ZKWeb.MVVMDemo.AspNetCore
+dotnet restore
+dotnet build -c Release -f netcoreapp2.0
+dotnet publish -c Release -f netcoreapp2.0 -r win10-x64
+<span class="k">cd</span> ..\..
+
+<span class="k">echo</span> building plugins...
+<span class="k">cd</span> src\ZKWeb.MVVMDemo.Console
+dotnet restore
+dotnet run -c Release -f netcoreapp2.0
+<span class="k">cd</span> ..\..
+
+<span class="k">echo</span> publishing website...
+..\ZKWeb\Tools\WebsitePublisher.Cmd.Windows\ZKWeb.Toolkits.WebsitePublisher.Cmd.exe -f netcoreapp2.0 -x <span class="s2">&quot;.*node_modules.*&quot;</span> -r src\ZKWeb.MVVMDemo.AspNetCore -n <span class="s2">&quot;zkweb.mvvm&quot;</span> -o <span class="s2">&quot;..\..\publish&quot;</span>
+<span class="k">pause</span>
+</pre></div>
+
+
+<p>模仿上面的批处理编写bat脚本即可.</p>
+<h3 id="linux">在Linux上发布网站</h3>
+<p>目前只有"AspNet.Core"类型, 且使用了.Net Core的项目可以在Linux上发布.</p>
+<p>请参考"ZKWeb.MVVMDemo"的<a href="https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/publish_ubuntu.sh">publish_ubuntu.sh</a>.</p>
+<h3 id="docker">发布到Docker</h3>
+<p>发布到Docker需要在镜像内安装libgdiplus(用于ZKWeb.System.Drawing),<br/>
+其他和普通的Asp.Net Core网站一样.</p>
+<p>请参考"ZKWeb.MVVMDemo"的<a href="https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/Dockerfile">Dockerfile</a>.</p>
                 
                   
                 
