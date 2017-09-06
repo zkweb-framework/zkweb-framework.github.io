@@ -21,7 +21,10 @@ markdown_extensions:
 
 pages:
   - ZKWeb是什么: index.md
-  - 创建项目: core/create_project.md
+  - 创建项目:
+    - 创建空白项目: core/create_project_empty.md
+    - 创建多页面程序项目: core/create_project_demo.md
+    - 创建单页面程序项目: core/create_project_mvvmdemo.md
   - 发布项目: core/publish_project.md
   - 核心文档:
     - 网站结构: core/website_struct.md
