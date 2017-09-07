@@ -337,9 +337,83 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        插件系统
+      </label>
+    
     <a href="index.html" title="插件系统" class="md-nav__link md-nav__link--active">
       插件系统
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="插件的查找和加载" class="md-nav__link">
+    插件的查找和加载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="插件信息" class="md-nav__link">
+    插件信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="插件的目录结构" class="md-nav__link">
+    插件的目录结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="依赖的程序集" class="md-nav__link">
+    依赖的程序集
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="透过式文件系统" class="md-nav__link">
+    透过式文件系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="组件的注册顺序" class="md-nav__link">
+    组件的注册顺序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="在网站启动时执行操作" class="md-nav__link">
+    在网站启动时执行操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="调试插件" class="md-nav__link">
+    调试插件
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +618,69 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="插件的查找和加载" class="md-nav__link">
+    插件的查找和加载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="插件信息" class="md-nav__link">
+    插件信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="插件的目录结构" class="md-nav__link">
+    插件的目录结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="依赖的程序集" class="md-nav__link">
+    依赖的程序集
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="透过式文件系统" class="md-nav__link">
+    透过式文件系统
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="组件的注册顺序" class="md-nav__link">
+    组件的注册顺序
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="在网站启动时执行操作" class="md-nav__link">
+    在网站启动时执行操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="调试插件" class="md-nav__link">
+    调试插件
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +694,157 @@
                 
                   <h1>插件系统</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb实现了一个非常灵活和强大的插件系统,<br/>
+支持在任何位置存放插件, 在代码修改后自动编译, 以及发布时可以只发布程序集等等.<br/>
+ZKWeb对插件的管理不依赖于IDE, 内部会调用Roslyn的API来完成对插件源代码的编译.<br/></p>
+<h3 id="_1">插件的查找和加载</h3>
+<p>在前面的<a href="../website_config/index.html">配置文件</a>已经提到过, 插件列表保存在<code>App_Data\config.json</code>下.</p>
+<p><img alt="config.json" src="../../images/core/website_struct_config_json.jpg" /></p>
+<p>加载时会按<code>Plugins</code>中定义的顺序进行加载, 然后按<code>PluginDirectories</code>中定义的顺序进行查找.<br/>
+以上面的配置为例, 假定网站项目在<code>D:\Projects\Hello.World\src\Hello.World.AspNetCore</code>,<br/>
+会查找以下的路径加载<code>Common.Base</code>这个插件:<br/></p>
+<div class="codehilite"><pre><span></span>D:\Projects\ZKWeb.Plugins\Common.Base
+D:\Projects\Hello.World\src\Hello.World.Plugins\Common.Base
+</pre></div>
+
+
+<p>加载完<code>Common.Base</code>后会按查找以下的路径加载<code>Common.Captcha</code>:</p>
+<div class="codehilite"><pre><span></span>D:\Projects\ZKWeb.Plugins\Common.Captcha
+D:\Projects\Hello.World\src\Hello.World.Plugins\Common.Captcha
+</pre></div>
+
+
+<p>一直到<code>Plugins</code>中的插件全部加载完毕.</p>
+<h3 id="_2">插件信息</h3>
+<p>各个插件都会有文件和版本等信息, 这些信息保存在插件文件夹下的<code>plugin.json</code>中, 格式如下:<br/></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;插件名称&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Version&quot;</span><span class="p">:</span>  <span class="s2">&quot;插件版本&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;插件描述&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Dependencies&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;依赖的其他插件&quot;</span> <span class="p">],</span>
+    <span class="nt">&quot;References&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;依赖的程序集&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>以下是<code>Common.Admin</code>插件的<code>plugin.json</code>:</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin Panel&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.8.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Admin panel and users management&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Dependencies&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;Common.Base&quot;</span><span class="p">,</span> <span class="s2">&quot;Commin.Captcha&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加新的插件时仿照这个格式编写<code>plugin.json</code>即可.</p>
+<h3 id="_3">插件的目录结构</h3>
+<p>插件的目录结构在<a href="../website_struct/index.html">网站结构</a>中已经提过, 如下:<br/></p>
+<ul>
+<li>插件名称<ul>
+<li>bin 由插件编译出来的程序集</li>
+<li>src 插件的源代码<ul>
+<li>Controllers 储存控制器的文件夹</li>
+<li>更多保存代码的文件夹...</li>
+<li>Plugin.cs 载入插件时的处理, 可以省略</li>
+</ul>
+</li>
+<li>static 静态文件</li>
+<li>templates 模板文件</li>
+<li>templates.mobile 移动端专用的模板文件</li>
+<li>plugin.json 插件信息</li>
+</ul>
+</li>
+</ul>
+<p><a href="../publish_project/index.html">使用发布工具发布网站</a>后会自动删除src目录, 所以最终发布出来的插件不会包含源代码.</p>
+<h3 id="_4">依赖的程序集</h3>
+<p>插件需要依赖外部的程序集时， 需要在<code>plugin.json</code>的<code>References</code>指定.</p>
+<p>以<code>Common.QRCoder</code>为例</p>
+<ul>
+<li>Common.QRCoder 插件文件夹<ul>
+<li>references<ul>
+<li>net<ul>
+<li>QRCoder.dll net461版本的程序集</li>
+</ul>
+</li>
+<li>netstandard<ul>
+<li>QRCoder.dll netstandard版本的程序集</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>plugin.json</li>
+</ul>
+</li>
+</ul>
+<p><code>plugin.json</code>的内容如下</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;QRCoder&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="s2">&quot;1.8.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Description&quot;</span><span class="p">:</span> <span class="s2">&quot;Support generate QRCode&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;References&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;QRCoder&quot;</span> <span class="p">],</span>
+    <span class="nt">&quot;Dependencies&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;Common.Base&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>ZKWeb在读取到<code>References</code>后会自动从<code>references</code>文件夹下查找对应的程序集并载入.</p>
+<h3 id="_5">透过式文件系统</h3>
+<p>ZKWeb使用了类似Django的透过式文件系统, 一个插件可以简单的重载另外一个插件的资源文件.<br/>
+读取资源文件的顺序如下, 会返回最先存在的路径.<br/></p>
+<div class="codehilite"><pre><span></span>&quot;App_Data/路径&quot;
+foreach (按加载顺序的相反顺序枚举插件) {
+    &quot;插件目录/路径&quot;
+}
+</pre></div>
+
+
+<p>例如插件加载顺序是 <code>Plugins: [ "PluginA", "PluginB" ]</code>, 且目录结构如下:</p>
+<p><img alt="资源文件重载的示例" src="../../images/core/plugin_resource_override.jpg" /></p>
+<p>读取资源<code>templates/some_folder/some.html</code>会读取<code>PluginB</code>下的文件,<br/>
+读取资源<code>static/other_folder/other.txt</code>会读取<code>PluginA</code>下的文件.<br/></p>
+<p>读取资源文件可以使用以下的代码</p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">file</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetResourceFile</span><span class="p">(</span><span class="s">&quot;templates&quot;</span><span class="p">,</span> <span class="s">&quot;some_folder&quot;</span><span class="p">,</span> <span class="s">&quot;some.html&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">file</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">();</span>
+</pre></div>
+
+
+<h3 id="_6">组件的注册顺序</h3>
+<p>在ZKWeb中, 插件的注册顺序会影响组件的注册顺序.<br/></p>
+<p>例如插件加载顺序是 <code>Plugins: [ "PluginA", "PluginB" ]</code>,<br/>
+插件<code>PluginA</code>有<code>[ExportMany]class ExampleHandlerA : IExampleHandler { }</code>,<br/>
+插件<code>PluginB</code>有<code>[ExportMany]class ExampleHandlerB : IExampleHandler { }</code>.<br/></p>
+<p>这时使用<code>Application.Ioc.ResolveMany&lt;IExampleHandler&gt;()</code>会获取到包含两个实例的列表,<br/>
+第一个实例类型是ExampleHandlerA, 第二个实例类型是ExampleHandlerB.</p>
+<h3 id="_7">在网站启动时执行操作</h3>
+<p>部分插件可能需要在网站启动时执行一些操作, 可以使用<code>IPlugin</code>接口:</p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="n">Plugin</span> <span class="p">:</span> <span class="n">IPlugin</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nf">Plugin</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 这里会在网站启动时运行</span>
+        <span class="c1">// 并且会按插件的注册顺序运行</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_8">调试插件</h3>
+<p>调试在当前项目内的插件很简单, 直接F5运行并下断点即可.<br/></p>
+<p>调试在当前项目外的插件有两种办法:</p>
+<ul>
+<li>第一种<ul>
+<li>在插件的VS中选择<code>调试-挂载到进程</code>并选择IIS进程或Kestrel进程挂载</li>
+<li>Asp.Net, Owin选择<code>iisexpress.exe</code></li>
+<li>Asp.Net Core选择<code>项目主程序.exe</code>, 注意不要选<code>iis</code>或者<code>w3wp</code></li>
+</ul>
+</li>
+<li>第二种<ul>
+<li>把需要调试的文件拖动到Visual Studio中，然后在里面下断点</li>
+</ul>
+</li>
+</ul>
+<p><img alt="挂载到进程" src="../../images/core/plugin_attach_process.jpg" /></p>
                 
                   
                 

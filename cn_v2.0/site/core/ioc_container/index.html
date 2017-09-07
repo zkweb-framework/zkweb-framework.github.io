@@ -325,9 +325,69 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        IoC容器
+      </label>
+    
     <a href="index.html" title="IoC容器" class="md-nav__link md-nav__link--active">
       IoC容器
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="最简单的例子" class="md-nav__link">
+    最简单的例子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioc" title="全局的IoC容器" class="md-nav__link">
+    全局的IoC容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="构造函数注入" class="md-nav__link">
+    构造函数注入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="在插件中注册组件" class="md-nav__link">
+    在插件中注册组件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="组件的生命周期" class="md-nav__link">
+    组件的生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iserviceprovider" title="IServiceProvider整合" class="md-nav__link">
+    IServiceProvider整合
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +604,55 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="最简单的例子" class="md-nav__link">
+    最简单的例子
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioc" title="全局的IoC容器" class="md-nav__link">
+    全局的IoC容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="构造函数注入" class="md-nav__link">
+    构造函数注入
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="在插件中注册组件" class="md-nav__link">
+    在插件中注册组件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="组件的生命周期" class="md-nav__link">
+    组件的生命周期
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iserviceprovider" title="IServiceProvider整合" class="md-nav__link">
+    IServiceProvider整合
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +666,152 @@
                 
                   <h1>IoC容器</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>为了让插件之间的组件交互更加简单, ZKWeb使用了IoC容器(也叫DI容器).<br/>
+ZKWeb中使用的容器是单独开发的, 性能接近目前最快的<code>DryIoC</code>.</p>
+<h3 id="_1">最简单的例子</h3>
+<p>对于一个IoC容器, 大致上可以把操作分为<code>注册</code>和<code>解决</code>.<br/>
+注册指告诉容器解决一个服务类型的时候需要返回什么,<br/>
+而解决则是让容器返回服务类型对应的实例.<br/></p>
+<p>以下是ZKWeb内置的IoC容器最简单的使用例子:</p>
+<div class="codehilite"><pre><span></span><span class="k">void</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 创建一个新的容器</span>
+    <span class="n">IContainer</span> <span class="n">container</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Container</span><span class="p">();</span>
+
+    <span class="c1">// 注册类型</span>
+    <span class="n">container</span><span class="p">.</span><span class="n">Register</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">,</span> <span class="n">Dog</span><span class="p">&gt;();</span>
+    <span class="n">container</span><span class="p">.</span><span class="n">Register</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">,</span> <span class="n">Cow</span><span class="p">&gt;();</span>
+    <span class="n">container</span><span class="p">.</span><span class="n">Register</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">,</span> <span class="n">AnimalManager</span><span class="p">&gt;(</span><span class="n">ReuseType</span><span class="p">.</span><span class="n">Singleton</span><span class="p">);</span>
+
+    <span class="c1">// animals包含两个实例, 一个是Dog, 另外一个是Cow</span>
+    <span class="kt">var</span> <span class="n">animals</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">&gt;()</span>
+
+    <span class="c1">// animalManager的构造函数会自动传入包含两个实例的列表</span>
+    <span class="kt">var</span> <span class="n">animalManager</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
+
+    <span class="c1">// 注册为单例(Singleton)的服务再次解决的时候会使用原来的实例</span>
+    <span class="c1">// 在这里 animalManager == otherAnimalManager</span>
+    <span class="kt">var</span> <span class="n">otherAnimalManager</span> <span class="p">=</span> <span class="n">container</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IAnimalManager</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">Cow</span> <span class="p">:</span> <span class="n">IAnimal</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAnimalManager</span> <span class="p">{</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">AnimalManager</span> <span class="p">:</span> <span class="n">IAnimalManager</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nf">AnimalManager</span><span class="p">(</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">IAnimal</span><span class="p">&gt;</span> <span class="n">animals</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="ioc">全局的IoC容器</h3>
+<p>在上面的例子中容器是手动创建的.<br/>
+实际开发ZKWeb程序时不需要手动创建容器, 因为ZKWeb中默认有一个全局的.<br/>
+访问全局的IoC容器可以使用:</p>
+<div class="codehilite"><pre><span></span>var someService = Application.Ioc.Resolve&lt;ISomeService&gt;();
+</pre></div>
+
+
+<p>使用全局容器会导致代码的可测试性变差,<br/>
+如果您想编写更易于测试的代码可以使用构造函数注入策略.</p>
+<h3 id="_2">构造函数注入</h3>
+<p>ZKWeb的IoC容器支持构造函数注入, 使用例子如下:<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IXmlWriter</span> <span class="p">{</span> <span class="p">}</span>
+<span class="k">public</span> <span class="k">interface</span> <span class="n">IAttributeProvider</span> <span class="p">{</span> <span class="p">}</span>
+
+<span class="k">public</span> <span class="k">class</span> <span class="nc">XmlBuilder</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="nf">XmlBuilder</span><span class="p">(</span><span class="n">IXmlWriter</span> <span class="n">writer</span><span class="p">,</span> <span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">IAttributeProvider</span><span class="p">&gt;</span> <span class="n">providers</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">void</span> <span class="nf">Example</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 创建XmlBuilder的实例，自动注入依赖项</span>
+    <span class="kt">var</span> <span class="n">xmlBuilder</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">XmlBuilder</span><span class="p">&gt;();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>需要注意的是如果有多个构造函数, ZKWeb会按照以下策略来选择:<br/></p>
+<ul>
+<li>查找带<code>[Inject]</code>属性的构造函数, 如果找到则使用它</li>
+<li>查找唯一的一个public构造函数, 如果找到则使用它</li>
+<li>解决的时候查找<code>IMultiConstructorResolver</code><ul>
+<li>如果有注册<code>IMultiConstructorResolver</code>则使用它来解决</li>
+<li>如果未注册则报错提示类型有多个构造函数</li>
+</ul>
+</li>
+</ul>
+<p>目前<code>IMultiConstructorResolver</code>在<code>Asp.Net Core</code>项目中会默认注册,<br/>
+在<code>Asp.Net</code>和<code>Owin</code>项目中则不会.<br/>
+默认的<code>IMultiConstructorResolver</code>解决策略如下:<br/></p>
+<ul>
+<li>查找所有public构造函数, 按参数个数从多到少排序</li>
+<li>枚举排序好的构造函数<ul>
+<li>逐个进行解决<ul>
+<li>如果解决成功则记录该构造函数, 下次解决时使用它</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>使用构造函数注入可以改善代码的可测试性, 您可以积极使用这项功能.</p>
+<h3 id="_3">在插件中注册组件</h3>
+<p>在插件中可以通过标记属性来自动注册组件, 例如:</p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SomeService</span> <span class="p">:</span> <span class="n">ISomeService</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>或者</p>
+<div class="codehilite"><pre><span></span><span class="na">[Export(ServiceType = typeof(ISomeService))]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SomeService</span> <span class="p">:</span> <span class="n">ISomeService</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<p><code>[ExportMany]</code>会同时注册<code>SomeService</code>和<code>ISomeService</code>,<br/>
+<code>[Export]</code>只会注册<code>ISomeService</code>, 也就是<code>Resolve&lt;SomeService&gt;</code>会得不到结果.<br/></p>
+<p>这样的注册方式和<code>MEF</code>很相似.<br/>
+ZKWeb目前不支持按接口类型来注册(扫描时间会很长),<br/>
+但是您可以通过重载<code>Application</code>自己实现一套注册机制.<br/></p>
+<p>此外, 如果您想替换原有已注册的组件, 可以使用<code>ClearExists</code>属性:</p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany(ClearExists = true)]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SomeService</span> <span class="p">:</span> <span class="n">ISomeService</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>标记<code>ClearExists</code>后相当于以下代码:</p>
+<div class="codehilite"><pre><span></span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Unregister</span><span class="p">&lt;</span><span class="n">ISomeService</span><span class="p">&gt;();</span>
+<span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Unregister</span><span class="p">&lt;</span><span class="n">SomeService</span><span class="p">&gt;();</span>
+<span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterMany</span><span class="p">&lt;</span><span class="n">SomeService</span><span class="p">&gt;();</span>
+</pre></div>
+
+
+<h3 id="_4">组件的生命周期</h3>
+<p>ZKWeb中的使用的容器支持三种生命周期:</p>
+<ul>
+<li>Transient: 不共享对象, 解决时总是重新创建</li>
+<li>Singleton: 在所有环境共享对象, 解决是总是返回单个实例</li>
+<li>Scoped: 在同一区域(请求)中共享对象, 区域结束后自动释放(调用Dispose)</li>
+</ul>
+<p>标记组件的生命周期可以使用<code>[SingletonReuse]</code>或者<code>[ScopedReuse]</code><br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany, SingletonReuse]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">SomeService</span> <span class="p">:</span> <span class="n">ISomeService</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<h3 id="iserviceprovider">IServiceProvider整合</h3>
+<p>目前ZKWeb的容器实现了微软的DI接口, 并且支持替换Asp.Net Core中使用的容器.<br/></p>
+<p>注册<code>IServiceCollection</code>可以使用</p>
+<div class="codehilite"><pre><span></span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">RegisterFromServiceCollection</span><span class="p">(</span><span class="n">serviceCollection</span><span class="p">);</span>
+</pre></div>
+
+
+<p>获取<code>IServiceProvider</code>可以使用</p>
+<div class="codehilite"><pre><span></span><span class="c1">// 多次获取会返回同一个实例</span>
+<span class="kt">var</span> <span class="n">serviceProvider</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">AsServiceProvider</span><span class="p">();</span>
+</pre></div>
+
+
+<p>目前项目生成器创建的Asp.Net Core项目都会替换默认的容器, 您不需要手动写上面的代码.</p>
                 
                   
                 

@@ -349,9 +349,69 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        控制器
+      </label>
+    
     <a href="index.html" title="控制器" class="md-nav__link md-nav__link--active">
       控制器
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="控制器的示例" class="md-nav__link">
+    控制器的示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action" title="Action的返回类型" class="md-nav__link">
+    Action的返回类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="获取传入参数" class="md-nav__link">
+    获取传入参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" title="通过Url传入参数" class="md-nav__link">
+    通过Url传入参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action_1" title="替换现有的Action" class="md-nav__link">
+    替换现有的Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action_2" title="Action过滤器" class="md-nav__link">
+    Action过滤器
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +604,55 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="控制器的示例" class="md-nav__link">
+    控制器的示例
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action" title="Action的返回类型" class="md-nav__link">
+    Action的返回类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="获取传入参数" class="md-nav__link">
+    获取传入参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" title="通过Url传入参数" class="md-nav__link">
+    通过Url传入参数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action_1" title="替换现有的Action" class="md-nav__link">
+    替换现有的Action
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#action_2" title="Action过滤器" class="md-nav__link">
+    Action过滤器
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +666,199 @@
                 
                   <h1>控制器</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb提供了一套独立实现的MVC框架, 不依赖于Asp.Net和Asp.Net Core.<br/>
+自己实现MVC框架的好处是可以不受微软技术更新换代的影响,<br/>
+即使以后微软淘汰了Asp.Net Core, ZKWeb也可以迅速兼容新的框架并且无需改动业务代码.<br/></p>
+<h3 id="_1">控制器的示例</h3>
+<p>这是一个简单的控制器:</p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleController</span> <span class="p">:</span> <span class="n">IController</span> <span class="p">{</span>
+<span class="na">    [Action(&quot;example/plain_text&quot;)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">PlainText</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 返回文本</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">PlainResult</span><span class="p">(</span><span class="s">&quot;some plain text&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+<span class="na">    [Action(&quot;example/plain_string&quot;)]</span>
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">PlainString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 返回文本，返回类型是string时会自动使用PlainResult包装</span>
+        <span class="k">return</span> <span class="s">&quot;some plain string&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="na">    [Action(&quot;example/json&quot;)]</span>
+    <span class="k">public</span> <span class="kt">object</span> <span class="nf">Json</span><span class="p">(</span><span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 有参数时会自动获取传入参数</span>
+        <span class="c1">// 返回json，返回类型不是IActionResult或string时会自动使用JsonResult包装</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="p">{</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="p">};</span>
+    <span class="p">}</span>
+
+<span class="na">    [Action(&quot;example/template&quot;)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">Template</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 返回模板</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">TemplateResult</span><span class="p">(</span><span class="s">&quot;zkweb.examples/hello.html&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">text</span> <span class="p">=</span> <span class="s">&quot;World&quot;</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+<span class="na">    [Action(&quot;example/file&quot;)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">File</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// 返回文件</span>
+        <span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+        <span class="kt">var</span> <span class="n">file</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetResourceFile</span><span class="p">(</span><span class="s">&quot;static&quot;</span><span class="p">,</span> <span class="s">&quot;1.txt&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">FileEntryResult</span><span class="p">(</span><span class="n">file</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>建立后在浏览器打开<code>http://localhost:端口/example/plain_text</code>即可看到内容.</p>
+<p>在ZKWeb中添加控制器只需要继承<code>IController</code>接口并标记<code>ExportMany</code>即可,<br/>
+控制器和其他组件一样支持依赖注入, 您可以在构造函数中写需要的服务.<br/></p>
+<p>各个Action都可以标记完整的路径, 这样做可以带来更高的自由度.<br/></p>
+<h3 id="action">Action的返回类型</h3>
+<p>Action的返回类型可以是<code>IActionResult</code>, <code>string</code>或者其他引用类型.<br/>
+如果返回类型是string, 则会自动包装为<code>PlainResult</code>,<br/>
+如果返回类型是其他引用类型(例如<code>SomeOutputDto</code>), 则会自动包装为<code>JsonResult</code>.<br/></p>
+<p>ZKWeb内置了以下的返回类型,</br>
+如果需要返回其他类型的结果, 可以自己编写继承<code>IActionResult</code>的类.</br></p>
+<ul>
+<li>返回文件<ul>
+<li><code>FileEntryResult(IFileEntry fileEntry, DateTime? ifModifiedSince = null)</code></li>
+</ul>
+</li>
+<li>返回图片<ul>
+<li><code>ImageResult(Image image, ImageFormat format = null)</code></li>
+</ul>
+</li>
+<li>返回Json序列化的结果<ul>
+<li><code>JsonResult(object obj, Formatting formatting = Formatting.None)</code></li>
+</ul>
+</li>
+<li>返回纯文本<ul>
+<li><code>PlainResult(object obj)</code></li>
+</ul>
+</li>
+<li>重定向到指定地址<ul>
+<li><code>RedirectResult(string url, bool permanent = false)</code></li>
+</ul>
+</li>
+<li>返回数据流<ul>
+<li><code>StreamResult(Stream stream, string contentType = null)</code></li>
+</ul>
+</li>
+<li>返回模板<ul>
+<li><code>TemplateResult(string path, object argument = null)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">获取传入参数</h3>
+<p>如果action函数带有参数, 会自动按参数的名称进行获取.<br/>
+需要手动获取时可以使用<code>HttpManager.CurrentContext.Request.Get&lt;T&gt;</code><br/>
+下面两种写法可以获取到一样的参数<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PostExampleController</span> <span class="p">:</span> <span class="n">IController</span> <span class="p">{</span>
+<span class="na">    [Action(&quot;example/post_a&quot;, HttpMethods.POST)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">PostA</span><span class="p">(</span><span class="kt">string</span> <span class="n">paramInUrl</span><span class="p">,</span> <span class="kt">string</span> <span class="n">paramInBody</span><span class="p">,</span> <span class="kt">string</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="p">});</span>
+    <span class="p">}</span>
+
+<span class="na">    [Action(&quot;example/post_b&quot;, HttpMethods.POST)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">PostB</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+        <span class="kt">var</span> <span class="n">paramInUrl</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">GetQueryValue</span><span class="p">(</span><span class="s">&quot;paramInUrl&quot;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">paramInBody</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">GetFormValue</span><span class="p">(</span><span class="s">&quot;paramInBody&quot;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">name</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
+        <span class="kt">var</span> <span class="n">age</span> <span class="p">=</span> <span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="s">&quot;age&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span> <span class="n">name</span><span class="p">,</span> <span class="n">age</span> <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>和<code>Asp.Net</code>不一样, 您不需要指定<code>[FromQuery]</code>等属性, ZKWeb会自动根据以下的规则获取:<br/></p>
+<ul>
+<li>从自定义参数获取(HttpManager.CurrentContext.Request.CustomParameters)</li>
+<li>从表单内容获取</li>
+<li>从Url参数获取</li>
+<li>从Json Body中的单个字段获取(例如传入<code>{a:1}</code>, 参数a的值等于1)</li>
+<li>从提交文件获取(类型需要是IHttpPostedFile)</li>
+<li>从Json Body整体获取(例如传入<code>{a:1}</code>, 可以绑到<code>class A {int a;}</code>上)</li>
+</ul>
+<p>除此之外您还可以替换默认的<code>IActionParameterProvider</code>实现自己的获取逻辑,<br/>
+也可以在里面实现自动验证参数.<br/>
+参考<code>MVVMDemo</code>的<a href="https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/src/ZKWeb.MVVMPlugins/MVVM.Common.Base/src/Components/ActionParameterProviders/ValidatedActionParameterProvider.cs"><code>ValidatedActionParameterProvider</code></a>.</p>
+<h3 id="url">通过Url传入参数</h3>
+<p>从ZKWeb 2.0开始, Action支持通过Url传入参数, 例如:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">PostExampleController</span> <span class="p">:</span> <span class="n">IController</span> <span class="p">{</span>
+<span class="na">    [Action(&quot;example/get/{id}&quot;)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">PostA</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">JsonResult</span><span class="p">(</span><span class="k">new</span> <span class="p">{</span> <span class="n">id</span> <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>访问<code>http://localhost:端口/example/get/1</code>时, <code>id</code>参数的值将会是<code>1</code>.</p>
+<h3 id="action_1">替换现有的Action</h3>
+<p>如果您想替换在其他插件中定义的页面, 可以使用<code>OverrideExists</code>属性, 例如:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Action(&quot;/&quot;, OverrideExists = true)]</span>
+<span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">CustomIndexPage</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nf">PlainResult</span><span class="p">(</span><span class="s">&quot;hello overridden action&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>要注意使用<code>OverrideExists</code>的插件必须在原来的插件之后加载,<br/>
+也就是要放在<code>App_Data\config.json</code>的<code>Plugins</code>列表的后面.</p>
+<h3 id="action_2">Action过滤器</h3>
+<p>ZKWeb支持在Action的前后执行自定义的代码, 可以看作是一种Aop机制.<br/>
+Action过滤器的接口的定义如下:<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IActionFilter</span> <span class="p">{</span>
+    <span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">Filter</span><span class="p">(</span><span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">action</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>过滤器分<code>全局过滤器</code>和<code>属性过滤器</code>,<br/>
+全局过滤器对所有Action都有效, 属性过滤器只对标记的Action有效.</p>
+<p>添加全局过滤器需要继承<code>IActionFilter</code>并标记<code>[ExportMany]</code>, 例如:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">MyActionFilter</span> <span class="p">:</span> <span class="n">IActionFilter</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">Filter</span><span class="p">(</span><span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">path</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Path</span><span class="p">;</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="s">&quot;received request: &quot;</span> <span class="p">+</span> <span class="n">path</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nf">action</span><span class="p">();</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>添加属性过滤器需要继承<code>ActionFilterAttribute</code>, 但不能标记<code>[ExportMany]</code>, 例如:<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">MyActionFilterAttribute</span> <span class="p">:</span> <span class="n">ActionFilterAttribute</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">override</span> <span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">Filter</span><span class="p">(</span><span class="n">Func</span><span class="p">&lt;</span><span class="n">IActionResult</span><span class="p">&gt;</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="k">return</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">path</span> <span class="p">=</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">Path</span><span class="p">;</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="s">&quot;received request: &quot;</span> <span class="p">+</span> <span class="n">path</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nf">action</span><span class="p">();</span>
+        <span class="p">};</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>使用时在Action上标记即可, 例如:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleController</span> <span class="p">:</span> <span class="n">IController</span> <span class="p">{</span>
+<span class="na">    [MyActionFilter]</span>
+<span class="na">    [Action(&quot;example/plain_text&quot;)]</span>
+    <span class="k">public</span> <span class="n">IActionResult</span> <span class="nf">PlainText</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nf">PlainResult</span><span class="p">(</span><span class="s">&quot;some plain text&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 

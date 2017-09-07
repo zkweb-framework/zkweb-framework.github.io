@@ -254,7 +254,7 @@
   
   
   
-    <label class="md-nav__title" for="toc">内容表格</label>
+    <label class="md-nav__title" for="toc">索引</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -604,7 +604,7 @@
   
   
   
-    <label class="md-nav__title" for="toc">内容表格</label>
+    <label class="md-nav__title" for="toc">索引</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
@@ -674,10 +674,10 @@
 <p>然后打开<a href="https://github.com/zkweb-framework/zkweb.plugins">ZKWeb.Plugins的项目地址</a>, 然后点击下图的按钮下载到本地.</p>
 <p><img alt="下载ZKWeb.Plugins" src="../../images/core/create_project_demo_1.png" /></p>
 <h3 id="_1">使用项目创建器创建项目</h3>
-<p>打开'ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe',<br/>
+<p>打开<code>ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe</code>,<br/>
 可以看到下面的界面.</p>
 <p><img alt="项目创建器" src="../../images/core/create_project_demo_2.png" /></p>
-<p>注意ORM里面只有"NHibernate"可以支持"ZKWeb.Plugins"中的所有插件,<br/>
+<p>注意ORM里面只有<code>NHibernate</code>可以支持<code>ZKWeb.Plugins</code>中的所有插件,<br/>
 推荐选择 Asp.Net Core + NHibernate + SQLite,</p>
 <p>然后选择"使用默认插件", 使用和上图一样的路径,</p>
 <p>再选择输出文件夹后点击"创建项目"即可.</p>
@@ -688,16 +688,16 @@
 <p>打开项目运行后可以看到以下的界面:</p>
 <p><img alt="运行项目" src="../../images/core/create_project_demo_3.png" /></p>
 <h3 id="_3">多页面站点项目的结构</h3>
-<p>打开项目以后我们可以看到里面有"AspNetCore", "Console", "Plugins"三个项目,</p>
-<p>"AspNetCore"项目仅用于启动网站, 里面不会放任何业务代码,</p>
-<p>"Console"项目用于运单元和集成测试, 或运行一些临时的代码片段,</p>
-<p>"Plugins"项目用于保存插件, 下面一个文件夹代表一个插件, 业务处理都会写到这个项目下面.</p>
-<p>除此之外, 多页面站点还使用了刚才下载回来的"ZKWeb.Plugins"中的插件,<br/>
-"ZKWeb.Plugins"和"Plugins"项目一样专门用于保存插件,<br/>
-不同的是"ZKWeb.Plugins"的解决方案是独立的.</p>
-<p>打开"ZKWeb.Plugins"可以发现里面有很多插件:</p>
+<p>打开项目以后我们可以看到里面有<code>AspNetCore</code>, <code>Console</code>, <code>Plugins</code>三个项目,</p>
+<p><code>项目名称.AspNetCore</code>项目: 仅用于启动网站, 里面不会放任何业务代码.</p>
+<p><code>项目名称.Console</code>项目: 用于运行单元和集成测试, 或运行一些临时的代码片段.</p>
+<p><code>项目名称.Plugins</code>项目: 用于保存插件, 一个文件夹代表一个插件, 业务处理都会写到这个项目下面.</p>
+<p>除此之外, 多页面站点还使用了刚才下载回来的<code>ZKWeb.Plugins</code>中的插件,<br/>
+<code>ZKWeb.Plugins</code>和<code>Plugins</code>项目一样专门用于保存插件,<br/>
+不同的是<code>ZKWeb.Plugins</code>的解决方案是独立的.</p>
+<p>打开<code>ZKWeb.Plugins</code>可以发现里面有很多插件:</p>
 <p><img alt="ZKWeb.Plugins" src="../../images/core/create_project_demo_4.png" /></p>
-<p>您可能只想使用一部分, 可以打开"AspNetCore\App_Data\config.json"删除不需要的插件, 如下:</p>
+<p>您可能只想使用一部分, 可以打开<code>AspNetCore\App_Data\config.json</code>删除不需要的插件, 如下:</p>
 <p><img alt="config.json" src="../../images/core/create_project_demo_5.png" /></p>
 <p>注意如果插件之间有依赖关系, 删除一个插件可能会让关联的插件不能工作, 详细请看<a href="../plugin/index.html">插件系统</a>.</p>
 <h3 id="_4">了解更多</h3>

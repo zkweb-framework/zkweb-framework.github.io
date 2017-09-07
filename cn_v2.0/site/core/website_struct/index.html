@@ -301,9 +301,41 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        网站结构
+      </label>
+    
     <a href="index.html" title="网站结构" class="md-nav__link md-nav__link--active">
       网站结构
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="项目的文件结构" class="md-nav__link">
+    项目的文件结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="插件列表的配置" class="md-nav__link">
+    插件列表的配置
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +576,27 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="项目的文件结构" class="md-nav__link">
+    项目的文件结构
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="插件列表的配置" class="md-nav__link">
+    插件列表的配置
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +610,59 @@
                 
                   <h1>网站结构</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>使用项目创建器创建的程序都会包含三个项目, 分别是</p>
+<p><code>项目名称.AspNetCore, AspNet或Owin</code>项目: 仅用于启动网站, 里面不会放任何业务代码.</p>
+<p><code>项目名称.Console</code>项目: 用于运行单元和集成测试, 或运行一些临时的代码片段.</p>
+<p><code>项目名称.Plugins</code>项目: 用于保存插件, 一个文件夹代表一个插件, 业务处理都会写到这个项目下面.</p>
+<p>我们来看看这些项目都包含了什么文件</p>
+<h3 id="_1">项目的文件结构</h3>
+<p><img alt="项目的文件结构" src="../../images/core/website_struct.jpg" /></p>
+<ul>
+<li>Hello.World.AspNetCore 启动网站的项目<ul>
+<li>App_Data 数据文件, 这里面的文件不应该在更新时覆盖<ul>
+<li>logs 日志文件夹</li>
+<li>config.json 网站的配置文件</li>
+<li>DatabaseScript.txt 用于检测数据库是否需要更新的文件</li>
+<li>test.db 数据库文件, 使用SQLite时才有</li>
+</ul>
+</li>
+<li>bin 程序文件, 用于运行网站</li>
+<li>web.config IIS中使用的网站配置文件</li>
+</ul>
+</li>
+<li>Hello.World.Console 帮助性的项目, 实际不属于网站</li>
+<li>Hello.World.Plugins 插件项目<ul>
+<li>Hello.World 一个插件文件夹<ul>
+<li>bin 由插件编译出来的程序集</li>
+<li>src 插件的源代码<ul>
+<li>Controllers 储存控制器的文件夹<ul>
+<li>HelloController.cs 示例控制器</li>
+</ul>
+</li>
+<li>Plugin.cs 载入插件时的处理, 可以省略</li>
+</ul>
+</li>
+<li>static 静态文件</li>
+<li>templates 模板文件</li>
+<li>templates.mobile 移动端专用的模板文件</li>
+<li>plugin.json 插件信息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_2">插件列表的配置</h3>
+<p>一个网站可以有多个插件, 一个插件的源代码, 程序集和资源文件都会放在该插件所属的目录下.</p>
+<p><code>App_Data\config.json</code>中定义了查找插件使用的目录列表和插件列表.<br/></p>
+<p><img alt="config.json" src="../../images/core/website_struct_config_json.jpg" /></p>
+<p><code>Plugins</code>保存的是插件的<strong>文件夹名称</strong>.</p>
+<p><code>PluginDirectories</code>是查找插件文件夹使用的目录列表.</p>
+<p>例如上面的配置会查找<code>../Hello.World.Plugins/Common.Base</code>是否存在,<br/>
+如果不存在则继续查找<code>../../../ZKWeb.Plugins/Common.Base</code>是否存在,<br/>
+如果存在则加载里面的内容.</p>
+<p>对于各个插件的资源文件(<code>static</code>, <code>templates</code>等),<br/>
+ZKWeb使用了类似Django的透过式文件系统,<br/>
+详细可以查看<a href="../plugin/index.html">插件系统</a>中的说明.</p>
                 
                   
                 
