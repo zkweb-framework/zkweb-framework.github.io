@@ -14,12 +14,12 @@
 
 ### 使用项目创建器创建项目
 
-打开'ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe',<br/>
+打开`ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe`,<br/>
 可以看到下面的界面.
 
 ![项目创建器](../images/core/create_project_demo_2.png)
 
-注意ORM里面只有"NHibernate"可以支持"ZKWeb.Plugins"中的所有插件,<br/>
+注意ORM里面只有`NHibernate`可以支持`ZKWeb.Plugins`中的所有插件,<br/>
 推荐选择 Asp.Net Core + NHibernate + SQLite,
 
 然后选择"使用默认插件", 使用和上图一样的路径,
@@ -38,23 +38,23 @@
 
 ### 多页面站点项目的结构
 
-打开项目以后我们可以看到里面有"AspNetCore", "Console", "Plugins"三个项目,
+打开项目以后我们可以看到里面有`AspNetCore`, `Console`, `Plugins`三个项目,
 
-"AspNetCore"项目仅用于启动网站, 里面不会放任何业务代码,
+`项目名称.AspNetCore`项目: 仅用于启动网站, 里面不会放任何业务代码.
 
-"Console"项目用于运单元和集成测试, 或运行一些临时的代码片段,
+`项目名称.Console`项目: 用于运行单元和集成测试, 或运行一些临时的代码片段.
 
-"Plugins"项目用于保存插件, 下面一个文件夹代表一个插件, 业务处理都会写到这个项目下面.
+`项目名称.Plugins`项目: 用于保存插件, 一个文件夹代表一个插件, 业务处理都会写到这个项目下面.
 
-除此之外, 多页面站点还使用了刚才下载回来的"ZKWeb.Plugins"中的插件,<br/>
-"ZKWeb.Plugins"和"Plugins"项目一样专门用于保存插件,<br/>
-不同的是"ZKWeb.Plugins"的解决方案是独立的.
+除此之外, 多页面站点还使用了刚才下载回来的`ZKWeb.Plugins`中的插件,<br/>
+`ZKWeb.Plugins`和`Plugins`项目一样专门用于保存插件,<br/>
+不同的是`ZKWeb.Plugins`的解决方案是独立的.
 
-打开"ZKWeb.Plugins"可以发现里面有很多插件:
+打开`ZKWeb.Plugins`可以发现里面有很多插件:
 
 ![ZKWeb.Plugins](../images/core/create_project_demo_4.png)
 
-您可能只想使用一部分, 可以打开"AspNetCore\App_Data\config.json"删除不需要的插件, 如下:
+您可能只想使用一部分, 可以打开`AspNetCore\App_Data\config.json`删除不需要的插件, 如下:
 
 ![config.json](../images/core/create_project_demo_5.png)
 

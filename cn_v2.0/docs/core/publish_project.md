@@ -104,13 +104,13 @@ pause
 
 ### 在Linux上发布网站
 
-目前只有"AspNet.Core"类型, 且使用了.Net Core的项目可以在Linux上发布.
+目前只有`AspNet.Core`类型, 且使用了.Net Core的项目可以在Linux上发布.
 
-请参考"ZKWeb.MVVMDemo"的[publish_ubuntu.sh](https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/publish_ubuntu.sh).
+请参考`ZKWeb.MVVMDemo`的[publish_ubuntu.sh](https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/publish_ubuntu.sh).
 
 ### 发布到Docker
 
 发布到Docker需要在镜像内安装libgdiplus(用于ZKWeb.System.Drawing),<br/>
 其他和普通的Asp.Net Core网站一样.
 
-请参考"ZKWeb.MVVMDemo"的[Dockerfile](https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/Dockerfile).
+请参考`ZKWeb.MVVMDemo`的[Dockerfile](https://github.com/zkweb-framework/ZKWeb.MVVMDemo/blob/master/Dockerfile).

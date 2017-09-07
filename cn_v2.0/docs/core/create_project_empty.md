@@ -10,7 +10,7 @@
 
 ### 使用项目创建器创建项目
 
-打开'ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe',<br/>
+打开`ZKWeb\Tools\ProjectCreator.Gui.Windows\ZKWeb.Toolkits.ProjectCreator.Gui.exe`,<br/>
 可以看到下面的界面.
 
 ![项目创建器](../images/core/create_project_empty_2.png)
@@ -27,24 +27,24 @@
 
 ### 空白项目的结构
 
-打开项目以后我们可以看到里面有"AspNetCore", "Console", "Plugins"三个项目,
+打开项目以后我们可以看到里面有`AspNetCore`, `Console`, `Plugins`三个项目,
 
-"AspNetCore"项目仅用于启动网站, 里面不会放任何业务代码,
+`项目名称.AspNetCore`项目: 仅用于启动网站, 里面不会放任何业务代码.
 
-"Console"项目用于运单元和集成测试, 或运行一些临时的代码片段,
+`项目名称.Console`项目: 用于运行单元和集成测试, 或运行一些临时的代码片段.
 
-"Plugins"项目用于保存插件, 下面一个文件夹代表一个插件, 业务处理都会写到这个项目下面.
+`项目名称.Plugins`项目: 用于保存插件, 一个文件夹代表一个插件, 业务处理都会写到这个项目下面.
 
 ### 空白项目包含的控制器
 
-空白项目包含了一个"HelloController",<br/>
-这个控制器是在"Plugin"中手动注册的, 注册的前提是当前未引用名字叫"Common.Base"的插件.
+空白项目包含了一个`HelloController`,<br/>
+这个控制器是在`Plugin`中手动注册的, 注册的前提是当前未引用名字叫`Common.Base`的插件.
 
-另外还包含一个"HelloStaticHandler",<br/>
+另外还包含一个`HelloStaticHandler`,<br/>
 这个处理器用于返回静态文件的内容, 注册的前提跟上面一样.
 
 这两个组件都是手动注册的,<br/>
-如果您想让它们自动注册可以删掉"Plugin"中的内容, 并在这两个class上标记"[ExportMany]".
+如果您想让它们自动注册可以删掉`Plugin`中的内容, 并在这两个class上标记`[ExportMany]`.
 
 例如
 
@@ -53,7 +53,7 @@
 public class HelloController : IController { /* 原有的内容 */ }
 ```
 
-当您想添加其他控制器的时候也可以这样添加, 只需要在上面标记"[ExportMany]"就可以自动注册.
+当您想添加其他控制器的时候也可以这样添加, 只需要在上面标记`[ExportMany]`就可以自动注册.
 
 ### 了解更多
 
