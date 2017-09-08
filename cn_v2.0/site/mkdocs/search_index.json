@@ -412,13 +412,358 @@
         }, 
         {
             "location": "/core/http_handlers/index.html", 
-            "text": "\u6587\u6863\u5c1a\u672a\u7f16\u5199\u5b8c\u6bd5, \u8bf7\u8010\u5fc3\u7b49\u5f85.", 
+            "text": "\u5728ZKWeb\u4e2d\u5904\u7406Http\u8bf7\u6c42\u4f1a\u4f7f\u7528Http\u8bf7\u6c42\u5904\u7406\u5668(\nIHttpRequestHandler\n),\n\n\u4e0a\u4e00\u7bc7\u4ecb\u7ecd\u7684\u63a7\u5236\u5668\u53ea\u662f\u5176\u4e2d\u7684\u4e00\u4e2a\u5904\u7406\u5668.\n\n\u81ea\u5df1\u5b9e\u73b0\u5904\u7406\u5668\u53ef\u4ee5\u5904\u7406\u66f4\u590d\u6742\u7684url, \u4f8b\u5982\u8fd4\u56de\u9759\u6001\u6587\u4ef6\u7b49.\n\n\nHttp\u8bf7\u6c42\u5904\u7406\u5668\n\n\n\u8fd9\u662f\nIHttpRequestHandler\n\u7684\u4e00\u4e2a\u7b80\u5355\u7684\u4f8b\u5b50,\n\n\u8bbf\u95ee\n/example/handler/xxx\n\u7684\u65f6\u5019\u4f1a\u8fd4\u56de\nthe path is xxx\n.\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nHttpRequestHandlerExample\n \n:\n \nIHttpRequestHandler\n \n{\n\n    \npublic\n \nconst\n \nstring\n \nPrefix\n \n=\n \n/example/handler/\n;\n\n    \npublic\n \nvoid\n \nOnRequest\n()\n \n{\n\n        \nvar\n \nrequest\n \n=\n \nHttpManager\n.\nCurrentContext\n.\nRequest\n;\n\n        \nvar\n \nresponse\n \n=\n \nHttpManager\n.\nCurrentContext\n.\nResponse\n;\n\n        \nif\n \n(\nrequest\n.\nPath\n.\nStartsWith\n(\nPrefix\n))\n \n{\n\n            \nnew\n \nPlainResult\n(\nthe path is \n \n+\n \nrequest\n.\nPath\n.\nSubstring\n(\nPrefix\n.\nLength\n))\n\n                \n.\nWriteResponse\n(\nresponse\n);\n\n            \nresponse\n.\nEnd\n();\n\n        \n}\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u9700\u8981\u6ce8\u610f\u7684\u662f, \u8bf7\u6c42\u5904\u7406\u5668\u4f1a\u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u8c03\u7528,\n\n\u8d8a\u540e\u9762\u6ce8\u518c\u7684\u5904\u7406\u5668\u8c03\u7528\u7684\u8d8a\u524d,\n\n\u5982\u679c\u524d\u9762\u7684\u5904\u7406\u5668\u8c03\u7528\u4e86\nresponse.End()\n, \u5c31\u4e0d\u4f1a\u518d\u8c03\u7528\u540e\u9762\u7684\u5904\u7406\u5668\u4e86.\n\n\nHttp\u8bf7\u6c42\u9884\u5904\u7406\u5668\n\n\n\u6709\u7684\u60c5\u51b5\u4e0b, \u60a8\u53ef\u80fd\u60f3\u7ed9\u6240\u6709Http\u8bf7\u6c42\u6dfb\u52a0\u4e00\u4e2a\u81ea\u5b9a\u4e49\u7684Header,\n\n\u4f46\u662f\u5982\u679c\u4f7f\u7528\nIHttpRequestHandler\n, \u53c8\u5f88\u96be\u4fdd\u8bc1\u6ce8\u518c\u7684\u5904\u7406\u5668\u662f\u6700\u540e\u6ce8\u518c\u7684.\n\nZKWeb\u9488\u5bf9\u8fd9\u79cd\u60c5\u51b5\u63d0\u4f9b\u4e86\u53e6\u5916\u4e00\u4e2a\u63a5\u53e3\nIHttpRequestPreHandler\n.\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nAddVersionHeaderHandler\n \n:\n \nIHttpRequestPreHandler\n \n{\n\n    \npublic\n \nvoid\n \nOnRequest\n()\n \n{\n\n        \nvar\n \nresponse\n \n=\n \nHttpManager\n.\nCurrentContext\n.\nResponse\n;\n\n        \nresponse\n.\nAddHeader\n(\nX-ZKWeb-Version\n,\n \nApplication\n.\nFullVersion\n);\n\n    \n}\n\n\n}\n\n\n\n\n\n\nIHttpRequestPreHandler\n\u53ef\u4ee5\u4fdd\u8bc1\u5728\u6240\u6709\nIHttpRequestHandler\n\u524d\u8c03\u7528,\n\n\u6ce8\u610f\nIHttpRequestPreHandler\n\u4e2d\u4e0d\u5e94\u8be5\u5199\u5165\nResponse\n\u548c\u8c03\u7528\nresponse.End()\n.\n\n\nHttp\u8bf7\u6c42\u7684\u540e\u5904\u7406\u5668\n\n\n\u540c\u6837\u7684, \u5982\u679c\u60a8\u60f3\u5728\u6240\u6709Http\u8bf7\u6c42\u5904\u7406\u540e\u6267\u884c\u4e00\u4e9b\u81ea\u5b9a\u4e49\u7684\u64cd\u4f5c,\n\n\u53ef\u4ee5\u4f7f\u7528\nIHttpRequestPostHandler\n\u63a5\u53e3, \u8fd9\u4e2a\u63a5\u53e3\u7684\u4f7f\u7528\u8ddf\u4e0a\u9762\u4e00\u6837,\n\n\u53ea\u662f\u5b83\u4f1a\u4fdd\u8bc1\u5728\u6240\u6709\nIHttpRequestHandler\n\u4e4b\u540e\u6267\u884c.\n\n\nHttp\u8bf7\u6c42\u5305\u88c5\u5668\n\n\n\u6709\u65f6\u5019\u60a8\u53ef\u80fd\u4f1a\u60f3\u540c\u65f6\u4f7f\u7528\u9884\u5904\u7406\u5668\u548c\u540e\u5904\u7406\u5668, \u4e5f\u5c31\u662f\u60f3\u628a\u8bf7\u6c42\u5d4c\u5957\u5728\nusing\n\u91cc\u9762,\n\n\u540c\u65f6\u4f7f\u7528\u4e0a\u9762\u7684\nIHttpRequestPreHandler\n\u548c\nIHttpRequestPostHandler\n\u53ef\u80fd\u6bd4\u8f83\u56f0\u96be.\n\n\u8fd9\u65f6\u5019\u53ef\u4ee5\u4f7f\u7528\nIHttpRequestHandlerWrapper\n.\n\n\n\u8fd9\u4e2a\u63a5\u53e3\u7684\u4f7f\u7528\u8ddfOwin, Asp.Net Core\u7684\u4e2d\u95f4\u4ef6\u6bd4\u8f83\u76f8\u4f3c.\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nExampleWrapper\n \n:\n \nIHttpRequestHandlerWrapper\n \n{\n\n    \npublic\n \nAction\n \nWrapHandlerAction\n(\nAction\n \naction\n)\n \n{\n\n        \nreturn\n \n()\n \n=\n \n{\n\n            \nusing\n \n(\nSomeScope\n())\n \n{\n\n                \naction\n();\n\n            \n}\n\n        \n};\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u5982\u679c\u60a8\u53ea\u8003\u8651\u63a7\u5236\u5668, \u4e5f\u53ef\u4ee5\u4f7f\u7528\u524d\u4e00\u7bc7\u63d0\u5230\u7684\nAction\u8fc7\u6ee4\u5668\n.\n\n\nHttp\u9519\u8bef\u5904\u7406\u5668\n\n\nZKWeb\u63d0\u4f9b\u4e86\u4e00\u4e2a\u4e13\u95e8\u7684\u9519\u8bef\u5904\u7406\u5668,\n\n\u6ce8\u518c\nIHttpRequestErrorHandler\n\u63a5\u53e3\u5373\u53ef\u5168\u5c40\u5904\u7406\u8bf7\u6c42\u4e2d\u7684\u9519\u8bef.\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nHttpErrorHandlerExample\n \n:\n \nIHttpRequestErrorHandler\n \n{\n\n    \npublic\n \nvoid\n \nOnError\n(\nException\n \nex\n)\n \n{\n\n        \nvar\n \nhttpEx\n \n=\n \nex\n \nas\n \nHttpException\n;\n \n// HttpException in ZKWebStandard.Web\n\n        \nif\n \n(\nhttpEx\n \n!=\n \nnull\n \n \nhttpEx\n.\nStatusCode\n \n==\n \n404\n)\n \n{\n\n            \nvar\n \nresponse\n \n=\n \nHttpManager\n.\nCurrentContext\n.\nResponse\n;\n\n            \nnew\n \nPlainResult\n(\ncustom 404 page\n).\nWriteResponse\n(\nresponse\n);\n\n            \nresponse\n.\nEnd\n();\n\n        \n}\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u5982\u679c\u6709\u591a\u4e2a\u9519\u8bef\u5904\u7406\u5668, \u4f1a\u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u8c03\u7528,\n\n\u5982\u679c\u5176\u4e2d\u4e00\u4e2a\u8c03\u7528\u4e86\nresponse.End()\n\u5219\u4e0d\u7ee7\u7eed\u8c03\u7528.\n\n\nHttp\u8bf7\u6c42\u7684\u6574\u4f53\u6d41\u7a0b\n\n\n\u4e0a\u9762\u7684\u5904\u7406\u5668\u7684\u6574\u4f53\u8c03\u7528\u6d41\u7a0b\u662f:\n\n\ntry {\n    try {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestPreHandler {\n            \u8c03\u7528OnRequest\u51fd\u6570\n        }\n        \u5904\u7406\u51fd\u6570 = new Action ({\n            \u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u679a\u4e3eIHttpRequestHandler {\n                \u8c03\u7528OnRequest\u51fd\u6570 \n= \u63a7\u5236\u5668\u4f1a\u5728\u8fd9\u91cc\u8c03\u7528\n            }\n            \u629b\u51fa404\u9519\u8bef\n        })\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestHandlerWrapper {\n            \u5904\u7406\u51fd\u6570 = wrapper.WrapHandlerAction(\u5904\u7406\u51fd\u6570)\n        }\n        \u8c03\u7528\u5904\u7406\u51fd\u6570\n    } finally {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestPostHandler {\n            \u8c03\u7528OnRequest\u51fd\u6570\n        }\n    }\n} catch (\u4ee3\u8868\u8bf7\u6c42\u7ed3\u675f\u7684\u4f8b\u5916) {\n    \u5904\u7406\u8bf7\u6c42\u5b8c\u6210\n} catch (Exception ex) {\n    try {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u679a\u4e3eIHttpRequestErrorHandler {\n            \u8c03\u7528OnError\u51fd\u6570\n        }\n    } catch (\u4ee3\u8868\u8bf7\u6c42\u7ed3\u675f\u7684\u4f8b\u5916) {\n        \u5904\u7406\u9519\u8bef\u5b8c\u6210\n    }\n}\n\n\n\n\n\nZKWeb\u9ed8\u8ba4\u6ce8\u518c\u7684\nIHttpRequestHandler\n\u5c31\u662f\nControllerManager\n,\n\n\u800c\u9ed8\u8ba4\u6ce8\u518c\u7684\nIHttpRequestErrorHandler\n\u5219\u4f1a\u8bb0\u5f55\u9519\u8bef\u65e5\u5fd7\u5230\nApp_Data\\logs\n\u4e0b.", 
             "title": "\u8bf7\u6c42\u548c\u9519\u8bef\u5904\u7406"
         }, 
         {
+            "location": "/core/http_handlers/index.html#http", 
+            "text": "\u8fd9\u662f IHttpRequestHandler \u7684\u4e00\u4e2a\u7b80\u5355\u7684\u4f8b\u5b50, \n\u8bbf\u95ee /example/handler/xxx \u7684\u65f6\u5019\u4f1a\u8fd4\u56de the path is xxx .  [ExportMany]  public   class   HttpRequestHandlerExample   :   IHttpRequestHandler   { \n     public   const   string   Prefix   =   /example/handler/ ; \n     public   void   OnRequest ()   { \n         var   request   =   HttpManager . CurrentContext . Request ; \n         var   response   =   HttpManager . CurrentContext . Response ; \n         if   ( request . Path . StartsWith ( Prefix ))   { \n             new   PlainResult ( the path is    +   request . Path . Substring ( Prefix . Length )) \n                 . WriteResponse ( response ); \n             response . End (); \n         } \n     }  }   \u9700\u8981\u6ce8\u610f\u7684\u662f, \u8bf7\u6c42\u5904\u7406\u5668\u4f1a\u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u8c03\u7528, \n\u8d8a\u540e\u9762\u6ce8\u518c\u7684\u5904\u7406\u5668\u8c03\u7528\u7684\u8d8a\u524d, \n\u5982\u679c\u524d\u9762\u7684\u5904\u7406\u5668\u8c03\u7528\u4e86 response.End() , \u5c31\u4e0d\u4f1a\u518d\u8c03\u7528\u540e\u9762\u7684\u5904\u7406\u5668\u4e86.", 
+            "title": "Http\u8bf7\u6c42\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/core/http_handlers/index.html#http_1", 
+            "text": "\u6709\u7684\u60c5\u51b5\u4e0b, \u60a8\u53ef\u80fd\u60f3\u7ed9\u6240\u6709Http\u8bf7\u6c42\u6dfb\u52a0\u4e00\u4e2a\u81ea\u5b9a\u4e49\u7684Header, \n\u4f46\u662f\u5982\u679c\u4f7f\u7528 IHttpRequestHandler , \u53c8\u5f88\u96be\u4fdd\u8bc1\u6ce8\u518c\u7684\u5904\u7406\u5668\u662f\u6700\u540e\u6ce8\u518c\u7684. \nZKWeb\u9488\u5bf9\u8fd9\u79cd\u60c5\u51b5\u63d0\u4f9b\u4e86\u53e6\u5916\u4e00\u4e2a\u63a5\u53e3 IHttpRequestPreHandler .  [ExportMany]  public   class   AddVersionHeaderHandler   :   IHttpRequestPreHandler   { \n     public   void   OnRequest ()   { \n         var   response   =   HttpManager . CurrentContext . Response ; \n         response . AddHeader ( X-ZKWeb-Version ,   Application . FullVersion ); \n     }  }   IHttpRequestPreHandler \u53ef\u4ee5\u4fdd\u8bc1\u5728\u6240\u6709 IHttpRequestHandler \u524d\u8c03\u7528, \n\u6ce8\u610f IHttpRequestPreHandler \u4e2d\u4e0d\u5e94\u8be5\u5199\u5165 Response \u548c\u8c03\u7528 response.End() .", 
+            "title": "Http\u8bf7\u6c42\u9884\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/core/http_handlers/index.html#http_2", 
+            "text": "\u540c\u6837\u7684, \u5982\u679c\u60a8\u60f3\u5728\u6240\u6709Http\u8bf7\u6c42\u5904\u7406\u540e\u6267\u884c\u4e00\u4e9b\u81ea\u5b9a\u4e49\u7684\u64cd\u4f5c, \n\u53ef\u4ee5\u4f7f\u7528 IHttpRequestPostHandler \u63a5\u53e3, \u8fd9\u4e2a\u63a5\u53e3\u7684\u4f7f\u7528\u8ddf\u4e0a\u9762\u4e00\u6837, \n\u53ea\u662f\u5b83\u4f1a\u4fdd\u8bc1\u5728\u6240\u6709 IHttpRequestHandler \u4e4b\u540e\u6267\u884c.", 
+            "title": "Http\u8bf7\u6c42\u7684\u540e\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/core/http_handlers/index.html#http_3", 
+            "text": "\u6709\u65f6\u5019\u60a8\u53ef\u80fd\u4f1a\u60f3\u540c\u65f6\u4f7f\u7528\u9884\u5904\u7406\u5668\u548c\u540e\u5904\u7406\u5668, \u4e5f\u5c31\u662f\u60f3\u628a\u8bf7\u6c42\u5d4c\u5957\u5728 using \u91cc\u9762, \n\u540c\u65f6\u4f7f\u7528\u4e0a\u9762\u7684 IHttpRequestPreHandler \u548c IHttpRequestPostHandler \u53ef\u80fd\u6bd4\u8f83\u56f0\u96be. \n\u8fd9\u65f6\u5019\u53ef\u4ee5\u4f7f\u7528 IHttpRequestHandlerWrapper .  \u8fd9\u4e2a\u63a5\u53e3\u7684\u4f7f\u7528\u8ddfOwin, Asp.Net Core\u7684\u4e2d\u95f4\u4ef6\u6bd4\u8f83\u76f8\u4f3c.  [ExportMany]  public   class   ExampleWrapper   :   IHttpRequestHandlerWrapper   { \n     public   Action   WrapHandlerAction ( Action   action )   { \n         return   ()   =   { \n             using   ( SomeScope ())   { \n                 action (); \n             } \n         }; \n     }  }   \u5982\u679c\u60a8\u53ea\u8003\u8651\u63a7\u5236\u5668, \u4e5f\u53ef\u4ee5\u4f7f\u7528\u524d\u4e00\u7bc7\u63d0\u5230\u7684 Action\u8fc7\u6ee4\u5668 .", 
+            "title": "Http\u8bf7\u6c42\u5305\u88c5\u5668"
+        }, 
+        {
+            "location": "/core/http_handlers/index.html#http_4", 
+            "text": "ZKWeb\u63d0\u4f9b\u4e86\u4e00\u4e2a\u4e13\u95e8\u7684\u9519\u8bef\u5904\u7406\u5668, \n\u6ce8\u518c IHttpRequestErrorHandler \u63a5\u53e3\u5373\u53ef\u5168\u5c40\u5904\u7406\u8bf7\u6c42\u4e2d\u7684\u9519\u8bef.  [ExportMany]  public   class   HttpErrorHandlerExample   :   IHttpRequestErrorHandler   { \n     public   void   OnError ( Exception   ex )   { \n         var   httpEx   =   ex   as   HttpException ;   // HttpException in ZKWebStandard.Web \n         if   ( httpEx   !=   null     httpEx . StatusCode   ==   404 )   { \n             var   response   =   HttpManager . CurrentContext . Response ; \n             new   PlainResult ( custom 404 page ). WriteResponse ( response ); \n             response . End (); \n         } \n     }  }   \u5982\u679c\u6709\u591a\u4e2a\u9519\u8bef\u5904\u7406\u5668, \u4f1a\u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u8c03\u7528, \n\u5982\u679c\u5176\u4e2d\u4e00\u4e2a\u8c03\u7528\u4e86 response.End() \u5219\u4e0d\u7ee7\u7eed\u8c03\u7528.", 
+            "title": "Http\u9519\u8bef\u5904\u7406\u5668"
+        }, 
+        {
+            "location": "/core/http_handlers/index.html#http_5", 
+            "text": "\u4e0a\u9762\u7684\u5904\u7406\u5668\u7684\u6574\u4f53\u8c03\u7528\u6d41\u7a0b\u662f:  try {\n    try {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestPreHandler {\n            \u8c03\u7528OnRequest\u51fd\u6570\n        }\n        \u5904\u7406\u51fd\u6570 = new Action ({\n            \u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u679a\u4e3eIHttpRequestHandler {\n                \u8c03\u7528OnRequest\u51fd\u6570  = \u63a7\u5236\u5668\u4f1a\u5728\u8fd9\u91cc\u8c03\u7528\n            }\n            \u629b\u51fa404\u9519\u8bef\n        })\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestHandlerWrapper {\n            \u5904\u7406\u51fd\u6570 = wrapper.WrapHandlerAction(\u5904\u7406\u51fd\u6570)\n        }\n        \u8c03\u7528\u5904\u7406\u51fd\u6570\n    } finally {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u679a\u4e3eIHttpRequestPostHandler {\n            \u8c03\u7528OnRequest\u51fd\u6570\n        }\n    }\n} catch (\u4ee3\u8868\u8bf7\u6c42\u7ed3\u675f\u7684\u4f8b\u5916) {\n    \u5904\u7406\u8bf7\u6c42\u5b8c\u6210\n} catch (Exception ex) {\n    try {\n        \u6309\u6ce8\u518c\u987a\u5e8f\u7684\u76f8\u53cd\u987a\u5e8f\u679a\u4e3eIHttpRequestErrorHandler {\n            \u8c03\u7528OnError\u51fd\u6570\n        }\n    } catch (\u4ee3\u8868\u8bf7\u6c42\u7ed3\u675f\u7684\u4f8b\u5916) {\n        \u5904\u7406\u9519\u8bef\u5b8c\u6210\n    }\n}  ZKWeb\u9ed8\u8ba4\u6ce8\u518c\u7684 IHttpRequestHandler \u5c31\u662f ControllerManager , \n\u800c\u9ed8\u8ba4\u6ce8\u518c\u7684 IHttpRequestErrorHandler \u5219\u4f1a\u8bb0\u5f55\u9519\u8bef\u65e5\u5fd7\u5230 App_Data\\logs \u4e0b.", 
+            "title": "Http\u8bf7\u6c42\u7684\u6574\u4f53\u6d41\u7a0b"
+        }, 
+        {
             "location": "/core/template_engine/index.html", 
-            "text": "\u6587\u6863\u5c1a\u672a\u7f16\u5199\u5b8c\u6bd5, \u8bf7\u8010\u5fc3\u7b49\u5f85.", 
+            "text": "ZKWeb\u7684\u6a21\u677f\u7cfb\u7edf\u4f7f\u7528\u4e86DotLiquid.\n\n\u60a8\u53ef\u4ee5\u5148\u53c2\u8003DotLiquid\u7684\u6587\u6863: \nhttp://dotliquidmarkup.org\n\n\n\u4e3a\u4ec0\u4e48\u4e0d\u4f7f\u7528Razor\n\n\n\n\nDotLiquid\u7684\u6a21\u677f\u4e0d\u8981\u6c42\u62e5\u6709\u57fa\u7c7b\u7b49\u590d\u6742\u7684\u73af\u5883, \u53ea\u9700\u8981\u4f20\u53c2\u6570\u5373\u53ef\u7f16\u8bd1\n\n\nDotLiquid\u7684\u6a21\u677f\u53ea\u7f16\u8bd1\u6210\u8bed\u6cd5\u6811\u800c\u4e0d\u662fIL, \u9875\u9762\u7b2c\u4e00\u6b21\u6253\u5f00\u901f\u5ea6\u8fdc\u6bd4Razor\u5feb\n\n\nDotLiquid\u7684\u6587\u4ef6\u7cfb\u7edf\u5bb9\u6613\u6269\u5c55, ZKWeb\u4e2d\u5df2\u5b9e\u73b0\u4e86\u7c7b\u4f3cDjango\u7684\u900f\u8fc7\u5f0f\u6587\u4ef6\u7cfb\u7edf\n\n\n\n\n\u5728\u63a7\u5236\u5668\u4e2d\u8fd4\u56de\u6a21\u677f\n\n\n\u8fd9\u91cc\u4ee5\u9879\u76ee\u521b\u5efa\u5668\u521b\u5efa\u7684\u7a7a\u767d\u9879\u76ee\u4e3a\u4f8b, \u9996\u5148\u6587\u4ef6\u7ed3\u6784\u662f\u8fd9\u6837\u7684:\n\n\n\n\n\u63d2\u4ef6\u6587\u4ef6\u5939\n\n\nsrc \u6e90\u4ee3\u7801\n\n\nstatic \u9759\u6001\u6587\u4ef6\n\n\nhello.world.css\n\n\nhello.css\n\n\n\n\n\n\nhello.world.js\n\n\nhello.js\n\n\n\n\n\n\n\n\n\n\ntemplates \u6a21\u677f\u6587\u4ef6\n\n\nhello.world\n\n\nhello.html\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u63a7\u5236\u5668\u8fd4\u56de\u6a21\u677f\u7684\u4ee3\u7801\u5982\u4e0b:\n\n\n[ExportMany]\n\n\npublic\n \nclass\n \nHelloController\n \n:\n \nIController\n \n{\n\n\n    [Action(\n/\n)]\n\n    \npublic\n \nIActionResult\n \nIndex\n()\n \n{\n\n        \n// \u7b2c\u4e00\u4e2a\u53c2\u6570\u662f\u6a21\u677f\u8def\u5f84, \u7b2c\u4e8c\u4e2a\u53c2\u6570\u662f\u4f20\u7ed9\u6a21\u677f\u7684\u53c2\u6570\n\n        \nreturn\n \nnew\n \nTemplateResult\n(\nhello.world/hello.html\n,\n \nnew\n \n{\n \ntext\n \n=\n \nWorld\n \n});\n\n    \n}\n\n\n}\n\n\n\n\n\n\n\u6a21\u677f\nhello.html\n\u7684\u5185\u5bb9\u5982\u4e0b:\n\n\n!DOCTYPE html\n\n\nhtml\n\n\nhead\n\n    \ntitle\nHello\n/\ntitle\n\n    \nlink\n \nhref\n=\n/static/hello.world.css/hello.css\n \nrel\n=\nstylesheet\n \ntype\n=\ntext/css\n \n/\n\n\n/\nhead\n\n\nbody\n\n    \nh1\nHello {{ text }}!\n/\nh1\n\n    \nhr\n \n/\n\n    \ndiv\n\n        \np\nIf you\nre seeing this, that mean you didn\nt use default plugin collections.\n/\np\n\n        \np\nSo this is an empty project.\n/\np\n\n        \np\nYou can open src\\Controllers\\HelloController.cs and add something to it.\n/\np\n\n    \n/\ndiv\n\n    \nscript\n \nsrc\n=\n/static/hello.world.js/hello.js\n \ntype\n=\ntext/javascript\n/\nscript\n\n\n/\nbody\n\n\n/\nhtml\n \n\n\n\n\n\n\u6211\u4eec\u53ef\u4ee5\u770b\u5230\u6a21\u677f\u4e2d\u6709\n{{ text }}\n\u7528\u4e8e\u7ed1\u5b9a\u4f20\u5165\u7684\u53c2\u6570, \u8fd9\u4e2a\u5c31\u662f\u6700\u7b80\u5355\u7684\u4f8b\u5b50\u4e86.\n\n\n\u60a8\u53ef\u80fd\u4f1a\u5947\u602a\u4e3a\u4ec0\u4e48\u9700\u8981\nhello.world\n, \nhello.world.js\n, \nhello.world.css\n\u8fd9\u4e9b\u6587\u4ef6\u5939,\n\n\u8fd9\u662f\u56e0\u4e3a\u5728ZKWeb\u4e2d\u8d44\u6e90\u6587\u4ef6\u7684\u547d\u540d\u7a7a\u95f4\u5728\u5404\u4e2a\u63d2\u4ef6\u4e2d\u662f\u5171\u4eab\u7684,\n\n\u60a8\u53ef\u4ee5\u53c2\u8003\n\u63d2\u4ef6\u7cfb\u7edf\n\u4e2d\u5bf9\u900f\u8fc7\u5f0f\u6587\u4ef6\u7cfb\u7edf\u7684\u4ecb\u7ecd.\n\n\n\u6a21\u677f\u7684\u8bed\u6cd5\n\n\n\u53d8\u91cf\n\n\n{{ }}\n\u53ef\u4ee5\u7528\u4e8e\u63cf\u753b\u53d8\u91cf\u6216\u8005\u5e38\u91cf\u5230\u6240\u5728\u7684\u4f4d\u7f6e:\n\n\nHello {{ name }}\nHello {{ user.name }}\nHello {{ \ntobi\n }}\n\n\n\n\n\n\u8fc7\u6ee4\u5668\n\n\n\u5728\n{{ }}\n\u4e2d\u4f7f\u7528\n|\n\u53ef\u4ee5\u5bf9\u7ed1\u5b9a\u7684\u503c\u505a\u51fa\u8fc7\u6ee4.\n\n\nHello {{ \ntobi\n | upcase }}\nHello tobi has {{ \ntobi\n | size }} letters!\nHello {{ \n*tobi*\n | textilize | upcase }}\nHello {{ \nnow\n | date: \n%Y %h\n }}\n\n\n\n\n\n\u6807\u7b7e\n\n\n{% %}\n\u53ef\u4ee5\u4f7f\u7528\u9884\u5b9a\u4e49\u7684\u6807\u7b7e:\n\n\n{% if user %}\n  Hello {{ user.name }}\n{% endif %}\n\n{% if user.name == \nbob\n and user.age \n 45 %}\n  Hello old bob\n{% endif %}\n\n\n\n\n\n\u66f4\u591a\u7684\u8bed\u6cd5\u53ef\u4ee5\u53c2\u8003\nLiquid\u7684\u5b98\u65b9\u6587\u6863\n.\n\n\n\u5b89\u5168\u7ed1\u503c\n\n\n\u4f7f\u7528DotLiquid\u7ed1\u503c\u65f6\u5e76\u4e0d\u662f\u6240\u6709\u503c\u90fd\u53ef\u4ee5\u7ed1\u5b9a,\n\n\u5185\u90e8\u4f1a\u6709\u4e00\u5957\u5b89\u5168\u673a\u5236\u8ba9\u672a\u7ecf\u6279\u51c6\u7684\u503c\u4e0d\u80fd\u7ed1\u5b9a\u5230\u6a21\u677f\u4e0a.\n\n\n\u9700\u8981\u5141\u8bb8\u7ed1\u5b9a, \u8bf7\u8ba9\u7c7b\u578b\u5b9e\u73b0\nILiquidizable\n, \u6216\u8005\u6807\u8bb0\u7c7b\u578b\u4e3a\n[LiquidType]\n,\n\n\u6216\u8005\u8c03\u7528\nTemplate.RegisterSafeType(Type type, string[] allowedMembers)\n\u6ce8\u518c,\n\n\u66f4\u8be6\u7ec6\u7684\u8bf4\u660e\u8bf7\n\u67e5\u770b\u8fd9\u91cc\n.\n\n\nDotLiquid\u5185\u7f6e\u7684\u6807\u7b7e\n\n\nDotLiquid\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u6807\u7b7e:\n\n\nassign\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% assign foo = \nmonkey\n %}\n\n\n\n\n\ncapture\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% capture heading %}\nMonkeys!\n{% endcapture %}\n\n\nh1\n{{ heading }}\n/\nh1\n\n\n\n\n\n\ncase\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% case condition %}{% when 1 %} its 1 {% when 2 %} its 2 {% endcase %}\n\n\n\n\n\ncomment\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{%comment%} comment {%endcomment%}\n\n\n\n\n\ncontinue\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% for i in array.items %}\n  {% if i == 3 %}\n    {% continue %}\n  {% endif %}\n  {{ i }}\n{% endfor %}\n\n\n\n\n\ncycle\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% for item in items %}\n  \ndiv\n \nclass\n=\n{% cycle \nred\n, \ngreen\n, \nblue\n %}\n{{ item }}\n/\ndiv\n\n{% endfor %}\n\n\n\n\n\nextend\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n\u7528\u4e8e\u7ee7\u627f\u6a21\u677f, \u5177\u4f53\u4f8b\u5b50\u8bf7\u770b\u4e0a\u9762\u4ee3\u7801\u4e2d\u7684\u6ce8\u91ca.\n\n\nfor\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% for item in collection %}\n  {{ forloop.index }}: {{ item.name }}\n{% endfor %}\n\n\n\n\n\nif\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% if user.admin %}\n  Admin user!\n{% else %}\n  Not admin user\n{% endif %}\n\n\n\n\n\ninclude\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% include common.base/header.html %}\n\n\n\n\n\nliteral\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% literal %}{% if user = \ntobi\n %}hi{% endif %}{% endliteral %}\n\n\n\n\n\nraw\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% raw %}{% if user = \ntobi\n %}hi{% endif %}{% endraw %}\n\n\n\n\n\nunless\n\n\n\u6e90\u4ee3\u7801: \n\u70b9\u51fb\u67e5\u770b\n\n\n{% unless x \n \n0\n \n%}\n \nx\n \nis\n \ngreater\n \nthan\n \nzero\n \n{%\n \nend\n \n%}\n\n\n\n\n\n\nZKWeb\u5185\u7f6e\u7684\u6807\u7b7e\n\n\nZKWeb\u5728DotLiquid\u7684\u57fa\u7840\u4e0a\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u6807\u7b7e:\n\n\narea\n\n\n\u53c2\u8003\n\u52a8\u6001\u5185\u5bb9\n.\n\n\n{% area test_area %}\n\n\n\n\n\nfetch\n\n\n\u628a\u6307\u5b9a\u8def\u5f84\u7684\u6267\u884c\u7ed3\u679c\u8bbe\u7f6e\u5230\u53d8\u91cf, \u9002\u7528\u4e8eJsonResult\u548cPlainResult.\n\n\n{% fetch /api/login_info \n login_info %}\n\n\n\n\n\nhtml_lang\n\n\n\u663e\u793a\u5f53\u524d\u7684\u8bf7\u6c42\u7684\u8bed\u8a00\u4ee3\u53f7.\n\n\n{% html_lang %}\n\n\n\n\n\nraw_html\n\n\n\u63cf\u753b\u539f\u59cb\u7684\u5185\u5bb9, \u4e0d\u7ecf\u8fc7html\u7f16\u7801.\n\n\n{% assign variable = \nbr\n/\n %}\n{% raw_html variable %}\n\n\n\n\n\nDotLiquid\u5185\u7f6e\u7684\u8fc7\u6ee4\u5668\n\n\nDotLiquid\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u8fc7\u6ee4\u5668, \u6e90\u4ee3\u7801\u53ef\u4ee5\n\u67e5\u770b\u8fd9\u91cc\n.\n\n\nsize\n\n\n{{ 'abc' | size }}\n == \n3\n\n\nslice\n\n\n{{ 'abc' | slice 1,2 }}\n == \nbc\n\n\ndowncase\n\n\n{{ 'Abc' | downcase }}\n == \nabc\n\n\nurl_encode\n\n\n{{ '/' | url_encode }}\n == \n%2F\n\n\ncapitalize\n\n\n{{ 'notThing' | url_encode }}\n == \nNotthing\n\n\nescape, h(\u522b\u540d)\n\n\n{{ '\nstrong\n' | h }}\n == \nlt;strong\ngt;\n\n\ntruncate\n\n\n{{ '1234567890' | truncate: 7 }}\n == \n1234...\n\n\ntruncate_words\n\n\n{{ 'one two three' | truncate_words: 2 }}\n == \none two...\n\n\nsplit\n\n\n{{ 'This is a sentence' | split: ' ' }}\n == \n\u5217\u8868\u5bf9\u8c61\n\n\nstrip_html\n\n\n{{ '\ndiv\nabc\n/div\n' | strip_html }}\n == \nabc\n\n\ncurrency\n\n\n{{ 6.72 | currency }}\n == \n$6.72 (\u6839\u636e\u5f53\u524d\u533a\u57df)\n\n\nstrip_newlines\n\n\n{{ 'a\\r\\nb\\r\\nc' | strip_newlines }}\n == \nabc\n\n\njoin\n\n\n{{ list_123 | join }}\n == \n1 2 3\n\n\nsort\n\n\n{{ list_321 | sort | join }}\n == \n1 2 3\n\n\nmap\n\n\n{{ list_dogs | map: 'name' }}\n == \n\u5305\u542bdog.name\u7684\u5217\u8868\n\n\nreplace\n\n\n{{ 'a a a' | replace: 'a', 'b' }}\n == \nb b b\n\n\nreplace_first\n\n\n{{ 'a a a' | replace_first: 'a', 'b' }}\n == \nb a a\n\n\nremove\n\n\n{{ 'aabc' | remove: 'a' }}\n == \nbc\n\n\nremove_first\n\n\n{{ 'aabc' | remove_first: 'a' }}\n == \nabc\n\n\nappend\n\n\n{{ 'a' | append: 'b' }}\n == \nab\n\n\nprepend\n\n\n{{ 'a' | prepend: 'b' }}\n == \nba\n\n\nnewline_to_br\n\n\n{{ 'a\\r\\nb' | newline_to_br }}\n == \na\nbr /\n\\r\\nb\n\n\ndate\n\n\n{{ 'now' | date: 'MM/dd/yyyy' }}\n == \n\u5f53\u524d\u65f6\u95f4\u7684MM/dd/yyyy\u683c\u5f0f\n\n\nfirst\n\n\n{{ list_123 | first }}\n == \n1\n\n\nlast\n\n\n{{ list_123 | last }}\n == \n3\n\n\nplus\n\n\n{{ 1 | plus: 2 }}\n == \n3\n\n\nminus\n\n\n{{ 1 | minus: 2 }}\n == \n-1\n\n\ntimes\n\n\n{{ 3 | times: 4 }}\"\n == \n12\n\n\nround\n\n\n{{ 1.234678 | round: 3 }}\n == \n1.235\n\n\ndivided_by\n\n\n{{ 15 | divided_by: 3 }}\n == \n5\n\n\nmodulo\n\n\n{{ 3 | modulo: 2 }}\n == \n1\n\n\ndefault\n\n\n{{ not_exist | default: '123' }}\n == \n123\n\n\nZKWeb\u5185\u7f6e\u7684\u8fc7\u6ee4\u5668\n\n\nZKWeb\u5728DotLiquid\u7684\u57fa\u7840\u4e0a\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u8fc7\u6ee4\u5668:\n\n\ntrans\n\n\n\u7ffb\u8bd1\u6307\u5b9a\u7684\u6587\u672c\uff0c\u53c2\u8003\n\u591a\u8bed\u8a00\n.\n\n\n{{ text | trans }}, {{ \"fixed text\" | trans }}\n\n\nformat\n\n\n\u683c\u5f0f\u5316\u5b57\u7b26\u4e32\uff0c\u6700\u591a\u53ef\u652f\u63018\u4e2a\u53c2\u6570.\n\n\n{{ \"name is [0], age is [1]\" | format: name, age }}\n\n\nraw_html\n\n\n\u63cf\u753b\u539f\u59cb\u7684\u5185\u5bb9\uff0c\u4e0d\u7ecf\u8fc7html\u7f16\u7801.\n\n\n{{ variable | raw_html }}\n\n\n\u5404\u4e2a\u63d2\u4ef6\u4e2d\u8fd8\u4f1a\u6709\u66f4\u591a\u7684\u81ea\u5b9a\u4e49\u6807\u7b7e\u548c\u8fc7\u6ee4\u5668, \u8bf7\u53c2\u8003\u63d2\u4ef6\u7684\u6587\u6863\u8bf4\u660e.", 
             "title": "\u6a21\u677f\u5f15\u64ce"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#razor", 
+            "text": "DotLiquid\u7684\u6a21\u677f\u4e0d\u8981\u6c42\u62e5\u6709\u57fa\u7c7b\u7b49\u590d\u6742\u7684\u73af\u5883, \u53ea\u9700\u8981\u4f20\u53c2\u6570\u5373\u53ef\u7f16\u8bd1  DotLiquid\u7684\u6a21\u677f\u53ea\u7f16\u8bd1\u6210\u8bed\u6cd5\u6811\u800c\u4e0d\u662fIL, \u9875\u9762\u7b2c\u4e00\u6b21\u6253\u5f00\u901f\u5ea6\u8fdc\u6bd4Razor\u5feb  DotLiquid\u7684\u6587\u4ef6\u7cfb\u7edf\u5bb9\u6613\u6269\u5c55, ZKWeb\u4e2d\u5df2\u5b9e\u73b0\u4e86\u7c7b\u4f3cDjango\u7684\u900f\u8fc7\u5f0f\u6587\u4ef6\u7cfb\u7edf", 
+            "title": "\u4e3a\u4ec0\u4e48\u4e0d\u4f7f\u7528Razor"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_1", 
+            "text": "\u8fd9\u91cc\u4ee5\u9879\u76ee\u521b\u5efa\u5668\u521b\u5efa\u7684\u7a7a\u767d\u9879\u76ee\u4e3a\u4f8b, \u9996\u5148\u6587\u4ef6\u7ed3\u6784\u662f\u8fd9\u6837\u7684:   \u63d2\u4ef6\u6587\u4ef6\u5939  src \u6e90\u4ee3\u7801  static \u9759\u6001\u6587\u4ef6  hello.world.css  hello.css    hello.world.js  hello.js      templates \u6a21\u677f\u6587\u4ef6  hello.world  hello.html         \u63a7\u5236\u5668\u8fd4\u56de\u6a21\u677f\u7684\u4ee3\u7801\u5982\u4e0b:  [ExportMany]  public   class   HelloController   :   IController   {      [Action( / )] \n     public   IActionResult   Index ()   { \n         // \u7b2c\u4e00\u4e2a\u53c2\u6570\u662f\u6a21\u677f\u8def\u5f84, \u7b2c\u4e8c\u4e2a\u53c2\u6570\u662f\u4f20\u7ed9\u6a21\u677f\u7684\u53c2\u6570 \n         return   new   TemplateResult ( hello.world/hello.html ,   new   {   text   =   World   }); \n     }  }   \u6a21\u677f hello.html \u7684\u5185\u5bb9\u5982\u4e0b:  !DOCTYPE html  html  head \n     title Hello / title \n     link   href = /static/hello.world.css/hello.css   rel = stylesheet   type = text/css   /  / head  body \n     h1 Hello {{ text }}! / h1 \n     hr   / \n     div \n         p If you re seeing this, that mean you didn t use default plugin collections. / p \n         p So this is an empty project. / p \n         p You can open src\\Controllers\\HelloController.cs and add something to it. / p \n     / div \n     script   src = /static/hello.world.js/hello.js   type = text/javascript / script  / body  / html    \u6211\u4eec\u53ef\u4ee5\u770b\u5230\u6a21\u677f\u4e2d\u6709 {{ text }} \u7528\u4e8e\u7ed1\u5b9a\u4f20\u5165\u7684\u53c2\u6570, \u8fd9\u4e2a\u5c31\u662f\u6700\u7b80\u5355\u7684\u4f8b\u5b50\u4e86.  \u60a8\u53ef\u80fd\u4f1a\u5947\u602a\u4e3a\u4ec0\u4e48\u9700\u8981 hello.world ,  hello.world.js ,  hello.world.css \u8fd9\u4e9b\u6587\u4ef6\u5939, \n\u8fd9\u662f\u56e0\u4e3a\u5728ZKWeb\u4e2d\u8d44\u6e90\u6587\u4ef6\u7684\u547d\u540d\u7a7a\u95f4\u5728\u5404\u4e2a\u63d2\u4ef6\u4e2d\u662f\u5171\u4eab\u7684, \n\u60a8\u53ef\u4ee5\u53c2\u8003 \u63d2\u4ef6\u7cfb\u7edf \u4e2d\u5bf9\u900f\u8fc7\u5f0f\u6587\u4ef6\u7cfb\u7edf\u7684\u4ecb\u7ecd.", 
+            "title": "\u5728\u63a7\u5236\u5668\u4e2d\u8fd4\u56de\u6a21\u677f"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_2", 
+            "text": "", 
+            "title": "\u6a21\u677f\u7684\u8bed\u6cd5"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_3", 
+            "text": "{{ }} \u53ef\u4ee5\u7528\u4e8e\u63cf\u753b\u53d8\u91cf\u6216\u8005\u5e38\u91cf\u5230\u6240\u5728\u7684\u4f4d\u7f6e:  Hello {{ name }}\nHello {{ user.name }}\nHello {{  tobi  }}", 
+            "title": "\u53d8\u91cf"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_4", 
+            "text": "\u5728 {{ }} \u4e2d\u4f7f\u7528 | \u53ef\u4ee5\u5bf9\u7ed1\u5b9a\u7684\u503c\u505a\u51fa\u8fc7\u6ee4.  Hello {{  tobi  | upcase }}\nHello tobi has {{  tobi  | size }} letters!\nHello {{  *tobi*  | textilize | upcase }}\nHello {{  now  | date:  %Y %h  }}", 
+            "title": "\u8fc7\u6ee4\u5668"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_5", 
+            "text": "{% %} \u53ef\u4ee5\u4f7f\u7528\u9884\u5b9a\u4e49\u7684\u6807\u7b7e:  {% if user %}\n  Hello {{ user.name }}\n{% endif %}\n\n{% if user.name ==  bob  and user.age   45 %}\n  Hello old bob\n{% endif %}  \u66f4\u591a\u7684\u8bed\u6cd5\u53ef\u4ee5\u53c2\u8003 Liquid\u7684\u5b98\u65b9\u6587\u6863 .", 
+            "title": "\u6807\u7b7e"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#_6", 
+            "text": "\u4f7f\u7528DotLiquid\u7ed1\u503c\u65f6\u5e76\u4e0d\u662f\u6240\u6709\u503c\u90fd\u53ef\u4ee5\u7ed1\u5b9a, \n\u5185\u90e8\u4f1a\u6709\u4e00\u5957\u5b89\u5168\u673a\u5236\u8ba9\u672a\u7ecf\u6279\u51c6\u7684\u503c\u4e0d\u80fd\u7ed1\u5b9a\u5230\u6a21\u677f\u4e0a.  \u9700\u8981\u5141\u8bb8\u7ed1\u5b9a, \u8bf7\u8ba9\u7c7b\u578b\u5b9e\u73b0 ILiquidizable , \u6216\u8005\u6807\u8bb0\u7c7b\u578b\u4e3a [LiquidType] , \n\u6216\u8005\u8c03\u7528 Template.RegisterSafeType(Type type, string[] allowedMembers) \u6ce8\u518c, \n\u66f4\u8be6\u7ec6\u7684\u8bf4\u660e\u8bf7 \u67e5\u770b\u8fd9\u91cc .", 
+            "title": "\u5b89\u5168\u7ed1\u503c"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#dotliquid", 
+            "text": "DotLiquid\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u6807\u7b7e:", 
+            "title": "DotLiquid\u5185\u7f6e\u7684\u6807\u7b7e"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#assign", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% assign foo =  monkey  %}", 
+            "title": "assign"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#capture", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% capture heading %}\nMonkeys!\n{% endcapture %} h1 {{ heading }} / h1", 
+            "title": "capture"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#case", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% case condition %}{% when 1 %} its 1 {% when 2 %} its 2 {% endcase %}", 
+            "title": "case"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#comment", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {%comment%} comment {%endcomment%}", 
+            "title": "comment"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#continue", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% for i in array.items %}\n  {% if i == 3 %}\n    {% continue %}\n  {% endif %}\n  {{ i }}\n{% endfor %}", 
+            "title": "continue"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#cycle", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% for item in items %}\n   div   class = {% cycle  red ,  green ,  blue  %} {{ item }} / div \n{% endfor %}", 
+            "title": "cycle"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#extend", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  \u7528\u4e8e\u7ee7\u627f\u6a21\u677f, \u5177\u4f53\u4f8b\u5b50\u8bf7\u770b\u4e0a\u9762\u4ee3\u7801\u4e2d\u7684\u6ce8\u91ca.", 
+            "title": "extend"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#for", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% for item in collection %}\n  {{ forloop.index }}: {{ item.name }}\n{% endfor %}", 
+            "title": "for"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#if", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% if user.admin %}\n  Admin user!\n{% else %}\n  Not admin user\n{% endif %}", 
+            "title": "if"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#include", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% include common.base/header.html %}", 
+            "title": "include"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#literal", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% literal %}{% if user =  tobi  %}hi{% endif %}{% endliteral %}", 
+            "title": "literal"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#raw", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% raw %}{% if user =  tobi  %}hi{% endif %}{% endraw %}", 
+            "title": "raw"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#unless", 
+            "text": "\u6e90\u4ee3\u7801:  \u70b9\u51fb\u67e5\u770b  {% unless x    0   %}   x   is   greater   than   zero   {%   end   %}", 
+            "title": "unless"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#zkweb", 
+            "text": "ZKWeb\u5728DotLiquid\u7684\u57fa\u7840\u4e0a\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u6807\u7b7e:", 
+            "title": "ZKWeb\u5185\u7f6e\u7684\u6807\u7b7e"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#area", 
+            "text": "\u53c2\u8003 \u52a8\u6001\u5185\u5bb9 .  {% area test_area %}", 
+            "title": "area"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#fetch", 
+            "text": "\u628a\u6307\u5b9a\u8def\u5f84\u7684\u6267\u884c\u7ed3\u679c\u8bbe\u7f6e\u5230\u53d8\u91cf, \u9002\u7528\u4e8eJsonResult\u548cPlainResult.  {% fetch /api/login_info   login_info %}", 
+            "title": "fetch"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#html_lang", 
+            "text": "\u663e\u793a\u5f53\u524d\u7684\u8bf7\u6c42\u7684\u8bed\u8a00\u4ee3\u53f7.  {% html_lang %}", 
+            "title": "html_lang"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#raw_html", 
+            "text": "\u63cf\u753b\u539f\u59cb\u7684\u5185\u5bb9, \u4e0d\u7ecf\u8fc7html\u7f16\u7801.  {% assign variable =  br /  %}\n{% raw_html variable %}", 
+            "title": "raw_html"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#dotliquid_1", 
+            "text": "DotLiquid\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u8fc7\u6ee4\u5668, \u6e90\u4ee3\u7801\u53ef\u4ee5 \u67e5\u770b\u8fd9\u91cc .", 
+            "title": "DotLiquid\u5185\u7f6e\u7684\u8fc7\u6ee4\u5668"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#size", 
+            "text": "{{ 'abc' | size }}  ==  3", 
+            "title": "size"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#slice", 
+            "text": "{{ 'abc' | slice 1,2 }}  ==  bc", 
+            "title": "slice"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#downcase", 
+            "text": "{{ 'Abc' | downcase }}  ==  abc", 
+            "title": "downcase"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#url_encode", 
+            "text": "{{ '/' | url_encode }}  ==  %2F", 
+            "title": "url_encode"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#capitalize", 
+            "text": "{{ 'notThing' | url_encode }}  ==  Notthing", 
+            "title": "capitalize"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#escape-h", 
+            "text": "{{ ' strong ' | h }}  ==  lt;strong gt;", 
+            "title": "escape, h(\u522b\u540d)"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#truncate", 
+            "text": "{{ '1234567890' | truncate: 7 }}  ==  1234...", 
+            "title": "truncate"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#truncate_words", 
+            "text": "{{ 'one two three' | truncate_words: 2 }}  ==  one two...", 
+            "title": "truncate_words"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#split", 
+            "text": "{{ 'This is a sentence' | split: ' ' }}  ==  \u5217\u8868\u5bf9\u8c61", 
+            "title": "split"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#strip_html", 
+            "text": "{{ ' div abc /div ' | strip_html }}  ==  abc", 
+            "title": "strip_html"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#currency", 
+            "text": "{{ 6.72 | currency }}  ==  $6.72 (\u6839\u636e\u5f53\u524d\u533a\u57df)", 
+            "title": "currency"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#strip_newlines", 
+            "text": "{{ 'a\\r\\nb\\r\\nc' | strip_newlines }}  ==  abc", 
+            "title": "strip_newlines"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#join", 
+            "text": "{{ list_123 | join }}  ==  1 2 3", 
+            "title": "join"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#sort", 
+            "text": "{{ list_321 | sort | join }}  ==  1 2 3", 
+            "title": "sort"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#map", 
+            "text": "{{ list_dogs | map: 'name' }}  ==  \u5305\u542bdog.name\u7684\u5217\u8868", 
+            "title": "map"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#replace", 
+            "text": "{{ 'a a a' | replace: 'a', 'b' }}  ==  b b b", 
+            "title": "replace"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#replace_first", 
+            "text": "{{ 'a a a' | replace_first: 'a', 'b' }}  ==  b a a", 
+            "title": "replace_first"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#remove", 
+            "text": "{{ 'aabc' | remove: 'a' }}  ==  bc", 
+            "title": "remove"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#remove_first", 
+            "text": "{{ 'aabc' | remove_first: 'a' }}  ==  abc", 
+            "title": "remove_first"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#append", 
+            "text": "{{ 'a' | append: 'b' }}  ==  ab", 
+            "title": "append"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#prepend", 
+            "text": "{{ 'a' | prepend: 'b' }}  ==  ba", 
+            "title": "prepend"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#newline_to_br", 
+            "text": "{{ 'a\\r\\nb' | newline_to_br }}  ==  a br / \\r\\nb", 
+            "title": "newline_to_br"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#date", 
+            "text": "{{ 'now' | date: 'MM/dd/yyyy' }}  ==  \u5f53\u524d\u65f6\u95f4\u7684MM/dd/yyyy\u683c\u5f0f", 
+            "title": "date"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#first", 
+            "text": "{{ list_123 | first }}  ==  1", 
+            "title": "first"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#last", 
+            "text": "{{ list_123 | last }}  ==  3", 
+            "title": "last"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#plus", 
+            "text": "{{ 1 | plus: 2 }}  ==  3", 
+            "title": "plus"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#minus", 
+            "text": "{{ 1 | minus: 2 }}  ==  -1", 
+            "title": "minus"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#times", 
+            "text": "{{ 3 | times: 4 }}\"  ==  12", 
+            "title": "times"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#round", 
+            "text": "{{ 1.234678 | round: 3 }}  ==  1.235", 
+            "title": "round"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#divided_by", 
+            "text": "{{ 15 | divided_by: 3 }}  ==  5", 
+            "title": "divided_by"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#modulo", 
+            "text": "{{ 3 | modulo: 2 }}  ==  1", 
+            "title": "modulo"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#default", 
+            "text": "{{ not_exist | default: '123' }}  ==  123", 
+            "title": "default"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#zkweb_1", 
+            "text": "ZKWeb\u5728DotLiquid\u7684\u57fa\u7840\u4e0a\u5185\u7f6e\u4e86\u4ee5\u4e0b\u7684\u8fc7\u6ee4\u5668:", 
+            "title": "ZKWeb\u5185\u7f6e\u7684\u8fc7\u6ee4\u5668"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#trans", 
+            "text": "\u7ffb\u8bd1\u6307\u5b9a\u7684\u6587\u672c\uff0c\u53c2\u8003 \u591a\u8bed\u8a00 .  {{ text | trans }}, {{ \"fixed text\" | trans }}", 
+            "title": "trans"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#format", 
+            "text": "\u683c\u5f0f\u5316\u5b57\u7b26\u4e32\uff0c\u6700\u591a\u53ef\u652f\u63018\u4e2a\u53c2\u6570.  {{ \"name is [0], age is [1]\" | format: name, age }}", 
+            "title": "format"
+        }, 
+        {
+            "location": "/core/template_engine/index.html#raw_html_1", 
+            "text": "\u63cf\u753b\u539f\u59cb\u7684\u5185\u5bb9\uff0c\u4e0d\u7ecf\u8fc7html\u7f16\u7801.  {{ variable | raw_html }}  \u5404\u4e2a\u63d2\u4ef6\u4e2d\u8fd8\u4f1a\u6709\u66f4\u591a\u7684\u81ea\u5b9a\u4e49\u6807\u7b7e\u548c\u8fc7\u6ee4\u5668, \u8bf7\u53c2\u8003\u63d2\u4ef6\u7684\u6587\u6863\u8bf4\u660e.", 
+            "title": "raw_html"
         }, 
         {
             "location": "/core/dynamic_contents/index.html", 
