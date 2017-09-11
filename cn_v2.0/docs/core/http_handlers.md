@@ -2,6 +2,12 @@
 上一篇介绍的控制器只是其中的一个处理器.<br/>
 自己实现处理器可以处理更复杂的url, 例如返回静态文件等.
 
+### Http请求的整体流程图
+
+![Http请求的整体流程图](../images/core/http_handlers.png)
+
+流程的伪代码请看最下面.
+
 ### Http请求处理器
 
 这是`IHttpRequestHandler`的一个简单的例子,<br/>
