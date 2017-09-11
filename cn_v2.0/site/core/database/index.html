@@ -421,9 +421,111 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        数据库
+      </label>
+    
     <a href="index.html" title="数据库" class="md-nav__link md-nav__link--active">
       数据库
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="添加数据实体" class="md-nav__link">
+    添加数据实体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="自动迁移数据库" class="md-nav__link">
+    自动迁移数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="增删查改" class="md-nav__link">
+    增删查改
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="实体事件" class="md-nav__link">
+    实体事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="批量操作" class="md-nav__link">
+    批量操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="原生查询" class="md-nav__link">
+    原生查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="局部指定表名" class="md-nav__link">
+    局部指定表名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="全局处理表名" class="md-nav__link">
+    全局处理表名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm" title="同时使用多个ORM" class="md-nav__link">
+    同时使用多个ORM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="禁用自动升级数据表" class="md-nav__link">
+    禁用自动升级数据表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="已知问题" class="md-nav__link">
+    已知问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="默认插件集的兼容性" class="md-nav__link">
+    默认插件集的兼容性
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +646,97 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="添加数据实体" class="md-nav__link">
+    添加数据实体
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="自动迁移数据库" class="md-nav__link">
+    自动迁移数据库
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="增删查改" class="md-nav__link">
+    增删查改
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="实体事件" class="md-nav__link">
+    实体事件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="批量操作" class="md-nav__link">
+    批量操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="原生查询" class="md-nav__link">
+    原生查询
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="局部指定表名" class="md-nav__link">
+    局部指定表名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" title="全局处理表名" class="md-nav__link">
+    全局处理表名
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#orm" title="同时使用多个ORM" class="md-nav__link">
+    同时使用多个ORM
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" title="禁用自动升级数据表" class="md-nav__link">
+    禁用自动升级数据表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" title="已知问题" class="md-nav__link">
+    已知问题
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" title="默认插件集的兼容性" class="md-nav__link">
+    默认插件集的兼容性
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +750,269 @@
                 
                   <h1>数据库</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb内置了对多种ORM的支持,<br/>
+支持的ORM有NHibernate, EFCore, Dapper, MongoDB,<br/>
+且支持的数据库有MSSQL, MySQL, SQLite, PostgreSQL, InMemory, MongoDB.<br/></p>
+<p>各个ORM都实现了ZKWeb提供的抽象接口,<br/>
+但因为支持的功能有差异同一份代码兼容多个ORM需要花一些功夫,<br/>
+最底部可以看到当前默认插件集的兼容情况.</p>
+<h3 id="_1">添加数据实体</h3>
+<p>我们试着添加一个实体, 它的名字是<code>ExampleTable</code>.<br/>
+在插件文件夹下添加<code>src\Domain\Entities\ExampleTable.cs</code>, 内容如下:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTable</span> <span class="p">:</span> <span class="n">IEntity</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;,</span> <span class="n">IEntityMappingProvider</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">long</span> <span class="n">Id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="n">DateTime</span> <span class="n">CreateTime</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IEntityMappingBuilder</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">builder</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Id</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>如果您使用的是NHibernate或者EFCore, 添加后刷新页面即可看到多了一个新的数据表.<br/>
+数据实体需要继承<code>IEntity&lt;T&gt;</code>, 并且需要实现<code>IEntityMappingProvider&lt;TEntity&gt;</code>并注册到容器.<br/></p>
+<p>目前各个ORM可以使用的关系映射函数如下:</p>
+<ul>
+<li>NHibernate: Id, Map, Reference, HasMany, HasManyToMany</li>
+<li>Entity Framework Core: Id, Map, Reference, HasMany</li>
+<li>Dapper: Id, Map</li>
+<li>InMemory: Id, Map</li>
+<li>MongoDB: Id, Map</li>
+</ul>
+<p>可以看到NHibernate支持的最多, 而Dapper等ORM不支持导航属性.</p>
+<h3 id="_2">自动迁移数据库</h3>
+<p>NHibernate支持自动更新数据表结构, 修改代码后刷新浏览器即可,<br/>
+EFCore支持自动更新数据表结构, 修改代码后刷新浏览器即可, 但重命名字段会导致原数据丢失.<br/>
+MongoDB不需要更新数据表结构, 修改代码后刷新浏览器即可, <br/>
+Dapper不支持自动更新数据表结构, 需要手动迁移数据库或借助NHibernate, EFCore进行迁移.<br/></p>
+<p>假设您使用的是NHibernate或者EFCore, 在刚才的实体类<code>ExampleTable</code>中添加以下成员<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">Deleted</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>在<code>Configure</code>函数中添加以下行<br/></p>
+<div class="codehilite"><pre><span></span><span class="n">builder</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Deleted</span><span class="p">);</span>
+</pre></div>
+
+
+<p>保存后刷新浏览器即可看到效果:<br/>
+<img alt="添加字段后自动更新" src="../../images/core/database_add_field.jpg" /></p>
+<h3 id="_3">增删查改</h3>
+<p>通过<code>DatabaseManager.CreateContext</code>获取数据库上下文可以进行增删查改等操作.<br/>
+数据库上下文默认不开启事务,<br/>
+需要时可以调用<code>BeginTransaction</code>和<code>FinishTransaction</code>, 这两个函数支持嵌套使用.<br/></p>
+<p><strong>新增数据的例子</strong><br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Action(&quot;example/add_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">AddData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">data</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span>
+            <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;test&quot;</span><span class="p">,</span>
+            <span class="n">CreateTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">,</span>
+            <span class="n">Deleted</span> <span class="p">=</span> <span class="k">false</span>
+        <span class="p">};</span>
+        <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">data</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><strong>修改数据的例子</strong><br/>
+这里会修改表中的所有数据.<br/>
+和新增数据一样, 修改数据也会使用<code>Save</code>函数, 但是修改操作应该在<code>action</code>参数中实现, <br/>
+这样使用数据库事件可以捕捉到修改前和修改后的数据.<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Action(&quot;example/update_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">UpdateData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">data</span> <span class="k">in</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;())</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">localData</span> <span class="p">=</span> <span class="n">data</span><span class="p">;</span>
+            <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">localData</span><span class="p">,</span> <span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s">&quot;success&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><strong>查询数据的例子</strong><br/>
+这里返回没有更新的数据内容.<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Action(&quot;example/query_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">QueryData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">notUpdated</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">Query</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;()</span>
+            <span class="p">.</span><span class="n">Where</span><span class="p">(</span><span class="n">t</span> <span class="p">=&gt;</span> <span class="n">t</span><span class="p">.</span><span class="n">Name</span> <span class="p">!=</span> <span class="s">&quot;updated&quot;</span><span class="p">).</span><span class="n">ToList</span><span class="p">();</span>
+        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;these objects are not updated:\r\n{0}&quot;</span><span class="p">,</span>
+            <span class="n">JsonConvert</span><span class="p">.</span><span class="n">SerializeObject</span><span class="p">(</span><span class="n">notUpdated</span><span class="p">,</span> <span class="n">Formatting</span><span class="p">.</span><span class="n">Indented</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><strong>删除数据的例子</strong><br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Action(&quot;example/remove_data&quot;)]</span>
+<span class="k">public</span> <span class="kt">string</span> <span class="nf">RemoveData</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">long</span> <span class="n">deleted</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">BatchDelete</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="n">d</span> <span class="p">=&gt;</span> <span class="n">d</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="s">&quot;updated&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;{0} objects are removed&quot;</span><span class="p">,</span> <span class="n">deleted</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_4">实体事件</h3>
+<p>ZKWeb支持定义事件监听实体的增删查改,<br/>
+继承<code>IEntityOperationHandler&lt;TEntity&gt;</code>并注册到容器即可.<br/>
+在Before函数中抛出例外可以阻止操作, 如果使用了事务, 在After函数中抛出例外也可以阻止操作.<br/></p>
+<p><strong>实体事件的示例</strong><br/></p>
+<p>添加<code>src\EntityOperationHandlers\ExampleEntityOperationHandler.cs</code>, 内容如下<br/>
+添加或更新或删除数据后可以查看<code>ZKWeb\App_Data\Logs</code>下的日志是否记录成功.<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleEntityOperationHandler</span> <span class="p">:</span> <span class="n">IEntityOperationHandler</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="kt">long</span> <span class="n">IdBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">private</span> <span class="kt">string</span> <span class="n">NameBeforeSave</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeSave</span><span class="p">(</span><span class="n">IDatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">IdBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">;</span>
+        <span class="n">NameBeforeSave</span> <span class="p">=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterSave</span><span class="p">(</span><span class="n">IDatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">IdBeforeSave</span> <span class="p">&lt;=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data inserted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">NameBeforeSave</span> <span class="p">!=</span> <span class="n">data</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data name changed, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">BeforeDelete</span><span class="p">(</span><span class="n">IDatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">AfterDelete</span><span class="p">(</span><span class="n">IDatabaseContext</span> <span class="n">context</span><span class="p">,</span> <span class="n">ExampleTable</span> <span class="n">data</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">logManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">LogManager</span><span class="p">&gt;();</span>
+        <span class="n">logManager</span><span class="p">.</span><span class="n">LogDebug</span><span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">Format</span><span class="p">(</span><span class="s">&quot;example data deleted, id is {0}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="p">.</span><span class="n">Id</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_5">批量操作</h3>
+<p>批量操作可以带来更好的性能, ZKWeb提供了以下批量操作的函数</p>
+<ul>
+<li>BatchSave 批量保存</li>
+<li>BatchUpdate 批量更新</li>
+<li>BatchDelete 批量删除</li>
+<li>FastBatchSave 更快的批量保存, 不会触发数据事件</li>
+<li>FastBatchDelete 更快的批量删除, 不会触发数据事件</li>
+</ul>
+<h3 id="_6">原生查询</h3>
+<p>如果上面的函数仍不满足性能要求时, 可以使用原生查询.<br/>
+各个ORM的原生查询格式都不一样, 这里以Dapper为例.<br/></p>
+<p>执行储存过程(添加、更新或删除)</p>
+<div class="codehilite"><pre><span></span><span class="kt">long</span> <span class="n">affected</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">RawUpdate</span><span class="p">(</span><span class="s">&quot;exec some_update_sp @arg&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">arg</span> <span class="p">=</span> <span class="m">1</span> <span class="p">});</span>
+</pre></div>
+
+
+<p>执行储存过程(查询)</p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">result</span> <span class="p">=</span> <span class="n">context</span><span class="p">.</span><span class="n">RawQuery</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;(</span><span class="s">&quot;exec some_query_sp @arg&quot;</span><span class="p">,</span> <span class="k">new</span> <span class="p">{</span> <span class="n">arg</span> <span class="p">=</span> <span class="m">1</span> <span class="p">}).</span><span class="n">ToList</span><span class="p">();</span>
+</pre></div>
+
+
+<h3 id="_7">局部指定表名</h3>
+<p>使用<code>builder.TableName</code>可以指定当前实体的表名, 代码如下<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">ExampleTable</span> <span class="p">:</span> <span class="n">IEntity</span><span class="p">&lt;</span><span class="kt">long</span><span class="p">&gt;,</span> <span class="n">IEntityMappingProvider</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">long</span> <span class="n">Id</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">Name</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+    <span class="k">public</span> <span class="k">virtual</span> <span class="n">DateTime</span> <span class="n">CreateTime</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">Configure</span><span class="p">(</span><span class="n">IEntityMappingBuilder</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;</span> <span class="n">builder</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">TableName</span><span class="p">(</span><span class="s">&quot;myExampleTable&quot;</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Id</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Id</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
+        <span class="n">builder</span><span class="p">.</span><span class="n">Map</span><span class="p">(</span><span class="n">e</span> <span class="p">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">CreateTime</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_8">全局处理表名</h3>
+<p>ZKWeb允许全局处理表名, 继承<code>IDatabaseInitializeHandler</code>并注册到容器即可.<br/>
+注意这里更改了表名以后, 原来的数据不会自动迁移过去, 请手动进行迁移.<br/>
+示例代码:<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">DatabaseInitializeHandler</span> <span class="p">:</span> <span class="n">IDatabaseInitializeHandler</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">ConvertTableName</span><span class="p">(</span><span class="k">ref</span> <span class="kt">string</span> <span class="n">tableName</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">tableName</span> <span class="p">=</span> <span class="s">&quot;ZKWeb_&quot;</span> <span class="p">+</span> <span class="n">tableName</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>全局处理表名和局部指定表名可以同时使用,<br/>
+上面的例子中<code>Example</code>实体的表名会变为<code>ZKWeb_myExampleTable</code>.</p>
+<h3 id="orm">同时使用多个ORM</h3>
+<p>如果您想同时使用多个ORM, 例如EFCore + Dapper,<br/>
+可以把EFCore作为主ORM, 然后另外新建一个Dapper的上下文生成器, 如下:<br/></p>
+<div class="codehilite"><pre><span></span><span class="c1">// factory可以在程序启动时创建, 创建后全局使用</span>
+<span class="c1">// 这里创建的factory用于操作两个实体类型(SomeEntity和OtherEntity)</span>
+<span class="kt">var</span> <span class="n">factory</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DapperDatabaseContextFactory</span><span class="p">(</span>
+    <span class="s">&quot;SQLite&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Data Source={{App_Data}}/test.db;&quot;</span><span class="p">,</span>
+    <span class="k">new</span> <span class="n">IDatabaseInitializeHandler</span><span class="p">[</span><span class="m">0</span><span class="p">],</span>
+    <span class="k">new</span> <span class="n">IEntityMappingProvider</span><span class="p">[]</span> <span class="p">{</span>
+        <span class="k">new</span> <span class="nf">SomeEntity</span><span class="p">(),</span>
+        <span class="k">new</span> <span class="nf">OtherEntity</span><span class="p">()</span>
+    <span class="p">});</span>
+
+<span class="c1">// 有需要时使用这个factory创建数据库上下文即可</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">factory</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+    <span class="c1">// 增删查改</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_9">禁用自动升级数据表</h3>
+<p>部分情况下你可能想禁用NHibernate或者EFCore组件提供的数据库自动迁移功能,<br/>
+禁用这项功能可以修改<code>App_Data\config.json</code>下的选项, 例如</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ORM&quot;</span><span class="p">:</span> <span class="s2">&quot;EFCore&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Database&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLite&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;ConnectionString&quot;</span><span class="p">:</span> <span class="s2">&quot;Data Source={{App_Data}}/test.db;&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PluginDirectories&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="s2">&quot;App_Data&quot;</span> <span class="p">],</span>
+    <span class="nt">&quot;Plugins&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="nt">&quot;Extra&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;ZKWeb.DisableEFCoreDatabaseAutoMigration&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nt">&quot;ZKWeb.DisableNHibernateDatabaseAutoMigration&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_10">已知问题</h3>
+<ul>
+<li>EFCore目前还不支持定义多对多的关系, 可以手动创建一个中间表支持</li>
+<li>EFCore目前还不支持懒加载, 嵌入关联表时需要引入EF依赖并使用Include函数</li>
+<li>如果数据库是SQLite, 使用NHibernate创建的表的Guid类型不兼容Dapper</li>
+</ul>
+<h3 id="_11">默认插件集的兼容性</h3>
+<ul>
+<li>Common.Base: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>Common.Captcha: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>Common.Admin: NHibernate, MongoDB, Dapper, InMemory</li>
+<li>其他: 仅NHibernate</li>
+</ul>
+<p>EFCore因为功能上的问题目前不兼容任何默认插件,<br/>
+但是可以开发自己的插件集, 参考<a href="https://github.com/zkweb-framework/ZKWeb.MVVMDemo">MVVMDemo</a>.</p>
                 
                   
                 

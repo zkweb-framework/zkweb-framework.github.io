@@ -445,9 +445,48 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        多时区
+      </label>
+    
     <a href="index.html" title="多时区" class="md-nav__link md-nav__link--active">
       多时区
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="设置当前线程的时区" class="md-nav__link">
+    设置当前线程的时区
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="根据时区转换时间" class="md-nav__link">
+    根据时区转换时间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="数据库中保存的时间" class="md-nav__link">
+    数据库中保存的时间
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +583,34 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="设置当前线程的时区" class="md-nav__link">
+    设置当前线程的时区
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="根据时区转换时间" class="md-nav__link">
+    根据时区转换时间
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="数据库中保存的时间" class="md-nav__link">
+    数据库中保存的时间
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +624,38 @@
                 
                   <h1>多时区</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb内置提供了多时区支持, 可以让不同的客户端显示不同的时间.<br/></p>
+<h3 id="_1">设置当前线程的时区</h3>
+<p>设置指定时区:</p>
+<div class="codehilite"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadTimezone</span><span class="p">(</span><span class="s">&quot;Asia/Shanghai&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>自动设置时区(Cookies =&gt; 默认时区):</p>
+<div class="codehilite"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadTimezoneAutomatic</span><span class="p">(</span><span class="s">&quot;America/New_York&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>更多支持的时区可以<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb/ZKWebStandard/Utils/LocaleUtils.cs">查看源代码</a></p>
+<h3 id="_2">根据时区转换时间</h3>
+<p>转换到客户端的本地时间, <code>ToClientTime</code>是一个扩展函数.<br/>
+如果客户端指定了时区则使用该时区, 否则使用服务器本地时间.</p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">utcTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">UtcNow</span><span class="p">;</span>
+<span class="kt">var</span> <span class="n">clientTime</span> <span class="p">=</span> <span class="n">utcTime</span><span class="p">.</span><span class="n">ToClientTime</span><span class="p">();</span>
+</pre></div>
+
+
+<p>从客户端时间转换到utc时间, 常用于解析客户端的时间控件提交的值.</p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">clientTime</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">timeParam</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">utcTime</span> <span class="p">=</span> <span class="n">clientTime</span><span class="p">.</span><span class="n">FromClientTime</span><span class="p">();</span>
+</pre></div>
+
+
+<h3 id="_3">数据库中保存的时间</h3>
+<p>如果需要使用多时区支持, 请在数据库中保存UTC时间,<br/>
+例如获取当前时间使用<code>DateTime.UtcNow</code>而不是<code>DateTime.Now</code>.<br/></p>
+<p>从数据库取出的时间应该使用<code>ToClientTime</code>转换后发给客户端.<br/>
+从客户端接收的时间应该使用<code>FromClientTime</code>转换后保存到数据库.<br/></p>
                 
                   
                 

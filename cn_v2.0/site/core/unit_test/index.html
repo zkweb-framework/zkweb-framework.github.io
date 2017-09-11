@@ -457,9 +457,62 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        单元测试
+      </label>
+    
     <a href="index.html" title="单元测试" class="md-nav__link md-nav__link--active">
       单元测试
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="创建测试" class="md-nav__link">
+    创建测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="运行测试" class="md-nav__link">
+    运行测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" title="在测试中重载Http上下文" class="md-nav__link">
+    在测试中重载Http上下文
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioc" title="在测试中模拟IoC容器" class="md-nav__link">
+    在测试中模拟IoC容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="在测试中使用临时数据库" class="md-nav__link">
+    在测试中使用临时数据库
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +597,48 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="创建测试" class="md-nav__link">
+    创建测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="运行测试" class="md-nav__link">
+    运行测试
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http" title="在测试中重载Http上下文" class="md-nav__link">
+    在测试中重载Http上下文
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ioc" title="在测试中模拟IoC容器" class="md-nav__link">
+    在测试中模拟IoC容器
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="在测试中使用临时数据库" class="md-nav__link">
+    在测试中使用临时数据库
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +652,77 @@
                 
                   <h1>单元测试</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb使用了独自编写的测试框架, 编写时参考了XUnit.<br/>
+测试可以在控制台中运行, 也可以使用默认的插件集在网页上运行.<br/>
+因为相当于在实际环境中运行, 创建的测试可以是单元测试也可以是集成测试.</p>
+<h3 id="_1">创建测试</h3>
+<p>测试类需要标记<code>Tests</code>属性, 标记后该类下面的所有公开函数都会成为测试函数.<br/>
+添加<code>src\Tests\ExampleTest.cs</code>, 内容如下<br/>
+使用<code>Assert</code>可以测试条件是否成立, 如果测试失败会抛出<code>AssertException</code>.<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[Tests]</span>
+<span class="k">class</span> <span class="nc">ExampleTest</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">MethodA</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="m">1</span> <span class="p">==</span> <span class="m">1</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrueWith</span><span class="p">(</span><span class="m">1</span> <span class="p">==</span> <span class="m">1</span><span class="p">,</span> <span class="s">&quot;if failed this item will be outputed&quot;</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Throws</span><span class="p">&lt;</span><span class="n">ArgumentException</span><span class="p">&gt;(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="k">throw</span> <span class="k">new</span> <span class="n">ArgumentException</span><span class="p">();</span> <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_2">运行测试</h3>
+<p><strong>在控制台中运行</strong><br/>
+设置主项目到<code>您的项目名.Console</code>并运行.<br/></p>
+<p><strong>在网页上运行</strong><br/>
+参考<code>UnitTest.WebTester</code>插件的文档.<br/></p>
+<h3 id="http">在测试中重载Http上下文</h3>
+<p>在测试时, 有时需要重载Http上下文, <br/>
+可以使用<code>HttpManager.OverrideContext</code>函数重载当前的上下文.<br/>
+在<code>ExampleTest</code>类中添加以下函数<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodB</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">OverrideContext</span><span class="p">(</span><span class="s">&quot;/?a=1&quot;</span><span class="p">,</span> <span class="s">&quot;POST&quot;</span><span class="p">))</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">request</span> <span class="p">=</span> <span class="p">(</span><span class="n">HttpRequestMock</span><span class="p">)</span><span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">;</span>
+        <span class="n">request</span><span class="p">.</span><span class="n">remoteIpAddress</span> <span class="p">=</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;192.168.168.168&quot;</span><span class="p">);</span>
+
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">Get</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;(</span><span class="s">&quot;a&quot;</span><span class="p">),</span> <span class="s">&quot;1&quot;</span><span class="p">);</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">RemoteIpAddress</span><span class="p">,</span> <span class="n">IPAddress</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="s">&quot;192.168.168.168&quot;</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="ioc">在测试中模拟IoC容器</h3>
+<p>在测试时, 有时需要影响容器返回的组件, <br/>
+可以使用<code>Application.OverrideContainer</code>重载当前的IoC容器.<br/>
+在<code>ExampleTest</code>类中添加以下函数<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodC</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">OverrideIoc</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Unregister</span><span class="p">&lt;</span><span class="n">IEntityOperationHandler</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;();</span>
+        <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(!</span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IEntityOperationHandler</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;().</span><span class="n">Any</span><span class="p">());</span>
+    <span class="p">}</span>
+    <span class="c1">// override is finished</span>
+    <span class="n">Assert</span><span class="p">.</span><span class="n">IsTrue</span><span class="p">(</span><span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">ResolveMany</span><span class="p">&lt;</span><span class="n">IEntityOperationHandler</span><span class="p">&lt;</span><span class="n">ExampleTable</span><span class="p">&gt;&gt;().</span><span class="n">Any</span><span class="p">());</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_3">在测试中使用临时数据库</h3>
+<p>在测试时, 有时需要做涉及到数据库的测试, <br/>
+可以使用<code>TestManager.UseTemporaryDatabase</code>来让指定范围内的代码使用临时数据库.<br/>
+临时数据库默认使用内存数据库, 也可以通过修改网站配置使用指定的数据库.<br/>
+在<code>ExampleTest</code>类中添加以下函数<br/></p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">void</span> <span class="nf">MethodD</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">var</span> <span class="n">testManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">TestManager</span><span class="p">&gt;();</span>
+    <span class="k">using</span> <span class="p">(</span><span class="n">testManager</span><span class="p">.</span><span class="n">UseTemporaryDatabase</span><span class="p">())</span> <span class="p">{</span>
+        <span class="kt">var</span> <span class="n">databaseManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">DatabaseManager</span><span class="p">&gt;();</span>
+        <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">context</span> <span class="p">=</span> <span class="n">databaseManager</span><span class="p">.</span><span class="n">CreateContext</span><span class="p">())</span> <span class="p">{</span>
+            <span class="kt">var</span> <span class="n">obj</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ExampleTable</span><span class="p">()</span> <span class="p">{</span> <span class="n">Name</span> <span class="p">=</span> <span class="s">&quot;obj in temporary database&quot;</span> <span class="p">};</span>
+            <span class="n">context</span><span class="p">.</span><span class="n">Save</span><span class="p">(</span><span class="k">ref</span> <span class="n">obj</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 

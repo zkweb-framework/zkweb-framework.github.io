@@ -409,9 +409,34 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        文件储存
+      </label>
+    
     <a href="index.html" title="文件储存" class="md-nav__link md-nav__link--active">
       文件储存
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="使用文件储存" class="md-nav__link">
+    使用文件储存
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +569,20 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="使用文件储存" class="md-nav__link">
+    使用文件储存
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +596,52 @@
                 
                   <h1>文件储存</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb提供了标准的文件储存接口, 抽象化了文件的读取保存和列出.<br/>
+默认文件储存使用了本地的文件系统, 可以通过自己实现<code>IFileStorage</code>实现存取分布式的文件系统.<br/>
+<code>IFileStorage</code>的接口如下</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IFileStorage</span> <span class="p">{</span>
+    <span class="n">IFileEntry</span> <span class="nf">GetTemplateFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">path</span><span class="p">);</span>
+    <span class="n">IFileEntry</span> <span class="nf">GetResourceFile</span><span class="p">(</span><span class="k">params</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">pathParts</span><span class="p">);</span>
+    <span class="n">IFileEntry</span> <span class="nf">GetStorageFile</span><span class="p">(</span><span class="k">params</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">pathParts</span><span class="p">);</span>
+    <span class="n">IDirectoryEntry</span> <span class="nf">GetStorageDirectory</span><span class="p">(</span><span class="k">params</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">pathParts</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p><code>GetTemplateFile</code>用于获取Html模板文件, 查找顺序应该为<code>自定义储存 =&gt; 插件文件夹下的templates</code><br/>
+<code>GetResourceFile</code>用于获取资源文件, 查找顺序应该为<code>自定义储存 =&gt; 插件文件夹</code><br/>
+<code>GetStorageFile</code>用于获取储存文件, 可以读取或写入<br/>
+<code>GetStorageDirectory</code>用于获取储存文件夹, 可以列出文件夹下的文件和子文件夹</p>
+<h3 id="_1">使用文件储存</h3>
+<p><strong> 获取模板文件的例子 </strong></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">fileEntry</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetTemplateFile</span><span class="p">(</span><span class="s">&quot;abc.html&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">contents</span> <span class="p">=</span> <span class="n">fileEntry</span><span class="p">.</span><span class="n">ReadAllText</span><span class="p">();</span>
+</pre></div>
+
+
+<p><strong> 获取资源文件的例子 </strong></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">fileEntry</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetResourceFile</span><span class="p">(</span><span class="s">&quot;abc.jpg&quot;</span><span class="p">);</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">stream</span> <span class="p">=</span> <span class="n">fileEntry</span><span class="p">.</span><span class="n">OpenRead</span><span class="p">())</span> <span class="p">{</span> <span class="p">}</span>
+</pre></div>
+
+
+<p><strong> 保存储存文件的例子 </strong></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">fileEntry</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetStorageFile</span><span class="p">(</span><span class="s">&quot;static&quot;</span><span class="p">,</span> <span class="s">&quot;abc.txt&quot;</span><span class="p">);</span>
+<span class="n">fileEntry</span><span class="p">.</span><span class="n">WriteAllText</span><span class="p">(</span><span class="s">&quot;test storage file&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p><strong> 列出储存文件夹下的文件的例子(非递归) </strong></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">fileStorage</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">IFileStorage</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">directoryEntry</span> <span class="p">=</span> <span class="n">fileStorage</span><span class="p">.</span><span class="n">GetStorageDirectory</span><span class="p">(</span><span class="s">&quot;static&quot;</span><span class="p">);</span>
+<span class="kt">var</span> <span class="n">childFiles</span> <span class="p">=</span> <span class="n">directoryEntry</span><span class="p">.</span><span class="n">EnumerateFiles</span><span class="p">();</span>
+<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">file</span> <span class="k">in</span> <span class="n">childFiles</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="err">$</span><span class="s">&quot;{file.Filename}: {file.ReadAllText()}&quot;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
                 
                   
                 

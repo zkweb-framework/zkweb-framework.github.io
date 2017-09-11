@@ -378,42 +378,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#http" title="Http请求处理器" class="md-nav__link">
+  <a href="#http" title="Http请求的整体流程图" class="md-nav__link">
+    Http请求的整体流程图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http_1" title="Http请求处理器" class="md-nav__link">
     Http请求处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_1" title="Http请求预处理器" class="md-nav__link">
+  <a href="#http_2" title="Http请求预处理器" class="md-nav__link">
     Http请求预处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_2" title="Http请求的后处理器" class="md-nav__link">
+  <a href="#http_3" title="Http请求的后处理器" class="md-nav__link">
     Http请求的后处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_3" title="Http请求包装器" class="md-nav__link">
+  <a href="#http_4" title="Http请求包装器" class="md-nav__link">
     Http请求包装器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_4" title="Http错误处理器" class="md-nav__link">
+  <a href="#http_5" title="Http错误处理器" class="md-nav__link">
     Http错误处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_5" title="Http请求的整体流程" class="md-nav__link">
+  <a href="#http_6" title="Http请求的整体流程" class="md-nav__link">
     Http请求的整体流程
   </a>
   
@@ -608,42 +615,49 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#http" title="Http请求处理器" class="md-nav__link">
+  <a href="#http" title="Http请求的整体流程图" class="md-nav__link">
+    Http请求的整体流程图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http_1" title="Http请求处理器" class="md-nav__link">
     Http请求处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_1" title="Http请求预处理器" class="md-nav__link">
+  <a href="#http_2" title="Http请求预处理器" class="md-nav__link">
     Http请求预处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_2" title="Http请求的后处理器" class="md-nav__link">
+  <a href="#http_3" title="Http请求的后处理器" class="md-nav__link">
     Http请求的后处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_3" title="Http请求包装器" class="md-nav__link">
+  <a href="#http_4" title="Http请求包装器" class="md-nav__link">
     Http请求包装器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_4" title="Http错误处理器" class="md-nav__link">
+  <a href="#http_5" title="Http错误处理器" class="md-nav__link">
     Http错误处理器
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#http_5" title="Http请求的整体流程" class="md-nav__link">
+  <a href="#http_6" title="Http请求的整体流程" class="md-nav__link">
     Http请求的整体流程
   </a>
   
@@ -669,7 +683,10 @@
                 <p>在ZKWeb中处理Http请求会使用Http请求处理器(<code>IHttpRequestHandler</code>),<br/>
 上一篇介绍的控制器只是其中的一个处理器.<br/>
 自己实现处理器可以处理更复杂的url, 例如返回静态文件等.</p>
-<h3 id="http">Http请求处理器</h3>
+<h3 id="http">Http请求的整体流程图</h3>
+<p><img alt="Http请求的整体流程图" src="../../images/core/http_handlers.png" /></p>
+<p>流程的伪代码请看最下面.</p>
+<h3 id="http_1">Http请求处理器</h3>
 <p>这是<code>IHttpRequestHandler</code>的一个简单的例子,<br/>
 访问<code>/example/handler/xxx</code>的时候会返回<code>the path is xxx</code>.</p>
 <div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
@@ -691,7 +708,7 @@
 <p>需要注意的是, 请求处理器会按注册顺序的相反顺序调用,<br/>
 越后面注册的处理器调用的越前,<br/>
 如果前面的处理器调用了<code>response.End()</code>, 就不会再调用后面的处理器了.<br/></p>
-<h3 id="http_1">Http请求预处理器</h3>
+<h3 id="http_2">Http请求预处理器</h3>
 <p>有的情况下, 您可能想给所有Http请求添加一个自定义的Header,<br/>
 但是如果使用<code>IHttpRequestHandler</code>, 又很难保证注册的处理器是最后注册的.<br/>
 ZKWeb针对这种情况提供了另外一个接口<code>IHttpRequestPreHandler</code>.<br/></p>
@@ -707,11 +724,11 @@ ZKWeb针对这种情况提供了另外一个接口<code>IHttpRequestPreHandler</
 
 <p><code>IHttpRequestPreHandler</code>可以保证在所有<code>IHttpRequestHandler</code>前调用,<br/>
 注意<code>IHttpRequestPreHandler</code>中不应该写入<code>Response</code>和调用<code>response.End()</code>.<br/></p>
-<h3 id="http_2">Http请求的后处理器</h3>
+<h3 id="http_3">Http请求的后处理器</h3>
 <p>同样的, 如果您想在所有Http请求处理后执行一些自定义的操作,<br/>
 可以使用<code>IHttpRequestPostHandler</code>接口, 这个接口的使用跟上面一样,<br/>
 只是它会保证在所有<code>IHttpRequestHandler</code>之后执行.<br/></p>
-<h3 id="http_3">Http请求包装器</h3>
+<h3 id="http_4">Http请求包装器</h3>
 <p>有时候您可能会想同时使用预处理器和后处理器, 也就是想把请求嵌套在<code>using</code>里面,<br/>
 同时使用上面的<code>IHttpRequestPreHandler</code>和<code>IHttpRequestPostHandler</code>可能比较困难.<br/>
 这时候可以使用<code>IHttpRequestHandlerWrapper</code>.<br/></p>
@@ -730,7 +747,7 @@ ZKWeb针对这种情况提供了另外一个接口<code>IHttpRequestPreHandler</
 
 
 <p>如果您只考虑控制器, 也可以使用前一篇提到的<code>Action过滤器</code>.<br/></p>
-<h3 id="http_4">Http错误处理器</h3>
+<h3 id="http_5">Http错误处理器</h3>
 <p>ZKWeb提供了一个专门的错误处理器,<br/>
 注册<code>IHttpRequestErrorHandler</code>接口即可全局处理请求中的错误.<br/></p>
 <div class="codehilite"><pre><span></span><span class="na">[ExportMany]</span>
@@ -749,7 +766,7 @@ ZKWeb针对这种情况提供了另外一个接口<code>IHttpRequestPreHandler</
 
 <p>如果有多个错误处理器, 会按注册顺序的相反顺序调用,<br/>
 如果其中一个调用了<code>response.End()</code>则不继续调用.<br/></p>
-<h3 id="http_5">Http请求的整体流程</h3>
+<h3 id="http_6">Http请求的整体流程</h3>
 <p>上面的处理器的整体调用流程是:</p>
 <div class="codehilite"><pre><span></span>try {
     try {

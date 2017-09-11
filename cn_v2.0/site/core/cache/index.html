@@ -397,9 +397,62 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        缓存处理
+      </label>
+    
     <a href="index.html" title="缓存处理" class="md-nav__link md-nav__link--active">
       缓存处理
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="创建缓存" class="md-nav__link">
+    创建缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="缓存的隔离" class="md-nav__link">
+    缓存的隔离
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="创建带隔离功能的缓存" class="md-nav__link">
+    创建带隔离功能的缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="自定义隔离策略" class="md-nav__link">
+    自定义隔离策略
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="提供的缓存隔离策略" class="md-nav__link">
+    提供的缓存隔离策略
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +597,48 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="创建缓存" class="md-nav__link">
+    创建缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="缓存的隔离" class="md-nav__link">
+    缓存的隔离
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="创建带隔离功能的缓存" class="md-nav__link">
+    创建带隔离功能的缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="自定义隔离策略" class="md-nav__link">
+    自定义隔离策略
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="提供的缓存隔离策略" class="md-nav__link">
+    提供的缓存隔离策略
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +652,70 @@
                 
                   <h1>缓存处理</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb提供了标准的缓存接口, 可以统一缓存的操作.<br/>
+默认缓存对象都保存在内存中, 可以自己实现<code>ICacheFactory</code>来支持分布式的缓存.<br/>
+缓存接口的类型是<code>IKeyValueCache&lt;TKey, TValue&gt;</code>, 通过<code>ICacheFactory</code>可以创建新的缓存对象.</p>
+<div class="codehilite"><pre><span></span><span class="k">public</span> <span class="k">interface</span> <span class="n">IKeyValueCache</span><span class="p">&lt;</span><span class="n">TKey</span><span class="p">,</span> <span class="n">TValue</span><span class="p">&gt;</span> <span class="p">{</span>
+    <span class="k">void</span> <span class="nf">Put</span><span class="p">(</span><span class="n">TKey</span> <span class="n">key</span><span class="p">,</span> <span class="n">TValue</span> <span class="k">value</span><span class="p">,</span> <span class="n">TimeSpan</span> <span class="n">keepTime</span><span class="p">);</span>
+    <span class="kt">bool</span> <span class="nf">TryGetValue</span><span class="p">(</span><span class="n">TKey</span> <span class="n">key</span><span class="p">,</span> <span class="k">out</span> <span class="n">TValue</span> <span class="k">value</span><span class="p">);</span>
+    <span class="k">void</span> <span class="nf">Remove</span><span class="p">(</span><span class="n">TKey</span> <span class="n">key</span><span class="p">);</span>
+    <span class="kt">int</span> <span class="nf">Count</span><span class="p">();</span>
+    <span class="k">void</span> <span class="nf">Clear</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_1">创建缓存</h3>
+<p>创建缓存需要调用<code>ICacheFactory.CreateCache</code>, 可以指定创建的参数<code>CacheFactoryOptions</code><br/>
+<code>CacheFactoryOptions.Lifetime</code>为缓存的生命周期, 有持久和跟随Http请求销毁.<br/>
+<code>CacheFactoryOptions.IsolationPolicies</code>为隔离策略, 请参考下面的说明.</p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">cacheFactory</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">ICacheFactory</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">cache</span> <span class="p">=</span> <span class="n">cacheFactory</span><span class="p">.</span><span class="n">CreateCache</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;();</span>
+</pre></div>
+
+
+<h3 id="_2">缓存的隔离</h3>
+<p>ZKWeb提供了一套隔离缓存的机制, 可以按当前的上下文隔离缓存.<br/>
+例如缓存翻译结果时, 一般应该使用<code>cache[当前语言][原文] = [译文]</code>, <br/>
+但使用缓存隔离功能后, 可以直接使用<code>cache[原文] = [译文]</code>.<br/></p>
+<h3 id="_3">创建带隔离功能的缓存</h3>
+<p>以下创建了根据当前请求的语言和Url进行隔离的缓存.<br/></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">cacheFactory</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">ICacheFactory</span><span class="p">&gt;();</span>
+<span class="kt">var</span> <span class="n">cache</span> <span class="p">=</span> <span class="n">cacheFactory</span><span class="p">.</span><span class="n">CreateCache</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;(</span>
+    <span class="n">CacheFactoryOptions</span><span class="p">.</span><span class="n">Default</span><span class="p">.</span><span class="n">WithIsolationPolicies</span><span class="p">(</span><span class="s">&quot;Url&quot;</span><span class="p">,</span> <span class="s">&quot;Locale&quot;</span><span class="p">));</span>
+<span class="n">cache</span><span class="p">.</span><span class="n">Put</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">renderResult</span><span class="p">,</span> <span class="n">TimeSpan</span><span class="p">.</span><span class="n">FromSeconds</span><span class="p">(</span><span class="m">100</span><span class="p">));</span>
+</pre></div>
+
+
+<h3 id="_4">自定义隔离策略</h3>
+<p>继承<code>ICacheIsolationPolicy</code>并且注册到容器可以实现自定义的缓存策略.<br/>
+缓存策略类似于Http协议中的<code>Vary</code>, 可以根据不同的请求参数区分缓存的内容.<br/>
+这里根据Http头中的Accept隔离.<br/></p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany(ContractKey = &quot;Custom&quot;)]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">CustomPolicy</span> <span class="p">:</span> <span class="n">ICacheIsolationPolicy</span> <span class="p">{</span>
+    <span class="k">public</span> <span class="kt">object</span> <span class="nf">GetIsolationKey</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">HttpManager</span><span class="p">.</span><span class="n">CurrentContext</span><span class="p">.</span><span class="n">Request</span><span class="p">.</span><span class="n">GetHeader</span><span class="p">(</span><span class="s">&quot;Accept&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_5">提供的缓存隔离策略</h3>
+<p>框架默认提供了以下的缓存隔离策略<br/></p>
+<ul>
+<li><code>Device</code><ul>
+<li>按当前请求的设备(电脑或手机)隔离缓存</li>
+</ul>
+</li>
+<li><code>Locale</code><ul>
+<li>按当前的语言和时区隔离缓存</li>
+</ul>
+</li>
+<li><code>Url</code><ul>
+<li>按当前请求的地址, 参数和表单参数隔离缓存</li>
+</ul>
+</li>
+</ul>
                 
                   
                 

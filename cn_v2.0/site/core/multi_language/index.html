@@ -433,9 +433,48 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        多语言
+      </label>
+    
     <a href="index.html" title="多语言" class="md-nav__link md-nav__link--active">
       多语言
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="设置当前线程的语言" class="md-nav__link">
+    设置当前线程的语言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="添加翻译" class="md-nav__link">
+    添加翻译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="使用翻译" class="md-nav__link">
+    使用翻译
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +583,34 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="设置当前线程的语言" class="md-nav__link">
+    设置当前线程的语言
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="添加翻译" class="md-nav__link">
+    添加翻译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="使用翻译" class="md-nav__link">
+    使用翻译
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +624,53 @@
                 
                   <h1>多语言</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>ZKWeb内置提供了多语言支持, 不使用.Net自带的资源文件机制.<br/>
+语言的翻译由<code>ITranslateProvider</code>实现, 每个线程都可以指定不同的语言和时区.<br/>
+默认的插件集提供了自动设置当前线程语言和时区的功能, 请参考<code>Common.Base</code>插件的文档.<br/></p>
+<h3 id="_1">设置当前线程的语言</h3>
+<p>设置指定语言<br/></p>
+<div class="codehilite"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadLanguage</span><span class="p">(</span><span class="s">&quot;zh-CN&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>自动设置语言（Cookies =&gt; 浏览器语言 =&gt; 默认语言）<br/>
+第一个参数决定是否检测浏览器语言<br/></p>
+<div class="codehilite"><pre><span></span><span class="n">LocaleUtils</span><span class="p">.</span><span class="n">SetThreadLanguageAutomatic</span><span class="p">(</span><span class="k">true</span><span class="p">,</span> <span class="s">&quot;en-US&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<h3 id="_2">添加翻译</h3>
+<p>翻译需要实现<code>ITranslateProvider</code>接口并使用<code>[ExportMany]</code>注册到容器中.<br/>
+添加<code>src\Components\Translates\zh_CN.cs</code>, 内容如下:</p>
+<div class="codehilite"><pre><span></span><span class="na">[ExportMany, SingletonReuse]</span>
+<span class="k">public</span> <span class="k">class</span> <span class="nc">zh_CN</span> <span class="p">:</span> <span class="n">ITranslateProvider</span> <span class="p">{</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;</span> <span class="n">Codes</span> <span class="p">=</span> <span class="k">new</span> <span class="n">HashSet</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;()</span> <span class="p">{</span> <span class="s">&quot;zh-CN&quot;</span> <span class="p">};</span>
+    <span class="k">private</span> <span class="k">static</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;</span> <span class="n">Translates</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Dictionary</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span> <span class="kt">string</span><span class="p">&gt;()</span>
+    <span class="p">{</span>
+        <span class="p">{</span> <span class="s">&quot;Example&quot;</span><span class="p">,</span> <span class="s">&quot;示例&quot;</span> <span class="p">}</span>
+    <span class="p">};</span>
+
+    <span class="k">public</span> <span class="kt">bool</span> <span class="nf">CanTranslate</span><span class="p">(</span><span class="kt">string</span> <span class="n">code</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Codes</span><span class="p">.</span><span class="n">Contains</span><span class="p">(</span><span class="n">code</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="kt">string</span> <span class="nf">Translate</span><span class="p">(</span><span class="kt">string</span> <span class="n">text</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">Translates</span><span class="p">.</span><span class="n">GetOrDefault</span><span class="p">(</span><span class="n">text</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<h3 id="_3">使用翻译</h3>
+<p>在代码中使用翻译:</p>
+<div class="codehilite"><pre><span></span><span class="kt">string</span> <span class="n">translated</span> <span class="p">=</span> <span class="k">new</span> <span class="n">T</span><span class="p">(</span><span class="s">&quot;Example&quot;</span><span class="p">);</span> <span class="c1">// 当前语言是中文时, translated等于&quot;示例&quot;</span>
+</pre></div>
+
+
+<p>在模板中使用翻译, 通过过滤器翻译字符串或变量:</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ &quot;Example&quot; | trans }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ stringVariable | trans }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</pre></div>
                 
                   
                 

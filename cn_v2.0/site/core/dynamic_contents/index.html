@@ -385,9 +385,76 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        动态内容
+      </label>
+    
     <a href="index.html" title="动态内容" class="md-nav__link md-nav__link--active">
       动态内容
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="动态内容的结构图" class="md-nav__link">
+    动态内容的结构图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="可视化编辑的效果" class="md-nav__link">
+    可视化编辑的效果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="使用区域" class="md-nav__link">
+    使用区域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="区域下的模块列表" class="md-nav__link">
+    区域下的模块列表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="注册模块到默认模块列表中" class="md-nav__link">
+    注册模块到默认模块列表中
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="模块的单独缓存" class="md-nav__link">
+    模块的单独缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="自定义模块的描绘器" class="md-nav__link">
+    自定义模块的描绘器
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -544,6 +611,62 @@
   
   
   
+    <label class="md-nav__title" for="toc">索引</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="动态内容的结构图" class="md-nav__link">
+    动态内容的结构图
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="可视化编辑的效果" class="md-nav__link">
+    可视化编辑的效果
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="使用区域" class="md-nav__link">
+    使用区域
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" title="区域下的模块列表" class="md-nav__link">
+    区域下的模块列表
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" title="注册模块到默认模块列表中" class="md-nav__link">
+    注册模块到默认模块列表中
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" title="模块的单独缓存" class="md-nav__link">
+    模块的单独缓存
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" title="自定义模块的描绘器" class="md-nav__link">
+    自定义模块的描绘器
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -557,7 +680,76 @@
                 
                   <h1>动态内容</h1>
                 
-                <p>文档尚未编写完毕, 请耐心等待.</p>
+                <p>考虑到实现可视化编辑, ZKWeb提供了一套内置的动态内容系统.</br></p>
+<p>这套系统定义了以下的类型<br/></p>
+<ul>
+<li>区域 (area)</li>
+<li>模块 (widget)</li>
+</ul>
+<h3 id="_1">动态内容的结构图</h3>
+<p>一个Html包含多个区域(area), 一个区域包含多个模块(widget).
+区域之间不能互相嵌套.</p>
+<p><img alt="动态内容的结构图" src="../../images/core/dynamic_contents.png" /></p>
+<h3 id="_2">可视化编辑的效果</h3>
+<p>这是默认插件中实现的可视化编辑功能,<br/>
+模块可以通过<code>添加元素</code>加到区域中, 也可以从区域中删除现有的模块.</p>
+<p><img alt="可视化编辑的效果" src="../../images/core/dynamic_contents_real.png" /></p>
+<h3 id="_3">使用区域</h3>
+<p>在模板中使用<code>area</code>标签, 可以描画注册到这个区域下的所有模块</p>
+<div class="codehilite"><pre><span></span>{% area headerNavBar %}
+</pre></div>
+
+
+<h3 id="_4">区域下的模块列表</h3>
+<p>每个区域下都有对应的模块列表, 模块列表的查找顺序如下</p>
+<ul>
+<li><code>App_Data\areas\{区域Id}.widgets</code></li>
+<li>程序中注册的默认模块列表</li>
+</ul>
+<p><strong>区域Id全局唯一</strong>, 请注意是否会产生冲突.</br>
+全局唯一的理由是, 有的区域（例如网站头部）是整个网站共享的,<br/>
+这时只需要编辑这个区域就可以应用到所有页面.</br></p>
+<h3 id="_5">注册模块到默认模块列表中</h3>
+<p>使用默认的插件集时, 会在头部中描画标签<code>{% area header_menubar %}</code>,<br/>
+这里演示怎样添加自定义的模块到这个区域中.</p>
+<p>在<code>Plugin.cs</code>的<code>Plugin()</code>函数下添加以下代码:</br></p>
+<div class="codehilite"><pre><span></span><span class="kt">var</span> <span class="n">areaManager</span> <span class="p">=</span> <span class="n">Application</span><span class="p">.</span><span class="n">Ioc</span><span class="p">.</span><span class="n">Resolve</span><span class="p">&lt;</span><span class="n">TemplateAreaManager</span><span class="p">&gt;();</span>
+<span class="n">areaManager</span><span class="p">.</span><span class="n">GetArea</span><span class="p">(</span><span class="s">&quot;header_menubar&quot;</span><span class="p">).</span><span class="n">DefaultWidgets</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;example.widgets/example_nav&quot;</span><span class="p">);</span>
+</pre></div>
+
+
+<p>创建<code>templates/example.widgets/example_nav.widget</code>, 并添加以下内容</p>
+<div class="codehilite"><pre><span></span><span class="p">{</span> <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Navbar Item&quot;</span> <span class="p">}</span>
+</pre></div>
+
+
+<p>创建<code>templates/example.widgets/example_nav.html</code>, 并添加以下内容</p>
+<div class="codehilite"><pre><span></span><span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/example/template&quot;</span><span class="p">&gt;</span>{{ &quot;Example&quot; }}<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>添加以后刷新页面可以看到</br>
+<img alt="注册默认模块的例子" src="../../images/core/dynamic_contents_example.jpg" /></p>
+<h3 id="_6">模块的单独缓存</h3>
+<p>模板模块支持设置单独的缓存时间和缓存策略, 使用此功能可以大幅提高页面的响应速度.<br/>
+在widget文件指定缓存时间, 例如<br/></p>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Navbar Item&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;CacheTime&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;CacheBy&quot;</span><span class="p">:</span> <span class="s2">&quot;Locale,Url&quot;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>这里的<code>CacheTime</code>表示该模块的描画结果会缓存15秒, <code>CacheBy</code>表示缓存的隔离策略.<br/>
+缓存策略请参考<a href="../cache/index.html">缓存处理</a>, 这里缓存会按当前的语言和时区来隔离.<br/>
+有多个缓存策略时可以用逗号分隔, 为了兼容设备专用模板, 默认会自动添加"Device"策略.<br/></p>
+<h3 id="_7">自定义模块的描绘器</h3>
+<p>描绘模板模块的逻辑可以通过继承<code>ITemplateWidgetRenderer</code>并注册到容器改变,<br/>
+默认的描绘器实现在<a href="https://github.com/zkweb-framework/ZKWeb/blob/master/ZKWeb/ZKWeb/Templating/DynamicContents/TemplateWidgetRenderer.cs">这个文件中</a><br/>,
+通过修改描绘器的逻辑可以实现更多的功能,例如描画模块时指定边框或者css规则.</p>
                 
                   
                 
