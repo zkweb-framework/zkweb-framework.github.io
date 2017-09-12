@@ -1,0 +1,1509 @@
+
+<!DOCTYPE html>
+<html lang="cn" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.0">
+    
+    
+      
+        <title>提供的隔离策略 - ZKWeb 2.0 核心和插件文档</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-b6a6d08807.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-23f75ab9c7.palette.css">
+      
+    
+    
+  <link rel="stylesheet" href="styles/MaterialIcons.css">
+
+    
+      <link rel="stylesheet" href="../../styles/MaterialIcons.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../../index.html" title="ZKWeb 2.0 核心和插件文档" class="md-header-nav__button md-logo">
+          
+            
+              <img src="../../images/logo.png" width="24" height="24">
+            
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  插件文档
+                </span>
+              
+                <span class="md-header-nav__parent">
+                  基础插件(Common.Base)
+                </span>
+              
+            
+            提供的隔离策略
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="无匹配的文档" data-md-lang-result-one="1个匹配的文档" data-md-lang-result-other="#个匹配的文档">
+            请填写需要搜索的内容
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/zkweb-framework" title="浏览项目源代码" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        
+          <img src="../../images/logo.png">
+        
+      
+    </div>
+    ZKWeb 2.0 核心和插件文档
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/zkweb-framework" title="浏览项目源代码" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      GitHub
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../index.html" title="ZKWeb是什么" class="md-nav__link">
+      ZKWeb是什么
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      创建项目
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        创建项目
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/create_project_empty/index.html" title="创建空白项目" class="md-nav__link">
+      创建空白项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/create_project_demo/index.html" title="创建多页面程序项目" class="md-nav__link">
+      创建多页面程序项目
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/create_project_mvvmdemo/index.html" title="创建单页面程序项目" class="md-nav__link">
+      创建单页面程序项目
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../core/publish_project/index.html" title="发布项目" class="md-nav__link">
+      发布项目
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      核心文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        核心文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/website_struct/index.html" title="网站结构" class="md-nav__link">
+      网站结构
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/website_config/index.html" title="配置文件" class="md-nav__link">
+      配置文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/ioc_container/index.html" title="IoC容器" class="md-nav__link">
+      IoC容器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/plugin/index.html" title="插件系统" class="md-nav__link">
+      插件系统
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/controller/index.html" title="控制器" class="md-nav__link">
+      控制器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/http_handlers/index.html" title="请求和错误处理" class="md-nav__link">
+      请求和错误处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/template_engine/index.html" title="模板引擎" class="md-nav__link">
+      模板引擎
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/dynamic_contents/index.html" title="动态内容" class="md-nav__link">
+      动态内容
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/cache/index.html" title="缓存处理" class="md-nav__link">
+      缓存处理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/file_storage/index.html" title="文件储存" class="md-nav__link">
+      文件储存
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/database/index.html" title="数据库" class="md-nav__link">
+      数据库
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/multi_language/index.html" title="多语言" class="md-nav__link">
+      多语言
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/multi_timezone/index.html" title="多时区" class="md-nav__link">
+      多时区
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../core/unit_test/index.html" title="单元测试" class="md-nav__link">
+      单元测试
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+    
+    <label class="md-nav__link" for="nav-5">
+      插件文档
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        插件文档
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-1" type="checkbox" id="nav-5-1" checked>
+    
+    <label class="md-nav__link" for="nav-5-1">
+      基础插件(Common.Base)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-1">
+        基础插件(Common.Base)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.summary/index.html" title="关于基础插件" class="md-nav__link">
+      关于基础插件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.generic_config/index.html" title="通用配置" class="md-nav__link">
+      通用配置
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.scheduled_task/index.html" title="定时任务" class="md-nav__link">
+      定时任务
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.session/index.html" title="会话" class="md-nav__link">
+      会话
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.css/index.html" title="基础css样式" class="md-nav__link">
+      基础css样式
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.javascript/index.html" title="基础javascript脚本" class="md-nav__link">
+      基础javascript脚本
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.font/index.html" title="基础图标字体" class="md-nav__link">
+      基础图标字体
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.repository_uow/index.html" title="仓储和工作单元" class="md-nav__link">
+      仓储和工作单元
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.traits/index.html" title="特征接口" class="md-nav__link">
+      特征接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.ajax_table/index.html" title="动态表格构建器" class="md-nav__link">
+      动态表格构建器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.static_table/index.html" title="静态表格构建器" class="md-nav__link">
+      静态表格构建器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.form_builder/index.html" title="表单构建器" class="md-nav__link">
+      表单构建器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.static_handler/index.html" title="静态文件处理器" class="md-nav__link">
+      静态文件处理器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.locale_handler/index.html" title="语言时区处理器" class="md-nav__link">
+      语言时区处理器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.templates/index.html" title="提供的模板文件" class="md-nav__link">
+      提供的模板文件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.base.tag_and_filter/index.html" title="提供的标签和过滤器" class="md-nav__link">
+      提供的标签和过滤器
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+    <a href="index.html" title="提供的隔离策略" class="md-nav__link md-nav__link--active">
+      提供的隔离策略
+    </a>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.captcha/index.html" title="验证码 (Common.Captcha)" class="md-nav__link">
+      验证码 (Common.Captcha)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
+    
+    <label class="md-nav__link" for="nav-5-3">
+      管理员 (Common.Admin)
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-5-3">
+        管理员 (Common.Admin)
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.admin.user_and_role/index.html" title="用户和角色权限" class="md-nav__link">
+      用户和角色权限
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.admin.admin_panel/index.html" title="管理后台" class="md-nav__link">
+      管理后台
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.admin.traits/index.html" title="特征接口" class="md-nav__link">
+      特征接口
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.admin.add_simple_app/index.html" title="添加后台功能" class="md-nav__link">
+      添加后台功能
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.admin.add_crud_app/index.html" title="添加增删查改功能" class="md-nav__link">
+      添加增删查改功能
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.menupage/index.html" title="菜单页 (Common.MenuPage)" class="md-nav__link">
+      菜单页 (Common.MenuPage)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.adminsettings/index.html" title="管理员设置 (Common.AdminSettings)" class="md-nav__link">
+      管理员设置 (Common.AdminSettings)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.userpanel/index.html" title="用户中心 (Common.UserPanel)" class="md-nav__link">
+      用户中心 (Common.UserPanel)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.usercontact/index.html" title="联系人 (Common.UserContact)" class="md-nav__link">
+      联系人 (Common.UserContact)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.genericclass/index.html" title="通用分类 (Common.GenericClass)" class="md-nav__link">
+      通用分类 (Common.GenericClass)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.generictag/index.html" title="通用标签 (Common.GenericTag)" class="md-nav__link">
+      通用标签 (Common.GenericTag)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.genericrecord/index.html" title="通用记录 (Common.GenericRecord)" class="md-nav__link">
+      通用记录 (Common.GenericRecord)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.languageswitcher/index.html" title="语言切换器 (Common.LanguageSwitcher)" class="md-nav__link">
+      语言切换器 (Common.LanguageSwitcher)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.currency/index.html" title="货币 (Common.Currency)" class="md-nav__link">
+      货币 (Common.Currency)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.pesudostatic/index.html" title="伪静态 (Common.PesudoStatic)" class="md-nav__link">
+      伪静态 (Common.PesudoStatic)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.region/index.html" title="地区 (Common.Region)" class="md-nav__link">
+      地区 (Common.Region)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.serialgenerate/index.html" title="流水号 (Common.SerialGenerate)" class="md-nav__link">
+      流水号 (Common.SerialGenerate)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.codeeditor/index.html" title="代码编辑器 (Common.CodeEditor)" class="md-nav__link">
+      代码编辑器 (Common.CodeEditor)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.datepicker/index.html" title="日期选择器 (Common.Datepicker)" class="md-nav__link">
+      日期选择器 (Common.Datepicker)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.dynamicform/index.html" title="动态表单 (Common.DynamicForm)" class="md-nav__link">
+      动态表单 (Common.DynamicForm)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.dynamicform.codeeditor/index.html" title="动态代码编辑器字段 (Common.DynamicForm.CodeEditor)" class="md-nav__link">
+      动态代码编辑器字段 (Common.DynamicForm.CodeEditor)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.dynamicform.datepicker/index.html" title="动态日期选择器字段 (Common.DynamicForm.DatePicker)" class="md-nav__link">
+      动态日期选择器字段 (Common.DynamicForm.DatePicker)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment/index.html" title="支付 (Finance.Payment)" class="md-nav__link">
+      支付 (Finance.Payment)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.alipay/index.html" title="支付宝 (Finance.Payment.Alipay)" class="md-nav__link">
+      支付宝 (Finance.Payment.Alipay)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.alipaymobile/index.html" title="支付宝移动端 (Finance.Payment.AlipayMobile)" class="md-nav__link">
+      支付宝移动端 (Finance.Payment.AlipayMobile)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.cash/index.html" title="现金支付 (Finance.Payment.Cash)" class="md-nav__link">
+      现金支付 (Finance.Payment.Cash)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.onarrive/index.html" title="货到付款 (Finance.Payment.OnArrive)" class="md-nav__link">
+      货到付款 (Finance.Payment.OnArrive)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.pingpp/index.html" title="Ping++(Finance.Payment.Pingpp)" class="md-nav__link">
+      Ping++(Finance.Payment.Pingpp)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.tenpay/index.html" title="财付通 (Finance.Payment.Tenpay)" class="md-nav__link">
+      财付通 (Finance.Payment.Tenpay)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.wechat/index.html" title="微信支付 (Finance.Payment.WeChat)" class="md-nav__link">
+      微信支付 (Finance.Payment.WeChat)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../finance.payment.pingpp/index.html" title="Ping++支付 (Finance.Payment.Pingpp)" class="md-nav__link">
+      Ping++支付 (Finance.Payment.Pingpp)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cms.ckeditor/index.html" title="CKEditor (CMS.CKEditor)" class="md-nav__link">
+      CKEditor (CMS.CKEditor)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cms.imagebrowser/index.html" title="图片管理器 (CMS.ImageBrowser)" class="md-nav__link">
+      图片管理器 (CMS.ImageBrowser)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cms.atricle/index.html" title="文章 (CMS.Article)" class="md-nav__link">
+      文章 (CMS.Article)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.product/index.html" title="商品 (Shopping.Product)" class="md-nav__link">
+      商品 (Shopping.Product)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.logistics/index.html" title="物流 (Shopping.Logistics)" class="md-nav__link">
+      物流 (Shopping.Logistics)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.order/index.html" title="订单 (Shopping.Order)" class="md-nav__link">
+      订单 (Shopping.Order)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.aftersales/index.html" title="售后 (Shopping.AfterSales)" class="md-nav__link">
+      售后 (Shopping.AfterSales)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.productbookmark/index.html" title="商品收藏 (Shopping.ProductBookmark)" class="md-nav__link">
+      商品收藏 (Shopping.ProductBookmark)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../shopping.productrating/index.html" title="商品评价 (Shopping.ProductRating)" class="md-nav__link">
+      商品评价 (Shopping.ProductRating)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="多商城 (Multishop.Base)" class="md-nav__link">
+      多商城 (Multishop.Base)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="多商城商品 (Multishop.Product)" class="md-nav__link">
+      多商城商品 (Multishop.Product)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="多商城物流 (Multishop.Logistics)" class="md-nav__link">
+      多商城物流 (Multishop.Logistics)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="多商城订单 (Multishop.Order)" class="md-nav__link">
+      多商城订单 (Multishop.Order)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="多商城售后 (Multishop.AfterSales)" class="md-nav__link">
+      多商城售后 (Multishop.AfterSales)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testing.webtester/index.html" title="网页测试运行器 (Testing.WebTester)" class="md-nav__link">
+      网页测试运行器 (Testing.WebTester)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../theme.mobile.frame/index.html" title="手机版布局 (Theme.Mobile.Frame)" class="md-nav__link">
+      手机版布局 (Theme.Mobile.Frame)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../theme.visualeditor/index.html" title="可视化编辑 (Theme.VisualEditor)" class="md-nav__link">
+      可视化编辑 (Theme.VisualEditor)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="基础模板模块 (Theme.Widgets.Base)" class="md-nav__link">
+      基础模板模块 (Theme.Widgets.Base)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="商品模板模块 (Theme.Widgets.Product)" class="md-nav__link">
+      商品模板模块 (Theme.Widgets.Product)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../on_working/index.html" title="轮播图模板模块 (Theme.Widgets.Slideshow)" class="md-nav__link">
+      轮播图模板模块 (Theme.Widgets.Slideshow)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../common.customtranslate/index.html" title="自定义翻译 (Common.CustomTranslate)" class="md-nav__link">
+      自定义翻译 (Common.CustomTranslate)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>提供的隔离策略</h1>
+                
+                <p>基础插件提供了以下的缓存隔离策略:<br/>
+关于缓存隔离请查看<a href="../../core/cache/">缓存处理</a>.<br/></p>
+<ul>
+<li><code>Ident</code><ul>
+<li>按当前登录用户隔离缓存 (Session.ReleatedId)</li>
+</ul>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../common.base.tag_and_filter/index.html" title="提供的标签和过滤器" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一篇
+                </span>
+                提供的标签和过滤器
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../common.captcha/index.html" title="验证码 (Common.Captcha)" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一篇
+                </span>
+                验证码 (Common.Captcha)
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright © 2016~2017 303248153@github
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

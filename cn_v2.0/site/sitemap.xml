@@ -4,7 +4,7 @@
     
     <url>
      <loc>/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,19 +13,19 @@
         
     <url>
      <loc>/core/create_project_empty/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/create_project_demo/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/create_project_mvvmdemo/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -34,7 +34,7 @@
     
     <url>
      <loc>/core/publish_project/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -43,85 +43,85 @@
         
     <url>
      <loc>/core/website_struct/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/website_config/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/ioc_container/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/plugin/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/controller/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/http_handlers/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/template_engine/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/dynamic_contents/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/cache/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/file_storage/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/database/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/multi_language/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/multi_timezone/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/core/unit_test/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -130,20 +130,302 @@
     
         
     <url>
-     <loc>/plugin/common.base/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/plugin/common.captcha/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>/plugin/common.admin/index.html</loc>
-     <lastmod>2017-09-11</lastmod>
+     <loc></loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.menupage/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.adminsettings/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.userpanel/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.usercontact/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.genericclass/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.generictag/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.genericrecord/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.languageswitcher/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.currency/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.pesudostatic/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.region/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.serialgenerate/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.codeeditor/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.datepicker/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.dynamicform/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.dynamicform.codeeditor/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.dynamicform.datepicker/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.alipay/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.alipaymobile/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.cash/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.onarrive/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.pingpp/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.tenpay/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.wechat/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/finance.payment.pingpp/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/cms.ckeditor/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/cms.imagebrowser/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/cms.atricle/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.product/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.logistics/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.order/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.aftersales/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.productbookmark/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/shopping.productrating/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/testing.webtester/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/theme.mobile.frame/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/theme.visualeditor/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/on_working/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/plugin/common.customtranslate/index.html</loc>
+     <lastmod>2017-09-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

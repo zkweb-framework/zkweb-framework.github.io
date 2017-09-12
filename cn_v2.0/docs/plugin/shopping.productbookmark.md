@@ -1,0 +1,11 @@
+商品收藏插件提供了收藏和管理收藏商品的功能
+
+### 如何收藏商品
+
+启用此插件后, 在商品主图的下面会出现"收藏本商品"的按钮, 点击即可收藏商品
+![如何收藏商品](../images/plugins/shopping.productbookmark.product_bookmark_btn.jpg)
+
+### 如何管理已收藏的商品
+
+用户中心可以查看或删除已收藏的商品
+![如何管理已收藏的商品](../images/plugins/shopping.productbookmark.product_bookmark_list.jpg)
