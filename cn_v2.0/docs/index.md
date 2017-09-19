@@ -84,10 +84,12 @@ ZKWeb 1.0~1.9的文档.
 单页面管理系统(MVVMDemo)的文档不在这里, 请参考上面的地址.<br/>
 
 ##### ZKWeb的索引文档:<br/>
-TODO, 针对2.0的索引文档尚未生成.
+
+[CHM格式, 点击这里下载](http://zkweb-framework.github.io/cn_v2.0/references/zkweb/ZKWebReferences.chm)
 
 ##### ZKWeb.Plugins的索引文档:<br/>
-TODO, 针对2.0的索引文档尚未生成.
+
+[CHM格式, 点击这里下载](http://zkweb-framework.github.io/cn_v2.0/references/zkweb.plugins/ZKWebPluginsReferences.chm)
 
 ### 开源协议
 
