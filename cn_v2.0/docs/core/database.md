@@ -256,6 +256,28 @@ using (var context = factory.CreateContext()) {
 }
 ```
 
+### 记录原始SQL语句或命令
+
+从ZKWeb 2.1开始, 你可以通过提供`IDatabaseCommandLogger`来记录原始的SQL语句或命令.<br/>
+添加`[ExportMany]`属性注册到容器会全局记录, 例如:
+
+``` json
+[ExportMany]
+public class Mylogger : IDatabaseCommandLogger {
+	public void LogCommand(IDatabaseContext context, string command, object metadata) {
+		Console.WriteLine(command);
+	}
+}
+```
+
+如果只想记录某个上下文的语句, 则不要添加`[ExportMany]`而是设置`Context.CommandLogger = new Mylogger()`.<br/>
+目前支持记录SQL语句或命令的ORM有:
+
+- Dapper: 支持记录insert, update, delete, select
+- EFCore: 支持记录insert, update, delete, select
+- MongoDB: 支持记录json格式的命令
+- NHibernate: 支持记录insert, update, delete, select, 但不支持记录参数
+
 ### 禁用自动升级数据表
 
 部分情况下你可能想禁用NHibernate或者EFCore组件提供的数据库自动迁移功能,<br/>

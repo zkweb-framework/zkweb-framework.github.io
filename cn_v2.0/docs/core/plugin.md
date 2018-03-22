@@ -164,3 +164,14 @@ public Plugin : IPlugin {
 	- 把需要调试的文件拖动到Visual Studio中，然后在里面下断点
 
 ![挂载到进程](../images/core/plugin_attach_process.jpg)
+
+# 禁止检测插件源代码更新
+
+在默认情况下, ZKWeb会自动检测插件源代码的更新, 更新时会自动重启服务器以重新编译和加载插件.<br/>
+如果你不想ZKWeb自动重启服务器可以添加以下的选项到`App_Data\config.json`:
+
+``` json
+{
+	"Extra": { "ZKWeb.DisableAutomaticPluginReloading": true }
+}
+```

@@ -72,3 +72,5 @@ var value = configManager.WebsiteConfig.Extra.GetOrDefault<bool>("SomeExtraConfi
 - `ZKWeb.ClearCacheAfterUsedMemoryMoreThan` 内存占用超过值时自动清理缓存, 单位是MB
 - `ZKWeb.CleanCacheCheckInterval` 缓存自动清理器的检查间隔, 单位是秒
 - `ZKWeb.CompilePluginsWithReleaseConfiguration` 使用Release配置编译插件，默认是false
+- `ZKWeb.DisableCaseSensitiveRouting` 禁止大小写敏感的路由
+- `ZKWeb.DisableAutomaticPluginReloading` 禁止自动重新加载插件

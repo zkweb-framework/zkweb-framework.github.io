@@ -9,32 +9,27 @@ ZKWeb提供了一套独立实现的MVC框架, 不依赖于Asp.Net和Asp.Net Core
 ``` csharp
 [ExportMany]
 public class ExampleController : IController {
-	[Action("example/plain_text")]
 	public IActionResult PlainText() {
 		// 返回文本
 		return new PlainResult("some plain text");
 	}
 
-	[Action("example/plain_string")]
 	public string PlainString() {
 		// 返回文本，返回类型是string时会自动使用PlainResult包装
 		return "some plain string";
 	}
-	
-	[Action("example/json")]
+
 	public object Json(string name, int age) {
 		// 有参数时会自动获取传入参数
 		// 返回json，返回类型不是IActionResult或string时会自动使用JsonResult包装
 		return new { name, age };
 	}
 
-	[Action("example/template")]
 	public IActionResult Template() {
 		// 返回模板
 		return new TemplateResult("zkweb.examples/hello.html", new { text = "World" });
 	}
 
-	[Action("example/file")]
 	public IActionResult File() {
 		// 返回文件
 		var fileStorage = Application.Ioc.Resolve<IFileStorage>();
@@ -44,12 +39,64 @@ public class ExampleController : IController {
 }
 ```
 
-建立后在浏览器打开`http://localhost:端口/example/plain_text`即可看到内容.
+建立后在浏览器打开`http://localhost:端口/Example/PlainText`即可看到内容.
 
 在ZKWeb中添加控制器只需要继承`IController`接口并标记`ExportMany`即可,<br/>
 控制器和其他组件一样支持依赖注入, 您可以在构造函数中写需要的服务.<br/>
 
-各个Action都可以标记完整的路径, 这样做可以带来更高的自由度.<br/>
+### 控制访问路径
+
+通过在控制器类上标记`[ActionBase]`属性， 或者在方法上标记`[Action]`属性可以控制访问路径.<br/>
+例如:
+
+``` c#
+[ExportMany]
+public class ExampleController : IController {
+	// 不标记[ActionBase]也不标记[Action]
+	// 访问路径是 "/Example/PlainText"
+	public IActionResult PlainText() {
+		return new PlainResult("some plain text");
+	}
+}
+```
+
+``` c#
+[ExportMany]
+[ActionBase("/MyExample")]
+public class ExampleController : IController {
+	// 标记[ActionBase]但不标记[Action]
+	// 访问路径是 "/MyExample/PlainText"
+	public IActionResult PlainText() {
+		return new PlainResult("some plain text");
+	}
+}
+```
+
+``` c#
+[ExportMany]
+[ActionBase("/MyExample")]
+public class ExampleController : IController {
+	// 同时标记[ActionBase]和[Action]
+	// 访问路径是 "/MyExample/MyPlainText"
+	[Action("MyPlainText")]
+	public IActionResult PlainText() {
+		return new PlainResult("some plain text");
+	}
+}
+```
+
+``` c#
+[ExportMany]
+public class ExampleController : IController {
+	// 不标记[ActionBase], 只标记[Action] (兼容2.0之前的版本)
+	// [Action]标记的就是完整路径
+	// 访问路径是 "/MyPlainText"
+	[Action("/MyPlainText")]
+	public IActionResult PlainText() {
+		return new PlainResult("some plain text");
+	}
+}
+```
 
 ### Action的返回类型
 
@@ -199,5 +246,15 @@ public class ExampleController : IController {
 	public IActionResult PlainText() {
 		return new PlainResult("some plain text");
 	}
+}
+```
+
+### 忽略大小写
+
+ZKWeb默认会区分请求路径的大小写, 如果你不想区分可以添加以下的选项到`App_Data\config.json`:
+
+``` text
+{
+	"Extra": { "ZKWeb.DisableCaseSensitiveRouting": true }
 }
 ```
